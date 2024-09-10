@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { getFontClasses } from "@/assets/fonts";
 import "./globals.css";
+import { Header } from "@/components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${getFontClasses()}`}>
+        <Header />
         {children}
       </body>
     </html>
