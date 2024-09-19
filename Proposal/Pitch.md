@@ -40,3 +40,21 @@ This lets us build upon existing web-technologies, HTML, CSS & JavaScript, where
     - allow adding content by placing files in specific folders or editing configuration files
     - support text styling via a markup language like "Markdown"
     - come with instructions on how to edit content, compile the project and troubleshoot common issues
+  
+## Example
+
+The exact implementation is to be decided, but the folder structure would look something like this 
+
+![Example file structure.](./pictures/example-file-structure.png)
+
+
+
+To add a page like this
+
+![Example file structure.](./pictures/example-page-01.png)
+
+you would add a folder to the 
+
+
+
+
