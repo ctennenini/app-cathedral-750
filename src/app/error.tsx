@@ -1,5 +1,6 @@
-'use client';
+'use client'
 
-export default function Custom404() {
-  return <h1>404 - Page Not Found</h1>;
+export default function Error(...args: unknown[]) {
+  console.error('Error:', args)
+  return <h1>Error</h1>
 }
