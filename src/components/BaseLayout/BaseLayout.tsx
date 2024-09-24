@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from 'next/navigation'
 import { ChangeEventHandler, PropsWithChildren } from 'react'
-import { languages } from '@/../config.json'
+import { languages } from '@/config'
 
 export type BaseLayoutProps = PropsWithChildren<{
   title: string

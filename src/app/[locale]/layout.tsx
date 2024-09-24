@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import { languages } from '@/../config.json'
+import { languages } from '@/config'
 
 export async function generateStaticParams() {
   return languages.map((ln) => ({ locale: ln }))

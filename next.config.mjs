@@ -8,6 +8,10 @@ const nextConfig = {
     process.env.NODE_ENV === 'production' ? '/ethz-slideshow-poc' : undefined,
   assetPrefix:
     process.env.NODE_ENV === 'production' ? '/ethz-slideshow-poc' : undefined,
+  env: {
+    LANGUAGES: 'en,de',
+    DEFAULT_LANGUAGE: 'en',
+  },
 }
 
 const withMDX = createMDX({})

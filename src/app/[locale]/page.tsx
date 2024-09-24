@@ -1,8 +1,7 @@
 import { redirect } from 'next/navigation'
 
-import { languages } from '@/../config.json'
 import { GlobalStaticParams } from './layout'
-
+import { languages, defaultLanguage } from '@/config'
 export const dynamic = 'force-static'
 
 export default function Home({
@@ -10,6 +9,6 @@ export default function Home({
 }: {
   params: GlobalStaticParams
 }) {
-  const lng = languages.includes(locale) ? locale : 'en'
+  const lng = languages.includes(locale) ? locale : defaultLanguage
   return redirect(`/${lng}/start`)
 }
