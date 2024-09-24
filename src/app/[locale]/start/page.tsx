@@ -1,14 +1,35 @@
 import { BaseLayout } from '@/components'
 import { GlobalStaticParams } from '../layout'
+import bgImg from './bg-img.png'
 
 export default function Start({
-  params: { locale },
+  params: { locale, ...rest },
 }: {
   params: GlobalStaticParams
 }) {
+  console.log({ locale, ...rest })
   return (
-    <BaseLayout title="Start" subtitle="subtle subtitle">
-      <p>Start page ({locale})</p>
-    </BaseLayout>
+    <BaseLayout
+      title="Start"
+      subtitle="subtle subtitle"
+      bgImg={bgImg}
+      actions={[
+        {
+          href: 'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
+          label: 'Cathedral Web Site',
+          icon: '/icons/start.svg',
+        },
+        {
+          href: `/${locale}/start`,
+          label: '750th birthday',
+          icon: '/icons/start.svg',
+        },
+        {
+          href: `/${locale}/start`,
+          label: 'Cathedral Immersive',
+          icon: '/icons/start.svg',
+        },
+      ]}
+    ></BaseLayout>
   )
 }

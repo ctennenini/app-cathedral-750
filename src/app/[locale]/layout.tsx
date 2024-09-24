@@ -9,7 +9,11 @@ export default function Layout({
   children,
   params: { locale },
 }: GlobalStaticProps) {
-  return <div lang={locale}>{children}</div>
+  return (
+    <div lang={locale} style={{ height: '1000%' }}>
+      {children}
+    </div>
+  )
 }
 
 export type GlobalStaticParams = Awaited<
