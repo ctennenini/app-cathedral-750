@@ -14,6 +14,7 @@ export default function Start() {
             {
               href: 'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
               label: 'Cathedral Web Site',
+              external: true,
             },
             {
               href: `#`,

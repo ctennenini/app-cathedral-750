@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 export type Action = LinkProps & {
   label: string
+  external?: boolean
 }
 
 export type ActionsProps = PropsWithChildren<{
@@ -19,7 +20,9 @@ export function Actions({ actions }: ActionsProps) {
           <ul>
             {actions.map((action) => (
               <li key={JSON.stringify(action.href)}>
-                <ActionItem {...action}>{action.label}</ActionItem>
+                <ActionItem {...action} target={action.external ? '_blank' : undefined}>
+                  {action.label}
+                </ActionItem>
               </li>
             ))}
           </ul>
