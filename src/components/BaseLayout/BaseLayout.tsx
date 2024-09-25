@@ -1,21 +1,14 @@
-'use client'
-
 import Image, { ImageProps } from 'next/image'
-import { useParams, useRouter } from 'next/navigation'
-import { ChangeEventHandler, PropsWithChildren } from 'react'
-import { languages } from '@/config'
-import Link from 'next/link'
-
-export type Action = {
-  label: string
-  href: string
-  icon?: ImageProps['src']
-}
+import { PropsWithChildren } from 'react'
+import { Container, Left, Main, Right } from './BaseLayout.styled'
+import { Header } from './Header'
+import { Actions, Action } from './Actions'
 
 export type BaseLayoutProps = PropsWithChildren<{
   title: string
   subtitle?: string
   bgImg?: ImageProps['src']
+  bgImgAlt?: ImageProps['alt']
   actions?: Action[]
 }>
 
@@ -24,67 +17,32 @@ export function BaseLayout({
   title,
   subtitle,
   bgImg,
+  bgImgAlt = 'background image',
   actions,
 }: BaseLayoutProps) {
-  const { locale } = useParams()
-
-  const router = useRouter()
-
-  const onSelect: ChangeEventHandler<HTMLSelectElement> = (event) => {
-    router.push(`/${event.target.value}`)
-  }
-
   return (
-    <>
+    <Container>
       {bgImg && (
         <Image
-          alt="title"
+          alt={bgImgAlt}
           src={bgImg}
           placeholder="blur"
           quality={100}
           fill
           sizes="100vw"
+          objectFit="cover"
           style={{
-            objectFit: 'cover',
             zIndex: -1,
           }}
         />
       )}
-      <header>
-        <h1>{title}</h1>
-        {subtitle && <h2>{subtitle}</h2>}
-        <select value={locale} onChange={onSelect}>
-          {languages.map((ln) => (
-            <option key={ln}>{ln}</option>
-          ))}
-        </select>
-      </header>
-      <main style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div>{children}</div>
-        {actions && (
-          <nav>
-            <ul>
-              {actions.map((action) => (
-                <li key={action.href}>
-                  <Link href={action.href}>
-                    {action.icon && (
-                      <Image
-                        alt={action.label}
-                        src={action.icon}
-                        quality={100}
-                        width={32}
-                        height={32}
-                      />
-                    )}
-                    &nbsp;{action.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
-      </main>
-      <></>
-    </>
+      <Header title={title} subTitle={subtitle} />
+      <Main>
+        <Left>{children}</Left>
+        <Right>
+          <Actions actions={actions} />
+        </Right>
+      </Main>
+    </Container>
   )
 }

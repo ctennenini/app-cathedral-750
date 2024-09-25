@@ -10,7 +10,7 @@ export default function Layout({
   params: { locale },
 }: GlobalStaticProps) {
   return (
-    <div lang={locale} style={{ height: '1000%' }}>
+    <div lang={locale} style={{ height: '100%' }}>
       {children}
     </div>
   )
