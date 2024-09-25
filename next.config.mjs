@@ -13,7 +13,7 @@ const nextConfig = {
   },
 
   basePath: isProd ? '/ethz-slideshow-poc' : undefined,
-  assetPrefix: isProd ? '/ethz-slideshow-poc' : undefined,
+  assetPrefix: isProd ? '/ethz-slideshow-poc/static' : undefined,
 
   env: {
     LANGUAGES: 'en,de',
