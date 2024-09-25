@@ -18,6 +18,12 @@ export const Main = styled.main({
   justifyContent: 'space-between',
 })
 
-export const Left = styled.div({})
+export const Left = styled.div({
+  flex: '1 0',
+})
 
-export const Right = styled.div({})
+export const Right = styled.div({
+  flex: '0 0 auto',
+})
+
+export const Footer = styled.footer({})

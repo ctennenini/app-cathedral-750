@@ -1,24 +1,27 @@
 import Image, { ImageProps } from 'next/image'
-import { PropsWithChildren } from 'react'
-import { Container, Left, Main, Right } from './BaseLayout.styled'
+import React, { PropsWithChildren } from 'react'
+import { Container, Footer, Left, Main, Right } from './BaseLayout.styled'
 import { Header } from './Header'
-import { Actions, Action } from './Actions'
+import { Nav, NavItem } from '../Nav'
 
 export type BaseLayoutProps = PropsWithChildren<{
   title: string
   subtitle?: string
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  actions?: Action[]
+  left?: React.ReactNode
+  right?: React.ReactNode
+  navItems?: NavItem[]
 }>
 
 export function BaseLayout({
-  children,
   title,
   subtitle,
   bgImg,
   bgImgAlt = 'background image',
-  actions,
+  left,
+  right,
+  navItems,
 }: BaseLayoutProps) {
   return (
     <Container>
@@ -30,19 +33,20 @@ export function BaseLayout({
           quality={100}
           fill
           sizes="100vw"
-          objectFit="cover"
           style={{
+            objectFit: 'cover',
             zIndex: -1,
           }}
         />
       )}
       <Header title={title} subTitle={subtitle} />
       <Main>
-        <Left>{children}</Left>
-        <Right>
-          <Actions actions={actions} />
-        </Right>
+        <Left>{left}</Left>
+        <Right>{right}</Right>
       </Main>
+      <Footer>
+        <Nav items={navItems} />
+      </Footer>
     </Container>
   )
 }
