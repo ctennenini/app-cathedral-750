@@ -12,8 +12,12 @@ const nextConfig = {
     },
   },
 
+  images: {
+    unoptimized: true,
+  },
+
   basePath: isProd ? '/ethz-slideshow-poc' : undefined,
-  assetPrefix: isProd ? '/ethz-slideshow-poc/static' : undefined,
+  assetPrefix: isProd ? '/ethz-slideshow-poc' : undefined,
 
   env: {
     LANGUAGES: 'en,de',
