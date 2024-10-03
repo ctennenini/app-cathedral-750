@@ -20,7 +20,7 @@ const nextConfig = {
   assetPrefix: isProd ? '/ethz-slideshow-poc' : undefined,
 
   env: {
-    LANGUAGES: 'en,de',
+    LANGUAGES: 'de,en,fr',
     DEFAULT_LANGUAGE: 'en',
   },
 }

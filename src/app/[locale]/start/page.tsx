@@ -1,12 +1,16 @@
 import { BaseLayout, Actions } from '@/components'
 
 import bgImg from './bg-img.png'
+import { GlobalStaticProps } from '../layout'
+import { getDictionary } from '@/i18n'
 
-export default function Start() {
+export default async function Start({ params: { locale } }: GlobalStaticProps) {
+  const {start} = await getDictionary(locale)
+  
   return (
     <BaseLayout
-      title="Start"
-      subtitle="subtle subtitle"
+      title={start.title}
+      subtitle={start.subTitle}
       bgImg={bgImg}
       right={
         <Actions

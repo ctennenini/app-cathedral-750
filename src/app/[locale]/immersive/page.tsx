@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import { Actions, BaseLayout } from '@/components'
-import { GlobalStaticParams } from '../layout'
+import { GlobalStaticProps } from '../layout'
 import bgImg from './bg-img.png'
+import { getDictionary } from '@/i18n'
 
-export default function TheImmersiveCathedral({ params: { locale, ...rest } }: { params: GlobalStaticParams }) {
-  console.log({ locale, ...rest })
+
+export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticProps) {
+  const {} = await getDictionary(locale)
+  
   return (
     <BaseLayout
       dark
