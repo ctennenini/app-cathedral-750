@@ -3,14 +3,11 @@ import { Actions, BaseLayout } from '@/components'
 import { GlobalStaticParams } from '../layout'
 import bgImg from './bg-img.png'
 
-export default function TheImmersiveCathedral({
-  params: { locale, ...rest },
-}: {
-  params: GlobalStaticParams
-}) {
+export default function TheImmersiveCathedral({ params: { locale, ...rest } }: { params: GlobalStaticParams }) {
   console.log({ locale, ...rest })
   return (
     <BaseLayout
+      dark
       title="La Cathédrale Immersive"
       left={
         <Image
@@ -34,17 +31,19 @@ export default function TheImmersiveCathedral({
             {
               href: '#',
               label: 'Stratégies de conservation',
+              disabled: true,
             },
             {
               href: '#',
               label: 'Les voûtes de la cathédrale',
+              disabled: true,
             },
           ]}
         />
       }
       navItems={[
         {
-          href: `/`,
+          href: `start`,
           label: 'Back',
         },
       ]}

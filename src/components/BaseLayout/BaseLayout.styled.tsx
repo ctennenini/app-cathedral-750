@@ -2,13 +2,16 @@
 
 import styled from 'styled-components'
 
-export const Container = styled.div({
+export const Container = styled.div<{ dark?: boolean }>(({ dark }) => ({
+  position: 'relative',
+  zIndex: 0,
   height: '100dvh',
   padding: '1rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
-})
+  backgroundColor: dark ? '#000' : '#fff',
+}))
 
 export const Main = styled.main({
   flex: 1,

@@ -19,6 +19,7 @@ export default function Start() {
             {
               href: `#`,
               label: '750th birthday',
+              disabled: true,
             },
             {
               href: `immersive`,
