@@ -1,12 +1,12 @@
 import { BaseLayout, Actions } from '@/components'
 
 import bgImg from './bg-img.png'
-import { GlobalStaticProps } from '../layout'
+import { GlobalStaticPageProps } from '../layout'
 import { getDictionary } from '@/i18n'
 
-export default async function Start({ params: { locale } }: GlobalStaticProps) {
+export default async function Start({ params: { locale } }: GlobalStaticPageProps) {
   const {start} = await getDictionary(locale)
-  
+
   return (
     <BaseLayout
       title={start.title}

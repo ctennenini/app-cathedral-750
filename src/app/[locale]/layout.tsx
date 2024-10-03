@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 export default function Layout({
   children,
   params: { locale },
-}: GlobalStaticProps) {
+}: GlobalStaticLayoutProps) {
   return (
     <div lang={locale} style={{ height: '100%' }}>
       {children}
@@ -20,6 +20,8 @@ export type GlobalStaticParams = Awaited<
   ReturnType<typeof generateStaticParams>
 >[number]
 
-export type GlobalStaticProps = PropsWithChildren<{
+export type GlobalStaticPageProps = {
   params: GlobalStaticParams
-}>
+}
+
+export type GlobalStaticLayoutProps = PropsWithChildren<GlobalStaticPageProps>  

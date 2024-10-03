@@ -1,8 +1,8 @@
 import { Actions, BaseLayout } from '@/components'
-import {  GlobalStaticProps } from '../../layout'
+import {  GlobalStaticPageProps } from '../../layout'
 import bgImg from './bg-img.png'
 
-export default function MolassesDegradation({ params: { locale, ...rest } }: GlobalStaticProps) {
+export default async function MolassesDegradation({ params: { locale, ...rest } }: GlobalStaticPageProps) {
   console.log({ locale, ...rest })
   return (
     <BaseLayout
