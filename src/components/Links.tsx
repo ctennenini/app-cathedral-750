@@ -12,14 +12,16 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
 
 function useHref(href: LinkProps['href']) {
   const { locale } = useParams()
+  if (href.toString().startsWith('http')) return href
   return `/${locale}/${href}`
 }
 
-export const BigLink = styled(({ href, label, external, disabled, className }: LinkProps) => {
+export const BigLink = styled(({ href, label, external, disabled, className, as }: LinkProps) => {
   href = useHref(href)
 
   return (
     <NextLink
+      as={as}
       href={href}
       target={external ? '_blank' : undefined}
       aria-disabled={!!disabled}
@@ -41,11 +43,12 @@ export const BigLink = styled(({ href, label, external, disabled, className }: L
   cursor: disabled ? 'not-allowed' : 'pointer',
 }))
 
-export const NavItem = styled(({ href, label, external, disabled, className }: LinkProps) => {
+export const NavItem = styled(({ href, label, external, disabled, className, as }: LinkProps) => {
   href = useHref(href)
 
   return (
     <NextLink
+      as={as}
       href={href}
       target={external ? '_blank' : undefined}
       aria-disabled={!!disabled}

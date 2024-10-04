@@ -29,7 +29,7 @@ export function BaseLayout({
     <Container dark={dark}>
       {bgImg && (
         <Image
-        src={bgImg}
+          src={bgImg}
           alt={bgImgAlt}
           placeholder="blur"
           quality={100}

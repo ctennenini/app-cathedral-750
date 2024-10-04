@@ -1,21 +1,38 @@
 import Image from 'next/image'
-import { Actions, BaseLayout } from '@/components'
+import { Actions, ActionsProps, BaseLayout } from '@/components'
 import { GlobalStaticPageProps } from '../layout'
-import bgImg from './bg-img.png'
+import cathedral from './cathedral.png'
 import { getDictionary } from '@/i18n'
 
 
 export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticPageProps) {
-  const {start} = await getDictionary(locale)
+  const {immersiveCathedral} = await getDictionary(locale)
   
+  const actions:ActionsProps['actions']=[
+    {
+      href: 'immersive/molasses-degradation',
+      label: immersiveCathedral.actions.molasses,
+    },
+    {
+      href: '#',
+      label: immersiveCathedral.actions.conservation,
+      disabled: true,
+    },
+    {
+      href: '#',
+      label: immersiveCathedral.actions.vaults,
+      disabled: true,
+    },
+  ]
+
   return (
     <BaseLayout
       dark
-      title={start.title}
-      subtitle={start.subTitle}
+      title={immersiveCathedral.title}
+      subtitle={immersiveCathedral.subTitle}
       left={
         <Image
-          src={bgImg}
+          src={cathedral}
           alt="background image"
           placeholder="blur"
           quality={100}
@@ -27,22 +44,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
       }
       right={
         <Actions
-          actions={[
-            {
-              href: 'immersive/molasses-degradation',
-              label: 'Molasse et sa dégradation',
-            },
-            {
-              href: '#',
-              label: 'Stratégies de conservation',
-              disabled: true,
-            },
-            {
-              href: '#',
-              label: 'Les voûtes de la cathédrale',
-              disabled: true,
-            },
-          ]}
+          actions={actions}
         />
       }
       navItems={[

@@ -14,9 +14,14 @@ export function Actions({ actions }: ActionsProps) {
       {actions && (
         <ActionsContainer>
           <ul>
-            {actions.map(({ href, label, disabled }, i) => (
+            {actions.map(({ href, label, disabled, external }, i) => (
               <li key={i}>
-                <BigLink href={href} label={label} disabled={disabled} />
+                <BigLink
+                  href={href}
+                  label={label}
+                  disabled={disabled}
+                  external={external}
+                />
               </li>
             ))}
           </ul>

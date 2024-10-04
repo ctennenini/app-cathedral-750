@@ -1,6 +1,33 @@
 {
   "start": {
     "title": "Cathédrale de Lausanne:",
-    "subTitle": "Centre d’Informations digitales"
+    "subTitle": "Centre d’Informations digitales",
+    "actions": {
+      "website": "Site web de la cathédrale",
+      "birthday": "750e anniversaire",
+      "immersive": "La Cathédrale immersive"
+    }
+  },
+  "immersiveCathedral": {
+    "title": "La Cathédrale immersive",
+    "subTitle": "Menu principal",
+    "actions": {
+      "molasses": "Molasse et sa dégradation",
+      "conservation": "Stratégies de conservation",
+      "vaults": "Les voûtes de la cathédrale"
+    },
+    "molasses": {
+      "subTitle": "La molasse et sa météorisation",
+      "description": [
+        "La cathédrale de Lausanne a été construite avec un grès molassique local, particulièrement sensible à l'eau.",
+        "Vous pouvez obtenir directement ici des informations sur cette pierre ainsi que sur sa météorisation en cliquant sur les boutons correspondants.",
+        "Vous pouvez également accéder directement à une application interactive de découverte à utiliser lors de votre promenade autour de la cathédrale."
+      ],
+      "actions": {
+        "sandstone": "Le grès molassique",
+        "weathering": "Météorisation de la molasse",
+        "interactive": "Découverte interactive"
+      }
+    }
   }
 }

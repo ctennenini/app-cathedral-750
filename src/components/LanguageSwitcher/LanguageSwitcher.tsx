@@ -1,16 +1,18 @@
 'use client'
 
 import { ChangeEventHandler } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams, useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select } from './LanguageSwitcher.styled'
 
 export function LanguageSwitcher() {
   const { locale } = useParams()
+  const path = usePathname()
   const router = useRouter()
 
   const onSelect: ChangeEventHandler<HTMLSelectElement> = (event) => {
-    router.push(`/${event.target.value}`)
+    const newPath = path.replace(`/${locale}`, `/${event.target.value}`)
+    router.push(newPath)
   }
 
   return (

@@ -17,13 +17,18 @@ export function Header({ title = 'ETHZ', subTitle, dark }: { title: string; subT
   )
 }
 
-const HeaderContainer = styled.header<{ dark?: boolean }>(({ dark }) => ({
+const HeaderContainer = styled.header.withConfig({
+  shouldForwardProp: (prop) => !['dark'].includes(prop),
+})<{ dark?: boolean }>(({ dark }) => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   gap: '1rem',
   h1: {
-    color: dark ? '#fff' : '#000',
+    color: '#000',
+    background: '#fff8',
+    padding: '0.5rem',
+    margin: '0 -0.5rem 1rem',
   },
   h2: {
     color: dark ? '#fff' : '#000',

@@ -2,7 +2,9 @@
 
 import styled from 'styled-components'
 
-export const Container = styled.div<{ dark?: boolean }>(({ dark }) => ({
+export const Container = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['dark'].includes(prop),
+})<{ dark?: boolean }>(({ dark }) => ({
   position: 'relative',
   zIndex: 0,
   height: '100dvh',
