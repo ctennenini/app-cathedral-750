@@ -16,7 +16,10 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <Select value={locale} onChange={onSelect}>
+    <Select
+      value={locale}
+      onChange={onSelect}
+    >
       {languages.map((ln) => (
         <option key={ln}>{ln}</option>
       ))}
