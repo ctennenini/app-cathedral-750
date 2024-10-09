@@ -13,10 +13,11 @@ const nextConfig = {
   },
 
   images: {
+    unoptimized: true,
   },
 
-  basePath: isProd ? '/ethz-slideshow-poc' : undefined,
-  assetPrefix: isProd ? '/ethz-slideshow-poc' : undefined,
+  basePath: process.env.PREFIX ?? undefined,
+  assetPrefix: process.env.PREFIX ?? undefined,
 
   env: {
     LANGUAGES: 'de,en,fr',

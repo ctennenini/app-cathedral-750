@@ -27,7 +27,7 @@ jobs:
         run: yarn lint
 
       - name: Build
-        run: yarn build
+        run: PREFIX=/ethz-slideshow-poc yarn build
 
       - name: Create .nojekyll
         run: touch ./out/.nojekyll
