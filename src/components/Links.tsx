@@ -1,6 +1,6 @@
 'use client'
+import { useLocale } from '@/utils'
 import NextLink from 'next/link'
-import { useParams } from 'next/navigation'
 import { ComponentProps } from 'react'
 import styled from 'styled-components'
 
@@ -11,7 +11,7 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
 }
 
 function useHref(href: LinkProps['href']) {
-  const { locale } = useParams()
+  const locale = useLocale()
   if (href.toString().startsWith('http')) return href
   return `/${locale}/${href}`
 }

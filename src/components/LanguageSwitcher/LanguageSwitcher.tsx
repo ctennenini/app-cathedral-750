@@ -1,12 +1,13 @@
 'use client'
 
 import { ChangeEventHandler } from 'react'
-import { useParams, useRouter, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select } from './LanguageSwitcher.styled'
+import { useLocale } from '@/utils'
 
 export function LanguageSwitcher() {
-  const { locale } = useParams()
+  const locale = useLocale()
   const path = usePathname()
   const router = useRouter()
 
