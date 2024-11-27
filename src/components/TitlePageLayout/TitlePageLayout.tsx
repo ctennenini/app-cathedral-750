@@ -1,0 +1,45 @@
+import { ImageProps } from 'next/image'
+import { PropsWithChildren } from 'react'
+import { Footer, Header, Main, Subtitle, Title } from './TitlePageLayout.styled'
+import { Nav, NavProps } from '@/components/Nav'
+import { BaseLayout } from '@/components/BaseLayout'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { NavMenu } from '@/components/NavMenu'
+
+export type TitlePageLayoutProps = PropsWithChildren<{
+  title: string
+  subtitle?: string
+  bgImg?: ImageProps['src']
+  bgImgAlt?: ImageProps['alt']
+  navItems?: NavProps['items']
+  dark?: boolean
+}>
+
+export function TitlePageLayout({
+  title,
+  subtitle,
+  bgImg,
+  bgImgAlt = 'background image',
+  navItems,
+  dark,
+}: TitlePageLayoutProps) {
+  return (
+    <BaseLayout
+      dark={dark}
+      bgImg={bgImg}
+      bgImgAlt={bgImgAlt}
+    >
+      <Header>
+        <NavMenu />
+        <LanguageSwitcher />
+      </Header>
+      <Main>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+      </Main>
+      <Footer>
+        <Nav items={navItems} />
+      </Footer>
+    </BaseLayout>
+  )
+}

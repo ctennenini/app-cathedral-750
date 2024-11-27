@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { LanguageSwitcher } from '../LanguageSwitcher'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header({ title = 'ETHZ', subTitle, dark }: { title: string; subTitle?: string; dark?: boolean }) {
   return (

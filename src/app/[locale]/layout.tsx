@@ -1,6 +1,8 @@
 import { PropsWithChildren } from 'react'
 import { languages } from '@/config'
 
+import { AppContextProvider } from '@/AppContext'
+
 export async function generateStaticParams() {
   return languages.map((ln) => ({ locale: ln }))
 }
@@ -11,7 +13,7 @@ export default function Layout({ children, params: { locale } }: GlobalStaticLay
       lang={locale}
       style={{ height: '100%' }}
     >
-      {children}
+      <AppContextProvider locale={locale}>{children}</AppContextProvider>
     </div>
   )
 }

@@ -9,3 +9,5 @@ export const getDictionary = async (locale: string) => {
       return import('./en.json').then((m) => m.default)
   }
 }
+
+export type Dictionary = Awaited<ReturnType<typeof getDictionary>>

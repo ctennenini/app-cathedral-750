@@ -1,4 +1,4 @@
-import { BaseLayout, Actions, ActionsProps } from '@/components'
+import { TitlePageLayout, Actions, ActionsProps } from '@/components'
 
 import bgImg from './bg-img.png'
 import { GlobalStaticPageProps } from '../layout'
@@ -25,7 +25,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
   ]
 
   return (
-    <BaseLayout
+    <TitlePageLayout
       title={start.title}
       subtitle={start.subTitle}
       bgImg={bgImg}
