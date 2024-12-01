@@ -29,5 +29,16 @@
         "interactive": "Interaktive Entdeckung"
       }
     }
+  },
+  "navigation": {
+    "molasses": {
+      "main": "Molasse und seine Verwitterung"
+    },
+    "conservationStrategies": {
+      "main": "Erhaltungsstrategien"
+    },
+    "vaults": {
+      "main": "Gewölbe der Kathedrale"
+    }
   }
 }

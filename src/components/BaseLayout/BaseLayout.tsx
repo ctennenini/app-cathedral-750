@@ -1,8 +1,6 @@
 import Image, { ImageProps } from 'next/image'
-import React, { PropsWithChildren } from 'react'
-import { Container, Footer, Left, Main, Right } from './BaseLayout.styled'
-import { Header } from '../Header'
-import { Nav, NavProps } from '../Nav'
+import { PropsWithChildren } from 'react'
+import { Container } from './BaseLayout.styled'
 
 export type BaseLayoutProps = PropsWithChildren<{
   bgImg?: ImageProps['src']

@@ -15,7 +15,11 @@ export function Nav({ items }: NavProps) {
           <ul>
             {items.map(({ href, label, disabled }, i) => (
               <li key={i}>
-                <NavItem href={href} label={label} disabled={disabled} />
+                <NavItem
+                  href={href}
+                  label={label}
+                  disabled={disabled}
+                />
               </li>
             ))}
           </ul>

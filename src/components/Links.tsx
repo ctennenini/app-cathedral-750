@@ -16,22 +16,20 @@ function useHref(href: LinkProps['href']) {
   return `/${locale}/${href}`
 }
 
-export const BigLink = styled(({ href, label, external, disabled, className, as }: LinkProps) => {
+export function Link({ href, label, ...otherProps }: LinkProps) {
   href = useHref(href)
 
   return (
     <NextLink
-      as={as}
       href={href}
-      target={external ? '_blank' : undefined}
-      aria-disabled={!!disabled}
-      onClick={disabled ? (e) => e.preventDefault() : undefined}
-      className={className}
+      {...otherProps}
     >
       {label}
     </NextLink>
   )
-})(({ disabled }) => ({
+}
+
+export const BigLink = styled(Link)(({ disabled }) => ({
   display: 'inline-block',
   padding: '1rem 3rem',
   width: '100%',
@@ -43,7 +41,7 @@ export const BigLink = styled(({ href, label, external, disabled, className, as 
   cursor: disabled ? 'not-allowed' : 'pointer',
 }))
 
-export const NavItem = styled(({ href, label, external, disabled, className, as }: LinkProps) => {
+export const NavItem = styled(({ href, label, external, disabled, className, as, ...otherProps }: LinkProps) => {
   href = useHref(href)
 
   return (
@@ -54,6 +52,7 @@ export const NavItem = styled(({ href, label, external, disabled, className, as 
       aria-disabled={!!disabled}
       onClick={disabled ? (e) => e.preventDefault() : undefined}
       className={className}
+      {...otherProps}
     >
       {label}
     </NextLink>

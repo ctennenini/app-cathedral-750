@@ -1,18 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import { getDictionary } from '@/i18n'
+import { useEffect, useRef, useState } from 'react'
+import { Dictionary } from '@/i18n'
 import { HamburgerIcon } from '../Icons'
-import { Button } from './NavMenu.styled'
+import { Button, CloseButton, Drawer, NavLink } from './NavMenu.styled'
 import { useAppContext } from '@/AppContext'
 
-async function getMenuItems(locale: string) {
-  const dict = await getDictionary(locale)
-
+function getMenuItems(dictionary: Dictionary) {
   return [
     {
-      name: dict.start.title,
-      path: '/',
+      name: dictionary.navigation.molasses.main,
+      path: '/immersive',
       children: [
         {
           name: 'components',
@@ -33,12 +31,26 @@ async function getMenuItems(locale: string) {
 export function NavMenu() {
   const [isExpanded, setExpanded] = useState(false)
   const { dictionary } = useAppContext()
+  const menuItems = getMenuItems(dictionary)
+  const drawerRef = useRef<HTMLDivElement>(null)
 
-  // const menuItems = [
-  //   {
-  //     name: dictionary.,
-  //   },
-  // ]
+  useEffect(() => {
+    const onClickOutside = (e: MouseEvent) => {
+      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
+        setExpanded(false)
+      }
+    }
+
+    if (isExpanded) {
+      // document.body.style.overflow = 'hidden'
+      document.addEventListener('click', onClickOutside)
+    }
+
+    return () => {
+      // document.body.style.overflow = 'auto'
+      document.removeEventListener('click', onClickOutside)
+    }
+  }, [isExpanded])
 
   return (
     <>
@@ -48,14 +60,21 @@ export function NavMenu() {
       >
         <HamburgerIcon />
       </Button>
-      {/* <nav
-        value={locale}
-        onChange={onSelect}
+      <Drawer
+        isExpanded={isExpanded}
+        ref={drawerRef}
       >
-        {languages.map((ln) => (
-          <option key={ln}>{ln}</option>
-        ))}
-      </nav> */}
+        <CloseButton onClick={() => setExpanded(false)} />
+        <nav>
+          {menuItems.map(({ name, /* children, */ path }, i) => (
+            <NavLink
+              key={i}
+              href={path}
+              label={name}
+            />
+          ))}
+        </nav>
+      </Drawer>
     </>
   )
 }

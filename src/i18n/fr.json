@@ -29,5 +29,16 @@
         "interactive": "Découverte interactive"
       }
     }
+  },
+  "navigation": {
+    "molasses": {
+      "main": "Molasse et sa météorisation"
+    },
+    "conservationStrategies": {
+      "main": "Stratégies de conservation"
+    },
+    "vaults": {
+      "main": "Les voûtes de la cathédrale"
+    }
   }
 }

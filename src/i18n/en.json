@@ -29,5 +29,16 @@
         "interactive": "Interactive discovery"
       }
     }
+  },
+  "navigation": {
+    "molasses": {
+      "main": "Molasse and its weathering"
+    },
+    "conservationStrategies": {
+      "main": "Strategies for Conservation"
+    },
+    "vaults": {
+      "main": "Vaults of the Cathedral"
+    }
   }
 }

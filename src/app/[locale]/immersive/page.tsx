@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import { Actions, ActionsProps, BaseLayout } from '@/components'
+import { Actions, ActionsProps } from '@/components'
 import { GlobalStaticPageProps } from '../layout'
 import cathedral from './cathedral.png'
 import { getDictionary } from '@/i18n'
-
+import { TextPageLayout } from '@/components/TextPageLayout'
 
 export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticPageProps) {
-  const {immersiveCathedral} = await getDictionary(locale)
-  
-  const actions:ActionsProps['actions']=[
+  const { immersiveCathedral } = await getDictionary(locale)
+
+  const actions: ActionsProps['actions'] = [
     {
       href: 'immersive/molasses-degradation',
       label: immersiveCathedral.actions.molasses,
@@ -26,7 +26,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
   ]
 
   return (
-    <BaseLayout
+    <TextPageLayout
       dark
       title={immersiveCathedral.title}
       subtitle={immersiveCathedral.subTitle}
@@ -42,11 +42,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
           }}
         />
       }
-      right={
-        <Actions
-          actions={actions}
-        />
-      }
+      right={<Actions actions={actions} />}
       navItems={[
         {
           href: `start`,
