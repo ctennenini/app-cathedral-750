@@ -3,7 +3,7 @@
 import { ChangeEventHandler, useMemo } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
-import { Select } from './LanguageSwitcher.styled'
+import { Select } from './Select'
 import { useLocale } from '@/utils'
 import { useAppContext } from '@/AppContext'
 
@@ -29,8 +29,8 @@ export function LanguageSwitcher() {
     [dictionary],
   )
 
-  const onSelect: ChangeEventHandler<HTMLSelectElement> = (event) => {
-    const newPath = path.replace(`/${locale}`, `/${event.target.value}`)
+  const onSelect = (lng: string) => {
+    const newPath = path.replace(`/${locale}`, `/${lng}`)
     router.push(newPath)
   }
 
@@ -38,15 +38,7 @@ export function LanguageSwitcher() {
     <Select
       value={locale}
       onChange={onSelect}
-    >
-      {options.map(({ label, value }) => (
-        <option
-          key={value}
-          value={value}
-        >
-          {label}
-        </option>
-      ))}
-    </Select>
+      options={options}
+    />
   )
 }
