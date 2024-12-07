@@ -64,7 +64,7 @@ export function NavMenu() {
         <HamburgerIcon />
       </Button>
       <Drawer
-        isExpanded={isExpanded}
+        $isExpanded={isExpanded}
         ref={drawerRef}
       >
         <CloseButton onClick={() => setExpanded(false)} />

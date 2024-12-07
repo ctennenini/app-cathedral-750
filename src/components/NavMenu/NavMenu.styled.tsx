@@ -16,14 +16,14 @@ export const Button = styled.button({
   },
 })
 
-export const Drawer = styled.div<{ isExpanded: boolean }>((props) => ({
+export const Drawer = styled.div<{ $isExpanded: boolean }>((props) => ({
   position: 'fixed',
   top: 0,
   left: 0,
   height: '100%',
 
   backgroundColor: 'white',
-  transform: `translateX(${props.isExpanded ? '0' : '-100%'})`,
+  transform: `translateX(${props.$isExpanded ? '0' : '-100%'})`,
   transition: 'transform 0.3s',
 
   padding: '180px 130px 180px 50px',
