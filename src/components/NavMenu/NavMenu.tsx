@@ -1,37 +1,40 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Dictionary } from '@/i18n'
 import { HamburgerIcon } from '../Icons'
 import { Button, CloseButton, Drawer, NavLink } from './NavMenu.styled'
 import { useAppContext } from '@/AppContext'
 
-function getMenuItems(dictionary: Dictionary) {
-  return [
-    {
-      name: dictionary.navigation.molasses.main,
-      path: '/immersive',
-      children: [
-        {
-          name: 'components',
-          path: 'ethz-cathedral-slideshow/src/components',
-          children: [
-            {
-              name: 'NavMenu',
-              path: 'ethz-cathedral-slideshow/src/components/NavMenu',
-              children: [],
-            },
-          ],
-        },
-      ],
-    },
-  ]
+function useMenuItems(dictionary: Dictionary) {
+  return useMemo(
+    () => [
+      {
+        name: dictionary.navigation.molasses.main,
+        path: '/immersive',
+        children: [
+          {
+            name: 'components',
+            path: 'ethz-cathedral-slideshow/src/components',
+            children: [
+              {
+                name: 'NavMenu',
+                path: 'ethz-cathedral-slideshow/src/components/NavMenu',
+                children: [],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    [dictionary],
+  )
 }
 
 export function NavMenu() {
   const [isExpanded, setExpanded] = useState(false)
   const { dictionary } = useAppContext()
-  const menuItems = getMenuItems(dictionary)
+  const menuItems = useMenuItems(dictionary)
   const drawerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

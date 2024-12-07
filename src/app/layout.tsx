@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   description: 'An Interactive Slideshow of the Cathedral of Notre Dame of Lausanne',
 }
 
-export default function RootLayout({ children, ...rest }: PropsWithChildren<unknown>) {
-  console.log('RootLayout', { children, ...rest })
+export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
     <html>
       <body className={`${getFontClasses()}`}>

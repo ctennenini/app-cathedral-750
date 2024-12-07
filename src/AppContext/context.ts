@@ -4,6 +4,7 @@ import { createContext } from 'react'
 import { Dictionary } from '@/i18n'
 
 export type AppContext = {
+  locale: string
   dictionary: Dictionary
 }
 
