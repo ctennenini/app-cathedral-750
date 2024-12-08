@@ -6,6 +6,9 @@ export const getDictionary = async (locale: string) => {
     case 'de':
       specific = await import('./de.json').then((m) => m.default)
       break
+    case 'es':
+      specific = await import('./es.json').then((m) => m.default)
+      break
     case 'fr':
       specific = await import('./fr.json').then((m) => m.default)
       break
