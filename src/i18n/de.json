@@ -32,13 +32,30 @@
   },
   "navigation": {
     "molasses": {
-      "main": "Molasse und seine Verwitterung"
+      "main": "Molasse und seine Verwitterung",
+      "sandstone": {
+        "main": "Der Molasse-Sandstein"
+      },
+      "weathering": {
+        "main": "Verwitterung der Molasse",
+        "mechanisms": {
+          "main": "Verwitterungsmechanismen",
+          "freezeThaw": "Frost-Tau-Wirkung",
+          "swellingClays": "Quellende Tone",
+          "crystallizationPressure": "Kristallisationsdruck",
+          "atmosphericPollution": "Luftverschmutzung",
+          "biologicalAttack": "Biologischer Angriff"
+        },
+        "degradationType": {
+          "main": "Typ der Zerstörung"
+        }
+      }
     },
     "conservationStrategies": {
       "main": "Erhaltungsstrategien"
     },
     "vaults": {
-      "main": "Gewölbe der Kathedrale"
+      "main": "Die Gewölbe der Kathedrale"
     }
   }
 }

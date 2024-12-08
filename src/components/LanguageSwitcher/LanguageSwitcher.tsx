@@ -1,6 +1,6 @@
 'use client'
 
-import { ChangeEventHandler, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select } from './Select'

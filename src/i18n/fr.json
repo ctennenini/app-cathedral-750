@@ -32,7 +32,24 @@
   },
   "navigation": {
     "molasses": {
-      "main": "Molasse et sa météorisation"
+      "main": "Molasse et sa dégradation",
+      "sandstone": {
+        "main": "Le grès molassique"
+      },
+      "weathering": {
+        "main": "Météorisation de la molasse",
+        "mechanisms": {
+          "main": "Mécanismes de météorisation",
+          "freezeThaw": "Action gel-dégel",
+          "swellingClays": "Argiles gonflantes",
+          "crystallizationPressure": "Pression de cristallisation",
+          "atmosphericPollution": "Pollution atmosphérique",
+          "biologicalAttack": "Attaque biologique"
+        },
+        "degradationType": {
+          "main": "Type de dégradation"
+        }
+      }
     },
     "conservationStrategies": {
       "main": "Stratégies de conservation"

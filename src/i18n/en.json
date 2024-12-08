@@ -32,7 +32,24 @@
   },
   "navigation": {
     "molasses": {
-      "main": "Molasse and its weathering"
+      "main": "Molasses and its weathering",
+      "sandstone": {
+        "main": "The Molasse sandstone"
+      },
+      "weathering": {
+        "main": "Weathering of Molasse",
+        "mechanisms": {
+          "main": "Weathering Mechanisms",
+          "freezeThaw": "Freeze - Thaw Action",
+          "swellingClays": "Swelling Clays",
+          "crystallizationPressure": "Crystallization Pressure",
+          "atmosphericPollution": "Atmospheric Pollution",
+          "biologicalAttack": "Biological Attack"
+        },
+        "degradationType": {
+          "main": "Degradation Type"
+        }
+      }
     },
     "conservationStrategies": {
       "main": "Strategies for Conservation"

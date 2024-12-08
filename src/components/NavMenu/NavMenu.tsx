@@ -6,25 +6,79 @@ import { HamburgerIcon } from '../Icons'
 import { Button, CloseButton, Drawer, NavLink } from './NavMenu.styled'
 import { useAppContext } from '@/AppContext'
 
-function useMenuItems(dictionary: Dictionary) {
-  return useMemo(
+export type NavMenuItem = {
+  name: string
+  path: string
+  children?: NavMenuItem[]
+}
+
+function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
+  return useMemo<NavMenuItem[]>(
     () => [
       {
         name: dictionary.navigation.molasses.main,
-        path: '/immersive',
+        path: '/',
         children: [
           {
-            name: 'components',
-            path: 'ethz-cathedral-slideshow/src/components',
+            name: dictionary.navigation.molasses.sandstone.main,
+            path: '/',
+            children: [],
+          },
+          {
+            name: dictionary.navigation.molasses.weathering.main,
+            path: '/',
             children: [
               {
-                name: 'NavMenu',
-                path: 'ethz-cathedral-slideshow/src/components/NavMenu',
-                children: [],
+                name: dictionary.navigation.molasses.weathering.mechanisms.main,
+                path: '/',
+                children: [
+                  {
+                    name: dictionary.navigation.molasses.weathering.mechanisms.freezeThaw,
+                    path: '/',
+                  },
+                  {
+                    name: dictionary.navigation.molasses.weathering.mechanisms.swellingClays,
+                    path: '/',
+                  },
+                  {
+                    name: dictionary.navigation.molasses.weathering.mechanisms.crystallizationPressure,
+                    path: '/',
+                  },
+                  {
+                    name: dictionary.navigation.molasses.weathering.mechanisms.atmosphericPollution,
+                    path: '/',
+                  },
+                  {
+                    name: dictionary.navigation.molasses.weathering.mechanisms.biologicalAttack,
+                    path: '/',
+                  },
+                ],
+              },
+              {
+                name: dictionary.navigation.molasses.weathering.degradationType.main,
+                path: '/',
               },
             ],
           },
+          {
+            name: dictionary.navigation.conservationStrategies.main,
+            path: '/',
+          },
+          {
+            name: dictionary.navigation.vaults.main,
+            path: '/',
+          },
         ],
+      },
+      {
+        name: dictionary.navigation.conservationStrategies.main,
+        path: '/',
+        children: [],
+      },
+      {
+        name: dictionary.navigation.vaults.main,
+        path: '/',
+        children: [],
       },
     ],
     [dictionary],
@@ -55,6 +109,8 @@ export function NavMenu() {
     }
   }, [isExpanded])
 
+  console.log('NavMenu render', menuItems)
+
   return (
     <>
       <Button
@@ -68,16 +124,22 @@ export function NavMenu() {
         ref={drawerRef}
       >
         <CloseButton onClick={() => setExpanded(false)} />
-        <nav>
-          {menuItems.map(({ name, /* children, */ path }, i) => (
-            <NavLink
-              key={i}
-              href={path}
-              label={name}
-            />
-          ))}
-        </nav>
+        <nav>{renderNavList(menuItems)}</nav>
       </Drawer>
     </>
   )
 }
+
+const renderNavList = (menuItems: NavMenuItem[]) => (
+  <ul>
+    {menuItems.map(({ name, children, path }, i: number) => (
+      <li key={i}>
+        <NavLink
+          href={path}
+          label={name}
+        />
+        {children && renderNavList(children)}
+      </li>
+    ))}
+  </ul>
+)
