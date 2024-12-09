@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Dispatch, RefObject, SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
 import { Dictionary } from '@/i18n'
 import { HamburgerIcon } from '../Icons'
 import { Button, CloseButton, Drawer, NavLink } from './NavMenu.styled'
 import { useAppContext } from '@/AppContext'
+import { useClickAway } from '../useClickAway'
 
 export type NavMenuItem = {
   name: string
@@ -91,23 +92,7 @@ export function NavMenu() {
   const menuItems = useMenuItems(dictionary)
   const drawerRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const onClickOutside = (e: MouseEvent) => {
-      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
-        setExpanded(false)
-      }
-    }
-
-    if (isExpanded) {
-      // document.body.style.overflow = 'hidden'
-      document.addEventListener('click', onClickOutside)
-    }
-
-    return () => {
-      // document.body.style.overflow = 'auto'
-      document.removeEventListener('click', onClickOutside)
-    }
-  }, [isExpanded])
+  useClickAway(isExpanded, setExpanded, drawerRef)
 
   console.log('NavMenu render', menuItems)
 

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, Children } from 'react'
+import { useState, Children, useRef } from 'react'
 import styled from 'styled-components'
+import { useClickAway } from '../useClickAway'
 
 const Container = styled.nav(() => ({
   position: 'relative',
@@ -52,13 +53,16 @@ export type SelectProps = {
 }
 
 export function Select({ value, onChange, options }: SelectProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpen] = useState(false)
+  
+  useClickAway(isOpen, setOpen, containerRef)
 
   const currentOption = options.find((option) => option.value === value)
   const otherOptions = options.filter((option) => option.value !== value)
 
   return (
-    <Container onClick={() => setOpen((o) => !o)}>
+    <Container onClick={() => setOpen((o) => !o)} ref={containerRef}>
       <Menu
         role="menu"
         $isOpen={isOpen}
