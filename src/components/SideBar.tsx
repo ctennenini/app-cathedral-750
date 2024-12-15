@@ -64,7 +64,7 @@ export type SideBarProps = {
 }
 
 export function SideBar({ renderContent }: SideBarProps) {
-  const [isExpanded, setExpanded] = useState(true)
+  const [isExpanded, setExpanded] = useState(false)
   const { dictionary } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
