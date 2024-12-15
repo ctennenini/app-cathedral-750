@@ -4,7 +4,7 @@ import { Dictionary } from '@/i18n'
 import { Nav } from './NavMenu.styled'
 import { SideBar } from '../SideBar'
 
-import { useAppContext } from '@/AppContext'
+import { useAppContext } from '@/context'
 import { renderNavList, NavMenuItem } from './ListItem'
 
 function useMenuItems(dictionary: Dictionary): NavMenuItem[] {

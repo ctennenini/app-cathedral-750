@@ -2,7 +2,7 @@
 
 import { ComponentProps, useRef, useState } from 'react'
 import { CloseIcon, HamburgerIcon } from './Icons'
-import { useAppContext } from '@/AppContext'
+import { useAppContext } from '@/context'
 import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 

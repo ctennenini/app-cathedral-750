@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react'
 import { languages } from '@/config'
 
-import { AppContextProvider } from '@/AppContext'
+import { AppContextProvider } from '@/context'
 import { getDictionary } from '@/i18n'
 
 export async function generateStaticParams() {
-  return languages.map((ln) => ({ locale: ln }))
+  return languages.map(ln => ({ locale: ln }))
 }
 
 export default async function Layout({ children, params: { locale } }: GlobalStaticLayoutProps) {

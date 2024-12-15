@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select } from '../Select'
 import { useLocale } from '@/utils'
-import { useAppContext } from '@/AppContext'
+import { useAppContext } from '@/context'
 
 export function LanguageSwitcher() {
   const locale = useLocale()
@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
 
   const options = useMemo(
     () =>
-      languages.map((value) => {
+      languages.map(value => {
         const label = dictionary.languages[value as keyof typeof dictionary.languages]
         if (!label) {
           throw new Error(`Language ${value} not found in dictionary`)
