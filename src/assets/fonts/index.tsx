@@ -1,16 +1,11 @@
-import localFont from "next/font/local";
+import localFont from 'next/font/local'
 
-const geistSans = localFont({
-  src: "./GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const athelas = localFont({
+  src: './Athelas/Athelas-Regular.ttf',
+  variable: '--font-title',
+  weight: '100 900',
+})
 
 export function getFontClasses() {
-  return `${geistSans.variable} ${geistMono.variable}`;
+  return `${athelas.variable}`
 }

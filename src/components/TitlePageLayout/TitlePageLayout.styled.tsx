@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div.withConfig({
-  shouldForwardProp: (prop) => !['dark'].includes(prop),
+  shouldForwardProp: prop => !['dark'].includes(prop),
 })<{ dark?: boolean }>(({ dark }) => ({
   position: 'relative',
   zIndex: 0,
@@ -18,9 +18,9 @@ export const Container = styled.div.withConfig({
 export const Main = styled.main({
   flex: 1,
   display: 'flex',
-  flexDirection: 'row',
-  columns: '1fr 1fr',
-  justifyContent: 'space-between',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
 
 export const Header = styled.header({
@@ -30,10 +30,23 @@ export const Header = styled.header({
   gap: '1rem',
 })
 
-export const Title = styled.h1({})
+export const Title = styled.h1({
+  fontFamily: 'var(--font-title)',
+  fontSize: 144,
+  fontWeight: 700,
+  lineHeight: '161px',
+
+  fontVariant: 'uppercase',
+})
 
 export const Subtitle = styled.h2({
   flex: '0 0 auto',
+})
+
+export const Separator = styled.hr({
+  width: '100%',
+  height: '2px',
+  backgroundColor: '#000',
 })
 
 export const Footer = styled.footer({})

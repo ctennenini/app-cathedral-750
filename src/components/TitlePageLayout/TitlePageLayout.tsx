@@ -1,6 +1,6 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Footer, Header, Main, Subtitle, Title } from './TitlePageLayout.styled'
+import { Footer, Header, Main, Separator, Subtitle, Title } from './TitlePageLayout.styled'
 import { Nav, NavProps } from '@/components/Nav'
 import { BaseLayout } from '@/components/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -35,7 +35,12 @@ export function TitlePageLayout({
       </Header>
       <Main>
         <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
+        {subtitle && (
+          <>
+            <Separator />
+            <Subtitle>{subtitle}</Subtitle>
+          </>
+        )}
       </Main>
       <Footer>
         <Nav items={navItems} />

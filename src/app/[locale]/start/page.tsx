@@ -1,13 +1,14 @@
-import { TitlePageLayout, Actions, ActionsProps } from '@/components'
+import { TitlePageLayout, TitlePageLayoutProps } from '@/components'
 
-import bgImg from './bg-img.png'
 import { GlobalStaticPageProps } from '../layout'
 import { getDictionary } from '@/i18n'
+
+import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
 
 export default async function Start({ params: { locale } }: GlobalStaticPageProps) {
   const { start } = await getDictionary(locale)
 
-  const actions: ActionsProps['actions'] = [
+  const navItems: TitlePageLayoutProps['navItems'] = [
     {
       href: 'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
       label: start.actions.website,
@@ -29,7 +30,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
       title={start.title}
       subtitle={start.subTitle}
       bgImg={bgImg}
-      right={<Actions actions={actions} />}
+      navItems={navItems}
     />
   )
 }
