@@ -1,7 +1,6 @@
 'use client'
 
-import { ComponentProps, Dispatch, RefObject, SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
-import { Dictionary } from '@/i18n'
+import { ComponentProps, useRef, useState } from 'react'
 import { CloseIcon, HamburgerIcon } from './Icons'
 import { useAppContext } from '@/AppContext'
 import { useClickAway } from './useClickAway'
@@ -20,7 +19,7 @@ export const Button = styled.button({
   },
 })
 
-export const Drawer = styled.div<{ $isExpanded: boolean }>((props) => ({
+export const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
   position: 'fixed',
   top: 0,
   left: 0,
@@ -64,7 +63,7 @@ export type SideBarProps = {
   renderContent: () => JSX.Element
 }
 
-export function SideBar({renderContent} : SideBarProps ) {
+export function SideBar({ renderContent }: SideBarProps) {
   const [isExpanded, setExpanded] = useState(true)
   const { dictionary } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)

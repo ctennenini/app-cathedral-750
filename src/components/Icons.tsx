@@ -66,18 +66,44 @@ export const CloseIcon = styled((props: SVGProps<SVGSVGElement>) => (
   height: 20,
 })
 
+export type TriangleProps = SVGProps<SVGSVGElement> & {
+  $isActive?: boolean
+}
 
-export const NavMenuTriangleClosed = styled((props: SVGProps<SVGSVGElement>) => (
-  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M1.10999 11.1096L6.10999 6.10962L1.10999 1.88965" stroke="#191919" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+export const NavMenuTriangleClosed = styled(({ $isActive, ...props }: TriangleProps) => (
+  <svg
+    width="8"
+    height="13"
+    viewBox="0 0 8 13"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M1.10999 11.1096L6.10999 6.10962L1.10999 1.88965"
+      stroke={$isActive ? '#CE3D3A' : '#191919'}
+      strokeWidth="2"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+    />
   </svg>
-))({
-})
+))({})
 
-
-export const NavMenuTriangleOpen = styled((props: SVGProps<SVGSVGElement>) => (
-  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M1 1L6 6L10.22 1" stroke="#CE3D3A" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+export const NavMenuTriangleOpen = styled(({ $isActive, ...props }: TriangleProps) => (
+  <svg
+    width="12"
+    height="8"
+    viewBox="0 0 12 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M1 1L6 6L10.22 1"
+      stroke={$isActive ? '#CE3D3A' : '#191919'}
+      strokeWidth="2"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+    />
   </svg>
-))({
-})
+))({})

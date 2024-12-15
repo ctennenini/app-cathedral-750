@@ -2,13 +2,22 @@
 
 import { Dispatch, RefObject, SetStateAction, useEffect } from 'react'
 
-
-export function useClickAway(isExpanded: boolean, setExpanded: Dispatch<SetStateAction<boolean>>, drawerRef: RefObject<HTMLDivElement>) {
+export function useClickAway(
+  isExpanded: boolean,
+  setExpanded: Dispatch<SetStateAction<boolean>>,
+  drawerRef: RefObject<HTMLDivElement>,
+) {
   useEffect(() => {
-    const onClickOutside = (e: MouseEvent) => {
-      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
-        setExpanded(false)
+    const onClickOutside = (e: Event) => {
+      if (e.defaultPrevented) {
+        return
       }
+
+      if (drawerRef.current?.contains(e.target as Node)) {
+        return
+      }
+
+      setExpanded(false)
     }
 
     if (isExpanded) {

@@ -1,6 +1,7 @@
 'use client'
 import { useLocale } from '@/utils'
 import NextLink from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ComponentProps } from 'react'
 import styled from 'styled-components'
 
@@ -14,6 +15,21 @@ function useHref(href: LinkProps['href']) {
   const locale = useLocale()
   if (href.toString().startsWith('http')) return href
   return `/${locale}/${href}`
+}
+
+export function useIsOnPath(path: string) {
+  console.log(path)
+  const locale = useLocale()
+  const pathName = usePathname()
+
+  return pathName.startsWith(`/${locale}/${path}`)
+}
+
+export function useIsActive(path: string) {
+  const locale = useLocale()
+  const pathName = usePathname()
+
+  return pathName.startsWith(`/${locale}/${path}`)
 }
 
 export function Link({ href, label, ...otherProps }: LinkProps) {
@@ -50,7 +66,7 @@ export const NavItem = styled(({ href, label, external, disabled, className, as,
       href={href}
       target={external ? '_blank' : undefined}
       aria-disabled={!!disabled}
-      onClick={disabled ? (e) => e.preventDefault() : undefined}
+      onClick={disabled ? e => e.preventDefault() : undefined}
       className={className}
       {...otherProps}
     >
