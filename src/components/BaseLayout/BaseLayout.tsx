@@ -3,6 +3,8 @@ import { PropsWithChildren } from 'react'
 import { Container } from './BaseLayout.styled'
 
 export type BaseLayoutProps = PropsWithChildren<{
+  title?: string
+  subtitle?: string
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   dark?: boolean

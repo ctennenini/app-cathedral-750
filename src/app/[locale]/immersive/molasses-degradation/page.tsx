@@ -29,14 +29,14 @@ export default async function MolassesDegradation({ params: { locale } }: Global
       title={immersiveCathedral.title}
       subtitle={immersiveCathedral.subTitle}
       bgImg={bgImg}
-      left={<TextBlock text={immersiveCathedral.molasses.description} />}
-      right={<Actions actions={actions} />}
-      navItems={[
-        {
-          href: `immersive`,
-          label: 'Back',
-        },
-      ]}
+      // left={<TextBlock text={immersiveCathedral.molasses.description} />}
+      // right={<Actions actions={actions} />}
+      // navItems={[
+      //   {
+      //     href: `immersive`,
+      //     label: 'Back',
+      //   },
+      // ]}
     />
   )
 }

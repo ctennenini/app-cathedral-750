@@ -9,9 +9,9 @@ export function useClickAway(
 ) {
   useEffect(() => {
     const onClickOutside = (e: Event) => {
-      if (e.defaultPrevented) {
-        return
-      }
+      // if (e.defaultPrevented) {
+      //   return
+      // }
 
       if (drawerRef.current?.contains(e.target as Node)) {
         return
@@ -29,5 +29,5 @@ export function useClickAway(
       // document.body.style.overflow = 'auto'
       document.removeEventListener('click', onClickOutside)
     }
-  }, [isExpanded])
+  }, [drawerRef, isExpanded, setExpanded])
 }
