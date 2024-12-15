@@ -30,8 +30,8 @@ export function TitlePageLayout({
       bgImgAlt={bgImgAlt}
     >
       <Header>
-        <NavMenu />
         <LanguageSwitcher />
+        <NavMenu />
       </Header>
       <Main>
         <Title>{title}</Title>

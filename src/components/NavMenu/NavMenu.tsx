@@ -1,11 +1,13 @@
 'use client'
-
-import { Dispatch, RefObject, SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo } from 'react'
 import { Dictionary } from '@/i18n'
-import { HamburgerIcon } from '../Icons'
-import { Button, CloseButton, Drawer, NavLink } from './NavMenu.styled'
+import { List, Nav, TriangleClosed } from './NavMenu.styled'
+import { SideBar } from '../SideBar'
+
 import { useAppContext } from '@/AppContext'
-import { useClickAway } from '../useClickAway'
+import { ListItem } from './ListItem'
+
+
 
 export type NavMenuItem = {
   name: string
@@ -87,44 +89,30 @@ function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
 }
 
 export function NavMenu() {
-  const [isExpanded, setExpanded] = useState(false)
   const { dictionary } = useAppContext()
   const menuItems = useMenuItems(dictionary)
-  const drawerRef = useRef<HTMLDivElement>(null)
-
-  useClickAway(isExpanded, setExpanded, drawerRef)
-
-  console.log('NavMenu render', menuItems)
 
   return (
-    <>
-      <Button
-        title={dictionary.start.actions.immersive}
-        onClick={() => setExpanded(true)}
-      >
-        <HamburgerIcon />
-      </Button>
-      <Drawer
-        $isExpanded={isExpanded}
-        ref={drawerRef}
-      >
-        <CloseButton onClick={() => setExpanded(false)} />
-        <nav>{renderNavList(menuItems)}</nav>
-      </Drawer>
-    </>
+    <SideBar
+      renderContent={() => (
+        <Nav>{renderNavList(menuItems)}</Nav>
+      )}
+    />
   )
 }
 
+
+
 const renderNavList = (menuItems: NavMenuItem[]) => (
-  <ul>
+  <List>
     {menuItems.map(({ name, children, path }, i: number) => (
-      <li key={i}>
-        <NavLink
-          href={path}
-          label={name}
-        />
-        {children && renderNavList(children)}
-      </li>
+      <ListItem 
+        key={i}
+        label={name}
+        path={path}
+        children={children && renderNavList(children)} 
+      />
     ))}
-  </ul>
+  </List>
 )
+

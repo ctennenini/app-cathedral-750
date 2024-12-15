@@ -2,7 +2,7 @@
 
 import { useState, Children, useRef } from 'react'
 import styled from 'styled-components'
-import { useClickAway } from '../useClickAway'
+import { useClickAway } from './useClickAway'
 
 const Container = styled.nav(() => ({
   position: 'relative',

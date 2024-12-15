@@ -25,7 +25,7 @@ export const Main = styled.main({
 
 export const Header = styled.header({
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'row-reverse',
   justifyContent: 'space-between',
   gap: '1rem',
 })

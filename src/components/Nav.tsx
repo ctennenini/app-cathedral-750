@@ -7,6 +7,9 @@ export type NavProps = PropsWithChildren<{
   items?: LinkProps[]
 }>
 
+/**
+ * @deprecated
+ */
 export function Nav({ items }: NavProps) {
   return (
     <>
