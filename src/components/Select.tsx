@@ -22,7 +22,6 @@ const Menu = styled.ul<{ $isOpen: boolean }>(({ $isOpen, children }) => ({
 
   fontSize: '25px',
   fontWeight: '500',
-  fontFamily: 'roboto',
   color: '#020202',
 
   backgroundColor: 'rgba(255, 255, 255, 0.4)',
@@ -55,14 +54,17 @@ export type SelectProps = {
 export function Select({ value, onChange, options }: SelectProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpen] = useState(false)
-  
+
   useClickAway(isOpen, setOpen, containerRef)
 
-  const currentOption = options.find((option) => option.value === value)
-  const otherOptions = options.filter((option) => option.value !== value)
+  const currentOption = options.find(option => option.value === value)
+  const otherOptions = options.filter(option => option.value !== value)
 
   return (
-    <Container onClick={() => setOpen((o) => !o)} ref={containerRef}>
+    <Container
+      onClick={() => setOpen(o => !o)}
+      ref={containerRef}
+    >
       <Menu
         role="menu"
         $isOpen={isOpen}

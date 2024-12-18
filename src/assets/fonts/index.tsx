@@ -9,9 +9,7 @@ const athelas = localFont({
 const roboto = localFont({
   src: './Roboto/Roboto-Regular.ttf',
   variable: '--font-body',
-  weight: '100 900',
 })
-
 
 export function getFontClasses() {
   return `${athelas.variable} ${roboto.variable}`
