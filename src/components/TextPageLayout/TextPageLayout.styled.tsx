@@ -2,9 +2,7 @@
 
 import styled from 'styled-components'
 
-export const Container = styled.div.withConfig({
-  shouldForwardProp: (prop) => !['dark'].includes(prop),
-})<{ dark?: boolean }>(({ dark }) => ({
+export const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
   position: 'relative',
   zIndex: 0,
   height: '100dvh',
@@ -12,7 +10,7 @@ export const Container = styled.div.withConfig({
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
-  backgroundColor: dark ? '#000' : '#fff',
+  backgroundColor: $dark ? '#000' : '#fff',
 }))
 
 export const Main = styled.main({

@@ -26,7 +26,7 @@ export function TextPageLayout({
   dark,
 }: TextPageLayoutProps) {
   return (
-    <Container dark={dark}>
+    <Container $dark={dark}>
       {bgImg && (
         <Image
           src={bgImg}

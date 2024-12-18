@@ -27,6 +27,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
 
   return (
     <TitlePageLayout
+      dark
       title={start.title}
       subtitle={start.subTitle}
       bgImg={bgImg}

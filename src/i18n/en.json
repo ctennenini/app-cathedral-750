@@ -1,6 +1,9 @@
 {
   "start": {
-    "title": "The Cathedral of Lausanne:",
+    "title": [
+      "The Cathedral",
+      "of Lausanne"
+    ],
     "subTitle": "Center for Digital Information",
     "actions": {
       "website": "Cathedral Web Site",

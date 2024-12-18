@@ -7,8 +7,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
 
 export type TitlePageLayoutProps = PropsWithChildren<{
-  title: string
-  subtitle?: string
+  title: string | string[]
+  subtitle?: string | string[]
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   navItems?: NavProps['items']
@@ -34,7 +34,17 @@ export function TitlePageLayout({
         <NavMenu />
       </Header>
       <Main>
-        <Title>{title}</Title>
+        <Title>
+          {Array.isArray(title)
+            ? title.map(line => (
+                <>
+                  {line}
+                  <br />
+                </>
+              ))
+            : title}
+        </Title>
+
         {subtitle && (
           <>
             <Separator />

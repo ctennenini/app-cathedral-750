@@ -5,7 +5,7 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header({ title = 'ETHZ', subTitle, dark }: { title: string; subTitle?: string; dark?: boolean }) {
   return (
-    <HeaderContainer dark={dark}>
+    <HeaderContainer $dark={dark}>
       <div>
         <h1 className="text-3xl h1">{title}</h1>
         {subTitle && <h2>{subTitle}</h2>}
@@ -17,9 +17,7 @@ export function Header({ title = 'ETHZ', subTitle, dark }: { title: string; subT
   )
 }
 
-const HeaderContainer = styled.header.withConfig({
-  shouldForwardProp: (prop) => !['dark'].includes(prop),
-})<{ dark?: boolean }>(({ dark }) => ({
+const HeaderContainer = styled.header<{ $dark?: boolean }>(({ $dark }) => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
@@ -31,6 +29,6 @@ const HeaderContainer = styled.header.withConfig({
     margin: '0 -0.5rem 1rem',
   },
   h2: {
-    color: dark ? '#fff' : '#000',
+    color: $dark ? '#fff' : '#000',
   },
 }))

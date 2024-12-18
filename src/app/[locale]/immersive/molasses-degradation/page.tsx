@@ -1,4 +1,4 @@
-import { Actions, ActionsProps, BaseLayout, TextBlock } from '@/components'
+import { BaseLayout } from '@/components'
 import { GlobalStaticPageProps } from '../../layout'
 import bgImg from './bg-img.png'
 import { getDictionary } from '@/i18n'
@@ -6,23 +6,23 @@ import { getDictionary } from '@/i18n'
 export default async function MolassesDegradation({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const actions: ActionsProps['actions'] = [
-    {
-      href: '#',
-      label: immersiveCathedral.molasses.actions.sandstone,
-      disabled: true,
-    },
-    {
-      href: '#',
-      label: immersiveCathedral.molasses.actions.weathering,
-      disabled: true,
-    },
-    {
-      href: '#',
-      label: immersiveCathedral.molasses.actions.interactive,
-      disabled: true,
-    },
-  ]
+  // const actions: ActionsProps['actions'] = [
+  //   {
+  //     href: '#',
+  //     label: immersiveCathedral.molasses.actions.sandstone,
+  //     disabled: true,
+  //   },
+  //   {
+  //     href: '#',
+  //     label: immersiveCathedral.molasses.actions.weathering,
+  //     disabled: true,
+  //   },
+  //   {
+  //     href: '#',
+  //     label: immersiveCathedral.molasses.actions.interactive,
+  //     disabled: true,
+  //   },
+  // ]
 
   return (
     <BaseLayout

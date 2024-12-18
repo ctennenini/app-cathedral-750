@@ -12,7 +12,7 @@ export type BaseLayoutProps = PropsWithChildren<{
 
 export function BaseLayout({ bgImg, bgImgAlt = 'background image', dark, children }: BaseLayoutProps) {
   return (
-    <Container dark={dark}>
+    <Container $dark={dark}>
       {bgImg && (
         <Image
           src={bgImg}

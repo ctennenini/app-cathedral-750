@@ -1,6 +1,9 @@
 {
   "start": {
-    "title": "Cathédrale de Lausanne:",
+    "title": [
+      "Cathédrale",
+      "de Lausanne"
+    ],
     "subTitle": "Centre d’Informations digitales",
     "actions": {
       "website": "Site web de la cathédrale",
