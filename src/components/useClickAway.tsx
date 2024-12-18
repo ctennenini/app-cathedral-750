@@ -9,9 +9,9 @@ export function useClickAway(
 ) {
   useEffect(() => {
     const onClickOutside = (e: Event) => {
-      // if (e.defaultPrevented) {
-      //   return
-      // }
+      if (e.defaultPrevented) {
+        return
+      }
 
       if (drawerRef.current?.contains(e.target as Node)) {
         return
