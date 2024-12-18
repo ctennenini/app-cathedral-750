@@ -9,10 +9,10 @@ export const Container = styled.div<{ $dark?: boolean }>`
   height: 100vh;
   padding: 1rem;
   display: flex;
-  flexDirection: column;
+  flex-direction: column;
   gap: 2rem;
-  color: ${({ $dark }) => $dark ? '#fff':'#000' };
-  backgroundColor: ${({ $dark }) => $dark ? '#000' : '#fff'};
+  color: ${({ $dark }) => ($dark ? '#fff' : '#000')};
+  background-color: ${({ $dark }) => ($dark ? '#000' : '#fff')};
 `
 
 export const Main = styled.main({

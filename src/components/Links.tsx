@@ -46,43 +46,47 @@ export function Link({ href, label, ...otherProps }: LinkProps) {
   )
 }
 
-export const BigLink = styled(Link)(({ disabled }) => ({
-  display: 'inline-block',
-  padding: '1rem 3rem',
+export const BigLink = styled(Link)<{ $primary?: boolean }>(({ disabled, $primary }) => ({
   width: '100%',
-  background: '#fffa',
-  border: '1px solid #000',
-  borderRadius: '500px',
+  height: '120px',
+  fontSize: '28px',
+  display: 'inline-block',
+  padding: '3rem 5rem',
+  color: $primary ? '#fff' : '#000',
+  backgroundColor: $primary ? '#CE3D3A' : '#fff',
   textAlign: 'center',
+  borderRadius: '12px',
   opacity: disabled ? 0.5 : 1,
   cursor: disabled ? 'not-allowed' : 'pointer',
 }))
 
-export const NavItem = styled(({ href, label, external, disabled, className, as, ...otherProps }: LinkProps & {$primary?: boolean}) => {
-  href = useHref(href)
+export const NavItem = styled(
+  ({ href, label, external, disabled, className, as, ...otherProps }: LinkProps & { $primary?: boolean }) => {
+    href = useHref(href)
 
-  return (
-    <NextLink
-      as={as}
-      href={href}
-      target={external ? '_blank' : undefined}
-      aria-disabled={!!disabled}
-      onClick={disabled ? e => e.preventDefault() : undefined}
-      className={className}
-      {...otherProps}
-    >
-      {label}
-    </NextLink>
-  )
-})(({ disabled, $primary }) => ({
+    return (
+      <NextLink
+        as={as}
+        href={href}
+        target={external ? '_blank' : undefined}
+        aria-disabled={!!disabled}
+        onClick={disabled ? e => e.preventDefault() : undefined}
+        className={className}
+        {...otherProps}
+      >
+        {label}
+      </NextLink>
+    )
+  },
+)(({ disabled, $primary }) => ({
   width: '100%',
   height: '120px',
   fontSize: '28px',
   lineHeight: '32px',
   display: 'inline-block',
   padding: '1rem 3rem',
-  color: $primary ?  '#fff': '#000',
-  backgroundColor: $primary ? '#CE3D3A': '#fff',
+  color: $primary ? '#fff' : '#000',
+  backgroundColor: $primary ? '#CE3D3A' : '#fff',
   textAlign: 'center',
   borderRadius: '12px',
   opacity: disabled ? 0.5 : 1,

@@ -1,6 +1,6 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Footer, Header, Main, Separator, Subtitle, Title ,Nav, NavProps} from './TitlePageLayout.styled'
+import { Actions, ActionsProps, Footer, Header, Main, Separator, Subtitle, Title } from './TitlePageLayout.styled'
 import { BaseLayout } from '@/components/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
@@ -10,7 +10,7 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   subtitle?: string | string[]
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  navItems?: NavProps['items']
+  actionItems?: ActionsProps['items']
   dark?: boolean
 }>
 
@@ -19,7 +19,7 @@ export function TitlePageLayout({
   subtitle,
   bgImg,
   bgImgAlt = 'background image',
-  navItems,
+  actionItems,
   dark,
 }: TitlePageLayoutProps) {
   return (
@@ -52,7 +52,7 @@ export function TitlePageLayout({
         )}
       </Main>
       <Footer>
-        <Nav items={navItems} />
+        <Actions items={actionItems} />
       </Footer>
     </BaseLayout>
   )
