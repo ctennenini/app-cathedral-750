@@ -58,7 +58,7 @@ export const BigLink = styled(Link)(({ disabled }) => ({
   cursor: disabled ? 'not-allowed' : 'pointer',
 }))
 
-export const NavItem = styled(({ href, label, external, disabled, className, as, ...otherProps }: LinkProps) => {
+export const NavItem = styled(({ href, label, external, disabled, className, as, ...otherProps }: LinkProps & {$primary?: boolean}) => {
   href = useHref(href)
 
   return (
@@ -74,15 +74,17 @@ export const NavItem = styled(({ href, label, external, disabled, className, as,
       {label}
     </NextLink>
   )
-})(({ disabled }) => ({
-  fontSize: '0.75rem',
+})(({ disabled, $primary }) => ({
+  width: '100%',
+  height: '120px',
+  fontSize: '28px',
+  lineHeight: '32px',
   display: 'inline-block',
   padding: '1rem 3rem',
-  width: '100%',
-  background: '#fffa',
-  border: '1px solid #000',
-  borderRadius: '500px',
+  color: $primary ?  '#fff': '#000',
+  backgroundColor: $primary ? '#CE3D3A': '#fff',
   textAlign: 'center',
+  borderRadius: '12px',
   opacity: disabled ? 0.5 : 1,
   cursor: disabled ? 'not-allowed' : 'pointer',
 }))
