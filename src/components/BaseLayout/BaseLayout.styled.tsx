@@ -2,17 +2,18 @@
 
 import styled from 'styled-components'
 
-export const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
-  position: 'relative',
-  zIndex: 0,
-  height: '100dvh',
-  padding: '1rem',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2rem',
-  backgroundColor: $dark ? '#000' : '#fff',
-  color: $dark ? '#fff' : '#000',
-}))
+export const Container = styled.div<{ $dark?: boolean }>`
+  position: relative;
+  z-index: 0;
+  height: 100dvh;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flexDirection: column;
+  gap: 2rem;
+  color: ${({ $dark }) => $dark ? '#fff':'#000' };
+  backgroundColor: ${({ $dark }) => $dark ? '#000' : '#fff'};
+`
 
 export const Main = styled.main({
   flex: 1,

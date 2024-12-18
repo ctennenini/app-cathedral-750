@@ -1,5 +1,7 @@
 'use client'
+import { PropsWithChildren } from 'react'
 
+import { NavItem, LinkProps } from '@/components/Links'
 import styled from 'styled-components'
 
 export const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
@@ -50,3 +52,40 @@ export const Separator = styled.hr({
 })
 
 export const Footer = styled.footer({})
+
+const NavContainer = styled.nav({
+  '& ul': {
+    listStyle: 'none',
+    display: 'flex',
+    gap: '1rem',
+  },
+})
+
+export type NavProps = PropsWithChildren<{
+  items?: LinkProps[]
+}>
+
+
+export function Nav({ items }: NavProps) {
+  return (
+    <>
+      {items && (
+        <NavContainer>
+          <ul>
+            {items.map(({ href, label, disabled, primary }, i) => (
+              <li key={i}>
+                <NavItem
+                  href={href}
+                  label={label}
+                  disabled={disabled}
+                  primary={primary}
+                />
+              </li>
+            ))}
+          </ul>
+        </NavContainer>
+      )}
+    </>
+  )
+}
+

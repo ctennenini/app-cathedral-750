@@ -9,6 +9,7 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
   label: string
   external?: boolean
   disabled?: boolean
+  primary?: boolean
 }
 
 function useHref(href: LinkProps['href']) {

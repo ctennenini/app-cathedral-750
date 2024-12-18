@@ -1,8 +1,7 @@
 import Image, { ImageProps } from 'next/image'
 import React, { PropsWithChildren } from 'react'
-import { Container, Footer, Left, Main, Right } from './TextPageLayout.styled'
+import { Container, Footer, Left, Main, Right, Nav,NavProps } from './TextPageLayout.styled'
 import { Header } from '../Header'
-import { Nav, NavProps } from '../Nav'
 
 export type TextPageLayoutProps = PropsWithChildren<{
   title: string

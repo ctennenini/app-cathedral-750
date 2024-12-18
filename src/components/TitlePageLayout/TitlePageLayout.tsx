@@ -1,7 +1,6 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Footer, Header, Main, Separator, Subtitle, Title } from './TitlePageLayout.styled'
-import { Nav, NavProps } from '@/components/Nav'
+import { Footer, Header, Main, Separator, Subtitle, Title ,Nav, NavProps} from './TitlePageLayout.styled'
 import { BaseLayout } from '@/components/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
