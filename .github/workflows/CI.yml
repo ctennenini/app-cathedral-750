@@ -1,10 +1,9 @@
-name: Continuous_Integration
+name: Build and Deploy
 
 on:
   push:
-    branches: [main]
-
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   build-and-publish:
@@ -13,10 +12,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -27,13 +26,13 @@ jobs:
         run: yarn lint
 
       - name: Build
-        run: PREFIX=/ethz-slideshow-poc yarn build
+        run: PREFIX=/ethz-cathedral-slideshow yarn build
 
       - name: Create .nojekyll
         run: touch ./out/.nojekyll
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v4.7.2
         with:
           branch: gh-pages
           folder: out
