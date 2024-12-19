@@ -3,39 +3,33 @@ import styled from 'styled-components'
 
 export const HamburgerIcon = styled((props: SVGProps<SVGSVGElement>) => (
   <svg
-    width="44"
-    height="32"
-    viewBox="0 0 44 32"
+    width="27"
+    height="21"
+    viewBox="0 0 27 21"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      d="M1.18018 1.95001H41.9402"
-      stroke="white"
-      strokeWidth="2.25"
+      d="M0.0500488 0.98999H26.34"
+      stroke="currentColor"
+      strokeWidth="1.4742"
       strokeMiterlimit="10"
-      strokeLinecap="round"
     />
     <path
-      d="M1.18018 16.2H41.9402"
-      stroke="white"
-      strokeWidth="2.25"
+      d="M0.0500488 10.18H26.34"
+      stroke="currentColor"
+      strokeWidth="1.4742"
       strokeMiterlimit="10"
-      strokeLinecap="round"
     />
     <path
-      d="M1.18018 30.45H41.9402"
-      stroke="white"
-      strokeWidth="2.25"
+      d="M0.0500488 19.37H26.34"
+      stroke="currentColor"
+      strokeWidth="1.4742"
       strokeMiterlimit="10"
-      strokeLinecap="round"
     />
   </svg>
-))({
-  width: 40,
-  height: 40,
-})
+))({})
 
 export const CloseIcon = styled((props: SVGProps<SVGSVGElement>) => (
   <svg

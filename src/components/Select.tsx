@@ -6,27 +6,28 @@ import { useClickAway } from './useClickAway'
 
 const Container = styled.nav(() => ({
   position: 'relative',
-  height: '70px',
+  height: '50px',
+  userSelect: 'none',
 }))
 
 const Menu = styled.ul<{ $isOpen: boolean }>(({ $isOpen, children }) => ({
   position: 'absolute',
   top: 0,
   right: 0,
-  lineHeight: '70px',
+  lineHeight: '50px',
 
   maxHeight: `calc(100% * ${$isOpen ? Children.count(children) : 1})`,
 
   overflow: 'hidden',
   transition: 'max-height 0.3s',
 
-  fontSize: '25px',
+  fontSize: '18px',
   fontWeight: '500',
-  color: '#020202',
+  padding: '0 3rem',
 
+  color: '#020202',
   backgroundColor: 'rgba(255, 255, 255, 0.4)',
-  padding: '0 60px',
-  borderRadius: '35px',
+  borderRadius: '25px',
 
   listStyle: 'none',
 }))
@@ -35,14 +36,16 @@ const Option = styled.li(() => ({
   cursor: 'pointer',
 
   '&:hover': {
-    textDecoration: 'underline',
+    [Hoverer]: {
+      textDecoration: 'underline',
+    },
   },
 }))
 
 const Triangle = styled((props: { $up: boolean }) => <span {...props}>&#9662;</span>)(({ $up }) => ({
-  position: 'absolute',
   transition: 'transform 0.3s',
   transform: `rotate(${$up ? 180 : 0}deg)`,
+  marginLeft: '1rem',
 }))
 
 export type SelectProps = {
@@ -50,6 +53,8 @@ export type SelectProps = {
   onChange: (value: string) => void
   options: { label: string; value: string }[]
 }
+
+export const Hoverer = styled.span({})
 
 export function Select({ value, onChange, options }: SelectProps) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -70,7 +75,8 @@ export function Select({ value, onChange, options }: SelectProps) {
         $isOpen={isOpen}
       >
         <Option>
-          {currentOption?.label}&nbsp;{<Triangle $up={isOpen} />}
+          {currentOption?.label}
+          {<Triangle $up={isOpen} />}
         </Option>
         {otherOptions.map(({ label, value }) => (
           <Option
@@ -78,7 +84,9 @@ export function Select({ value, onChange, options }: SelectProps) {
             key={value}
             onClick={onChange.bind(null, value)}
           >
-            {label}
+            <Hoverer>
+              {label}
+            </Hoverer>
           </Option>
         ))}
       </Menu>

@@ -7,12 +7,12 @@ export const Container = styled.div<{ $dark?: boolean }>`
   z-index: 0;
   height: 100dvh;
   height: 100vh;
-  padding: 1rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  color: ${({ $dark }) => ($dark ? '#fff' : '#000')};
-  background-color: ${({ $dark }) => ($dark ? '#000' : '#fff')};
+  color: ${({ $dark }) => ($dark ? '#000' : '#fff')};
+  background-color: ${({ $dark }) => ($dark ? '#fff' : '#000')};
 `
 
 export const Main = styled.main({

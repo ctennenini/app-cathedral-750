@@ -28,11 +28,12 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
 
   return (
     <TitlePageLayout
-      dark
       title={start.title}
       subtitle={start.subTitle}
       bgImg={bgImg}
       actionItems={actionItems}
+      buttonColor="light"
+      textColor="light"
     />
   )
 }
