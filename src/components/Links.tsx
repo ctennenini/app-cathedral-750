@@ -4,6 +4,7 @@ import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ComponentProps } from 'react'
 import styled from 'styled-components'
+import { InternalLinkIcon } from './Icons'
 
 export type LinkProps = ComponentProps<typeof NextLink> & {
   label: string
@@ -35,13 +36,15 @@ export function useIsActive(path: string) {
 
 export function Link({ href, label, ...otherProps }: LinkProps) {
   href = useHref(href)
+  const isInternal = href.toString().startsWith('http')
+
 
   return (
     <NextLink
       href={href}
       {...otherProps}
     >
-      {label}
+      {label}{!isInternal && <InternalLinkIcon style={{marginLeft: '1rem'}} />}
     </NextLink>
   )
 }

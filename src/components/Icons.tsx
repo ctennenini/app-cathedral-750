@@ -66,6 +66,28 @@ export const CloseIcon = styled((props: SVGProps<SVGSVGElement>) => (
   height: 20,
 })
 
+export const InternalLinkIcon = styled((props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="39"
+    height="16"
+    viewBox="0 0 39 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M36.0397 7.77002H0.899658"
+      stroke="currentColor"
+      strokeWidth="1.9018"
+      strokeMiterlimit="10"
+    />
+    <path
+      d="M29.7397 0L28.4397 1.39001L35.3097 7.77002L28.4397 14.16L29.7397 15.55L38.0997 7.77002L29.7397 0Z"
+      fill="currentColor"
+    />
+  </svg>
+))({})
+
 export type TriangleProps = SVGProps<SVGSVGElement> & {
   $isActive?: boolean
 }
