@@ -47,9 +47,10 @@ export const Subtitle = styled.h2({
   textAlign: 'center',
 })
 
-export const Separator = styled.hr({
+export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
   margin: '40px 100px 30px 100px',
-})
+  borderColor: $dark ? '#fff' : '#000',
+}))
 
 export const Footer = styled.footer({})
 
@@ -62,7 +63,7 @@ export type ActionsProps = {
 }
 
 export const NavContainer = styled.nav({
-  padding: '1rem',
+  paddingBottom: '3rem',
   '& ul': {
     display: 'flex',
     gap: '4rem',
@@ -89,6 +90,7 @@ export function Actions({ items }: ActionsProps) {
                   disabled={disabled}
                   $primary={primary}
                 />
+                
               </li>
             ))}
           </ul>

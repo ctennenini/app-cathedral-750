@@ -46,7 +46,7 @@ export function TitlePageLayout({
 
         {subtitle && (
           <>
-            <Separator />
+            <Separator $dark={dark}/>
             <Subtitle>{subtitle}</Subtitle>
           </>
         )}
