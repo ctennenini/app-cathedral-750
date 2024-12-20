@@ -1,6 +1,30 @@
 import { SVGProps } from 'react'
 import styled from 'styled-components'
 
+export const HomeIcon = styled((props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="30"
+    height="26"
+    viewBox="0 0 30 26"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M24.72 7.77002V21.38C24.72 23.25 23.2 24.76 21.34 24.76H8.33995C6.46995 24.76 4.95996 23.24 4.95996 21.38V7.77002"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+    />
+    <path
+      d="M0.72998 10.55L12.6 2.27C13.95 1.38 15.71 1.39 17.05 2.29L28.67 10.55"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+    />
+  </svg>
+))({})
+
 export const HamburgerIcon = styled((props: SVGProps<SVGSVGElement>) => (
   <svg
     width="27"

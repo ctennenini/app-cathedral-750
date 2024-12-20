@@ -5,23 +5,8 @@ import { CloseIcon, HamburgerIcon } from './Icons'
 import { useAppContext } from '@/context'
 import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
+import { IconButton } from './IconButton'
 
-export const Button = styled.button<{$dark?:boolean}>(({$dark})=>({
-  border: 'none',
-  backgroundColor: $dark ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.15)',
-  width: '50px',
-  height: '50px',
-  borderRadius: '50%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-
-  cursor: 'pointer',
-  '&:focus': {
-    borderColor: '#007bff',
-    outline: 'none',
-  },
-}))
 
 export const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
   position: 'fixed',
@@ -77,13 +62,13 @@ export function SideBar({ renderContent, darkButton }: SideBarProps) {
 
   return (
     <>
-      <Button
+      <IconButton
         title={dictionary.start.actions.immersive}
         onClick={() => setExpanded(true)}
         $dark={darkButton}
       >
         <HamburgerIcon color={darkButton ? '#000' : '#fff'} />
-      </Button>
+      </IconButton>
       <Drawer
         $isExpanded={isExpanded}
         ref={drawerRef}

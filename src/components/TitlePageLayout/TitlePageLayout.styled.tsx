@@ -82,13 +82,14 @@ export function Actions({ items }: ActionsProps) {
       {items && (
         <NavContainer>
           <ul>
-            {items.map(({ href, label, disabled, primary }, i) => (
+            {items.map(({ href, label, disabled, primary, arrow }, i) => (
               <li key={i}>
                 <BigLink
                   href={href}
                   label={label}
                   disabled={disabled}
                   $primary={primary}
+                  arrow={arrow}
                 />
                 
               </li>

@@ -1,54 +1,33 @@
-import Image from 'next/image'
-import { Actions, ActionsProps } from '@/components'
+import { TitlePageLayout, TitlePageLayoutProps } from '@/components'
 import { GlobalStaticPageProps } from '../layout'
-import cathedral from './cathedral.png'
 import { getDictionary } from '@/i18n'
-import { TextPageLayout } from '@/components/TextPageLayout'
+
+import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
 
 export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const actions: ActionsProps['actions'] = [
+  const actionItems: TitlePageLayoutProps['actionItems'] = [
     {
-      href: 'immersive/molasses-degradation',
+      href: '#',
       label: immersiveCathedral.actions.molasses,
     },
     {
-      href: '#',
+      href: `#`,
       label: immersiveCathedral.actions.conservation,
-      disabled: true,
     },
     {
-      href: '#',
+      href: `#`,
       label: immersiveCathedral.actions.vaults,
-      disabled: true,
     },
   ]
 
   return (
-    <TextPageLayout
-      dark
+    <TitlePageLayout
+      withHomeButton
+      bgImg={bgImg}
       title={immersiveCathedral.title}
-      subtitle={immersiveCathedral.subTitle}
-      left={
-        <Image
-          src={cathedral}
-          alt="background image"
-          placeholder="blur"
-          quality={100}
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
-      }
-      right={<Actions actions={actions} />}
-      navItems={[
-        {
-          href: `start`,
-          label: 'Back',
-        },
-      ]}
+      actionItems={actionItems}
     />
   )
 }

@@ -4,6 +4,7 @@ import { Actions, ActionsProps, Footer, Header, Main, Separator, Subtitle, Title
 import { BaseLayout } from '@/components/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
+import { HomeButton } from '../HomeButton'
 
 type Color = 'light' | 'dark'
 
@@ -13,6 +14,7 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   actionItems?: ActionsProps['items']
+  withHomeButton?: boolean
   buttonColor?: Color
   textColor?: Color
 }>
@@ -23,6 +25,7 @@ export function TitlePageLayout({
   bgImg,
   bgImgAlt = 'background image',
   actionItems,
+  withHomeButton,
   buttonColor = 'dark',
   textColor = 'dark',
 }: TitlePageLayoutProps) {
@@ -35,6 +38,7 @@ export function TitlePageLayout({
       <Header>
         <LanguageSwitcher />
         <NavMenu darkButtons={buttonColor==='dark'} />
+        {withHomeButton && <HomeButton $dark={buttonColor==='dark'} />}
       </Header>
       <Main>
         <Title>

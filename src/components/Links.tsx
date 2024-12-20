@@ -11,6 +11,7 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
   external?: boolean
   disabled?: boolean
   primary?: boolean
+  arrow?: boolean
 }
 
 function useHref(href: LinkProps['href']) {
@@ -34,17 +35,16 @@ export function useIsActive(path: string) {
   return pathName.startsWith(`/${locale}/${path}`)
 }
 
-export function Link({ href, label, ...otherProps }: LinkProps) {
+export function Link({ href, label, arrow, ...otherProps }: LinkProps) {
   href = useHref(href)
-  const isInternal = href.toString().startsWith('http')
-
 
   return (
     <NextLink
       href={href}
       {...otherProps}
     >
-      {label}{!isInternal && <InternalLinkIcon style={{marginLeft: '1rem'}} />}
+      {label}
+      {arrow && <InternalLinkIcon style={{ marginLeft: '1rem' }} />}
     </NextLink>
   )
 }
