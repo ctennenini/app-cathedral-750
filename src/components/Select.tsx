@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Children, useRef } from 'react'
+import { useState, Children, useRef, HTMLProps } from 'react'
 import styled from 'styled-components'
 import { useClickAway } from './useClickAway'
 
@@ -42,7 +42,9 @@ const Option = styled.li(() => ({
   },
 }))
 
-const Triangle = styled((props: { $up: boolean }) => <span {...props}>&#9662;</span>)(({ $up }) => ({
+type TriangleProps = HTMLProps<HTMLSpanElement> & { $up?: boolean }
+
+const Triangle = styled((props: TriangleProps) => <span {...props}>&#9662;</span>)(({ $up }) => ({
   transition: 'transform 0.3s',
   transform: `rotate(${$up ? 180 : 0}deg)`,
   marginLeft: '1rem',
@@ -84,9 +86,7 @@ export function Select({ value, onChange, options }: SelectProps) {
             key={value}
             onClick={onChange.bind(null, value)}
           >
-            <Hoverer>
-              {label}
-            </Hoverer>
+            <Hoverer>{label}</Hoverer>
           </Option>
         ))}
       </Menu>

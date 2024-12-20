@@ -23,12 +23,32 @@ export const Main = styled.main({
   alignSelf: 'center',
 })
 
-export const Header = styled.header({
+const HeaderSection = styled.div({
   display: 'flex',
-  flexDirection: 'row-reverse',
-  justifyContent: 'space-between',
-  gap: '1rem',
+  flexDirection: 'row',
+  gap: '2rem',
 })
+
+const StyledHeader = styled.header({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  gap: '3rem',
+})
+
+export type HeaderProps = {
+  left?: React.ReactNode
+  right?: React.ReactNode
+}
+
+export function Header({ left, right }: HeaderProps) {
+  return (
+    <StyledHeader>
+      <HeaderSection>{left}</HeaderSection>
+      <HeaderSection>{right}</HeaderSection>
+    </StyledHeader>
+  )
+}
 
 export const Title = styled.h1({
   fontFamily: 'var(--font-title)',
@@ -49,7 +69,7 @@ export const Subtitle = styled.h2({
 
 export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
   margin: '40px 100px 30px 100px',
-  borderColor: $dark ?  '#000': '#fff' ,
+  borderColor: $dark ? '#000' : '#fff',
 }))
 
 export const Footer = styled.footer({})
@@ -91,7 +111,6 @@ export function Actions({ items }: ActionsProps) {
                   $primary={primary}
                   arrow={arrow}
                 />
-                
               </li>
             ))}
           </ul>

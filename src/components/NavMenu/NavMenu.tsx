@@ -1,11 +1,10 @@
 'use client'
 import { useMemo } from 'react'
 import { Dictionary } from '@/i18n'
-import { Nav } from './NavMenu.styled'
 import { SideBar } from '../SideBar'
 
 import { useAppContext } from '@/context'
-import { renderNavList, NavMenuItem } from './ListItem'
+import { renderNavList, NavMenuItem } from './NavList'
 
 function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
   return useMemo<NavMenuItem[]>(
@@ -13,20 +12,20 @@ function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
       {
         name: dictionary.navigation.molasses.main,
         path: '#',
-        children: [
+        subItems: [
           {
             name: dictionary.navigation.molasses.sandstone.main,
             path: '#',
-            children: [],
+            subItems: [],
           },
           {
             name: dictionary.navigation.molasses.weathering.main,
             path: '#',
-            children: [
+            subItems: [
               {
                 name: dictionary.navigation.molasses.weathering.mechanisms.main,
                 path: '#',
-                children: [
+                subItems: [
                   {
                     name: dictionary.navigation.molasses.weathering.mechanisms.freezeThaw,
                     path: '#',
@@ -68,12 +67,12 @@ function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
       {
         name: dictionary.navigation.conservationStrategies.main,
         path: '#',
-        children: [],
+        subItems: [],
       },
       {
         name: dictionary.navigation.vaults.main,
         path: '#',
-        children: [],
+        subItems: [],
       },
     ],
     [dictionary],
@@ -84,9 +83,14 @@ export type NavMenuProps = {
   darkButtons?: boolean
 }
 
-export function NavMenu({darkButtons}:NavMenuProps) {
+export function NavMenu({ darkButtons }: NavMenuProps) {
   const { dictionary } = useAppContext()
   const menuItems = useMenuItems(dictionary)
 
-  return <SideBar darkButton={darkButtons} renderContent={() => <Nav>{renderNavList(menuItems)}</Nav>} />
+  return (
+    <SideBar
+      darkButton={darkButtons}
+      renderContent={() => renderNavList(menuItems)}
+    />
+  )
 }

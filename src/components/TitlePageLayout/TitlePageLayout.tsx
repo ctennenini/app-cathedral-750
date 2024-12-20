@@ -35,11 +35,15 @@ export function TitlePageLayout({
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
     >
-      <Header>
-        <LanguageSwitcher />
-        <NavMenu darkButtons={buttonColor==='dark'} />
-        {withHomeButton && <HomeButton $dark={buttonColor==='dark'} />}
-      </Header>
+      <Header
+        left={
+          <>
+            <NavMenu darkButtons={buttonColor === 'dark'} />
+            {withHomeButton && <HomeButton $dark={buttonColor === 'dark'} />}
+          </>
+        }
+        right={<LanguageSwitcher />}
+      />
       <Main>
         <Title>
           {Array.isArray(title)
@@ -54,7 +58,7 @@ export function TitlePageLayout({
 
         {subtitle && (
           <>
-            <Separator $dark={textColor === 'dark'}/>
+            <Separator $dark={textColor === 'dark'} />
             <Subtitle>{subtitle}</Subtitle>
           </>
         )}
