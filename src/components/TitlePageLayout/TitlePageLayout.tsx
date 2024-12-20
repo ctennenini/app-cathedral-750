@@ -5,6 +5,7 @@ import { BaseLayout } from '@/components/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '../HomeButton'
+import { BackButton } from '../BackButton'
 
 type Color = 'light' | 'dark'
 
@@ -15,6 +16,7 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   bgImgAlt?: ImageProps['alt']
   actionItems?: ActionsProps['items']
   withHomeButton?: boolean
+  backButtonTarget?: string
   buttonColor?: Color
   textColor?: Color
 }>
@@ -26,6 +28,7 @@ export function TitlePageLayout({
   bgImgAlt = 'background image',
   actionItems,
   withHomeButton,
+  backButtonTarget,
   buttonColor = 'dark',
   textColor = 'dark',
 }: TitlePageLayoutProps) {
@@ -40,6 +43,7 @@ export function TitlePageLayout({
           <>
             <NavMenu darkButtons={buttonColor === 'dark'} />
             {withHomeButton && <HomeButton $dark={buttonColor === 'dark'} />}
+            {backButtonTarget && <BackButton $dark={buttonColor === 'dark'} />}
           </>
         }
         right={<LanguageSwitcher />}

@@ -106,6 +106,28 @@ export const InternalLinkIcon = styled((props: SVGProps<SVGSVGElement>) => (
   </svg>
 ))({})
 
+export const BackArrowIcon = styled((props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="26"
+    height="12"
+    viewBox="0 0 26 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M2.38989 6.17999H25.3399"
+      stroke="currentColor"
+      strokeWidth="1.4253"
+      strokeMiterlimit="10"
+    />
+    <path
+      d="M7.10985 12.01L8.07985 10.97L2.93985 6.17998L8.07985 1.39998L7.10985 0.349976L0.839844 6.17998L7.10985 12.01Z"
+      fill="currentColor"
+    />
+  </svg>
+))({})
+
 export type TriangleProps = SVGProps<SVGSVGElement> & {
   $isActive?: boolean
 }
