@@ -52,11 +52,10 @@ export function Link({ href, label, arrow, ...otherProps }: LinkProps) {
 }
 
 export const BigLink = styled(Link)<{ $primary?: boolean }>(({ disabled, $primary }) => ({
-  width: '100%',
   height: '120px',
   fontSize: '28px',
   display: 'inline-block',
-  padding: '3rem 5rem',
+  padding: '1.7rem 5rem',
   color: $primary ? '#fff' : '#000',
   backgroundColor: $primary ? '#CE3D3A' : '#fff',
   textAlign: 'center',
