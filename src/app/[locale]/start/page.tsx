@@ -20,7 +20,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
       disabled: true,
     },
     {
-      href: `immersive`,
+      href: `/immersive`,
       label: start.actions.immersive,
       primary: true,
       arrow: true,

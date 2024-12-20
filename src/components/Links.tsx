@@ -16,8 +16,10 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
 
 function useHref(href: LinkProps['href']) {
   const locale = useLocale()
+
   if (href.toString().startsWith('http')) return href
-  return `/${locale}/${href}`
+  if (href.toString().startsWith('/')) return `/${locale}/${href}`
+  return href
 }
 
 export function useIsOnPath(path: string) {
