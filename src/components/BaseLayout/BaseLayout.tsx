@@ -19,9 +19,13 @@ export function BaseLayout({ bgImg, bgImgAlt = 'background image', dark, childre
           alt={bgImgAlt}
           placeholder="blur"
           quality={100}
-          fill
           sizes="100vw"
           style={{
+            position: 'fixed',
+            left: -2,
+            top: -2,
+            width: 'calc(100vw + 4px)',
+            height: 'calc(100vh + 4px)',
             objectFit: 'cover',
             zIndex: -1,
           }}
