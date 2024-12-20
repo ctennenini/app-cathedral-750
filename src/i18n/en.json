@@ -12,7 +12,10 @@
     }
   },
   "immersiveCathedral": {
-    "title": "The Immersive Cathedral",
+    "title": [
+      "The Immersive",
+      "Cathedral"
+    ],
     "subTitle": "Main Menu",
     "actions": {
       "molasses": "Molasse and its weathering",

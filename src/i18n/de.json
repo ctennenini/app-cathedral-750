@@ -12,7 +12,10 @@
     }
   },
   "immersiveCathedral": {
-    "title": "Die Immersive Kathedrale",
+    "title": [
+      "Die Immersive",
+      "Kathedrale"
+    ],
     "subTitle": "Hauptmenü",
     "actions": {
       "molasses": "Molasse und seine Verwitterung",

@@ -12,7 +12,10 @@
     }
   },
   "immersiveCathedral": {
-    "title": "La Catedral inmersiva",
+    "title": [
+      "La Catedral",
+      "inmersiva"
+    ],
     "subTitle": "Menú principal",
     "actions": {
       "molasses": "Molasa y su meteorización",

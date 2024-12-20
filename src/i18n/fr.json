@@ -12,7 +12,10 @@
     }
   },
   "immersiveCathedral": {
-    "title": "La Cathédrale immersive",
+    "title": [
+      "La Cathédrale",
+      "immersive"
+    ],
     "subTitle": "Menu principal",
     "actions": {
       "molasses": "Molasse et sa dégradation",

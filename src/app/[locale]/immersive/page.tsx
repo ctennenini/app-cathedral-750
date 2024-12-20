@@ -28,6 +28,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
       bgImg={bgImg}
       title={immersiveCathedral.title}
       actionItems={actionItems}
+      textColor="light"
     />
   )
 }
