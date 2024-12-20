@@ -57,12 +57,6 @@ function ListItem({ name, path, subItems }: NavMenuItem) {
   const isOnPath = useIsOnPath(path)
   const isActive = useIsActive(path)
 
-  console.log({ path, isOnPath, isActive })
-
-  // const router = useRouter()
-
-  // console.log(router)
-
   const toggle: MouseEventHandler<HTMLDivElement> = e => {
     e.preventDefault()
     setIsExpanded(prev => !prev)

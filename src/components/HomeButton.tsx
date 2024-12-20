@@ -10,8 +10,6 @@ export function HomeButton(props: IconButtonProps) {
   const href = useHref('start')
   const { push } = useRouter()
 
-  console.log('HomeButton', href)
-
   return (
     <IconButton
       onClick={() => push(href.toString())}

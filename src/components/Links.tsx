@@ -23,7 +23,6 @@ function useHref(href: LinkProps['href']) {
 }
 
 export function useIsOnPath(path: string) {
-  console.log(path)
   const locale = useLocale()
   const pathName = usePathname()
 
