@@ -35,6 +35,10 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
       actionItems={actionItems}
       buttonColor="light"
       textColor="light"
+      titleStyle={{
+        fontSize: 137,
+        lineHeight: '154px',
+      }}
     />
   )
 }

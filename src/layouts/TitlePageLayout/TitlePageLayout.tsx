@@ -18,6 +18,7 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   backButtonTarget?: string
   buttonColor?: Color
   textColor?: Color
+  titleStyle?: React.CSSProperties
 }>
 
 export function TitlePageLayout({
@@ -30,6 +31,7 @@ export function TitlePageLayout({
   backButtonTarget,
   buttonColor = 'dark',
   textColor = 'dark',
+  titleStyle = {},
 }: TitlePageLayoutProps) {
   return (
     <BaseLayout
@@ -53,7 +55,7 @@ export function TitlePageLayout({
         right={<LanguageSwitcher />}
       />
       <Main>
-        <Title>
+        <Title style={titleStyle}>
           {Array.isArray(title)
             ? title.map(line => (
                 <>

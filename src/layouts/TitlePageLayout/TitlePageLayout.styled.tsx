@@ -52,9 +52,9 @@ export function Header({ left, right }: HeaderProps) {
 
 export const Title = styled.h1({
   fontFamily: 'var(--font-title)',
-  fontSize: 144,
+  fontSize: 169,
   fontWeight: 700,
-  lineHeight: '161px',
+  lineHeight: '189px',
 
   textTransform: 'uppercase',
 })

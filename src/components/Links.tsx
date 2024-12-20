@@ -56,7 +56,7 @@ export const BigLink = styled(Link)<{ $primary?: boolean }>(({ disabled, $primar
   height: '120px',
   fontSize: '28px',
   display: 'inline-block',
-  padding: '1.7rem 5rem',
+  padding: '2.7rem 5rem',
   color: $primary ? '#fff' : '#000',
   backgroundColor: $primary ? '#CE3D3A' : '#fff',
   textAlign: 'center',
