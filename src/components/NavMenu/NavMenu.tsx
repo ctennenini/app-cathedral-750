@@ -80,16 +80,16 @@ function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
 }
 
 export type NavMenuProps = {
-  darkButtons?: boolean
+  $dark?: boolean
 }
 
-export function NavMenu({ darkButtons }: NavMenuProps) {
+export function NavMenu({ $dark }: NavMenuProps) {
   const { dictionary } = useAppContext()
   const menuItems = useMenuItems(dictionary)
 
   return (
     <SideBar
-      darkButton={darkButtons}
+      darkButton={$dark}
       renderContent={() => renderNavList(menuItems)}
     />
   )

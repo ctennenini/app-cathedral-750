@@ -15,11 +15,13 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
 }
 
 function useHref(href: LinkProps['href']) {
+  const pathname = usePathname()
   const locale = useLocale()
 
   if (href.toString().startsWith('http')) return href
   if (href.toString().startsWith('/')) return `/${locale}/${href}`
-  return href
+
+  return pathname + '/' + href
 }
 
 export function useIsOnPath(path: string) {

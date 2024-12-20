@@ -1,13 +1,12 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
 import { Actions, ActionsProps, Footer, Header, Main, Separator, Subtitle, Title } from './TitlePageLayout.styled'
-import { BaseLayout } from '@/components/BaseLayout'
+import { BaseLayout } from '@/layouts/BaseLayout'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
-import { HomeButton } from '../HomeButton'
-import { BackButton } from '../BackButton'
-
-type Color = 'light' | 'dark'
+import { HomeButton } from '../../components/HomeButton'
+import { BackButton } from '../../components/BackButton'
+import { Color } from '../types'
 
 export type TitlePageLayoutProps = PropsWithChildren<{
   title: string | string[]
@@ -41,9 +40,14 @@ export function TitlePageLayout({
       <Header
         left={
           <>
-            <NavMenu darkButtons={buttonColor === 'dark'} />
+            <NavMenu $dark={buttonColor === 'dark'} />
             {withHomeButton && <HomeButton $dark={buttonColor === 'dark'} />}
-            {backButtonTarget && <BackButton $dark={buttonColor === 'dark'} />}
+            {backButtonTarget && (
+              <BackButton
+                $dark={buttonColor === 'dark'}
+                href={backButtonTarget}
+              />
+            )}
           </>
         }
         right={<LanguageSwitcher />}

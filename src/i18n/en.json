@@ -4,7 +4,7 @@
       "The Cathedral",
       "of Lausanne"
     ],
-    "subTitle": "Center for Digital Information",
+    "subtitle": "Center for Digital Information",
     "actions": {
       "website": "Cathedral Web Site",
       "birthday": "750th Birthday",
@@ -16,14 +16,14 @@
       "The Immersive",
       "Cathedral"
     ],
-    "subTitle": "Main Menu",
+    "subtitle": "Main Menu",
     "actions": {
       "molasses": "Molasse and its weathering",
       "conservation": "Conservation strategies",
       "vaults": "The vaults of the cathedral"
     },
     "molasses": {
-      "subTitle": "Molasse and its weathering",
+      "title": "Molasse and its weathering",
       "description": [
         "The cathedral of Lausanne was built with a local molasse sandstone, that is particlarly sensitve to water.",
         "You may obtain directly here information on that stone as well as on its weathering by clicking on the corresponding buttons",

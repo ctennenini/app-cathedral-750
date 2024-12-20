@@ -4,7 +4,7 @@
       "Catedral",
       "de Lausana"
     ],
-    "subTitle": "Centro de Información Digital",
+    "subtitle": "Centro de Información Digital",
     "actions": {
       "website": "Sitio web de la catedral",
       "birthday": "750 aniversario",
@@ -16,14 +16,14 @@
       "La Catedral",
       "inmersiva"
     ],
-    "subTitle": "Menú principal",
+    "subtitle": "Menú principal",
     "actions": {
       "molasses": "Molasa y su meteorización",
       "conservation": "Estrategias de conservación",
       "vaults": "Las bóvedas de la catedral"
     },
     "molasses": {
-      "subTitle": "Molasa y su meteorización",
+      "title": "Molasa y su meteorización",
       "description": [
         "La catedral de Lausana fue construida con una arenisca de molasa local, que es particularmente sensible al agua.",
         "Puede obtener directamente aquí información sobre esa piedra, así como sobre su meteorización haciendo clic en los botones correspondientes.",

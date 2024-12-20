@@ -4,7 +4,7 @@ import { useState, Children, useRef, HTMLProps } from 'react'
 import styled from 'styled-components'
 import { useClickAway } from './useClickAway'
 
-const Container = styled.nav(() => ({
+const Container = styled.div(() => ({
   position: 'relative',
   height: '50px',
   userSelect: 'none',

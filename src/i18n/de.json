@@ -4,7 +4,7 @@
       "Die Kathedrale",
       "von Lausanne"
     ],
-    "subTitle": "Zentrum für Digitale Informationen",
+    "subtitle": "Zentrum für Digitale Informationen",
     "actions": {
       "website": "Kathedrale Webseite",
       "birthday": "750. Geburtstag",
@@ -16,14 +16,14 @@
       "Die Immersive",
       "Kathedrale"
     ],
-    "subTitle": "Hauptmenü",
+    "subtitle": "Hauptmenü",
     "actions": {
       "molasses": "Molasse und seine Verwitterung",
       "conservation": "Erhaltungsstrategien",
       "vaults": "Die Gewölbe der Kathedrale"
     },
     "molasses": {
-      "subTitle": "Molasse und seine Verwitterung",
+      "title": "Molasse und seine Verwitterung",
       "description": [
         "Die Kathedrale von Lausanne wurde mit einem lokalen Molasse-Sandstein gebaut, der besonders empfindlich auf Wasser reagiert.",
         "Sie können hier direkt Informationen zu diesem Stein sowie zu seiner Verwitterung erhalten, indem Sie auf die entsprechenden Schaltflächen klicken.",

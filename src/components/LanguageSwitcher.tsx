@@ -3,7 +3,7 @@
 import { useMemo } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
-import { Select } from '../Select'
+import { Select } from './Select'
 import { useLocale } from '@/utils'
 import { useAppContext } from '@/context'
 

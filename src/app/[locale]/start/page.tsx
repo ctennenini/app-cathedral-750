@@ -1,4 +1,4 @@
-import { TitlePageLayout, TitlePageLayoutProps } from '@/components'
+import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
 
 import { GlobalStaticPageProps } from '../layout'
 import { getDictionary } from '@/i18n'
@@ -30,7 +30,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
   return (
     <TitlePageLayout
       title={start.title}
-      subtitle={start.subTitle}
+      subtitle={start.subtitle}
       bgImg={bgImg}
       actionItems={actionItems}
       buttonColor="light"

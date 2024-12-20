@@ -1,4 +1,4 @@
-import { TitlePageLayout, TitlePageLayoutProps } from '@/components'
+import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
 import { GlobalStaticPageProps } from '../layout'
 import { getDictionary } from '@/i18n'
 
@@ -9,7 +9,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
 
   const actionItems: TitlePageLayoutProps['actionItems'] = [
     {
-      href: '#',
+      href: 'molasses',
       label: immersiveCathedral.actions.molasses,
     },
     {

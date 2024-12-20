@@ -1,6 +1,6 @@
-import { BaseLayout } from '@/components'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { GlobalStaticPageProps } from '../../layout'
-import bgImg from './bg-img.png'
+import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
 import { getDictionary } from '@/i18n'
 
 export default async function MolassesDegradation({ params: { locale } }: GlobalStaticPageProps) {
@@ -25,10 +25,12 @@ export default async function MolassesDegradation({ params: { locale } }: Global
   // ]
 
   return (
-    <BaseLayout
-      title={immersiveCathedral.title}
-      subtitle={immersiveCathedral.subTitle}
+    <TextPageLayout
+      withHomeButton
       bgImg={bgImg}
+      title={immersiveCathedral.molasses.title}
+      text={immersiveCathedral.molasses.description}
+      backButtonTarget="/immersive"
       // left={<TextBlock text={immersiveCathedral.molasses.description} />}
       // right={<Actions actions={actions} />}
       // navItems={[
@@ -37,6 +39,8 @@ export default async function MolassesDegradation({ params: { locale } }: Global
       //     label: 'Back',
       //   },
       // ]}
-    />
+    >
+      {immersiveCathedral.molasses.description}
+    </TextPageLayout>
   )
 }
