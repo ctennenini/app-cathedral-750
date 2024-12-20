@@ -7,8 +7,19 @@ import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 import { IconButton } from './IconButton'
 
+const Overlay = styled.div<{ $active: boolean }>(props => ({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+  opacity: props.$active ? 1 : 0,
+  pointerEvents: props.$active ? 'auto' : 'none',
+  transition: 'opacity 0.3s',
+}))
 
-export const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
+const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
   position: 'fixed',
   top: 0,
   left: 0,
@@ -23,7 +34,7 @@ export const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
 
 type ButtonProps = ComponentProps<'button'>
 
-export const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
+const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   <button
     {...otherProps}
     title="close"
@@ -69,6 +80,7 @@ export function SideBar({ renderContent, darkButton }: SideBarProps) {
       >
         <HamburgerIcon color={darkButton ? '#000' : '#fff'} />
       </IconButton>
+      <Overlay $active={isExpanded} />
       <Drawer
         $isExpanded={isExpanded}
         ref={drawerRef}
