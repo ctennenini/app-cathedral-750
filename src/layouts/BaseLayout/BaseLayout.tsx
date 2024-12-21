@@ -1,16 +1,19 @@
 import Image, { ImageProps } from 'next/image'
-import { PropsWithChildren } from 'react'
+import { ComponentProps } from 'react'
 import { Container } from './BaseLayout.styled'
 
-export type BaseLayoutProps = PropsWithChildren<{
+export type BaseLayoutProps = ComponentProps<typeof Container> & {
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   dark?: boolean
-}>
+}
 
-export function BaseLayout({ bgImg, bgImgAlt = 'background image', dark, children }: BaseLayoutProps) {
+export function BaseLayout({ bgImg, bgImgAlt = 'background image', dark, children, ...otherProps }: BaseLayoutProps) {
   return (
-    <Container $dark={dark}>
+    <Container
+      $dark={dark}
+      {...otherProps}
+    >
       {bgImg && (
         <Image
           src={bgImg}

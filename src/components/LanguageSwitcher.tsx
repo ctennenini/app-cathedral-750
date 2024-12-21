@@ -3,11 +3,13 @@
 import { useMemo } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
-import { Select } from './Select'
+import { Select, SelectProps } from './Select'
 import { useLocale } from '@/utils'
 import { useAppContext } from '@/context'
 
-export function LanguageSwitcher() {
+export type LanguageSwitcherProps = Partial<SelectProps>
+
+export function LanguageSwitcher(props: LanguageSwitcherProps) {
   const locale = useLocale()
   const path = usePathname()
   const router = useRouter()
@@ -39,6 +41,7 @@ export function LanguageSwitcher() {
       value={locale}
       onChange={onSelect}
       options={options}
+      {...props}
     />
   )
 }

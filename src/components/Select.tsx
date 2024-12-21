@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Children, useRef, HTMLProps } from 'react'
+import { useState, Children, useRef, HTMLProps, ComponentProps } from 'react'
 import styled from 'styled-components'
 import { useClickAway } from './useClickAway'
 
@@ -50,15 +50,15 @@ const Triangle = styled((props: TriangleProps) => <span {...props}>&#9662;</span
   marginLeft: '1rem',
 }))
 
-export type SelectProps = {
+const Hoverer = styled.span({})
+
+export type SelectProps = Omit<ComponentProps<typeof Container>, 'onChange' | 'value'> & {
   value: string
   onChange: (value: string) => void
   options: { label: string; value: string }[]
 }
 
-export const Hoverer = styled.span({})
-
-export function Select({ value, onChange, options }: SelectProps) {
+export function Select({ value, onChange, options, ...otherProps }: SelectProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpen] = useState(false)
 
@@ -71,6 +71,7 @@ export function Select({ value, onChange, options }: SelectProps) {
     <Container
       onClick={() => setOpen(o => !o)}
       ref={containerRef}
+      {...otherProps}
     >
       <Menu
         role="menu"

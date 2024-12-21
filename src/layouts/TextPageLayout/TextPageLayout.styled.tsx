@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
-import { NavItem, LinkProps } from '@/components/Links'
+import { LinkProps, BigLink } from '@/components/Links'
 
 export const Container = styled.div({
   position: 'fixed',
@@ -111,36 +111,63 @@ export const Right = styled.div({
 
 export const Footer = styled.footer({})
 
-export type NavProps = PropsWithChildren<{
-  items?: LinkProps[]
-}>
+// export type NavProps = PropsWithChildren<{
+//   items?: LinkProps[]
+// }>
 
-export function Nav({ items }: NavProps) {
-  return (
-    <>
-      {items && (
-        <NavContainer>
-          <ul>
-            {items.map(({ href, label, disabled }, i) => (
-              <li key={i}>
-                <NavItem
-                  href={href}
-                  label={label}
-                  disabled={disabled}
-                />
-              </li>
-            ))}
-          </ul>
-        </NavContainer>
-      )}
-    </>
-  )
-}
+// export function Nav({ items }: NavProps) {
+//   return (
+//     <>
+//       {items && (
+//         <NavContainer>
+//           <ul>
+//             {items.map(({ href, label, disabled }, i) => (
+//               <li key={i}>
+//                 <NavItem
+//                   href={href}
+//                   label={label}
+//                   disabled={disabled}
+//                 />
+//               </li>
+//             ))}
+//           </ul>
+//         </NavContainer>
+//       )}
+//     </>
+//   )
+// }
 
-const NavContainer = styled.nav({
+const ActionsContainer = styled.nav({
   '& ul': {
     listStyle: 'none',
     display: 'flex',
     gap: '1rem',
   },
 })
+
+export type ActionsProps = PropsWithChildren<{
+  actions?: LinkProps[]
+}>
+
+export function Actions({ actions }: ActionsProps) {
+  return (
+    <>
+      {actions && (
+        <ActionsContainer>
+          <ul>
+            {actions.map(({ href, label, disabled, external }, i) => (
+              <li key={i}>
+                <BigLink
+                  href={href}
+                  label={label}
+                  disabled={disabled}
+                  external={external}
+                />
+              </li>
+            ))}
+          </ul>
+        </ActionsContainer>
+      )}
+    </>
+  )
+}
