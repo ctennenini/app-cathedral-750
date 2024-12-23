@@ -2,10 +2,10 @@
 
 import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
-import { BigLink, LinkProps } from '@/components/Links'
+import { BigLink, BigLinkProps } from '@/components/Links'
 
 export type ActionsProps = PropsWithChildren<{
-  actions?: LinkProps[]
+  actions?: BigLinkProps[]
 }>
 
 export function Actions({ actions }: ActionsProps) {

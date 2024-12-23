@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
-import { LinkProps, BigLink } from '@/components/Links'
+import { BigLink, BigLinkProps } from '@/components/Links'
 import { BaseLayout } from '../BaseLayout'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -152,7 +152,7 @@ const ActionsContainer = styled.nav({
 })
 
 export type ActionsProps = PropsWithChildren<{
-  actions?: LinkProps[]
+  actions?: BigLinkProps[]
 }>
 
 export function Actions({ actions }: ActionsProps) {
@@ -161,13 +161,9 @@ export function Actions({ actions }: ActionsProps) {
       {actions && (
         <ActionsContainer>
           <ul>
-            {actions.map(({ href, label, disabled, external }, i) => (
+            {actions.map((props, i) => (
               <li key={i}>
-                <BigLink
-                  href={href}
-                  label={label}
-                  disabled={disabled}
-                  external={external}
+                <BigLink {...props}
                 />
               </li>
             ))}

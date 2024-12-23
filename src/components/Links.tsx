@@ -55,7 +55,11 @@ export function Link({ href, label, arrow, external, ...otherProps }: LinkProps)
   )
 }
 
-export const BigLink = styled(Link)<{ $primary?: boolean }>(({ disabled, $primary }) => ({
+export type BigLinkProps = LinkProps & {
+  $primary?: boolean
+}
+
+export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
   height: '120px',
   fontSize: '28px',
   display: 'inline-block',

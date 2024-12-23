@@ -1,7 +1,6 @@
 'use client'
-import { PropsWithChildren } from 'react'
 
-import { LinkProps, BigLink } from '@/components/Links'
+import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
 import { BaseLayout } from '../BaseLayout'
 
@@ -71,12 +70,9 @@ export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
 
 export const Footer = styled.footer({})
 
-export type NavProps = PropsWithChildren<{
-  items?: LinkProps[]
-}>
 
 export type ActionsProps = {
-  items?: LinkProps[]
+  items?: BigLinkProps[]
 }
 
 const NavContainer = styled.nav({
@@ -99,16 +95,9 @@ export function Actions({ items }: ActionsProps) {
       {items && (
         <NavContainer>
           <ul>
-            {items.map(({ href, label, disabled, primary, arrow, external }, i) => (
+            {items.map((props, i) => (
               <li key={i}>
-                <BigLink
-                  href={href}
-                  label={label}
-                  disabled={disabled}
-                  $primary={primary}
-                  arrow={arrow}
-                  external={external}
-                />
+                <BigLink {...props} />
               </li>
             ))}
           </ul>
