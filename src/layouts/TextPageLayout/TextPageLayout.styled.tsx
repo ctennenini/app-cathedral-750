@@ -3,19 +3,30 @@
 import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 import { LinkProps, BigLink } from '@/components/Links'
+import { BaseLayout } from '../BaseLayout'
 
-export const Container = styled.div({
-  position: 'fixed',
-  top: 0,
-  left: '5rem',
-  width: '40%',
-  maxWidth: '750px',
-  height: '100vh',
+import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
+
+export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
+  position: 'absolute',
+  top: '3rem',
+  right: '3rem',
+})
+
+export const Container = styled(BaseLayout)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '5rem',
+})
+
+export const MainContainer = styled.div({
+  width: '100%',
+  height: '100%',
   padding: '2.5rem',
 
   display: 'flex',
   flexDirection: 'column',
-  gap: '8rem',
+  gap: '3rem',
 
   backgroundColor: '#fff',
   color: '#000',
@@ -86,62 +97,57 @@ export type MainProps = {
 }
 
 const StyledMain = styled.main({
-  flexGrow: 1,
+  flex: 'auto',
   padding: '0 3rem',
+  overflowY: 'hidden',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+})
+
+const MainScroller = styled.div({
+  overflowY: 'auto',
 })
 
 export function Main({ title, subtitle, text }: MainProps) {
   return (
     <StyledMain>
-      {subtitle && <SubTitle>{subtitle}</SubTitle>}
-      <Title>{title}</Title>
-      <Separator />
-      {Array.isArray(text) ? text.map((line, i) => <P key={i}>{line}</P>) : <P>{text}</P>}
+      <MainScroller>
+        {subtitle && <SubTitle>{subtitle}</SubTitle>}
+        <Title>{title}</Title>
+        <Separator />
+        {Array.isArray(text) ? text.map((line, i) => <P key={i}>{line}</P>) : <P>{text}</P>}
+      </MainScroller>
     </StyledMain>
   )
 }
 
 export const Left = styled.div({
-  flex: '1 0',
+  paddingLeft: '5rem',
+  flexBasis: '50%',
 })
 
 export const Right = styled.div({
-  flex: '0 0 auto',
+  position: 'relative',
+  paddingRight: '5rem',
+  flexBasis: '50%',
+
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
-
-export const Footer = styled.footer({})
-
-// export type NavProps = PropsWithChildren<{
-//   items?: LinkProps[]
-// }>
-
-// export function Nav({ items }: NavProps) {
-//   return (
-//     <>
-//       {items && (
-//         <NavContainer>
-//           <ul>
-//             {items.map(({ href, label, disabled }, i) => (
-//               <li key={i}>
-//                 <NavItem
-//                   href={href}
-//                   label={label}
-//                   disabled={disabled}
-//                 />
-//               </li>
-//             ))}
-//           </ul>
-//         </NavContainer>
-//       )}
-//     </>
-//   )
-// }
 
 const ActionsContainer = styled.nav({
   '& ul': {
-    listStyle: 'none',
     display: 'flex',
+    flexDirection: 'column',
     gap: '1rem',
+    justifyContent: 'center',
+    listStyle: 'none',
+    [BigLink]: {
+      width: '100%',
+    },
   },
 })
 

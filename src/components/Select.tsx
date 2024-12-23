@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { useClickAway } from './useClickAway'
 
 const Container = styled.div(() => ({
+  display: 'inline-block',
   position: 'relative',
   height: '50px',
   userSelect: 'none',

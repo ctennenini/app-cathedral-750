@@ -1,8 +1,6 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Actions, Container, Header, Main } from './TextPageLayout.styled'
-import { BaseLayout } from '../BaseLayout'
-import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { Actions, Container, Header, LanguageSwitcher, Left, Main, MainContainer, Right } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -30,35 +28,39 @@ export function TextPageLayout({
   actionItems,
 }: TextPageLayoutProps) {
   return (
-    <BaseLayout
+    <Container
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
     >
-      <LanguageSwitcher />
-      <Container>
-        <Header
-          left={
-            <>
-              <NavMenu $dark />
-              {withHomeButton && <HomeButton $dark />}
-            </>
-          }
-          right={
-            backButtonTarget && (
-              <BackButton
-                $dark
-                href={backButtonTarget}
-              />
-            )
-          }
-        />
-        <Main
-          title={title}
-          subtitle={subtitle}
-          text={text}
-        />
-      </Container>
-      {actionItems && <Actions actions={actionItems} />}
-    </BaseLayout>
+      <Left>
+        <MainContainer>
+          <Header
+            left={
+              <>
+                <NavMenu $dark />
+                {withHomeButton && <HomeButton $dark />}
+              </>
+            }
+            right={
+              backButtonTarget && (
+                <BackButton
+                  $dark
+                  href={backButtonTarget}
+                />
+              )
+            }
+          />
+          <Main
+            title={title}
+            subtitle={subtitle}
+            text={text}
+          />
+        </MainContainer>
+      </Left>
+      <Right>
+        <LanguageSwitcher />
+        {actionItems && <Actions actions={actionItems} />}
+      </Right>
+    </Container>
   )
 }

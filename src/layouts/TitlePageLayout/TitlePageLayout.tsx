@@ -1,7 +1,16 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Actions, ActionsProps, Footer, Header, Main, Separator, Subtitle, Title } from './TitlePageLayout.styled'
-import { BaseLayout } from '@/layouts/BaseLayout'
+import {
+  Actions,
+  ActionsProps,
+  Container,
+  Footer,
+  Header,
+  Main,
+  Separator,
+  Subtitle,
+  Title,
+} from './TitlePageLayout.styled'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '../../components/HomeButton'
@@ -34,7 +43,7 @@ export function TitlePageLayout({
   titleStyle = {},
 }: TitlePageLayoutProps) {
   return (
-    <BaseLayout
+    <Container
       dark={textColor === 'dark'}
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
@@ -76,6 +85,6 @@ export function TitlePageLayout({
       <Footer>
         <Actions items={actionItems} />
       </Footer>
-    </BaseLayout>
+    </Container>
   )
 }

@@ -3,17 +3,14 @@ import { PropsWithChildren } from 'react'
 
 import { LinkProps, BigLink } from '@/components/Links'
 import styled from 'styled-components'
+import { BaseLayout } from '../BaseLayout'
 
-export const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
-  position: 'relative',
-  zIndex: 0,
-  height: '100dvh',
-  padding: '1rem',
+export const Container = styled(BaseLayout)({
+  padding: '3rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
-  backgroundColor: $dark ? '#000' : '#fff',
-}))
+})
 
 export const Main = styled.main({
   flex: 1,
@@ -82,7 +79,7 @@ export type ActionsProps = {
   items?: LinkProps[]
 }
 
-export const NavContainer = styled.nav({
+const NavContainer = styled.nav({
   paddingBottom: '3rem',
   '& ul': {
     display: 'flex',
@@ -102,7 +99,7 @@ export function Actions({ items }: ActionsProps) {
       {items && (
         <NavContainer>
           <ul>
-            {items.map(({ href, label, disabled, primary, arrow }, i) => (
+            {items.map(({ href, label, disabled, primary, arrow, external }, i) => (
               <li key={i}>
                 <BigLink
                   href={href}
@@ -110,6 +107,7 @@ export function Actions({ items }: ActionsProps) {
                   disabled={disabled}
                   $primary={primary}
                   arrow={arrow}
+                  external={external}
                 />
               </li>
             ))}
