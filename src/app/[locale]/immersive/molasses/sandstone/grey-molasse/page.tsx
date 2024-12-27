@@ -13,8 +13,8 @@ export default async function GreyMolasse({ params: { locale } }: GlobalStaticPa
       title={immersiveCathedral.molasses.sandstone.greyMolasse.main}
       subtitle={immersiveCathedral.molasses.sandstone.main}
       text={immersiveCathedral.molasses.sandstone.greyMolasse.description}
-      backButtonTarget="immersive/molasses/sandstone/stones-of-the-cathedral-2"
-      nextButtonTarget="immersive/molasses/sandstone/molasse-sandstone-1"
+      backButtonTarget="immersive/molasses/sandstone/stones-of-the-cathedral"
+      nextButtonTarget="immersive/molasses/sandstone/molasse-sandstone"
     />
   )
 }

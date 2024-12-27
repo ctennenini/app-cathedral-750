@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
 
 export default function Home() {
-  redirect('sandstone/stones-of-the-cathedral-1')
+  redirect('sandstone/stones-of-the-cathedral')
 }

@@ -36,18 +36,17 @@
       },
       "sandstone": {
         "main": "Molasse Sandstone",
-        "stonesOfTheCathedral1": {
+        "stonesOfTheCathedral": {
           "main": "Stones of the Cathedral",
           "description": [
-            "The Lausanne Cathedral is built from a variety of stones originating from different quarries all around Switzerland and some parts of Germany.",
-            "During the 19th century, the regional molasse sandstone of exposed architectural elements of the Cathedral was replaced with limestones and “harder” sandstones from the wider region of the canton Vaud."
-          ]
-        },
-        "stonesOfTheCathedral2": {
-          "main": "Stones of the Cathedral",
-          "description": [
-            "In the 20th century, due to the scarcity of regional quarries, the general substitution of local molasse sandstone for maintenance and restoration became common practice.",
-            "A variety of replacement sandstones from Fribourg, Bern, Zug, and Hannover (Oberkirchen, Germany) were utilized in its place."
+            [
+              "The Lausanne Cathedral is built from a variety of stones originating from different quarries all around Switzerland and some parts of Germany.",
+              "During the 19th century, the regional molasse sandstone of exposed architectural elements of the Cathedral was replaced with limestones and “harder” sandstones from the wider region of the canton Vaud."
+            ],
+            [
+              "In the 20th century, due to the scarcity of regional quarries, the general substitution of local molasse sandstone for maintenance and restoration became common practice.",
+              "A variety of replacement sandstones from Fribourg, Bern, Zug, and Hannover (Oberkirchen, Germany) were utilized in its place."
+            ]
           ],
           "testYourKnowledge": "Test your knowledge!"
         },
@@ -62,8 +61,14 @@
         "molasseSandstone": {
           "main": "The Molasse Sandstone",
           "description": [
-            "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
-            "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
+            [
+              "The Swiss Molasse rock formation stretches north of the Alps from the Lake Léman region in the west of Switzerland to the Constance Lake in the east.",
+              "It comprises a variety of calcite- bound sandstones, which can contain swelling clays."
+            ],
+            [
+              "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
+              "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
+            ]
           ],
           "actions": {
             "geologicalInformation": "Geological Information",

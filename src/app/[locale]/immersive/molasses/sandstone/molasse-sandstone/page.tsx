@@ -35,7 +35,6 @@ export default async function MolasseSandstone1({ params: { locale } }: GlobalSt
       subtitle={immersiveCathedral.molasses.sandstone.main}
       text={immersiveCathedral.molasses.sandstone.molasseSandstone.description}
       backButtonTarget="immersive/molasses/sandstone/grey-molasse"
-      nextButtonTarget="#"
       actionItems={actions}
     />
   )

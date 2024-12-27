@@ -1,16 +1,7 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import {
-  Actions,
-  Container,
-  Header,
-  LanguageSwitcher,
-  Left,
-  Main,
-  MainContainer,
-  Right,
-  Footer,
-} from './TextPageLayout.styled'
+import { Actions, Container, Header, LanguageSwitcher, Left, MainContainer, Right } from './TextPageLayout.styled'
+import { Main } from './Main'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -21,7 +12,7 @@ export type TextPageLayoutProps = PropsWithChildren<{
   subtitle?: string
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  text: string | string[]
+  text: string | string[] | string[][]
   actionItems?: ActionsProps['actions']
   withHomeButton?: boolean
   backButtonTarget?: string
@@ -66,8 +57,10 @@ export function TextPageLayout({
             title={title}
             subtitle={subtitle}
             text={text}
+            footer={{
+              nextButtonTarget,
+            }}
           />
-          <Footer nextButtonTarget={nextButtonTarget} />
         </MainContainer>
       </Left>
       <Right>

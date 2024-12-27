@@ -64,16 +64,7 @@ export function TitlePageLayout({
         right={<LanguageSwitcher />}
       />
       <Main>
-        <Title style={titleStyle}>
-          {Array.isArray(title)
-            ? title.map(line => (
-                <>
-                  {line}
-                  <br />
-                </>
-              ))
-            : title}
-        </Title>
+        <Title style={titleStyle}>{title}</Title>
 
         {subtitle && (
           <>

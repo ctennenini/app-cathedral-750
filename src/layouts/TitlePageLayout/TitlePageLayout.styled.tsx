@@ -3,6 +3,7 @@
 import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
 import { BaseLayout } from '../BaseLayout'
+import { H1, H2 } from '@/components/Typography'
 
 export const Container = styled(BaseLayout)({
   padding: '3rem',
@@ -46,7 +47,7 @@ export function Header({ left, right }: HeaderProps) {
   )
 }
 
-export const Title = styled.h1({
+export const Title = styled(H1)({
   fontFamily: 'var(--font-title)',
   fontSize: 169,
   fontWeight: 700,
@@ -55,7 +56,7 @@ export const Title = styled.h1({
   textTransform: 'uppercase',
 })
 
-export const Subtitle = styled.h2({
+export const Subtitle = styled(H2)({
   fontFamily: 'var(--font-title)',
   weight: 700,
   fontSize: 66,
@@ -69,7 +70,6 @@ export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
 }))
 
 export const Footer = styled.footer({})
-
 
 export type ActionsProps = {
   items?: BigLinkProps[]
