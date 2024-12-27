@@ -30,9 +30,48 @@
         "You may also go directly to an interactive discovery App to use as you walk around the cathedral."
       ],
       "actions": {
-        "sandstone": "The Molasse sandstone",
+        "sandstone": "Molasse Sandstone",
         "weathering": "Weathering of Molasse",
         "interactive": "Interactive Tour"
+      },
+      "sandstone": {
+        "main": "Molasse Sandstone",
+        "stonesOfTheCathedral1": {
+          "main": "Stones of the Cathedral",
+          "description": [
+            "The Lausanne Cathedral is built from a variety of stones originating from different quarries all around Switzerland and some parts of Germany.",
+            "During the 19th century, the regional molasse sandstone of exposed architectural elements of the Cathedral was replaced with limestones and “harder” sandstones from the wider region of the canton Vaud."
+          ]
+        },
+        "stonesOfTheCathedral2": {
+          "main": "Stones of the Cathedral",
+          "description": [
+            "In the 20th century, due to the scarcity of regional quarries, the general substitution of local molasse sandstone for maintenance and restoration became common practice.",
+            "A variety of replacement sandstones from Fribourg, Bern, Zug, and Hannover (Oberkirchen, Germany) were utilized in its place."
+          ],
+          "testYourKnowledge": "Test your knowledge!"
+        },
+        "greyMolasse": {
+          "main": "Grey Molasse",
+          "description": [
+            "It is a molassic sandstone from Lausanne and was placed in the Cathedral in the 12th Century CE (Gothic period).",
+            "It is a type of sedimentary stone which is predominant on the south tower of the Transept. This sandstone most likely came from the nearby quarries.",
+            "This stone is particularly sensitive to water due to the presence of swelling clays."
+          ]
+        },
+        "molasseSandstone": {
+          "main": "The Molasse Sandstone",
+          "description": [
+            "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
+            "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
+          ],
+          "actions": {
+            "geologicalInformation": "Geological Information",
+            "properties": "Properties of Molasse",
+            "typesOfStones": "Types of Stones",
+            "interactive": "Interactive Tour"
+          }
+        }
       }
     }
   },
@@ -40,7 +79,7 @@
     "molasses": {
       "main": "Molasses and its weathering",
       "sandstone": {
-        "main": "The Molasse sandstone"
+        "main": "Molasse Sandstone"
       },
       "weathering": {
         "main": "Weathering of Molasse",

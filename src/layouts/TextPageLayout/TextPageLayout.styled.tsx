@@ -6,6 +6,11 @@ import { BigLink, BigLinkProps } from '@/components/Links'
 import { BaseLayout } from '../BaseLayout'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
+import { IconButton, IconButtonProps } from '@/components/IconButton'
+import { NextArrowIcon } from '@/components/Icons'
+import { useHref } from '@/utils'
+
+import { useRouter } from 'next/navigation'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   position: 'absolute',
@@ -59,6 +64,48 @@ export function Header({ left, right }: HeaderProps) {
   )
 }
 
+const StyledFooter = styled.footer({
+  flex: 0,
+  display: 'flex',
+  padding: '0 3rem',
+  flexDirection: 'row',
+  justifyContent: 'end',
+  gap: '2rem',
+})
+
+type NextButtonProps = IconButtonProps & {
+  href: string
+}
+
+function NextButton({ href, ...otherProps }: NextButtonProps) {
+  const normalisedHref = useHref(href)
+  const { push } = useRouter()
+  return (
+    <IconButton
+      onClick={() => push(normalisedHref.toString())}
+      style={{ color: 'white', backgroundColor: '#CE3D3A', width: '87px', height: '87px' }}
+      {...otherProps}
+    >
+      <NextArrowIcon />
+    </IconButton>
+  )
+}
+
+export type FooterProps = {
+  nextButtonTarget?: string
+  actions?: BigLinkProps[]
+}
+
+export function Footer({ nextButtonTarget }: FooterProps) {
+  if (!nextButtonTarget) return null
+
+  return (
+    <StyledFooter>
+      <NextButton href={nextButtonTarget} />
+    </StyledFooter>
+  )
+}
+
 const Title = styled.h1({
   fontFamily: 'var(--font-title)',
   fontSize: 62,
@@ -81,7 +128,7 @@ const Separator = styled.hr({
   width: '100%',
   border: 'none',
   borderBottom: '1px solid #595858',
-  margin: '0.6rem 0 2.5rem',
+  margin: '2rem 0',
 })
 
 const P = styled.p({
@@ -163,8 +210,7 @@ export function Actions({ actions }: ActionsProps) {
           <ul>
             {actions.map((props, i) => (
               <li key={i}>
-                <BigLink {...props}
-                />
+                <BigLink {...props} />
               </li>
             ))}
           </ul>

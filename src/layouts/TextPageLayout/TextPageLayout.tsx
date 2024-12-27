@@ -1,6 +1,16 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Actions, Container, Header, LanguageSwitcher, Left, Main, MainContainer, Right } from './TextPageLayout.styled'
+import {
+  Actions,
+  Container,
+  Header,
+  LanguageSwitcher,
+  Left,
+  Main,
+  MainContainer,
+  Right,
+  Footer,
+} from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -15,6 +25,7 @@ export type TextPageLayoutProps = PropsWithChildren<{
   actionItems?: ActionsProps['actions']
   withHomeButton?: boolean
   backButtonTarget?: string
+  nextButtonTarget?: string
 }>
 
 export function TextPageLayout({
@@ -25,6 +36,7 @@ export function TextPageLayout({
   text,
   withHomeButton,
   backButtonTarget,
+  nextButtonTarget,
   actionItems,
 }: TextPageLayoutProps) {
   return (
@@ -55,6 +67,7 @@ export function TextPageLayout({
             subtitle={subtitle}
             text={text}
           />
+          <Footer nextButtonTarget={nextButtonTarget} />
         </MainContainer>
       </Left>
       <Right>

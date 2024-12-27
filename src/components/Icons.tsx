@@ -128,6 +128,28 @@ export const BackArrowIcon = styled((props: SVGProps<SVGSVGElement>) => (
   </svg>
 ))({})
 
+export const NextArrowIcon = styled((props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="38"
+    height="16"
+    viewBox="0 0 38 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M35.35 7.88H0.809998"
+      stroke="currentColor"
+      strokeWidth="1.8689"
+      strokeMiterlimit="10"
+    />
+    <path
+      d="M29.15 0.23999L27.88 1.60999L34.63 7.88L27.88 14.16L29.15 15.53L37.37 7.88L29.15 0.23999Z"
+      fill="currentColor"
+    />
+  </svg>
+))({})
+
 export type TriangleProps = SVGProps<SVGSVGElement> & {
   $isActive?: boolean
 }

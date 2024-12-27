@@ -8,7 +8,7 @@ export default async function MolassesDegradation({ params: { locale } }: Global
 
   const actions: TextPageLayoutProps['actionItems'] = [
     {
-      href: '#',
+      href: 'sandstone',
       label: immersiveCathedral.molasses.actions.sandstone,
     },
     {
