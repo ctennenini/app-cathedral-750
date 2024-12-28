@@ -4,7 +4,7 @@ import { ComponentProps, PropsWithChildren, useState } from 'react'
 import styled from 'styled-components'
 import { BigLinkProps } from '@/components/Links'
 
-import { IconButton, IconButtonProps } from '@/components/IconButton'
+import { IconButton } from '@/components/IconButton'
 import { BackArrowIcon, NextArrowIcon } from '@/components/Icons'
 import { useHref } from '@/utils'
 

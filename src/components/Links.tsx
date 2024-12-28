@@ -41,8 +41,6 @@ export function useIsActive(path: string) {
 export function Link({ href, label, arrow, external, ...otherProps }: LinkProps) {
   href = useHref(href)
 
-  console.log('Link', { href, label, arrow, ...otherProps })
-
   return (
     <NextLink
       target={external ? '_blank' : undefined}

@@ -1,10 +1,7 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Actions, Container, Header, LanguageSwitcher, Left, MainContainer, Right } from './TextPageLayout.styled'
+import { Actions, Container, LanguageSwitcher, Left, Right } from './TextPageLayout.styled'
 import { TextSection } from './Main'
-import { NavMenu } from '@/components/NavMenu'
-import { HomeButton } from '@/components/HomeButton'
-import { BackButton } from '@/components/BackButton'
 import { ActionsProps } from '@/components/Actions'
 
 export type TextPageLayoutProps = PropsWithChildren<{
