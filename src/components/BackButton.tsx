@@ -20,7 +20,7 @@ export function BackButton({ $dark, href: hrefFromProps, ...props }: BackButtonP
       $dark={$dark}
       {...props}
     >
-      <BackArrowIcon color={$dark ? '#000' : '#fff'} />
+      <BackArrowIcon />
     </IconButton>
   )
 }

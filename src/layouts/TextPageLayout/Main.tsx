@@ -1,15 +1,19 @@
 'use client'
 
-import { ComponentProps, useState } from 'react'
+import { ComponentProps, PropsWithChildren, useState } from 'react'
 import styled from 'styled-components'
 import { BigLinkProps } from '@/components/Links'
 
-import { IconButton } from '@/components/IconButton'
-import { NextArrowIcon } from '@/components/Icons'
+import { IconButton, IconButtonProps } from '@/components/IconButton'
+import { BackArrowIcon, NextArrowIcon } from '@/components/Icons'
 import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
 import { H1, P } from '@/components/Typography'
+import { Header, MainContainer } from './TextPageLayout.styled'
+import { NavMenu } from '@/components/NavMenu'
+import { HomeButton } from '@/components/HomeButton'
+import { BackButton } from '@/components/BackButton'
 
 const StyledFooter = styled.footer({
   flex: 0,
@@ -96,7 +100,7 @@ const Text = styled(P)({
   },
 })
 
-const StyledMain = styled.main({
+const Main = styled.main({
   flex: 'auto',
   padding: '0 3rem',
   overflowY: 'hidden',
@@ -109,57 +113,88 @@ const MainScroller = styled.div({
   overflowY: 'auto',
 })
 
-export type MainProps = {
+function useTextState(text: string | string[] | string[][]) {
+  const [page, setPage] = useState(0)
+
+  if (Array.isArray(text) && Array.isArray(text[0])) {
+    const hasMore = text.length > page + 1
+    const hasPrevious = page > 0
+    return {
+      current: text[page] as string[],
+      forward: hasMore ? () => setPage(page + 1) : undefined,
+      back: hasPrevious ? () => setPage(page - 1) : undefined,
+    }
+  } else if (Array.isArray(text)) {
+    return { current: text as string[] }
+  } else {
+    return { current: [text] }
+  }
+}
+
+export type TextSectionProps = PropsWithChildren<{
   title: string
   subtitle?: string
   text: string | string[] | string[][]
-  footer?: FooterProps
-}
+  withHomeButton?: boolean
+  backButtonTarget?: string
+  nextButtonTarget?: string
+}>
 
-export function Main({ title, subtitle, text, footer }: MainProps) {
-  const { current, hasMore, forward } = useTextState(text)
-
-  console.log('MainProps', { current, hasMore, forward })
+export function TextSection({
+  title,
+  subtitle,
+  text,
+  nextButtonTarget,
+  withHomeButton,
+  backButtonTarget,
+}: TextSectionProps) {
+  const { current, forward, back } = useTextState(text)
 
   return (
-    <>
-      <StyledMain>
+    <MainContainer>
+      <Header
+        left={
+          <>
+            <NavMenu $dark />
+            {withHomeButton && <HomeButton $dark />}
+          </>
+        }
+        right={
+          back ? (
+            <IconButton
+              $dark
+              onClick={back}
+            >
+              <BackArrowIcon />
+            </IconButton>
+          ) : (
+            backButtonTarget && (
+              <BackButton
+                $dark
+                href={backButtonTarget}
+              />
+            )
+          )
+        }
+      />
+
+      <Main>
         <MainScroller>
           {subtitle && <SubTitle>{subtitle}</SubTitle>}
           <Title>{title}</Title>
           <Separator />
           <Text>{current}</Text>
         </MainScroller>
-      </StyledMain>
-      {hasMore ? (
+      </Main>
+      {forward ? (
         <StyledFooter>
           <StyledNextButton onClick={forward}>
             <NextArrowIcon />
           </StyledNextButton>
         </StyledFooter>
       ) : (
-        footer && <Footer {...footer} />
+        nextButtonTarget && <Footer nextButtonTarget={nextButtonTarget} />
       )}
-    </>
+    </MainContainer>
   )
-}
-
-function useTextState(text: string | string[] | string[][]) {
-  const [page, setPage] = useState(0)
-
-  if (Array.isArray(text) && Array.isArray(text[0])) {
-    return {
-      current: text[page] as string[],
-      hasMore: text.length > page + 1,
-      forward: () => {
-        if (text.length > page + 1) {
-          setPage(page + 1)
-        }
-      },
-    }
-  } else if (Array.isArray(text)) {
-    return { current: text as string[], hasMore: false }
-  } else {
-    return { current: [text], hasMore: false }
-  }
 }

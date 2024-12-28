@@ -1,7 +1,7 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
 import { Actions, Container, Header, LanguageSwitcher, Left, MainContainer, Right } from './TextPageLayout.styled'
-import { Main } from './Main'
+import { TextSection } from './Main'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -36,32 +36,14 @@ export function TextPageLayout({
       bgImgAlt={bgImgAlt}
     >
       <Left>
-        <MainContainer>
-          <Header
-            left={
-              <>
-                <NavMenu $dark />
-                {withHomeButton && <HomeButton $dark />}
-              </>
-            }
-            right={
-              backButtonTarget && (
-                <BackButton
-                  $dark
-                  href={backButtonTarget}
-                />
-              )
-            }
-          />
-          <Main
-            title={title}
-            subtitle={subtitle}
-            text={text}
-            footer={{
-              nextButtonTarget,
-            }}
-          />
-        </MainContainer>
+        <TextSection
+          title={title}
+          subtitle={subtitle}
+          text={text}
+          withHomeButton={withHomeButton}
+          backButtonTarget={backButtonTarget}
+          nextButtonTarget={nextButtonTarget}
+        />
       </Left>
       <Right>
         <LanguageSwitcher />
