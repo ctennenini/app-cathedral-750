@@ -75,7 +75,7 @@ export const Right = styled.div({
   alignItems: 'center',
 })
 
-const ActionsContainer = styled.nav({
+const LinksContainer = styled.nav({
   '& ul': {
     display: 'flex',
     flexDirection: 'column',
@@ -88,23 +88,23 @@ const ActionsContainer = styled.nav({
   },
 })
 
-export type ActionsProps = PropsWithChildren<{
-  actions?: BigLinkProps[]
+export type LinksProps = PropsWithChildren<{
+  links?: BigLinkProps[]
 }>
 
-export function Actions({ actions }: ActionsProps) {
+export function Links({ links }: LinksProps) {
   return (
     <>
-      {actions && (
-        <ActionsContainer>
+      {links && (
+        <LinksContainer>
           <ul>
-            {actions.map((props, i) => (
+            {links.map((props, i) => (
               <li key={i}>
                 <BigLink {...props} />
               </li>
             ))}
           </ul>
-        </ActionsContainer>
+        </LinksContainer>
       )}
     </>
   )

@@ -6,7 +6,7 @@ import { getDictionary } from '@/i18n'
 export default async function MolasseSandstone1({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const actions: TextPageLayoutProps['actionItems'] = [
+  const actions: TextPageLayoutProps['links'] = [
     {
       href: '#',
       label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.geologicalInformation,
@@ -35,7 +35,7 @@ export default async function MolasseSandstone1({ params: { locale } }: GlobalSt
       subtitle={immersiveCathedral.molasses.sandstone.main}
       text={immersiveCathedral.molasses.sandstone.molasseSandstone.description}
       backButtonTarget="immersive/molasses/sandstone/grey-molasse"
-      actionItems={actions}
+      links={actions}
     />
   )
 }

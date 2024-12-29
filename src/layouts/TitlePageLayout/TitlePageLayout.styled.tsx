@@ -71,8 +71,8 @@ export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
 
 export const Footer = styled.footer({})
 
-export type ActionsProps = {
-  items?: BigLinkProps[]
+export type LinksProps = {
+  links?: BigLinkProps[]
 }
 
 const NavContainer = styled.nav({
@@ -89,15 +89,15 @@ const NavContainer = styled.nav({
   },
 })
 
-export function Actions({ items }: ActionsProps) {
+export function Links({ links }: LinksProps) {
   return (
     <>
-      {items && (
+      {links && (
         <NavContainer>
           <ul>
-            {items.map((props, i) => (
+            {links.map((link, i) => (
               <li key={i}>
-                <BigLink {...props} />
+                <BigLink {...link} />
               </li>
             ))}
           </ul>

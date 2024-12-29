@@ -13,6 +13,13 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
       title={immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.main}
       subtitle={immersiveCathedral.molasses.sandstone.main}
       text={immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.description}
+      actions={[
+        {
+          label: immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.testYourKnowledge,
+          type: 'quiz',
+          target: 'immersive/molasses/sandstone/stones-of-the-cathedral/quiz',
+        },
+      ]}
       backButtonTarget="immersive/molasses"
       nextButtonTarget="immersive/molasses/sandstone/grey-molasse"
     />

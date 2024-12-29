@@ -7,7 +7,7 @@ import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
 export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const actionItems: TitlePageLayoutProps['actionItems'] = [
+  const actionItems: TitlePageLayoutProps['links'] = [
     {
       href: 'molasses',
       label: immersiveCathedral.actions.molasses,
@@ -28,7 +28,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
       backButtonTarget="/start"
       bgImg={bgImg}
       title={immersiveCathedral.title}
-      actionItems={actionItems}
+      links={actionItems}
       textColor="light"
     />
   )

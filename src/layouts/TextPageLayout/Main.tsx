@@ -14,6 +14,7 @@ import { Header, MainContainer } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
+import { Action, ActionButton } from '@/actions'
 
 const StyledFooter = styled.footer({
   flex: 0,
@@ -29,6 +30,20 @@ const StyledNextButton = styled(IconButton)({
   backgroundColor: '#CE3D3A',
   width: '87px',
   height: '87px',
+  flexShrink: 0,
+})
+
+const StyledActionButton = styled(ActionButton)({
+  backgroundColor: 'white',
+  color: '#CE3D3A',
+  border: '1px solid #CE3D3A',
+  borderRadius: '12px',
+  padding: '0 40px',
+  height: '87px',
+  fontSize: '25px',
+  fontWeight: '500',
+  lineHeight: '29.3px',
+  marginRight: 'auto',
 })
 
 type NextButtonProps = ComponentProps<typeof StyledNextButton> & {
@@ -50,17 +65,25 @@ function NextButton({ href, ...otherProps }: NextButtonProps) {
 
 type FooterProps = {
   nextButtonTarget?: string
-  actions?: BigLinkProps[]
+  actions?: Action[]
 }
 
-function Footer({ nextButtonTarget }: FooterProps) {
-  if (!nextButtonTarget) return null
-
+function Footer({ actions, nextButtonTarget }: FooterProps) {
+  console.log('footer actions:', { actions, nextButtonTarget })
+  if (!nextButtonTarget && !actions?.length) return null
   return (
     <StyledFooter>
-      <NextButton href={nextButtonTarget}>
-        <NextArrowIcon />
-      </NextButton>
+      {actions?.map((action, index) => (
+        <StyledActionButton
+          key={index}
+          action={action}
+        />
+      ))}
+      {nextButtonTarget && (
+        <NextButton href={nextButtonTarget}>
+          <NextArrowIcon />
+        </NextButton>
+      )}
     </StyledFooter>
   )
 }
@@ -135,6 +158,7 @@ export type TextSectionProps = PropsWithChildren<{
   title: string
   subtitle?: string
   text: string | string[] | string[][]
+  actions?: FooterProps['actions']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
@@ -144,6 +168,7 @@ export function TextSection({
   title,
   subtitle,
   text,
+  actions,
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
@@ -193,7 +218,12 @@ export function TextSection({
           </StyledNextButton>
         </StyledFooter>
       ) : (
-        nextButtonTarget && <Footer nextButtonTarget={nextButtonTarget} />
+        (nextButtonTarget || actions?.length) && (
+          <Footer
+            actions={actions}
+            nextButtonTarget={nextButtonTarget}
+          />
+        )
       )}
     </MainContainer>
   )

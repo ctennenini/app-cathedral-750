@@ -1,8 +1,8 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
 import {
-  Actions,
-  ActionsProps,
+  Links,
+  LinksProps,
   Container,
   Footer,
   Header,
@@ -22,7 +22,7 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   subtitle?: string | string[]
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  actionItems?: ActionsProps['items']
+  links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   buttonColor?: Color
@@ -35,7 +35,7 @@ export function TitlePageLayout({
   subtitle,
   bgImg,
   bgImgAlt = 'background image',
-  actionItems,
+  links,
   withHomeButton,
   backButtonTarget,
   buttonColor = 'dark',
@@ -74,7 +74,7 @@ export function TitlePageLayout({
         )}
       </Main>
       <Footer>
-        <Actions items={actionItems} />
+        <Links links={links} />
       </Footer>
     </Container>
   )

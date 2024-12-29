@@ -8,7 +8,7 @@ import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
 export default async function Start({ params: { locale } }: GlobalStaticPageProps) {
   const { start } = await getDictionary(locale)
 
-  const actionItems: TitlePageLayoutProps['actionItems'] = [
+  const actionItems: TitlePageLayoutProps['links'] = [
     {
       href: 'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
       label: start.actions.website,
@@ -32,7 +32,7 @@ export default async function Start({ params: { locale } }: GlobalStaticPageProp
       title={start.title}
       subtitle={start.subtitle}
       bgImg={bgImg}
-      actionItems={actionItems}
+      links={actionItems}
       buttonColor="light"
       textColor="light"
       titleStyle={{
