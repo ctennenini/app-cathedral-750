@@ -107,18 +107,36 @@ const NextButton = styled((props: IconButtonProps) => (
 
 const Right = styled.div({
   position: 'relative',
+  alignSelf: 'center',
 })
 
-const Trigger = styled.button({
+const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
   position: 'absolute',
-  top: ' 27.3rem',
-  left: '27rem',
-  width: '8rem',
-  height: '3rem',
-  // backgroundColor: '#CE3D3Aaa',
-  backgroundColor: 'transparent',
+  backgroundColor: $green ? '#47CC40' : '#CE3D3A',
+  opacity: 0.4,
   border: 'none',
   cursor: 'pointer',
+}))
+
+const Trigger1 = styled(Trigger)({
+  top: '6.1rem',
+  left: '6rem',
+  width: '6rem',
+  height: '2rem',
+})
+
+const Trigger2 = styled(Trigger)({
+  top: '44.6rem',
+  left: '5rem',
+  width: '7rem',
+  height: '2rem',
+})
+
+const Trigger3 = styled(Trigger)({
+  top: '27.7rem',
+  left: '27.5rem',
+  width: '7rem',
+  height: '2rem',
 })
 
 export type OldestStoneGameParams = {
@@ -165,7 +183,15 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
             src={picture}
             alt="Oldest Stone Game"
           />
-          <Trigger onClick={() => setIsDone(true)} />
+          {isDone ? (
+            <Trigger3 $green />
+          ) : (
+            <>
+              <Trigger1 />
+              <Trigger2 />
+              <Trigger3 onClick={() => setIsDone(true)} />
+            </>
+          )}
         </Right>
       </Content>
     </Container>
