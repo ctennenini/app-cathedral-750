@@ -98,9 +98,9 @@ const Right = styled.div({
 
 const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
   position: 'absolute',
-  backgroundColor: $green ? '#47CC40' : '#CE3D3A',
-  opacity: 0.4,
-  border: 'none',
+  backgroundColor: 'transparent',
+  border: '4px dotted',
+  borderColor: $green ? '#47CC40' : '#CE3D3A',
   cursor: 'pointer',
 }))
 
