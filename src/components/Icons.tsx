@@ -66,14 +66,14 @@ export const CloseIcon = styled((props: SVGProps<SVGSVGElement>) => (
   >
     <path
       d="M0.949951 0.930176L21.7699 21.7402"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="1.2805"
       strokeMiterlimit="10"
       strokeLinecap="round"
     />
     <path
       d="M21.7699 0.930176L0.949951 21.7402"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="1.2805"
       strokeMiterlimit="10"
       strokeLinecap="round"

@@ -2,10 +2,10 @@
 
 import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
-import { BaseLayout } from '../BaseLayout'
+import { BaseContainer } from '../BaseContainer'
 import { H1, H2 } from '@/components/Typography'
 
-export const Container = styled(BaseLayout)({
+export const Container = styled(BaseContainer)({
   padding: '3rem',
   display: 'flex',
   flexDirection: 'column',

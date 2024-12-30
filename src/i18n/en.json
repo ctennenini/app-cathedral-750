@@ -107,5 +107,20 @@
     "vaults": {
       "main": "Vaults of the Cathedral"
     }
+  },
+  "games": {
+    "oldestStone": {
+      "start": {
+        "title": "Can you identify the oldest stone in the facade?",
+        "body": "Tap on one of the highlighted stones"
+      },
+      "finish": {
+        "title": "Correct!",
+        "body": [
+          "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
+          "Let's learn more about it..."
+        ]
+      }
+    }
   }
 }

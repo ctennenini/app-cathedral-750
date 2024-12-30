@@ -10,7 +10,7 @@ import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
 import { H1, P } from '@/components/Typography'
-import { Header, MainContainer } from './TextPageLayout.styled'
+import { Header } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -121,6 +121,19 @@ const Text = styled(P)({
   '&:last-child': {
     marginBottom: 0,
   },
+})
+
+const MainContainer = styled.div({
+  width: '100%',
+  height: '100%',
+  padding: '2.5rem',
+
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '3rem',
+
+  backgroundColor: '#fff',
+  color: '#000',
 })
 
 const Main = styled.main({

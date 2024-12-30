@@ -107,5 +107,20 @@
     "vaults": {
       "main": "Die Gewölbe der Kathedrale"
     }
+  },
+  "games": {
+    "oldestStone": {
+      "start": {
+        "title": "Können Sie den ältesten Stein in der Fassade identifizieren?",
+        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
+      },
+      "finish": {
+        "title": "Richtig!",
+        "body": [
+          "Der älteste Steintyp der Kathedrale ist Molasse Grise de Lausanne, der im 12. Jahrhundert CE platziert wurde.",
+          "Lassen Sie uns mehr darüber erfahren..."
+        ]
+      }
+    }
   }
 }

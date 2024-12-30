@@ -3,7 +3,7 @@
 import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 import { BigLink, BigLinkProps } from '@/components/Links'
-import { BaseLayout } from '../BaseLayout'
+import { BaseContainer } from '../BaseContainer'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
 
@@ -13,23 +13,10 @@ export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   right: '3rem',
 })
 
-export const Container = styled(BaseLayout)({
+export const Container = styled(BaseContainer)({
   display: 'flex',
   flexDirection: 'row',
   gap: '5rem',
-})
-
-export const MainContainer = styled.div({
-  width: '100%',
-  height: '100%',
-  padding: '2.5rem',
-
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '3rem',
-
-  backgroundColor: '#fff',
-  color: '#000',
 })
 
 const HeaderSection = styled.div({

@@ -16,8 +16,11 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
       actions={[
         {
           label: immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.testYourKnowledge,
-          type: 'quiz',
-          target: 'immersive/molasses/sandstone/stones-of-the-cathedral/quiz',
+          type: 'oldestStoneGame',
+          params: {
+            bgImg,
+            successTarget: 'immersive/molasses/sandstone/grey-molasse',
+          },
         },
       ]}
       backButtonTarget="immersive/molasses"
