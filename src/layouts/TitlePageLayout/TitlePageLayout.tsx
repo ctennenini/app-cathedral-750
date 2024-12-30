@@ -61,7 +61,7 @@ export function TitlePageLayout({
             )}
           </>
         }
-        right={<LanguageSwitcher />}
+        right={<LanguageSwitcher $dark={buttonColor === 'dark'} />}
       />
       <Main>
         <Title style={titleStyle}>{title}</Title>

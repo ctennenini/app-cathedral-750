@@ -11,7 +11,7 @@ const Container = styled.div(() => ({
   userSelect: 'none',
 }))
 
-const Menu = styled.ul<{ $isOpen: boolean }>(({ $isOpen, children }) => ({
+const Menu = styled.ul<{ $isOpen: boolean; $dark?: boolean }>(({ $isOpen, $dark, children }) => ({
   position: 'absolute',
   top: 0,
   right: 0,
@@ -27,7 +27,7 @@ const Menu = styled.ul<{ $isOpen: boolean }>(({ $isOpen, children }) => ({
   padding: '0 3rem',
 
   color: '#020202',
-  backgroundColor: 'rgba(255, 255, 255, 0.4)',
+  backgroundColor: $dark ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.4)',
   borderRadius: '25px',
 
   listStyle: 'none',
@@ -57,9 +57,10 @@ export type SelectProps = Omit<ComponentProps<typeof Container>, 'onChange' | 'v
   value: string
   onChange: (value: string) => void
   options: { label: string; value: string }[]
+  $dark?: boolean
 }
 
-export function Select({ value, onChange, options, ...otherProps }: SelectProps) {
+export function Select({ value, onChange, options, $dark, ...otherProps }: SelectProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpen] = useState(false)
 
@@ -77,6 +78,7 @@ export function Select({ value, onChange, options, ...otherProps }: SelectProps)
       <Menu
         role="menu"
         $isOpen={isOpen}
+        $dark={!!$dark}
       >
         <Option>
           {currentOption?.label}
