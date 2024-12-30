@@ -13,7 +13,9 @@ const List = styled.ul({
 })
 
 const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive }) => ({
-  color: $isActive ? '#CE3D3A' : '#191919',
+  '&&': {
+    color: $isActive ? '#CE3D3A' : '#191919',
+  },
 }))
 
 const Li = styled.li<{

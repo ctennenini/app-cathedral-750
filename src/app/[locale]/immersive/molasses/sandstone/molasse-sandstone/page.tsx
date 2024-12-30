@@ -3,12 +3,12 @@ import { GlobalStaticPageProps } from '../../../../layout'
 import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
 import { getDictionary } from '@/i18n'
 
-export default async function MolasseSandstone1({ params: { locale } }: GlobalStaticPageProps) {
+export default async function MolasseSandstone({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
   const actions: TextPageLayoutProps['links'] = [
     {
-      href: '#',
+      href: '/immersive/molasses/sandstone/geological-information',
       label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.geologicalInformation,
     },
     {

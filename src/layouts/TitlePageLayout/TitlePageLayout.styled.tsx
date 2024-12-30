@@ -6,10 +6,12 @@ import { BaseContainer } from '../BaseContainer'
 import { H1, H2 } from '@/components/Typography'
 
 export const Container = styled(BaseContainer)({
-  padding: '3rem',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2rem',
+  '&&': {
+    padding: '3rem',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
+  },
 })
 
 export const Main = styled.main({

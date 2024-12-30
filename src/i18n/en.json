@@ -76,6 +76,19 @@
             "typesOfStones": "Types of Stones",
             "interactive": "Interactive Tour"
           }
+        },
+        "geologicalInformation": {
+          "main": "Geological Information",
+          "description": [
+            [
+              "The geology of Switzerland covers the Central Alps, a segment of the Alpine chain located between the Western Alps of France and Italy and the Eastern Alps of Italy, Austria and Germany.",
+              "In this segment the Alpine chain is particularly narrow, yet it contains all the major tectonic units and exhibits landmark landscapes and landforms for which the Alps are known."
+            ],
+            [
+              "To the north, the Swiss Plateau ex-tends from Lake Geneva to Bern, Zürich, and Lake Constance tapering off from around 600 to 400 m a.s.l. This plateau corresponds to what is called the Molasse Basin.",
+              "<b>Click on the map</b> to learn more about the different Molasse, the quarries and their characteristics. "
+            ]
+          ]
         }
       }
     }

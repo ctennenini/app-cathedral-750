@@ -76,6 +76,19 @@
             "typesOfStones": "Steintypen",
             "interactive": "Interaktive Tour"
           }
+        },
+        "geologicalInformation": {
+          "main": "Geologische Informationen",
+          "description": [
+            [
+              "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette zwischen den Westalpen von Frankreich und Italien und den Ostalpen von Italien, Österreich und Deutschland.",
+              "In diesem Segment ist die Alpenkette besonders schmal, enthält jedoch alle wichtigen tektonischen Einheiten und zeigt markante Landschaften und Landformen, für die die Alpen bekannt sind."
+            ],
+            [
+              "Im Norden erstreckt sich das Schweizer Mittelland von Genf über Bern, Zürich und den Bodensee und verjüngt sich von etwa 600 auf 400 m ü. M. Dieses Plateau entspricht dem sogenannten Molasse Becken.",
+              "<b>Klicken Sie auf die Karte</b>, um mehr über die verschiedenen Molasse, die Steinbrüche und ihre Eigenschaften zu erfahren."
+            ]
+          ]
         }
       }
     }

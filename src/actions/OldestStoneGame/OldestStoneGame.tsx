@@ -13,24 +13,10 @@ import { useRouter } from 'next/navigation'
 import { useHref } from '@/utils'
 
 const Container = styled(BaseContainer)({
-  position: 'fixed',
-  left: 0,
-  top: 0,
-  width: '100vw',
-  height: '100vh',
-  zIndex: 100,
-
-  padding: '0 2rem',
-})
-
-const Overlay = styled.div({
-  position: 'absolute',
-  left: 0,
-  top: 0,
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(0, 0, 0, 0.6)',
-  backdropFilter: 'blur(16px)',
+  '&&': {
+    zIndex: 100,
+    padding: '0 2rem',
+  },
 })
 
 const Content = styled.article({
@@ -159,10 +145,10 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
 
   return (
     <Container
+      blurBackground
       bgImg={bgImg}
       bgImgAlt="Oldest Stone Game"
     >
-      <Overlay />
       <Content>
         <CloseButton onClick={onClose} />
         <Left>
@@ -173,7 +159,7 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
             <NextButton
               onClick={() => {
                 onClose()
-                push(successHref.toString())
+                push(successHref.toString(), { scroll: false })
               }}
             />
           )}

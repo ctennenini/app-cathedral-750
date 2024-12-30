@@ -8,15 +8,19 @@ import { BaseContainer } from '../BaseContainer'
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
-  position: 'absolute',
-  top: '3rem',
-  right: '3rem',
+  '&&': {
+    position: 'absolute',
+    top: '3rem',
+    right: '3rem',
+  },
 })
 
 export const Container = styled(BaseContainer)({
-  display: 'flex',
-  flexDirection: 'row',
-  gap: '5rem',
+  '&&': {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '5rem',
+  },
 })
 
 const HeaderSection = styled.div({

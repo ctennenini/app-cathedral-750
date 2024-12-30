@@ -45,6 +45,7 @@ export function Link({ href, label, arrow, external, ...otherProps }: LinkProps)
     <NextLink
       target={external ? '_blank' : undefined}
       href={href}
+      scroll={false}
       {...otherProps}
     >
       {label}
@@ -58,16 +59,18 @@ export type BigLinkProps = LinkProps & {
 }
 
 export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
-  height: '120px',
-  fontSize: '28px',
-  display: 'inline-block',
-  padding: '2.7rem 5rem',
-  color: $primary ? '#fff' : '#000',
-  backgroundColor: $primary ? '#CE3D3A' : '#fff',
-  textAlign: 'center',
-  borderRadius: '12px',
-  opacity: disabled ? 0.5 : 1,
-  cursor: disabled ? 'not-allowed' : 'pointer',
+  '&&': {
+    height: '120px',
+    fontSize: '28px',
+    display: 'inline-block',
+    padding: '2.7rem 5rem',
+    color: $primary ? '#fff' : '#000',
+    backgroundColor: $primary ? '#CE3D3A' : '#fff',
+    textAlign: 'center',
+    borderRadius: '12px',
+    opacity: disabled ? 0.5 : 1,
+    cursor: disabled ? 'not-allowed' : 'pointer',
+  },
 }))
 
 export const NavItem = styled(

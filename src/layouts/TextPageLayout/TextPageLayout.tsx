@@ -14,6 +14,7 @@ export type TextPageLayoutProps = PropsWithChildren<{
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
+  blurBackground?: boolean
 }>
 
 export function TextPageLayout({
@@ -27,11 +28,13 @@ export function TextPageLayout({
   backButtonTarget,
   nextButtonTarget,
   links,
+  blurBackground,
 }: TextPageLayoutProps) {
   return (
     <Container
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
+      blurBackground={blurBackground}
     >
       <Left>
         <TextSection

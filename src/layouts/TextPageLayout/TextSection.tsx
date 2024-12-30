@@ -33,16 +33,18 @@ const StyledNextButton = styled(IconButton)({
 })
 
 const StyledActionButton = styled(ActionButton)({
-  backgroundColor: 'white',
-  color: '#CE3D3A',
-  border: '1px solid #CE3D3A',
-  borderRadius: '12px',
-  padding: '0 40px',
-  height: '87px',
-  fontSize: '25px',
-  fontWeight: '500',
-  lineHeight: '29.3px',
-  marginRight: 'auto',
+  '&&': {
+    backgroundColor: 'white',
+    color: '#CE3D3A',
+    border: '1px solid #CE3D3A',
+    borderRadius: '12px',
+    padding: '0 40px',
+    height: '87px',
+    fontSize: '25px',
+    fontWeight: '500',
+    lineHeight: '29.3px',
+    marginRight: 'auto',
+  },
 })
 
 type NextButtonProps = ComponentProps<typeof StyledNextButton> & {
@@ -54,7 +56,7 @@ function NextButton({ href, ...otherProps }: NextButtonProps) {
   const { push } = useRouter()
   return (
     <StyledNextButton
-      onClick={() => push(normalisedHref.toString())}
+      onClick={() => push(normalisedHref.toString(), { scroll: false })}
       {...otherProps}
     >
       <NextArrowIcon />

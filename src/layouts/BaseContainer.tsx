@@ -4,8 +4,12 @@ import styled from 'styled-components'
 import NextImage, { ImageProps } from 'next/image'
 
 const Container = styled.div<{ $dark?: boolean }>`
-  position: relative;
+  position: fixed;
   z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  width: 100vw;
   height: 100dvh;
   height: 100vh;
   color: ${({ $dark }) => ($dark ? '#000' : '#fff')};
@@ -13,7 +17,7 @@ const Container = styled.div<{ $dark?: boolean }>`
 `
 
 const Image = styled(NextImage)({
-  position: 'fixed',
+  position: 'absolute',
   left: -2,
   top: -2,
   width: 'calc(100vw + 4px)',
@@ -22,10 +26,22 @@ const Image = styled(NextImage)({
   zIndex: -1,
 })
 
+const Overlay = styled.div({
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+  backdropFilter: 'blur(16px)',
+  zIndex: -1,
+})
+
 export type BaseContainerProps = ComponentProps<typeof Container> & {
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   dark?: boolean
+  blurBackground?: boolean
 }
 
 export function BaseContainer({
@@ -33,6 +49,7 @@ export function BaseContainer({
   bgImgAlt = 'background image',
   dark,
   children,
+  blurBackground,
   ...otherProps
 }: BaseContainerProps) {
   return (
@@ -45,10 +62,12 @@ export function BaseContainer({
           src={bgImg}
           alt={bgImgAlt}
           placeholder="blur"
+          loading="eager"
           quality={100}
           sizes="100vw"
         />
       )}
+      {blurBackground && <Overlay />}
       {children}
     </Container>
   )

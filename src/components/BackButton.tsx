@@ -16,7 +16,7 @@ export function BackButton({ $dark, href: hrefFromProps, ...props }: BackButtonP
 
   return (
     <IconButton
-      onClick={() => push(href.toString())}
+      onClick={() => push(href.toString(), { scroll: false })}
       $dark={$dark}
       {...props}
     >
