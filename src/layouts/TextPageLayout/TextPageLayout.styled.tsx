@@ -19,7 +19,6 @@ export const Container = styled(BaseContainer)({
   '&&': {
     display: 'flex',
     flexDirection: 'row',
-    gap: '5rem',
   },
 })
 
@@ -57,7 +56,6 @@ export const Left = styled.div({
 
 export const Right = styled.div({
   position: 'relative',
-  paddingRight: '5rem',
   flexBasis: '50%',
 
   display: 'flex',

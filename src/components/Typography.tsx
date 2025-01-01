@@ -13,22 +13,21 @@ export type PProps = HTMLProps<HTMLParagraphElement> & {
 }
 
 export const P = ({ children, ...otherProps }: PProps) => {
-  if (Array.isArray(children)) {
-    return (
-      <>
-        {children.map((t, i) => (
-          <p
-            key={i}
-            {...otherProps}
-          >
-            {t}
-          </p>
-        ))}
-      </>
-    )
-  } else {
-    return <p {...otherProps}>{children}</p>
+  if (!Array.isArray(children)) {
+    children = [children]
   }
+
+  return (
+    <>
+      {children.map((t, i) => (
+        <p
+          key={i}
+          dangerouslySetInnerHTML={{ __html: t }}
+          {...otherProps}
+        />
+      ))}
+    </>
+  )
 }
 
 /**

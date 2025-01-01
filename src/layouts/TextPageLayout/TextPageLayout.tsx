@@ -1,7 +1,7 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { Links, LinksProps, Container, LanguageSwitcher, Left, Right } from './TextPageLayout.styled'
-import { TextSection, TextSectionProps } from './TextSection'
+import { LinksProps, Container } from './TextPageLayout.styled'
+import { TextPageContent, TextPageContentProps } from './TextPageContent'
 
 export type TextPageLayoutProps = PropsWithChildren<{
   title: string
@@ -9,7 +9,8 @@ export type TextPageLayoutProps = PropsWithChildren<{
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   text: string | string[] | string[][]
-  actions?: TextSectionProps['actions']
+  actions?: TextPageContentProps['actions']
+  pullOutContent?: TextPageContentProps['pullOutContent']
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
@@ -24,6 +25,7 @@ export function TextPageLayout({
   bgImgAlt = 'background image',
   text,
   actions,
+  pullOutContent,
   withHomeButton,
   backButtonTarget,
   nextButtonTarget,
@@ -36,21 +38,17 @@ export function TextPageLayout({
       bgImgAlt={bgImgAlt}
       blurBackground={blurBackground}
     >
-      <Left>
-        <TextSection
-          title={title}
-          subtitle={subtitle}
-          text={text}
-          withHomeButton={withHomeButton}
-          backButtonTarget={backButtonTarget}
-          nextButtonTarget={nextButtonTarget}
-          actions={actions}
-        />
-      </Left>
-      <Right>
-        <LanguageSwitcher />
-        {links && <Links links={links} />}
-      </Right>
+      <TextPageContent
+        title={title}
+        subtitle={subtitle}
+        text={text}
+        actions={actions}
+        pullOutContent={pullOutContent}
+        withHomeButton={withHomeButton}
+        backButtonTarget={backButtonTarget}
+        nextButtonTarget={nextButtonTarget}
+        links={links}
+      />
     </Container>
   )
 }

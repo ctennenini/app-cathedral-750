@@ -9,11 +9,12 @@ import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
 import { H1, P } from '@/components/Typography'
-import { Header } from './TextPageLayout.styled'
+import { Header, LanguageSwitcher, Left, Links, LinksProps, Right } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { Action, ActionButton } from '@/actions'
+import Image, { ImageProps } from 'next/image'
 
 const StyledFooter = styled.footer({
   flex: 0,
@@ -150,7 +151,22 @@ const MainScroller = styled.div({
   overflowY: 'auto',
 })
 
-function useTextState(text: string | string[] | string[][]) {
+const ExtraContent = styled.div({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '2rem 5rem',
+  backgroundColor: 'white',
+  boxShadow: '2rem 0 0px rgba(0, 0, 0, 0.15) inset',
+})
+
+const ExtraImage = styled(Image)({
+  width: '100%',
+  height: 'auto',
+  objectFit: 'contain',
+})
+
+function useTextState(text: string | string[] | string[][], extraContent?: ImageProps[]) {
   const [page, setPage] = useState(0)
 
   if (Array.isArray(text) && Array.isArray(text[0])) {
@@ -160,85 +176,106 @@ function useTextState(text: string | string[] | string[][]) {
       current: text[page] as string[],
       forward: hasMore ? () => setPage(page + 1) : undefined,
       back: hasPrevious ? () => setPage(page - 1) : undefined,
+      extraContent: extraContent?.[Math.min(page, extraContent.length - 1)],
     }
   } else if (Array.isArray(text)) {
-    return { current: text as string[] }
+    return { current: text as string[], extraContent: extraContent?.[0] }
   } else {
-    return { current: [text] }
+    return { current: [text], extraContent: extraContent?.[0] }
   }
 }
 
-export type TextSectionProps = PropsWithChildren<{
+export type TextPageContentProps = PropsWithChildren<{
   title: string
   subtitle?: string
   text: string | string[] | string[][]
   actions?: FooterProps['actions']
+  pullOutContent?: ImageProps[]
+  links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
 }>
 
-export function TextSection({
+export function TextPageContent({
   title,
   subtitle,
   text,
   actions,
+  pullOutContent,
+  links,
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
-}: TextSectionProps) {
-  const { current, forward, back } = useTextState(text)
+}: TextPageContentProps) {
+  const { current, forward, back, extraContent } = useTextState(text, pullOutContent)
 
   return (
-    <MainContainer>
-      <Header
-        left={
-          <>
-            <NavMenu $dark />
-            {withHomeButton && <HomeButton $dark />}
-          </>
-        }
-        right={
-          back ? (
-            <IconButton
-              $dark
-              onClick={back}
-            >
-              <BackArrowIcon />
-            </IconButton>
+    <>
+      <Left>
+        <MainContainer>
+          <Header
+            left={
+              <>
+                <NavMenu $dark />
+                {withHomeButton && <HomeButton $dark />}
+              </>
+            }
+            right={
+              back ? (
+                <IconButton
+                  $dark
+                  onClick={back}
+                >
+                  <BackArrowIcon />
+                </IconButton>
+              ) : (
+                backButtonTarget && (
+                  <BackButton
+                    $dark
+                    href={backButtonTarget}
+                  />
+                )
+              )
+            }
+          />
+
+          <Main>
+            <MainScroller>
+              {subtitle && <SubTitle>{subtitle}</SubTitle>}
+              <Title>{title}</Title>
+              <Separator />
+              <Text>{current}</Text>
+            </MainScroller>
+          </Main>
+          {forward ? (
+            <StyledFooter>
+              <StyledNextButton onClick={forward}>
+                <NextArrowIcon />
+              </StyledNextButton>
+            </StyledFooter>
           ) : (
-            backButtonTarget && (
-              <BackButton
-                $dark
-                href={backButtonTarget}
+            (nextButtonTarget || actions?.length) && (
+              <Footer
+                actions={actions}
+                nextButtonTarget={nextButtonTarget}
               />
             )
-          )
-        }
-      />
-
-      <Main>
-        <MainScroller>
-          {subtitle && <SubTitle>{subtitle}</SubTitle>}
-          <Title>{title}</Title>
-          <Separator />
-          <Text>{current}</Text>
-        </MainScroller>
-      </Main>
-      {forward ? (
-        <StyledFooter>
-          <StyledNextButton onClick={forward}>
-            <NextArrowIcon />
-          </StyledNextButton>
-        </StyledFooter>
-      ) : (
-        (nextButtonTarget || actions?.length) && (
-          <Footer
-            actions={actions}
-            nextButtonTarget={nextButtonTarget}
-          />
-        )
-      )}
-    </MainContainer>
+          )}
+        </MainContainer>
+      </Left>
+      <Right>
+        <LanguageSwitcher />
+        {links && <Links links={links} />}
+        {extraContent && (
+          <ExtraContent>
+            <ExtraImage
+              {...extraContent}
+              alt={extraContent.alt}
+            />
+          </ExtraContent>
+        )}
+      </Right>
+    </>
   )
 }
