@@ -157,7 +157,7 @@ const ExtraContent = styled.div({
   flexDirection: 'column',
   padding: '2rem 5rem',
   backgroundColor: 'white',
-  boxShadow: '2rem 0 0px rgba(0, 0, 0, 0.15) inset',
+  boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
 })
 
 const ExtraImage = styled(Image)({
