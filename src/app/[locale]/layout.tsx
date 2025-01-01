@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react'
 import { languages } from '@/config'
 
 import { AppContextProvider } from '@/context'
 import { getDictionary } from '@/i18n'
+import { GlobalStaticLayoutProps } from '@/globals'
 
 export async function generateStaticParams() {
   return languages.map(ln => ({ locale: ln }))
@@ -25,11 +25,3 @@ export default async function Layout({ children, params: { locale } }: GlobalSta
     </div>
   )
 }
-
-export type GlobalStaticParams = Awaited<ReturnType<typeof generateStaticParams>>[number]
-
-export type GlobalStaticPageProps = {
-  params: GlobalStaticParams
-}
-
-export type GlobalStaticLayoutProps = PropsWithChildren<GlobalStaticPageProps>

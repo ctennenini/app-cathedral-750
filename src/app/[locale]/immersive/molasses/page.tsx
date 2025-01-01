@@ -1,5 +1,5 @@
 import { TextPageLayout, TextPageLayoutProps } from '@/layouts/TextPageLayout'
-import { GlobalStaticPageProps } from '../../layout'
+import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
 import { getDictionary } from '@/i18n'
 

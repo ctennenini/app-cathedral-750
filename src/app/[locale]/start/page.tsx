@@ -1,6 +1,6 @@
 import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
 
-import { GlobalStaticPageProps } from '../layout'
+import { GlobalStaticPageProps } from '@/globals'
 import { getDictionary } from '@/i18n'
 
 import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
