@@ -12,7 +12,7 @@ export default async function MolassesDegradation({ params: { locale } }: Global
       label: immersiveCathedral.molasses.actions.sandstone,
     },
     {
-      href: '#',
+      href: 'weathering',
       label: immersiveCathedral.molasses.actions.weathering,
     },
     {

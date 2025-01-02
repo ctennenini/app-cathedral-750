@@ -14,7 +14,7 @@ import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { Action, ActionButton } from '@/actions'
-import Image, { ImageProps } from 'next/image'
+import { ExtraContent, ExtraContentProps } from './ExtraContent'
 
 const StyledFooter = styled.footer({
   flex: 0,
@@ -111,7 +111,7 @@ const SubTitle = styled.h2({
 const Separator = styled.hr({
   width: '100%',
   border: 'none',
-  borderBottom: '1px solid #595858',
+  borderBottom: '1px solid rgba(89, 88, 88, 1)',
   margin: '2rem 0',
 })
 
@@ -151,22 +151,7 @@ const MainScroller = styled.div({
   overflowY: 'auto',
 })
 
-const ExtraContent = styled.div({
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  padding: '2rem 5rem',
-  backgroundColor: 'white',
-  boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
-})
-
-const ExtraImage = styled(Image)({
-  width: '100%',
-  height: 'auto',
-  objectFit: 'contain',
-})
-
-function useTextState(text: string | string[] | string[][], extraContent?: ImageProps[]) {
+function useTextState<T extends ExtraContentProps>(text: string | string[] | string[][], extraContent?: T[]) {
   const [page, setPage] = useState(0)
 
   if (Array.isArray(text) && Array.isArray(text[0])) {
@@ -186,11 +171,11 @@ function useTextState(text: string | string[] | string[][], extraContent?: Image
 }
 
 export type TextPageContentProps = PropsWithChildren<{
-  title: string
-  subtitle?: string
-  text: string | string[] | string[][]
+  title: ComponentProps<typeof Title>['children']
+  subtitle?: ComponentProps<typeof SubTitle>['children']
+  text: Parameters<typeof useTextState>[0]
   actions?: FooterProps['actions']
-  pullOutContent?: ImageProps[]
+  pullOutContent?: ExtraContentProps[]
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
@@ -267,14 +252,7 @@ export function TextPageContent({
       <Right>
         <LanguageSwitcher />
         {links && <Links links={links} />}
-        {extraContent && (
-          <ExtraContent>
-            <ExtraImage
-              {...extraContent}
-              alt={extraContent.alt}
-            />
-          </ExtraContent>
-        )}
+        {extraContent && <ExtraContent {...extraContent} />}
       </Right>
     </>
   )

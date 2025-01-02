@@ -90,6 +90,40 @@
             ]
           ]
         }
+      },
+      "weathering": {
+        "main": [
+          "Weathering",
+          "of Molasse"
+        ],
+        "description": [
+          "The process of degradation is a <b>complex system that involves</b> different factors.",
+          "The weathering mechanisms are the physical/chemical processes involved in the degradation.",
+          "The degradation type (or patterns) refers to how damage manifest in a larger scale."
+        ],
+        "actions": {
+          "mechanisms": "Weathering Mechanisms",
+          "types": "Degradation Types"
+        },
+        "degradationTypes": {
+          "main": "Degradation Types",
+          "description": [
+            [
+              "The different weathering mechanisms do not always have an univocal correlation with the <b>degradation pattern observed</b>.",
+              "These are strongly related to the micro-climate the stone is subjected to and in consequence their position in the building."
+            ],
+            [
+              "The compresence in the same point of different degradation pattern can lead their identification difficult.",
+              "The major degradation patterns observed on the cathedral can be classified according these four classes."
+            ]
+          ],
+          "gallery": {
+            "blackCrust": "Black Crust",
+            "scaling": "Scaling",
+            "sanding": "Sanding",
+            "biodeterioration": "Biodeterioration"
+          }
+        }
       }
     }
   },

@@ -4,11 +4,11 @@ import { LinksProps, Container } from './TextPageLayout.styled'
 import { TextPageContent, TextPageContentProps } from './TextPageContent'
 
 export type TextPageLayoutProps = PropsWithChildren<{
-  title: string
-  subtitle?: string
+  title: TextPageContentProps['title']
+  subtitle?: TextPageContentProps['subtitle']
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  text: string | string[] | string[][]
+  text: TextPageContentProps['text']
   actions?: TextPageContentProps['actions']
   pullOutContent?: TextPageContentProps['pullOutContent']
   links?: LinksProps['links']

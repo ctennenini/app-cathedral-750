@@ -90,6 +90,40 @@
             ]
           ]
         }
+      },
+      "weathering": {
+        "main": [
+          "Verwitterung",
+          "der Molasse"
+        ],
+        "description": [
+          "Der Verwitterungsprozess ist ein <b>komplexes System</b>, das verschiedene Faktoren umfasst.",
+          "Die Verwitterungsmechanismen sind die physikalisch/chemischen Prozesse, die an der Zersetzung beteiligt sind.",
+          "Der Zerstörungstyp (oder Muster) bezieht sich darauf, wie Schäden in größerem Maßstab sichtbar werden."
+        ],
+        "actions": {
+          "mechanisms": "Verwitterungsmechanismen",
+          "types": "Zerstörungstypen"
+        },
+        "degradationTypes": {
+          "main": "Zerstörungstypen",
+          "description": [
+            [
+              "Die verschiedenen Verwitterungsmechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Zerstörungsmuster</b>.",
+              "Diese sind stark mit dem Mikroklima verbunden, dem der Stein ausgesetzt ist, und folglich mit seiner Position im Gebäude."
+            ],
+            [
+              "Die Kompräsenz verschiedener Zerstörungsmuster am selben Punkt kann ihre Identifizierung erschweren.",
+              "Die wichtigsten Zerstörungsmuster, die an der Kathedrale beobachtet wurden, können nach diesen vier Klassen eingeteilt werden."
+            ]
+          ],
+          "gallery": {
+            "blackCrust": "Schwarze Kruste",
+            "scaling": "Abblätterung",
+            "sanding": "Schleifen",
+            "biodeterioration": "Biodeterioration"
+          }
+        }
       }
     }
   },

@@ -4,8 +4,6 @@ import { Link, useIsActive, useIsOnPath } from '@/components/Links'
 import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '../Icons'
 import { MouseEventHandler, useState } from 'react'
 
-// import { useRouter } from 'next/navigation'
-
 const List = styled.ul({
   listStyle: 'none',
   fontSize: '25px',
