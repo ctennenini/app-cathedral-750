@@ -68,7 +68,7 @@ export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
     backgroundColor: $primary ? '#CE3D3A' : '#fff',
     textAlign: 'center',
     borderRadius: '12px',
-    opacity: disabled ? 0.5 : 1,
+    textDecoration: disabled ? 'line-through' : 'inherit',
     cursor: disabled ? 'not-allowed' : 'pointer',
   },
 }))

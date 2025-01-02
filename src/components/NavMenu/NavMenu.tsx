@@ -7,8 +7,8 @@ import { useAppContext } from '@/context'
 import { renderNavList, NavMenuItem } from './NavList'
 
 function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
-  return useMemo<NavMenuItem[]>(
-    () => [
+  return useMemo<NavMenuItem[]>(() => {
+    const items: NavMenuItem[] = [
       {
         name: dictionary.navigation.molasses.main,
         path: '#',
@@ -74,9 +74,10 @@ function useMenuItems(dictionary: Dictionary): NavMenuItem[] {
         path: '#',
         subItems: [],
       },
-    ],
-    [dictionary],
-  )
+    ]
+
+    return items
+  }, [dictionary])
 }
 
 export type NavMenuProps = {

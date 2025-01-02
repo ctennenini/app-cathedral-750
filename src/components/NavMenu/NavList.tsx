@@ -10,9 +10,11 @@ const List = styled.ul({
   lineHeight: '34px',
 })
 
-const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive }) => ({
+const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive, disabled }) => ({
   '&&': {
     color: $isActive ? '#CE3D3A' : '#191919',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    textDecoration: disabled ? 'line-through' : 'none',
   },
 }))
 
@@ -49,7 +51,7 @@ const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({
   transitionDuration: $isOpen ? '1s' : '0.3s',
 }))
 
-function ListItem({ name, path, subItems }: NavMenuItem) {
+function ListItem({ name, path, subItems, disabled }: NavMenuItem) {
   const hasSubitems = !!subItems?.length
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -73,6 +75,7 @@ function ListItem({ name, path, subItems }: NavMenuItem) {
         <NavLink
           href={path}
           label={name}
+          disabled={disabled}
           $isActive={isActive}
         />
       </ListItemHeader>
@@ -88,12 +91,10 @@ function ListItem({ name, path, subItems }: NavMenuItem) {
 function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
   return (
     <List>
-      {menuItems.map(({ name, path, subItems }) => (
+      {menuItems.map(item => (
         <ListItem
-          key={name}
-          name={name}
-          path={path}
-          subItems={subItems}
+          key={item.name}
+          {...item}
         />
       ))}
     </List>
@@ -103,6 +104,7 @@ function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
 export type NavMenuItem = {
   name: string
   path: string
+  disabled?: boolean
   subItems?: NavMenuItem[]
 }
 

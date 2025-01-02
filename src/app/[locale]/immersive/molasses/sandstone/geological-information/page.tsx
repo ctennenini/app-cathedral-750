@@ -30,7 +30,6 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
         },
       ]}
       backButtonTarget="immersive/molasses/sandstone/molasse-sandstone"
-      nextButtonTarget="#"
     />
   )
 }

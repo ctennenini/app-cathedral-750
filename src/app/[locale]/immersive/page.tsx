@@ -15,10 +15,12 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
     },
     {
       href: `#`,
+      disabled: true,
       label: immersiveCathedral.actions.conservation,
     },
     {
       href: `#`,
+      disabled: true,
       label: immersiveCathedral.actions.vaults,
     },
   ]

@@ -14,14 +14,17 @@ export default async function MolasseSandstone({ params: { locale } }: GlobalSta
     {
       href: '#',
       label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.properties,
+      disabled: true,
     },
     {
       href: '#',
       label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.typesOfStones,
+      disabled: true,
     },
     {
       href: '#',
       label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.interactive,
+      disabled: true,
       arrow: true,
       $primary: true,
     },

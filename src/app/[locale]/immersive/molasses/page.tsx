@@ -20,6 +20,7 @@ export default async function MolassesDegradation({ params: { locale } }: Global
       label: immersiveCathedral.molasses.actions.interactive,
       arrow: true,
       $primary: true,
+      disabled: true,
     },
   ]
 
