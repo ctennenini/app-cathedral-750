@@ -2,6 +2,7 @@
 import { ComponentProps, useState } from 'react'
 import { Action } from './actions'
 import { OldestStoneGame } from './OldestStoneGame'
+import { DegradationTypesGame } from './DegradationTypesGame'
 
 export type ActionButtonProps = ComponentProps<'button'> & {
   action: Action
@@ -9,12 +10,23 @@ export type ActionButtonProps = ComponentProps<'button'> & {
 
 export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
   const [showOldestStoneGame, setShowOldestStoneGame] = useState(false)
+  const [showDegradationTypesGame, setShowDegradationTypesGame] = useState(false)
 
   console.log('ActionButton:', { action, otherProps: buttonProps })
 
   const onClick = () => {
-    if (action.type === 'oldestStoneGame') {
-      setShowOldestStoneGame(true)
+    switch (action.type) {
+      case 'oldestStoneGame':
+        setShowOldestStoneGame(true)
+        break
+
+      case 'degradationTypesGame':
+        setShowDegradationTypesGame(true)
+        break
+
+      case 'link':
+      default:
+        console.error('action type not implemented:', action)
     }
   }
 
@@ -29,6 +41,12 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
       {action.type === 'oldestStoneGame' && showOldestStoneGame && (
         <OldestStoneGame
           onClose={() => setShowOldestStoneGame(false)}
+          {...action.params}
+        />
+      )}
+      {action.type === 'degradationTypesGame' && showDegradationTypesGame && (
+        <DegradationTypesGame
+          onClose={() => setShowDegradationTypesGame(false)}
           {...action.params}
         />
       )}

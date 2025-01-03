@@ -19,7 +19,9 @@ export type LinkProps = ComponentProps<typeof NextLink> & {
   disabled?: boolean
 }
 
-export function useHref(href: LinkProps['href']) {
+export type HREF = LinkProps['href']
+
+export function useHref(href: HREF) {
   const locale = useLocale()
   if (href.toString().startsWith('http')) return href
   return `/${locale}/${href}`

@@ -117,6 +117,7 @@
               "The major degradation patterns observed on the cathedral can be classified according these four classes."
             ]
           ],
+          "testYourKnowledge": "Test your knowledge!",
           "gallery": {
             "blackCrust": "Black Crust",
             "scaling": "Scaling",
@@ -166,6 +167,26 @@
         "body": [
           "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
           "Let's learn more about it..."
+        ]
+      }
+    },
+    "degradationTypes": {
+      "start": {
+        "title": "Test your knowledge!",
+        "body": [
+          "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
+          "In the red circle we can find a good example, click on it to discover more!"
+        ]
+      },
+      "main": {
+        "title": "How many types of degradation can you find in the area? ",
+        "hint": "Tap on the correct answer"
+      },
+      "finish": {
+        "title": "Correct!",
+        "body": [
+          "The Cathedral of Lausanne is affected by different types of degradation, the most common are the black crust and the scaling.",
+          "Let's learn more about them..."
         ]
       }
     }

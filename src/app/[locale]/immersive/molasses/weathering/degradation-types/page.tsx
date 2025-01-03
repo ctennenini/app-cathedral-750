@@ -17,6 +17,16 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.degradationTypes.main}
       text={immersiveCathedral.molasses.weathering.degradationTypes.description}
+      actions={[
+        {
+          label: immersiveCathedral.molasses.weathering.degradationTypes.testYourKnowledge,
+          type: 'degradationTypesGame',
+          params: {
+            bgImg,
+            successTarget: '#',
+          },
+        },
+      ]}
       pullOutContent={[
         {
           type: 'gallery',

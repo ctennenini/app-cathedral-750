@@ -117,6 +117,7 @@
               "Die wichtigsten Zerstörungsmuster, die an der Kathedrale beobachtet wurden, können nach diesen vier Klassen eingeteilt werden."
             ]
           ],
+          "testYourKnowledge": "Testen Sie Ihr Wissen!",
           "gallery": {
             "blackCrust": "Schwarze Kruste",
             "scaling": "Abblätterung",
@@ -165,6 +166,26 @@
         "title": "Richtig!",
         "body": [
           "Der älteste Steintyp der Kathedrale ist Molasse Grise de Lausanne, der im 12. Jahrhundert CE platziert wurde.",
+          "Lassen Sie uns mehr darüber erfahren..."
+        ]
+      }
+    },
+    "degradationTypes": {
+      "start": {
+        "title": "Testen Sie Ihr Wissen!",
+        "body": [
+          "Es gibt Bereiche der Kathedrale, die stärker von einem bestimmten Typ der Zerstörung betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
+          "Im roten Kreis finden wir ein gutes Beispiel, klicken Sie darauf, um mehr zu erfahren!"
+        ]
+      },
+      "main": {
+        "title": "Wie viele Arten von Zerstörung können Sie hier finden?",
+        "hint": "Tippen Sie auf die richtige Antwort"
+      },
+      "finish": {
+        "title": "Richtig!",
+        "body": [
+          "Die Kathedrale von Lausanne ist von verschiedenen Arten der Zerstörung betroffen, die häufigsten sind die schwarze Kruste und die Abblätterung.",
           "Lassen Sie uns mehr darüber erfahren..."
         ]
       }

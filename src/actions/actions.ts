@@ -1,4 +1,5 @@
 import { OldestStoneGameParams } from './OldestStoneGame'
+import { DegradationTypesGameParams } from './DegradationTypesGame'
 
 export type Action = {
   label: string
@@ -10,5 +11,9 @@ export type Action = {
   | {
       type: 'oldestStoneGame'
       params: OldestStoneGameParams
+    }
+  | {
+      type: 'degradationTypesGame'
+      params: DegradationTypesGameParams
     }
 )
