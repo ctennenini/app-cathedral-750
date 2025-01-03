@@ -42,14 +42,14 @@ const CloseButton = styled((props: IconButtonProps) => (
   position: 'absolute',
   top: '3rem',
   left: '3rem',
-  color: '#CE3D3A',
-  backgroundColor: 'white',
+  color: 'var(--highlight)',
+  backgroundColor: 'var(--white)',
 })
 
 const Left = styled.div({
   padding: '7rem 6rem',
-  color: '#fff',
-  backgroundColor: '#CE3D3A',
+  color: 'var(--white)',
+  backgroundColor: 'var(--highlight)',
   flexBasis: '50%',
   display: 'flex',
   flexDirection: 'column',
@@ -75,7 +75,7 @@ const Body = styled(P)({
 const Separator = styled.hr({
   width: '100%',
   height: 1,
-  backgroundColor: '#fff',
+  backgroundColor: 'var(--white)',
 })
 
 const NextButton = styled((props: IconButtonProps) => (
@@ -83,8 +83,8 @@ const NextButton = styled((props: IconButtonProps) => (
     <NextArrowIcon />
   </IconButton>
 ))({
-  backgroundColor: 'white',
-  color: '#CE3D3A',
+  backgroundColor: 'var(--white)',
+  color: 'var(--highlight)',
   width: '87px',
   height: '87px',
   flexShrink: 0,
@@ -110,8 +110,8 @@ const Buttons = styled.div({
 
 const Button = styled.button({
   backgroundColor: 'transparent',
-  border: '1px solid #fff',
-  color: '#fff',
+  border: '1px solid var(--white)',
+  color: 'var(--white)',
   fontSize: '1.6rem',
   padding: '0.5rem 1rem',
   cursor: 'pointer',
@@ -132,7 +132,7 @@ function Start({ setState }: { setState: (state: State) => void }) {
       <Right>
         <Image
           src={schematicViewPicture}
-          alt="Oldest Stone Game"
+          alt="Degradation Types Game"
           onClick={() => setState('MAIN')}
         />
       </Right>

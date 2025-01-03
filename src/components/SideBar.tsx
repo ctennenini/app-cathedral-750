@@ -25,7 +25,7 @@ const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
   left: 0,
   height: '100%',
 
-  backgroundColor: 'white',
+  backgroundColor: 'var(--white)',
   transform: `translateX(${props.$isExpanded ? '0' : '-100%'})`,
   transition: 'transform 0.3s',
 
@@ -54,8 +54,8 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   fontSize: '16px',
   border: 'none',
   borderRadius: '100%',
-  backgroundColor: '#CE3D3A',
-  color: 'white',
+  backgroundColor: 'var(--highlight)',
+  color: 'var(--white)',
   cursor: 'pointer',
 })
 
@@ -78,7 +78,7 @@ export function SideBar({ renderContent, darkButton }: SideBarProps) {
         onClick={() => setExpanded(true)}
         $dark={darkButton}
       >
-        <HamburgerIcon color={darkButton ? '#000' : '#fff'} />
+        <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
       </IconButton>
       <Overlay $active={isExpanded} />
       <Drawer

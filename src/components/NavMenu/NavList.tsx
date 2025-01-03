@@ -12,7 +12,7 @@ const List = styled.ul({
 
 const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive, disabled }) => ({
   '&&': {
-    color: $isActive ? '#CE3D3A' : '#191919',
+    color: $isActive ? 'var(--highlight)' : '#191919',
     cursor: disabled ? 'not-allowed' : 'pointer',
     textDecoration: disabled ? 'line-through' : 'none',
   },

@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     id: 'ethz-cathedral-presentation',
     start_url: process.env.PREFIX ?? '/',
     display: 'standalone',
-    background_color: '#fff',
-    theme_color: '#fff',
+    background_color: 'var(--white)',
+    theme_color: 'var(--white)',
     orientation: 'landscape',
     icons: [
       {

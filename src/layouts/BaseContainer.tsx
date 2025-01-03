@@ -12,8 +12,8 @@ const Container = styled.div<{ $dark?: boolean }>`
   width: 100vw;
   height: 100dvh;
   height: 100vh;
-  color: ${({ $dark }) => ($dark ? '#000' : '#fff')};
-  background-color: ${({ $dark }) => ($dark ? '#fff' : '#000')};
+  color: ${({ $dark }) => ($dark ? 'var(--black)' : 'var(--white)')};
+  background-color: ${({ $dark }) => ($dark ? 'var(--white)' : 'var(--black)')};
 `
 
 const Image = styled(NextImage)({

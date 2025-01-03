@@ -26,8 +26,8 @@ const StyledFooter = styled.footer({
 })
 
 const StyledNextButton = styled(IconButton)({
-  color: 'white',
-  backgroundColor: '#CE3D3A',
+  color: 'var(--white)',
+  backgroundColor: 'var(--highlight)',
   width: '87px',
   height: '87px',
   flexShrink: 0,
@@ -35,9 +35,9 @@ const StyledNextButton = styled(IconButton)({
 
 const StyledActionButton = styled(ActionButton)({
   '&&': {
-    backgroundColor: 'white',
-    color: '#CE3D3A',
-    border: '1px solid #CE3D3A',
+    backgroundColor: 'var(--white)',
+    color: 'var(--highlight)',
+    border: '1px solid var(--highlight)',
     borderRadius: '12px',
     padding: '0 40px',
     height: '87px',
@@ -97,7 +97,7 @@ const Title = styled(H1)({
   lineHeight: '70px',
 
   textTransform: 'uppercase',
-  color: '#CE3D3A',
+  color: 'var(--highlight)',
 })
 
 const SubTitle = styled.h2({
@@ -105,7 +105,7 @@ const SubTitle = styled.h2({
   fontSize: 25,
   fontWeight: 400,
   lineHeight: '30px',
-  color: '#CE3D3A',
+  color: 'var(--highlight)',
 })
 
 const Separator = styled.hr({
@@ -134,8 +134,8 @@ const MainContainer = styled.div({
   flexDirection: 'column',
   gap: '3rem',
 
-  backgroundColor: '#fff',
-  color: '#000',
+  backgroundColor: 'var(--white)',
+  color: 'var(--black)',
 })
 
 const Main = styled.main({

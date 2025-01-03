@@ -68,7 +68,7 @@ export const Subtitle = styled(H2)({
 
 export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
   margin: '40px 100px 30px 100px',
-  borderColor: $dark ? '#000' : '#fff',
+  borderColor: $dark ? 'var(--black)' : 'var(--white)',
 }))
 
 export const Footer = styled.footer({})

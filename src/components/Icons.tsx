@@ -165,7 +165,7 @@ export const NavMenuTriangleClosed = styled(({ $isActive, ...props }: TrianglePr
   >
     <path
       d="M1.10999 11.1096L6.10999 6.10962L1.10999 1.88965"
-      stroke={$isActive ? '#CE3D3A' : '#191919'}
+      stroke={$isActive ? 'var(--highlight)' : '#191919'}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -184,7 +184,7 @@ export const NavMenuTriangleOpen = styled(({ $isActive, ...props }: TriangleProp
   >
     <path
       d="M1 1L6 6L10.22 1"
-      stroke={$isActive ? '#CE3D3A' : '#191919'}
+      stroke={$isActive ? 'var(--highlight)' : '#191919'}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"

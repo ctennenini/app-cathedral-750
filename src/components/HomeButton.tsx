@@ -15,7 +15,7 @@ export function HomeButton(props: IconButtonProps) {
       onClick={() => push(href.toString(), { scroll: false })}
       {...props}
     >
-      <HomeIcon color={props.$dark ? '#000' : '#fff'} />
+      <HomeIcon color={props.$dark ? 'var(--black)' : 'var(--white)'} />
     </IconButton>
   )
 }

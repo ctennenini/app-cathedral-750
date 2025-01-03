@@ -41,14 +41,14 @@ const CloseButton = styled((props: IconButtonProps) => (
   position: 'absolute',
   top: '3rem',
   left: '3rem',
-  color: '#CE3D3A',
-  backgroundColor: 'white',
+  color: 'var(--highlight)',
+  backgroundColor: 'var(--white)',
 })
 
 const Left = styled.div({
   padding: '7rem 6rem',
-  color: '#fff',
-  backgroundColor: '#CE3D3A',
+  color: 'var(--white)',
+  backgroundColor: 'var(--highlight)',
   flexBasis: '50%',
   display: 'flex',
   flexDirection: 'column',
@@ -74,7 +74,7 @@ const Body = styled(P)({
 const Separator = styled.hr({
   width: '100%',
   height: 1,
-  backgroundColor: '#fff',
+  backgroundColor: 'var(--white)',
 })
 
 const NextButton = styled((props: IconButtonProps) => (
@@ -82,8 +82,8 @@ const NextButton = styled((props: IconButtonProps) => (
     <NextArrowIcon />
   </IconButton>
 ))({
-  backgroundColor: 'white',
-  color: '#CE3D3A',
+  backgroundColor: 'var(--white)',
+  color: 'var(--highlight)',
   width: '87px',
   height: '87px',
   flexShrink: 0,
@@ -100,7 +100,7 @@ const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
   position: 'absolute',
   backgroundColor: 'transparent',
   border: '4px dotted',
-  borderColor: $green ? '#47CC40' : '#CE3D3A',
+  borderColor: $green ? '#47CC40' : 'var(--highlight)',
   cursor: 'pointer',
 }))
 

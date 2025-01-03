@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import Image, { ImageProps } from 'next/image'
 
 const Container = styled.div({
+  // '--test': '255, 0, 175',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   padding: '2rem 5rem',
-  backgroundColor: 'white',
+  backgroundColor: 'var(--white)',
   boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
 })
 
@@ -28,7 +29,7 @@ const GalleryItem = styled.li({
     textAlign: 'center',
     fontSize: '1.5rem',
     lineHeight: '1.7rem',
-    color: '#CE3D3A',
+    color: 'var(--highlight)',
     marginTop: '1rem',
   },
 })
