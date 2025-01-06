@@ -62,7 +62,7 @@ export function ExtraContent(props: ExtraContentProps) {
                     alt={alt ?? label ?? other.title ?? 'image'}
                     {...other}
                   />
-                  <figcaption>{label}</figcaption>
+                  {label && <figcaption dangerouslySetInnerHTML={{ __html: label }} />}
                 </figure>
               </GalleryItem>
             ))}

@@ -102,11 +102,11 @@
           "Der Zerstörungstyp (oder Muster) bezieht sich darauf, wie Schäden in größerem Maßstab sichtbar werden."
         ],
         "actions": {
-          "mechanisms": "Verwitterungsmechanismen",
-          "types": "Zerstörungstypen"
+          "mechanisms": "Verwitterungs&shy;mechanismen",
+          "types": "Zerstörungs&shy;typen"
         },
         "degradationTypes": {
-          "main": "Zerstörungstypen",
+          "main": "Zerstörungs&shy;typen",
           "description": [
             [
               "Die verschiedenen Verwitterungsmechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Zerstörungsmuster</b>.",
@@ -122,7 +122,7 @@
             "blackCrust": "Schwarze Kruste",
             "scaling": "Abblätterung",
             "sanding": "Schleifen",
-            "biodeterioration": "Biodeterioration"
+            "biodeterioration": "Bio&shy;deterioration"
           }
         }
       }

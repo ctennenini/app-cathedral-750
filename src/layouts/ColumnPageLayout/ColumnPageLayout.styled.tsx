@@ -48,7 +48,8 @@ export const Left = styled.div({
 
 export const Right = styled.div({
   position: 'relative',
-  left: '50%',
+  left: 'calc(50% - 1px)', // ensures no gap between left and right for odd widths
+  zIndex: -1, // ensures right is behind left
   height: '100%',
   width: '50%',
 })

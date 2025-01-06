@@ -1,5 +1,3 @@
-'use client'
-
 import { Fragment, HTMLProps } from 'react'
 
 /**
@@ -36,11 +34,9 @@ export const P = ({ children, ...otherProps }: PProps) => {
  *
  **/
 
-type HProps = HTMLProps<HTMLHeadingElement> & {
-  children: string | string[]
-}
+type NormaliseTitleTextParams = string | string[]
 
-function title(text: string | string[]) {
+function normaliseTitleText(text: NormaliseTitleTextParams) {
   if (Array.isArray(text)) {
     return (
       <>
@@ -57,8 +53,37 @@ function title(text: string | string[]) {
   }
 }
 
-export const H1 = ({ children, ...otherProps }: HProps) => <h1 {...otherProps}>{title(children)}</h1>
-export const H2 = ({ children, ...otherProps }: HProps) => <h2 {...otherProps}>{title(children)}</h2>
-export const H3 = ({ children, ...otherProps }: HProps) => <h3 {...otherProps}>{title(children)}</h3>
-export const H4 = ({ children, ...otherProps }: HProps) => <h4 {...otherProps}>{title(children)}</h4>
-export const H5 = ({ children, ...otherProps }: HProps) => <h5 {...otherProps}>{title(children)}</h5>
+export type HProps = HTMLProps<HTMLHeadingElement> & {
+  children: NormaliseTitleTextParams
+}
+
+export const H1 = ({ children, ...otherProps }: HProps) => (
+  <h1
+    dangerouslySetInnerHTML={{ __html: normaliseTitleText(children) }}
+    {...otherProps}
+  />
+)
+export const H2 = ({ children, ...otherProps }: HProps) => (
+  <h2
+    dangerouslySetInnerHTML={{ __html: normaliseTitleText(children) }}
+    {...otherProps}
+  />
+)
+export const H3 = ({ children, ...otherProps }: HProps) => (
+  <h3
+    dangerouslySetInnerHTML={{ __html: normaliseTitleText(children) }}
+    {...otherProps}
+  />
+)
+export const H4 = ({ children, ...otherProps }: HProps) => (
+  <h4
+    dangerouslySetInnerHTML={{ __html: normaliseTitleText(children) }}
+    {...otherProps}
+  />
+)
+export const H5 = ({ children, ...otherProps }: HProps) => (
+  <h5
+    dangerouslySetInnerHTML={{ __html: normaliseTitleText(children) }}
+    {...otherProps}
+  />
+)
