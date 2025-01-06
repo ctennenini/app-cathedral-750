@@ -17,9 +17,39 @@ export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
 
 export const Container = styled(BaseContainer)({
   '&&': {
-    display: 'flex',
-    flexDirection: 'row',
+    position: 'relative',
   },
+})
+
+export const Left = styled.div({
+  position: 'absolute',
+  top: '0',
+  right: '50%',
+  width: 'calc(725px + 2rem)',
+  maxWidth: 'calc(50% - 2rem)',
+  height: '100%',
+
+  backgroundColor: 'var(--white)',
+  color: 'var(--black)',
+
+  padding: '2.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '3rem',
+})
+
+export const Right = styled.div({
+  position: 'relative',
+  left: '50%',
+  height: '100%',
+  width: 'calc(725px + 2rem)',
+  maxWidth: '50%',
+
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '10rem 2rem 10rem 4rem',
 })
 
 const HeaderSection = styled.div({
@@ -48,21 +78,6 @@ export function Header({ left, right }: HeaderProps) {
     </StyledHeader>
   )
 }
-
-export const Left = styled.div({
-  paddingLeft: '5rem',
-  flexBasis: '50%',
-})
-
-export const Right = styled.div({
-  position: 'relative',
-  flexBasis: '50%',
-
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-})
 
 const LinksContainer = styled.nav({
   '& ul': {

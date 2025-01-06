@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Image, { ImageProps } from 'next/image'
 
 const Container = styled.div({
-  // '--test': '255, 0, 175',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',

@@ -37,7 +37,15 @@ const Overlay = styled.div({
   zIndex: -1,
 })
 
-export type BaseContainerProps = ComponentProps<typeof Container> & {
+const Content = styled.div({
+  position: 'relative',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+})
+
+export type BaseContainerProps = ComponentProps<typeof Content> & {
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   dark?: boolean
@@ -53,10 +61,7 @@ export function BaseContainer({
   ...otherProps
 }: BaseContainerProps) {
   return (
-    <Container
-      $dark={dark}
-      {...otherProps}
-    >
+    <Container $dark={dark}>
       {bgImg && (
         <Image
           src={bgImg}
@@ -68,7 +73,7 @@ export function BaseContainer({
         />
       )}
       {blurBackground && <Overlay />}
-      {children}
+      <Content {...otherProps}>{children}</Content>
     </Container>
   )
 }

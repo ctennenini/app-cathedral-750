@@ -1,16 +1,16 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { LinksProps, Container } from './TextPageLayout.styled'
-import { TextPageContent, TextPageContentProps } from './TextPageContent'
+import { LinksProps, Container, LanguageSwitcher } from './ColumnPageLayout.styled'
+import { ColumnPageContent, ColumnPageContentProps } from './ColumnPageContent'
 
-export type TextPageLayoutProps = PropsWithChildren<{
-  title: TextPageContentProps['title']
-  subtitle?: TextPageContentProps['subtitle']
+export type ColumnPageLayoutProps = PropsWithChildren<{
+  title: ColumnPageContentProps['title']
+  subtitle?: ColumnPageContentProps['subtitle']
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  text: TextPageContentProps['text']
-  actions?: TextPageContentProps['actions']
-  pullOutContent?: TextPageContentProps['pullOutContent']
+  text: ColumnPageContentProps['text']
+  actions?: ColumnPageContentProps['actions']
+  pullOutContent?: ColumnPageContentProps['extraContent']
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
@@ -18,7 +18,7 @@ export type TextPageLayoutProps = PropsWithChildren<{
   blurBackground?: boolean
 }>
 
-export function TextPageLayout({
+export function ColumnPageLayout({
   title,
   subtitle,
   bgImg,
@@ -31,24 +31,25 @@ export function TextPageLayout({
   nextButtonTarget,
   links,
   blurBackground,
-}: TextPageLayoutProps) {
+}: ColumnPageLayoutProps) {
   return (
     <Container
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
       blurBackground={blurBackground}
     >
-      <TextPageContent
+      <ColumnPageContent
         title={title}
         subtitle={subtitle}
         text={text}
         actions={actions}
-        pullOutContent={pullOutContent}
+        extraContent={pullOutContent}
         withHomeButton={withHomeButton}
         backButtonTarget={backButtonTarget}
         nextButtonTarget={nextButtonTarget}
         links={links}
       />
+      <LanguageSwitcher />
     </Container>
   )
 }

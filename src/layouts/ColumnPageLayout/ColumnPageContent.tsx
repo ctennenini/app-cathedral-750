@@ -9,7 +9,7 @@ import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
 import { H1, P } from '@/components/Typography'
-import { Header, LanguageSwitcher, Left, Links, LinksProps, Right } from './TextPageLayout.styled'
+import { Header, Left, Links, LinksProps, Right } from './ColumnPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -125,19 +125,6 @@ const Text = styled(P)({
   },
 })
 
-const MainContainer = styled.div({
-  width: '100%',
-  height: '100%',
-  padding: '2.5rem',
-
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '3rem',
-
-  backgroundColor: 'var(--white)',
-  color: 'var(--black)',
-})
-
 const Main = styled.main({
   flex: 'auto',
   padding: '0 3rem',
@@ -151,8 +138,11 @@ const MainScroller = styled.div({
   overflowY: 'auto',
 })
 
-function useTextState<T extends ExtraContentProps>(text: string | string[] | string[][], extraContent?: T[]) {
+function useTextState<T extends ExtraContentProps>(text: string | string[] | string[][], extraContent?: T | T[]) {
   const [page, setPage] = useState(0)
+  if (extraContent && !Array.isArray(extraContent)) {
+    extraContent = [extraContent]
+  }
 
   if (Array.isArray(text) && Array.isArray(text[0])) {
     const hasMore = text.length > page + 1
@@ -161,98 +151,95 @@ function useTextState<T extends ExtraContentProps>(text: string | string[] | str
       current: text[page] as string[],
       forward: hasMore ? () => setPage(page + 1) : undefined,
       back: hasPrevious ? () => setPage(page - 1) : undefined,
-      extraContent: extraContent?.[Math.min(page, extraContent.length - 1)],
+      extra: extraContent?.[Math.min(page, extraContent.length - 1)],
     }
   } else if (Array.isArray(text)) {
-    return { current: text as string[], extraContent: extraContent?.[0] }
+    return { current: text as string[], extra: extraContent?.[0] }
   } else {
-    return { current: [text], extraContent: extraContent?.[0] }
+    return { current: [text], extra: extraContent?.[0] }
   }
 }
 
-export type TextPageContentProps = PropsWithChildren<{
+export type ColumnPageContentProps = PropsWithChildren<{
   title: ComponentProps<typeof Title>['children']
   subtitle?: ComponentProps<typeof SubTitle>['children']
   text: Parameters<typeof useTextState>[0]
   actions?: FooterProps['actions']
-  pullOutContent?: ExtraContentProps[]
+  extraContent?: ExtraContentProps | ExtraContentProps[]
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
 }>
 
-export function TextPageContent({
+export function ColumnPageContent({
   title,
   subtitle,
   text,
   actions,
-  pullOutContent,
+  extraContent,
   links,
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
-}: TextPageContentProps) {
-  const { current, forward, back, extraContent } = useTextState(text, pullOutContent)
+}: ColumnPageContentProps) {
+  const { current, forward, back, extra } = useTextState(text, extraContent)
 
   return (
     <>
       <Left>
-        <MainContainer>
-          <Header
-            left={
-              <>
-                <NavMenu $dark />
-                {withHomeButton && <HomeButton $dark />}
-              </>
-            }
-            right={
-              back ? (
-                <IconButton
+        <Header
+          left={
+            <>
+              <NavMenu $dark />
+              {withHomeButton && <HomeButton $dark />}
+            </>
+          }
+          right={
+            back ? (
+              <IconButton
+                $dark
+                onClick={back}
+              >
+                <BackArrowIcon />
+              </IconButton>
+            ) : (
+              backButtonTarget && (
+                <BackButton
                   $dark
-                  onClick={back}
-                >
-                  <BackArrowIcon />
-                </IconButton>
-              ) : (
-                backButtonTarget && (
-                  <BackButton
-                    $dark
-                    href={backButtonTarget}
-                  />
-                )
+                  href={backButtonTarget}
+                />
               )
-            }
-          />
-
-          <Main>
-            <MainScroller>
-              {subtitle && <SubTitle>{subtitle}</SubTitle>}
-              <Title>{title}</Title>
-              <Separator />
-              <Text>{current}</Text>
-            </MainScroller>
-          </Main>
-          {forward ? (
-            <StyledFooter>
-              <StyledNextButton onClick={forward}>
-                <NextArrowIcon />
-              </StyledNextButton>
-            </StyledFooter>
-          ) : (
-            (nextButtonTarget || actions?.length) && (
-              <Footer
-                actions={actions}
-                nextButtonTarget={nextButtonTarget}
-              />
             )
-          )}
-        </MainContainer>
+          }
+        />
+
+        <Main>
+          <MainScroller>
+            {subtitle && <SubTitle>{subtitle}</SubTitle>}
+            <Title>{title}</Title>
+            <Separator />
+            <Text>{current}</Text>
+          </MainScroller>
+        </Main>
+        {forward ? (
+          <StyledFooter>
+            <StyledNextButton onClick={forward}>
+              <NextArrowIcon />
+            </StyledNextButton>
+          </StyledFooter>
+        ) : (
+          (nextButtonTarget || actions?.length) && (
+            <Footer
+              actions={actions}
+              nextButtonTarget={nextButtonTarget}
+            />
+          )
+        )}
       </Left>
       <Right>
-        <LanguageSwitcher />
         {links && <Links links={links} />}
-        {extraContent && <ExtraContent {...extraContent} />}
+        {extra && <ExtraContent {...extra} />}
       </Right>
     </>
   )

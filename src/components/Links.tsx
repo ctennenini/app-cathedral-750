@@ -60,7 +60,7 @@ export type BigLinkProps = LinkProps & {
 
 export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
   '&&': {
-    height: '120px',
+    minHeight: '120px',
     fontSize: '28px',
     display: 'inline-block',
     padding: '2.7rem 5rem',
