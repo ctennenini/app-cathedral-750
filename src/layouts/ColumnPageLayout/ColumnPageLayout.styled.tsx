@@ -11,7 +11,15 @@ export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
     position: 'absolute',
     top: '3rem',
-    right: '3rem',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '1920px',
+    maxWidth: 'calc(100% - 4rem)',
+
+    pointerEvents: 'none',
+    '& > *': {
+      pointerEvents: 'auto',
+    },
   },
 })
 
@@ -42,14 +50,7 @@ export const Right = styled.div({
   position: 'relative',
   left: '50%',
   height: '100%',
-  width: 'calc(725px + 2rem)',
-  maxWidth: '50%',
-
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '10rem 2rem 10rem 4rem',
+  width: '50%',
 })
 
 const HeaderSection = styled.div({
@@ -80,6 +81,14 @@ export function Header({ left, right }: HeaderProps) {
 }
 
 const LinksContainer = styled.nav({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '10rem 2rem 10rem 4rem',
+  maxWidth: 'calc(725px + 2rem)',
+
   '& ul': {
     display: 'flex',
     flexDirection: 'column',

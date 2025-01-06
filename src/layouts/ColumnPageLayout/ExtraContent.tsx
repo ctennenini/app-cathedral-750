@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import Image, { ImageProps } from 'next/image'
 
 const Container = styled.div({
+  position: 'relative',
+  top: '50%',
+  transform: 'translateY(-50%)',
   width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
   padding: '2rem 5rem',
   backgroundColor: 'var(--white)',
   boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
@@ -21,6 +22,8 @@ const Gallery = styled.ul({
   display: 'flex',
   gap: '2rem',
   listStyle: 'none',
+  alignItems: 'baseline',
+  maxWidth: '725px',
 })
 
 const GalleryItem = styled.li({
