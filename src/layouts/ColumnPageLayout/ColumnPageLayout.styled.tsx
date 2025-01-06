@@ -10,7 +10,7 @@ import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageS
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
     position: 'absolute',
-    top: '3rem',
+    top: '2.5rem',
     left: '50%',
     transform: 'translateX(-50%)',
     width: '1920px',
@@ -49,9 +49,9 @@ export const Left = styled.div({
 export const Right = styled.div({
   position: 'relative',
   left: 'calc(50% - 1px)', // ensures no gap between left and right for odd widths
-  zIndex: -1, // ensures right is behind left
+  width: 'calc(50% + 2px)',
   height: '100%',
-  width: '50%',
+  zIndex: -1, // ensures right is behind left
 })
 
 const HeaderSection = styled.div({
