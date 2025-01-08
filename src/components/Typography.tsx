@@ -38,16 +38,7 @@ type NormaliseTitleTextParams = string | string[]
 
 function normaliseTitleText(text: NormaliseTitleTextParams) {
   if (Array.isArray(text)) {
-    return (
-      <>
-        {text.map((t, i) => (
-          <Fragment key={i}>
-            {t}
-            {i < text.length - 1 && <br />}
-          </Fragment>
-        ))}
-      </>
-    )
+    return text.join('<br />')
   } else {
     return text
   }
