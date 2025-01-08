@@ -36,6 +36,7 @@ export const Left = styled.div({
   width: 'calc(725px + 2rem)',
   maxWidth: 'calc(50% - 2rem)',
   height: '100%',
+  zIndex: 1, // ensures left is in front of right
 
   backgroundColor: 'var(--white)',
   color: 'var(--black)',
@@ -51,7 +52,7 @@ export const Right = styled.div({
   left: 'calc(50% - 1px)', // ensures no gap between left and right for odd widths
   width: 'calc(50% + 2px)',
   height: '100%',
-  zIndex: -1, // ensures right is behind left
+  zIndex: 0, // ensures right is behind left
 })
 
 const HeaderSection = styled.div({
