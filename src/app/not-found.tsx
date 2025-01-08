@@ -32,7 +32,7 @@ const Title = styled(H1)({
 })
 
 const Separator = styled.hr({
-  borderColor: 'var(--white)',
+  borderColor: 'var(--separator-light)',
   margin: '3rem 6rem',
 })
 

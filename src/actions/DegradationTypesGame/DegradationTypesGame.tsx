@@ -75,7 +75,7 @@ const Body = styled(P)({
 const Separator = styled.hr({
   width: '100%',
   height: 1,
-  backgroundColor: 'var(--white)',
+  backgroundColor: 'var(--separator-light)',
 })
 
 const NextButton = styled((props: IconButtonProps) => (

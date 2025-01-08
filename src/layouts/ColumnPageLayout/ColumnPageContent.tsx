@@ -111,7 +111,7 @@ const SubTitle = styled.h2({
 const Separator = styled.hr({
   width: '100%',
   border: 'none',
-  borderBottom: '1px solid rgba(89, 88, 88, 1)',
+  borderBottom: '1px solid var(--separator-dark)',
   margin: '2rem 0',
 })
 
