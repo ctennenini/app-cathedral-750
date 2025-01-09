@@ -4,8 +4,6 @@ import Image, { ImageProps } from 'next/image'
 
 const Container = styled.div({
   position: 'relative',
-  top: '50%',
-  transform: 'translateY(-50%)',
   width: '100%',
   padding: '2rem 5rem',
   backgroundColor: 'var(--white)',
@@ -13,8 +11,10 @@ const Container = styled.div({
 })
 
 const ExtraImage = styled(Image)({
-  width: '100%',
+  width: 'auto',
   height: 'auto',
+  maxWidth: '100%',
+  maxHeight: '100%',
   objectFit: 'contain',
 })
 

@@ -4,13 +4,13 @@ import { getDictionary } from '@/i18n'
 
 import map from './map-of-switzerland.png'
 import mapWithOverlay from './map-of-switzerland-with-overlay.png'
-import { ColumnPageLayout } from '@/layouts/ColumnPageLayout'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function GeologicalInformation({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
   return (
-    <ColumnPageLayout
+    <TextPageLayout
       withHomeButton
       blurBackground
       bgImg={bgImg}

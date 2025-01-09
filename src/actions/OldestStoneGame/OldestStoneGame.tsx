@@ -2,7 +2,7 @@ import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { CloseIcon, NextArrowIcon } from '@/components/Icons'
 import { H1, P } from '@/components/Typography'
 import { useAppContext } from '@/context'
-import { BaseContainer, BaseContainerProps } from '@/layouts/BaseContainer'
+import { BaseContainer, BaseContainerProps } from '@/layouts/components/BaseLayout.components'
 import { useState } from 'react'
 import styled from 'styled-components'
 

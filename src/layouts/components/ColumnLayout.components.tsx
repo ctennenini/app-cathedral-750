@@ -1,11 +1,10 @@
 'use client'
 
-import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
-import { BigLink, BigLinkProps } from '@/components/Links'
-import { BaseContainer } from '../BaseContainer'
+import { BaseContainer } from './BaseLayout.components'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
+import { H1, P } from '@/components/Typography'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
@@ -44,15 +43,21 @@ export const Left = styled.div({
   padding: '2.5rem',
   display: 'flex',
   flexDirection: 'column',
-  gap: '3rem',
+  gap: '4rem',
 })
 
 export const Right = styled.div({
   position: 'relative',
-  left: 'calc(50% - 1px)', // ensures no gap between left and right for odd widths
+  top: '50%',
+  transform: 'translateY(-50%)',
+  maxHeight: '75%',
+
+  // ensures no gap between left and right for odd widths
+  left: 'calc(50% - 1px)',
   width: 'calc(50% + 2px)',
-  height: '100%',
-  zIndex: 0, // ensures right is behind left
+
+  // ensures right is behind left
+  zIndex: 0,
 })
 
 const HeaderSection = styled.div({
@@ -82,45 +87,62 @@ export function Header({ left, right }: HeaderProps) {
   )
 }
 
-const LinksContainer = styled.nav({
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '10rem 2rem 10rem 4rem',
-  maxWidth: 'calc(725px + 2rem)',
+const StyledTitle = styled(H1)({
+  fontFamily: 'var(--font-title)',
+  fontSize: 62,
+  fontWeight: 700,
+  lineHeight: '70px',
 
-  '& ul': {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '2.5rem',
-    justifyContent: 'center',
-    listStyle: 'none',
-    [BigLink]: {
-      width: '100%',
-    },
-  },
+  textTransform: 'uppercase',
+  color: 'var(--highlight)',
 })
 
-export type LinksProps = PropsWithChildren<{
-  links?: BigLinkProps[]
-}>
+const StyledSubTitle = styled.h2({
+  fontFamily: 'var(--font-text)',
+  fontSize: 25,
+  fontWeight: 400,
+  lineHeight: '30px',
+  color: 'var(--highlight)',
+})
 
-export function Links({ links }: LinksProps) {
+export type TitleProps = {
+  title: string
+  subtitle?: string
+}
+export function Title({ title, subtitle }: TitleProps) {
   return (
-    <>
-      {links && (
-        <LinksContainer>
-          <ul>
-            {links.map((props, i) => (
-              <li key={i}>
-                <BigLink {...props} />
-              </li>
-            ))}
-          </ul>
-        </LinksContainer>
-      )}
-    </>
+    <div>
+      {subtitle && <StyledSubTitle>{subtitle}</StyledSubTitle>}
+      <StyledTitle>{title}</StyledTitle>
+    </div>
   )
 }
+
+export const Separator = styled.hr({
+  width: '100%',
+  border: 'none',
+  borderBottom: '1px solid var(--separator-dark)',
+})
+
+export const Text = styled(P)({
+  fontSize: 32,
+  lineHeight: '37px',
+})
+
+export const Main = styled.main({
+  flex: 'auto',
+  padding: '0 3rem',
+  overflowY: 'auto',
+
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '2rem',
+})
+
+export const Footer = styled.footer({
+  display: 'flex',
+  padding: '0 3rem',
+  flexDirection: 'row',
+  justifyContent: 'end',
+  gap: '2rem',
+})

@@ -1,70 +1,26 @@
 import { IconButton, IconButtonProps } from '@/components/IconButton'
-import { CloseIcon, NextArrowIcon } from '@/components/Icons'
+import { NextArrowIcon } from '@/components/Icons'
 import { H1, P } from '@/components/Typography'
 import { useAppContext } from '@/context'
-import { BaseContainer, BaseContainerProps } from '@/layouts/BaseContainer'
 import { useState } from 'react'
 import styled from 'styled-components'
-
-import Image from 'next/image'
 
 import schematicViewPicture from './schematic-view.png'
 import windowPicture from './window-with-deterioration.png'
 import { useRouter } from 'next/navigation'
 import { useHref, HREF } from '@/utils'
 
-const Container = styled(BaseContainer)({
-  '&&': {
-    zIndex: 100,
-    padding: '0 2rem',
-  },
-})
-
-const Content = styled.article({
-  position: 'relative',
-
-  width: '100%',
-  maxWidth: '90rem',
-  height: '100%',
-  margin: '0 auto',
-
-  fontSize: '2rem',
-
-  display: 'flex',
-  flexDirection: 'row',
-})
-
-const CloseButton = styled((props: IconButtonProps) => (
-  <IconButton {...props}>
-    <CloseIcon />
-  </IconButton>
-))({
-  position: 'absolute',
-  top: '3rem',
-  left: '3rem',
-  color: 'var(--highlight)',
-  backgroundColor: 'var(--white)',
-})
-
-const Left = styled.div({
-  padding: '7rem 6rem',
-  color: 'var(--white)',
-  backgroundColor: 'var(--highlight)',
-  flexBasis: '50%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  gap: '2rem',
-  '&::after': {
-    content: '""',
-    flexGrow: '0.25',
-  },
-})
+import { ExtraContent, QuizPageLayout, QuizPageLayoutProps, Main } from '@/layouts/QuizPageLayout'
 
 const Title = styled(H1)({
-  fontSize: '4rem',
-  lineHeight: '4.5rem',
+  fontSize: '5rem',
+  lineHeight: '5.5rem',
   fontWeight: 700,
+})
+
+const SmallerTitle = styled(H1)({
+  fontSize: '3.8rem',
+  lineHeight: '4.5rem',
 })
 
 const Body = styled(P)({
@@ -96,106 +52,141 @@ const Hint = styled(P)({
   fontSize: '1.6rem',
   lineHeight: '2rem',
   fontStyle: 'italic',
-})
-
-const Right = styled.div({
-  position: 'relative',
-  alignSelf: 'center',
+  marginTop: 'auto',
 })
 
 const Buttons = styled.div({
   display: 'flex',
+  justifyContent: 'space-between',
   gap: '1rem',
 })
 
 const Button = styled.button({
-  backgroundColor: 'transparent',
+  backgroundColor: 'var(--white)',
   border: '1px solid var(--white)',
-  color: 'var(--white)',
-  fontSize: '1.6rem',
-  padding: '0.5rem 1rem',
+  color: 'var(--highlight)',
+  fontSize: '3rem',
   cursor: 'pointer',
+
+  width: '10rem',
+  height: '10rem',
+  borderRadius: '10rem',
 })
 
-type State = 'START' | 'MAIN' | 'FINISH'
+type State = 'START' | 'IN_PROGRESS' | 'FINISH'
 
-function Start({ setState }: { setState: (state: State) => void }) {
-  const { dictionary } = useAppContext()
-  const { title, body } = dictionary.games.degradationTypes.start
+type StateComponentProps = Omit<QuizPageLayoutProps, 'left' | 'right'> & {
+  setState: (state: State) => void
+  successTarget: HREF
+}
+
+function Start({ setState, ...otherProps }: StateComponentProps) {
+  const { title, body } = useAppContext().dictionary.games.degradationTypes.start
+
   return (
-    <>
-      <Left>
-        <Title>{title}</Title>
-        <Separator />
-        <Body>{body}</Body>
-      </Left>
-      <Right>
-        <Image
+    <QuizPageLayout
+      left={
+        <Main>
+          <Title>{title}</Title>
+          <Separator />
+          <Body>{body}</Body>
+        </Main>
+      }
+      right={
+        <ExtraContent
+          type="image"
           src={schematicViewPicture}
           alt="Degradation Types Game"
-          onClick={() => setState('MAIN')}
+          onClick={() => setState('IN_PROGRESS')}
         />
-      </Right>
-    </>
+      }
+      {...otherProps}
+    />
   )
 }
 
-function Main({ setState }: { setState: (state: State) => void }) {
-  const { dictionary } = useAppContext()
-  const { title, hint } = dictionary.games.degradationTypes.main
+function InProgress({ setState, ...otherProps }: StateComponentProps) {
+  const { title, hint } = useAppContext().dictionary.games.degradationTypes.main
   return (
-    <>
-      <Left>
-        <Title>{title}</Title>
-        <Separator />
-        <Buttons>
-          <Button>1</Button>
-          <Button onClick={() => setState('FINISH')}>2</Button>
-          <Button>3</Button>
-        </Buttons>
-        <Hint>{hint}</Hint>
-      </Left>
-      <Right>
-        <Image
+    <QuizPageLayout
+      left={
+        <Main>
+          <SmallerTitle>{title}</SmallerTitle>
+          <Separator />
+          <Buttons>
+            <Button>1</Button>
+            <Button onClick={() => setState('FINISH')}>2</Button>
+            <Button>3</Button>
+          </Buttons>
+          <Hint>{hint}</Hint>
+        </Main>
+      }
+      right={
+        <ExtraContent
+          type="image"
           src={windowPicture}
           alt="Oldest Stone Game"
+          onClick={() => setState('IN_PROGRESS')}
         />
-      </Right>
-    </>
+      }
+      {...otherProps}
+    />
   )
 }
 
-function Finish({ successHref }: { successHref: HREF }) {
+function Finish({ successTarget, ...otherProps }: StateComponentProps) {
+  const successHref = useHref(successTarget)
+  const { title, body } = useAppContext().dictionary.games.degradationTypes.finish
   const { push } = useRouter()
-  const { dictionary } = useAppContext()
-  const { title, body } = dictionary.games.degradationTypes.finish
+
+  console.log({ successHref })
+
   return (
-    <>
-      <Left>
-        <Left>
+    <QuizPageLayout
+      left={
+        <Main>
           <Title>{title}</Title>
           <Separator />
           <Body>{body}</Body>
           <NextButton
             onClick={() => {
-              push(successHref.toString(), { scroll: false })
+              if (typeof successHref === 'string') {
+                push(successHref, { scroll: false })
+              } else {
+                otherProps.onClose?.()
+              }
             }}
           />
-        </Left>
-      </Left>
-      <Right>
-        <Image
+        </Main>
+      }
+      right={
+        <ExtraContent
+          type="image"
           src={windowPicture}
           alt="Oldest Stone Game"
         />
-      </Right>
-    </>
+      }
+      {...otherProps}
+    />
   )
 }
 
+function getComponent(state: State) {
+  switch (state) {
+    case 'START':
+      return Start
+    case 'IN_PROGRESS':
+      return InProgress
+    case 'FINISH':
+      return Finish
+    default:
+      throw new Error('Invalid state:', state)
+  }
+}
+
 export type DegradationTypesGameParams = {
-  bgImg: BaseContainerProps['bgImg']
-  successTarget: string
+  bgImg: QuizPageLayoutProps['bgImg']
+  successTarget: StateComponentProps['successTarget']
 }
 
 export type DegradationTypesGameProps = DegradationTypesGameParams & {
@@ -203,22 +194,16 @@ export type DegradationTypesGameProps = DegradationTypesGameParams & {
 }
 
 export function DegradationTypesGame({ bgImg, successTarget, onClose }: DegradationTypesGameProps) {
-  const successHref = useHref(successTarget)
   const [state, setState] = useState<State>('START')
 
+  const Component = getComponent(state)
+
   return (
-    <Container
-      blurBackground
+    <Component
       bgImg={bgImg}
-      bgImgAlt="Degradation Types Game"
-    >
-      <Content>
-        <CloseButton onClick={onClose} />
-        {state === 'START' && <Start setState={setState} />}
-        {state === 'MAIN' && <Main setState={setState} />}
-        {state === 'FINISH' && <Finish successHref={successHref} />}
-        <Start setState={setState} />
-      </Content>
-    </Container>
+      setState={setState}
+      successTarget={successTarget}
+      onClose={onClose}
+    />
   )
 }

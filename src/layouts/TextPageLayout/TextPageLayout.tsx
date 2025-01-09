@@ -1,16 +1,16 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { LinksProps, Container, LanguageSwitcher } from './ColumnPageLayout.styled'
-import { ColumnPageContent, ColumnPageContentProps } from './ColumnPageContent'
+import { LinksProps, Container, LanguageSwitcher } from './TextPageLayout.styled'
+import { TextPageContent, TextPageContentProps } from './TextPageLayoutContent'
 
-export type ColumnPageLayoutProps = PropsWithChildren<{
-  title: ColumnPageContentProps['title']
-  subtitle?: ColumnPageContentProps['subtitle']
+export type TextPageLayoutProps = PropsWithChildren<{
+  title: TextPageContentProps['title']
+  subtitle?: TextPageContentProps['subtitle']
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  text: ColumnPageContentProps['text']
-  actions?: ColumnPageContentProps['actions']
-  pullOutContent?: ColumnPageContentProps['extraContent']
+  text: TextPageContentProps['text']
+  actions?: TextPageContentProps['actions']
+  pullOutContent?: TextPageContentProps['extraContent']
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
@@ -18,7 +18,7 @@ export type ColumnPageLayoutProps = PropsWithChildren<{
   blurBackground?: boolean
 }>
 
-export function ColumnPageLayout({
+export function TextPageLayout({
   title,
   subtitle,
   bgImg,
@@ -31,14 +31,14 @@ export function ColumnPageLayout({
   nextButtonTarget,
   links,
   blurBackground,
-}: ColumnPageLayoutProps) {
+}: TextPageLayoutProps) {
   return (
     <Container
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
       blurBackground={blurBackground}
     >
-      <ColumnPageContent
+      <TextPageContent
         title={title}
         subtitle={subtitle}
         text={text}

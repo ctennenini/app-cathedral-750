@@ -48,7 +48,7 @@ export function Link({ href, label, arrow, external, ...otherProps }: LinkProps)
       scroll={false}
       {...otherProps}
     >
-      {label}
+      <span dangerouslySetInnerHTML={{ __html: label }} />
       {arrow && <InternalLinkIcon style={{ marginLeft: '1rem' }} />}
     </NextLink>
   )

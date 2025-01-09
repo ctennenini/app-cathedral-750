@@ -1,13 +1,13 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 import { getDictionary } from '@/i18n'
-import { ColumnPageLayout } from '@/layouts/ColumnPageLayout'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function StonesOfTheCathedral({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
   return (
-    <ColumnPageLayout
+    <TextPageLayout
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.main}

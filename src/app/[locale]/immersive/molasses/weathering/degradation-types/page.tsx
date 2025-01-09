@@ -1,18 +1,18 @@
 import { GlobalStaticPageProps } from '@/globals'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import { getDictionary } from '@/i18n'
 
 import blackCrustSrc from './black-crust.png'
 import scalingSrc from './scaling.png'
 import sanding from './sanding.png'
 import biodeterioation from './biodeterioation.png'
-import { ColumnPageLayout } from '@/layouts/ColumnPageLayout'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function DegradationTypes({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
   return (
-    <ColumnPageLayout
+    <TextPageLayout
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.degradationTypes.main}

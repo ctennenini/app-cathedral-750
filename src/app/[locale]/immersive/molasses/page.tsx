@@ -1,12 +1,12 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
 import { getDictionary } from '@/i18n'
-import { ColumnPageLayout, ColumnPageLayoutProps } from '@/layouts/ColumnPageLayout'
+import { TextPageLayout, TextPageLayoutProps } from '@/layouts/TextPageLayout'
 
 export default async function MolassesDegradation({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const actions: ColumnPageLayoutProps['links'] = [
+  const actions: TextPageLayoutProps['links'] = [
     {
       href: 'sandstone',
       label: immersiveCathedral.molasses.actions.sandstone,
@@ -25,7 +25,7 @@ export default async function MolassesDegradation({ params: { locale } }: Global
   ]
 
   return (
-    <ColumnPageLayout
+    <TextPageLayout
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.title}

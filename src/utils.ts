@@ -23,6 +23,12 @@ export type HREF = LinkProps['href']
 
 export function useHref(href: HREF) {
   const locale = useLocale()
-  if (href.toString().startsWith('http')) return href
+  const isHash = href === '#'
+
+  const isExternal = href.toString().startsWith('http')
+  if (isExternal || isHash) {
+    return href
+  }
+
   return `/${locale}/${href}`
 }

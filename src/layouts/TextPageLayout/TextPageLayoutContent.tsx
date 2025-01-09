@@ -8,22 +8,13 @@ import { BackArrowIcon, NextArrowIcon } from '@/components/Icons'
 import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
-import { H1, P } from '@/components/Typography'
-import { Header, Left, Links, LinksProps, Right } from './ColumnPageLayout.styled'
+import { Header, Left, Links, LinksProps, Right, Footer, Title, Main, Separator, Text } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { Action, ActionButton } from '@/actions'
-import { ExtraContent, ExtraContentProps } from './ExtraContent'
-
-const StyledFooter = styled.footer({
-  flex: 0,
-  display: 'flex',
-  padding: '0 3rem',
-  flexDirection: 'row',
-  justifyContent: 'end',
-  gap: '2rem',
-})
+import { ExtraContent, ExtraContentProps } from '../components/ColumnExtraContent'
+import { TitleProps } from '../components/ColumnLayout.components'
 
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',
@@ -65,79 +56,6 @@ function NextButton({ href, ...otherProps }: NextButtonProps) {
   )
 }
 
-type FooterProps = {
-  nextButtonTarget?: string
-  actions?: Action[]
-}
-
-function Footer({ actions, nextButtonTarget }: FooterProps) {
-  console.log('footer actions:', { actions, nextButtonTarget })
-  if (!nextButtonTarget && !actions?.length) return null
-  return (
-    <StyledFooter>
-      {actions?.map((action, index) => (
-        <StyledActionButton
-          key={index}
-          action={action}
-        />
-      ))}
-      {nextButtonTarget && (
-        <NextButton href={nextButtonTarget}>
-          <NextArrowIcon />
-        </NextButton>
-      )}
-    </StyledFooter>
-  )
-}
-
-const Title = styled(H1)({
-  fontFamily: 'var(--font-title)',
-  fontSize: 62,
-  fontWeight: 700,
-  lineHeight: '70px',
-
-  textTransform: 'uppercase',
-  color: 'var(--highlight)',
-})
-
-const SubTitle = styled.h2({
-  fontFamily: 'var(--font-text)',
-  fontSize: 25,
-  fontWeight: 400,
-  lineHeight: '30px',
-  color: 'var(--highlight)',
-})
-
-const Separator = styled.hr({
-  width: '100%',
-  border: 'none',
-  borderBottom: '1px solid var(--separator-dark)',
-  margin: '2rem 0',
-})
-
-const Text = styled(P)({
-  marginBottom: '2.5rem',
-  fontSize: 32,
-  lineHeight: '37px',
-
-  '&:last-child': {
-    marginBottom: 0,
-  },
-})
-
-const Main = styled.main({
-  flex: 'auto',
-  padding: '0 3rem',
-  overflowY: 'hidden',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-})
-
-const MainScroller = styled.div({
-  overflowY: 'auto',
-})
-
 function useTextState<T extends ExtraContentProps>(text: string | string[] | string[][], extraContent?: T | T[]) {
   const [page, setPage] = useState(0)
   if (extraContent && !Array.isArray(extraContent)) {
@@ -160,19 +78,18 @@ function useTextState<T extends ExtraContentProps>(text: string | string[] | str
   }
 }
 
-export type ColumnPageContentProps = PropsWithChildren<{
-  title: ComponentProps<typeof Title>['children']
-  subtitle?: ComponentProps<typeof SubTitle>['children']
+export type TextPageContentProps = PropsWithChildren<{
   text: Parameters<typeof useTextState>[0]
-  actions?: FooterProps['actions']
+  actions?: Action[]
   extraContent?: ExtraContentProps | ExtraContentProps[]
   links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
-}>
+}> &
+  TitleProps
 
-export function ColumnPageContent({
+export function TextPageContent({
   title,
   subtitle,
   text,
@@ -182,8 +99,30 @@ export function ColumnPageContent({
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
-}: ColumnPageContentProps) {
+}: TextPageContentProps) {
   const { current, forward, back, extra } = useTextState(text, extraContent)
+
+  const footer = forward ? (
+    <Footer>
+      <StyledNextButton onClick={forward}>
+        <NextArrowIcon />
+      </StyledNextButton>
+    </Footer>
+  ) : (
+    <Footer>
+      {actions?.map((action, index) => (
+        <StyledActionButton
+          key={index}
+          action={action}
+        />
+      ))}
+      {nextButtonTarget && (
+        <NextButton href={nextButtonTarget}>
+          <NextArrowIcon />
+        </NextButton>
+      )}
+    </Footer>
+  )
 
   return (
     <>
@@ -215,27 +154,14 @@ export function ColumnPageContent({
         />
 
         <Main>
-          <MainScroller>
-            {subtitle && <SubTitle>{subtitle}</SubTitle>}
-            <Title>{title}</Title>
-            <Separator />
-            <Text>{current}</Text>
-          </MainScroller>
+          <Title
+            title={title}
+            subtitle={subtitle}
+          />
+          <Separator />
+          <Text>{current}</Text>
         </Main>
-        {forward ? (
-          <StyledFooter>
-            <StyledNextButton onClick={forward}>
-              <NextArrowIcon />
-            </StyledNextButton>
-          </StyledFooter>
-        ) : (
-          (nextButtonTarget || actions?.length) && (
-            <Footer
-              actions={actions}
-              nextButtonTarget={nextButtonTarget}
-            />
-          )
-        )}
+        {footer}
       </Left>
       <Right>
         {links && <Links links={links} />}

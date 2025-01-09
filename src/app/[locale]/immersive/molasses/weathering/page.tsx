@@ -1,12 +1,12 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/side-of-house-top-tower-illuminated.png'
 import { getDictionary } from '@/i18n'
-import { ColumnPageLayout, ColumnPageLayoutProps } from '@/layouts/ColumnPageLayout'
+import { TextPageLayout, TextPageLayoutProps } from '@/layouts/TextPageLayout'
 
 export default async function Weathering({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
-  const links: ColumnPageLayoutProps['links'] = [
+  const links: TextPageLayoutProps['links'] = [
     {
       href: 'weathering-mechanisms',
       label: immersiveCathedral.molasses.weathering.actions.mechanisms,
@@ -18,7 +18,7 @@ export default async function Weathering({ params: { locale } }: GlobalStaticPag
   ]
 
   return (
-    <ColumnPageLayout
+    <TextPageLayout
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.main}
