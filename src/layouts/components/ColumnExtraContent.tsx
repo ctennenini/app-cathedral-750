@@ -124,7 +124,7 @@ export function ExtraContent(props: ExtraContentProps) {
           <ExtraImage {...props} />
         </Container>
       )
-    case 'image-with-legend':
+    case 'image-with-legend': {
       const { legendItems, ...otherProps } = props
       return (
         <Container>
@@ -132,6 +132,7 @@ export function ExtraContent(props: ExtraContentProps) {
           <Legend items={legendItems} />
         </Container>
       )
+    }
     default:
   }
 }

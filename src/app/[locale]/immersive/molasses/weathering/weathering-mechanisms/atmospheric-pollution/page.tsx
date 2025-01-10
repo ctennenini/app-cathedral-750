@@ -4,7 +4,7 @@ import { getDictionary } from '@/i18n'
 
 import quizImg from './acid-rain-quiz.png'
 
-import { TextPageLayout, TextPageLayoutProps } from '@/layouts/TextPageLayout'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function AtmosphericPollution({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)

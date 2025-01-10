@@ -2,7 +2,7 @@ import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
 import { getDictionary } from '@/i18n'
 
-import { TextPageLayout, TextPageLayoutProps } from '@/layouts/TextPageLayout'
+import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function FreezeThaw({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
