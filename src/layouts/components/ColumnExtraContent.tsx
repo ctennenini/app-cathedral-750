@@ -36,9 +36,58 @@ const GalleryItem = styled.li({
   },
 })
 
+type LegendItem = { color: string; label: string }
+
+const LegendList = styled.ul({
+  display: 'flex',
+  gap: '3rem',
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  marginTop: '2rem',
+})
+
+const Block = styled.div<{ $color: string }>(({ $color }) => ({
+  width: '1rem',
+  height: '1rem',
+  display: 'inline-block',
+  backgroundColor: $color,
+}))
+
+const Li = styled.li({
+  display: 'flex',
+  gap: '0.5rem',
+  alignItems: 'center',
+})
+
+function LegendItem({ color, label }: LegendItem) {
+  return (
+    <Li>
+      <Block $color={color} />
+      <span style={{ color }}>{label}</span>
+    </Li>
+  )
+}
+
+const Legend = ({ items }: { items: LegendItem[] }) => (
+  <LegendList>
+    {items.map(({ color, label }, index) => (
+      <LegendItem
+        key={index}
+        color={color}
+        label={label}
+      />
+    ))}
+  </LegendList>
+)
+
 export type ExtraContentProps =
   | ({
       type: 'image'
+    } & ImageProps)
+  | ({
+      type: 'image-with-legend'
+      legendItems: LegendItem[]
     } & ImageProps)
   | {
       type: 'gallery'
@@ -70,11 +119,19 @@ export function ExtraContent(props: ExtraContentProps) {
         </Container>
       )
     case 'image':
-    default:
       return (
         <Container>
           <ExtraImage {...props} />
         </Container>
       )
+    case 'image-with-legend':
+      const { legendItems, ...otherProps } = props
+      return (
+        <Container>
+          <ExtraImage {...otherProps} />
+          <Legend items={legendItems} />
+        </Container>
+      )
+    default:
   }
 }

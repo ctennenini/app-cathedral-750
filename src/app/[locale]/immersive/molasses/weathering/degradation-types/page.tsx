@@ -16,6 +16,7 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.degradationTypes.main}
+      subtitle={immersiveCathedral.molasses.weathering.main}
       text={immersiveCathedral.molasses.weathering.degradationTypes.description}
       actions={[
         {

@@ -26,7 +26,7 @@
       "title": "Molasse and its weathering",
       "description": [
         "The cathedral of Lausanne was built with a local molasse sandstone, that is particularly sensitive to water.",
-        "You may obtain directly here information on that stone as well as on its weathering by clicking on the corresponding buttons",
+        "You may obtain directly here information on that stone as well as on its weathering by clicking on the corres&shy;ponding buttons",
         "You may also go directly to an interactive discovery App to use as you walk around the cathedral."
       ],
       "actions": {
@@ -123,6 +123,49 @@
             "scaling": "Scaling",
             "sanding": "Sanding",
             "biodeterioration": "Biodeterioration"
+          }
+        },
+        "weatheringMechanisms": {
+          "title": [
+            "Weathering",
+            "Mechanisms"
+          ],
+          "description": [
+            "Water is involved in all types of mechanisms of stone weathering.",
+            "You can get further information on each of them by clicking on the <b>corresponding buttons</b>."
+          ],
+          "actions": {
+            "freezeThaw": "Freeze - Thaw Action",
+            "swellingClays": "Swelling Clays",
+            "saltCrystallization": "Salt Crystallization",
+            "atmosphericPollution": "Atmospheric Pollution",
+            "biologicalAttack": "Biological Attack"
+          },
+          "freezeThaw": {
+            "main": "Freeze - Thaw Action",
+            "trappedWater": {
+              "main": "Trapped Water",
+              "description": [
+                "Freezing water in porous materials can cause damage by various mechanisms.",
+                "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
+              ]
+            }
+          },
+          "atmosphericPollution": {
+            "main": "Atmospheric Pollution",
+            "acidRain": {
+              "main": "Acid Rain",
+              "description": [
+                "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+                "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
+                "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+              ],
+              "legendItems": {
+                "swellingClays": "Swelling Clays",
+                "calcite": "Calcitic Cement",
+                "silica": "Silica Grains"
+              }
+            }
           }
         }
       }

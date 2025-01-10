@@ -127,6 +127,48 @@
             "sanding": "Schleifen",
             "biodeterioration": "Bio&shy;deterioration"
           }
+        },
+        "weatheringMechanisms": {
+          "title": [
+            "Verwitterungs&shy;mechanismen"
+          ],
+          "description": [
+            "Wasser ist an allen Arten von Mechanismen der Steinverwitterung beteiligt.",
+            "Weitere Informationen zu jedem von ihnen erhalten Sie, indem Sie auf die <b>entsprechenden Schaltflächen</b> klicken."
+          ],
+          "actions": {
+            "freezeThaw": "Frost - Tau - Wirkung",
+            "swellingClays": "Quellende Tone",
+            "saltCrystallization": "Salzkristallisation",
+            "atmosphericPollution": "Atmosphärische Verschmutzung",
+            "biologicalAttack": "Biologischer Angriff"
+          },
+          "freezeThaw": {
+            "main": "Frost-Tau-Wirkung",
+            "trappedWater": {
+              "main": "Eingeschlossenes Wasser",
+              "description": [
+                "Das Einfrieren von Wasser in porösen Materialien kann Schäden durch verschiedene Mechanismen verursachen.",
+                "Der erste und dramatischste wird als „Wasserfallen“ bezeichnet. Es bezieht sich auf eine Situation, die der eines mit Wasser gefüllten Glasflasche ähnelt, die in einem Kühler platziert ist."
+              ]
+            }
+          },
+          "atmosphericPollution": {
+            "main": "Atmosphärische Verschmutzung",
+            "acidRain": {
+              "main": "Saurer Regen",
+              "description": [
+                "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
+                "Steine, die Calcit enthalten, wurden aufgrund der Auflösung dieser Mineralien in Kontakt mit sauren Lösungen angegriffen.",
+                "Im Falle des Molasse-Sandsteins könnte das Bindemittel (aus Calcit) betroffen sein, was zu einer Zunahme der Ablösung der Körner in der Mikrostruktur des Steins führen könnte."
+              ],
+              "legendItems": {
+                "swellingClays": "Quellende Tone",
+                "calcite": "Calcit-Zement",
+                "silica": "Silikat-Körner"
+              }
+            }
+          }
         }
       }
     }

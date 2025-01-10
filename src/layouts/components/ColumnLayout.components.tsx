@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { BaseContainer } from './BaseLayout.components'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
-import { H1, P } from '@/components/Typography'
+import { H1, H2, P } from '@/components/Typography'
+import { ComponentProps } from 'react'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
@@ -97,7 +98,7 @@ const StyledTitle = styled(H1)({
   color: 'var(--highlight)',
 })
 
-const StyledSubTitle = styled.h2({
+const StyledSubTitle = styled(H2)({
   fontFamily: 'var(--font-text)',
   fontSize: 25,
   fontWeight: 400,
@@ -106,8 +107,8 @@ const StyledSubTitle = styled.h2({
 })
 
 export type TitleProps = {
-  title: string
-  subtitle?: string
+  title: ComponentProps<typeof StyledTitle>['children']
+  subtitle?: ComponentProps<typeof StyledSubTitle>['children']
 }
 export function Title({ title, subtitle }: TitleProps) {
   return (
