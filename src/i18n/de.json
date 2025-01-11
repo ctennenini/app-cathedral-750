@@ -167,6 +167,13 @@
                 "calcite": "Calcit-Zement",
                 "silica": "Silikat-Körner"
               }
+            },
+            "microDust": {
+              "main": "Mikropartikel und Staub",
+              "description": [
+                "Ein weiteres Problem im Zusammenhang mit der Luftverschmutzung, dessen Wirkung in den letzten 30 Jahren abgenommen hat, ist das Vorhandensein von Mikropartikeln aus Staub von Verbrennungsprozessen, die sich auf den Steinen ablagern und/oder in der Ausblühung eingebettet sind, die durch die Kristallisation von Salzen auf der Oberfläche der Gebäude entsteht.",
+                "Dies führte zur Bildung der sogenannten „schwarzen Krusten“."
+              ]
             }
           }
         }

@@ -58,13 +58,14 @@ const Li = styled.li({
   display: 'flex',
   gap: '0.5rem',
   alignItems: 'center',
+  color: 'var(--black)',
 })
 
 function LegendItem({ color, label }: LegendItem) {
   return (
     <Li>
       <Block $color={color} />
-      <span style={{ color }}>{label}</span>
+      <span>{label}</span>
     </Li>
   )
 }

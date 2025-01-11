@@ -165,6 +165,13 @@
                 "calcite": "Calcitic Cement",
                 "silica": "Silica Grains"
               }
+            },
+            "microDust": {
+              "main": "Microparticles and Dust",
+              "description": [
+                "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+                "This led to the formation of the so called “black crusts”."
+              ]
             }
           }
         }

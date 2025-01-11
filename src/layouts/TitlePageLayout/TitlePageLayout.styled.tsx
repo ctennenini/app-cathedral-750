@@ -55,12 +55,13 @@ export const Title = styled(H1)({
   fontWeight: 700,
   lineHeight: '189px',
 
+  textAlign: 'center',
   textTransform: 'uppercase',
 })
 
 export const Subtitle = styled(H2)({
   fontFamily: 'var(--font-title)',
-  weight: 700,
+  fontWeight: 700,
   fontSize: 66,
   lineHeight: '74px',
   textAlign: 'center',

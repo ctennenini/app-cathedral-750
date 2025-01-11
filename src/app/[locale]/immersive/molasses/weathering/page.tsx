@@ -21,7 +21,7 @@ export default async function Weathering({ params: { locale } }: GlobalStaticPag
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.description}
+      title={immersiveCathedral.molasses.weathering.main}
       text={immersiveCathedral.molasses.weathering.description}
       links={links}
       backButtonTarget="immersive/molasses"

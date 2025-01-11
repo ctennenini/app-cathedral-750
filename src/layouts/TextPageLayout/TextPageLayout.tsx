@@ -32,7 +32,6 @@ export function TextPageLayout({
   links,
   blurBackground,
 }: TextPageLayoutProps) {
-  console.log('TextPageLayoutProps:', { title, subtitle })
   return (
     <Container
       bgImg={bgImg}

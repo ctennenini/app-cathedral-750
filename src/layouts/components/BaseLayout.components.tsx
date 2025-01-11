@@ -32,7 +32,6 @@ const Overlay = styled.div({
   top: 0,
   width: '100%',
   height: '100%',
-  backgroundColor: 'rgba(0, 0, 0, 0.6)',
   backdropFilter: 'blur(16px)',
   zIndex: -1,
 })
