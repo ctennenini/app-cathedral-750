@@ -125,7 +125,7 @@ function InProgress({ setState, ...otherProps }: StateComponentProps) {
         <ExtraContent
           type="image"
           src={windowPicture}
-          alt="Oldest Stone Game"
+          alt="Degradation Types Game"
           onClick={() => setState('IN_PROGRESS')}
         />
       }
@@ -163,7 +163,7 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
         <ExtraContent
           type="image"
           src={windowPicture}
-          alt="Oldest Stone Game"
+          alt="Degradation Types Game"
         />
       }
       {...otherProps}

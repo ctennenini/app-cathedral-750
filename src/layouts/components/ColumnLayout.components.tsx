@@ -52,6 +52,7 @@ export const Right = styled.div({
   top: '50%',
   transform: 'translateY(-50%)',
   maxHeight: '75%',
+  overflowY: 'hidden',
 
   // ensures no gap between left and right for odd widths
   left: 'calc(50% - 1px)',

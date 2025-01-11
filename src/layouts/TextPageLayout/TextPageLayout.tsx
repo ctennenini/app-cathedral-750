@@ -1,6 +1,6 @@
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
-import { LinksProps, Container, LanguageSwitcher } from './TextPageLayout.styled'
+import { Container, LanguageSwitcher } from './TextPageLayout.styled'
 import { TextPageContent, TextPageContentProps } from './TextPageLayoutContent'
 
 export type TextPageLayoutProps = PropsWithChildren<{
@@ -11,7 +11,6 @@ export type TextPageLayoutProps = PropsWithChildren<{
   text: TextPageContentProps['text']
   actions?: TextPageContentProps['actions']
   pullOutContent?: TextPageContentProps['extraContent']
-  links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
@@ -29,7 +28,6 @@ export function TextPageLayout({
   withHomeButton,
   backButtonTarget,
   nextButtonTarget,
-  links,
   blurBackground,
 }: TextPageLayoutProps) {
   return (
@@ -47,7 +45,6 @@ export function TextPageLayout({
         withHomeButton={withHomeButton}
         backButtonTarget={backButtonTarget}
         nextButtonTarget={nextButtonTarget}
-        links={links}
       />
       <LanguageSwitcher />
     </Container>

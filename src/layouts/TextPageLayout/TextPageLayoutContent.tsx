@@ -8,7 +8,7 @@ import { BackArrowIcon, NextArrowIcon } from '@/components/Icons'
 import { useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
-import { Header, Left, Links, LinksProps, Right, Footer, Title, Main, Separator, Text } from './TextPageLayout.styled'
+import { Header, Left, Right, Footer, Title, Main, Separator, Text } from './TextPageLayout.styled'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
@@ -82,7 +82,6 @@ export type TextPageContentProps = PropsWithChildren<{
   text: Parameters<typeof useTextState>[0]
   actions?: Action[]
   extraContent?: ExtraContentProps | ExtraContentProps[]
-  links?: LinksProps['links']
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
@@ -95,7 +94,6 @@ export function TextPageContent({
   text,
   actions,
   extraContent,
-  links,
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
@@ -163,10 +161,7 @@ export function TextPageContent({
         </Main>
         {footer}
       </Left>
-      <Right>
-        {links && <Links links={links} />}
-        {extra && <ExtraContent {...extra} />}
-      </Right>
+      <Right>{extra && <ExtraContent {...extra} />}</Right>
     </>
   )
 }
