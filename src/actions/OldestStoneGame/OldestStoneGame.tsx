@@ -8,8 +8,7 @@ import styled from 'styled-components'
 import picture from './oldest-stone-game-pic.png'
 import { useRouter } from 'next/navigation'
 import { HREF, useHref } from '@/utils'
-import { ExtraContent, Main, QuizPageLayout, QuizPageLayoutProps } from '@/layouts/QuizPageLayout'
-import { Separator } from '@/layouts/components/ColumnLayout.components'
+import { ExtraContent, Main, QuizPageLayout, QuizPageLayoutProps, Separator } from '@/layouts/QuizPageLayout'
 
 const Title = styled(H1)({
   fontSize: '4rem',
@@ -35,35 +34,6 @@ const NextButton = styled((props: IconButtonProps) => (
   flexGrow: 0,
   alignSelf: 'flex-end',
 })
-
-// const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
-//   position: 'absolute',
-//   backgroundColor: 'transparent',
-//   border: '4px dotted',
-//   borderColor: $green ? '#47CC40' : 'var(--highlight)',
-//   cursor: 'pointer',
-// }))
-
-// const Trigger1 = styled(Trigger)({
-//   top: '6.1rem',
-//   left: '6rem',
-//   width: '6rem',
-//   height: '2rem',
-// })
-
-// const Trigger2 = styled(Trigger)({
-//   top: '44.6rem',
-//   left: '5rem',
-//   width: '7rem',
-//   height: '2rem',
-// })
-
-// const Trigger3 = styled(Trigger)({
-//   top: '27.7rem',
-//   left: '27.5rem',
-//   width: '7rem',
-//   height: '2rem',
-// })
 
 export type OldestStoneGameParams = {
   bgImg: QuizPageLayoutProps['bgImg']
@@ -109,7 +79,30 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
           alt="Oldest Stone Game"
           clickAreas={[
             {
-              coords: '0,0,100,100',
+              style: {
+                top: '8.5%',
+                left: '13%',
+                width: '19%',
+                height: '4%',
+              },
+            },
+
+            {
+              style: {
+                top: '65.4%',
+                left: '12%',
+                width: '18%',
+                height: '4%',
+              },
+            },
+
+            {
+              style: {
+                top: '40.4%',
+                left: '68%',
+                width: '19%',
+                height: '4%',
+              },
               onClick: () => setIsDone(true),
             },
           ]}
@@ -117,42 +110,5 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
       }
       bgImgAlt="Oldest Stone Game"
     />
-    // <Container
-    //   blurBackground
-    //   bgImg={bgImg}
-    //   bgImgAlt="Oldest Stone Game"
-    // >
-    //   <Content>
-    //     <CloseButton onClick={onClose} />
-    //     <Left>
-    //       <Title>{text.title}</Title>
-    //       <Separator />
-    //       <Body>{text.body}</Body>
-    //       {isDone && (
-    //         <NextButton
-    //           onClick={() => {
-    //             onClose()
-    //             push(successHref.toString(), { scroll: false })
-    //           }}
-    //         />
-    //       )}
-    //     </Left>
-    //     <Right>
-    //       <Image
-    //         src={picture}
-    //         alt="Oldest Stone Game"
-    //       />
-    //       {isDone ? (
-    //         <Trigger3 $green />
-    //       ) : (
-    //         <>
-    //           <Trigger1 />
-    //           <Trigger2 />
-    //           <Trigger3 onClick={() => setIsDone(true)} />
-    //         </>
-    //       )}
-    //     </Right>
-    //   </Content>
-    // </Container>
   )
 }

@@ -1,15 +1,32 @@
-import { PropsWithChildren } from 'react'
+import { ComponentProps, PropsWithChildren } from 'react'
 import styled from 'styled-components'
-import Image, { ImageProps } from 'next/image'
+import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
 
-const Container = styled.div<{ $transparent?: boolean }>(({ $transparent }) => ({
+type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
+
+/**
+ * constants
+ */
+
+const EXTRA_CONTENT_PADDING_H = '5rem'
+const EXTRA_CONTENT_PADDING_V = '2rem'
+const EXTRA_CONTENT_HEIGHT = '75vh'
+
+const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $transparent?: boolean }>) => (
+  <div {...otherProps}>
+    <div>{children}</div>
+  </div>
+))(({ $transparent }) => ({
   position: 'relative',
-  width: '100%',
-  height: '100%',
-  overflow: 'hidden',
-  padding: '2rem 5rem',
+
+  '& > div': {
+    maxWidth: 'calc(725px + 2rem)',
+    maxHeight: EXTRA_CONTENT_HEIGHT,
+    padding: `${EXTRA_CONTENT_PADDING_V} ${EXTRA_CONTENT_PADDING_H}`,
+    overflow: 'hidden',
+  },
 
   ...($transparent
     ? null
@@ -23,7 +40,14 @@ const Container = styled.div<{ $transparent?: boolean }>(({ $transparent }) => (
  * Image
  */
 
-const ExtraImage = styled(Image)({
+const ExtraImage = styled((props: ImageProps) => (
+  <Image
+    priority
+    layout="responsive"
+    {...props}
+    alt={props.alt || ''}
+  />
+))({
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
@@ -153,16 +177,25 @@ export function Links({ links }: LinksProps) {
  * Image with Click Map
  */
 
-type ClickArea = {
-  coords: string
-  onClick: () => void
-}
+const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
+  position: 'absolute',
+  backgroundColor: 'transparent',
+  border: '4px dotted',
+  borderColor: $green ? '#47CC40' : 'var(--highlight)',
+  cursor: 'pointer',
+}))
+
+type ClickArea = ComponentProps<typeof Trigger>
 
 const ClickMap = styled.div({
   position: 'relative',
-  width: '100%',
-  height: '100%',
+  width: 'fit-content',
+  height: 'fit-content',
 })
+
+/**
+ * Extra Content
+ */
 
 export type ExtraContentProps =
   | {
@@ -182,8 +215,7 @@ export type ExtraContentProps =
     } & ImageProps)
   | {
       type: 'gallery'
-      items: (Partial<ImageProps> & {
-        src: ImageProps['src']
+      items: (ImageProps & {
         label?: string
       })[]
     }
@@ -201,12 +233,11 @@ export function ExtraContent(props: ExtraContentProps) {
       return (
         <Container>
           <Gallery>
-            {props.items.map(({ alt, label, ...other }, index) => (
+            {props.items.map(({ label, ...other }, index) => (
               <GalleryItem key={index}>
                 <figure>
                   <ExtraImage
                     key={index}
-                    alt={alt ?? label ?? other.title ?? 'image'}
                     {...other}
                   />
                   {label && <figcaption dangerouslySetInnerHTML={{ __html: label }} />}
@@ -220,11 +251,7 @@ export function ExtraContent(props: ExtraContentProps) {
     case 'image': {
       return (
         <Container>
-          <ExtraImage
-            {...props}
-            width={0}
-            height={0}
-          />
+          <ExtraImage {...props} />
         </Container>
       )
     }
@@ -242,20 +269,11 @@ export function ExtraContent(props: ExtraContentProps) {
       return (
         <Container>
           <ClickMap>
-            <ExtraImage
-              {...otherProps}
-              // width={0}
-              // height={0}
-              fill
-              placeholder="blur"
-              objectFit="contain"
-            />
-            {clickAreas.map(({ coords, onClick }, index) => (
-              <area
+            <ExtraImage {...otherProps} />
+            {clickAreas.map((props, index) => (
+              <Trigger
                 key={index}
-                shape="rect"
-                coords={coords}
-                onClick={onClick}
+                {...props}
               />
             ))}
           </ClickMap>

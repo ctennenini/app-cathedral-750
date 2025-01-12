@@ -63,10 +63,10 @@ export function BaseContainer({
     <Container $dark={dark}>
       {bgImg && (
         <Image
+          priority
           src={bgImg}
           alt={bgImgAlt}
           placeholder="blur"
-          loading="eager"
           quality={100}
           sizes="100vw"
         />
