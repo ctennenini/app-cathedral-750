@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 
-import { Left as BaseLeft } from '../components/ColumnLayout.components'
+import { Left as BaseLeft, Separator as BaseSeparator } from '../components/ColumnLayout.components'
 
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { CloseIcon } from '@/components/Icons'
@@ -29,4 +29,8 @@ export const CloseButton = styled((props: IconButtonProps) => (
 export const Left = styled(BaseLeft)({
   backgroundColor: 'var(--highlight)',
   color: 'var(--white)',
+})
+
+export const Separator = styled(BaseSeparator)({
+  borderColor: 'var(--separator-light)',
 })
