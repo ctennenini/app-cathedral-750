@@ -1,6 +1,6 @@
 'use client'
 
-import { BaseContainer } from '@/layouts/components/BaseLayout.components'
+import { BaseContainer } from '@/layouts/shared/BaseLayout.components'
 import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
 import { H1 } from '@/components/Typography'
 import styled from 'styled-components'
