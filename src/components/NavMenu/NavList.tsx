@@ -19,12 +19,7 @@ const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive, disabled }) =
   },
 }))
 
-const Li = styled.li<{
-  /** @deprecated */
-  $hasChilden: boolean
-  /** @deprecated */
-  isExpanded?: boolean
-}>({
+const Li = styled.li({
   userSelect: 'none',
   marginLeft: '2rem',
 })
@@ -52,7 +47,7 @@ const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({
   transitionDuration: $isOpen ? '1s' : '0.3s',
 }))
 
-function ListItem({ name, path, subItems, disabled }: NavMenuItem) {
+function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
   const hasSubitems = !!subItems?.length
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -66,7 +61,7 @@ function ListItem({ name, path, subItems, disabled }: NavMenuItem) {
   }
 
   return (
-    <Li $hasChilden={hasSubitems}>
+    <Li>
       <ListItemHeader>
         {hasSubitems && (
           <ToggleButton onClick={toggle}>
@@ -75,7 +70,7 @@ function ListItem({ name, path, subItems, disabled }: NavMenuItem) {
         )}
         <NavLink
           href={path}
-          label={name}
+          label={label}
           disabled={disabled}
           $isActive={isActive}
         />
@@ -94,7 +89,7 @@ function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
     <List>
       {menuItems.map(item => (
         <ListItem
-          key={item.name}
+          key={item.label}
           {...item}
         />
       ))}
