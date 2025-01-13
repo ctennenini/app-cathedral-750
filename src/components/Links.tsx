@@ -72,36 +72,3 @@ export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
     cursor: disabled ? 'not-allowed' : 'pointer',
   },
 }))
-
-export const NavItem = styled(
-  ({ href, label, external, disabled, className, as, ...otherProps }: LinkProps & { $primary?: boolean }) => {
-    href = useHref(href)
-
-    return (
-      <NextLink
-        as={as}
-        href={href}
-        target={external ? '_blank' : undefined}
-        aria-disabled={!!disabled}
-        onClick={disabled ? e => e.preventDefault() : undefined}
-        className={className}
-        {...otherProps}
-      >
-        {label}
-      </NextLink>
-    )
-  },
-)(({ disabled, $primary }) => ({
-  width: '100%',
-  height: '120px',
-  fontSize: '28px',
-  lineHeight: '32px',
-  display: 'inline-block',
-  padding: '1rem 3rem',
-  color: $primary ? 'var(--white)' : 'var(--black)',
-  backgroundColor: $primary ? 'var(--highlight)' : 'var(--white)',
-  textAlign: 'center',
-  borderRadius: '12px',
-  opacity: disabled ? 0.5 : 1,
-  cursor: disabled ? 'not-allowed' : 'pointer',
-}))

@@ -151,11 +151,11 @@ const LinksContainer = styled.nav({
   },
 })
 
-export type LinksProps = PropsWithChildren<{
+type LinksProps = PropsWithChildren<{
   links?: BigLinkProps[]
 }>
 
-export function Links({ links }: LinksProps) {
+function Links({ links }: LinksProps) {
   return (
     <>
       {links && (
@@ -281,5 +281,6 @@ export function ExtraContent(props: ExtraContentProps) {
       )
     }
     default:
+      throw new Error('Invalid type', props)
   }
 }
