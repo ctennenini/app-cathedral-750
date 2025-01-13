@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 
-import { Left as BaseLeft, Separator as BaseSeparator } from '../components/ColumnLayout.components'
+import { Left as BaseLeft, Separator as BaseSeparator } from '@/components/ColumnLayout.components'
 
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { CloseIcon } from '@/components/Icons'
@@ -14,8 +14,8 @@ export {
   Header,
   type HeaderProps,
   Main,
-} from '../components/ColumnLayout.components'
-export { ExtraContent, type ExtraContentProps } from '../components/ColumnExtraContent'
+} from '@/components/ColumnLayout.components'
+export { ExtraContent, type ExtraContentProps } from '@/components/ColumnExtraContent'
 
 export const CloseButton = styled((props: IconButtonProps) => (
   <IconButton {...props}>

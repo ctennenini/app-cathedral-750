@@ -1,8 +1,9 @@
 'use client'
 import styled from 'styled-components'
 import { Link, useIsActive, useIsOnPath } from '@/components/Links'
-import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '../Icons'
+import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
 import { MouseEventHandler, useState } from 'react'
+import { NavMenuItem } from '@/types'
 
 const List = styled.ul({
   listStyle: 'none',
@@ -99,13 +100,6 @@ function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
       ))}
     </List>
   )
-}
-
-export type NavMenuItem = {
-  name: string
-  path: string
-  disabled?: boolean
-  subItems?: NavMenuItem[]
 }
 
 export const renderNavList = (menuItems: NavMenuItem[]) => (

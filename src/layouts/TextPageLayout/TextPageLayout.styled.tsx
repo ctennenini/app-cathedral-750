@@ -11,4 +11,4 @@ export {
   Title,
   Separator,
   Text,
-} from '../components/ColumnLayout.components'
+} from '@/components/ColumnLayout.components'

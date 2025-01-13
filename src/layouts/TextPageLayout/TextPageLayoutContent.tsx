@@ -13,8 +13,8 @@ import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { Action, ActionButton } from '@/actions'
-import { ExtraContent, ExtraContentProps } from '../components/ColumnExtraContent'
-import { TitleProps } from '../components/ColumnLayout.components'
+import { ExtraContent, ExtraContentProps } from '@/components/ColumnExtraContent'
+import { TitleProps } from '@/components/ColumnLayout.components'
 
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',

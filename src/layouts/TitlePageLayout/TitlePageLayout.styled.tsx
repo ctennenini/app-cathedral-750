@@ -2,7 +2,7 @@
 
 import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
-import { BaseContainer } from '../components/BaseLayout.components'
+import { BaseContainer } from '@/components/BaseLayout.components'
 import { H1, H2 } from '@/components/Typography'
 
 export const Container = styled(BaseContainer)({
