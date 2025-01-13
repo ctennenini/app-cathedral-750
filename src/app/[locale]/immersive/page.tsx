@@ -28,7 +28,7 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
   return (
     <TitlePageLayout
       withHomeButton
-      backButtonTarget="/start"
+      backButtonTarget="/"
       bgImg={bgImg}
       title={immersiveCathedral.title}
       links={links}

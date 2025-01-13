@@ -7,7 +7,7 @@ import { useHref } from '@/utils'
 import { useRouter } from 'next/navigation'
 
 export function HomeButton(props: IconButtonProps) {
-  const href = useHref('start')
+  const href = useHref('/')
   const { push } = useRouter()
 
   return (
