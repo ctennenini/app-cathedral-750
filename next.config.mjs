@@ -20,8 +20,7 @@ const nextConfig = {
   assetPrefix: process.env.PREFIX ?? undefined,
 
   env: {
-    // LANGUAGES: 'de,en,fr,es',
-    LANGUAGES: 'de,en',
+    LANGUAGES: 'de,en,fr',
     DEFAULT_LANGUAGE: 'en',
   },
 }
