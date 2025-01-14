@@ -71,6 +71,7 @@ const GalleryItem = styled.li({
     textAlign: 'center',
     fontSize: '1.5rem',
     lineHeight: '1.7rem',
+    fontWeight: 700,
     color: 'var(--highlight)',
     marginTop: '1rem',
   },

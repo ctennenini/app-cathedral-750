@@ -32,7 +32,7 @@ export const Container = styled(BaseContainer)({
 export const Left = styled.div({
   position: 'absolute',
   top: '0',
-  right: '50%',
+  right: 'calc(50% + 2rem)',
   width: 'calc(725px + 2rem)',
   maxWidth: 'calc(50% - 2rem)',
   height: '100%',

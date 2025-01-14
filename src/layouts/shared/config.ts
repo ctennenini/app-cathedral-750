@@ -1,0 +1,4 @@
+export const TARGET_VIEW_WIDTH = 1920
+export const TARGET_VIEW_HEIGHT = 1080
+
+export const PAGE_PADDING_VERTICAL = 20
