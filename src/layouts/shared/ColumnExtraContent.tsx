@@ -43,7 +43,6 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
 const ExtraImage = styled((props: ImageProps) => (
   <Image
     priority
-    layout="responsive"
     {...props}
     alt={props.alt || ''}
   />

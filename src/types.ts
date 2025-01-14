@@ -1,7 +1,7 @@
 export type Color = 'light' | 'dark'
 
 export type NavMenuItem = {
-  label: string
+  label: string | string[]
   path: string
   disabled?: boolean
   subItems?: NavMenuItem[]

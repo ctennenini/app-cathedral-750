@@ -1,12 +1,8 @@
-import { languages } from '@/config'
-
 import { AppContextProvider } from '@/context'
 import { getDictionary } from '@/i18n'
 import { GlobalStaticLayoutProps } from '@/globals'
 
-export async function generateStaticParams() {
-  return languages.map(ln => ({ locale: ln }))
-}
+export { generateStaticParams } from '@/globals'
 
 export default async function Layout({ children, params: { locale } }: GlobalStaticLayoutProps) {
   const dictionary = await getDictionary(locale)

@@ -55,6 +55,8 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
   const isOnPath = useIsOnPath(path)
   const isActive = useIsActive(path)
 
+  label = Array.isArray(label) ? label.join(' ') : label
+
   const toggle: MouseEventHandler<HTMLDivElement> = e => {
     e.preventDefault()
     setIsExpanded(prev => !prev)
@@ -87,9 +89,9 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
 function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
   return (
     <List>
-      {menuItems.map(item => (
+      {menuItems.map((item, i) => (
         <ListItem
-          key={item.label}
+          key={i}
           {...item}
         />
       ))}

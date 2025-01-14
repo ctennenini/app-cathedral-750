@@ -139,8 +139,6 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
   const { title, body } = useAppContext().dictionary.games.degradationTypes.finish
   const { push } = useRouter()
 
-  console.log({ successHref })
-
   return (
     <QuizPageLayout
       left={
@@ -149,6 +147,7 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
           <Separator />
           <Body>{body}</Body>
           <NextButton
+            data-testid="next-button"
             onClick={() => {
               if (typeof successHref === 'string') {
                 push(successHref, { scroll: false })

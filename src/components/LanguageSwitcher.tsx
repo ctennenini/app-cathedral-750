@@ -33,7 +33,7 @@ export function LanguageSwitcher(props: LanguageSwitcherProps) {
 
   const onSelect = (lng: string) => {
     const newPath = path.replace(`/${locale}`, `/${lng}`)
-    router.push(newPath)
+    router.push(newPath, { scroll: false })
   }
 
   return (

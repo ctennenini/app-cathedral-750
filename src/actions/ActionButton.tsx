@@ -12,8 +12,6 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
   const [showOldestStoneGame, setShowOldestStoneGame] = useState(false)
   const [showDegradationTypesGame, setShowDegradationTypesGame] = useState(false)
 
-  console.log('ActionButton:', { action, otherProps: buttonProps })
-
   const onClick = () => {
     switch (action.type) {
       case 'oldestStoneGame':

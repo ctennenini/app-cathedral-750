@@ -1,5 +1,8 @@
-import { Fragment, HTMLProps } from 'react'
+import React from 'react'
+import { HTMLProps } from 'react'
 import styled from 'styled-components'
+
+export type Text = string | string[]
 
 /**
  *
@@ -7,8 +10,12 @@ import styled from 'styled-components'
  *
  */
 
+const StyledP = styled.p({
+  hyphens: 'auto',
+})
+
 export type PProps = HTMLProps<HTMLParagraphElement> & {
-  children: string | string[]
+  children: Text
 }
 
 export const P = ({ children, ...otherProps }: PProps) => {
@@ -19,7 +26,7 @@ export const P = ({ children, ...otherProps }: PProps) => {
   return (
     <>
       {children.map((t, i) => (
-        <p
+        <StyledP
           key={i}
           dangerouslySetInnerHTML={{ __html: t }}
           {...otherProps}
@@ -39,10 +46,7 @@ const TitleFragment = styled.span({
   display: 'inline-block',
 })
 
-type NormaliseTitleTextParams = string | string[]
-
-function normaliseTitleText(text: NormaliseTitleTextParams) {
-  console.log('normaliseTitleText:', { text })
+function normaliseTitle(text: Text) {
   if (Array.isArray(text)) {
     return text.map((str, i, all) => (
       <TitleFragment
@@ -58,11 +62,19 @@ function normaliseTitleText(text: NormaliseTitleTextParams) {
 }
 
 export type HProps = HTMLProps<HTMLHeadingElement> & {
-  children: NormaliseTitleTextParams
+  children: Text
 }
 
-export const H1 = ({ children, ...otherProps }: HProps) => <h1 {...otherProps}>{normaliseTitleText(children)}</h1>
-export const H2 = ({ children, ...otherProps }: HProps) => <h2 {...otherProps}>{normaliseTitleText(children)}</h2>
-export const H3 = ({ children, ...otherProps }: HProps) => <h3 {...otherProps}>{normaliseTitleText(children)}</h3>
-export const H4 = ({ children, ...otherProps }: HProps) => <h4 {...otherProps}>{normaliseTitleText(children)}</h4>
-export const H5 = ({ children, ...otherProps }: HProps) => <h5 {...otherProps}>{normaliseTitleText(children)}</h5>
+function makeHeading(tag: string) {
+  return styled(({ children, ...otherProps }: HProps) =>
+    React.createElement(tag, otherProps, normaliseTitle(children)),
+  )({
+    hyphens: 'auto',
+  })
+}
+
+export const H1 = makeHeading('h1')
+export const H2 = makeHeading('h2')
+export const H3 = makeHeading('h3')
+export const H4 = makeHeading('h4')
+export const H5 = makeHeading('h5')

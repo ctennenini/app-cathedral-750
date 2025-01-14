@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation'
 import { ComponentProps } from 'react'
 import styled from 'styled-components'
 import { InternalLinkIcon } from './Icons'
+import { Text } from '@/components/Typography'
 
 export type LinkProps = ComponentProps<typeof NextLink> & {
-  label: string
+  label: Text
   external?: boolean
   disabled?: boolean
   primary?: boolean
@@ -38,7 +39,7 @@ export function useIsActive(path: string) {
   return pathName.startsWith(`/${locale}/${path}`)
 }
 
-export function Link({ href, label, arrow, external, ...otherProps }: LinkProps) {
+export function Link({ href, label, arrow, external, disabled, ...otherProps }: LinkProps) {
   href = useHref(href)
 
   return (
@@ -46,6 +47,8 @@ export function Link({ href, label, arrow, external, ...otherProps }: LinkProps)
       target={external ? '_blank' : undefined}
       href={href}
       scroll={false}
+      aria-disabled={disabled}
+      onClick={disabled ? e => e.preventDefault() : undefined}
       {...otherProps}
     >
       <span dangerouslySetInnerHTML={{ __html: label }} />
@@ -58,7 +61,7 @@ export type BigLinkProps = LinkProps & {
   $primary?: boolean
 }
 
-export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
+export const BigLink = styled(Link)<BigLinkProps>(({ $primary }) => ({
   '&&': {
     minHeight: '120px',
     fontSize: '28px',
@@ -68,7 +71,13 @@ export const BigLink = styled(Link)<BigLinkProps>(({ disabled, $primary }) => ({
     backgroundColor: $primary ? 'var(--highlight)' : 'var(--white)',
     textAlign: 'center',
     borderRadius: '12px',
-    textDecoration: disabled ? 'line-through' : 'inherit',
-    cursor: disabled ? 'not-allowed' : 'pointer',
+
+    textDecoration: 'inherit',
+    cursor: 'pointer',
+
+    '&[aria-disabled]': {
+      textDecoration: 'line-through',
+      cursor: 'not-allowed',
+    },
   },
 }))
