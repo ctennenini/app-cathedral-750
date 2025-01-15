@@ -81,7 +81,7 @@
           }
         },
         "geologicalInformation": {
-          "main": "Geologische Informationen",
+          "main": ["Geologische", "Informationen"],
           "description": [
             [
               "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette zwischen den Westalpen von Frankreich und Italien und den Ostalpen von Italien, Österreich und Deutschland.",
