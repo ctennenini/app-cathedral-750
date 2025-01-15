@@ -21,12 +21,10 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
         {
           type: 'image',
           src: map,
-          alt: immersiveCathedral.molasses.sandstone.geologicalInformation.main,
         },
         {
           type: 'image',
           src: mapWithOverlay,
-          alt: immersiveCathedral.molasses.sandstone.geologicalInformation.main,
         },
       ]}
       backButtonTarget="immersive/molasses/sandstone/molasse-sandstone"

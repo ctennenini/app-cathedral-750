@@ -79,7 +79,7 @@ const GalleryItem = styled.li({
  * Image with Legend
  */
 
-type LegendItem = { color: string; label: string }
+type LegendItemParams = { color: string; label: string }
 
 const LegendList = styled.ul({
   display: 'flex',
@@ -104,7 +104,7 @@ const Li = styled.li({
   color: 'var(--black)',
 })
 
-function LegendItem({ color, label }: LegendItem) {
+function LegendItem({ color, label }: LegendItemParams) {
   return (
     <Li>
       <Block $color={color} />
@@ -113,7 +113,7 @@ function LegendItem({ color, label }: LegendItem) {
   )
 }
 
-const Legend = ({ items }: { items: LegendItem[] }) => (
+const Legend = ({ items }: { items: LegendItemParams[] }) => (
   <LegendList>
     {items.map(({ color, label }, index) => (
       <LegendItem
@@ -204,7 +204,7 @@ export type ExtraContentProps =
     } & ImageProps)
   | ({
       type: 'image-with-legend'
-      legendItems: LegendItem[]
+      legendItems: LegendItemParams[]
     } & ImageProps)
   | ({
       type: 'image-with-click-map'

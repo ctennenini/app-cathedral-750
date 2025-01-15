@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "knip": "knip"
+    "typecheck": "tsc --noEmit",
+    "knip": "knip",
+    "qa": "yarn typecheck && yarn lint"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
