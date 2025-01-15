@@ -18,11 +18,6 @@ const nextConfig = {
 
   basePath: process.env.PREFIX ?? undefined,
   assetPrefix: process.env.PREFIX ?? undefined,
-
-  env: {
-    LANGUAGES: 'de,en,fr',
-    DEFAULT_LANGUAGE: 'en',
-  },
 }
 
 const withMDX = createMDX({})
