@@ -14,6 +14,7 @@ import {
   PAGE_PADDING_LEFT,
   PAGE_PADDING_RIGHT,
   PAGE_PADDING_TOP,
+  TARGET_VIEW_HEIGHT,
 } from '@/config'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
@@ -52,7 +53,7 @@ export const Right = styled.div({
   position: 'relative',
   top: '50%',
   transform: 'translateY(-50%)',
-  maxHeight: '75%',
+  maxHeight: `${TARGET_VIEW_HEIGHT * 0.75}px`,
   overflowY: 'hidden',
 
   // +/- 1px ensures no gap between left and right for odd widths

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
-import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_WIDTH } from '@/config'
+import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -49,7 +49,7 @@ const ExtraImage = styled((props: ImageProps) => (
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
-  maxHeight: '100%',
+  maxHeight: `calc(${TARGET_VIEW_HEIGHT}px * 0.7)`,
   objectFit: 'contain',
 })
 

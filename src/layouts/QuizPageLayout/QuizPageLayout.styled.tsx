@@ -2,13 +2,23 @@
 
 import styled from 'styled-components'
 
-import { Left as BaseLeft, Separator as BaseSeparator } from '../shared/ColumnLayout.components'
+import {
+  Container as BaseContainer,
+  Left as BaseLeft,
+  Separator as BaseSeparator,
+} from '../shared/ColumnLayout.components'
 
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { CloseIcon } from '@/components/Icons'
 
-export { Container, Right, LanguageSwitcher, Header, type HeaderProps, Main } from '../shared/ColumnLayout.components'
+export { Right, LanguageSwitcher, Header, type HeaderProps, Main } from '../shared/ColumnLayout.components'
 export { ExtraContent, type ExtraContentProps } from '../shared/ColumnExtraContent'
+
+export const Container = styled(BaseContainer)({
+  '&&': {
+    position: 'fixed',
+  },
+})
 
 export const CloseButton = styled((props: IconButtonProps) => (
   <IconButton {...props}>
