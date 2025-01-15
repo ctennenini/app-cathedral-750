@@ -1,6 +1,4 @@
 :root {
-  --foreground: #171717;
-
   --white: #fff;
   --black: #000;
   --highlight: #CE3D3A;
@@ -17,11 +15,8 @@ body {
   overflow-x: hidden;
 }
 
-
-
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background-color: var(--black);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

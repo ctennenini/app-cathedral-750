@@ -1,6 +1,5 @@
 import React from 'react'
 import { HTMLProps } from 'react'
-import styled from 'styled-components'
 
 export type Text = string | string[]
 
@@ -9,10 +8,6 @@ export type Text = string | string[]
  * Text components
  *
  */
-
-const StyledP = styled.p({
-  hyphens: 'auto',
-})
 
 export type PProps = HTMLProps<HTMLParagraphElement> & {
   children: Text
@@ -26,7 +21,7 @@ export const P = ({ children, ...otherProps }: PProps) => {
   return (
     <>
       {children.map((t, i) => (
-        <StyledP
+        <p
           key={i}
           dangerouslySetInnerHTML={{ __html: t }}
           {...otherProps}
@@ -42,23 +37,9 @@ export const P = ({ children, ...otherProps }: PProps) => {
  *
  **/
 
-const TitleFragment = styled.span({
-  display: 'inline-block',
-})
-
 function normaliseTitle(text: Text) {
-  if (Array.isArray(text)) {
-    return text.map((str, i, all) => (
-      <TitleFragment
-        key={i}
-        dangerouslySetInnerHTML={{
-          __html: str + (i < all.length - 1 ? '&nbsp;' : ''),
-        }}
-      />
-    ))
-  } else {
-    return <>{text}</>
-  }
+  text = Array.isArray(text) ? text.join('<br />') : text
+  return text.replace('\n', '<br />')
 }
 
 export type HProps = HTMLProps<HTMLHeadingElement> & {
@@ -66,11 +47,12 @@ export type HProps = HTMLProps<HTMLHeadingElement> & {
 }
 
 function makeHeading(tag: string) {
-  return styled(({ children, ...otherProps }: HProps) =>
-    React.createElement(tag, otherProps, normaliseTitle(children)),
-  )({
-    //hyphens: 'auto',
-  })
+  return function InnerHeading({ children, ...otherProps }: HProps) {
+    return React.createElement(tag, {
+      dangerouslySetInnerHTML: { __html: normaliseTitle(children) },
+      ...otherProps,
+    })
+  }
 }
 
 export const H1 = makeHeading('h1')

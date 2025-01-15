@@ -3,27 +3,22 @@ import { ComponentProps } from 'react'
 import styled from 'styled-components'
 import NextImage, { ImageProps } from 'next/image'
 
-const Container = styled.div<{ $dark?: boolean }>`
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  width: 100vw;
-  height: 100dvh;
-  height: 100vh;
-  color: ${({ $dark }) => ($dark ? 'var(--black)' : 'var(--white)')};
-  background-color: ${({ $dark }) => ($dark ? 'var(--white)' : 'var(--black)')};
-`
+const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
+  position: 'relative',
+  width: '100%',
+  height: '100%',
+
+  color: $dark ? 'var(--black)' : 'var(--white)',
+  backgroundColor: $dark ? 'var(--white)' : 'var(--black)',
+}))
 
 const Image = styled(NextImage)({
   position: 'absolute',
-  left: -2,
-  top: -2,
-  width: 'calc(100vw + 4px)',
-  height: 'calc(100vh + 4px)',
+  left: 0,
+  right: 0,
+  width: '100%',
+  height: '100%',
   objectFit: 'cover',
-  zIndex: -1,
 })
 
 const Overlay = styled.div({
@@ -33,7 +28,6 @@ const Overlay = styled.div({
   width: '100%',
   height: '100%',
   backdropFilter: 'blur(16px)',
-  zIndex: -1,
 })
 
 const Content = styled.div({

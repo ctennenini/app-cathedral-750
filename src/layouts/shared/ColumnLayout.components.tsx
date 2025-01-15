@@ -6,20 +6,21 @@ import { BaseContainer } from './BaseLayout.components'
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
 import { H1, H2, P } from '@/components/Typography'
 import { ComponentProps } from 'react'
+import {
+  LEFT_COLUMN_OFFSET,
+  LEFT_COLUMN_PADDING_HORIZONTAL,
+  LEFT_COLUMN_WIDTH,
+  PAGE_PADDING_BOTTOM,
+  PAGE_PADDING_LEFT,
+  PAGE_PADDING_RIGHT,
+  PAGE_PADDING_TOP,
+} from '@/config'
 
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
     position: 'absolute',
-    top: '2.5rem',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: '1920px',
-    maxWidth: 'calc(100% - 4rem)',
-
-    pointerEvents: 'none',
-    '& > *': {
-      pointerEvents: 'auto',
-    },
+    top: PAGE_PADDING_TOP,
+    right: PAGE_PADDING_RIGHT,
   },
 })
 
@@ -32,19 +33,19 @@ export const Container = styled(BaseContainer)({
 export const Left = styled.div({
   position: 'absolute',
   top: '0',
-  right: 'calc(50% + 2rem)',
-  width: 'calc(725px + 2rem)',
-  maxWidth: 'calc(50% - 2rem)',
+  right: `calc(50% - ${LEFT_COLUMN_OFFSET})`,
+  width: `${LEFT_COLUMN_WIDTH}px`,
+  maxWidth: `calc(50% + ${LEFT_COLUMN_OFFSET} - ${PAGE_PADDING_LEFT}px)`,
   height: '100%',
   zIndex: 1, // ensures left is in front of right
 
   backgroundColor: 'var(--white)',
   color: 'var(--black)',
 
-  padding: '2.5rem',
+  padding: `${PAGE_PADDING_TOP}px ${LEFT_COLUMN_PADDING_HORIZONTAL}px ${PAGE_PADDING_BOTTOM}px`,
   display: 'flex',
   flexDirection: 'column',
-  gap: '4rem',
+  gap: '2rem',
 })
 
 export const Right = styled.div({
@@ -54,9 +55,9 @@ export const Right = styled.div({
   maxHeight: '75%',
   overflowY: 'hidden',
 
-  // ensures no gap between left and right for odd widths
-  left: 'calc(50% - 1px)',
-  width: 'calc(50% + 2px)',
+  // +/- 1px ensures no gap between left and right for odd widths
+  left: `calc(50% + ${LEFT_COLUMN_OFFSET} - 1px)`,
+  width: `calc(50% - ${LEFT_COLUMN_OFFSET} + 2px)`,
 
   // ensures right is behind left
   zIndex: 0,

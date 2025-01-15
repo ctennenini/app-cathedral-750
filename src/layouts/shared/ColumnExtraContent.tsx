@@ -3,16 +3,13 @@ import styled from 'styled-components'
 import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
+import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_WIDTH } from '@/config'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
 /**
  * constants
  */
-
-const EXTRA_CONTENT_PADDING_H = '5rem'
-const EXTRA_CONTENT_PADDING_V = '2rem'
-const EXTRA_CONTENT_HEIGHT = '75vh'
 
 const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $transparent?: boolean }>) => (
   <div {...otherProps}>
@@ -21,19 +18,21 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
 ))(({ $transparent }) => ({
   position: 'relative',
 
-  '& > div': {
-    maxWidth: 'calc(725px + 2rem)',
-    maxHeight: EXTRA_CONTENT_HEIGHT,
-    padding: `${EXTRA_CONTENT_PADDING_V} ${EXTRA_CONTENT_PADDING_H}`,
-    overflow: 'hidden',
-  },
-
   ...($transparent
     ? null
     : {
         backgroundColor: 'var(--white)',
         boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
       }),
+
+  '& > div': {
+    maxWidth: `calc(${TARGET_VIEW_WIDTH}px - ${LEFT_COLUMN_OFFSET})`,
+    paddingTop: '2rem',
+    paddingBottom: '2rem',
+    paddingLeft: '5rem',
+    paddingRight: `${PAGE_PADDING_RIGHT}px`,
+    overflow: 'hidden',
+  },
 }))
 
 /**
@@ -60,10 +59,9 @@ const ExtraImage = styled((props: ImageProps) => (
 
 const Gallery = styled.ul({
   display: 'flex',
-  gap: '2rem',
+  gap: '3rem',
   listStyle: 'none',
   alignItems: 'baseline',
-  maxWidth: '725px',
 })
 
 const GalleryItem = styled.li({
@@ -85,7 +83,7 @@ type LegendItem = { color: string; label: string }
 
 const LegendList = styled.ul({
   display: 'flex',
-  gap: '3rem',
+  gap: '5rem',
   listStyle: 'none',
   padding: 0,
   margin: 0,
@@ -137,7 +135,6 @@ const LinksContainer = styled.nav({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  maxWidth: 'calc(725px + 2rem)',
 
   '& ul': {
     display: 'flex',

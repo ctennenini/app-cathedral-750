@@ -12,9 +12,6 @@ const Container = styled.div(() => ({
 }))
 
 const Menu = styled.ul<{ $isOpen: boolean; $dark?: boolean }>(({ $isOpen, $dark, children }) => ({
-  position: 'absolute',
-  top: 0,
-  right: 0,
   lineHeight: '50px',
 
   maxHeight: `calc(100% * ${$isOpen ? Children.count(children) : 1})`,

@@ -4,10 +4,12 @@ import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
 import { BaseContainer } from '../shared/BaseLayout.components'
 import { H1, H2 } from '@/components/Typography'
+import { PAGE_PADDING } from '@/config'
 
 export const Container = styled(BaseContainer)({
   '&&': {
-    padding: '3rem',
+    padding: PAGE_PADDING,
+
     display: 'flex',
     flexDirection: 'column',
     gap: '2rem',
@@ -53,7 +55,6 @@ export const Title = styled(H1)({
   fontFamily: 'var(--font-title)',
   fontSize: 169,
   fontWeight: 700,
-  lineHeight: '189px',
 
   textAlign: 'center',
   textTransform: 'uppercase',

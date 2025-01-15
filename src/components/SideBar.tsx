@@ -2,7 +2,6 @@
 
 import { ComponentProps, useRef, useState } from 'react'
 import { CloseIcon, HamburgerIcon } from './Icons'
-import { useAppContext } from '@/context'
 import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 import { IconButton } from './IconButton'
@@ -66,7 +65,6 @@ export type SideBarProps = {
 
 export function SideBar({ renderContent, darkButton }: SideBarProps) {
   const [isExpanded, setExpanded] = useState(false)
-  const { dictionary } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
   useClickAway(isExpanded, setExpanded, drawerRef)
@@ -74,7 +72,6 @@ export function SideBar({ renderContent, darkButton }: SideBarProps) {
   return (
     <>
       <IconButton
-        title={dictionary.start.actions.immersive}
         onClick={() => setExpanded(true)}
         $dark={darkButton}
       >
