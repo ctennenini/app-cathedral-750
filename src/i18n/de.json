@@ -95,10 +95,7 @@
         }
       },
       "weathering": {
-        "main": [
-          "Verwitterung",
-          "der Molasse"
-        ],
+        "main": "Verwitterung der Molasse",
         "description": [
           "Der Verwitterungsprozess ist ein <b>komplexes System</b>, das verschiedene Faktoren umfasst.",
           "Die Verwitterungsmechanismen sind die physikalisch/chemischen Prozesse, die an der Zersetzung beteiligt sind.",
