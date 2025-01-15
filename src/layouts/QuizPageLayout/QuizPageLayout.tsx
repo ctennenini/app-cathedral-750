@@ -12,7 +12,6 @@ export type QuizPageLayoutProps = {
 export function QuizPageLayout({ bgImg, bgImgAlt = 'background image', left, right, onClose }: QuizPageLayoutProps) {
   return (
     <Container
-      blurBackground
       bgImg={bgImg}
       bgImgAlt={bgImgAlt}
     >

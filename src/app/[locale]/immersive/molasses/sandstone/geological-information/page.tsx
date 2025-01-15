@@ -1,5 +1,5 @@
 import { GlobalStaticPageProps } from '@/globals'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2-blurred.png'
 import { getDictionary } from '@/i18n'
 
 import map from './map-of-switzerland.png'
@@ -12,7 +12,6 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
   return (
     <TextPageLayout
       withHomeButton
-      blurBackground
       bgImg={bgImg}
       title={immersiveCathedral.molasses.sandstone.geologicalInformation.main}
       subtitle={immersiveCathedral.molasses.sandstone.main}

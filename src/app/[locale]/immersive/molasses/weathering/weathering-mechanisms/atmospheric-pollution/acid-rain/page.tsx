@@ -1,5 +1,5 @@
 import { GlobalStaticPageProps } from '@/globals'
-import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
+import bgImg from '@/assets/bg-images/dawn-over-roof-tops-blurred.png'
 import { getDictionary } from '@/i18n'
 
 import quizImg from './acid-rain-quiz.png'
@@ -12,7 +12,6 @@ export default async function AcidRain({ params: { locale } }: GlobalStaticPageP
   return (
     <TextPageLayout
       withHomeButton
-      blurBackground
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.acidRain.main}
       subtitle={immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.main}

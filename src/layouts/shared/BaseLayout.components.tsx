@@ -21,14 +21,6 @@ const Image = styled(NextImage)({
   objectFit: 'cover',
 })
 
-const Overlay = styled.div({
-  position: 'absolute',
-  left: 0,
-  top: 0,
-  width: '100%',
-  height: '100%',
-  backdropFilter: 'blur(16px)',
-})
 
 const Content = styled.div({
   position: 'relative',
@@ -42,7 +34,6 @@ export type BaseContainerProps = ComponentProps<typeof Content> & {
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   dark?: boolean
-  blurBackground?: boolean
 }
 
 export function BaseContainer({
@@ -50,7 +41,6 @@ export function BaseContainer({
   bgImgAlt = 'background image',
   dark,
   children,
-  blurBackground,
   ...otherProps
 }: BaseContainerProps) {
   return (
@@ -65,7 +55,6 @@ export function BaseContainer({
           sizes="100vw"
         />
       )}
-      {blurBackground && <Overlay />}
       <Content {...otherProps}>{children}</Content>
     </Container>
   )

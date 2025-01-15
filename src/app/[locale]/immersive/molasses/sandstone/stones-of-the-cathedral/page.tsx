@@ -1,5 +1,6 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImgBlurred from '@/assets/bg-images/frog-perspective-2-blurred.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
@@ -18,7 +19,7 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
           label: immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.testYourKnowledge,
           type: 'oldestStoneGame',
           params: {
-            bgImg,
+            bgImg: bgImgBlurred,
             successTarget: 'immersive/molasses/sandstone/grey-molasse',
           },
         },

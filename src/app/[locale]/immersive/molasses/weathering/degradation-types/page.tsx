@@ -1,5 +1,6 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
+import bgImgBlurred from '@/assets/bg-images/frog-perspective-1-blurred.png'
 import { getDictionary } from '@/i18n'
 
 import blackCrustSrc from './black-crust.png'
@@ -23,7 +24,7 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
           label: immersiveCathedral.molasses.weathering.degradationTypes.testYourKnowledge,
           type: 'degradationTypesGame',
           params: {
-            bgImg,
+            bgImg: bgImgBlurred,
             successTarget: '#',
           },
         },
