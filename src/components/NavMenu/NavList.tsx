@@ -7,6 +7,7 @@ import { NavMenuItem } from '@/types'
 
 const List = styled.ul({
   listStyle: 'none',
+  fontFamily: 'var(--font-buttons)',
   fontSize: '25px',
   lineHeight: '34px',
 })
@@ -22,6 +23,7 @@ const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive, disabled }) =
 const Li = styled.li({
   userSelect: 'none',
   marginLeft: '2rem',
+  marginTop: '1rem',
 })
 
 const ListItemHeader = styled.div({

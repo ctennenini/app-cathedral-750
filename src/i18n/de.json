@@ -81,7 +81,10 @@
           }
         },
         "geologicalInformation": {
-          "main": ["Geologische", "Informationen"],
+          "main": [
+            "Geologische",
+            "Informationen"
+          ],
           "description": [
             [
               "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette zwischen den Westalpen von Frankreich und Italien und den Ostalpen von Italien, Österreich und Deutschland.",
@@ -143,7 +146,7 @@
           "freezeThaw": {
             "main": "Frost-Tau-Wirkung",
             "trappedWater": {
-              "main": "Eingeschlossenes Wasser",
+              "main": "Gefangenes Wasser",
               "description": [
                 "Das Einfrieren von Wasser in porösen Materialien kann Schäden durch verschiedene Mechanismen verursachen.",
                 "Der erste und dramatischste wird als „Wasserfallen“ bezeichnet. Es bezieht sich auf eine Situation, die der eines mit Wasser gefüllten Glasflasche ähnelt, die in einem Kühler platziert ist."

@@ -65,6 +65,7 @@ export const BigLink = styled(Link)<BigLinkProps>(({ $primary }) => ({
   '&&': {
     minHeight: '120px',
     fontSize: '28px',
+    fontFamily: 'var(--font-buttons)',
     display: 'inline-block',
     padding: '2.7rem 5rem',
     color: $primary ? 'var(--white)' : 'var(--black)',

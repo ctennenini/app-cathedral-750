@@ -20,7 +20,7 @@ const Menu = styled.ul<{ $isOpen: boolean; $dark?: boolean }>(({ $isOpen, $dark,
   transition: 'max-height 0.3s',
 
   fontSize: '18px',
-  fontWeight: '500',
+  fontFamily: 'var(--font-buttons)',
   padding: '0 3rem',
 
   color: '#020202',

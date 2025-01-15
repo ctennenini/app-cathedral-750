@@ -37,7 +37,7 @@ export default async function WeatheringMechanisms({ params: { locale } }: Globa
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.atmosphericPollution,
+            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.biologicalAttack,
             disabled: true,
           },
         ],
