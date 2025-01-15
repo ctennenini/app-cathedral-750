@@ -69,7 +69,7 @@ function makeHeading(tag: string) {
   return styled(({ children, ...otherProps }: HProps) =>
     React.createElement(tag, otherProps, normaliseTitle(children)),
   )({
-    hyphens: 'auto',
+    //hyphens: 'auto',
   })
 }
 
