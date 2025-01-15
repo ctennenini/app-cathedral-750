@@ -92,10 +92,7 @@
         }
       },
       "weathering": {
-        "main": [
-          "Weathering",
-          "of Molasse"
-        ],
+        "main": "Weathering of Molasse",
         "description": [
           "The process of degradation is a <b>complex system that involves</b> different factors.",
           "The weathering mechanisms are the physical/chemical processes involved in the degradation.",
