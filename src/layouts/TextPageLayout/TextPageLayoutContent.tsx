@@ -28,7 +28,7 @@ const StyledActionButton = styled(ActionButton)({
   '&&': {
     backgroundColor: 'var(--white)',
     color: 'var(--highlight)',
-    border: '1px solid var(--highlight)',
+    border: '2pt solid var(--highlight)',
     borderRadius: '12px',
     padding: '0 40px',
     height: '87px',
