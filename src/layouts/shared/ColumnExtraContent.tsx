@@ -178,7 +178,7 @@ function Links({ links }: LinksProps) {
 const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
   position: 'absolute',
   backgroundColor: 'transparent',
-  border: '4px dotted',
+  border: '5px solid',
   borderColor: $green ? '#47CC40' : 'var(--highlight)',
   cursor: 'pointer',
 }))

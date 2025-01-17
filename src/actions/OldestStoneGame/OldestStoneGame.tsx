@@ -1,6 +1,5 @@
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { NextArrowIcon } from '@/components/Icons'
-import { H1, P } from '@/components/Typography'
 import { useAppContext } from '@/context'
 import { useState } from 'react'
 import styled from 'styled-components'
@@ -8,17 +7,27 @@ import styled from 'styled-components'
 import picture from './oldest-stone-game-pic.png'
 import { useRouter } from 'next/navigation'
 import { HREF, useHref } from '@/utils'
-import { ExtraContent, Main, QuizPageLayout, QuizPageLayoutProps, Separator } from '@/layouts/QuizPageLayout'
+import {
+  ExtraContent,
+  Main,
+  QuizPageLayout,
+  QuizPageLayoutProps,
+  Separator,
+  Title as BaseTitle,
+  Text,
+  Footer,
+} from '@/layouts/QuizPageLayout'
 
-const Title = styled(H1)({
-  fontSize: '4rem',
-  lineHeight: '4.5rem',
-  fontWeight: 700,
+const SmallTitle = styled(BaseTitle)({
+  '& *': {
+    fontSize: '3.8rem',
+  },
 })
 
-const Body = styled(P)({
-  fontSize: '1.8rem',
-  lineHeight: '2rem',
+const BigTitle = styled(BaseTitle)({
+  '& *': {
+    fontSize: '5.4rem',
+  },
 })
 
 const NextButton = styled((props: IconButtonProps) => (
@@ -47,30 +56,35 @@ export type OldestStoneGameProps = OldestStoneGameParams & {
 export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGameProps) {
   const successHref = useHref(successTarget)
   const { push } = useRouter()
-  const { dictionary } = useAppContext()
+  const { start, finish } = useAppContext().dictionary.games.oldestStone
 
   const [isDone, setIsDone] = useState(false)
 
-  const text = isDone ? dictionary.games.oldestStone.finish : dictionary.games.oldestStone.start
+  const text = isDone ? finish : start
+  const TitleComponent = isDone ? BigTitle : SmallTitle
 
   return (
     <QuizPageLayout
       onClose={onClose}
       bgImg={bgImg}
       left={
-        <Main>
-          <Title>{text.title}</Title>
-          <Separator />
-          <Body>{text.body}</Body>
+        <>
+          <Main>
+            <TitleComponent title={text.title} />
+            <Separator />
+            <Text>{text.body}</Text>
+          </Main>
           {isDone && (
-            <NextButton
-              onClick={() => {
-                onClose()
-                push(successHref.toString(), { scroll: false })
-              }}
-            />
+            <Footer>
+              <NextButton
+                onClick={() => {
+                  onClose()
+                  push(successHref.toString(), { scroll: false })
+                }}
+              />
+            </Footer>
           )}
-        </Main>
+        </>
       }
       right={
         <ExtraContent

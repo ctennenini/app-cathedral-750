@@ -44,7 +44,7 @@ export const Left = styled(BaseLeft)({
 })
 
 export const Title = styled(BaseTitle)({
-  '*': {
+  '& *': {
     color: 'var(--white)',
   },
 })
