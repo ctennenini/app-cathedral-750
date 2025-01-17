@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createElement } from 'react'
 import { HTMLProps } from 'react'
 
 export type Text = string | string[]
@@ -48,7 +48,7 @@ export type HProps = HTMLProps<HTMLHeadingElement> & {
 
 function makeHeading(tag: string) {
   return function InnerHeading({ children, ...otherProps }: HProps) {
-    return React.createElement(tag, {
+    return createElement(tag, {
       dangerouslySetInnerHTML: { __html: normaliseTitle(children) },
       ...otherProps,
     })

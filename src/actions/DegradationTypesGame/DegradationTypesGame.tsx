@@ -1,6 +1,6 @@
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { NextArrowIcon } from '@/components/Icons'
-import { H1, P } from '@/components/Typography'
+import { P } from '@/components/Typography'
 import { useAppContext } from '@/context'
 import { ReactNode, useState } from 'react'
 import styled from 'styled-components'
@@ -119,13 +119,7 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
   )
 }
 
-function MidGame({
-  setState,
-  title,
-  body,
-  hint,
-  ...otherProps
-}: StateComponentProps & { title: ReactNode; body?: string; hint?: string }) {
+function MidGame({ setState, title, hint, ...otherProps }: StateComponentProps & { title: ReactNode; hint?: string }) {
   return (
     <QuizPageLayout
       left={

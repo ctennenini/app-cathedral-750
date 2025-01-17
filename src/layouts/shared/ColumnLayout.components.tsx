@@ -114,7 +114,7 @@ export type TitleProps = {
   subtitle?: ComponentProps<typeof StyledSubTitle>['children']
   titleProps?: Partial<ComponentProps<typeof StyledTitle>>
   subtitleProps?: Partial<ComponentProps<typeof StyledSubTitle>>
-} & ComponentProps<'div'>
+}
 
 export function Title({ title, subtitle, subtitleProps, titleProps, ...otherProps }: TitleProps) {
   return (
