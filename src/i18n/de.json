@@ -121,11 +121,32 @@
             ]
           ],
           "testYourKnowledge": "Testen Sie Ihr Wissen!",
-          "gallery": {
-            "blackCrust": "Schwarze Kruste",
-            "scaling": "Abblätterung",
-            "sanding": "Schleifen",
-            "biodeterioration": "Bio&shy;deterioration"
+          "blackCrust": {
+            "title": "Schwarze Kruste",
+            "description": [
+              "Schwarze Krusten werden im Allgemeinen als Kruste klassifiziert, die sich hauptsächlich auf Bereichen entwickelt, die vor direktem Regenfall oder Wasserabfluss in städtischer Umgebung geschützt sind.",
+              "Schwarze Krusten haften normalerweise fest am Substrat. Sie bestehen hauptsächlich aus Partikeln aus der Atmosphäre, die in eine Gipsmatrix (CaSO4.2H2O) eingeschlossen sind."
+            ]
+          },
+          "scaling": {
+            "title": "Abblätterung",
+            "description": [
+              "Abblätterung von Stein als Schuppe oder Stapel von Schuppen, die keiner Steinstruktur folgen und sich wie Fischschuppen oder parallel zur Steinoberfläche ablösen. Die Dicke einer Schuppe beträgt im Allgemeinen millimetrische bis zentimetrische Größenordnungen.",
+              "Abblätterung kann in Bereichen beobachtet werden, die sowohl Regen als auch Sonne ausgesetzt sind. Es stellt das herausforderndste Zerstörungsmuster dar, um es zu bewerten, zu verstehen und wiederherzustellen."
+            ]
+          },
+          "sanding": {
+            "title": "Sanding",
+            "description": [
+              "Lorem Ipsum Sandy Sit Amet."
+            ]
+          },
+          "biodeterioration": {
+            "title": "Biologische Zerstörung",
+            "description": [
+              "Biologische Zerstörung ist ein Prozess, bei dem lebende Organismen, wie Bakterien, Pilze, Algen, Flechten und Moose, die Oberfläche von Steinen angreifen",
+              "Die resultierenden Schäden sind nicht extrem gefährlich für die Steinbewahrung, können jedoch unangenehme ästhetische Nachteile verursachen."
+            ]
           }
         },
         "weatheringMechanisms": {

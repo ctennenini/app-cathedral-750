@@ -115,11 +115,32 @@
             ]
           ],
           "testYourKnowledge": "Test your knowledge!",
-          "gallery": {
-            "blackCrust": "Black Crust",
-            "scaling": "Scaling",
-            "sanding": "Sanding",
-            "biodeterioration": "Bio&shy;deterioration"
+          "blackCrust": {
+            "title": "Black Crust",
+            "description": [
+              "Black crusts are classified as kind of crust developing generally on areas protected against direct rainfall or water runoff in urban environment.",
+              "Black crusts usually adhere firmly to the substrate. They are composed mainly of particles from the atmosphere, trapped into a gypsum (CaSO4.2H2O) matrix."
+            ]
+          },
+          "scaling": {
+            "title": "Scaling",
+            "description": [
+              "Detachment of stone as a scale or a stack of scales, not following any stone structure and detaching like fish scales or parallel to the stone surface. The thickness of a scale is generally of millimetric to centimetric scale.",
+              "It can be observed in areas exposed both to rain and sun. It represents the most challenging degradation pattern to evaluate, understand and restore."
+            ]
+          },
+          "sanding": {
+            "title": "Sanding",
+            "description": [
+              "Lorem Ipsum Sandy Sit Amet."
+            ]
+          },
+          "biodeterioration": {
+            "title": "Biodeterioration",
+            "description": [
+              "In the areas more hit by the rain or where water percolates, he microorganisms such as fungi and musses find their natural humid environment to proliferate.",
+              "The resultant damage is not extremely dangerous for stone preservation but can create unpleasant aesthetic drawbacks."
+            ]
           }
         },
         "weatheringMechanisms": {

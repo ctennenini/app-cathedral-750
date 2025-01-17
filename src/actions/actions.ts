@@ -1,12 +1,14 @@
 import { OldestStoneGameParams } from './OldestStoneGame'
 import { DegradationTypesGameParams } from './DegradationTypesGame'
+import { Text } from '@/components/Typography'
+import { BigLinkProps } from '@/components/Links'
 
 export type Action = {
-  label: string
+  label: Text
 } & (
   | {
       type: 'link'
-      target: string
+      params: Omit<BigLinkProps, 'label'>
     }
   | {
       type: 'oldestStoneGame'

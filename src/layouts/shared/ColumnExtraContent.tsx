@@ -4,6 +4,7 @@ import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
 import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
+import Link from 'next/link'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -214,6 +215,7 @@ export type ExtraContentProps =
       type: 'gallery'
       items: (ImageProps & {
         label?: string
+        href?: string
       })[]
     }
 
@@ -230,17 +232,17 @@ export function ExtraContent(props: ExtraContentProps) {
       return (
         <Container>
           <Gallery>
-            {props.items.map(({ label, ...other }, index) => (
-              <GalleryItem key={index}>
+            {props.items.map(({ label, href, ...other }, index) => {
+              let content = (
                 <figure>
-                  <ExtraImage
-                    key={index}
-                    {...other}
-                  />
+                  <ExtraImage {...other} />
                   {label && <figcaption dangerouslySetInnerHTML={{ __html: label }} />}
                 </figure>
-              </GalleryItem>
-            ))}
+              )
+              content = href ? <Link href={href}>{content}</Link> : content
+
+              return <GalleryItem key={index}>{content}</GalleryItem>
+            })}
           </Gallery>
         </Container>
       )

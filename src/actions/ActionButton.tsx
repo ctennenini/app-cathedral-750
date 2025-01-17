@@ -3,6 +3,7 @@ import { ComponentProps, useState } from 'react'
 import { Action } from './actions'
 import { OldestStoneGame } from './OldestStoneGame'
 import { DegradationTypesGame } from './DegradationTypesGame'
+import { BigLink } from '@/components/Links'
 
 export type ActionButtonProps = ComponentProps<'button'> & {
   action: Action
@@ -11,6 +12,8 @@ export type ActionButtonProps = ComponentProps<'button'> & {
 export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
   const [showOldestStoneGame, setShowOldestStoneGame] = useState(false)
   const [showDegradationTypesGame, setShowDegradationTypesGame] = useState(false)
+
+  const { type, params, label } = action
 
   const onClick = () => {
     switch (action.type) {
@@ -26,6 +29,17 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
       default:
         console.error('action type not implemented:', action)
     }
+  }
+
+  if (type === 'link') {
+    return (
+      <BigLink
+        $primary
+        label={label}
+        // {...buttonProps}
+        {...params}
+      />
+    )
   }
 
   return (

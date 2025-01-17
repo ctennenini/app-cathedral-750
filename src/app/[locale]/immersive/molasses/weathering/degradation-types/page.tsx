@@ -35,19 +35,23 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
           items: [
             {
               src: blackCrustSrc,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.gallery.blackCrust,
+              label: immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.title,
+              href: 'degradation-types/black-crust',
             },
             {
               src: scalingSrc,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.gallery.scaling,
+              label: immersiveCathedral.molasses.weathering.degradationTypes.scaling.title,
+              href: 'degradation-types/scaling',
             },
             {
               src: sanding,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.gallery.sanding,
+              label: immersiveCathedral.molasses.weathering.degradationTypes.sanding.title,
+              href: 'degradation-types/sanding',
             },
             {
               src: biodeterioation,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.gallery.biodeterioration,
+              label: immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title,
+              href: 'degradation-types/biodeterioration',
             },
           ],
         },

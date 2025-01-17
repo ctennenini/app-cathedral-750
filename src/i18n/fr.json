@@ -118,11 +118,32 @@
             ]
           ],
           "testYourKnowledge": "Testez vos connaissances !",
-          "gallery": {
-            "blackCrust": "Croûte noire",
-            "scaling": "Écaillage",
-            "sanding": "Ponçage",
-            "biodeterioration": "Bio&shy;détérioration"
+          "blackCrust": {
+            "title": "Croûte noire",
+            "description": [
+              "Les croûtes noires sont généralement classées comme des croûtes qui se développent principalement dans des zones protégées de la pluie ou du ruissellement d'eau en milieu urbain.",
+              "Les croûtes noires adhèrent généralement fermement au substrat. Elles sont principalement composées de particules atmosphériques piégées dans une matrice de gypse (CaSO4.2H2O)."
+            ]
+          },
+          "scaling": {
+            "title": "Écaillage",
+            "description": [
+              "Détachement de la pierre sous forme d'une échelle ou d'une pile d'échelles, ne suivant aucune structure de pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une échelle est généralement de l'ordre du millimètre à l'échelle centimétrique.",
+              "Il peut être observé dans des zones exposées à la fois à la pluie et au soleil. Il représente le motif de dégradation le plus difficile à évaluer, à comprendre et à restaurer."
+            ]
+          },
+          "sanding": {
+            "title": "Le sanding",
+            "description": [
+              "Lorem Ipsum Sandy Sit Amet."
+            ]
+          },
+          "biodeterioration": {
+            "title": "Biodégradation",
+            "description": [
+              "Les microorganismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer dans les zones les plus touchées par la pluie ou là où l'eau percole.",
+              "Les dommages résultants ne sont pas extrêmement dangereux pour la préservation de la pierre, mais peuvent créer des inconvénients esthétiques désagréables."
+            ]
           }
         },
         "weatheringMechanisms": {
