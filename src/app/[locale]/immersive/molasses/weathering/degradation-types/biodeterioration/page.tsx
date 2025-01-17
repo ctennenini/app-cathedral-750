@@ -12,6 +12,9 @@ export default async function Biodeterioration({ params: { locale } }: GlobalSta
       withHomeButton
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title}
+      titleProps={{
+        style: { fontSize: '3.5rem' },
+      }}
       subtitle={immersiveCathedral.molasses.weathering.degradationTypes.main}
       text={immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.description}
       backButtonTarget="immersive/molasses/weathering/degradation-types/sanding"

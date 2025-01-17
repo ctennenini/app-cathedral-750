@@ -6,6 +6,8 @@ import { TextPageContent, TextPageContentProps } from './TextPageLayoutContent'
 export type TextPageLayoutProps = PropsWithChildren<{
   title: TextPageContentProps['title']
   subtitle?: TextPageContentProps['subtitle']
+  titleProps?: TextPageContentProps['titleProps']
+  subtitleProps?: TextPageContentProps['subtitleProps']
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
   text: TextPageContentProps['text']
@@ -19,6 +21,8 @@ export type TextPageLayoutProps = PropsWithChildren<{
 export function TextPageLayout({
   title,
   subtitle,
+  titleProps,
+  subtitleProps,
   bgImg,
   bgImgAlt = 'background image',
   text,
@@ -36,6 +40,8 @@ export function TextPageLayout({
       <TextPageContent
         title={title}
         subtitle={subtitle}
+        titleProps={titleProps}
+        subtitleProps={subtitleProps}
         text={text}
         actions={actions}
         extraContent={pullOutContent}

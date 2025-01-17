@@ -2,7 +2,7 @@ import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { NextArrowIcon } from '@/components/Icons'
 import { H1, P } from '@/components/Typography'
 import { useAppContext } from '@/context'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import styled from 'styled-components'
 
 import schematicViewPicture from './schematic-view.png'
@@ -10,28 +10,29 @@ import windowPicture from './window-with-deterioration.png'
 import { useRouter } from 'next/navigation'
 import { useHref, HREF } from '@/utils'
 
-import { ExtraContent, QuizPageLayout, QuizPageLayoutProps, Main } from '@/layouts/QuizPageLayout'
+import {
+  ExtraContent,
+  QuizPageLayout,
+  QuizPageLayoutProps,
+  Main,
+  Separator,
+  Text,
+  Title,
+} from '@/layouts/QuizPageLayout'
+import { Footer } from '@/layouts/shared/ColumnLayout.components'
 
-const Title = styled(H1)({
-  fontSize: '5rem',
-  lineHeight: '5.5rem',
-  fontWeight: 700,
+const BigTitle = styled(Title)({
+  '& *': {
+    fontSize: '5rem',
+    color: 'var(--white)',
+  },
 })
 
-const SmallerTitle = styled(H1)({
-  fontSize: '3.8rem',
-  lineHeight: '4.5rem',
-})
-
-const Body = styled(P)({
-  fontSize: '1.8rem',
-  lineHeight: '2rem',
-})
-
-const Separator = styled.hr({
-  width: '100%',
-  height: 1,
-  backgroundColor: 'var(--separator-light)',
+const SmallTitle = styled(Title)({
+  '& *': {
+    fontSize: '3.6rem',
+    color: 'var(--white)',
+  },
 })
 
 const NextButton = styled((props: IconButtonProps) => (
@@ -59,6 +60,7 @@ const Buttons = styled.div({
   display: 'flex',
   justifyContent: 'space-between',
   gap: '1rem',
+  marginTop: '2.5rem',
 })
 
 const Button = styled.button({
@@ -73,7 +75,7 @@ const Button = styled.button({
   borderRadius: '10rem',
 })
 
-type State = 'START' | 'IN_PROGRESS' | 'FINISH'
+type State = 'START' | 'IN_PROGRESS' | 'WRONG_ANSWER' | 'FINISH'
 
 type StateComponentProps = Omit<QuizPageLayoutProps, 'left' | 'right'> & {
   setState: (state: State) => void
@@ -87,17 +89,29 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
     <QuizPageLayout
       left={
         <Main>
-          <Title>{title}</Title>
+          <BigTitle title={title} />
           <Separator />
-          <Body>{body}</Body>
+          <Text>{body}</Text>
         </Main>
       }
       right={
         <ExtraContent
-          type="image"
+          type="image-with-click-map"
           src={schematicViewPicture}
-          alt="Degradation Types Game"
-          onClick={() => setState('IN_PROGRESS')}
+          clickAreas={[
+            {
+              onClick: () => setState('IN_PROGRESS'),
+              style: {
+                top: '80.7%',
+                left: '18.9%',
+                width: '12%',
+                opacity: '0.5',
+                aspectRatio: '1 / 1',
+                borderRadius: '100%',
+                border: 'none',
+              },
+            },
+          ]}
         />
       }
       {...otherProps}
@@ -105,20 +119,25 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
   )
 }
 
-function InProgress({ setState, ...otherProps }: StateComponentProps) {
-  const { title, hint } = useAppContext().dictionary.games.degradationTypes.main
+function MidGame({
+  setState,
+  title,
+  body,
+  hint,
+  ...otherProps
+}: StateComponentProps & { title: ReactNode; body?: string; hint?: string }) {
   return (
     <QuizPageLayout
       left={
         <Main>
-          <SmallerTitle>{title}</SmallerTitle>
+          {title}
           <Separator />
           <Buttons>
-            <Button>1</Button>
-            <Button onClick={() => setState('FINISH')}>2</Button>
-            <Button>3</Button>
+            <Button onClick={() => setState('WRONG_ANSWER')}>1</Button>
+            <Button onClick={() => setState('WRONG_ANSWER')}>2</Button>
+            <Button onClick={() => setState('FINISH')}>3</Button>
           </Buttons>
-          <Hint>{hint}</Hint>
+          {hint && <Hint>{hint}</Hint>}
         </Main>
       }
       right={
@@ -134,6 +153,28 @@ function InProgress({ setState, ...otherProps }: StateComponentProps) {
   )
 }
 
+function InProgress(props: StateComponentProps) {
+  const { title, hint } = useAppContext().dictionary.games.degradationTypes.main
+  return (
+    <MidGame
+      {...props}
+      title={<SmallTitle title={title} />}
+      hint={hint}
+    />
+  )
+}
+
+function WrongAnswer(props: StateComponentProps) {
+  const { wrongAnswer, main } = useAppContext().dictionary.games.degradationTypes
+  return (
+    <MidGame
+      {...props}
+      title={<BigTitle title={wrongAnswer.title} />}
+      hint={main.hint}
+    />
+  )
+}
+
 function Finish({ successTarget, ...otherProps }: StateComponentProps) {
   const successHref = useHref(successTarget)
   const { title, body } = useAppContext().dictionary.games.degradationTypes.finish
@@ -142,21 +183,25 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
   return (
     <QuizPageLayout
       left={
-        <Main>
-          <Title>{title}</Title>
-          <Separator />
-          <Body>{body}</Body>
-          <NextButton
-            data-testid="next-button"
-            onClick={() => {
-              if (typeof successHref === 'string') {
-                push(successHref, { scroll: false })
-              } else {
-                otherProps.onClose?.()
-              }
-            }}
-          />
-        </Main>
+        <>
+          <Main>
+            <BigTitle title={title} />
+            <Separator />
+            <Text>{body}</Text>
+          </Main>
+          <Footer>
+            <NextButton
+              data-testid="next-button"
+              onClick={() => {
+                if (typeof successHref === 'string') {
+                  push(successHref, { scroll: false })
+                } else {
+                  otherProps.onClose?.()
+                }
+              }}
+            />
+          </Footer>
+        </>
       }
       right={
         <ExtraContent
@@ -176,6 +221,8 @@ function getComponent(state: State) {
       return Start
     case 'IN_PROGRESS':
       return InProgress
+    case 'WRONG_ANSWER':
+      return WrongAnswer
     case 'FINISH':
       return Finish
     default:

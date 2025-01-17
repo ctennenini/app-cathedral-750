@@ -258,9 +258,11 @@
       "finish": {
         "title": "Richtig!",
         "body": [
-          "Die Kathedrale von Lausanne ist von verschiedenen Arten der Zerstörung betroffen, die häufigsten sind die schwarze Kruste und die Abblätterung.",
-          "Lassen Sie uns mehr darüber erfahren..."
+          "Entdecken wir sie zusammen..."
         ]
+      },
+      "wrongAnswer": {
+        "title": "Versuchen Sie es nochmal!"
       }
     }
   }

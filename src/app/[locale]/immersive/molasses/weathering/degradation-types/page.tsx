@@ -25,7 +25,7 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
           type: 'degradationTypesGame',
           params: {
             bgImg: bgImgBlurred,
-            successTarget: '#',
+            successTarget: 'immersive/molasses/weathering/degradation-types/black-crust',
           },
         },
       ]}

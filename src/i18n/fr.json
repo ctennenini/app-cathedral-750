@@ -256,9 +256,11 @@
       "finish": {
         "title": "Correct !",
         "body": [
-          "La cathédrale de Lausanne est affectée par différents types de dégradation, les plus courants sont la croûte noire et l'écaillage.",
-          "Apprenons-en plus à ce sujet..."
+          "Découvrons-les ensemble..."
         ]
+      },
+      "wrongAnswer": {
+        "title": "Essayez encore !"
       }
     }
   }

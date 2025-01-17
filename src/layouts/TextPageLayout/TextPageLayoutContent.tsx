@@ -91,6 +91,8 @@ export type TextPageContentProps = PropsWithChildren<{
 export function TextPageContent({
   title,
   subtitle,
+  titleProps,
+  subtitleProps,
   text,
   actions,
   extraContent,
@@ -155,6 +157,8 @@ export function TextPageContent({
           <Title
             title={title}
             subtitle={subtitle}
+            titleProps={titleProps}
+            subtitleProps={subtitleProps}
           />
           <Separator />
           <Text>{current}</Text>

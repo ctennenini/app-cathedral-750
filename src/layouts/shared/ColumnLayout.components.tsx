@@ -46,7 +46,6 @@ export const Left = styled.div({
   padding: `${PAGE_PADDING_TOP}px ${LEFT_COLUMN_PADDING_HORIZONTAL}px ${PAGE_PADDING_BOTTOM}px`,
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem',
 })
 
 export const Right = styled.div({
@@ -75,6 +74,7 @@ const StyledHeader = styled.header({
   flexDirection: 'row',
   justifyContent: 'space-between',
   gap: '3rem',
+  marginBottom: '4.5rem',
 })
 
 export type HeaderProps = {
@@ -112,12 +112,15 @@ const StyledSubTitle = styled(H2)({
 export type TitleProps = {
   title: ComponentProps<typeof StyledTitle>['children']
   subtitle?: ComponentProps<typeof StyledSubTitle>['children']
-}
-export function Title({ title, subtitle }: TitleProps) {
+  titleProps?: Partial<ComponentProps<typeof StyledTitle>>
+  subtitleProps?: Partial<ComponentProps<typeof StyledSubTitle>>
+} & ComponentProps<'div'>
+
+export function Title({ title, subtitle, subtitleProps, titleProps, ...otherProps }: TitleProps) {
   return (
-    <div>
-      {subtitle && <StyledSubTitle>{subtitle}</StyledSubTitle>}
-      <StyledTitle>{title}</StyledTitle>
+    <div {...otherProps}>
+      {subtitle && <StyledSubTitle {...subtitleProps}>{subtitle}</StyledSubTitle>}
+      <StyledTitle {...titleProps}>{title}</StyledTitle>
     </div>
   )
 }
@@ -126,11 +129,13 @@ export const Separator = styled.hr({
   width: '100%',
   border: 'none',
   borderBottom: '1px solid var(--separator-dark)',
+  marginTop: '1.5rem',
 })
 
 export const Text = styled(P)({
   fontSize: 32,
   lineHeight: '37px',
+  marginTop: '2.5rem',
 })
 
 export const Main = styled.main({
@@ -140,7 +145,6 @@ export const Main = styled.main({
 
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem',
 })
 
 export const Footer = styled.footer({

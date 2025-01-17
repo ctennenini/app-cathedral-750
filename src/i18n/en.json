@@ -253,9 +253,11 @@
       "finish": {
         "title": "Correct!",
         "body": [
-          "The Cathedral of Lausanne is affected by different types of degradation, the most common are the black crust and the scaling.",
-          "Let's learn more about them..."
+          "Let's discover them together..."
         ]
+      },
+      "wrongAnswer": {
+        "title": "Try again!"
       }
     }
   }

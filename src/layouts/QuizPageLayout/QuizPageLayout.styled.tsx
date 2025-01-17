@@ -6,12 +6,21 @@ import {
   Container as BaseContainer,
   Left as BaseLeft,
   Separator as BaseSeparator,
+  Title as BaseTitle,
 } from '../shared/ColumnLayout.components'
 
 import { IconButton, IconButtonProps } from '@/components/IconButton'
 import { CloseIcon } from '@/components/Icons'
 
-export { Right, LanguageSwitcher, Header, type HeaderProps, Main } from '../shared/ColumnLayout.components'
+export {
+  Text,
+  Right,
+  LanguageSwitcher,
+  Header,
+  type HeaderProps,
+  Main,
+  Footer,
+} from '../shared/ColumnLayout.components'
 export { ExtraContent, type ExtraContentProps } from '../shared/ColumnExtraContent'
 
 export const Container = styled(BaseContainer)({
@@ -32,6 +41,12 @@ export const CloseButton = styled((props: IconButtonProps) => (
 export const Left = styled(BaseLeft)({
   backgroundColor: 'var(--highlight)',
   color: 'var(--white)',
+})
+
+export const Title = styled(BaseTitle)({
+  '*': {
+    color: 'var(--white)',
+  },
 })
 
 export const Separator = styled(BaseSeparator)({
