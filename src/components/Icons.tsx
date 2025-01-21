@@ -151,10 +151,10 @@ export const NextArrowIcon = styled((props: SVGProps<SVGSVGElement>) => (
 ))({})
 
 export type TriangleProps = SVGProps<SVGSVGElement> & {
-  $isActive?: boolean
+  $isOnPath?: boolean
 }
 
-export const NavMenuTriangleClosed = styled(({ $isActive, ...props }: TriangleProps) => (
+export const NavMenuTriangleClosed = styled((props: TriangleProps) => (
   <svg
     width="8"
     height="13"
@@ -165,15 +165,19 @@ export const NavMenuTriangleClosed = styled(({ $isActive, ...props }: TrianglePr
   >
     <path
       d="M1.10999 11.1096L6.10999 6.10962L1.10999 1.88965"
-      stroke={$isActive ? 'var(--highlight)' : '#191919'}
+      stroke="#191919"
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
     />
   </svg>
-))({})
+))(({ $isOnPath }) => ({
+  '&& path': {
+    stroke: $isOnPath ? 'var(--highlight)' : '#191919',
+  },
+}))
 
-export const NavMenuTriangleOpen = styled(({ $isActive, ...props }: TriangleProps) => (
+export const NavMenuTriangleOpen = styled((props: TriangleProps) => (
   <svg
     width="12"
     height="8"
@@ -184,10 +188,14 @@ export const NavMenuTriangleOpen = styled(({ $isActive, ...props }: TriangleProp
   >
     <path
       d="M1 1L6 6L10.22 1"
-      stroke={$isActive ? 'var(--highlight)' : '#191919'}
+      stroke="#191919"
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
     />
   </svg>
-))({})
+))(({ $isOnPath }) => ({
+  '&& path': {
+    stroke: $isOnPath ? 'var(--highlight)' : '#191919',
+  },
+}))

@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import { Link, useIsActive, useIsOnPath } from '@/components/Links'
 import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
-import { MouseEventHandler, useState } from 'react'
+import { MouseEventHandler, useEffect, useState } from 'react'
 import { NavMenuItem } from '@/types'
 
 const List = styled.ul({
@@ -10,15 +10,31 @@ const List = styled.ul({
   fontFamily: 'var(--font-buttons)',
   fontSize: '25px',
   lineHeight: '34px',
+  position: 'relative',
+
+  '&&:before': {
+    content: '""',
+    position: 'absolute',
+    display: 'inline-block',
+    height: '100%',
+    width: '1px',
+    backgroundColor: 'var(--ui-line-color)',
+  },
 })
 
-const NavLink = styled(Link)<{ $isActive: boolean }>(({ $isActive, disabled }) => ({
-  '&&': {
-    color: $isActive ? 'var(--highlight)' : '#191919',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    textDecoration: disabled ? 'line-through' : 'none',
-  },
-}))
+const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isOnPath, $isActive, disabled }) => {
+  console.log('NavLink:', { $isActive, disabled })
+  return {
+    '&&': {
+      padding: '0.6rem 1.5rem',
+      borderRadius: '0.6rem',
+      color: $isActive ? 'white' : $isOnPath ? 'var(--highlight)' : '#191919',
+      backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
+      cursor: disabled ? 'not-allowed' : 'pointer',
+      textDecoration: disabled ? 'line-through' : 'none',
+    },
+  }
+})
 
 const Li = styled.li({
   userSelect: 'none',
@@ -57,6 +73,14 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
   const isOnPath = useIsOnPath(path)
   const isActive = useIsActive(path)
 
+  console.log('isActive', isActive)
+
+  useEffect(() => {
+    if (isOnPath) {
+      setIsExpanded(true)
+    }
+  }, [isOnPath])
+
   label = Array.isArray(label) ? label.join(' ') : label
 
   const toggle: MouseEventHandler<HTMLDivElement> = e => {
@@ -69,13 +93,14 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
       <ListItemHeader>
         {hasSubitems && (
           <ToggleButton onClick={toggle}>
-            <Triangle $isActive={isOnPath} />
+            <Triangle $isOnPath={isOnPath} />
           </ToggleButton>
         )}
         <NavLink
           href={path}
           label={label}
           disabled={disabled}
+          $isOnPath={isOnPath}
           $isActive={isActive}
         />
       </ListItemHeader>

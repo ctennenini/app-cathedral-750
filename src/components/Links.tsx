@@ -28,15 +28,14 @@ function useHref(href: LinkProps['href']) {
 export function useIsOnPath(path: string) {
   const locale = useLocale()
   const pathName = usePathname()
-
-  return pathName.startsWith(`/${locale}/${path}`)
+  return pathName.startsWith(`/${locale}${path}`)
 }
 
 export function useIsActive(path: string) {
   const locale = useLocale()
   const pathName = usePathname()
 
-  return pathName.startsWith(`/${locale}/${path}`)
+  return pathName === `/${locale}${path}`
 }
 
 export function Link({ href, label, arrow, external, disabled, ...otherProps }: LinkProps) {
