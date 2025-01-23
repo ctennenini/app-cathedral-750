@@ -57,7 +57,6 @@ const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $
 }))
 
 const ListItemHeader = styled.div({
-  // position: 'relative',
   display: 'flex',
   alignItems: 'stretch',
 })
