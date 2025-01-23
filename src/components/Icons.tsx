@@ -165,7 +165,6 @@ export const NavMenuTriangleClosed = styled((props: TriangleProps) => (
   >
     <path
       d="M1.10999 11.1096L6.10999 6.10962L1.10999 1.88965"
-      stroke="#191919"
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -173,7 +172,7 @@ export const NavMenuTriangleClosed = styled((props: TriangleProps) => (
   </svg>
 ))(({ $isOnPath }) => ({
   '&& path': {
-    stroke: $isOnPath ? 'var(--highlight)' : '#191919',
+    stroke: $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
   },
 }))
 
@@ -188,7 +187,6 @@ export const NavMenuTriangleOpen = styled((props: TriangleProps) => (
   >
     <path
       d="M1 1L6 6L10.22 1"
-      stroke="#191919"
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -196,6 +194,6 @@ export const NavMenuTriangleOpen = styled((props: TriangleProps) => (
   </svg>
 ))(({ $isOnPath }) => ({
   '&& path': {
-    stroke: $isOnPath ? 'var(--highlight)' : '#191919',
+    stroke: $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
   },
 }))

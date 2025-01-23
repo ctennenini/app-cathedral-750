@@ -1,6 +1,7 @@
 :root {
   --white: #fff;
   --black: #000;
+  --dark-gray: #191919;
   --highlight: #CE3D3A;
 
   --separator-light: var(--white);

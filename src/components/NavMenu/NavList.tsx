@@ -5,52 +5,69 @@ import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
 import { MouseEventHandler, useEffect, useState } from 'react'
 import { NavMenuItem } from '@/types'
 
+const LINE_SECTION_WIDTH = '3rem'
+
 const List = styled.ul({
   listStyle: 'none',
   fontFamily: 'var(--font-buttons)',
   fontSize: '25px',
   lineHeight: '34px',
   position: 'relative',
-
-  '&&:before': {
-    content: '""',
-    position: 'absolute',
-    display: 'inline-block',
-    height: '100%',
-    width: '1px',
-    backgroundColor: 'var(--ui-line-color)',
-  },
 })
 
-const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isOnPath, $isActive, disabled }) => {
-  console.log('NavLink:', { $isActive, disabled })
+const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isOnPath, $isActive, disabled }) => ({
+  '&&': {
+    display: 'block',
+    padding: '0.6rem 1.5rem',
+    borderRadius: '0.6rem',
+    color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
+    backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    textDecoration: disabled ? 'line-through' : 'none',
+  },
+}))
+
+const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => {
+  console.log('li:', { $showLine, $isLast })
   return {
-    '&&': {
-      padding: '0.6rem 1.5rem',
-      borderRadius: '0.6rem',
-      color: $isActive ? 'white' : $isOnPath ? 'var(--highlight)' : '#191919',
-      backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
-      cursor: disabled ? 'not-allowed' : 'pointer',
-      textDecoration: disabled ? 'line-through' : 'none',
-    },
+    userSelect: 'none',
+    marginLeft: $showLine ? '3rem' : 0,
+    position: 'relative',
+
+    ...($showLine && {
+      '&&:after': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        top: '1.5rem',
+        left: '-1.6rem',
+        height: '2px',
+        width: '0.6rem',
+        backgroundColor: 'var(--ui-line-color)',
+      },
+      '&&::before': {
+        content: '""',
+        display: 'inline-block',
+        position: 'absolute',
+        left: '-1.6rem',
+        top: $isLast ? '-2rem' : '-1rem',
+        height: $isLast ? '3.5rem' : '100%',
+        width: '2px',
+        backgroundColor: 'var(--ui-line-color)',
+      },
+    }),
   }
 })
 
-const Li = styled.li({
-  userSelect: 'none',
-  marginLeft: '2rem',
-  marginTop: '1rem',
-})
-
 const ListItemHeader = styled.div({
-  position: 'relative',
+  // position: 'relative',
+  display: 'flex',
+  alignItems: 'stretch',
 })
 
 const ToggleButton = styled.div({
-  position: 'absolute',
-  left: '-2rem',
-  width: '2rem',
-  height: '2rem',
+  width: LINE_SECTION_WIDTH,
+
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -58,14 +75,19 @@ const ToggleButton = styled.div({
 })
 
 const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({
-  maxHeight: $isOpen ? '200vh' : 0,
+  position: 'relative',
   overflow: 'hidden',
+  top: $isOpen ? '-1rem' : 0,
+  paddingTop: $isOpen ? '1rem' : 0,
+  maxHeight: $isOpen ? '200vh' : 0,
   height: '100%',
   transition: 'max-height linear',
   transitionDuration: $isOpen ? '1s' : '0.3s',
 }))
 
-function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
+type ListItemProps = NavMenuItem & { isLast?: boolean; showLine?: boolean }
+
+function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListItemProps) {
   const hasSubitems = !!subItems?.length
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -88,8 +110,15 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
     setIsExpanded(prev => !prev)
   }
 
+  useEffect(() => {
+    console.log('showLine:', showLine, 'isLast:', isLast)
+  }, [showLine, isLast])
+
   return (
-    <Li>
+    <Li
+      $showLine={showLine}
+      $isLast={isLast}
+    >
       <ListItemHeader>
         {hasSubitems && (
           <ToggleButton onClick={toggle}>
@@ -113,12 +142,14 @@ function ListItem({ label, path, subItems, disabled }: NavMenuItem) {
   )
 }
 
-function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
+function NavList({ menuItems, isFirst }: { menuItems: NavMenuItem[]; isFirst?: boolean }) {
   return (
     <List>
-      {menuItems.map((item, i) => (
+      {menuItems.map((item, i, all) => (
         <ListItem
           key={i}
+          showLine={!isFirst}
+          isLast={i === all.length - 1}
           {...item}
         />
       ))}
@@ -128,6 +159,9 @@ function NavList({ menuItems }: { menuItems: NavMenuItem[] }) {
 
 export const renderNavList = (menuItems: NavMenuItem[]) => (
   <nav>
-    <NavList menuItems={menuItems} />
+    <NavList
+      isFirst
+      menuItems={menuItems}
+    />
   </nav>
 )
