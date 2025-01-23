@@ -64,7 +64,7 @@ export type SideBarProps = {
 }
 
 export function SideBar({ renderContent, darkButton }: SideBarProps) {
-  const [isExpanded, setExpanded] = useState(true)
+  const [isExpanded, setExpanded] = useState(false)
   const drawerRef = useRef<HTMLDivElement>(null)
 
   useClickAway(isExpanded, setExpanded, drawerRef)
