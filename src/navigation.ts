@@ -51,6 +51,24 @@ export function getNavMenu({ navigation, immersiveCathedral }: Dictionary): NavM
             {
               label: immersiveCathedral.molasses.weathering.degradationTypes.main,
               path: '/immersive/molasses/weathering/degradation-types',
+              subItems: [
+                {
+                  label: immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.title,
+                  path: '/immersive/molasses/weathering/degradation-types/black-crust',
+                },
+                {
+                  label: immersiveCathedral.molasses.weathering.degradationTypes.scaling.title,
+                  path: '/immersive/molasses/weathering/degradation-types/scaling',
+                },
+                { 
+                  label: immersiveCathedral.molasses.weathering.degradationTypes.sanding.title,
+                  path: '/immersive/molasses/weathering/degradation-types/sanding',
+                },
+                {
+                  label: immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title,
+                  path: '/immersive/molasses/weathering/degradation-types/biodeterioration',
+                }
+              ]
             },
           ],
         },
