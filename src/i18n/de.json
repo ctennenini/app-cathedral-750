@@ -235,6 +235,10 @@
         "title": "Können Sie den ältesten Stein in der Fassade identifizieren?",
         "body": "Tippen Sie auf einen der hervorgehobenen Steine"
       },
+      "incorrect": {
+        "title": "Versuchen Sie es nochmal!",
+        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
+      },
       "finish": {
         "title": "Richtig!",
         "body": [

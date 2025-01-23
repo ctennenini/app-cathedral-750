@@ -230,6 +230,10 @@
         "title": "Can you identify the oldest stone in the facade?",
         "body": "Tap on one of the highlighted stones"
       },
+      "incorrect": {
+        "title": "Try again!",
+        "body": "Tap on one of the highlighted stones"
+      },
       "finish": {
         "title": "Correct!",
         "body": [

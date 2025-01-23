@@ -53,16 +53,21 @@ export type OldestStoneGameProps = OldestStoneGameParams & {
   onClose: () => void
 }
 
+
+
 export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGameProps) {
   const successHref = useHref(successTarget)
   const { push } = useRouter()
-  const { start, finish } = useAppContext().dictionary.games.oldestStone
+  const dictionary = useAppContext().dictionary.games.oldestStone
 
-  const [isDone, setIsDone] = useState(false)
+  const [state, setState] = useState<keyof typeof dictionary>('start')
 
-  const text = isDone ? finish : start
-  const TitleComponent = isDone ? BigTitle : SmallTitle
+  const text = dictionary[state]
 
+  const TitleComponent = state === 'finish' ? BigTitle : SmallTitle
+
+  const done = state === 'finish'
+  
   return (
     <QuizPageLayout
       onClose={onClose}
@@ -74,7 +79,7 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
             <Separator />
             <Text>{text.body}</Text>
           </Main>
-          {isDone && (
+          {state && (
             <Footer>
               <NextButton
                 onClick={() => {
@@ -98,16 +103,20 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
                 left: '13%',
                 width: '19%',
                 height: '4%',
+                display: done ? 'none': 'block',
               },
+              onClick: () => setState('incorrect'),
             },
-
+            
             {
               style: {
                 top: '65.4%',
                 left: '12%',
                 width: '18%',
                 height: '4%',
+                display: done ? 'none': 'block',
               },
+              onClick: () => setState('incorrect'),
             },
 
             {
@@ -116,8 +125,10 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
                 left: '68%',
                 width: '19%',
                 height: '4%',
+                border: done ? 'none' : 'inherit',
+                background: done ? 'rgba(71, 204, 64, 0.4)' : 'inherit',
               },
-              onClick: () => setIsDone(true),
+              onClick: () => setState('finish'),
             },
           ]}
         />

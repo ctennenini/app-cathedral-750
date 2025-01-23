@@ -233,6 +233,10 @@
         "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
         "body": "Appuyez sur l'une des pierres en surbrillance"
       },
+      "incorrect": {
+        "title": "Essayez encore !",
+        "body": "Appuyez sur l'une des pierres en surbrillance"
+      },
       "finish": {
         "title": "Correct !",
         "body": [
