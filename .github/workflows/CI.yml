@@ -28,7 +28,9 @@ jobs:
         run: yarn typecheck
 
       - name: Build
-        run: PREFIX=/ethz-cathedral-slideshow yarn build
+        env:
+          PREFIX: /${{ github.event.repository.name }}
+        run: yarn build
 
       - name: Create .nojekyll
         run: touch ./out/.nojekyll
