@@ -10,14 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: yarn
@@ -25,8 +24,13 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Typecheck
+        run: yarn typecheck
+
       - name: Build
-        run: PREFIX=/ethz-cathedral-slideshow yarn build
+        env:
+          PREFIX: /${{ github.event.repository.name }}
+        run: yarn build
 
       - name: Create .nojekyll
         run: touch ./out/.nojekyll

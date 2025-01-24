@@ -27,37 +27,34 @@ const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isO
   },
 }))
 
-const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => {
-  console.log('li:', { $showLine, $isLast })
-  return {
-    userSelect: 'none',
-    marginLeft: $showLine ? '3rem' : 0,
-    position: 'relative',
+const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => ({
+  userSelect: 'none',
+  marginLeft: $showLine ? '3rem' : 0,
+  position: 'relative',
 
-    ...($showLine && {
-      '&&:after': {
-        content: '""',
-        display: 'block',
-        position: 'absolute',
-        top: '1.5rem',
-        left: '-1.6rem',
-        height: '2px',
-        width: '0.6rem',
-        backgroundColor: 'var(--ui-line-color)',
-      },
-      '&&::before': {
-        content: '""',
-        display: 'inline-block',
-        position: 'absolute',
-        left: '-1.6rem',
-        top: $isLast ? '-2rem' : '-1rem',
-        height: $isLast ? '3.5rem' : '100%',
-        width: '2px',
-        backgroundColor: 'var(--ui-line-color)',
-      },
-    }),
-  }
-})
+  ...($showLine && {
+    '&&:after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      top: '1.5rem',
+      left: '-1.6rem',
+      height: '2px',
+      width: '0.6rem',
+      backgroundColor: 'var(--ui-line-color)',
+    },
+    '&&::before': {
+      content: '""',
+      display: 'inline-block',
+      position: 'absolute',
+      left: '-1.6rem',
+      top: $isLast ? '-2rem' : '-1rem',
+      height: $isLast ? '3.5rem' : '100%',
+      width: '2px',
+      backgroundColor: 'var(--ui-line-color)',
+    },
+  }),
+}))
 
 const ListItemHeader = styled.div({
   // position: 'relative',
@@ -95,8 +92,6 @@ function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListIte
   const isOnPath = useIsOnPath(path)
   const isActive = useIsActive(path)
 
-  console.log('isActive', isActive)
-
   useEffect(() => {
     if (isOnPath) {
       setIsExpanded(true)
@@ -109,10 +104,6 @@ function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListIte
     e.preventDefault()
     setIsExpanded(prev => !prev)
   }
-
-  useEffect(() => {
-    console.log('showLine:', showLine, 'isLast:', isLast)
-  }, [showLine, isLast])
 
   return (
     <Li
