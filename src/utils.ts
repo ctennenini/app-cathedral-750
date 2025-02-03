@@ -1,5 +1,5 @@
 'use client'
-import { useParams } from 'next/navigation'
+import { useParams, redirect } from 'next/navigation'
 import { ComponentProps } from 'react'
 
 import NextLink from 'next/link'
@@ -31,4 +31,9 @@ export function useHref(href: HREF) {
   }
 
   return `/${locale}/${href}`
+}
+
+export function Go({ to }: { to: HREF }) {
+  const augmentedHref = useHref(to)
+  return redirect(augmentedHref.toString())
 }
