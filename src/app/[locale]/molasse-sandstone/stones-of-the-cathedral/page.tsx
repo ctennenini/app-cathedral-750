@@ -5,18 +5,18 @@ import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function StonesOfTheCathedral({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
-
+  const { pages } = await getDictionary(locale)
+  pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge = 'Test your knowledge'
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.main}
-      subtitle={immersiveCathedral.molasses.sandstone.main}
-      text={immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.description}
+      title={pages.molasseSandstone.stonesOfTheCathedral.title}
+      subtitle={pages.molasseSandstone.title}
+      text={pages.molasseSandstone.stonesOfTheCathedral.description}
       actions={[
         {
-          label: immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.testYourKnowledge,
+          label: pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge,
           type: 'oldestStoneGame',
           params: {
             bgImg: bgImgBlurred,

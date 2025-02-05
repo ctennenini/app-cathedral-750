@@ -7,20 +7,20 @@ import microDustImg from './micro-dust.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function MicroDust({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.microDust.main}
-      subtitle={immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.main}
-      text={immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.microDust.description}
+      title={pages.atmosphericPollution.microDust.title}
+      subtitle={pages.atmosphericPollution.title}
+      text={pages.atmosphericPollution.microDust.description}
       backButtonTarget="/atmospheric-pollution/acid-rain"
       pullOutContent={{
         type: 'image',
         src: microDustImg,
-        alt: immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.acidRain.main,
+        alt: pages.atmosphericPollution.acidRain.title,
       }}
     />
   )

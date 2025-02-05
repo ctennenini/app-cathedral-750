@@ -7,15 +7,15 @@ import mapWithOverlay from './map-of-switzerland-with-overlay.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function GeologicalInformation({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.sandstone.geologicalInformation.main}
-      subtitle={immersiveCathedral.molasses.sandstone.main}
-      text={immersiveCathedral.molasses.sandstone.geologicalInformation.description}
+      title={pages.molasseSandstone.geologicalInformation.title}
+      subtitle={pages.molasseSandstone.title}
+      text={pages.molasseSandstone.geologicalInformation.description}
       pullOutContent={[
         {
           type: 'image',

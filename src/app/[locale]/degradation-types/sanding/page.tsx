@@ -5,15 +5,15 @@ import bgImg from '@/assets/bg-images/frog-perspective-1-blurred.png'
 import sandingExample from './sanding-example.jpeg'
 
 export default async function Sanding({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.degradationTypes.sanding.title}
-      subtitle={immersiveCathedral.molasses.weathering.main}
-      text={immersiveCathedral.molasses.weathering.degradationTypes.sanding.description}
+      title={pages.degradationTypes.sanding.title}
+      subtitle={pages.degradationTypes.title}
+      text={pages.degradationTypes.sanding.description}
       nextButtonTarget="/degradation-types/biodeterioration"
       backButtonTarget="/degradation-types/scaling"
       pullOutContent={[

@@ -10,18 +10,18 @@ import biodeterioation from './biodeterioation.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function DegradationTypes({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.degradationTypes.main}
-      subtitle={immersiveCathedral.molasses.weathering.main}
-      text={immersiveCathedral.molasses.weathering.degradationTypes.description}
+      title={pages.degradationTypes.title}
+      subtitle={pages.weatheringOfMolasse.title}
+      text={pages.degradationTypes.description}
       actions={[
         {
-          label: immersiveCathedral.molasses.weathering.degradationTypes.testYourKnowledge,
+          label: pages.degradationTypes.testYourKnowledge,
           type: 'degradationTypesGame',
           params: {
             bgImg: bgImgBlurred,
@@ -35,22 +35,22 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
           items: [
             {
               src: blackCrustSrc,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.title,
+              label: pages.degradationTypes.blackCrust.title,
               href: '/degradation-types/black-crust',
             },
             {
               src: scalingSrc,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.scaling.title,
+              label: pages.degradationTypes.scaling.title,
               href: '/degradation-types/scaling',
             },
             {
               src: sanding,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.sanding.title,
+              label: pages.degradationTypes.sanding.title,
               href: '/degradation-types/sanding',
             },
             {
               src: biodeterioation,
-              label: immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title,
+              label: pages.degradationTypes.biodeterioration.title,
               href: '/degradation-types/biodeterioration',
             },
           ],

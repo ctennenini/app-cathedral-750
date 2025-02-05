@@ -16,12 +16,14 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.12",
     "@types/mdx": "^2.0.13",
+    "lodash": "^4.17.21",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.15",
     "@types/node": "^22.10.5",
     "@types/react": "18.3.10",
     "@types/react-dom": "^18",

@@ -1,28 +1,30 @@
 {
-  "start": {
-    "title": [
-      "The Cathedral",
-      "of Lausanne"
-    ],
-    "subtitle": "Center for Digital Information",
-    "actions": {
-      "website": "Cathedral Web Site",
-      "birthday": "750th Birthday",
-      "immersive": "The Immersive Cathedral"
-    }
-  },
-  "immersiveCathedral": {
-    "title": [
-      "The Immersive",
-      "Cathedral"
-    ],
-    "subtitle": "Main Menu",
-    "actions": {
-      "molasses": "Molasse and its weathering",
-      "conservation": "Conservation strategies",
-      "vaults": "The vaults of the cathedral"
+  "pages": {
+    "start": {
+      "title": [
+        "The Cathedral",
+        "of Lausanne"
+      ],
+      "subtitle": "Center for Digital Information",
+      "actions": {
+        "website": "Cathedral Web Site",
+        "birthday": "750th Birthday",
+        "immersive": "The Immersive Cathedral"
+      }
     },
-    "molasses": {
+    "immersiveCathedral": {
+      "title": [
+        "The Immersive",
+        "Cathedral"
+      ],
+      "subtitle": "Main Menu",
+      "actions": {
+        "molasses": "Molasse and its weathering",
+        "conservation": "Conservation strategies",
+        "vaults": "The vaults of the cathedral"
+      }
+    },
+    "molassesAndItsWeathering": {
       "title": "Molasse and its weathering",
       "description": [
         "The cathedral of Lausanne was built with a local molasse sandstone, that is particularly sensitive to water.",
@@ -33,195 +35,167 @@
         "sandstone": "Molasse Sandstone",
         "weathering": "Weathering of Molasse",
         "interactive": "Interactive Tour"
-      },
-      "sandstone": {
-        "main": "Molasse Sandstone",
-        "stonesOfTheCathedral": {
-          "main": "Stones of the Cathedral",
-          "description": [
-            [
-              "The Lausanne Cathedral is built from a variety of stones originating from different quarries all around Switzerland and some parts of Germany.",
-              "During the 19th century, the regional molasse sandstone of exposed architectural elements of the Cathedral was replaced with limestones and “harder” sandstones from the wider region of the canton Vaud."
-            ],
-            [
-              "In the 20th century, due to the scarcity of regional quarries, the general substitution of local molasse sandstone for maintenance and restoration became common practice.",
-              "A variety of replacement sandstones from Fribourg, Bern, Zug, and Hannover (Oberkirchen, Germany) were utilized in its place."
-            ]
-          ],
-          "testYourKnowledge": "Test your knowledge!"
-        },
-        "greyMolasse": {
-          "main": "Molasses Gris",
-          "description": [
-            "It is a molassic sandstone from Lausanne and was placed in the Cathedral in the 12th Century CE (Gothic period).",
-            "It is a type of sedimentary stone which is predominant on the south tower of the Transept. This sandstone most likely came from the nearby quarries.",
-            "This stone is particularly sensitive to water due to the presence of swelling clays."
-          ]
-        },
-        "molasseSandstone": {
-          "main": "The Molasse Sandstone",
-          "description": [
-            [
-              "The Swiss Molasse rock formation stretches north of the Alps from the Lake Léman region in the west of Switzerland to the Constance Lake in the east.",
-              "It comprises a variety of calcite- bound sandstones, which can contain swelling clays."
-            ],
-            [
-              "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
-              "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
-            ]
-          ],
-          "actions": {
-            "geologicalInformation": "Geological Information",
-            "properties": "Properties of Molasse",
-            "typesOfStones": "Types of Stones",
-            "interactive": "Interactive Tour"
-          }
-        },
-        "geologicalInformation": {
-          "main": "Geological Information",
-          "description": [
-            [
-              "The geology of Switzerland covers the Central Alps, a segment of the Alpine chain located between the Western Alps of France and Italy and the Eastern Alps of Italy, Austria and Germany.",
-              "In this segment the Alpine chain is particularly narrow, yet it contains all the major tectonic units and exhibits landmark landscapes and landforms for which the Alps are known."
-            ],
-            [
-              "To the north, the Swiss Plateau ex-tends from Lake Geneva to Bern, Zürich, and Lake Constance tapering off from around 600 to 400 m a.s.l. This plateau corresponds to what is called the Molasse Basin.",
-              "<b>Click on the map</b> to learn more about the different Molasse, the quarries and their characteristics. "
-            ]
-          ]
-        }
-      },
-      "weathering": {
-        "main": "Weathering of Molasse",
+      }
+    },
+    "molasseSandstone": {
+      "title": "Molasse Sandstone",
+      "stonesOfTheCathedral": {
+        "title": "Stones of the Cathedral",
         "description": [
-          "The process of degradation is a <b>complex system that involves</b> different factors.",
-          "The weathering mechanisms are the physical/chemical processes involved in the degradation.",
-          "The degradation type (or patterns) refers to how damage manifest in a larger scale."
+          [
+            "The Lausanne Cathedral is built from a variety of stones originating from different quarries all around Switzerland and some parts of Germany.",
+            "During the 19th century, the regional molasse sandstone of exposed architectural elements of the Cathedral was replaced with limestones and “harder” sandstones from the wider region of the canton Vaud."
+          ],
+          [
+            "In the 20th century, due to the scarcity of regional quarries, the general substitution of local molasse sandstone for maintenance and restoration became common practice.",
+            "A variety of replacement sandstones from Fribourg, Bern, Zug, and Hannover (Oberkirchen, Germany) were utilized in its place."
+          ]
+        ],
+        "testYourKnowledge": "Test your knowledge!"
+      },
+      "molasseGris": {
+        "title": "Molasses Gris",
+        "description": [
+          "It is a molassic sandstone from Lausanne and was placed in the Cathedral in the 12th Century CE (Gothic period).",
+          "It is a type of sedimentary stone which is predominant on the south tower of the Transept. This sandstone most likely came from the nearby quarries.",
+          "This stone is particularly sensitive to water due to the presence of swelling clays."
+        ]
+      },
+      "molasseSandstone": {
+        "title": "The Molasse Sandstone",
+        "description": [
+          [
+            "The Swiss Molasse rock formation stretches north of the Alps from the Lake Léman region in the west of Switzerland to the Constance Lake in the east.",
+            "It comprises a variety of calcite- bound sandstones, which can contain swelling clays."
+          ],
+          [
+            "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
+            "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
+          ]
         ],
         "actions": {
-          "mechanisms": "Weathering Mechanisms",
-          "types": "Degradation Types"
-        },
-        "degradationTypes": {
-          "main": "Degradation Types",
-          "description": [
-            [
-              "The different weathering mechanisms do not always have an univocal correlation with the <b>degradation pattern observed</b>.",
-              "These are strongly related to the micro-climate the stone is subjected to and in consequence their position in the building."
-            ],
-            [
-              "The compresence in the same point of different degradation pattern can lead their identification difficult.",
-              "The major degradation patterns observed on the cathedral can be classified according these four classes."
-            ]
-          ],
-          "testYourKnowledge": "Test your knowledge!",
-          "blackCrust": {
-            "title": "Black Crust",
-            "description": [
-              "Black crusts are classified as kind of crust developing generally on areas protected against direct rainfall or water runoff in urban environment.",
-              "Black crusts usually adhere firmly to the substrate. They are composed mainly of particles from the atmosphere, trapped into a gypsum (CaSO4.2H2O) matrix."
-            ]
-          },
-          "scaling": {
-            "title": "Scaling",
-            "description": [
-              "Detachment of stone as a scale or a stack of scales, not following any stone structure and detaching like fish scales or parallel to the stone surface. The thickness of a scale is generally of millimetric to centimetric scale.",
-              "It can be observed in areas exposed both to rain and sun. It represents the most challenging degradation pattern to evaluate, understand and restore."
-            ]
-          },
-          "sanding": {
-            "title": "Sanding",
-            "description": [
-              "Lorem Ipsum Sandy Sit Amet."
-            ]
-          },
-          "biodeterioration": {
-            "title": "Biodeterioration",
-            "description": [
-              "In the areas more hit by the rain or where water percolates, he microorganisms such as fungi and musses find their natural humid environment to proliferate.",
-              "The resultant damage is not extremely dangerous for stone preservation but can create unpleasant aesthetic drawbacks."
-            ]
-          }
-        },
-        "weatheringMechanisms": {
-          "title": [
-            "Weathering",
-            "Mechanisms"
-          ],
-          "description": [
-            "Water is involved in all types of mechanisms of stone weathering.",
-            "You can get further information on each of them by clicking on the <b>corresponding buttons</b>."
-          ],
-          "actions": {
-            "freezeThaw": "Freeze - Thaw Action",
-            "swellingClays": "Swelling Clays",
-            "saltCrystallization": "Salt Crystallization",
-            "atmosphericPollution": "Atmospheric Pollution",
-            "biologicalAttack": "Biological Attack"
-          },
-          "freezeThaw": {
-            "main": "Freeze - Thaw Action",
-            "trappedWater": {
-              "main": "Trapped Water",
-              "description": [
-                "Freezing water in porous materials can cause damage by various mechanisms.",
-                "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
-              ]
-            }
-          },
-          "atmosphericPollution": {
-            "main": "Atmospheric Pollution",
-            "acidRain": {
-              "main": "Acid Rain",
-              "description": [
-                "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
-                "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
-                "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
-              ],
-              "legendItems": {
-                "swellingClays": "Swelling Clays",
-                "calcite": "Calcitic Cement",
-                "silica": "Silica Grains"
-              }
-            },
-            "microDust": {
-              "main": "Microparticles and Dust",
-              "description": [
-                "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
-                "This led to the formation of the so called “black crusts”."
-              ]
-            }
-          }
+          "geologicalInformation": "Geological Information",
+          "properties": "Properties of Molasse",
+          "typesOfStones": "Types of Stones",
+          "interactive": "Interactive Tour"
         }
-      }
-    }
-  },
-  "navigation": {
-    "molasses": {
-      "main": "Molasses and its weathering",
-      "sandstone": {
-        "main": "Molasse Sandstone"
       },
-      "weathering": {
-        "main": "Weathering of Molasse",
-        "mechanisms": {
-          "main": "Weathering Mechanisms",
-          "freezeThaw": "Freeze - Thaw Action",
-          "swellingClays": "Swelling Clays",
-          "crystallizationPressure": "Crystallization Pressure",
-          "atmosphericPollution": "Atmospheric Pollution",
-          "biologicalAttack": "Biological Attack"
-        },
-        "degradationType": {
-          "main": "Degradation Type"
+      "geologicalInformation": {
+        "title": "Geological Information",
+        "description": [
+          [
+            "The geology of Switzerland covers the Central Alps, a segment of the Alpine chain located between the Western Alps of France and Italy and the Eastern Alps of Italy, Austria and Germany.",
+            "In this segment the Alpine chain is particularly narrow, yet it contains all the major tectonic units and exhibits landmark landscapes and landforms for which the Alps are known."
+          ],
+          [
+            "To the north, the Swiss Plateau ex-tends from Lake Geneva to Bern, Zürich, and Lake Constance tapering off from around 600 to 400 m a.s.l. This plateau corresponds to what is called the Molasse Basin.",
+            "<b>Click on the map</b> to learn more about the different Molasse, the quarries and their characteristics. "
+          ]
+        ]
+      }
+    },
+    "weatheringOfMolasse": {
+      "title": "Weathering of Molasse",
+      "description": [
+        "The process of degradation is a <b>complex system that involves</b> different factors.",
+        "The weathering mechanisms are the physical/chemical processes involved in the degradation.",
+        "The degradation type (or patterns) refers to how damage manifest in a larger scale."
+      ],
+      "actions": {
+        "mechanisms": "Weathering Mechanisms",
+        "types": "Degradation Types"
+      }
+    },
+    "degradationTypes": {
+      "title": "Degradation Types",
+      "description": [
+        [
+          "The different weathering mechanisms do not always have an univocal correlation with the <b>degradation pattern observed</b>.",
+          "These are strongly related to the micro-climate the stone is subjected to and in consequence their position in the building."
+        ],
+        [
+          "The compresence in the same point of different degradation pattern can lead their identification difficult.",
+          "The major degradation patterns observed on the cathedral can be classified according these four classes."
+        ]
+      ],
+      "testYourKnowledge": "Test your knowledge!",
+      "blackCrust": {
+        "title": "Black Crust",
+        "description": [
+          "Black crusts are classified as kind of crust developing generally on areas protected against direct rainfall or water runoff in urban environment.",
+          "Black crusts usually adhere firmly to the substrate. They are composed mainly of particles from the atmosphere, trapped into a gypsum (CaSO4.2H2O) matrix."
+        ]
+      },
+      "scaling": {
+        "title": "Scaling",
+        "description": [
+          "Detachment of stone as a scale or a stack of scales, not following any stone structure and detaching like fish scales or parallel to the stone surface. The thickness of a scale is generally of millimetric to centimetric scale.",
+          "It can be observed in areas exposed both to rain and sun. It represents the most challenging degradation pattern to evaluate, understand and restore."
+        ]
+      },
+      "sanding": {
+        "title": "Sanding",
+        "description": [
+          "Lorem Ipsum Sandy Sit Amet."
+        ]
+      },
+      "biodeterioration": {
+        "title": "Biodeterioration",
+        "description": [
+          "In the areas more hit by the rain or where water percolates, he microorganisms such as fungi and musses find their natural humid environment to proliferate.",
+          "The resultant damage is not extremely dangerous for stone preservation but can create unpleasant aesthetic drawbacks."
+        ]
+      }
+    },
+    "weatheringMechanisms": {
+      "title": [
+        "Weathering",
+        "Mechanisms"
+      ],
+      "description": [
+        "Water is involved in all types of mechanisms of stone weathering.",
+        "You can get further information on each of them by clicking on the <b>corresponding buttons</b>."
+      ],
+      "actions": {
+        "freezeThaw": "Freeze - Thaw Action",
+        "swellingClays": "Swelling Clays",
+        "saltCrystallization": "Salt Crystallization",
+        "atmosphericPollution": "Atmospheric Pollution",
+        "biologicalAttack": "Biological Attack"
+      },
+      "freezeThaw": {
+        "title": "Freeze - Thaw Action",
+        "trappedWater": {
+          "title": "Trapped Water",
+          "description": [
+            "Freezing water in porous materials can cause damage by various mechanisms.",
+            "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
+          ]
         }
       }
     },
-    "conservationStrategies": {
-      "main": "Strategies for Conservation"
-    },
-    "vaults": {
-      "main": "Vaults of the Cathedral"
+    "atmosphericPollution": {
+      "title": "Atmospheric Pollution",
+      "acidRain": {
+        "title": "Acid Rain",
+        "description": [
+          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+          "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
+          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+        ],
+        "legendItems": {
+          "swellingClays": "Swelling Clays",
+          "calcite": "Calcitic Cement",
+          "silica": "Silica Grains"
+        }
+      },
+      "microDust": {
+        "title": "Microparticles and Dust",
+        "description": [
+          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+          "This led to the formation of the so called “black crusts”."
+        ]
+      }
     }
   },
   "games": {

@@ -2,70 +2,70 @@ import { Dictionary } from '@/i18n'
 
 import { NavMenuItem } from '@/types'
 
-export function getNavMenu({ navigation, immersiveCathedral }: Dictionary): NavMenuItem[] {
+export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
   return [
     {
-      label: immersiveCathedral.molasses.title,
+      label: pages.molassesAndItsWeathering.title,
       path: '/molasse-and-its-weathering',
       subItems: [
         {
-          label: navigation.molasses.sandstone.main,
+          label: pages.molasseSandstone.title,
           path: '/molasse-sandstone',
           subItems: [
             {
-              label: immersiveCathedral.molasses.sandstone.stonesOfTheCathedral.main,
+              label: pages.molasseSandstone.stonesOfTheCathedral.title,
               path: '/molasse-sandstone/stones-of-the-cathedral',
             },
             {
-              label: immersiveCathedral.molasses.sandstone.greyMolasse.main,
+              label: pages.molasseSandstone.molasseGris.title,
               path: '/molasse-sandstone/molasse-gris',
             },
             {
-              label: immersiveCathedral.molasses.sandstone.molasseSandstone.main,
+              label: pages.molasseSandstone.molasseSandstone.title,
               path: '/molasse-sandstone/the-molasse-sandstone',
             },
             {
-              label: immersiveCathedral.molasses.sandstone.geologicalInformation.main,
+              label: pages.molasseSandstone.geologicalInformation.title,
               path: '/molasse-sandstone/geological-information',
             },
           ],
         },
         {
-          label: navigation.molasses.weathering.main,
+          label: pages.weatheringOfMolasse.title,
           path: '/weathering-of-molasse',
           subItems: [
             {
-              label: immersiveCathedral.molasses.weathering.weatheringMechanisms.title,
+              label: pages.weatheringMechanisms.title,
               path: '/weathering-mechanisms',
               subItems: [
                 {
-                  label: immersiveCathedral.molasses.weathering.weatheringMechanisms.freezeThaw.main,
+                  label: pages.weatheringMechanisms.freezeThaw.title,
                   path: '/weathering-mechanisms/freeze-thaw',
                 },
                 {
-                  label: immersiveCathedral.molasses.weathering.weatheringMechanisms.atmosphericPollution.main,
+                  label: pages.atmosphericPollution.title,
                   path: '/atmospheric-pollution',
                 },
               ],
             },
             {
-              label: immersiveCathedral.molasses.weathering.degradationTypes.main,
+              label: pages.degradationTypes.title,
               path: '/degradation-types',
               subItems: [
                 {
-                  label: immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.title,
+                  label: pages.degradationTypes.blackCrust.title,
                   path: '/degradation-types/black-crust',
                 },
                 {
-                  label: immersiveCathedral.molasses.weathering.degradationTypes.scaling.title,
+                  label: pages.degradationTypes.scaling.title,
                   path: '/degradation-types/scaling',
                 },
                 {
-                  label: immersiveCathedral.molasses.weathering.degradationTypes.sanding.title,
+                  label: pages.degradationTypes.sanding.title,
                   path: '/degradation-types/sanding',
                 },
                 {
-                  label: immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title,
+                  label: pages.degradationTypes.biodeterioration.title,
                   path: '/degradation-types/biodeterioration',
                 },
               ],

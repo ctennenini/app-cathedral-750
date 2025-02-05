@@ -4,29 +4,29 @@ import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function MolassesAndItsWeathering({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.title}
-      text={immersiveCathedral.molasses.description}
+      title={pages.molassesAndItsWeathering.title}
+      text={pages.molassesAndItsWeathering.description}
       backButtonTarget="/the-immersive-cathedral"
       pullOutContent={{
         type: 'links',
         links: [
           {
             href: '/molasse-sandstone',
-            label: immersiveCathedral.molasses.actions.sandstone,
+            label: pages.molassesAndItsWeathering.actions.sandstone,
           },
           {
             href: '/weathering-of-molasse',
-            label: immersiveCathedral.molasses.actions.weathering,
+            label: pages.molassesAndItsWeathering.actions.weathering,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.actions.interactive,
+            label: pages.molassesAndItsWeathering.actions.interactive,
             arrow: true,
             $primary: true,
             disabled: true,

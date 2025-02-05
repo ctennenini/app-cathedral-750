@@ -4,25 +4,25 @@ import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function Weathering({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.main}
-      text={immersiveCathedral.molasses.weathering.description}
+      title={pages.weatheringOfMolasse.title}
+      text={pages.weatheringOfMolasse.description}
       backButtonTarget="/molasse-and-its-weathering"
       pullOutContent={{
         type: 'links',
         links: [
           {
             href: '/weathering-mechanisms',
-            label: immersiveCathedral.molasses.weathering.actions.mechanisms,
+            label: pages.weatheringOfMolasse.actions.mechanisms,
           },
           {
             href: `/degradation-types`,
-            label: immersiveCathedral.molasses.weathering.actions.types,
+            label: pages.weatheringOfMolasse.actions.types,
           },
         ],
       }}

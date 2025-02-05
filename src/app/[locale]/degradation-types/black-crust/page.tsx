@@ -5,15 +5,15 @@ import bgImg from '@/assets/bg-images/frog-perspective-1-blurred.png'
 import blackCrustExample from './black-crust-example.png'
 
 export default async function BlackCrust({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.title}
-      subtitle={immersiveCathedral.molasses.weathering.degradationTypes.main}
-      text={immersiveCathedral.molasses.weathering.degradationTypes.blackCrust.description}
+      title={pages.degradationTypes.blackCrust.title}
+      subtitle={pages.degradationTypes.title}
+      text={pages.degradationTypes.blackCrust.description}
       nextButtonTarget="/degradation-types/scaling"
       backButtonTarget="/degradation-types"
       pullOutContent={[

@@ -12,22 +12,22 @@ export default async function Home({ params: { locale } }: GlobalStaticPageProps
     return redirect(`/${defaultLanguage}`)
   }
 
-  const { start } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   const actionItems: TitlePageLayoutProps['links'] = [
     {
       href: 'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
-      label: start.actions.website,
+      label: pages.start.actions.website,
       external: true,
     },
     {
       href: `#`,
-      label: start.actions.birthday,
+      label: pages.start.actions.birthday,
       disabled: true,
     },
     {
       href: `/the-immersive-cathedral`,
-      label: start.actions.immersive,
+      label: pages.start.actions.immersive,
       $primary: true,
       arrow: true,
     },
@@ -35,8 +35,8 @@ export default async function Home({ params: { locale } }: GlobalStaticPageProps
 
   return (
     <TitlePageLayout
-      title={start.title}
-      subtitle={start.subtitle}
+      title={pages.start.title}
+      subtitle={pages.start.subtitle}
       bgImg={bgImg}
       links={actionItems}
       buttonColor="light"

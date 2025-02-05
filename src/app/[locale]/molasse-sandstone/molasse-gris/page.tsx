@@ -4,15 +4,15 @@ import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function GreyMolasse({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.sandstone.greyMolasse.main}
-      subtitle={immersiveCathedral.molasses.sandstone.main}
-      text={immersiveCathedral.molasses.sandstone.greyMolasse.description}
+      title={pages.molasseSandstone.molasseGris.title}
+      subtitle={pages.molasseSandstone.title}
+      text={pages.molasseSandstone.molasseGris.description}
       backButtonTarget="/molasse-sandstone/stones-of-the-cathedral"
       nextButtonTarget="/molasse-sandstone/the-molasse-sandstone"
     />
