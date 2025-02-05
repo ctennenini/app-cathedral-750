@@ -5,39 +5,39 @@ import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function WeatheringMechanisms({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.weatheringMechanisms.title}
-      subtitle={immersiveCathedral.molasses.weathering.main}
-      text={immersiveCathedral.molasses.weathering.weatheringMechanisms.description}
+      title={pages.weatheringMechanisms.title}
+      subtitle={pages.weatheringOfMolasse.title}
+      text={pages.weatheringMechanisms.description}
       pullOutContent={{
         type: 'links',
         links: [
           {
             href: '/weathering-mechanisms/freeze-thaw',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.freezeThaw,
+            label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.swellingClays,
+            label: pages.weatheringMechanisms.actions.swellingClays,
             disabled: true,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.saltCrystallization,
+            label: pages.weatheringMechanisms.actions.saltCrystallization,
             disabled: true,
           },
           {
             href: '/atmospheric-pollution',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.atmosphericPollution,
+            label: pages.weatheringMechanisms.actions.atmosphericPollution,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.weathering.weatheringMechanisms.actions.biologicalAttack,
+            label: pages.weatheringMechanisms.actions.biologicalAttack,
             disabled: true,
           },
         ],

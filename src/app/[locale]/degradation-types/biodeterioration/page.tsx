@@ -5,23 +5,23 @@ import bgImg from '@/assets/bg-images/frog-perspective-1-blurred.png'
 import biodeteriorationExample from './biodeterioration-example.png'
 
 export default async function Biodeterioration({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.title}
+      title={pages.degradationTypes.biodeterioration.title}
       titleProps={{
         style: { fontSize: '3.5rem' },
       }}
-      subtitle={immersiveCathedral.molasses.weathering.degradationTypes.main}
-      text={immersiveCathedral.molasses.weathering.degradationTypes.biodeterioration.description}
+      subtitle={pages.degradationTypes.title}
+      text={pages.degradationTypes.biodeterioration.description}
       backButtonTarget="/degradation-types/sanding"
       actions={[
         {
           type: 'link',
-          label: immersiveCathedral.molasses.weathering.main,
+          label: pages.weatheringOfMolasse.title,
           params: {
             href: '/molasse-and-its-weathering',
             $primary: true,

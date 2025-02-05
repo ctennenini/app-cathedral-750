@@ -3,37 +3,37 @@ import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function MolasseSandstone({ params: { locale } }: GlobalStaticPageProps) {
-  const { immersiveCathedral } = await getDictionary(locale)
+export default async function TheMolasseSandstone({ params: { locale } }: GlobalStaticPageProps) {
+  const { pages } = await getDictionary(locale)
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={immersiveCathedral.molasses.sandstone.molasseSandstone.main}
-      subtitle={immersiveCathedral.molasses.sandstone.main}
-      text={immersiveCathedral.molasses.sandstone.molasseSandstone.description}
+      title={pages.molasseSandstone.molasseSandstone.title}
+      subtitle={pages.molasseSandstone.title}
+      text={pages.molasseSandstone.molasseSandstone.description}
       backButtonTarget="/molasse-sandstone/molasse-gris"
       pullOutContent={{
         type: 'links',
         links: [
           {
             href: '/molasse-sandstone/geological-information',
-            label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.geologicalInformation,
+            label: pages.molasseSandstone.molasseSandstone.actions.geologicalInformation,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.properties,
+            label: pages.molasseSandstone.molasseSandstone.actions.properties,
             disabled: true,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.typesOfStones,
+            label: pages.molasseSandstone.molasseSandstone.actions.typesOfStones,
             disabled: true,
           },
           {
             href: '#',
-            label: immersiveCathedral.molasses.sandstone.molasseSandstone.actions.interactive,
+            label: pages.molasseSandstone.molasseSandstone.actions.interactive,
             disabled: true,
             arrow: true,
             $primary: true,

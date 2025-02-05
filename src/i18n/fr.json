@@ -1,28 +1,30 @@
 {
-  "start": {
-    "title": [
-      "Cathédrale",
-      "de Lausanne"
-    ],
-    "subtitle": "Centre d'information numérique",
-    "actions": {
-      "website": "Site Web de la Cathédrale",
-      "birthday": "750e anniversaire",
-      "immersive": "La Cathédrale immersive"
-    }
-  },
-  "immersiveCathedral": {
-    "title": [
-      "La Cathédrale",
-      "Immersive"
-    ],
-    "subtitle": "Menu principal",
-    "actions": {
-      "molasses": "Molasse et sa météorisation",
-      "conservation": "Stratégies de conservation",
-      "vaults": "Les voûtes de la cathédrale"
+  "pages": {
+    "start": {
+      "title": [
+        "Cathédrale",
+        "de Lausanne"
+      ],
+      "subtitle": "Centre d'information numérique",
+      "actions": {
+        "website": "Site Web de la Cathédrale",
+        "birthday": "750e anniversaire",
+        "immersive": "La Cathédrale immersive"
+      }
     },
-    "molasses": {
+    "immersiveCathedral": {
+      "title": [
+        "La Cathédrale",
+        "Immersive"
+      ],
+      "subtitle": "Menu principal",
+      "actions": {
+        "molasses": "Molasse et sa météorisation",
+        "conservation": "Stratégies de conservation",
+        "vaults": "Les voûtes de la cathédrale"
+      }
+    },
+    "molassesAndItsWeathering": {
       "title": "Molasse et sa météorisation",
       "description": [
         "La cathédrale de Lausanne a été construite avec une pierre de molasse locale, particulièrement sensible à l'eau.",
@@ -33,198 +35,167 @@
         "sandstone": "Pierre de molasse",
         "weathering": "Météorisation de la molasse",
         "interactive": "Visite interactive"
-      },
-      "sandstone": {
-        "main": "Pierre de molasse",
-        "stonesOfTheCathedral": {
-          "main": "Pierres de la cathédrale",
-          "description": [
-            [
-              "La cathédrale de Lausanne est construite à partir d'une variété de pierres provenant de différentes carrières de Suisse et de certaines parties d'Allemagne.",
-              "Au XIXe siècle, la molasse régionale de pierres de construction exposées de la cathédrale a été remplacée par des calcaires et des grès « plus durs » de la région élargie du canton de Vaud."
-            ],
-            [
-              "Au XXe siècle, en raison de la rareté des carrières régionales, la substitution générale de la molasse locale par des travaux d'entretien et de restauration est devenue une pratique courante.",
-              "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) ont été utilisés à sa place."
-            ]
-          ],
-          "testYourKnowledge": "Testez vos connaissances !"
-        },
-        "greyMolasse": {
-          "main": "Molasse Grise",
-          "description": [
-            "C'est une pierre de molasse de Lausanne et a été placée dans la cathédrale au XIIe siècle de notre ère (période gothique).",
-            "C'est un type de pierre sédimentaire qui est prédominant sur la tour sud du transept. Ce grès provient très probablement des carrières voisines.",
-            "Cette pierre est particulièrement sensible à l'eau en raison de la présence d'argiles gonflantes."
-          ]
-        },
-        "molasseSandstone": {
-          "main": "Le grès de molasse",
-          "description": [
-            [
-              "La formation rocheuse de molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse au lac de Constance à l'est.",
-              "Elle comprend une variété de grès liés au calcite, qui peuvent contenir des argiles gonflantes."
-            ],
-            [
-              "Dans le cadre de cette formation rocheuse, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la cathédrale de Lausanne.",
-              "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et employés pour des travaux de modification et d'entretien à la cathédrale."
-            ]
-          ],
-          "actions": {
-            "geologicalInformation": "Informations géologiques",
-            "properties": "Propriétés de la molasse",
-            "typesOfStones": "Types de pierres",
-            "interactive": "Visite interactive"
-          }
-        },
-        "geologicalInformation": {
-          "main": "Informations géologiques",
-          "description": [
-            [
-              "La géologie de la Suisse couvre les Alpes centrales, un segment de la chaîne alpine situé entre les Alpes occidentales de France et d'Italie et les Alpes orientales d'Italie, d'Autriche et d'Allemagne.",
-              "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les principales unités tectoniques et présente des paysages et des formes de relief emblématiques pour lesquels les Alpes sont connues."
-            ],
-            [
-              "Au nord, le plateau suisse s'étend du lac Léman à Berne, Zurich et le lac de Constance, s'effilant d'environ 600 à 400 m d'altitude. Ce plateau correspond à ce qu'on appelle le bassin molassique.",
-              "<b>Cliquez sur la carte</b> pour en savoir plus sur les différentes molasses, les carrières et leurs caractéristiques."
-            ]
-          ]
-        }
-      },
-      "weathering": {
-        "main": [
-          "Météorisation",
-          "de la Molasse"
-        ],
+      }
+    },
+    "molasseSandstone": {
+      "title": "Pierre de molasse",
+      "stonesOfTheCathedral": {
+        "title": "Pierres de la cathédrale",
         "description": [
-          "Le processus de dégradation est un <b>système complexe qui implique</b> différents facteurs.",
-          "Les mécanismes de météorisation sont les processus physiques/chimiques impliqués dans la dégradation.",
-          "Le type de dégradation (ou de motifs) fait référence à la manière dont les dommages se manifestent à une plus grande échelle."
+          [
+            "La cathédrale de Lausanne est construite à partir d'une variété de pierres provenant de différentes carrières de Suisse et de certaines parties d'Allemagne.",
+            "Au XIXe siècle, la molasse régionale de pierres de construction exposées de la cathédrale a été remplacée par des calcaires et des grès « plus durs » de la région élargie du canton de Vaud."
+          ],
+          [
+            "Au XXe siècle, en raison de la rareté des carrières régionales, la substitution générale de la molasse locale par des travaux d'entretien et de restauration est devenue une pratique courante.",
+            "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) ont été utilisés à sa place."
+          ]
+        ],
+        "testYourKnowledge": "Testez vos connaissances !"
+      },
+      "molasseGris": {
+        "title": "Molasse Grise",
+        "description": [
+          "C'est une pierre de molasse de Lausanne et a été placée dans la cathédrale au XIIe siècle de notre ère (période gothique).",
+          "C'est un type de pierre sédimentaire qui est prédominant sur la tour sud du transept. Ce grès provient très probablement des carrières voisines.",
+          "Cette pierre est particulièrement sensible à l'eau en raison de la présence d'argiles gonflantes."
+        ]
+      },
+      "molasseSandstone": {
+        "title": "Le grès de molasse",
+        "description": [
+          [
+            "La formation rocheuse de molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse au lac de Constance à l'est.",
+            "Elle comprend une variété de grès liés au calcite, qui peuvent contenir des argiles gonflantes."
+          ],
+          [
+            "Dans le cadre de cette formation rocheuse, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la cathédrale de Lausanne.",
+            "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et employés pour des travaux de modification et d'entretien à la cathédrale."
+          ]
         ],
         "actions": {
-          "mechanisms": "Mécanismes de météorisation",
-          "types": "Types de dégradation"
-        },
-        "degradationTypes": {
-          "main": "Types de dégradation",
-          "description": [
-            [
-              "Les différents mécanismes de météorisation n'ont pas toujours une corrélation univoque avec le <b>motif de dégradation observé</b>.",
-              "Ils sont fortement liés au microclimat auquel la pierre est soumise et, par conséquent, à sa position dans le bâtiment."
-            ],
-            [
-              "La coexistence dans le même point de différents motifs de dégradation peut rendre leur identification difficile.",
-              "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés en fonction de ces quatre classes."
-            ]
-          ],
-          "testYourKnowledge": "Testez vos connaissances !",
-          "blackCrust": {
-            "title": "Croûte noire",
-            "description": [
-              "Les croûtes noires sont généralement classées comme des croûtes qui se développent principalement dans des zones protégées de la pluie ou du ruissellement d'eau en milieu urbain.",
-              "Les croûtes noires adhèrent généralement fermement au substrat. Elles sont principalement composées de particules atmosphériques piégées dans une matrice de gypse (CaSO4.2H2O)."
-            ]
-          },
-          "scaling": {
-            "title": "Écaillage",
-            "description": [
-              "Détachement de la pierre sous forme d'une échelle ou d'une pile d'échelles, ne suivant aucune structure de pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une échelle est généralement de l'ordre du millimètre à l'échelle centimétrique.",
-              "Il peut être observé dans des zones exposées à la fois à la pluie et au soleil. Il représente le motif de dégradation le plus difficile à évaluer, à comprendre et à restaurer."
-            ]
-          },
-          "sanding": {
-            "title": "Le sanding",
-            "description": [
-              "Lorem Ipsum Sandy Sit Amet."
-            ]
-          },
-          "biodeterioration": {
-            "title": "Biodégradation",
-            "description": [
-              "Les microorganismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer dans les zones les plus touchées par la pluie ou là où l'eau percole.",
-              "Les dommages résultants ne sont pas extrêmement dangereux pour la préservation de la pierre, mais peuvent créer des inconvénients esthétiques désagréables."
-            ]
-          }
-        },
-        "weatheringMechanisms": {
-          "title": [
-            "Météorisation",
-            "Mécanismes"
-          ],
-          "description": [
-            "L'eau est impliquée dans tous les types de mécanismes de météorisation de la pierre.",
-            "Vous pouvez obtenir des informations supplémentaires sur chacun d'eux en cliquant sur les <b>boutons correspondants</b>."
-          ],
-          "actions": {
-            "freezeThaw": "Action gel - dégel",
-            "swellingClays": "Argiles gonflantes",
-            "saltCrystallization": "Cristallisation de sels",
-            "atmosphericPollution": "Pollution atmosphérique",
-            "biologicalAttack": "Attaque biologique"
-          },
-          "freezeThaw": {
-            "main": "Action gel - dégel",
-            "trappedWater": {
-              "main": "Eau piégée",
-              "description": [
-                "L'eau gelée dans les matériaux poreux peut causer des dommages par divers mécanismes.",
-                "Le premier et le plus dramatique est appelé « emprisonnement de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
-              ]
-            }
-          },
-          "atmosphericPollution": {
-            "main": "Pollution atmosphérique",
-            "acidRain": {
-              "main": "Pluie acide",
-              "description": [
-                "La pollution atmosphérique, en particulier les pluies acides, a été un problème sérieux pour la durabilité des bâtiments historiques dans le passé.",
-                "Les pierres contenant de la calcite ont été attaquées en raison de la dissolution de ces minéraux au contact de solutions acides.",
-                "Dans le cas du grès de molasse, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
-              ],
-              "legendItems": {
-                "swellingClays": "Argiles gonflantes",
-                "calcite": "Ciment calcitique",
-                "silica": "Grains de silice"
-              }
-            },
-            "microDust": {
-              "main": "Microparticules et poussières",
-              "description": [
-                "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation des sels à la surface des bâtiments.",
-                "Cela a conduit à la formation des « croûtes noires »."
-              ]
-            }
-          }
+          "geologicalInformation": "Informations géologiques",
+          "properties": "Propriétés de la molasse",
+          "typesOfStones": "Types de pierres",
+          "interactive": "Visite interactive"
         }
-      }
-    }
-  },
-  "navigation": {
-    "molasses": {
-      "main": "Molasse et sa météorisation",
-      "sandstone": {
-        "main": "Pierre de molasse"
       },
-      "weathering": {
-        "main": "Météorisation de la molasse",
-        "mechanisms": {
-          "main": "Mécanismes de météorisation",
-          "freezeThaw": "Action gel - dégel",
-          "swellingClays": "Argiles gonflantes",
-          "crystallizationPressure": "Pression de cristallisation",
-          "atmosphericPollution": "Pollution atmosphérique",
-          "biologicalAttack": "Attaque biologique"
-        },
-        "degradationType": {
-          "main": "Type de dégradation"
+      "geologicalInformation": {
+        "title": "Informations géologiques",
+        "description": [
+          [
+            "La géologie de la Suisse couvre les Alpes centrales, un segment de la chaîne alpine situé entre les Alpes occidentales de France et d'Italie et les Alpes orientales d'Italie, d'Autriche et d'Allemagne.",
+            "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les principales unités tectoniques et présente des paysages et des formes de relief emblématiques pour lesquels les Alpes sont connues."
+          ],
+          [
+            "Au nord, le plateau suisse s'étend du lac Léman à Berne, Zurich et le lac de Constance, s'effilant d'environ 600 à 400 m d'altitude. Ce plateau correspond à ce qu'on appelle le bassin molassique.",
+            "<b>Cliquez sur la carte</b> pour en savoir plus sur les différentes molasses, les carrières et leurs caractéristiques."
+          ]
+        ]
+      }
+    },
+    "weatheringOfMolasse": {
+      "title": "Météorisation de la Molasse",
+      "description": [
+        "Le processus de dégradation est un <b>système complexe qui implique</b> différents facteurs.",
+        "Les mécanismes de météorisation sont les processus physiques/chimiques impliqués dans la dégradation.",
+        "Le type de dégradation (ou de motifs) fait référence à la manière dont les dommages se manifestent à une plus grande échelle."
+      ],
+      "actions": {
+        "mechanisms": "Mécanismes de météorisation",
+        "types": "Types de dégradation"
+      }
+    },
+    "degradationTypes": {
+      "title": "Types de dégradation",
+      "description": [
+        [
+          "Les différents mécanismes de météorisation n'ont pas toujours une corrélation univoque avec le <b>motif de dégradation observé</b>.",
+          "Ils sont fortement liés au microclimat auquel la pierre est soumise et, par conséquent, à sa position dans le bâtiment."
+        ],
+        [
+          "La coexistence dans le même point de différents motifs de dégradation peut rendre leur identification difficile.",
+          "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés en fonction de ces quatre classes."
+        ]
+      ],
+      "testYourKnowledge": "Testez vos connaissances !",
+      "blackCrust": {
+        "title": "Croûte noire",
+        "description": [
+          "Les croûtes noires sont généralement classées comme des croûtes qui se développent principalement dans des zones protégées de la pluie ou du ruissellement d'eau en milieu urbain.",
+          "Les croûtes noires adhèrent généralement fermement au substrat. Elles sont principalement composées de particules atmosphériques piégées dans une matrice de gypse (CaSO4.2H2O)."
+        ]
+      },
+      "scaling": {
+        "title": "Écaillage",
+        "description": [
+          "Détachement de la pierre sous forme d'une échelle ou d'une pile d'échelles, ne suivant aucune structure de pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une échelle est généralement de l'ordre du millimètre à l'échelle centimétrique.",
+          "Il peut être observé dans des zones exposées à la fois à la pluie et au soleil. Il représente le motif de dégradation le plus difficile à évaluer, à comprendre et à restaurer."
+        ]
+      },
+      "sanding": {
+        "title": "Le sanding",
+        "description": [
+          "Lorem Ipsum Sandy Sit Amet."
+        ]
+      },
+      "biodeterioration": {
+        "title": "Biodégradation",
+        "description": [
+          "Les microorganismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer dans les zones les plus touchées par la pluie ou là où l'eau percole.",
+          "Les dommages résultants ne sont pas extrêmement dangereux pour la préservation de la pierre, mais peuvent créer des inconvénients esthétiques désagréables."
+        ]
+      }
+    },
+    "weatheringMechanisms": {
+      "title": [
+        "Météorisation",
+        "Mécanismes"
+      ],
+      "description": [
+        "L'eau est impliquée dans tous les types de mécanismes de météorisation de la pierre.",
+        "Vous pouvez obtenir des informations supplémentaires sur chacun d'eux en cliquant sur les <b>boutons correspondants</b>."
+      ],
+      "actions": {
+        "freezeThaw": "Action gel - dégel",
+        "swellingClays": "Argiles gonflantes",
+        "saltCrystallization": "Cristallisation de sels",
+        "atmosphericPollution": "Pollution atmosphérique",
+        "biologicalAttack": "Attaque biologique"
+      },
+      "freezeThaw": {
+        "title": "Action gel - dégel",
+        "trappedWater": {
+          "title": "Eau piégée",
+          "description": [
+            "L'eau gelée dans les matériaux poreux peut causer des dommages par divers mécanismes.",
+            "Le premier et le plus dramatique est appelé « emprisonnement de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
+          ]
         }
       }
     },
-    "conservationStrategies": {
-      "main": "Stratégies de conservation"
-    },
-    "vaults": {
-      "main": "Les voûtes de la cathédrale"
+    "atmosphericPollution": {
+      "title": "Pollution atmosphérique",
+      "acidRain": {
+        "title": "Pluie acide",
+        "description": [
+          "La pollution atmosphérique, en particulier les pluies acides, a été un problème sérieux pour la durabilité des bâtiments historiques dans le passé.",
+          "Les pierres contenant de la calcite ont été attaquées en raison de la dissolution de ces minéraux au contact de solutions acides.",
+          "Dans le cas du grès de molasse, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
+        ],
+        "legendItems": {
+          "swellingClays": "Argiles gonflantes",
+          "calcite": "Ciment calcitique",
+          "silica": "Grains de silice"
+        }
+      },
+      "microDust": {
+        "title": "Microparticules et poussières",
+        "description": [
+          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation des sels à la surface des bâtiments.",
+          "Cela a conduit à la formation des « croûtes noires »."
+        ]
+      }
     }
   },
   "games": {

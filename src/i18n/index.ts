@@ -1,3 +1,5 @@
+import merge from 'lodash/merge'
+
 export const getDictionary = async (locale: string) => {
   const common = await import('./common.json').then(m => m.default)
   let specific
@@ -15,10 +17,7 @@ export const getDictionary = async (locale: string) => {
       break
   }
 
-  return {
-    ...common,
-    ...specific,
-  }
+  return merge({}, common, specific)
 }
 
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>
