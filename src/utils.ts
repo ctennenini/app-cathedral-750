@@ -1,6 +1,6 @@
 'use client'
-import { useParams, usePathname, useRouter } from 'next/navigation'
-import { ComponentProps, useEffect } from 'react'
+import { useParams, usePathname, redirect, RedirectType } from 'next/navigation'
+import { ComponentProps } from 'react'
 
 import NextLink from 'next/link'
 
@@ -34,13 +34,6 @@ export function useHref(href: HREF) {
 
 export function Go({ to }: { to: HREF }) {
   const augmentedHref = useHref(to)
-  const router = useRouter()
 
-  console.log('Go:', augmentedHref)
-
-  useEffect(() => {
-    router.replace(augmentedHref.toString())
-  }, [router, augmentedHref])
-
-  return null
+  return redirect(augmentedHref.toString(), RedirectType.replace)
 }
