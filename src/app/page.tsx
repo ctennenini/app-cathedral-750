@@ -1,5 +1,6 @@
+import { defaultLanguage } from '@/config'
 import { redirect } from 'next/navigation'
 
 export default function Home() {
-  redirect('/en')
+  return redirect(`/${defaultLanguage}`)
 }

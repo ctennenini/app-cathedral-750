@@ -13,7 +13,15 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
   const [showOldestStoneGame, setShowOldestStoneGame] = useState(false)
   const [showDegradationTypesGame, setShowDegradationTypesGame] = useState(false)
 
-  const { type, params, label } = action
+  if (action.type === 'link') {
+    return (
+      <BigLink
+        $primary
+        label={action.label}
+        {...action.params}
+      />
+    )
+  }
 
   const onClick = () => {
     switch (action.type) {
@@ -25,21 +33,9 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
         setShowDegradationTypesGame(true)
         break
 
-      case 'link':
       default:
         console.error('action type not implemented:', action)
     }
-  }
-
-  if (type === 'link') {
-    return (
-      <BigLink
-        $primary
-        label={label}
-        // {...buttonProps}
-        {...params}
-      />
-    )
   }
 
   return (

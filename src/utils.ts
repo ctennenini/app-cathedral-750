@@ -1,6 +1,6 @@
 'use client'
-import { useParams } from 'next/navigation'
-import { ComponentProps } from 'react'
+import { useParams, usePathname, useRouter } from 'next/navigation'
+import { ComponentProps, useEffect } from 'react'
 
 import NextLink from 'next/link'
 
@@ -23,12 +23,24 @@ export type HREF = LinkProps['href']
 
 export function useHref(href: HREF) {
   const locale = useLocale()
-  const isHash = href === '#'
+  const pathname = usePathname()
 
-  const isExternal = href.toString().startsWith('http')
-  if (isExternal || isHash) {
-    return href
-  }
+  if (href.toString() === '#') return href
+  if (href.toString().startsWith('http')) return href
+  if (href.toString().startsWith('/')) return `/${locale}${href}`
 
-  return `/${locale}/${href}`
+  return pathname + '/' + href
+}
+
+export function Go({ to }: { to: HREF }) {
+  const augmentedHref = useHref(to)
+  const router = useRouter()
+
+  console.log('Go:', augmentedHref)
+
+  useEffect(() => {
+    router.replace(augmentedHref.toString())
+  }, [router, augmentedHref])
+
+  return null
 }

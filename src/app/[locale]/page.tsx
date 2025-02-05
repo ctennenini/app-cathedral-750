@@ -26,7 +26,7 @@ export default async function Home({ params: { locale } }: GlobalStaticPageProps
       disabled: true,
     },
     {
-      href: `/immersive`,
+      href: `/the-immersive-cathedral`,
       label: start.actions.immersive,
       $primary: true,
       arrow: true,
