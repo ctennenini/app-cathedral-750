@@ -23,7 +23,7 @@ export default async function Biodeterioration({ params: { locale } }: GlobalSta
           type: 'link',
           label: immersiveCathedral.molasses.weathering.main,
           params: {
-            href: '/molasses-and-its-weathering',
+            href: '/molasse-and-its-weathering',
             $primary: true,
           },
         },

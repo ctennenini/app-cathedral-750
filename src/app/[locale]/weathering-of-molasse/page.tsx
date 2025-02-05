@@ -12,7 +12,7 @@ export default async function Weathering({ params: { locale } }: GlobalStaticPag
       bgImg={bgImg}
       title={immersiveCathedral.molasses.weathering.main}
       text={immersiveCathedral.molasses.weathering.description}
-      backButtonTarget="/molasses-and-its-weathering"
+      backButtonTarget="/molasse-and-its-weathering"
       pullOutContent={{
         type: 'links',
         links: [

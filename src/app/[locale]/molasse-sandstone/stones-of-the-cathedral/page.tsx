@@ -20,11 +20,11 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
           type: 'oldestStoneGame',
           params: {
             bgImg: bgImgBlurred,
-            successTarget: '/molasse-sandstone/grey-molasse',
+            successTarget: '/molasse-sandstone/molasse-gris',
           },
         },
       ]}
-      backButtonTarget="/molasses-and-its-weathering"
+      backButtonTarget="/molasse-and-its-weathering"
       nextButtonTarget="/molasse-sandstone/molasse-gris"
     />
   )

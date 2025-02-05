@@ -3,7 +3,7 @@ import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function MolassesDegradation({ params: { locale } }: GlobalStaticPageProps) {
+export default async function MolassesAndItsWeathering({ params: { locale } }: GlobalStaticPageProps) {
   const { immersiveCathedral } = await getDictionary(locale)
 
   return (

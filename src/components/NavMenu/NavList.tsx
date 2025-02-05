@@ -117,11 +117,12 @@ function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListIte
         )}
         <NavLink
           href={path}
-          label={label}
           disabled={disabled}
           $isOnPath={isOnPath}
           $isActive={isActive}
-        />
+        >
+          {label}
+        </NavLink>
       </ListItemHeader>
       {hasSubitems && (
         <Expander $isOpen={isExpanded}>
