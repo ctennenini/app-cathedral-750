@@ -234,7 +234,7 @@
           "Découvrons-les ensemble..."
         ]
       },
-      "wrongAnswer": {
+      "incorrect": {
         "title": "Essayez encore !"
       }
     }
