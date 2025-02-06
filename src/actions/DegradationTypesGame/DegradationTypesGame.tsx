@@ -159,11 +159,11 @@ function InProgress(props: StateComponentProps) {
 }
 
 function WrongAnswer(props: StateComponentProps) {
-  const { wrongAnswer, main } = useAppContext().dictionary.games.degradationTypes
+  const { incorrect, main } = useAppContext().dictionary.games.degradationTypes
   return (
     <MidGame
       {...props}
-      title={<BigTitle title={wrongAnswer.title} />}
+      title={<BigTitle title={incorrect.title} />}
       hint={main.hint}
     />
   )
