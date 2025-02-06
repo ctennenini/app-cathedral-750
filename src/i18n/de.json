@@ -233,7 +233,7 @@
           "Entdecken wir sie zusammen..."
         ]
       },
-      "wrongAnswer": {
+      "incorrect": {
         "title": "Versuchen Sie es nochmal!"
       }
     }
