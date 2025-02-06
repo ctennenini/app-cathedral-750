@@ -236,7 +236,7 @@
           "Let's discover them together..."
         ]
       },
-      "wrongAnswer": {
+      "incorrect": {
         "title": "Try again!"
       }
     }
