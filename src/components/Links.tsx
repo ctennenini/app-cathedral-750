@@ -50,6 +50,7 @@ export type BigLinkProps = LinkProps & {
 export const BigLink = styled(({ label, arrow, disabled, ...otherProps }: BigLinkProps) => (
   <Link
     onClick={disabled ? e => e.preventDefault() : undefined}
+    disabled={disabled}
     {...otherProps}
   >
     <span dangerouslySetInnerHTML={{ __html: label }} />
