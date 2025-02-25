@@ -1,103 +1,23 @@
 'use client'
-import styled from 'styled-components'
-import { Link, useIsActive, useIsOnPath } from '@/components/Links'
 import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
-import { MouseEventHandler, useEffect, useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import { NavMenuItem } from '@/types'
+import { NavListContextProvider, useNavItemInfo } from './Context'
+import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 
-const LINE_SECTION_WIDTH = '3rem'
 
-const List = styled.ul({
-  listStyle: 'none',
-  fontFamily: 'var(--font-buttons)',
-  fontSize: '25px',
-  lineHeight: '34px',
-  position: 'relative',
-})
+type ListItemProps =   { navItem: NavMenuItem;isLast?: boolean; showLine?: boolean }
 
-const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isOnPath, $isActive, disabled }) => ({
-  '&&': {
-    display: 'block',
-    padding: '0.6rem 1.5rem',
-    borderRadius: '0.6rem',
-    color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
-    backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    textDecoration: disabled ? 'line-through' : 'none',
-  },
-}))
+function ListItem({ navItem, isLast, showLine }: ListItemProps) {
+  const subItems = navItem.subItems
 
-const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => ({
-  userSelect: 'none',
-  marginLeft: $showLine ? '3rem' : 0,
-  position: 'relative',
+  const {isActive, isOnPath} = useNavItemInfo(navItem)
 
-  ...($showLine && {
-    '&&:after': {
-      content: '""',
-      display: 'block',
-      position: 'absolute',
-      top: '1.5rem',
-      left: '-1.6rem',
-      height: '2px',
-      width: '0.6rem',
-      backgroundColor: 'var(--ui-line-color)',
-    },
-    '&&::before': {
-      content: '""',
-      display: 'inline-block',
-      position: 'absolute',
-      left: '-1.6rem',
-      top: $isLast ? '-2rem' : '-1rem',
-      height: $isLast ? '3.5rem' : '100%',
-      width: '2px',
-      backgroundColor: 'var(--ui-line-color)',
-    },
-  }),
-}))
-
-const ListItemHeader = styled.div({
-  display: 'flex',
-  alignItems: 'stretch',
-})
-
-const ToggleButton = styled.div({
-  width: LINE_SECTION_WIDTH,
-
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  cursor: 'pointer',
-})
-
-const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({
-  position: 'relative',
-  overflow: 'hidden',
-  top: $isOpen ? '-1rem' : 0,
-  paddingTop: $isOpen ? '1rem' : 0,
-  maxHeight: $isOpen ? '200vh' : 0,
-  height: '100%',
-  transition: 'max-height linear',
-  transitionDuration: $isOpen ? '1s' : '0.3s',
-}))
-
-type ListItemProps = NavMenuItem & { isLast?: boolean; showLine?: boolean }
-
-function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListItemProps) {
-  const hasSubitems = !!subItems?.length
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(isOnPath || isActive)
 
   const Triangle = isExpanded ? NavMenuTriangleOpen : NavMenuTriangleClosed
-  const isOnPath = useIsOnPath(path)
-  const isActive = useIsActive(path)
 
-  useEffect(() => {
-    if (isOnPath) {
-      setIsExpanded(true)
-    }
-  }, [isOnPath])
-
-  label = Array.isArray(label) ? label.join(' ') : label
+  const label = Array.isArray(navItem.label) ? navItem.label.join(' ') : navItem.label
 
   const toggle: MouseEventHandler<HTMLDivElement> = e => {
     e.preventDefault()
@@ -110,21 +30,20 @@ function ListItem({ label, path, subItems, disabled, isLast, showLine }: ListIte
       $isLast={isLast}
     >
       <ListItemHeader>
-        {hasSubitems && (
+        {!!subItems && (
           <ToggleButton onClick={toggle}>
             <Triangle $isOnPath={isOnPath} />
           </ToggleButton>
         )}
         <NavLink
-          href={path}
-          disabled={disabled}
+          href={navItem.path}
+          disabled={navItem.disabled}
           $isOnPath={isOnPath}
           $isActive={isActive}
-        >
-          {label}
-        </NavLink>
+          dangerouslySetInnerHTML={{ __html: label }}
+        />
       </ListItemHeader>
-      {hasSubitems && (
+      {!!subItems && (
         <Expander $isOpen={isExpanded}>
           <NavList menuItems={subItems} />
         </Expander>
@@ -139,9 +58,9 @@ function NavList({ menuItems, isFirst }: { menuItems: NavMenuItem[]; isFirst?: b
       {menuItems.map((item, i, all) => (
         <ListItem
           key={i}
+          navItem={item}
           showLine={!isFirst}
           isLast={i === all.length - 1}
-          {...item}
         />
       ))}
     </List>
@@ -150,9 +69,11 @@ function NavList({ menuItems, isFirst }: { menuItems: NavMenuItem[]; isFirst?: b
 
 export const renderNavList = (menuItems: NavMenuItem[]) => (
   <nav>
-    <NavList
-      isFirst
-      menuItems={menuItems}
-    />
+    <NavListContextProvider allMenuItems={menuItems}>
+      <NavList
+        isFirst
+        menuItems={menuItems}
+      />
+    </NavListContextProvider>
   </nav>
 )
