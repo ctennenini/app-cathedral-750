@@ -5,13 +5,12 @@ import { NavMenuItem } from '@/types'
 import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 
-
-type ListItemProps =   { navItem: NavMenuItem;isLast?: boolean; showLine?: boolean }
+type ListItemProps = { navItem: NavMenuItem; isLast?: boolean; showLine?: boolean }
 
 function ListItem({ navItem, isLast, showLine }: ListItemProps) {
   const subItems = navItem.subItems
 
-  const {isActive, isOnPath} = useNavItemInfo(navItem)
+  const { isActive, isOnPath } = useNavItemInfo(navItem)
 
   const [isExpanded, setIsExpanded] = useState(isOnPath || isActive)
 

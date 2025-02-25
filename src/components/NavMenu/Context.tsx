@@ -14,7 +14,6 @@ type LookupMap = Map<NavMenuItem, NavItemInfo>
 
 const NavListContext = createContext<{ lookupMap: LookupMap }>({ lookupMap: new Map() })
 
-
 export function NavListContextProvider({ children, allMenuItems }: PropsWithChildren<{ allMenuItems: NavMenuItem[] }>) {
   const locale = useLocale()
   const currentPath = usePathname()
@@ -25,7 +24,6 @@ export function NavListContextProvider({ children, allMenuItems }: PropsWithChil
     const checkItems = (items: NavMenuItem[]) => {
       let hasActive = false
       items.forEach(item => {
-
         const fullPath = joinPath('/', locale, item.path)
         const isActive = currentPath === fullPath
         const isOnPath = !!item.subItems && checkItems(item.subItems)
@@ -38,23 +36,17 @@ export function NavListContextProvider({ children, allMenuItems }: PropsWithChil
           isActive,
           isOnPath,
         })
-
       })
       return hasActive
     }
 
     checkItems(allMenuItems)
 
-
     return map
-
-
   }, [allMenuItems, currentPath, locale])
-
 
   return <NavListContext.Provider value={{ lookupMap: lookupMap }}>{children}</NavListContext.Provider>
 }
-
 
 export const useNavItemInfo = (item: NavMenuItem): NavItemInfo => {
   const { lookupMap } = useContext(NavListContext)

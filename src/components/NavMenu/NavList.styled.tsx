@@ -12,17 +12,19 @@ export const List = styled.ul({
   position: 'relative',
 })
 
-export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(({ $isOnPath, $isActive, disabled }) => ({
-  '&&': {
-    display: 'block',
-    padding: '0.6rem 1.5rem',
-    borderRadius: '0.6rem',
-    color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
-    backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    textDecoration: disabled ? 'line-through' : 'none',
-  },
-}))
+export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(
+  ({ $isOnPath, $isActive, disabled }) => ({
+    '&&': {
+      display: 'block',
+      padding: '0.6rem 1.5rem',
+      borderRadius: '0.6rem',
+      color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
+      backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
+      cursor: disabled ? 'not-allowed' : 'pointer',
+      textDecoration: disabled ? 'line-through' : 'none',
+    },
+  }),
+)
 
 export const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => ({
   userSelect: 'none',
