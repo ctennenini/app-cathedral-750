@@ -151,7 +151,7 @@ export const NextArrowIcon = styled((props: SVGProps<SVGSVGElement>) => (
 ))({})
 
 export type TriangleProps = SVGProps<SVGSVGElement> & {
-  $isOnPath?: boolean
+  $highlight?: boolean
 }
 
 export const NavMenuTriangleClosed = styled((props: TriangleProps) => (
@@ -170,9 +170,9 @@ export const NavMenuTriangleClosed = styled((props: TriangleProps) => (
       strokeLinecap="round"
     />
   </svg>
-))(({ $isOnPath }) => ({
+))(({ $highlight }) => ({
   '&& path': {
-    stroke: $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
+    stroke: $highlight ? 'var(--highlight)' : 'var(--dark-gray)',
   },
 }))
 
@@ -192,8 +192,8 @@ export const NavMenuTriangleOpen = styled((props: TriangleProps) => (
       strokeLinecap="round"
     />
   </svg>
-))(({ $isOnPath }) => ({
+))(({ $highlight }) => ({
   '&& path': {
-    stroke: $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
+    stroke: $highlight ? 'var(--highlight)' : 'var(--dark-gray)',
   },
 }))

@@ -31,7 +31,7 @@ function ListItem({ navItem, isLast, showLine }: ListItemProps) {
       <ListItemHeader>
         {!!subItems && (
           <ToggleButton onClick={toggle}>
-            <Triangle $isOnPath={isOnPath} />
+            <Triangle $highlight={isOnPath || isActive} />
           </ToggleButton>
         )}
         <NavLink
