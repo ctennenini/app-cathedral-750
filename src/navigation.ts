@@ -45,6 +45,16 @@ export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
                 {
                   label: pages.atmosphericPollution.title,
                   path: '/atmospheric-pollution',
+                  subItems: [
+                    {
+                      label: pages.atmosphericPollution.acidRain.title,
+                      path: '/atmospheric-pollution/acid-rain',
+                    },
+                    {
+                      label: pages.atmosphericPollution.microDust.title,
+                      path: '/atmospheric-pollution/micro-dust',
+                    },
+                  ],
                 },
               ],
             },
