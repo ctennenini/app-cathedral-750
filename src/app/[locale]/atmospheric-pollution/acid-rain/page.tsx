@@ -19,7 +19,7 @@ export default async function AcidRain({ params: { locale } }: GlobalStaticPageP
       backButtonTarget="/weathering-mechanisms"
       nextButtonTarget="/atmospheric-pollution/micro-dust"
       pullOutContent={{
-        type: 'image-with-legend',
+        type: 'image',
         src: quizImg,
         alt: pages.atmosphericPollution.acidRain.title,
         legendItems: [

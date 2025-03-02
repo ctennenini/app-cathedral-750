@@ -65,11 +65,12 @@ function useTextState<T extends ExtraContentProps>(text: string | string[] | str
   if (Array.isArray(text) && Array.isArray(text[0])) {
     const hasMore = text.length > page + 1
     const hasPrevious = page > 0
+    const extraContentIndex = extraContent ? Math.min(page, extraContent?.length - 1) : 0
     return {
       current: text[page] as string[],
       forward: hasMore ? () => setPage(page + 1) : undefined,
       back: hasPrevious ? () => setPage(page - 1) : undefined,
-      extra: extraContent?.[Math.min(page, extraContent.length - 1)],
+      extra: extraContent?.[extraContentIndex],
     }
   } else if (Array.isArray(text)) {
     return { current: text as string[], extra: extraContent?.[0] }

@@ -96,7 +96,7 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
       }
       right={
         <ExtraContent
-          type="image-with-click-map"
+          type="image"
           src={schematicViewPicture}
           clickAreas={[
             {

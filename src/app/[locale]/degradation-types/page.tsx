@@ -29,33 +29,31 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
           },
         },
       ]}
-      pullOutContent={[
-        {
-          type: 'gallery',
-          items: [
-            {
-              src: blackCrustSrc,
-              label: pages.degradationTypes.blackCrust.title,
-              href: '/degradation-types/black-crust',
-            },
-            {
-              src: scalingSrc,
-              label: pages.degradationTypes.scaling.title,
-              href: '/degradation-types/scaling',
-            },
-            {
-              src: sanding,
-              label: pages.degradationTypes.sanding.title,
-              href: '/degradation-types/sanding',
-            },
-            {
-              src: biodeterioation,
-              label: pages.degradationTypes.biodeterioration.title,
-              href: '/degradation-types/biodeterioration',
-            },
-          ],
-        },
-      ]}
+      pullOutContent={{
+        type: 'gallery',
+        items: [
+          {
+            src: blackCrustSrc,
+            label: pages.degradationTypes.blackCrust.title,
+            href: '/degradation-types/black-crust',
+          },
+          {
+            src: scalingSrc,
+            label: pages.degradationTypes.scaling.title,
+            href: '/degradation-types/scaling',
+          },
+          {
+            src: sanding,
+            label: pages.degradationTypes.sanding.title,
+            href: '/degradation-types/sanding',
+          },
+          {
+            src: biodeterioation,
+            label: pages.degradationTypes.biodeterioration.title,
+            href: '/degradation-types/biodeterioration',
+          },
+        ],
+      }}
       backButtonTarget="/weathering-of-molasse"
     />
   )

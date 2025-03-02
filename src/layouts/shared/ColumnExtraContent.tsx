@@ -31,7 +31,7 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
     maxWidth: `calc(${TARGET_VIEW_WIDTH}px - ${LEFT_COLUMN_OFFSET})`,
     paddingTop: '2rem',
     paddingBottom: '2rem',
-    paddingLeft: '5rem',
+    paddingLeft: '2rem',
     paddingRight: `${PAGE_PADDING_RIGHT}px`,
     overflow: 'hidden',
   },
@@ -41,13 +41,7 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
  * Image
  */
 
-const ExtraImage = styled((props: ImageProps) => (
-  <Image
-    priority
-    {...props}
-    alt={props.alt || ''}
-  />
-))({
+const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt={props.alt || ''} />)({
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
@@ -118,11 +112,7 @@ function LegendItem({ color, label }: LegendItemParams) {
 const Legend = ({ items }: { items: LegendItemParams[] }) => (
   <LegendList>
     {items.map(({ color, label }, index) => (
-      <LegendItem
-        key={index}
-        color={color}
-        label={label}
-      />
+      <LegendItem key={index} color={color} label={label} />
     ))}
   </LegendList>
 )
@@ -203,15 +193,17 @@ export type ExtraContentProps =
     }
   | ({
       type: 'image'
+      legendItems?: LegendItemParams[]
+      clickAreas?: ClickArea[]
     } & ImageProps)
-  | ({
-      type: 'image-with-legend'
-      legendItems: LegendItemParams[]
-    } & ImageProps)
-  | ({
-      type: 'image-with-click-map'
-      clickAreas: ClickArea[]
-    } & ImageProps)
+  // | ({
+  //     type: 'image-with-legend'
+  //     legendItems: LegendItemParams[]
+  //   } & ImageProps)
+  // | ({
+  //     type: 'image-with-click-map'
+  //     clickAreas: ClickArea[]
+  //   } & ImageProps)
   | {
       type: 'gallery'
       items: (ImageProps & {
@@ -248,38 +240,45 @@ export function ExtraContent(props: ExtraContentProps) {
         </Container>
       )
     }
-    case 'image': {
-      return (
-        <Container>
-          <ExtraImage {...props} />
-        </Container>
-      )
-    }
-    case 'image-with-legend': {
-      const { legendItems, ...otherProps } = props
+    case 'image':
+      {
+        const { legendItems, clickAreas, ...otherProps } = props
+        return (
+          <Container>
+            <ClickMap>
+              <ExtraImage {...otherProps} />
+              {legendItems && <Legend items={legendItems} />}
+              {clickAreas?.map((props, index) => <Trigger key={index} {...props} />)}
+            </ClickMap>
+          </Container>
+        )
+      }
+      {
+        /* case 'image-with-legend': {
       return (
         <Container>
           <ExtraImage {...otherProps} />
           <Legend items={legendItems} />
         </Container>
       )
-    }
-    case 'image-with-click-map': {
-      const { clickAreas, ...otherProps } = props
-      return (
-        <Container>
-          <ClickMap>
-            <ExtraImage {...otherProps} />
-            {clickAreas.map((props, index) => (
-              <Trigger
-                key={index}
-                {...props}
-              />
-            ))}
-          </ClickMap>
-        </Container>
-      )
-    }
+    } */
+      }
+    // case 'image-with-click-map': {
+    //   const { clickAreas, ...otherProps } = props
+    //   return (
+    //     <Container>
+    //       <ClickMap>
+    //         <ExtraImage {...otherProps} />
+    //         {clickAreas.map((props, index) => (
+    //           <Trigger
+    //             key={index}
+    //             {...props}
+    //           />
+    //         ))}
+    //       </ClickMap>
+    //     </Container>
+    //   )
+    // }
     default:
       throw new Error('Invalid type', props)
   }
