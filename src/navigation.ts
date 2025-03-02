@@ -40,7 +40,25 @@ export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
               subItems: [
                 {
                   label: pages.weatheringMechanisms.freezeThaw.title,
-                  path: '/weathering-mechanisms/freeze-thaw',
+                  path: '/freeze-thaw-action',
+                  subItems: [
+                    {
+                      label: pages.weatheringMechanisms.freezeThaw.trappedWater.title,
+                      path: '/freeze-thaw-action/trapped-water',
+                    },
+                    {
+                      label: pages.weatheringMechanisms.freezeThaw.hydraulicPressure.title,
+                      path: '/freeze-thaw-action/hydraulic-pressure',
+                    },
+                    {
+                      label: pages.weatheringMechanisms.freezeThaw.crystallizationPressure.title,
+                      path: '/freeze-thaw-action/crystallization-pressure',
+                    },
+                    {
+                      label: pages.weatheringMechanisms.freezeThaw.temperatureGradient.title,
+                      path: '/freeze-thaw-action/temperature-gradient',
+                    },
+                  ],
                 },
                 {
                   label: pages.atmosphericPollution.title,

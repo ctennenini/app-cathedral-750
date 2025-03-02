@@ -169,9 +169,45 @@
         "title": "Freeze - Thaw Action",
         "trappedWater": {
           "title": "Trapped Water",
-          "description": [
+          "description": [[
             "Freezing water in porous materials can cause damage by various mechanisms.",
             "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
+          ], [
+            "In other words, freezing occurs from all sides, the liquid is trapped, and the increase in molar volume from liquid water to ice causes the bottle to break.",
+            "Such situations are rare on monuments, with the possible exception of fine decorative elements previously saturated with water, as finials and fountains.",
+            "Watch the video to know more."
+          ]]
+        },
+        "hydraulicPressure": {
+          "title": "Hydraulic Pressure",
+          "description": [
+            [
+              "Another situation also related to the change in molar volume is called \"hydraulic pressure\".",
+              "It occurs when growing ice pushes the liquid water still present through the porous network. The flow resistance leads to a pressure that depends on the size of the pores and the distance over which the water is pushed."
+            ], [
+              "For molasse, the pore size is large, which reduces this pressure.",
+              "However, if these same stones are saturated with water, then the equivalent length of the saturated pores can be very large, which can lead to high hydraulic pressures if the cooling rate is fast enough.",
+              "Watch the video to know more."
+            ]
+          ]
+        },
+        "crystallizationPressure": {
+          "title": "Crystallization Pressure",
+          "description": [
+            "Another situation in which frost can be damaging is the crystallization pressure. Under such conditions, low temperatures developed over long periods of time would be most damaging. Such situations are to be expected in colder climates than in Lausanne.",
+            "Watch the video to know more."
+          ]
+        },
+        "temperatureGradient": {
+          "title": "Temperature Gradient",
+          "description": [
+            [
+              "Coarse porous materials, such as molasse, can be damaged during freezing if a temperature gradient is sustained.",
+              "Water can then move from an unfrozen region to feed the growth of ice trapped in the pores of a frozen region. This is analogous to frost heave but also can cause damage in sedimentary building stones and in geological settings."
+            ], [
+              "Related situations can lead to forming ice lenses between a moist substrate (stone cores) and a surface subject to temperature variations (façade). The growth of such lenses can accelerate the detachment of pre-existing scales without the temperatures having to be very low.",
+              "Watch the video to know more."
+            ]
           ]
         }
       }
@@ -198,6 +234,23 @@
           "This led to the formation of the so called “black crusts”."
         ]
       }
+    },
+    "swellingClays": {
+      "title": "Swelling Clays",
+      "description": [
+        [
+          "The stone used in Lausanne Cathedral during the Middle Ages is Molasse sandstone. Its microstructure consists of different siliceous materials bound together by a calcite-clay binder.",
+          "The presence of swelling clay determines the formation of stress in the material during wetting and drying due to rain. This stress, in the case of pre-existing cracks, can propagate them and cause scaling."
+        ],
+        [
+          "Swelling clays, like smectite, are a particular type of clay that can absorb water and expand. They are part of the family of Phyllosilicates (or \"sheet silicates\"), a group of minerals that have a unique layered structure.",
+          "Imagine them as tiny, flat sheets stacked on top of each other like a deck of cards."
+        ],
+        [
+          "In the case of swelling clays, due to some particular asset of the layers, in contact with water, they have the ability to pull the water molecules in between their sheets, causing the entire stack to puff up or swell.",
+          " The consequence is the swelling of the entire stone."
+        ]
+      ]
     }
   },
   "games": {
@@ -227,7 +280,7 @@
         ]
       },
       "main": {
-        "title": "How many types of degradation can you find in the area? ",
+        "title": "How many types of degradation can you find in the area?",
         "hint": "Tap on the correct answer"
       },
       "finish": {

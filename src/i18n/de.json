@@ -166,9 +166,46 @@
         "title": "Frost-Tau-Wirkung",
         "trappedWater": {
           "title": "Gefangenes Wasser",
+          "description": [[
+            "Gefrierendes Wasser in porösen Materialien kann Schäden durch verschiedene Mechanismen verursachen.",
+            "Der erste und dramatischste ist die sogenannte „Wasserfallenbildung“. Es bezieht sich auf eine Situation, die der eines mit Wasser gefüllten Glasflasche ähnelt, die in einen Kühler gestellt wird."
+          ], [
+            "In anderen Worten, das Einfrieren erfolgt von allen Seiten, die Flüssigkeit wird gefangen, und der Anstieg des molaren Volumens von flüssigem Wasser zu Eis führt dazu, dass die Flasche bricht.",
+            "Solche Situationen sind an Denkmälern selten, mit der möglichen Ausnahme von feinen dekorativen Elementen, die zuvor mit Wasser gesättigt waren, wie Spitzen und Brunnen.",
+            "Sehen Sie sich das Video an, um mehr zu erfahren."
+          ]]
+        },
+        "hydraulicPressure": {
+          "title": "Hydraulischer Druck",
           "description": [
-            "Das Einfrieren von Wasser in porösen Materialien kann Schäden durch verschiedene Mechanismen verursachen.",
-            "Der erste und dramatischste wird als „Wasserfallen“ bezeichnet. Es bezieht sich auf eine Situation, die der eines mit Wasser gefüllten Glasflasche ähnelt, die in einem Kühler platziert ist."
+            [
+              "Eine weitere Situation, die mit der Änderung des molaren Volumens zusammenhängt, wird als „hydraulischer Druck“ bezeichnet.",
+              "Eр tritt auf, wenn wachsendes Eis das noch vorhandene flüssige Wasser durch das poröse Netzwerk drückt. Der Strömungswiderstand führt zu einem Druck, der von der Größe der Poren und der Entfernung abhängt, über die das Wasser gedrückt wird."
+            ], [
+              "Für Molasse ist die Porengröße groß, was diesen Druck reduziert.",
+              "Wenn diese Steine jedoch mit Wasser gesättigt sind, kann die äquivalente Länge der gesättigten Poren sehr groß sein, was zu hohen hydraulischen Drücken führen kann, wenn die Abkühlrate schnell genug ist.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
+            ]
+          ]
+        },
+        "crystallizationPressure": {
+          "title": "Kristallisationsdruck",
+          "description": [
+              "Eine weitere Situation, in der Frost schädlich sein kann, ist der Kristallisationsdruck.",
+              "Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt wurden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
+          ]
+        },
+        "temperatureGradient": {
+          "title": "Temperaturgradient",
+          "description": [
+            [
+              "Grobporige Materialien, wie Molasse, können durch Gefrieren beschädigt werden, wenn ein Temperaturgradient aufrechterhalten wird.",
+              "Wasser kann dann aus einer nicht gefrorenen Region bewegt werden, um das Wachstum von Eis zu fördern, das in den Poren einer gefrorenen Region eingeschlossen ist. Dies ist analog zu Frosthebung, kann aber auch Schäden an sedimentären Bausteinen und in geologischen Umgebungen verursachen."
+            ], [
+              "Verwandte Situationen können zur Bildung von Eislinsen zwischen einem feuchten Substrat (Steinkernen) und einer Oberfläche führen, die Temperaturschwankungen unterliegt (Fassade). Das Wachstum solcher Linsen kann die Ablösung von bereits vorhandenen Schuppen beschleunigen, ohne dass die Temperaturen sehr niedrig sein müssen.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
+            ]
           ]
         }
       }
@@ -195,6 +232,23 @@
           "Dies führte zur Bildung der sogenannten „schwarzen Krusten“."
         ]
       }
+    },
+    "swellingClays": {
+      "title": "Quellende Tone",
+      "description": [
+        [
+          "Der Stein, der in der Kathedrale von Lausanne während des Mittelalters verwendet wurde, ist Molasse-Sandstein. Seine Mikrostruktur besteht aus verschiedenen kieselsäurehaltigen Materialien, die durch einen Calcit-Ton-Binder zusammen gehalten werden.",
+          "Die Anwesenheit von quellenden Tonen bestimmt die Bildung von Spannungen im Material während des Anfeuchtens und Trocknens durch Regen. Diese Spannungen können, im Falle von vorhandenen Rissen, diese propagieren und zu Abplatzungen führen."
+        ],
+        [
+          "Quellende Tone, wie Smektit, sind ein bestimmter Typ von Ton, der Wasser aufnehmen und sich ausdehnen kann. Sie gehören zur Familie der Phyllosilikate (oder „Schichtsilikate“), einer Gruppe von Mineralien, die eine einzigartige Schichtstruktur aufweisen.",
+          "Stellen Sie sich sie als winzige, flache Blätter vor, die wie ein Kartenspiel übereinander gestapelt sind."
+        ],
+        [
+          "Im Falle von quellenden Tonen, aufgrund einer besonderen Eigenschaft der Schichten, die in Kontakt mit Wasser stehen, haben sie die Fähigkeit, die Wassermoleküle zwischen ihren Schichten zu ziehen, wodurch der gesamte Stapel aufgeblasen oder geschwollen wird.",
+          "Die Folge ist das Schwellen des gesamten Steins."
+        ]
+      ]
     }
   },
   "games": {

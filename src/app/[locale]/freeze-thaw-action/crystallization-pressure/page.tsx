@@ -1,0 +1,28 @@
+import { GlobalStaticPageProps } from '@/globals'
+import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
+import { getDictionary } from '@/i18n'
+
+import { TextPageLayout } from '@/layouts/TextPageLayout'
+
+import imgSrc from './crystallization-pressure.png'
+
+export default async function CrystallizationPressure({ params: { locale } }: GlobalStaticPageProps) {
+  const { pages } = await getDictionary(locale)
+
+  return (
+    <TextPageLayout
+      withHomeButton
+      bgImg={bgImg}
+      title={pages.weatheringMechanisms.freezeThaw.crystallizationPressure.title}
+      subtitle={pages.weatheringMechanisms.freezeThaw.title}
+      text={pages.weatheringMechanisms.freezeThaw.crystallizationPressure.description}
+      pullOutContent={{
+        type: 'image',
+        src: imgSrc,
+        alt: pages.weatheringMechanisms.freezeThaw.crystallizationPressure.title,
+      }}
+      backButtonTarget="/freeze-thaw-action/hydraulic-pressure"
+      nextButtonTarget="/freeze-thaw-action/temperature-gradient"
+    />
+  )
+}

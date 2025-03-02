@@ -4,7 +4,9 @@ import { getDictionary } from '@/i18n'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function FreezeThaw({ params: { locale } }: GlobalStaticPageProps) {
+import imgSrc from './trapped-water.png'
+
+export default async function TrappedWater({ params: { locale } }: GlobalStaticPageProps) {
   const { pages } = await getDictionary(locale)
 
   return (
@@ -14,7 +16,13 @@ export default async function FreezeThaw({ params: { locale } }: GlobalStaticPag
       title={pages.weatheringMechanisms.freezeThaw.trappedWater.title}
       subtitle={pages.weatheringMechanisms.freezeThaw.title}
       text={pages.weatheringMechanisms.freezeThaw.trappedWater.description}
+      pullOutContent={{
+        type: 'image',
+        src: imgSrc,
+        alt: pages.weatheringMechanisms.freezeThaw.trappedWater.title,
+      }}
       backButtonTarget="/weathering-mechanisms"
+      nextButtonTarget="/freeze-thaw-action/hydraulic-pressure"
     />
   )
 }

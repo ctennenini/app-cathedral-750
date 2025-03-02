@@ -167,9 +167,45 @@
         "title": "Action gel - dégel",
         "trappedWater": {
           "title": "Eau piégée",
+          "description": [[
+            "L'eau piégée dans les matériaux poreux peut causer des dommages par divers mécanismes.",
+            "Le premier et le plus dramatique est appelé « piégeage de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
+          ], [
+            "En d'autres termes, la congélation se produit de tous les côtés, le liquide est emprisonné et l'augmentation du volume molaire de l'eau liquide à la glace provoque la rupture de la bouteille.",
+            "De telles situations sont rares sur les monuments, à l'exception peut-être des éléments décoratifs fins préalablement saturés d'eau, comme les fleurons et les fontaines.",
+            "Regardez la vidéo pour en savoir plus."
+          ]]
+        },
+        "hydraulicPressure": {
+          "title": "Pression hydraulique",
           "description": [
-            "L'eau gelée dans les matériaux poreux peut causer des dommages par divers mécanismes.",
-            "Le premier et le plus dramatique est appelé « emprisonnement de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
+            [
+              "Une autre situation également liée au changement de volume molaire est appelée « pression hydraulique ».",
+              "Elle se produit lorsque la glace en croissance pousse l'eau liquide encore présente à travers le réseau poreux. La résistance à l'écoulement entraîne une pression qui dépend de la taille des pores et de la distance sur laquelle l'eau est poussée."
+            ], [
+              "Pour la molasse, la taille des pores est grande, ce qui réduit cette pression.",
+              "Cependant, si ces mêmes pierres sont saturées d'eau, alors la longueur équivalente des pores saturés peut être très grande, ce qui peut entraîner des pressions hydrauliques élevées si le taux de refroidissement est suffisamment rapide.",
+              "Regardez la vidéo pour en savoir plus."
+            ]
+          ]
+        },
+        "crystallizationPressure": {
+          "title": "Pression de cristallisation",
+          "description": [
+            "Une autre situation dans laquelle le gel peut être dommageable est la pression de cristallisation. Dans de telles conditions, les basses températures développées sur de longues périodes de temps seraient les plus dommageables. De telles situations sont à attendre dans des climats plus froids que Lausanne.",
+            "Regardez la vidéo pour en savoir plus."
+          ]
+        },
+        "temperatureGradient": {
+          "title": "Gradient de température",
+          "description": [
+            [
+              "Les matériaux poreux grossiers, tels que la molasse, peuvent être endommagés lorsqu'ils sont gelés si un gradient de température est maintenu.",
+              "L'eau peut alors se déplacer d'une région non gelée pour alimenter la croissance de la glace piégée dans les pores d'une région gelée. C'est analogue à la poussée de gel mais peut également causer des dommages dans les pierres de construction sédimentaires et dans les contextes géologiques."
+            ], [
+              "Des situations connexes peuvent conduire à la formation de lentilles de glace entre un substrat humide (cœurs de pierre) et une surface soumise à des variations de température (façade). La croissance de telles lentilles peut accélérer le détachement d'écailles préexistantes sans que les températures aient besoin d'être très basses.",
+              "Regardez la vidéo pour en savoir plus."
+            ]
           ]
         }
       }
@@ -196,6 +232,23 @@
           "Cela a conduit à la formation des « croûtes noires »."
         ]
       }
+    },
+    "swellingClays": {
+      "title": "Argiles gonflantes",
+      "description": [
+        [
+          "La pierre utilisée dans la cathédrale de Lausanne pendant le Moyen Âge est le grès de molasse. Sa microstructure est composée de différents matériaux siliceux liés ensemble par un liant calcite-argile.",
+          "La présence d'argiles gonflantes détermine la formation de contraintes dans le matériau lors de l'humidification et du séchage dus à la pluie. Ces contraintes, dans le cas de fissures préexistantes, peuvent les propager et provoquer l'écaillage."
+        ],
+        [
+          "Les argiles gonflantes, comme la smectite, sont un type particulier d'argile qui peut absorber l'eau et se dilater. Elles font partie de la famille des Phyllosilicates (ou « silicates en feuillets »), un groupe de minéraux qui ont une structure en couches unique.",
+          "Imaginez-les comme de minuscules feuilles plates empilées les unes sur les autres comme un jeu de cartes."
+        ],
+        [
+          "Dans le cas des argiles gonflantes, en raison de certaines propriétés particulières des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuilles, provoquant le gonflement de l'ensemble de la pierre.",
+          "La conséquence est le gonflement de toute la pierre."
+        ]
+      ]
     }
   },
   "games": {

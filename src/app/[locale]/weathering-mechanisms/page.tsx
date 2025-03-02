@@ -18,7 +18,7 @@ export default async function WeatheringMechanisms({ params: { locale } }: Globa
         type: 'links',
         links: [
           {
-            href: '/weathering-mechanisms/freeze-thaw',
+            href: '/freeze-thaw-action',
             label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
