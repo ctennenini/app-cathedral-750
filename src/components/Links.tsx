@@ -5,10 +5,10 @@ import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
 import styled from 'styled-components'
 import { InternalLinkIcon } from './Icons'
-import { Text } from '@/components/Typography'
+import { TextContent } from '@/components/Typography'
 import { ComponentProps } from 'react'
 
-type LinkProps = ComponentProps<typeof NextLink> & {
+export type LinkProps = ComponentProps<typeof NextLink> & {
   external?: boolean
   disabled?: boolean
 }
@@ -41,18 +41,14 @@ export function Link({ href, external, disabled, ...otherProps }: LinkProps) {
 }
 
 export type BigLinkProps = LinkProps & {
-  label: Text
+  label: TextContent
   primary?: boolean
   arrow?: boolean
   $primary?: boolean
 }
 
 export const BigLink = styled(({ label, arrow, disabled, ...otherProps }: BigLinkProps) => (
-  <Link
-    onClick={disabled ? e => e.preventDefault() : undefined}
-    disabled={disabled}
-    {...otherProps}
-  >
+  <Link onClick={disabled ? (e) => e.preventDefault() : undefined} disabled={disabled} {...otherProps}>
     <span dangerouslySetInnerHTML={{ __html: label }} />
     {arrow && <InternalLinkIcon style={{ marginLeft: '1rem' }} />}
   </Link>

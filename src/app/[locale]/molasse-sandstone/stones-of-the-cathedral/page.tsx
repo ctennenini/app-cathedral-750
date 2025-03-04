@@ -1,12 +1,11 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-import bgImgBlurred from '@/assets/bg-images/frog-perspective-2-blurred.png'
+// import bgImgBlurred from '@/assets/bg-images/frog-perspective-2-blurred.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function StonesOfTheCathedral({ params: { locale } }: GlobalStaticPageProps) {
   const { pages } = await getDictionary(locale)
-  pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge = 'Test your knowledge'
   return (
     <TextPageLayout
       withHomeButton
@@ -16,11 +15,10 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
       text={pages.molasseSandstone.stonesOfTheCathedral.description}
       actions={[
         {
+          type: 'link',
           label: pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge,
-          type: 'oldestStoneGame',
           params: {
-            bgImg: bgImgBlurred,
-            successTarget: '/molasse-sandstone/molasse-gris',
+            href: '/games/oldest-stone',
           },
         },
       ]}

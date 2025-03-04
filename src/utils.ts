@@ -13,13 +13,7 @@ export function useLocale() {
   }
 }
 
-export type LinkProps = ComponentProps<typeof NextLink> & {
-  label: string
-  external?: boolean
-  disabled?: boolean
-}
-
-export type HREF = LinkProps['href']
+export type HREF = ComponentProps<typeof NextLink>['href']
 
 export function useHref(href: HREF) {
   const locale = useLocale()

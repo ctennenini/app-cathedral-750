@@ -1,5 +1,5 @@
-import { IconButton, IconButtonProps } from '@/components/IconButton'
-import { NextArrowIcon } from '@/components/Icons'
+'use client'
+
 import { P } from '@/components/Typography'
 import { useAppContext } from '@/context'
 import { ReactNode, useState } from 'react'
@@ -7,7 +7,6 @@ import styled from 'styled-components'
 
 import schematicViewPicture from './schematic-view.png'
 import windowPicture from './window-with-deterioration.png'
-import { useRouter } from 'next/navigation'
 import { useHref, HREF } from '@/utils'
 
 import {
@@ -18,6 +17,7 @@ import {
   Separator,
   Text,
   Title,
+  NextButton,
 } from '@/layouts/QuizPageLayout'
 import { Footer } from '@/layouts/shared/ColumnLayout.components'
 
@@ -33,20 +33,6 @@ const SmallTitle = styled(Title)({
     fontSize: '3.6rem',
     color: 'var(--white)',
   },
-})
-
-const NextButton = styled((props: IconButtonProps) => (
-  <IconButton {...props}>
-    <NextArrowIcon />
-  </IconButton>
-))({
-  backgroundColor: 'var(--white)',
-  color: 'var(--highlight)',
-  width: '87px',
-  height: '87px',
-  flexShrink: 0,
-  flexGrow: 0,
-  alignSelf: 'flex-end',
 })
 
 const Hint = styled(P)({
@@ -149,30 +135,17 @@ function MidGame({ setState, title, hint, ...otherProps }: StateComponentProps &
 
 function InProgress(props: StateComponentProps) {
   const { title, hint } = useAppContext().dictionary.games.degradationTypes.main
-  return (
-    <MidGame
-      {...props}
-      title={<SmallTitle title={title} />}
-      hint={hint}
-    />
-  )
+  return <MidGame {...props} title={<SmallTitle title={title} />} hint={hint} />
 }
 
 function WrongAnswer(props: StateComponentProps) {
   const { incorrect, main } = useAppContext().dictionary.games.degradationTypes
-  return (
-    <MidGame
-      {...props}
-      title={<BigTitle title={incorrect.title} />}
-      hint={main.hint}
-    />
-  )
+  return <MidGame {...props} title={<BigTitle title={incorrect.title} />} hint={main.hint} />
 }
 
 function Finish({ successTarget, ...otherProps }: StateComponentProps) {
   const successHref = useHref(successTarget)
   const { title, body } = useAppContext().dictionary.games.degradationTypes.finish
-  const { push } = useRouter()
 
   return (
     <QuizPageLayout
@@ -184,26 +157,11 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
             <Text>{body}</Text>
           </Main>
           <Footer>
-            <NextButton
-              data-testid="next-button"
-              onClick={() => {
-                if (typeof successHref === 'string') {
-                  push(successHref, { scroll: false })
-                } else {
-                  otherProps.onClose?.()
-                }
-              }}
-            />
+            <NextButton data-testid="next-button" href={successHref} />
           </Footer>
         </>
       }
-      right={
-        <ExtraContent
-          type="image"
-          src={windowPicture}
-          alt="Degradation Types Game"
-        />
-      }
+      right={<ExtraContent type="image" src={windowPicture} alt="Degradation Types Game" />}
       {...otherProps}
     />
   )
@@ -224,26 +182,12 @@ function getComponent(state: State) {
   }
 }
 
-export type DegradationTypesGameParams = {
-  bgImg: QuizPageLayoutProps['bgImg']
-  successTarget: StateComponentProps['successTarget']
-}
+export type DegradationTypesGameProps = Pick<StateComponentProps, 'bgImg' | 'successTarget' | 'closeTarget'>
 
-export type DegradationTypesGameProps = DegradationTypesGameParams & {
-  onClose: () => void
-}
-
-export function DegradationTypesGame({ bgImg, successTarget, onClose }: DegradationTypesGameProps) {
+export function DegradationTypesGame(props: DegradationTypesGameProps) {
   const [state, setState] = useState<State>('START')
 
   const Component = getComponent(state)
 
-  return (
-    <Component
-      bgImg={bgImg}
-      setState={setState}
-      successTarget={successTarget}
-      onClose={onClose}
-    />
-  )
+  return <Component setState={setState} {...props} />
 }

@@ -1,7 +1,7 @@
 import React, { createElement } from 'react'
 import { HTMLProps } from 'react'
 
-export type Text = string | string[]
+export type TextContent = string | string[]
 
 /**
  *
@@ -10,7 +10,7 @@ export type Text = string | string[]
  */
 
 export type PProps = HTMLProps<HTMLParagraphElement> & {
-  children: Text
+  children: TextContent
 }
 
 export const P = ({ children, ...otherProps }: PProps) => {
@@ -21,11 +21,7 @@ export const P = ({ children, ...otherProps }: PProps) => {
   return (
     <>
       {children.map((t, i) => (
-        <p
-          key={i}
-          dangerouslySetInnerHTML={{ __html: t }}
-          {...otherProps}
-        />
+        <p key={i} dangerouslySetInnerHTML={{ __html: t }} {...otherProps} />
       ))}
     </>
   )
@@ -37,13 +33,13 @@ export const P = ({ children, ...otherProps }: PProps) => {
  *
  **/
 
-function normaliseTitle(text: Text) {
+function normaliseTitle(text: TextContent) {
   text = Array.isArray(text) ? text.join('<br />') : text
   return text.replace('\n', '<br />')
 }
 
 export type HProps = HTMLProps<HTMLHeadingElement> & {
-  children: Text
+  children: TextContent
 }
 
 function makeHeading(tag: string) {

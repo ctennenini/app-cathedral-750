@@ -1,6 +1,5 @@
 import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import bgImgBlurred from '@/assets/bg-images/frog-perspective-1-blurred.png'
 import { getDictionary } from '@/i18n'
 
 import blackCrustSrc from './black-crust.png'
@@ -21,11 +20,10 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
       text={pages.degradationTypes.description}
       actions={[
         {
+          type: 'link',
           label: pages.degradationTypes.testYourKnowledge,
-          type: 'degradationTypesGame',
           params: {
-            bgImg: bgImgBlurred,
-            successTarget: '/degradation-types/black-crust',
+            href: '/games/degradation-types',
           },
         },
       ]}

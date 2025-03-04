@@ -10,7 +10,8 @@ import {
 } from '../shared/ColumnLayout.components'
 
 import { IconButton, IconButtonProps } from '@/components/IconButton'
-import { CloseIcon } from '@/components/Icons'
+import { CloseIcon, NextArrowIcon } from '@/components/Icons'
+import { Link, LinkProps } from '@/components/Links'
 
 export {
   Text,
@@ -29,13 +30,33 @@ export const Container = styled(BaseContainer)({
   },
 })
 
-export const CloseButton = styled((props: IconButtonProps) => (
-  <IconButton {...props}>
-    <CloseIcon />
-  </IconButton>
+type ButtonProps = LinkProps & IconButtonProps
+
+export const CloseButton = styled(({ href, ...iconProps }: ButtonProps) => (
+  <Link href={href}>
+    <IconButton {...iconProps}>
+      <CloseIcon />
+    </IconButton>
+  </Link>
 ))({
   color: 'var(--highlight)',
   backgroundColor: 'var(--white)',
+})
+
+export const NextButton = styled(({ href, ...iconProps }: ButtonProps) => (
+  <Link href={href}>
+    <IconButton {...iconProps}>
+      <NextArrowIcon />
+    </IconButton>
+  </Link>
+))({
+  backgroundColor: 'var(--white)',
+  color: 'var(--highlight)',
+  width: '87px',
+  height: '87px',
+  flexShrink: 0,
+  flexGrow: 0,
+  alignSelf: 'flex-end',
 })
 
 export const Left = styled(BaseLeft)({

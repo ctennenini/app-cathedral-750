@@ -1,12 +1,11 @@
-import { IconButton, IconButtonProps } from '@/components/IconButton'
-import { NextArrowIcon } from '@/components/Icons'
+'use client'
+
 import { useAppContext } from '@/context'
 import { useState } from 'react'
 import styled from 'styled-components'
 
 import picture from './oldest-stone-game-pic.png'
-import { useRouter } from 'next/navigation'
-import { HREF, useHref } from '@/utils'
+import { HREF } from '@/utils'
 import {
   ExtraContent,
   Main,
@@ -16,6 +15,7 @@ import {
   Title as BaseTitle,
   Text,
   Footer,
+  NextButton,
 } from '@/layouts/QuizPageLayout'
 
 const SmallTitle = styled(BaseTitle)({
@@ -30,32 +30,13 @@ const BigTitle = styled(BaseTitle)({
   },
 })
 
-const NextButton = styled((props: IconButtonProps) => (
-  <IconButton {...props}>
-    <NextArrowIcon />
-  </IconButton>
-))({
-  backgroundColor: 'var(--white)',
-  color: 'var(--highlight)',
-  width: '87px',
-  height: '87px',
-  flexShrink: 0,
-  flexGrow: 0,
-  alignSelf: 'flex-end',
-})
-
-export type OldestStoneGameParams = {
+export type OldestStoneGameProps = {
   bgImg: QuizPageLayoutProps['bgImg']
   successTarget: HREF
+  closeTarget: HREF
 }
 
-export type OldestStoneGameProps = OldestStoneGameParams & {
-  onClose: () => void
-}
-
-export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGameProps) {
-  const successHref = useHref(successTarget)
-  const { push } = useRouter()
+export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: OldestStoneGameProps) {
   const dictionary = useAppContext().dictionary.games.oldestStone
 
   const [state, setState] = useState<keyof typeof dictionary>('start')
@@ -68,7 +49,7 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
 
   return (
     <QuizPageLayout
-      onClose={onClose}
+      closeTarget={closeTarget}
       bgImg={bgImg}
       left={
         <>
@@ -77,16 +58,9 @@ export function OldestStoneGame({ bgImg, successTarget, onClose }: OldestStoneGa
             <Separator />
             <Text>{text.body}</Text>
           </Main>
-          {state && (
-            <Footer>
-              <NextButton
-                onClick={() => {
-                  onClose()
-                  push(successHref.toString(), { scroll: false })
-                }}
-              />
-            </Footer>
-          )}
+          <Footer>
+            <NextButton href={successTarget} />
+          </Footer>
         </>
       }
       right={
