@@ -1,8 +1,7 @@
 'use client'
 
-import { useHref, useLocale } from '@/utils'
+import { useHref } from '@/utils'
 import NextLink from 'next/link'
-import { usePathname } from 'next/navigation'
 import styled from 'styled-components'
 import { InternalLinkIcon } from './Icons'
 import { TextContent } from '@/components/Typography'
@@ -11,19 +10,6 @@ import { ComponentProps } from 'react'
 export type LinkProps = ComponentProps<typeof NextLink> & {
   external?: boolean
   disabled?: boolean
-}
-
-export function useIsOnPath(path: string) {
-  const locale = useLocale()
-  const pathName = usePathname()
-  return pathName.startsWith(`/${locale}${path}`)
-}
-
-export function useIsActive(path: string) {
-  const locale = useLocale()
-  const pathName = usePathname()
-
-  return pathName === `/${locale}${path}`
 }
 
 export function Link({ href, external, disabled, ...otherProps }: LinkProps) {
