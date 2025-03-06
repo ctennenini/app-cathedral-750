@@ -9,7 +9,7 @@ import {
   Title as BaseTitle,
 } from '../shared/ColumnLayout.components'
 
-import { IconButton, IconButtonProps } from '@/components/IconButton'
+import { IconButton } from '@/components/IconButton'
 import { CloseIcon, NextArrowIcon } from '@/components/Icons'
 import { Link, LinkProps } from '@/components/Links'
 
@@ -30,24 +30,29 @@ export const Container = styled(BaseContainer)({
   },
 })
 
-type ButtonProps = LinkProps & IconButtonProps
+type ButtonProps = LinkProps
 
-export const CloseButton = styled(({ href, ...iconProps }: ButtonProps) => (
-  <Link href={href}>
-    <IconButton {...iconProps}>
+const StyledIconButton = styled(IconButton)({
+  color: 'var(--highlight)',
+  backgroundColor: 'var(--white)',
+})
+
+export const CloseButton = styled((props: ButtonProps) => (
+  <Link {...props}>
+    <StyledIconButton>
       <CloseIcon />
-    </IconButton>
+    </StyledIconButton>
   </Link>
 ))({
   color: 'var(--highlight)',
   backgroundColor: 'var(--white)',
 })
 
-export const NextButton = styled(({ href, ...iconProps }: ButtonProps) => (
-  <Link href={href}>
-    <IconButton {...iconProps}>
+export const NextButton = styled((props: ButtonProps) => (
+  <Link {...props}>
+    <StyledIconButton>
       <NextArrowIcon />
-    </IconButton>
+    </StyledIconButton>
   </Link>
 ))({
   backgroundColor: 'var(--white)',
@@ -56,7 +61,6 @@ export const NextButton = styled(({ href, ...iconProps }: ButtonProps) => (
   height: '87px',
   flexShrink: 0,
   flexGrow: 0,
-  alignSelf: 'flex-end',
 })
 
 export const Left = styled(BaseLeft)({

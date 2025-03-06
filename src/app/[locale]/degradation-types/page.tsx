@@ -20,11 +20,9 @@ export default async function DegradationTypes({ params: { locale } }: GlobalSta
       text={pages.degradationTypes.description}
       actions={[
         {
-          type: 'link',
+          type: 'quiz',
           label: pages.degradationTypes.testYourKnowledge,
-          params: {
-            href: '/games/degradation-types',
-          },
+          target: '/games/degradation-types',
         },
       ]}
       pullOutContent={{

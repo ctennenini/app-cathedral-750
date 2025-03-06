@@ -20,12 +20,9 @@ export default async function Biodeterioration({ params: { locale } }: GlobalSta
       backButtonTarget="/degradation-types/sanding"
       actions={[
         {
-          type: 'link',
+          type: 'back',
           label: pages.weatheringOfMolasse.title,
-          params: {
-            href: '/molasse-and-its-weathering',
-            $primary: true,
-          },
+          target: '/molasse-and-its-weathering',
         },
       ]}
       pullOutContent={[

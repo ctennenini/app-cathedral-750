@@ -22,6 +22,13 @@ export default async function TemperatureGradient({ params: { locale } }: Global
         alt: pages.weatheringMechanisms.freezeThaw.temperatureGradient.title,
       }}
       backButtonTarget="/freeze-thaw-action/crystallization-pressure"
+      actions={[
+        {
+          type: 'back',
+          label: pages.weatheringMechanisms.title,
+          target: '/weathering-mechanisms',
+        },
+      ]}
     />
   )
 }

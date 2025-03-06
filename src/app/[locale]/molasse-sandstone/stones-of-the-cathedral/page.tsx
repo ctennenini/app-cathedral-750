@@ -14,11 +14,9 @@ export default async function StonesOfTheCathedral({ params: { locale } }: Globa
       text={pages.molasseSandstone.stonesOfTheCathedral.description}
       actions={[
         {
-          type: 'link',
+          type: 'quiz',
           label: pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge,
-          params: {
-            href: '/games/oldest-stone',
-          },
+          target: '/games/oldest-stone',
         },
       ]}
       backButtonTarget="/molasse-and-its-weathering"

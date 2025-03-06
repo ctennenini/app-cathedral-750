@@ -151,7 +151,7 @@ export const Footer = styled.footer({
   display: 'flex',
   padding: '0 3rem',
   flexDirection: 'row',
-  justifyContent: 'end',
+  justifyContent: 'center',
   alignItems: 'center',
   gap: '2rem',
 })
