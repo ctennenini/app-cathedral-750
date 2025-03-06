@@ -16,6 +16,13 @@ export default async function MicroDust({ params: { locale } }: GlobalStaticPage
       title={pages.atmosphericPollution.microDust.title}
       subtitle={pages.atmosphericPollution.title}
       text={pages.atmosphericPollution.microDust.description}
+      actions={[
+        {
+          type: 'back',
+          label: pages.weatheringMechanisms.title,
+          target: '/weathering-mechanisms',
+        },
+      ]}
       backButtonTarget="/atmospheric-pollution/acid-rain"
       pullOutContent={{
         type: 'image',
