@@ -31,13 +31,13 @@ const Content = styled.div({
 
 const BlurOverlay = styled.div.attrs({
   'aria-hidden': true,
-})<{ active: boolean }>(({ active }) => ({
+})<{ $active: boolean }>(({ $active }) => ({
   position: 'absolute',
   top: '0',
   left: '0',
   width: '100%',
   height: '100%',
-  backdropFilter: active ? 'blur(10px)' : 'none',
+  backdropFilter: $active ? 'blur(10px)' : 'none',
   transition: 'backdrop-filter 0.2s ease-in-out',
 }))
 
@@ -59,7 +59,7 @@ export function BaseContainer({
   return (
     <Container $dark={dark}>
       {bgImg && <Image priority src={bgImg} alt={bgImgAlt} placeholder="blur" quality={100} sizes="100vw" />}
-      <BlurOverlay active={!!blurred} />
+      <BlurOverlay $active={!!blurred} />
       <Content {...otherProps}>{children}</Content>
     </Container>
   )
