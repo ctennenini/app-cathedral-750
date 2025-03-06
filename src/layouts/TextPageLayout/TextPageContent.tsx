@@ -1,6 +1,4 @@
-'use client'
-
-import { ComponentProps, PropsWithChildren, useState } from 'react'
+import { ComponentProps, PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
 import { IconButton } from '@/components/IconButton'
@@ -14,8 +12,9 @@ import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { ExtraContent, ExtraContentProps } from '../shared/ColumnExtraContent'
 import { TitleProps } from '../shared/ColumnLayout.components'
-import { BigLink } from '@/components/Links'
+import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
+import { TextLayoutState, useTextLayoutState } from './useTextLayoutState'
 
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',
@@ -23,25 +22,61 @@ const StyledNextButton = styled(IconButton)({
   width: '87px',
   height: '87px',
   flexShrink: 0,
+  marginLeft: 'auto',
 })
 
-const ActionButton = styled(BigLink)({
+const StyledActionButton = styled(Link)<{ $outlined?: boolean }>(({ $outlined }) => ({
   '&&': {
     borderRadius: '12px',
     padding: '0 40px',
     height: '87px',
-    fontSize: '25px',
+    fontSize: '22px',
     fontWeight: '500',
-    lineHeight: '29.3px',
-    marginRight: 'auto',
-  },
-})
+    lineHeight: '25px',
+    display: 'flex',
+    alignItems: 'center',
 
-const OutlinedActionButton = styled(ActionButton)({
-  backgroundColor: 'var(--white)',
-  color: 'var(--highlight)',
-  border: '2pt solid var(--highlight)',
-})
+    ...($outlined
+      ? {
+          color: 'var(--highlight)',
+          border: '2px solid var(--highlight)',
+          backgroundColor: 'var(--white)',
+        }
+      : {
+          color: 'var(--white)',
+          backgroundColor: 'var(--highlight)',
+        }),
+  },
+}))
+
+export type ActionButtonProps = {
+  label: TextContent
+  target: HREF
+  type: 'back' | 'quiz'
+}
+
+function ActionButton({ type, target, label }: ActionButtonProps) {
+  label = Array.isArray(label) ? label.join(' ') : label
+
+  if (type === 'back') {
+    return (
+      <StyledActionButton href={target}>
+        <BackArrowIcon style={{ marginRight: '1rem' }} />
+        {label}
+      </StyledActionButton>
+    )
+  }
+
+  if (type === 'quiz') {
+    return (
+      <StyledActionButton $outlined href={target}>
+        {label}
+      </StyledActionButton>
+    )
+  }
+
+  return null
+}
 
 type NextButtonProps = ComponentProps<typeof StyledNextButton> & {
   href: string
@@ -57,47 +92,14 @@ function NextButton({ href, ...otherProps }: NextButtonProps) {
   )
 }
 
-function useTextState<T extends ExtraContentProps>(text: string | string[] | string[][], extraContent?: T | T[]) {
-  const [page, setPage] = useState(0)
-  if (extraContent && !Array.isArray(extraContent)) {
-    extraContent = [extraContent]
-  }
-
-  if (Array.isArray(text) && Array.isArray(text[0])) {
-    const hasMore = text.length > page + 1
-    const hasPrevious = page > 0
-    const extraContentIndex = extraContent ? Math.min(page, extraContent?.length - 1) : 0
-    return {
-      current: text[page] as string[],
-      forward: hasMore ? () => setPage(page + 1) : undefined,
-      back: hasPrevious ? () => setPage(page - 1) : undefined,
-      extra: extraContent?.[extraContentIndex],
-    }
-  } else if (Array.isArray(text)) {
-    return { current: text as string[], extra: extraContent?.[0] }
-  } else {
-    return { current: [text], extra: extraContent?.[0] }
-  }
-}
-
-export type Action = {
-  label: TextContent
-  /** @deprecated don't use this, it's going away*/
-  params: {
-    href: HREF
-    $primary?: boolean
-  }
-  /** @deprecated don't use this, it's going away */
-  type: string
-}
-
 export type TextPageContentProps = PropsWithChildren<{
-  text: Parameters<typeof useTextState>[0]
-  actions?: Action[]
+  text: Parameters<typeof useTextLayoutState>[0]
+  actions?: ActionButtonProps[]
   extraContent?: ExtraContentProps | ExtraContentProps[]
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
+  state: TextLayoutState<ExtraContentProps>
 }> &
   TitleProps
 
@@ -106,26 +108,21 @@ export function TextPageContent({
   subtitle,
   titleProps,
   subtitleProps,
-  text,
   actions,
-  extraContent,
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
+  state: { text, goForward, goBack, extra },
 }: TextPageContentProps) {
-  const { current, forward, back, extra } = useTextState(text, extraContent)
-
-  const footer = forward ? (
+  const footer = goForward ? (
     <Footer>
-      <StyledNextButton onClick={forward}>
+      <StyledNextButton onClick={goForward}>
         <NextArrowIcon />
       </StyledNextButton>
     </Footer>
   ) : (
     <Footer>
-      {actions?.map(({ label, params }, index) => (
-        <OutlinedActionButton key={index} label={label} href={params.href} />
-      ))}
+      {actions?.map((action, index) => <ActionButton key={index} {...action} />)}
       {nextButtonTarget && (
         <NextButton href={nextButtonTarget}>
           <NextArrowIcon />
@@ -145,8 +142,8 @@ export function TextPageContent({
             </>
           }
           right={
-            back ? (
-              <IconButton $dark onClick={back}>
+            goBack ? (
+              <IconButton $dark onClick={goBack}>
                 <BackArrowIcon />
               </IconButton>
             ) : (
@@ -158,7 +155,7 @@ export function TextPageContent({
         <Main>
           <Title title={title} subtitle={subtitle} titleProps={titleProps} subtitleProps={subtitleProps} />
           <Separator />
-          <Text>{current}</Text>
+          <Text>{text}</Text>
         </Main>
         {footer}
       </Left>

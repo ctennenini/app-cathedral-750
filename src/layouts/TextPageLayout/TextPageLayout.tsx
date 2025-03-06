@@ -1,7 +1,11 @@
+'use client'
 import { ImageProps } from 'next/image'
 import { PropsWithChildren } from 'react'
 import { Container, LanguageSwitcher } from './TextPageLayout.styled'
-import { TextPageContent, TextPageContentProps } from './TextPageLayoutContent'
+import { TextPageContent, TextPageContentProps } from './TextPageContent'
+import { useTextLayoutState } from './useTextLayoutState'
+
+const BLUR_TYPES = ['gallery', 'image']
 
 export type TextPageLayoutProps = PropsWithChildren<{
   title: TextPageContentProps['title']
@@ -32,11 +36,10 @@ export function TextPageLayout({
   backButtonTarget,
   nextButtonTarget,
 }: TextPageLayoutProps) {
+  const state = useTextLayoutState(text, pullOutContent)
+
   return (
-    <Container
-      bgImg={bgImg}
-      bgImgAlt={bgImgAlt}
-    >
+    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurred={BLUR_TYPES.includes(state?.extra?.type ?? '')}>
       <TextPageContent
         title={title}
         subtitle={subtitle}
@@ -48,6 +51,7 @@ export function TextPageLayout({
         withHomeButton={withHomeButton}
         backButtonTarget={backButtonTarget}
         nextButtonTarget={nextButtonTarget}
+        state={state}
       />
       <LanguageSwitcher />
     </Container>

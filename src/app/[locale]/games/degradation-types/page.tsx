@@ -1,6 +1,6 @@
 import { DegradationTypesGame } from './DegradationTypesGame'
 
-import bgImg from '@/assets/bg-images/frog-perspective-1-blurred.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 
 export default function DegradationTypesPage() {
   return (

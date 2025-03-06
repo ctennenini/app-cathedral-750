@@ -1,7 +1,7 @@
 import { GlobalStaticPageProps } from '@/globals'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1-blurred.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import sandingExample from './sanding-example.jpeg'
 
 export default async function Sanding({ params: { locale } }: GlobalStaticPageProps) {

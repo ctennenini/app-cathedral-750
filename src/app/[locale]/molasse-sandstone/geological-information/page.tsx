@@ -1,5 +1,5 @@
 import { GlobalStaticPageProps } from '@/globals'
-import bgImg from '@/assets/bg-images/frog-perspective-2-blurred.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 import { getDictionary } from '@/i18n'
 
 import map from './map-of-switzerland.png'
