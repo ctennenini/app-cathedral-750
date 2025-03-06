@@ -5,29 +5,26 @@ import { NavMenuItem } from '@/types'
 import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 
-type ListItemProps = { navItem: NavMenuItem; isLast?: boolean; showLine?: boolean }
+type ListItemProps = { navItem: NavMenuItem; isFirst?: boolean; isLast?: boolean }
 
-function ListItem({ navItem, isLast, showLine }: ListItemProps) {
+function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
   const subItems = navItem.subItems
 
   const { isActive, isOnPath } = useNavItemInfo(navItem)
 
-  const [isExpanded, setIsExpanded] = useState(isOnPath || isActive)
+  const [isExpanded, setIsExpanded] = useState(isFirst || isOnPath || isActive)
 
   const Triangle = isExpanded ? NavMenuTriangleOpen : NavMenuTriangleClosed
 
   const label = Array.isArray(navItem.label) ? navItem.label.join(' ') : navItem.label
 
-  const toggle: MouseEventHandler<HTMLDivElement> = e => {
+  const toggle: MouseEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault()
-    setIsExpanded(prev => !prev)
+    setIsExpanded((prev) => !prev)
   }
 
   return (
-    <Li
-      $showLine={showLine}
-      $isLast={isLast}
-    >
+    <Li $showLine={!isFirst} $isLast={isLast}>
       <ListItemHeader>
         {!!subItems && (
           <ToggleButton onClick={toggle}>
@@ -51,16 +48,13 @@ function ListItem({ navItem, isLast, showLine }: ListItemProps) {
   )
 }
 
-function NavList({ menuItems, isFirst }: { menuItems: NavMenuItem[]; isFirst?: boolean }) {
+type NavListProps = { menuItems: NavMenuItem[]; isFirst?: boolean }
+
+function NavList({ menuItems, isFirst }: NavListProps) {
   return (
     <List>
       {menuItems.map((item, i, all) => (
-        <ListItem
-          key={i}
-          navItem={item}
-          showLine={!isFirst}
-          isLast={i === all.length - 1}
-        />
+        <ListItem key={i} navItem={item} isFirst={isFirst} isLast={i === all.length - 1} />
       ))}
     </List>
   )
@@ -69,10 +63,7 @@ function NavList({ menuItems, isFirst }: { menuItems: NavMenuItem[]; isFirst?: b
 export const renderNavList = (menuItems: NavMenuItem[]) => (
   <nav>
     <NavListContextProvider allMenuItems={menuItems}>
-      <NavList
-        isFirst
-        menuItems={menuItems}
-      />
+      <NavList isFirst menuItems={menuItems} />
     </NavListContextProvider>
   </nav>
 )
