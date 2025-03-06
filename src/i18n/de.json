@@ -207,6 +207,9 @@
               "Sehen Sie sich das Video an, um mehr zu erfahren."
             ]
           ]
+        },
+        "misc": {
+          "qrCodePrompt": "Scannen Sie den QR-Code, um das Video anzusehen!"
         }
       }
     },

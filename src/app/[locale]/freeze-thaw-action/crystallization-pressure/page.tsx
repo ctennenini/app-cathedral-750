@@ -20,6 +20,14 @@ export default async function CrystallizationPressure({ params: { locale } }: Gl
         type: 'image',
         src: imgSrc,
         alt: pages.weatheringMechanisms.freezeThaw.crystallizationPressure.title,
+        labels: [
+          {
+            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            left: 0.72,
+            top: 0.75,
+            width: 0.26,
+          },
+        ],
       }}
       backButtonTarget="/freeze-thaw-action/hydraulic-pressure"
       nextButtonTarget="/freeze-thaw-action/temperature-gradient"

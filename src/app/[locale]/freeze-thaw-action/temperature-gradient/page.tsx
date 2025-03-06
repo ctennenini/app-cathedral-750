@@ -20,6 +20,14 @@ export default async function TemperatureGradient({ params: { locale } }: Global
         type: 'image',
         src: imgSrc,
         alt: pages.weatheringMechanisms.freezeThaw.temperatureGradient.title,
+        labels: [
+          {
+            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            left: 0.72,
+            top: 0.75,
+            width: 0.26,
+          },
+        ],
       }}
       backButtonTarget="/freeze-thaw-action/crystallization-pressure"
       actions={[

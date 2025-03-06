@@ -20,6 +20,14 @@ export default async function HydraulicPressure({ params: { locale } }: GlobalSt
         type: 'image',
         src: imgSrc,
         alt: pages.weatheringMechanisms.freezeThaw.hydraulicPressure.title,
+        labels: [
+          {
+            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            left: 0.72,
+            top: 0.75,
+            width: 0.26,
+          },
+        ],
       }}
       backButtonTarget="/freeze-thaw-action/trapped-water"
       nextButtonTarget="/freeze-thaw-action/crystallization-pressure"

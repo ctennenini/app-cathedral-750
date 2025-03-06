@@ -207,6 +207,9 @@
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
+        },
+        "misc": {
+          "qrCodePrompt": "Scannez le code QR pour regarder la vidéo !"
         }
       }
     },

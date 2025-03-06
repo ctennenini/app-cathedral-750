@@ -6,6 +6,7 @@ import { BigLink, BigLinkProps } from '@/components/Links'
 import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
 
 import { Link } from '@/components/Links'
+import { TextContent } from '@/components/Typography'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -31,7 +32,7 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
     maxWidth: `calc(${TARGET_VIEW_WIDTH}px - ${LEFT_COLUMN_OFFSET})`,
     paddingTop: '2rem',
     paddingBottom: '2rem',
-    paddingLeft: '2rem',
+    paddingLeft: '4rem',
     paddingRight: `${PAGE_PADDING_RIGHT}px`,
     overflow: 'hidden',
   },
@@ -183,6 +184,37 @@ const ClickMap = styled.div({
 })
 
 /**
+ * Image with Labels
+ */
+
+type LabelProps = {
+  text: TextContent
+  left: number
+  top: number
+  width?: number
+  height?: number
+}
+
+const Label = styled(({ text, left, top, width, height, ...otherProps }: LabelProps) => (
+  <label
+    style={{
+      left: `${left * 100}%`,
+      top: `${top * 100}%`,
+      width: width ? `${width * 100}%` : 'auto',
+      height: height ? `${height * 100}%` : 'auto',
+    }}
+    {...otherProps}
+  >
+    {Array.isArray(text) ? text.join(' ') : text}
+  </label>
+))({
+  position: 'absolute',
+  fontSize: '1.75rem',
+  fontWeight: 500,
+  color: 'var(--highlight)',
+})
+
+/**
  * Extra Content
  */
 
@@ -195,6 +227,7 @@ export type ExtraContentProps =
       type: 'image'
       legendItems?: LegendItemParams[]
       clickAreas?: ClickArea[]
+      labels?: LabelProps[]
     } & ImageProps)
   // | ({
   //     type: 'image-with-legend'
@@ -242,13 +275,14 @@ export function ExtraContent(props: ExtraContentProps) {
     }
     case 'image':
       {
-        const { legendItems, clickAreas, ...otherProps } = props
+        const { legendItems, clickAreas, labels, ...otherProps } = props
         return (
           <Container>
             <ClickMap>
               <ExtraImage {...otherProps} />
               {legendItems && <Legend items={legendItems} />}
               {clickAreas?.map((props, index) => <Trigger key={index} {...props} />)}
+              {labels?.map((props, index) => <Label key={index} {...props} />)}
             </ClickMap>
           </Container>
         )

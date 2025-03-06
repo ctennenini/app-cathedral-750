@@ -20,6 +20,14 @@ export default async function TrappedWater({ params: { locale } }: GlobalStaticP
         type: 'image',
         src: imgSrc,
         alt: pages.weatheringMechanisms.freezeThaw.trappedWater.title,
+        labels: [
+          {
+            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            left: 0.72,
+            top: 0.75,
+            width: 0.26,
+          },
+        ],
       }}
       backButtonTarget="/weathering-mechanisms"
       nextButtonTarget="/freeze-thaw-action/hydraulic-pressure"

@@ -209,6 +209,9 @@
               "Watch the video to know more."
             ]
           ]
+        },
+        "misc": {
+          "qrCodePrompt": "Scan the QR code to watch the video!"
         }
       }
     },
