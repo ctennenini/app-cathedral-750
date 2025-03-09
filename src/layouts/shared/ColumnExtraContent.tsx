@@ -177,10 +177,11 @@ const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
 
 type ClickArea = ComponentProps<typeof Trigger>
 
-const ClickMap = styled.div({
+const Spacer = styled.div({
   position: 'relative',
   width: 'fit-content',
   height: 'fit-content',
+  margin: 'auto',
 })
 
 /**
@@ -193,15 +194,17 @@ type LabelProps = {
   top: number
   width?: number
   height?: number
+  style?: React.CSSProperties
 }
 
-const Label = styled(({ text, left, top, width, height, ...otherProps }: LabelProps) => (
+const Label = styled(({ text, left, top, width, height, style, ...otherProps }: LabelProps) => (
   <label
     style={{
       left: `${left * 100}%`,
       top: `${top * 100}%`,
       width: width ? `${width * 100}%` : 'auto',
       height: height ? `${height * 100}%` : 'auto',
+      ...style,
     }}
     {...otherProps}
   >
@@ -212,6 +215,7 @@ const Label = styled(({ text, left, top, width, height, ...otherProps }: LabelPr
   fontSize: '1.75rem',
   fontWeight: 500,
   color: 'var(--highlight)',
+  backgroundColor: '#f0fa',
 })
 
 /**
@@ -278,12 +282,12 @@ export function ExtraContent(props: ExtraContentProps) {
         const { legendItems, clickAreas, labels, ...otherProps } = props
         return (
           <Container>
-            <ClickMap>
+            <Spacer>
               <ExtraImage {...otherProps} />
               {legendItems && <Legend items={legendItems} />}
               {clickAreas?.map((props, index) => <Trigger key={index} {...props} />)}
               {labels?.map((props, index) => <Label key={index} {...props} />)}
-            </ClickMap>
+            </Spacer>
           </Container>
         )
       }
