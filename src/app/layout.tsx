@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, Suspense } from 'react'
 
 import { getFontClasses } from '@/assets/fonts'
 import './globals.css'
@@ -15,7 +15,9 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
     <html>
       <body className={`${getFontClasses()}`}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Suspense fallback={null}>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </Suspense>
       </body>
     </html>
   )
