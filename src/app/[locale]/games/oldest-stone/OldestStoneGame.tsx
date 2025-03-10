@@ -76,6 +76,7 @@ export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: O
                 width: '19%',
                 height: '4%',
                 display: done ? 'none' : 'block',
+                borderColor: 'var(--highlight)',
               },
               onClick: () => setState('incorrect'),
             },
@@ -87,6 +88,7 @@ export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: O
                 width: '18%',
                 height: '4%',
                 display: done ? 'none' : 'block',
+                borderColor: 'var(--highlight)',
               },
               onClick: () => setState('incorrect'),
             },
@@ -98,7 +100,6 @@ export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: O
                 width: '19%',
                 height: '4%',
                 ...(done && {
-                  border: 'none',
                   background: 'rgba(71, 204, 64, 0.4)',
                 }),
               },

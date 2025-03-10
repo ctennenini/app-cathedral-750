@@ -7,6 +7,7 @@ import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW
 
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
+import { HREF } from '@/utils'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -167,15 +168,18 @@ function Links({ links }: LinksProps) {
  * Image with Click Map
  */
 
-const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
+type ClickAreaProps = Omit<ComponentProps<typeof Link>, 'href'> & {
+  target?: HREF
+}
+
+const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link href={target ?? '#'} {...otherProps} />)({
+  border: '5px solid transparent',
   position: 'absolute',
   backgroundColor: 'transparent',
-  border: '5px solid',
-  borderColor: $green ? '#47CC40' : 'var(--highlight)',
   cursor: 'pointer',
-}))
+})
 
-type ClickAreaParams = ComponentProps<typeof Trigger>
+type ClickAreaParams = ComponentProps<typeof ClickArea>
 
 const Spacer = styled.div({
   position: 'relative',
@@ -265,7 +269,7 @@ export function ExtraContent(props: ExtraContentProps) {
             <Spacer>
               <ExtraImage {...otherProps} />
               {legendItems && <Legend items={legendItems} />}
-              {clickAreas?.map((props, index) => <Trigger key={index} {...props} />)}
+              {clickAreas?.map((props, index) => <ClickArea key={index} {...props} />)}
               {labels?.map(({ text, type, ...props }, index) => (
                 <Label text={text} type={type} key={index} {...props} />
               ))}

@@ -151,6 +151,7 @@ export const Main = styled.main({
 
 export const Footer = styled.footer({
   display: 'flex',
+  marginTop: '1rem',
   padding: '0 3rem',
   flexDirection: 'row',
   justifyContent: 'center',

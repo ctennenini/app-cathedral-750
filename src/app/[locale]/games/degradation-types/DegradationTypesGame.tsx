@@ -94,7 +94,6 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
                 opacity: '0.5',
                 aspectRatio: '1 / 1',
                 borderRadius: '100%',
-                border: 'none',
               },
             },
           ]}
