@@ -33,6 +33,18 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
         {
           type: 'image',
           src: mapWithOverlay,
+          clickAreas: [
+            {
+              target: '/games/quarries',
+              style: {
+                width: '80%',
+                height: '30%',
+                left: '0',
+                transform: 'rotate(-29deg)',
+                top: '25%',
+              },
+            },
+          ],
         },
         {
           type: 'image',

@@ -59,7 +59,7 @@ export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: O
             <Text>{text.body}</Text>
           </Main>
           <Footer>
-            <NextButton href={successTarget} />
+            <NextButton target={successTarget} />
           </Footer>
         </>
       }
@@ -99,9 +99,13 @@ export default function OldestStoneGame({ bgImg, successTarget, closeTarget }: O
                 left: '68%',
                 width: '19%',
                 height: '4%',
-                ...(done && {
-                  background: 'rgba(71, 204, 64, 0.4)',
-                }),
+                ...(done
+                  ? {
+                      background: 'rgba(71, 204, 64, 0.4)',
+                    }
+                  : {
+                      borderColor: 'var(--highlight)',
+                    }),
               },
               onClick: () => setState('finish'),
             },

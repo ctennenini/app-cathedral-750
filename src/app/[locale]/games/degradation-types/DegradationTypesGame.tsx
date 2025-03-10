@@ -156,7 +156,7 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
             <Text>{body}</Text>
           </Main>
           <Footer>
-            <NextButton data-testid="next-button" href={successHref} />
+            <NextButton data-testid="next-button" target={successHref} />
           </Footer>
         </>
       }

@@ -172,12 +172,29 @@ type ClickAreaProps = Omit<ComponentProps<typeof Link>, 'href'> & {
   target?: HREF
 }
 
-const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link href={target ?? '#'} {...otherProps} />)({
+const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link href={target ?? '#'} {...otherProps} />)<{
+  $circled?: boolean
+}>(({ $circled }) => ({
   border: '5px solid transparent',
   position: 'absolute',
   backgroundColor: 'transparent',
   cursor: 'pointer',
-})
+  ...($circled && {
+    '&&::before': {
+      content: "''",
+      display: 'block',
+      position: 'absolute',
+      width: '300%',
+      height: '300%',
+      left: '-100%',
+      top: '-100%',
+      boxSizing: 'border-box',
+      border: '3px solid',
+      borderRadius: 'inherit',
+      borderColor: 'var(--highlight)',
+    },
+  }),
+}))
 
 type ClickAreaParams = ComponentProps<typeof ClickArea>
 

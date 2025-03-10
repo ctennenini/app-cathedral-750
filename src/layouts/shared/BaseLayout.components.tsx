@@ -29,18 +29,6 @@ const Content = styled.div({
   height: '100%',
 })
 
-const BlurOverlay = styled.div.attrs({
-  'aria-hidden': true,
-})<{ $active: boolean }>(({ $active }) => ({
-  position: 'absolute',
-  top: '0',
-  left: '0',
-  width: '100%',
-  height: '100%',
-  backdropFilter: $active ? 'blur(10px)' : 'none',
-  transition: 'backdrop-filter 0.2s ease-in-out',
-}))
-
 const Overlay = styled.div.attrs({
   'aria-hidden': true,
 })<{ $blur: boolean; $darken: boolean }>(({ $blur, $darken }) => ({

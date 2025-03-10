@@ -12,6 +12,7 @@ import {
 import { IconButton } from '@/components/IconButton'
 import { CloseIcon, NextArrowIcon } from '@/components/Icons'
 import { Link, LinkProps } from '@/components/Links'
+import { ComponentProps } from 'react'
 
 export {
   Text,
@@ -30,33 +31,30 @@ export const Container = styled(BaseContainer).attrs({ blurredBackground: true, 
   },
 })
 
-type ButtonProps = LinkProps
-
 const StyledIconButton = styled(IconButton)({
   color: 'var(--highlight)',
   backgroundColor: 'var(--white)',
 })
 
-export const CloseButton = styled((props: ButtonProps) => (
-  <Link {...props}>
-    <StyledIconButton>
+type ButtonProps = ComponentProps<typeof StyledIconButton> & {
+  target: LinkProps['href']
+}
+
+export const CloseButton = styled(({ target, ...otherProps }: ButtonProps) => (
+  <Link href={target}>
+    <StyledIconButton {...otherProps}>
       <CloseIcon />
     </StyledIconButton>
   </Link>
-))({
-  color: 'var(--highlight)',
-  backgroundColor: 'var(--white)',
-})
+))({})
 
-export const NextButton = styled((props: ButtonProps) => (
-  <Link {...props}>
-    <StyledIconButton>
+export const NextButton = styled(({ target, ...otherProps }: ButtonProps) => (
+  <Link href={target}>
+    <StyledIconButton {...otherProps}>
       <NextArrowIcon />
     </StyledIconButton>
   </Link>
 ))({
-  backgroundColor: 'var(--white)',
-  color: 'var(--highlight)',
   width: '87px',
   height: '87px',
   flexShrink: 0,

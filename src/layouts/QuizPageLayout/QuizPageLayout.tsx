@@ -20,7 +20,7 @@ export function QuizPageLayout({
   return (
     <Container bgImg={bgImg} bgImgAlt={bgImgAlt}>
       <Left>
-        <Header left={<CloseButton href={closeTarget} />} />
+        <Header left={<CloseButton target={closeTarget} />} />
         {left}
       </Left>
       <Right>{right}</Right>

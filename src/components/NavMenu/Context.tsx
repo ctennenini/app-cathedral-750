@@ -23,7 +23,7 @@ export function NavListContextProvider({ children, allMenuItems }: PropsWithChil
 
     const checkItems = (items: NavMenuItem[]) => {
       let hasActive = false
-      items.forEach(item => {
+      items.forEach((item) => {
         const fullPath = joinPath('/', locale, item.path)
         const isActive = currentPath === fullPath
         const isOnPath = !!item.subItems && checkItems(item.subItems)

@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { ExtraContentProps } from '@/layouts/shared/ColumnExtraContent'
-import { ReadonlyURLSearchParams, useParams, useRouter, useSearchParams, redirect } from 'next/navigation'
+import { ReadonlyURLSearchParams, useRouter, useSearchParams } from 'next/navigation'
 
 export type TextLayoutState<T extends ExtraContentProps> = ReturnType<typeof useTextLayoutState<T>>
 

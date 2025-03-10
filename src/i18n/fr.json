@@ -312,6 +312,32 @@
       "incorrect": {
         "title": "Essayez encore !"
       }
+    },
+    "quarries": {
+      "start": {
+        "title": "Les points rouges vous montrent les carrières.",
+        "body": "Appuyez sur l'un d'eux pour en savoir plus"
+      },
+      "quarry1": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "Ce type de roche varie en couleur du gris au bleu, avec une certaine variabilité jaune. Il a une taille de grain moyenne à grossière et est composé de quartz, de feldspaths potassiques, de plagioclases, de calcite et parfois de dolomite, de pyrite et de goethite.",
+          "C'est le faciès principal utilisé sur la cathédrale de Lausanne, y compris la tour sud du transept."
+        ]
+      },
+      "quarry2": {
+        "title": "Molasse d'Ursy",
+        "body": [
+          "Ce faciès, auquel le nom de molasse d'Ursy est attribué selon les archives, est un faciès à stratifications plates alternant des niveaux de finesse et de grossièreté. Ce faciès gris-vert a une patine rose violacée.",
+          "Il est utilisé dans la partie inférieure du contrefort sud-est de la façade est."
+        ]
+      },
+      "quarry3": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "Ce faciès d'âge aquitain se dépose dans la partie sud du plateau suisse dans l'unité géologique USM (molasse d'eau douce inférieure). Le milieu de dépôt est continental, dans un environnement de plaine alluviale de bas relief, associé à des forêts, des marais et des rivières de forme moyenne."
+        ]
+      }
     }
   }
 }

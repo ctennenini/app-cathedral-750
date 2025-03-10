@@ -312,6 +312,32 @@
       "incorrect": {
         "title": "Versuchen Sie es nochmal!"
       }
+    },
+    "quarries": {
+      "start": {
+        "title": "Die roten Punkte zeigen die Steinbrüche.",
+        "body": "Tippen Sie auf einen, um mehr zu erfahren"
+      },
+      "quarry1": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "Dieser Gesteinstyp variiert in der Farbe von Grau bis Blau mit einigen gelben Verfärbungen. Er hat eine mittlere bis grobe Korngröße und besteht aus Quarz, Kalifeldspaten, Plagioklasen, Calcit und gelegentlich Dolomit, Pyrit und Goethit.",
+          "Dies ist die Hauptfazies, die an der Kathedrale von Lausanne verwendet wird, einschließlich des Südturms des Querschiffs."
+        ]
+      },
+      "quarry2": {
+        "title": "Molasse von Ursy",
+        "body": [
+          "Diese Fazies, der in den Archiven der Name Ursy Molasse zugeschrieben wird, ist eine Fazies mit flachen Schichtungen, die feinkörnige und grobe Schichten abwechseln. Diese grau-grüne Fazies hat eine purpur-rosa Patina.",
+          "Diese Fazies findet sich nur im unteren Teil des südöstlichen Strebepfeilers der Ostfassade."
+        ]
+      },
+      "quarry3": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "Diese Fazies aus dem Aquitanien-Zeitalter ist im südlichen Teil des Schweizer Mittellandes in der geologischen Einheit USM (Untere Süsswassermolasse) abgelagert. Das Ablagerungsumfeld ist kontinental, in einer Auenumgebung mit niedrigem Relief, verbunden mit Wäldern, Sümpfen und Flüssen mittlerer Form."
+        ]
+      }
     }
   }
 }
