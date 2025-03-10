@@ -6,7 +6,7 @@ import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 import { IconButton } from './IconButton'
 
-const Overlay = styled.div<{ $active: boolean }>(props => ({
+const Overlay = styled.div<{ $active: boolean }>((props) => ({
   position: 'fixed',
   top: 0,
   left: 0,
@@ -18,7 +18,7 @@ const Overlay = styled.div<{ $active: boolean }>(props => ({
   transition: 'opacity 0.3s',
 }))
 
-const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
+const Drawer = styled.div<{ $isExpanded: boolean }>((props) => ({
   position: 'fixed',
   top: 0,
   left: 0,
@@ -28,16 +28,13 @@ const Drawer = styled.div<{ $isExpanded: boolean }>(props => ({
   transform: `translateX(${props.$isExpanded ? '0' : '-100%'})`,
   transition: 'transform 0.3s',
 
-  padding: '180px 130px 180px 50px',
+  padding: '10px 130px 10px 50px',
 }))
 
 type ButtonProps = ComponentProps<'button'>
 
 const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
-  <button
-    {...otherProps}
-    title="close"
-  >
+  <button {...otherProps} title="close">
     <CloseIcon>{children}</CloseIcon>
   </button>
 ))({
@@ -71,17 +68,11 @@ export function SideBar({ renderContent, darkButton }: SideBarProps) {
 
   return (
     <>
-      <IconButton
-        onClick={() => setExpanded(true)}
-        $dark={darkButton}
-      >
+      <IconButton onClick={() => setExpanded(true)} $dark={darkButton}>
         <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
       </IconButton>
       <Overlay $active={isExpanded} />
-      <Drawer
-        $isExpanded={isExpanded}
-        ref={drawerRef}
-      >
+      <Drawer $isExpanded={isExpanded} ref={drawerRef}>
         <CloseButton onClick={() => setExpanded(false)} />
         {renderContent()}
       </Drawer>

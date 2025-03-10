@@ -4,6 +4,7 @@ import { MouseEventHandler, useState } from 'react'
 import { NavMenuItem } from '@/types'
 import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
+import { NavContainer } from './NavContainer'
 
 type ListItemProps = { navItem: NavMenuItem; isFirst?: boolean; isLast?: boolean }
 
@@ -61,9 +62,9 @@ function NavList({ menuItems, isFirst }: NavListProps) {
 }
 
 export const renderNavList = (menuItems: NavMenuItem[]) => (
-  <nav>
+  <NavContainer>
     <NavListContextProvider allMenuItems={menuItems}>
       <NavList isFirst menuItems={menuItems} />
     </NavListContextProvider>
-  </nav>
+  </NavContainer>
 )
