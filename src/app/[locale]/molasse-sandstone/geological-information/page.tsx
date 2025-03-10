@@ -4,6 +4,7 @@ import { getDictionary } from '@/i18n'
 
 import map from './map-of-switzerland.png'
 import mapWithOverlay from './map-of-switzerland-with-overlay.png'
+import molasseFacies from './molasse-facies.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default async function GeologicalInformation({ params: { locale } }: GlobalStaticPageProps) {
@@ -16,6 +17,14 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
       title={pages.molasseSandstone.geologicalInformation.title}
       subtitle={pages.molasseSandstone.title}
       text={pages.molasseSandstone.geologicalInformation.description}
+      backButtonTarget="/molasse-sandstone/the-molasse-sandstone"
+      actions={[
+        {
+          type: 'back',
+          label: pages.molasseSandstone.title,
+          target: '/molasse-sandstone',
+        },
+      ]}
       pullOutContent={[
         {
           type: 'image',
@@ -25,8 +34,11 @@ export default async function GeologicalInformation({ params: { locale } }: Glob
           type: 'image',
           src: mapWithOverlay,
         },
+        {
+          type: 'image',
+          src: molasseFacies,
+        },
       ]}
-      backButtonTarget="/molasse-sandstone/the-molasse-sandstone"
     />
   )
 }
