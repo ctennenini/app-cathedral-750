@@ -61,6 +61,10 @@ export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
                   ],
                 },
                 {
+                  label: pages.swellingClays.title,
+                  path: '/swelling-clays',
+                },
+                {
                   label: pages.atmosphericPollution.title,
                   path: '/atmospheric-pollution',
                   subItems: [

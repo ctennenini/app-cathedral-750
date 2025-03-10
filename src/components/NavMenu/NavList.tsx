@@ -6,10 +6,16 @@ import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 import { NavContainer } from './NavContainer'
 
-type ListItemProps = { navItem: NavMenuItem; isFirst?: boolean; isLast?: boolean }
+type ListItemProps = {
+  navItem: NavMenuItem
+  isFirst?: boolean
+  isLast?: boolean
+  neighborHasSubItems?: boolean
+}
 
-function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
+function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemProps) {
   const subItems = navItem.subItems
+  const hasSubItems = !!subItems?.length
 
   const { isActive, isOnPath } = useNavItemInfo(navItem)
 
@@ -19,7 +25,7 @@ function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
 
   const label = Array.isArray(navItem.label) ? navItem.label.join(' ') : navItem.label
 
-  const toggle: MouseEventHandler<HTMLDivElement> = (e) => {
+  const toggleExpanded: MouseEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault()
     setIsExpanded((prev) => !prev)
   }
@@ -27,8 +33,8 @@ function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
   return (
     <Li $showLine={!isFirst} $isLast={isLast}>
       <ListItemHeader>
-        {!!subItems && (
-          <ToggleButton onClick={toggle}>
+        {hasSubItems && (
+          <ToggleButton onClick={toggleExpanded}>
             <Triangle $highlight={isOnPath || isActive} />
           </ToggleButton>
         )}
@@ -37,10 +43,11 @@ function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
           disabled={navItem.disabled}
           $isOnPath={isOnPath}
           $isActive={isActive}
+          $indented={!hasSubItems && !!neighborHasSubItems}
           dangerouslySetInnerHTML={{ __html: label }}
         />
       </ListItemHeader>
-      {!!subItems && (
+      {hasSubItems && (
         <Expander $isOpen={isExpanded}>
           <NavList menuItems={subItems} />
         </Expander>
@@ -52,10 +59,17 @@ function ListItem({ navItem, isFirst, isLast }: ListItemProps) {
 type NavListProps = { menuItems: NavMenuItem[]; isFirst?: boolean }
 
 function NavList({ menuItems, isFirst }: NavListProps) {
+  const someSubItems = menuItems.some((item) => !!item.subItems?.length)
   return (
     <List>
       {menuItems.map((item, i, all) => (
-        <ListItem key={i} navItem={item} isFirst={isFirst} isLast={i === all.length - 1} />
+        <ListItem
+          key={i}
+          navItem={item}
+          isFirst={isFirst}
+          isLast={i === all.length - 1}
+          neighborHasSubItems={someSubItems}
+        />
       ))}
     </List>
   )

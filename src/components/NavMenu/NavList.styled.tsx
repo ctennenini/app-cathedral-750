@@ -12,8 +12,8 @@ export const List = styled.ul({
   position: 'relative',
 })
 
-export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(
-  ({ $isOnPath, $isActive, disabled }) => ({
+export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean; $indented: boolean }>(
+  ({ $isOnPath, $isActive, $indented, disabled }) => ({
     '&&': {
       display: 'block',
       padding: '0.6rem 1.5rem',
@@ -22,6 +22,7 @@ export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean }>(
       backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
       cursor: disabled ? 'not-allowed' : 'pointer',
       textDecoration: disabled ? 'line-through' : 'none',
+      marginLeft: $indented ? LINE_SECTION_WIDTH : 'none',
     },
   }),
 )
