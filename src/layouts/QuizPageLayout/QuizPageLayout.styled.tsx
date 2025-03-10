@@ -24,7 +24,7 @@ export {
 } from '../shared/ColumnLayout.components'
 export { ExtraContent, type ExtraContentProps } from '../shared/ColumnExtraContent'
 
-export const Container = styled(BaseContainer)({
+export const Container = styled(BaseContainer).attrs({ blurredBackground: true, darkenedBackground: true })({
   '&&': {
     position: 'fixed',
   },

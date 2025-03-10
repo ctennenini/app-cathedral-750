@@ -39,7 +39,7 @@ export function TextPageLayout({
   const state = useTextLayoutState(text, pullOutContent)
 
   return (
-    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurred={BLUR_TYPES.includes(state?.extra?.type ?? '')}>
+    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurredBackground={BLUR_TYPES.includes(state?.extra?.type ?? '')}>
       <TextPageContent
         title={title}
         subtitle={subtitle}

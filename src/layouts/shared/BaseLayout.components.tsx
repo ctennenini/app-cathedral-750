@@ -41,25 +41,39 @@ const BlurOverlay = styled.div.attrs({
   transition: 'backdrop-filter 0.2s ease-in-out',
 }))
 
+const Overlay = styled.div.attrs({
+  'aria-hidden': true,
+})<{ $blur: boolean; $darken: boolean }>(({ $blur, $darken }) => ({
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100%',
+  backdropFilter: `blur(${$blur ? 10 : 0}px) brightness(${$darken ? 0.3 : 1})`,
+  transition: 'backdrop-filter 0.2s ease-in-out',
+}))
+
 export type BaseContainerProps = ComponentProps<typeof Content> & {
   bgImg?: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
-  dark?: boolean
-  blurred?: boolean
+  darkText?: boolean
+  blurredBackground?: boolean
+  darkenedBackground?: boolean
 }
 
 export function BaseContainer({
   bgImg,
   bgImgAlt = 'background image',
-  dark,
-  blurred,
+  darkText,
+  blurredBackground,
+  darkenedBackground,
   children,
   ...otherProps
 }: BaseContainerProps) {
   return (
-    <Container $dark={dark}>
+    <Container $dark={darkText}>
       {bgImg && <Image priority src={bgImg} alt={bgImgAlt} placeholder="blur" quality={100} sizes="100vw" />}
-      <BlurOverlay $active={!!blurred} />
+      <Overlay $blur={!!blurredBackground} $darken={!!darkenedBackground} />
       <Content {...otherProps}>{children}</Content>
     </Container>
   )

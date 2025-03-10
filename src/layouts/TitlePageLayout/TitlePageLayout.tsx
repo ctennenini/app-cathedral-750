@@ -43,22 +43,13 @@ export function TitlePageLayout({
   titleStyle = {},
 }: TitlePageLayoutProps) {
   return (
-    <Container
-      dark={textColor === 'dark'}
-      bgImg={bgImg}
-      bgImgAlt={bgImgAlt}
-    >
+    <Container darkText={textColor === 'dark'} bgImg={bgImg} bgImgAlt={bgImgAlt}>
       <Header
         left={
           <>
             <NavMenu $dark={buttonColor === 'dark'} />
             {withHomeButton && <HomeButton $dark={buttonColor === 'dark'} />}
-            {backButtonTarget && (
-              <BackButton
-                $dark={buttonColor === 'dark'}
-                href={backButtonTarget}
-              />
-            )}
+            {backButtonTarget && <BackButton $dark={buttonColor === 'dark'} href={backButtonTarget} />}
           </>
         }
         right={<LanguageSwitcher $dark={buttonColor === 'dark'} />}
