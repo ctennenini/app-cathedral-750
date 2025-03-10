@@ -251,7 +251,19 @@
           "Dans le cas des argiles gonflantes, en raison de certaines propriétés particulières des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuilles, provoquant le gonflement de l'ensemble de la pierre.",
           "La conséquence est le gonflement de toute la pierre."
         ]
-      ]
+      ],
+      "labels": {
+        "wetting": "Humidification",
+        "drying": "Séchage",
+        "dryBlock": "Bloc sec",
+        "wetBlock": "Bloc humide",
+        "buckling": "Flambage",
+        "peeling": "Écaillage",
+        "mudCracking": "Fissuration de boue",
+        "dry": "Sec",
+        "wet": "Humide",
+        "swelling": "Gonflement 1.0 mm/m"
+      }
     }
   },
   "games": {

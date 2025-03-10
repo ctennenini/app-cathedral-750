@@ -119,7 +119,9 @@ export type TitleProps = {
 export function Title({ title, subtitle, subtitleProps, titleProps, ...otherProps }: TitleProps) {
   return (
     <div {...otherProps}>
-      {subtitle && <StyledSubTitle {...subtitleProps}>{subtitle}</StyledSubTitle>}
+      {subtitle && (
+        <StyledSubTitle {...subtitleProps}>{Array.isArray(subtitle) ? subtitle.join(' ') : subtitle}</StyledSubTitle>
+      )}
       <StyledTitle {...titleProps}>{title}</StyledTitle>
     </div>
   )

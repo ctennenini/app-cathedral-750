@@ -22,9 +22,8 @@ export default async function WeatheringMechanisms({ params: { locale } }: Globa
             label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
-            href: '#',
+            href: '/swelling-clays',
             label: pages.weatheringMechanisms.actions.swellingClays,
-            disabled: true,
           },
           {
             href: '#',

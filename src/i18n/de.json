@@ -251,7 +251,19 @@
           "Im Falle von quellenden Tonen, aufgrund einer besonderen Eigenschaft der Schichten, die in Kontakt mit Wasser stehen, haben sie die Fähigkeit, die Wassermoleküle zwischen ihren Schichten zu ziehen, wodurch der gesamte Stapel aufgeblasen oder geschwollen wird.",
           "Die Folge ist das Schwellen des gesamten Steins."
         ]
-      ]
+      ],
+      "labels": {
+        "wetting": "Anfeuchtung",
+        "drying": "Trocknung",
+        "dryBlock": "Trockener Block",
+        "wetBlock": "Nasser Block",
+        "buckling": "Verformung",
+        "peeling": "Abplatzung",
+        "mudCracking": "Mud Cracking",
+        "dry": "Trocken",
+        "wet": "Nass",
+        "swelling": "Schwellung 1.0 mm/m"
+      }
     }
   },
   "games": {

@@ -175,7 +175,7 @@ const Trigger = styled.button<{ $green?: boolean }>(({ $green }) => ({
   cursor: 'pointer',
 }))
 
-type ClickArea = ComponentProps<typeof Trigger>
+type ClickAreaParams = ComponentProps<typeof Trigger>
 
 const Spacer = styled.div({
   position: 'relative',
@@ -188,35 +188,23 @@ const Spacer = styled.div({
  * Image with Labels
  */
 
-type LabelProps = {
+type LabelProps = Omit<ComponentProps<'label'>, 'text' | 'type'> & {
   text: TextContent
-  left: number
-  top: number
-  width?: number
-  height?: number
-  style?: React.CSSProperties
+  type?: 'primary' | 'secondary'
 }
 
-const Label = styled(({ text, left, top, width, height, style, ...otherProps }: LabelProps) => (
-  <label
-    style={{
-      left: `${left * 100}%`,
-      top: `${top * 100}%`,
-      width: width ? `${width * 100}%` : 'auto',
-      height: height ? `${height * 100}%` : 'auto',
-      ...style,
-    }}
-    {...otherProps}
-  >
+const Label = styled(({ type = 'primary', text, ...otherProps }: LabelProps) => (
+  <label {...otherProps} data-label-type={type}>
     {Array.isArray(text) ? text.join(' ') : text}
   </label>
 ))({
   position: 'absolute',
-  fontSize: '1.75rem',
-  fontWeight: 500,
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
   color: 'var(--highlight)',
-  backgroundColor: '#f0fa',
 })
+
+type LabelParams = ComponentProps<typeof Label>
 
 /**
  * Extra Content
@@ -230,17 +218,9 @@ export type ExtraContentProps =
   | ({
       type: 'image'
       legendItems?: LegendItemParams[]
-      clickAreas?: ClickArea[]
-      labels?: LabelProps[]
+      clickAreas?: ClickAreaParams[]
+      labels?: LabelParams[]
     } & ImageProps)
-  // | ({
-  //     type: 'image-with-legend'
-  //     legendItems: LegendItemParams[]
-  //   } & ImageProps)
-  // | ({
-  //     type: 'image-with-click-map'
-  //     clickAreas: ClickArea[]
-  //   } & ImageProps)
   | {
       type: 'gallery'
       items: (ImageProps & {
@@ -286,7 +266,9 @@ export function ExtraContent(props: ExtraContentProps) {
               <ExtraImage {...otherProps} />
               {legendItems && <Legend items={legendItems} />}
               {clickAreas?.map((props, index) => <Trigger key={index} {...props} />)}
-              {labels?.map((props, index) => <Label key={index} {...props} />)}
+              {labels?.map(({ text, type, ...props }, index) => (
+                <Label text={text} type={type} key={index} {...props} />
+              ))}
             </Spacer>
           </Container>
         )

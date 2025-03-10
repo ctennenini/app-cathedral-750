@@ -253,7 +253,19 @@
           "In the case of swelling clays, due to some particular asset of the layers, in contact with water, they have the ability to pull the water molecules in between their sheets, causing the entire stack to puff up or swell.",
           " The consequence is the swelling of the entire stone."
         ]
-      ]
+      ],
+      "labels": {
+        "wetting": "Wetting",
+        "drying": "Drying",
+        "dryBlock": "Dry Block",
+        "wetBlock": "Wet Block",
+        "buckling": "Buckling",
+        "peeling": "Peeling",
+        "mudCracking": "Mud Cracking",
+        "dry": "Dry",
+        "wet": "Wet",
+        "swelling": "Swelling 1.0 mm/m"
+      }
     }
   },
   "games": {
