@@ -7,7 +7,7 @@ export default function OldestStonePage() {
     <OldestStoneGame
       bgImg={bgImg}
       successTarget="/molasse-sandstone/molasse-gris"
-      closeTarget="/molasse-sandstone/stones-of-the-cathedral"
+      closeTarget="/molasse-sandstone/stones-of-the-cathedral?page=2"
     />
   )
 }

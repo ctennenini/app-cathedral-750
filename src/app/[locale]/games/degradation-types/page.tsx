@@ -7,7 +7,7 @@ export default function DegradationTypesPage() {
     <DegradationTypesGame
       bgImg={bgImg}
       successTarget="/degradation-types/black-crust'"
-      closeTarget="/degradation-types"
+      closeTarget="/degradation-types?page=2"
     />
   )
 }
