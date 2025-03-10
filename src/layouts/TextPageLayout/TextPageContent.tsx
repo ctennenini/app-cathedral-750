@@ -62,7 +62,7 @@ function ActionButton({ type, target, label }: ActionButtonProps) {
     return (
       <StyledActionButton href={target}>
         <BackArrowIcon style={{ marginRight: '1rem' }} />
-        {label}
+        <span dangerouslySetInnerHTML={{ __html: label }} />
       </StyledActionButton>
     )
   }

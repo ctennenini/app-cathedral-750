@@ -17,6 +17,13 @@ export default async function SwellingClays({ params: { locale } }: GlobalStatic
       subtitle={pages.weatheringMechanisms.title}
       text={pages.swellingClays.description}
       backButtonTarget="/weathering-mechanisms"
+      actions={[
+        {
+          type: 'back',
+          label: pages.weatheringMechanisms.title,
+          target: '/weathering-mechanisms',
+        },
+      ]}
       pullOutContent={[
         {
           type: 'image',
