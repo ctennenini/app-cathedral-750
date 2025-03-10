@@ -23,9 +23,11 @@ export default async function CrystallizationPressure({ params: { locale } }: Gl
         labels: [
           {
             text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
-            left: 0.72,
-            top: 0.75,
-            width: 0.26,
+            style: {
+              left: '72%',
+              top: '75%',
+              width: '26%',
+            },
           },
         ],
       }}
