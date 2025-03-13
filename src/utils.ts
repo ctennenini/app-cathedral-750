@@ -31,3 +31,18 @@ export function Go({ to }: { to: HREF }) {
 
   return redirect(augmentedHref.toString(), RedirectType.replace)
 }
+
+export function useResizeObserver<T extends HTMLElement>(callback: (entry: ResizeObserverEntry) => void) {
+  return (options: ResizeObserverOptions) => {
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        callback(entry)
+      }
+    })
+
+    return (element: T) => {
+      observer.observe(element, options)
+      return element
+    }
+  }
+}

@@ -1,8 +1,36 @@
 'use client'
 import { TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
+import { ComponentProps, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
-export const PageWrapper = styled.div({
+export const PageWrapper = styled((props: ComponentProps<'div'>) => {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) {
+      return
+    }
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      const {
+        contentRect: { width },
+        target,
+      } = entries[0]
+
+      const style = (target as typeof element).style
+      style.fontSize = `calc(${width}px / ${TARGET_VIEW_WIDTH})`
+    })
+
+    resizeObserver.observe(element)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [ref])
+
+  return <div {...props} ref={ref} />
+})({
   position: 'relative',
   top: '50%',
   left: '50%',
@@ -11,4 +39,5 @@ export const PageWrapper = styled.div({
   maxWidth: '100%',
   maxHeight: '100%',
   overflow: 'hidden',
+  fontSize: `calc(100% / ${TARGET_VIEW_WIDTH})`,
 })

@@ -4,7 +4,7 @@ import { PropsWithChildren, Suspense } from 'react'
 import { getFontClasses } from '@/assets/fonts'
 import './globals.css'
 
-import StyledComponentsRegistry from '@/StyledComponentsRegistry'
+import StyledComponentsRegistry from '@/components/styledComponentsRegistry'
 
 export const metadata: Metadata = {
   title: 'Cathedral of Notre Dame of Lausanne',
