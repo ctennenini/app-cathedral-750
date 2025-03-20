@@ -1,13 +1,13 @@
 'use client'
 
 import { P } from '@/components/Typography'
-import { useAppContext } from '@/context'
+import { useAppContext } from '@/components/AppContext'
 import { ReactNode, useState } from 'react'
 import styled from 'styled-components'
 
 import schematicViewPicture from './schematic-view.png'
 import windowPicture from './window-with-deterioration.png'
-import { useHref, HREF } from '@/utils'
+import { HREF } from '@/utils'
 
 import {
   ExtraContent,
@@ -150,7 +150,6 @@ function WrongAnswer(props: StateComponentProps) {
 }
 
 function Finish({ successTarget, ...otherProps }: StateComponentProps) {
-  const successHref = useHref(successTarget)
   const { title, body } = useAppContext().dictionary.games.degradationTypes.finish
 
   return (
@@ -163,7 +162,7 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
             <Text>{body}</Text>
           </Main>
           <Footer>
-            <NextButton data-testid="next-button" target={successHref} />
+            <NextButton data-testid="next-button" target={successTarget} />
           </Footer>
         </>
       }

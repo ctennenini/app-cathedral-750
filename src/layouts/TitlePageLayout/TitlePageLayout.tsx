@@ -15,7 +15,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenu } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
-import { Color } from '@/types'
+
+type Color = 'light' | 'dark'
 
 export type TitlePageLayoutProps = PropsWithChildren<{
   title: string | string[]

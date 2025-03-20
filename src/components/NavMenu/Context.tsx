@@ -1,6 +1,6 @@
 'use client'
 import { createContext, useContext, useMemo, PropsWithChildren } from 'react'
-import { NavMenuItem } from '@/types'
+import { NavMenuItem } from '@/components/NavMenu/types'
 import { useLocale } from '@/utils'
 import { usePathname } from 'next/navigation'
 import { join as joinPath } from 'path'

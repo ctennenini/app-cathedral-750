@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select, SelectProps } from './Select'
 import { useLocale } from '@/utils'
-import { useAppContext } from '@/context'
+import { useAppContext } from '@/components/AppContext'
 
 export type LanguageSwitcherProps = Partial<SelectProps>
 
@@ -17,7 +17,7 @@ export function LanguageSwitcher(props: LanguageSwitcherProps) {
 
   const options = useMemo(
     () =>
-      languages.map(value => {
+      languages.map((value) => {
         const label = dictionary.languages[value as keyof typeof dictionary.languages]
         if (!label) {
           throw new Error(`Language ${value} not found in dictionary`)
@@ -36,12 +36,5 @@ export function LanguageSwitcher(props: LanguageSwitcherProps) {
     router.push(newPath, { scroll: false })
   }
 
-  return (
-    <Select
-      value={locale}
-      onChange={onSelect}
-      options={options}
-      {...props}
-    />
-  )
+  return <Select value={locale} onChange={onSelect} options={options} {...props} />
 }

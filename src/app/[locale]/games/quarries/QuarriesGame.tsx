@@ -1,6 +1,6 @@
 'use client'
 
-import { useAppContext } from '@/context'
+import { useAppContext } from '@/components/AppContext'
 import { useState } from 'react'
 
 import picture from './map-of-switzerland-with-overlay.png'

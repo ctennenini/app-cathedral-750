@@ -1,4 +1,4 @@
-import { AppContextProvider } from '@/context'
+import { AppContextProvider } from '@/components/AppContext'
 import { getDictionary } from '@/i18n'
 import { GlobalStaticLayoutProps } from '@/globals'
 import { PageWrapper } from '@/components/PageWrapper'
@@ -11,8 +11,10 @@ export default async function Layout({ children, params: { locale } }: GlobalSta
   return (
     <PageWrapper lang={locale}>
       <AppContextProvider
-        locale={locale}
-        dictionary={dictionary}
+        value={{
+          locale,
+          dictionary,
+        }}
       >
         {children}
       </AppContextProvider>

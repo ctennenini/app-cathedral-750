@@ -2,10 +2,10 @@
 import { useMemo } from 'react'
 import { SideBar } from '@/components/SideBar'
 
-import { useAppContext } from '@/context'
+import { useAppContext } from '@/components/AppContext'
 import { renderNavList } from './NavList'
 import { getNavMenu } from '@/navigation'
-import { NavMenuItem } from '@/types'
+import { NavMenuItem } from '@/components/NavMenu/types'
 
 export type NavMenuProps = {
   $dark?: boolean
@@ -15,10 +15,5 @@ export function NavMenu({ $dark }: NavMenuProps) {
   const { dictionary } = useAppContext()
   const menuItems = useMemo<NavMenuItem[]>(() => getNavMenu(dictionary), [dictionary])
 
-  return (
-    <SideBar
-      darkButton={$dark}
-      renderContent={() => renderNavList(menuItems)}
-    />
-  )
+  return <SideBar darkButton={$dark} renderContent={() => renderNavList(menuItems)} />
 }

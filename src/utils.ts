@@ -5,12 +5,14 @@ import { ComponentProps } from 'react'
 import NextLink from 'next/link'
 
 export function useLocale() {
-  const { locale } = useParams()
+  let { locale } = useParams()
   if (Array.isArray(locale)) {
-    return locale[0]
-  } else {
-    return locale
+    locale = locale[0]
   }
+  if (!locale) {
+    return 'en'
+  }
+  return locale
 }
 
 export type HREF = ComponentProps<typeof NextLink>['href']

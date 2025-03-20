@@ -1,5 +1,3 @@
-export type Color = 'light' | 'dark'
-
 export type NavMenuItem = {
   label: string | string[]
   path: string
