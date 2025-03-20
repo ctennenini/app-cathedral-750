@@ -20,13 +20,13 @@ import {
 
 const SmallTitle = styled(BaseTitle)({
   '& *': {
-    fontSize: '3.8rem',
+    fontSize: '60em',
   },
 })
 
 const BigTitle = styled(BaseTitle)({
   '& *': {
-    fontSize: '5.4rem',
+    fontSize: '90em',
   },
 })
 

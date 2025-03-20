@@ -4,15 +4,15 @@ import { BigLink, BigLinkProps } from '@/components/Links'
 import styled from 'styled-components'
 import { BaseContainer } from '../shared/BaseLayout.components'
 import { H1, H2 } from '@/components/Typography'
-import { PAGE_PADDING } from '@/config'
+import { PAGE_PADDING_BOTTOM, PAGE_PADDING_LEFT, PAGE_PADDING_RIGHT, PAGE_PADDING_TOP } from '@/config'
 
 export const Container = styled(BaseContainer)({
   '&&': {
-    padding: PAGE_PADDING,
+    padding: `${PAGE_PADDING_TOP}em ${PAGE_PADDING_RIGHT}em ${PAGE_PADDING_BOTTOM}em ${PAGE_PADDING_LEFT}em`,
 
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
+    gap: '32em',
   },
 })
 
@@ -27,14 +27,14 @@ export const Main = styled.main({
 const HeaderSection = styled.div({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem',
+  gap: '32em',
 })
 
 const StyledHeader = styled.header({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  gap: '3rem',
+  gap: '48em',
 })
 
 export type HeaderProps = {
@@ -53,7 +53,7 @@ export function Header({ left, right }: HeaderProps) {
 
 export const Title = styled(H1)({
   fontFamily: 'var(--font-title)',
-  fontSize: 169,
+  fontSize: '169em',
   fontWeight: 700,
 
   textAlign: 'center',
@@ -63,13 +63,12 @@ export const Title = styled(H1)({
 export const Subtitle = styled(H2)({
   fontFamily: 'var(--font-title)',
   fontWeight: 700,
-  fontSize: 66,
-  lineHeight: '74px',
+  fontSize: '66em',
   textAlign: 'center',
 })
 
 export const Separator = styled.hr<{ $dark?: boolean }>(({ $dark }) => ({
-  margin: '40px 100px 30px 100px',
+  margin: '40em 100em 30em 100em',
   borderColor: $dark ? 'var(--separator-dark)' : 'var(--separator-light)',
 }))
 
@@ -80,16 +79,12 @@ export type LinksProps = {
 }
 
 const NavContainer = styled.nav({
-  paddingBottom: '3rem',
+  paddingBottom: '48em',
   '& ul': {
     display: 'flex',
-    gap: '4rem',
+    gap: '64em',
     justifyContent: 'center',
     listStyle: 'none',
-    [BigLink]: {
-      height: '100%',
-      display: 'block',
-    },
   },
 })
 

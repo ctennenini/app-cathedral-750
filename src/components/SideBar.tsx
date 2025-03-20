@@ -25,10 +25,10 @@ const Drawer = styled.div<{ $isExpanded: boolean }>((props) => ({
   height: '100%',
 
   backgroundColor: 'var(--white)',
-  transform: `translateX(${props.$isExpanded ? '0' : '-100%'})`,
+  transform: `translateX(${props.$isExpanded ? '0' : '-101%'})`,
   transition: 'transform 0.3s',
 
-  padding: '10px 130px 10px 50px',
+  padding: '10em 130em 10em 50em',
 }))
 
 type ButtonProps = ComponentProps<'button'>
@@ -39,15 +39,14 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   </button>
 ))({
   position: 'absolute',
-  top: '35px',
-  right: '35px',
-  width: '45px',
-  height: '45px',
+  top: '35em',
+  right: '35em',
+  width: '45em',
+  height: '45em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '8px',
-  fontSize: '16px',
+  padding: '8em',
   border: 'none',
   borderRadius: '100%',
   backgroundColor: 'var(--highlight)',

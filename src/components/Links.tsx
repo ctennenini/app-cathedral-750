@@ -36,24 +36,27 @@ export type BigLinkProps = LinkProps & {
 export const BigLink = styled(({ label, arrow, disabled, ...otherProps }: BigLinkProps) => (
   <Link onClick={disabled ? (e) => e.preventDefault() : undefined} disabled={disabled} {...otherProps}>
     <span dangerouslySetInnerHTML={{ __html: label }} />
-    {arrow && <InternalLinkIcon style={{ marginLeft: '1rem' }} />}
+    {arrow && <InternalLinkIcon style={{ marginLeft: '16em' }} />}
   </Link>
 ))<BigLinkProps>(({ $primary }) => ({
   '&&': {
-    minHeight: '120px',
-    fontSize: '28px',
-    fontFamily: 'var(--font-buttons)',
-    display: 'inline-block',
-    padding: '2.7rem 5rem',
+    minHeight: '120em',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20em 80em',
     color: $primary ? 'var(--white)' : 'var(--black)',
     backgroundColor: $primary ? 'var(--highlight)' : 'var(--white)',
-    textAlign: 'center',
-    borderRadius: '12px',
-
-    textDecoration: 'inherit',
+    borderRadius: '12em',
     cursor: 'pointer',
 
-    '&[aria-disabled]': {
+    span: {
+      fontFamily: 'var(--font-buttons)',
+      fontSize: '28em',
+    },
+
+    '&[aria-disabled] > span': {
       textDecoration: 'line-through',
       cursor: 'not-allowed',
     },

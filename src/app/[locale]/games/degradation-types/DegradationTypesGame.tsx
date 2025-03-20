@@ -23,21 +23,21 @@ import { Footer } from '@/layouts/shared/ColumnLayout.components'
 
 const BigTitle = styled(Title)({
   '& *': {
-    fontSize: '5rem',
+    fontSize: '80em',
     color: 'var(--white)',
   },
 })
 
 const SmallTitle = styled(Title)({
   '& *': {
-    fontSize: '3.6rem',
+    fontSize: '58em',
     color: 'var(--white)',
   },
 })
 
 const Hint = styled(P)({
-  fontSize: '1.6rem',
-  lineHeight: '2rem',
+  fontSize: '1.6em',
+  lineHeight: '2em',
   fontStyle: 'italic',
   marginTop: 'auto',
 })
@@ -45,20 +45,21 @@ const Hint = styled(P)({
 const Buttons = styled.div({
   display: 'flex',
   justifyContent: 'space-between',
-  gap: '1rem',
-  marginTop: '2.5rem',
+  gap: '16em',
+  marginTop: '40em',
 })
 
 const Button = styled.button({
   backgroundColor: 'var(--white)',
-  border: '1px solid var(--white)',
+  border: '1em solid var(--white)',
   color: 'var(--highlight)',
-  fontSize: '3rem',
   cursor: 'pointer',
-
-  width: '10rem',
-  height: '10rem',
-  borderRadius: '10rem',
+  width: '130em',
+  height: '130em',
+  borderRadius: '100em',
+  span: {
+    fontSize: '50em',
+  },
 })
 
 type State = 'START' | 'IN_PROGRESS' | 'WRONG_ANSWER' | 'FINISH'
@@ -112,9 +113,15 @@ function MidGame({ setState, title, hint, ...otherProps }: StateComponentProps &
           {title}
           <Separator />
           <Buttons>
-            <Button onClick={() => setState('WRONG_ANSWER')}>1</Button>
-            <Button onClick={() => setState('WRONG_ANSWER')}>2</Button>
-            <Button onClick={() => setState('FINISH')}>3</Button>
+            <Button onClick={() => setState('WRONG_ANSWER')}>
+              <span>1</span>
+            </Button>
+            <Button onClick={() => setState('WRONG_ANSWER')}>
+              <span>2</span>
+            </Button>
+            <Button onClick={() => setState('FINISH')}>
+              <span>3</span>
+            </Button>
           </Buttons>
           {hint && <Hint>{hint}</Hint>}
         </Main>

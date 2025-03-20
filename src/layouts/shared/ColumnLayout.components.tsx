@@ -20,8 +20,8 @@ import {
 export const LanguageSwitcher = styled(BaseLanguageSwitcher)({
   '&&': {
     position: 'absolute',
-    top: PAGE_PADDING_TOP,
-    right: PAGE_PADDING_RIGHT,
+    top: PAGE_PADDING_TOP + 'em',
+    right: PAGE_PADDING_RIGHT + 'em',
   },
 })
 
@@ -35,15 +35,15 @@ export const Left = styled.div({
   position: 'absolute',
   top: '0',
   right: `calc(50% - ${LEFT_COLUMN_OFFSET})`,
-  width: `${LEFT_COLUMN_WIDTH}px`,
-  maxWidth: `calc(50% + ${LEFT_COLUMN_OFFSET} - ${PAGE_PADDING_LEFT}px)`,
+  width: `${LEFT_COLUMN_WIDTH}em`,
+  maxWidth: `calc(50% + ${LEFT_COLUMN_OFFSET} - ${PAGE_PADDING_LEFT}em)`,
   height: '100%',
   zIndex: 1, // ensures left is in front of right
 
   backgroundColor: 'var(--white)',
   color: 'var(--black)',
 
-  padding: `${PAGE_PADDING_TOP}px ${LEFT_COLUMN_PADDING_HORIZONTAL}px ${PAGE_PADDING_BOTTOM}px`,
+  padding: `${PAGE_PADDING_TOP}em ${LEFT_COLUMN_PADDING_HORIZONTAL}em ${PAGE_PADDING_BOTTOM}em`,
   display: 'flex',
   flexDirection: 'column',
 })
@@ -52,12 +52,12 @@ export const Right = styled.div({
   position: 'relative',
   top: '50%',
   transform: 'translateY(-50%)',
-  maxHeight: `${TARGET_VIEW_HEIGHT * 0.75}px`,
+  maxHeight: `${TARGET_VIEW_HEIGHT * 0.75}em`,
   overflowY: 'hidden',
 
-  // +/- 1px ensures no gap between left and right for odd widths
-  left: `calc(50% + ${LEFT_COLUMN_OFFSET} - 1px)`,
-  width: `calc(50% - ${LEFT_COLUMN_OFFSET} + 2px)`,
+  // +/- 1em ensures no gap between left and right for odd widths
+  left: `calc(50% + ${LEFT_COLUMN_OFFSET} - 1em)`,
+  width: `calc(50% - ${LEFT_COLUMN_OFFSET} + 2em)`,
 
   // ensures right is behind left
   zIndex: 0,
@@ -66,15 +66,15 @@ export const Right = styled.div({
 const HeaderSection = styled.div({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem',
+  gap: '32em',
 })
 
 const StyledHeader = styled.header({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  gap: '3rem',
-  marginBottom: '4.5rem',
+  gap: '3em',
+  marginBottom: '72em',
 })
 
 export type HeaderProps = {
@@ -93,9 +93,8 @@ export function Header({ left, right }: HeaderProps) {
 
 const StyledTitle = styled(H1)({
   fontFamily: 'var(--font-title)',
-  fontSize: 62,
+  fontSize: '62em',
   fontWeight: 700,
-  lineHeight: '70px',
 
   textTransform: 'uppercase',
   color: 'var(--highlight)',
@@ -103,9 +102,8 @@ const StyledTitle = styled(H1)({
 
 const StyledSubTitle = styled(H2)({
   fontFamily: 'var(--font-text)',
-  fontSize: 25,
+  fontSize: '25em',
   fontWeight: 400,
-  lineHeight: '30px',
   color: 'var(--highlight)',
 })
 
@@ -130,19 +128,19 @@ export function Title({ title, subtitle, subtitleProps, titleProps, ...otherProp
 export const Separator = styled.hr({
   width: '100%',
   border: 'none',
-  borderBottom: '1px solid var(--separator-dark)',
-  marginTop: '1.5rem',
+  borderBottom: '1em solid var(--separator-dark)',
+  marginTop: '24em',
 })
 
 export const Text = styled(P)({
-  fontSize: 32,
-  lineHeight: '37px',
-  marginTop: '2.5rem',
+  fontSize: '32em',
+  // lineHeight: '37em',
+  marginTop: '2.5em',
 })
 
 export const Main = styled.main({
   flex: 'auto',
-  padding: '0 3rem',
+  padding: '0 40em',
   overflowY: 'auto',
 
   display: 'flex',
@@ -151,10 +149,10 @@ export const Main = styled.main({
 
 export const Footer = styled.footer({
   display: 'flex',
-  marginTop: '1rem',
-  padding: '0 3rem',
+  marginTop: '16em',
+  padding: '0 48em',
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '2rem',
+  gap: '32em',
 })

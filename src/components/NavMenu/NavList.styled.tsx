@@ -1,35 +1,43 @@
 'use client'
 import styled from 'styled-components'
-import { Link } from '@/components/Links'
+import { Link, LinkProps } from '@/components/Links'
 
-export const LINE_SECTION_WIDTH = '3rem'
+export const LINE_SECTION_WIDTH = '48em'
 
 export const List = styled.ul({
   listStyle: 'none',
   fontFamily: 'var(--font-buttons)',
-  fontSize: '25px',
-  lineHeight: '34px',
   position: 'relative',
 })
 
-export const NavLink = styled(Link)<{ $isActive: boolean; $isOnPath: boolean; $indented: boolean }>(
-  ({ $isOnPath, $isActive, $indented, disabled }) => ({
-    '&&': {
-      display: 'block',
-      padding: '0.6rem 1.5rem',
-      borderRadius: '0.6rem',
-      color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
-      backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
-      cursor: disabled ? 'not-allowed' : 'pointer',
-      textDecoration: disabled ? 'line-through' : 'none',
-      marginLeft: $indented ? LINE_SECTION_WIDTH : 'none',
+export const NavLink = styled(({ dangerouslySetInnerHTML, ...otherProps }: LinkProps) => (
+  <Link {...otherProps}>
+    <span dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+  </Link>
+))<{
+  $isActive: boolean
+  $isOnPath: boolean
+  $indented: boolean
+}>(({ $isOnPath, $isActive, $indented, disabled }) => ({
+  '&&': {
+    span: {
+      fontSize: '25em',
+      lineHeight: '1.2',
     },
-  }),
-)
+    display: 'block',
+    padding: '12em 16em',
+    borderRadius: '8em',
+    color: $isActive ? 'var(--white)' : $isOnPath ? 'var(--highlight)' : 'var(--dark-gray)',
+    backgroundColor: $isActive ? 'var(--highlight)' : 'transparent',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    textDecoration: disabled ? 'line-through' : 'none',
+    marginLeft: $indented ? LINE_SECTION_WIDTH : 'none',
+  },
+}))
 
 export const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $showLine, $isLast }) => ({
   userSelect: 'none',
-  marginLeft: $showLine ? '3rem' : 0,
+  marginLeft: $showLine ? '48em' : 0,
   position: 'relative',
 
   ...($showLine && {
@@ -37,20 +45,20 @@ export const Li = styled.li<{ $showLine?: boolean; $isLast?: boolean }>(({ $show
       content: '""',
       display: 'block',
       position: 'absolute',
-      top: '1.5rem',
-      left: '-1.6rem',
-      height: '2px',
-      width: '0.6rem',
+      top: '24em',
+      left: '-26em',
+      height: '2em',
+      width: '10em',
       backgroundColor: 'var(--ui-line-color)',
     },
     '&&::before': {
       content: '""',
       display: 'inline-block',
       position: 'absolute',
-      left: '-1.6rem',
-      top: $isLast ? '-2rem' : '-1rem',
-      height: $isLast ? '3.5rem' : '100%',
-      width: '2px',
+      left: '-26em',
+      top: $isLast ? '-32em' : '-16em',
+      height: $isLast ? '56em' : '100%',
+      width: '2em',
       backgroundColor: 'var(--ui-line-color)',
     },
   }),
@@ -73,8 +81,8 @@ export const ToggleButton = styled.div({
 export const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({
   position: 'relative',
   overflow: 'hidden',
-  top: $isOpen ? '-1rem' : 0,
-  paddingTop: $isOpen ? '1rem' : 0,
+  top: $isOpen ? '-16em' : 0,
+  paddingTop: $isOpen ? '16em' : 0,
   maxHeight: $isOpen ? '200vh' : 0,
   height: '100%',
   transition: 'max-height linear',

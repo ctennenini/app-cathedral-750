@@ -13,7 +13,7 @@ export default async function Biodeterioration({ params: { locale } }: GlobalSta
       bgImg={bgImg}
       title={pages.degradationTypes.biodeterioration.title}
       titleProps={{
-        style: { fontSize: '3.5rem' },
+        style: { fontSize: '56em' },
       }}
       subtitle={pages.degradationTypes.title}
       text={pages.degradationTypes.biodeterioration.description}

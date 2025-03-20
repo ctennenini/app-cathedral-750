@@ -19,33 +19,36 @@ import { TextLayoutState, useTextLayoutState } from './useTextLayoutState'
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',
   backgroundColor: 'var(--highlight)',
-  width: '87px',
-  height: '87px',
+  width: '87em',
+  height: '87em',
   flexShrink: 0,
   marginLeft: 'auto',
 })
 
 const StyledActionButton = styled(Link)<{ $outlined?: boolean }>(({ $outlined }) => ({
   '&&': {
-    borderRadius: '12px',
-    padding: '0 40px',
-    height: '87px',
-    fontSize: '22px',
+    borderRadius: '12em',
+    padding: '0 40em',
+    height: '87em',
     fontWeight: '500',
-    lineHeight: '25px',
+    lineHeight: '25em',
     display: 'flex',
     alignItems: 'center',
 
     ...($outlined
       ? {
           color: 'var(--highlight)',
-          border: '2px solid var(--highlight)',
+          border: '2em solid var(--highlight)',
           backgroundColor: 'var(--white)',
         }
       : {
           color: 'var(--white)',
           backgroundColor: 'var(--highlight)',
         }),
+
+    span: {
+      fontSize: '22em',
+    },
   },
 }))
 
@@ -61,7 +64,7 @@ function ActionButton({ type, target, label }: ActionButtonProps) {
   if (type === 'back') {
     return (
       <StyledActionButton href={target}>
-        <BackArrowIcon style={{ marginRight: '1rem' }} />
+        <BackArrowIcon style={{ marginRight: '16em' }} />
         <span dangerouslySetInnerHTML={{ __html: label }} />
       </StyledActionButton>
     )
@@ -70,7 +73,7 @@ function ActionButton({ type, target, label }: ActionButtonProps) {
   if (type === 'quiz') {
     return (
       <StyledActionButton $outlined href={target}>
-        {label}
+        <span dangerouslySetInnerHTML={{ __html: label }} />
       </StyledActionButton>
     )
   }

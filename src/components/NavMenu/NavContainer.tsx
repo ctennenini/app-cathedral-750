@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledNav = styled.nav({
   overflow: 'auto',
   height: '100%',
-  padding: '170px 0 170px 0px',
+  padding: '170em 0 170em 0em',
 })
 
 export function NavContainer({ children }: PropsWithChildren<unknown>) {

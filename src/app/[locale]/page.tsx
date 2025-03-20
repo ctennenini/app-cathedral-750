@@ -42,7 +42,7 @@ export default async function Home({ params: { locale } }: GlobalStaticPageProps
       buttonColor="light"
       textColor="light"
       titleStyle={{
-        fontSize: 137,
+        fontSize: '137em',
       }}
     />
   )
