@@ -27,11 +27,9 @@
     "molassesAndItsWeathering": {
       "title": "Molasse and its weathering",
       "description": [
-
         "The cathedral of Lausanne was built with a local molasse sandstone, that is particularly sensitive to water.",
         "You may obtain directly here information on that stone as well as on its weathering by clicking on the corresponding buttons",
         "You may also go directly to an interactive discovery App to use as you walk around the cathedral."
-
       ],
       "actions": {
         "sandstone": "Molasse Sandstone",
@@ -176,14 +174,17 @@
         "title": "Freeze - Thaw Action",
         "trappedWater": {
           "title": "Trapped Water",
-          "description": [[
-            "Freezing water in porous materials can cause damage by various mechanisms.",
-            "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
-          ], [
-            "In other words, freezing occurs from all sides, the liquid is trapped, and the increase in molar volume from liquid water to ice causes the bottle to break.",
-            "Such situations are rare on monuments, with the possible exception of fine decorative elements previously saturated with water, as finials and fountains.",
-            "Watch the video to know more."
-          ]]
+          "description": [
+            [
+              "Freezing water in porous materials can cause damage by various mechanisms.",
+              "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
+            ],
+            [
+              "In other words, freezing occurs from all sides, the liquid is trapped, and the increase in molar volume from liquid water to ice causes the bottle to break.",
+              "Such situations are rare on monuments, with the possible exception of fine decorative elements previously saturated with water, as finials and fountains.",
+              "Watch the video to know more."
+            ]
+          ]
         },
         "hydraulicPressure": {
           "title": "Hydraulic Pressure",
@@ -191,7 +192,8 @@
             [
               "Another situation also related to the change in molar volume is called \"hydraulic pressure\".",
               "It occurs when growing ice pushes the liquid water still present through the porous network. The flow resistance leads to a pressure that depends on the size of the pores and the distance over which the water is pushed."
-            ], [
+            ],
+            [
               "For molasse, the pore size is large, which reduces this pressure.",
               "However, if these same stones are saturated with water, then the equivalent length of the saturated pores can be very large, which can lead to high hydraulic pressures if the cooling rate is fast enough.",
               "Watch the video to know more."
@@ -211,7 +213,8 @@
             [
               "Coarse porous materials, such as molasse, can be damaged during freezing if a temperature gradient is sustained.",
               "Water can then move from an unfrozen region to feed the growth of ice trapped in the pores of a frozen region. This is analogous to frost heave but also can cause damage in sedimentary building stones and in geological settings."
-            ], [
+            ],
+            [
               "Related situations can lead to forming ice lenses between a moist substrate (stone cores) and a surface subject to temperature variations (façade). The growth of such lenses can accelerate the detachment of pre-existing scales without the temperatures having to be very low.",
               "Watch the video to know more."
             ]
