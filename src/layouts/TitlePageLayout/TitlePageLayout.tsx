@@ -12,7 +12,7 @@ import {
   Title,
 } from './TitlePageLayout.styled'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
-import { NavMenu } from '@/components/NavMenu'
+import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 
@@ -48,7 +48,7 @@ export function TitlePageLayout({
       <Header
         left={
           <>
-            <NavMenu $dark={buttonColor === 'dark'} />
+            <NavMenuButton $dark={buttonColor === 'dark'} />
             {withHomeButton && <HomeButton $dark={buttonColor === 'dark'} />}
             {backButtonTarget && <BackButton $dark={buttonColor === 'dark'} href={backButtonTarget} />}
           </>

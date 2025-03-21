@@ -7,7 +7,7 @@ import { HREF, useHref } from '@/utils'
 
 import { useRouter } from 'next/navigation'
 import { Header, Left, Right, Footer, Title, Main, Separator, Text } from './TextPageLayout.styled'
-import { NavMenu } from '@/components/NavMenu'
+import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { ExtraContent, ExtraContentProps } from '../shared/ColumnExtraContent'
@@ -140,7 +140,7 @@ export function TextPageContent({
         <Header
           left={
             <>
-              <NavMenu $dark />
+              <NavMenuButton $dark />
               {withHomeButton && <HomeButton $dark />}
             </>
           }

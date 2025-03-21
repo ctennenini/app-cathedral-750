@@ -32,12 +32,13 @@ export const PageWrapper = styled((props: ComponentProps<'div'>) => {
   return <div {...props} ref={ref} />
 })({
   position: 'relative',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
   aspectRatio: `${TARGET_VIEW_WIDTH} / ${TARGET_VIEW_HEIGHT}`,
   maxWidth: '100%',
   maxHeight: '100%',
   overflow: 'hidden',
-  fontSize: `calc(100% / ${TARGET_VIEW_WIDTH})`,
+  'body > &': {
+    top: '50%',
+    transform: 'translateY(-50%)',
+    margin: 'auto',
+  },
 })

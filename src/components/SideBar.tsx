@@ -1,10 +1,11 @@
 'use client'
 
-import { ComponentProps, useRef, useState } from 'react'
+import { ComponentProps, useRef } from 'react'
 import { CloseIcon, HamburgerIcon } from './Icons'
 import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 import { IconButton } from './IconButton'
+import { useAppContext } from './AppContext'
 
 const Overlay = styled.div<{ $active: boolean }>((props) => ({
   position: 'fixed',
@@ -54,25 +55,38 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   cursor: 'pointer',
 })
 
-export type SideBarProps = {
-  renderContent: () => JSX.Element
+export type SideBarButtonProps = {
   darkButton?: boolean
 }
 
-export function SideBar({ renderContent, darkButton }: SideBarProps) {
-  const [isExpanded, setExpanded] = useState(false)
+export function SideMenuButton({ darkButton }: SideBarButtonProps) {
+  const { isSideBarExpanded, setSideBarExpanded } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
-  useClickAway(isExpanded, setExpanded, drawerRef)
+  useClickAway(isSideBarExpanded, setSideBarExpanded, drawerRef)
+
+  return (
+    <IconButton onClick={() => setSideBarExpanded(true)} $dark={darkButton}>
+      <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
+    </IconButton>
+  )
+}
+
+export type SideBarProps = {
+  renderContent: () => JSX.Element
+}
+
+export function SideMenu({ renderContent }: SideBarProps) {
+  const { isSideBarExpanded, setSideBarExpanded } = useAppContext()
+  const drawerRef = useRef<HTMLDivElement>(null)
+
+  useClickAway(isSideBarExpanded, setSideBarExpanded, drawerRef)
 
   return (
     <>
-      <IconButton onClick={() => setExpanded(true)} $dark={darkButton}>
-        <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
-      </IconButton>
-      <Overlay $active={isExpanded} />
-      <Drawer $isExpanded={isExpanded} ref={drawerRef}>
-        <CloseButton onClick={() => setExpanded(false)} />
+      <Overlay $active={isSideBarExpanded} />
+      <Drawer $isExpanded={isSideBarExpanded} ref={drawerRef}>
+        <CloseButton onClick={() => setSideBarExpanded(false)} />
         {renderContent()}
       </Drawer>
     </>

@@ -1,24 +1,41 @@
 'use client'
 
-import { createContext } from 'react'
+import { createContext, useState, PropsWithChildren, Dispatch, SetStateAction } from 'react'
 import { Dictionary } from '@/i18n'
 import React from 'react'
 
 export type AppContext<D extends object> = {
   locale: string
   dictionary: D
+  isSideBarExpanded: boolean
+  setSideBarExpanded: Dispatch<SetStateAction<boolean>>
 }
+
+export type AppContextProviderProps<D extends object> = PropsWithChildren<Pick<AppContext<D>, 'locale' | 'dictionary'>>
 
 export function makeAppContext<D extends object>() {
   const context = createContext<AppContext<D> | null>(null)
 
   const { Provider } = context
 
-  const ContextProvider = ({ value, children }: { value: AppContext<D>; children: React.ReactNode }) => {
-    return <Provider value={value}>{children}</Provider>
+  function ContextProvider({ dictionary, locale, children }: AppContextProviderProps<D>) {
+    const [isSideBarExpanded, setSideBarExpanded] = useState(false)
+
+    return (
+      <Provider
+        value={{
+          locale,
+          dictionary,
+          isSideBarExpanded,
+          setSideBarExpanded,
+        }}
+      >
+        {children}
+      </Provider>
+    )
   }
 
-  const useContext = () => {
+  function useContext() {
     const ctx = React.useContext(context)
     if (!ctx) {
       throw new Error('useAppContext must be used within a AppContextProvider')
