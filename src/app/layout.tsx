@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
     <html>
-      <body className={`${getFontClasses()}`}>
+      <body className={getFontClasses()}>
         <Suspense fallback={null}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </Suspense>
