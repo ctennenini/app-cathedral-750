@@ -60,13 +60,13 @@ export type SideBarButtonProps = {
 }
 
 export function SideMenuButton({ darkButton }: SideBarButtonProps) {
-  const { isSideBarExpanded, setSideBarExpanded } = useAppContext()
+  const { isSideBarExpanded, setSideBarExpanded, dictionary } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
   useClickAway(isSideBarExpanded, setSideBarExpanded, drawerRef)
 
   return (
-    <IconButton onClick={() => setSideBarExpanded(true)} $dark={darkButton}>
+    <IconButton aria-label={dictionary.ui.navMenuButton} onClick={() => setSideBarExpanded(true)} $dark={darkButton}>
       <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
     </IconButton>
   )
@@ -74,9 +74,10 @@ export function SideMenuButton({ darkButton }: SideBarButtonProps) {
 
 export type SideBarProps = {
   renderContent: () => JSX.Element
+  closeButtonLabel?: string
 }
 
-export function SideMenu({ renderContent }: SideBarProps) {
+export function SideMenu({ renderContent, closeButtonLabel = 'close' }: SideBarProps) {
   const { isSideBarExpanded, setSideBarExpanded } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
@@ -86,7 +87,7 @@ export function SideMenu({ renderContent }: SideBarProps) {
     <>
       <Overlay $active={isSideBarExpanded} />
       <Drawer $isExpanded={isSideBarExpanded} ref={drawerRef}>
-        <CloseButton onClick={() => setSideBarExpanded(false)} />
+        <CloseButton aria-label={closeButtonLabel} onClick={() => setSideBarExpanded(false)} />
         {renderContent()}
       </Drawer>
     </>

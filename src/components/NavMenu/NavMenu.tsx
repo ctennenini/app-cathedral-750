@@ -19,5 +19,5 @@ export function NavMenu() {
   const { dictionary } = useAppContext()
   const menuItems = useMemo<NavMenuItem[]>(() => getNavMenu(dictionary), [dictionary])
 
-  return <SideMenu renderContent={() => renderNavList(menuItems)} />
+  return <SideMenu renderContent={() => renderNavList(menuItems)} closeButtonLabel={dictionary.ui.closeNavMenu} />
 }

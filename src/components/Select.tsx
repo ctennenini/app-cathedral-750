@@ -69,12 +69,12 @@ export function Select({ value, onChange, options, $dark, ...otherProps }: Selec
   return (
     <Container onClick={() => setOpen((o) => !o)} ref={containerRef} {...otherProps}>
       <Menu role="menu" $isOpen={isOpen} $dark={!!$dark}>
-        <Option>
+        <Option role="menuitem">
           {currentOption?.label}
           {<Triangle $up={isOpen} />}
         </Option>
         {otherOptions.map(({ label, value }) => (
-          <Option role="option" key={value} onClick={onChange.bind(null, value)}>
+          <Option role="menuitem" key={value} onClick={onChange.bind(null, value)}>
             <Hoverer>{label}</Hoverer>
           </Option>
         ))}
