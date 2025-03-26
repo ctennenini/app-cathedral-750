@@ -134,8 +134,7 @@ export const Separator = styled.hr({
 
 export const Text = styled(P)({
   fontSize: '32em',
-  // lineHeight: '37em',
-  marginTop: '2.5em',
+  marginTop: '1.25em',
 })
 
 export const Main = styled.main({
