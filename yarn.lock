@@ -1516,6 +1516,15 @@
     dequal "^2.0.2"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-controls@^8.6.7":
+  version "8.6.7"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-controls/-/addon-controls-8.6.7.tgz#a2c1c0bb96ece8701f220e3c09749ff408a49b0d"
+  integrity sha512-6ReB1Sc1qlqvAM7NUmtw2K1cKCgGBs8zYRgL44Q2ti+r55a2ownhm6WUm/kZs2ixSkV9ehm1osiqbGBfAn0Isw==
+  dependencies:
+    "@storybook/global" "^5.0.0"
+    dequal "^2.0.2"
+    ts-dedent "^2.0.0"
+
 "@storybook/addon-docs@8.6.6":
   version "8.6.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-8.6.6.tgz#1927d9648a97488db0629996336b3a0c1aae6bfb"
@@ -1552,17 +1561,6 @@
   dependencies:
     "@storybook/global" "^5.0.0"
 
-"@storybook/addon-interactions@^8.6.6":
-  version "8.6.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-8.6.6.tgz#24e2b0a0367dd2666cdc8fbaeb1aa57273fb01a1"
-  integrity sha512-DwuX/HjAAyKVAX8KzirAEo0NDz/nMbmMfb1FS0ZFUjihv/0c5Uz/WaOPFelZRikMVVvhOQ09nKouvnu9aJNWZg==
-  dependencies:
-    "@storybook/global" "^5.0.0"
-    "@storybook/instrumenter" "8.6.6"
-    "@storybook/test" "8.6.6"
-    polished "^4.2.2"
-    ts-dedent "^2.2.0"
-
 "@storybook/addon-measure@8.6.6":
   version "8.6.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-8.6.6.tgz#6f6f6fbf76f1603454df4dce1ac11a45083a5eeb"
@@ -1570,11 +1568,6 @@
   dependencies:
     "@storybook/global" "^5.0.0"
     tiny-invariant "^1.3.1"
-
-"@storybook/addon-onboarding@^8.6.6":
-  version "8.6.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-onboarding/-/addon-onboarding-8.6.6.tgz#ab707e8e1ea3fc891abb721bed54a46ab938893f"
-  integrity sha512-4ZwEEf2MGZIa9Hf6lKoRYQ12aDVKk4DZqQONSCaxXnfpZe/pn1qHcC+N+9nJoHxbvTtLt02x7bTOfuE2wV3RRw==
 
 "@storybook/addon-outline@8.6.6":
   version "8.6.6"

@@ -31,6 +31,9 @@ export type TitlePageLayoutProps = PropsWithChildren<{
   titleStyle?: React.CSSProperties
 }>
 
+/**
+ * A reusable layout for a cover-page with a title, subtitle, background image, and links.
+ */
 export function TitlePageLayout({
   title,
   subtitle,

@@ -18,17 +18,10 @@ export function useTextLayoutState<T extends ExtraContentProps>(
     const hasPrevious = page > 0
     const extraContentIndex = extraContent ? Math.min(page, extraContent?.length - 1) : 0
 
-    const go = (where: number) => () => {
-      setPage(where)
-      if (window) {
-        window.location.hash = (where + 1).toString()
-      }
-    }
-
     return {
       text: text[page] as string[],
-      goForward: hasMore ? go(page + 1) : undefined,
-      goBack: hasPrevious ? go(page - 1) : undefined,
+      goForward: hasMore ? () => setPage(page + 1) : undefined,
+      goBack: hasPrevious ? () => setPage(page - 1) : undefined,
       extra: extraContent?.[extraContentIndex],
     }
   } else if (Array.isArray(text)) {

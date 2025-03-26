@@ -26,15 +26,6 @@ const preview: Preview = {
   parameters: {
     nextjs: {
       appDirectory: true,
-      navigation: {
-        segments: ['en', 'test'],
-      },
-    },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
     },
   },
 }
