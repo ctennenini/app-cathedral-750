@@ -18,21 +18,21 @@ export default async function TheMolasseSandstone({ params: { locale } }: Global
         type: 'links',
         links: [
           {
-            href: '/molasse-sandstone/geological-information',
+            target: '/molasse-sandstone/geological-information',
             label: pages.molasseSandstone.molasseSandstone.actions.geologicalInformation,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.molasseSandstone.molasseSandstone.actions.properties,
             disabled: true,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.molasseSandstone.molasseSandstone.actions.typesOfStones,
             disabled: true,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.molasseSandstone.molasseSandstone.actions.interactive,
             disabled: true,
             arrow: true,

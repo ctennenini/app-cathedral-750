@@ -2,7 +2,7 @@
 
 import { HomeIcon } from './Icons'
 import { IconButton, IconButtonProps } from './IconButton'
-import { useHref } from '@/utils'
+import { useHref } from '@/utils/utils'
 
 import { useRouter } from 'next/navigation'
 
@@ -11,10 +11,7 @@ export function HomeButton(props: IconButtonProps) {
   const { push } = useRouter()
 
   return (
-    <IconButton
-      onClick={() => push(href.toString(), { scroll: false })}
-      {...props}
-    >
+    <IconButton onClick={() => push(href.toString(), { scroll: false })} {...props}>
       <HomeIcon color={props.$dark ? 'var(--black)' : 'var(--white)'} />
     </IconButton>
   )

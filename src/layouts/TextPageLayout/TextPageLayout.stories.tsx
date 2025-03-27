@@ -26,15 +26,39 @@ const textOptions = {
   ],
 }
 
+const textActions = {
+  back: [
+    {
+      type: 'back',
+      label: 'Back to some other page',
+      target: '',
+    },
+  ],
+  quiz: [
+    {
+      type: 'quiz',
+      label: 'Test Your Knowledge',
+      target: '#',
+    },
+  ],
+}
+
 const meta: Meta<typeof TextPageLayout> = {
-  title: 'Layouts/TextPageLayout',
+  title: 'Layouts/TextPageLayout/Basic',
   component: TextPageLayout,
   tags: ['autodocs'],
-
+  args: {
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+    bgImgAlt: 'Dawn over roof tops',
+    bgImg: bgImg,
+    withHomeButton: true,
+    backButtonTarget: '',
+    nextButtonTarget: '',
+  },
   argTypes: {
     title: { description: 'The title of the page' },
     subtitle: { description: 'The subtitle of the page' },
-
     bgImg: {
       description: [
         'The background image of the page. This needs to be imported into the component like',
@@ -62,8 +86,11 @@ const meta: Meta<typeof TextPageLayout> = {
       control: 'text',
     },
     text: {
-      description:
-        'The main text content of the page. This can be a list of strings, where each string corresponds to a paragraph, or a list of lists of strings, where each inner list corresponds to a page of paragraphs.',
+      description: [
+        'The main text content of the page. This can be',
+        '- a list of strings, where each string corresponds to a paragraph, or',
+        '- a list of lists of strings, where each inner list corresponds to a page of paragraphs. In this case the layout will implement navigation between the pages by overwriting the `nextButtonTarget` and `backButtonTarget` props.',
+      ].join('<br />'),
       options: Object.keys(textOptions),
       mapping: textOptions,
       control: {
@@ -81,16 +108,37 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const ExampleTextPage: Story = {
+export const SimpleTextPage: Story = {
   args: {
-    title: 'The Title',
-    subtitle: 'The Subtitle',
-    textColor: 'light',
-    buttonColor: 'light',
-    bgImgAlt: 'Dawn over roof tops',
-    bgImg: bgImg,
-    withHomeButton: true,
-    backButtonTarget: '#',
-    nextButtonTarget: '#',
+    text: textOptions.onePage,
+  },
+}
+
+export const MultiplePagesOfText: Story = {
+  args: {
+    text: textOptions.multiplePages,
+  },
+}
+
+export const EndOfTextActions: Story = {
+  name: 'End-of-Text Actions',
+  argTypes: {
+    actions: {
+      description:
+        'The actions to display at the end of the text. If there are multiple pages, the actions will be displayed on the last page.',
+      options: Object.keys(textActions),
+      mapping: textActions,
+      control: {
+        type: 'select',
+        labels: {
+          back: 'Back',
+          quiz: 'Quiz',
+        },
+      },
+    },
+  },
+  args: {
+    text: textOptions.onePage,
+    actions: textActions.back,
   },
 }

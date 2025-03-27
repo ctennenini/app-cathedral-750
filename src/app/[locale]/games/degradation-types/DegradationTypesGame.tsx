@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 import schematicViewPicture from './schematic-view.png'
 import windowPicture from './window-with-deterioration.png'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 
 import {
   ExtraContent,

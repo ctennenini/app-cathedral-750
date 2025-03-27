@@ -10,16 +10,16 @@ export default async function TheImmersiveCathedral({ params: { locale } }: Glob
 
   const links: TitlePageLayoutProps['links'] = [
     {
-      href: '/molasse-and-its-weathering',
+      target: '/molasse-and-its-weathering',
       label: pages.immersiveCathedral.actions.molasses,
     },
     {
-      href: `#`,
+      target: `#`,
       disabled: true,
       label: pages.immersiveCathedral.actions.conservation,
     },
     {
-      href: `#`,
+      target: `#`,
       disabled: true,
       label: pages.immersiveCathedral.actions.vaults,
     },

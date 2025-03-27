@@ -7,7 +7,7 @@ import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW
 
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -65,11 +65,13 @@ const Gallery = styled.ul({
 const GalleryItem = styled.li({
   figcaption: {
     textAlign: 'center',
-    fontSize: '1.5em',
-    lineHeight: '1.7em',
+
     fontWeight: 700,
     color: 'var(--highlight)',
-    marginTop: '1em',
+    marginTop: '16em',
+    '& > span': {
+      fontSize: '24em',
+    },
   },
 })
 
@@ -81,7 +83,7 @@ type LegendItemParams = { color: string; label: string }
 
 const LegendList = styled.ul({
   display: 'flex',
-  gap: '5em',
+  gap: '80em',
   listStyle: 'none',
   padding: 0,
   margin: 0,
@@ -100,6 +102,9 @@ const Li = styled.li({
   gap: '8em',
   alignItems: 'center',
   color: 'var(--black)',
+  '& span': {
+    fontSize: '24em',
+  },
 })
 
 function LegendItem({ color, label }: LegendItemParams) {
@@ -267,7 +272,11 @@ export function ExtraContent(props: ExtraContentProps) {
               let content = (
                 <figure>
                   <ExtraImage {...other} />
-                  {label && <figcaption dangerouslySetInnerHTML={{ __html: label }} />}
+                  {label && (
+                    <figcaption>
+                      <span dangerouslySetInnerHTML={{ __html: label }} />
+                    </figcaption>
+                  )}
                 </figure>
               )
               content = href ? <Link href={href}>{content}</Link> : content

@@ -17,15 +17,15 @@ export default async function MolassesAndItsWeathering({ params: { locale } }: G
         type: 'links',
         links: [
           {
-            href: '/molasse-sandstone',
+            target: '/molasse-sandstone',
             label: pages.molassesAndItsWeathering.actions.sandstone,
           },
           {
-            href: '/weathering-of-molasse',
+            target: '/weathering-of-molasse',
             label: pages.molassesAndItsWeathering.actions.weathering,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.molassesAndItsWeathering.actions.interactive,
             arrow: true,
             $primary: true,

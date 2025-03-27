@@ -4,7 +4,7 @@ import { useAppContext } from '@/components/AppContext'
 import { useState } from 'react'
 
 import picture from './map-of-switzerland-with-overlay.png'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 import {
   ExtraContent,
   Main,

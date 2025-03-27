@@ -5,7 +5,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import picture from './oldest-stone-game-pic.png'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 import {
   ExtraContent,
   Main,

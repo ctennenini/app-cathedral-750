@@ -1,6 +1,6 @@
 'use client'
 
-import { useHref } from '@/utils'
+import { useHref } from '@/utils/utils'
 import NextLink from 'next/link'
 import styled from 'styled-components'
 import { InternalLinkIcon } from './Icons'
@@ -26,15 +26,16 @@ export function Link({ href, external, disabled, ...otherProps }: LinkProps) {
   )
 }
 
-export type BigLinkProps = LinkProps & {
+export type BigLinkProps = Omit<LinkProps, 'href'> & {
+  target: LinkProps['href']
   label: TextContent
   primary?: boolean
   arrow?: boolean
   $primary?: boolean
 }
 
-export const BigLink = styled(({ label, arrow, disabled, ...otherProps }: BigLinkProps) => (
-  <Link onClick={disabled ? (e) => e.preventDefault() : undefined} disabled={disabled} {...otherProps}>
+export const BigLink = styled(({ label, arrow, disabled, target, ...otherProps }: BigLinkProps) => (
+  <Link onClick={disabled ? (e) => e.preventDefault() : undefined} disabled={disabled} href={target} {...otherProps}>
     <span dangerouslySetInnerHTML={{ __html: label }} />
     {arrow && <InternalLinkIcon style={{ marginLeft: '16em' }} />}
   </Link>

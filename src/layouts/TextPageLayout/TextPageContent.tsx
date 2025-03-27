@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { IconButton } from '@/components/IconButton'
 import { BackArrowIcon, NextArrowIcon } from '@/components/Icons'
-import { HREF, useHref } from '@/utils'
+import { HREF, useHref } from '@/utils/utils'
 
 import { useRouter } from 'next/navigation'
 import { Header, Left, Right, Footer, Title, Main, Separator, Text } from './TextPageLayout.styled'

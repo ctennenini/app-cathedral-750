@@ -2,7 +2,7 @@
 
 import { BackArrowIcon } from './Icons'
 import { IconButton, IconButtonProps } from './IconButton'
-import { useHref } from '@/utils'
+import { useHref } from '@/utils/utils'
 
 import { useRouter } from 'next/navigation'
 
@@ -15,11 +15,7 @@ export function BackButton({ $dark, href: hrefFromProps, ...props }: BackButtonP
   const { push } = useRouter()
 
   return (
-    <IconButton
-      onClick={() => push(href.toString(), { scroll: false })}
-      $dark={$dark}
-      {...props}
-    >
+    <IconButton onClick={() => push(href.toString(), { scroll: false })} $dark={$dark} {...props}>
       <BackArrowIcon />
     </IconButton>
   )

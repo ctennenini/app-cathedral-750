@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { languages } from '@/config'
 import { Select, SelectProps } from './Select'
-import { useLocale } from '@/utils'
+import { useLocale } from '@/utils/utils'
 import { useAppContext } from '@/components/AppContext'
 
 export type LanguageSwitcherProps = Partial<SelectProps>
