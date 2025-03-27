@@ -5,7 +5,7 @@ import { TitlePageLayout } from './TitlePageLayout'
 import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
 
 const meta: Meta<typeof TitlePageLayout> = {
-  title: 'Layouts/TitlePageLayout',
+  title: 'Layouts/TitlePageLayout/Basic',
   component: TitlePageLayout,
   tags: ['autodocs'],
 
