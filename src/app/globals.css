@@ -2,13 +2,12 @@
   --white: #fff;
   --black: #000;
   --dark-gray: #191919;
-  --highlight: #CE3D3A;
+  --highlight: #ce3d3a;
 
   --separator-light: var(--white);
   --separator-dark: #595858;
-  --ui-line-color: #A5A5A2;
+  --ui-line-color: #a5a5a2;
 }
-
 
 html,
 body {
@@ -26,6 +25,7 @@ body {
 
 * {
   box-sizing: border-box;
+  font-size: inherit;
   padding: 0;
   margin: 0;
 }

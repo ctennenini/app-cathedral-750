@@ -32,6 +32,11 @@ jobs:
           PREFIX: /${{ github.event.repository.name }}
         run: yarn build
 
+      - name: Build Storybook
+        env:
+          PREFIX: /${{ github.event.repository.name }}/storybook
+        run: yarn build-storybook -o out/components
+
       - name: Create .nojekyll
         run: touch ./out/.nojekyll
 

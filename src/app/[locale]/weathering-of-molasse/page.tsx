@@ -17,11 +17,11 @@ export default async function Weathering({ params: { locale } }: GlobalStaticPag
         type: 'links',
         links: [
           {
-            href: '/weathering-mechanisms',
+            target: '/weathering-mechanisms',
             label: pages.weatheringOfMolasse.actions.mechanisms,
           },
           {
-            href: `/degradation-types`,
+            target: `/degradation-types`,
             label: pages.weatheringOfMolasse.actions.types,
           },
         ],

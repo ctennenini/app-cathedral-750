@@ -7,7 +7,7 @@ import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW
 
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
@@ -26,15 +26,15 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
     ? null
     : {
         backgroundColor: 'var(--white)',
-        boxShadow: '1rem 0 0px rgba(88, 88, 88, 0.2) inset',
+        boxShadow: '16em 0 0 rgba(88, 88, 88, 0.2) inset',
       }),
 
   '& > div': {
-    maxWidth: `calc(${TARGET_VIEW_WIDTH}px - ${LEFT_COLUMN_OFFSET})`,
-    paddingTop: '2rem',
-    paddingBottom: '2rem',
-    paddingLeft: '4rem',
-    paddingRight: `${PAGE_PADDING_RIGHT}px`,
+    maxWidth: `calc(${TARGET_VIEW_WIDTH}em - ${LEFT_COLUMN_OFFSET})`,
+    paddingTop: '32em',
+    paddingBottom: '32em',
+    paddingLeft: '64em',
+    paddingRight: `${PAGE_PADDING_RIGHT}em`,
     overflow: 'hidden',
   },
 }))
@@ -47,7 +47,7 @@ const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt=
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
-  maxHeight: `calc(${TARGET_VIEW_HEIGHT}px * 0.7)`,
+  maxHeight: `calc(${TARGET_VIEW_HEIGHT}em * 0.7)`,
   objectFit: 'contain',
 })
 
@@ -57,7 +57,7 @@ const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt=
 
 const Gallery = styled.ul({
   display: 'flex',
-  gap: '3rem',
+  gap: '48em',
   listStyle: 'none',
   alignItems: 'baseline',
 })
@@ -65,11 +65,13 @@ const Gallery = styled.ul({
 const GalleryItem = styled.li({
   figcaption: {
     textAlign: 'center',
-    fontSize: '1.5rem',
-    lineHeight: '1.7rem',
+
     fontWeight: 700,
     color: 'var(--highlight)',
-    marginTop: '1rem',
+    marginTop: '16em',
+    '& > span': {
+      fontSize: '24em',
+    },
   },
 })
 
@@ -81,25 +83,28 @@ type LegendItemParams = { color: string; label: string }
 
 const LegendList = styled.ul({
   display: 'flex',
-  gap: '5rem',
+  gap: '80em',
   listStyle: 'none',
   padding: 0,
   margin: 0,
-  marginTop: '2rem',
+  marginTop: '32em',
 })
 
 const Block = styled.div<{ $color: string }>(({ $color }) => ({
-  width: '1rem',
-  height: '1rem',
+  width: '16em',
+  height: '16em',
   display: 'inline-block',
   backgroundColor: $color,
 }))
 
 const Li = styled.li({
   display: 'flex',
-  gap: '0.5rem',
+  gap: '8em',
   alignItems: 'center',
   color: 'var(--black)',
+  '& span': {
+    fontSize: '24em',
+  },
 })
 
 function LegendItem({ color, label }: LegendItemParams) {
@@ -133,7 +138,7 @@ const LinksContainer = styled.nav({
   '& ul': {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2.5rem',
+    gap: '40em',
     justifyContent: 'center',
     listStyle: 'none',
     [BigLink]: {
@@ -175,7 +180,7 @@ type ClickAreaProps = Omit<ComponentProps<typeof Link>, 'href'> & {
 const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link href={target ?? '#'} {...otherProps} />)<{
   $circled?: boolean
 }>(({ $circled }) => ({
-  border: '5px solid transparent',
+  border: '5em solid transparent',
   position: 'absolute',
   backgroundColor: 'transparent',
   cursor: 'pointer',
@@ -189,7 +194,7 @@ const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link hr
       left: '-100%',
       top: '-100%',
       boxSizing: 'border-box',
-      border: '3px solid',
+      border: '3em solid',
       borderRadius: 'inherit',
       borderColor: 'var(--highlight)',
     },
@@ -220,7 +225,7 @@ const Label = styled(({ type = 'primary', text, ...otherProps }: LabelProps) => 
   </label>
 ))({
   position: 'absolute',
-  fontSize: '1.5rem',
+  fontSize: '24em',
   fontWeight: 'bold',
   color: 'var(--highlight)',
 })
@@ -267,7 +272,11 @@ export function ExtraContent(props: ExtraContentProps) {
               let content = (
                 <figure>
                   <ExtraImage {...other} />
-                  {label && <figcaption dangerouslySetInnerHTML={{ __html: label }} />}
+                  {label && (
+                    <figcaption>
+                      <span dangerouslySetInnerHTML={{ __html: label }} />
+                    </figcaption>
+                  )}
                 </figure>
               )
               content = href ? <Link href={href}>{content}</Link> : content

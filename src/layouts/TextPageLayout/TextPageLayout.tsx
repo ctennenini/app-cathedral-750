@@ -22,6 +22,9 @@ export type TextPageLayoutProps = PropsWithChildren<{
   nextButtonTarget?: string
 }>
 
+/**
+ * A reusable layout for a standard text page with a title, subtitle, background image, end-of-text actions and optional pull-out-content.
+ */
 export function TextPageLayout({
   title,
   subtitle,

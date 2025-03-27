@@ -55,8 +55,8 @@ export const NextButton = styled(({ target, ...otherProps }: ButtonProps) => (
     </StyledIconButton>
   </Link>
 ))({
-  width: '87px',
-  height: '87px',
+  width: '87em',
+  height: '87em',
   flexShrink: 0,
   flexGrow: 0,
 })

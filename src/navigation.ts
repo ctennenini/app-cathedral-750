@@ -1,6 +1,6 @@
 import { Dictionary } from '@/i18n'
 
-import { NavMenuItem } from '@/types'
+import { NavMenuItem } from '@/components/NavMenu'
 
 export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
   return [

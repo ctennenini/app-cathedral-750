@@ -1,10 +1,11 @@
 'use client'
 
-import { ComponentProps, useRef, useState } from 'react'
+import { ComponentProps, useRef } from 'react'
 import { CloseIcon, HamburgerIcon } from './Icons'
 import { useClickAway } from './useClickAway'
 import styled from 'styled-components'
 import { IconButton } from './IconButton'
+import { useAppContext } from './AppContext'
 
 const Overlay = styled.div<{ $active: boolean }>((props) => ({
   position: 'fixed',
@@ -25,10 +26,10 @@ const Drawer = styled.div<{ $isExpanded: boolean }>((props) => ({
   height: '100%',
 
   backgroundColor: 'var(--white)',
-  transform: `translateX(${props.$isExpanded ? '0' : '-100%'})`,
+  transform: `translateX(${props.$isExpanded ? '0' : '-101%'})`,
   transition: 'transform 0.3s',
 
-  padding: '10px 130px 10px 50px',
+  padding: '10em 130em 10em 50em',
 }))
 
 type ButtonProps = ComponentProps<'button'>
@@ -39,15 +40,14 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   </button>
 ))({
   position: 'absolute',
-  top: '35px',
-  right: '35px',
-  width: '45px',
-  height: '45px',
+  top: '35em',
+  right: '35em',
+  width: '45em',
+  height: '45em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '8px',
-  fontSize: '16px',
+  padding: '8em',
   border: 'none',
   borderRadius: '100%',
   backgroundColor: 'var(--highlight)',
@@ -55,25 +55,39 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   cursor: 'pointer',
 })
 
-export type SideBarProps = {
-  renderContent: () => JSX.Element
+export type SideBarButtonProps = {
   darkButton?: boolean
 }
 
-export function SideBar({ renderContent, darkButton }: SideBarProps) {
-  const [isExpanded, setExpanded] = useState(false)
+export function SideMenuButton({ darkButton }: SideBarButtonProps) {
+  const { isSideBarExpanded, setSideBarExpanded, dictionary } = useAppContext()
   const drawerRef = useRef<HTMLDivElement>(null)
 
-  useClickAway(isExpanded, setExpanded, drawerRef)
+  useClickAway(isSideBarExpanded, setSideBarExpanded, drawerRef)
+
+  return (
+    <IconButton aria-label={dictionary.ui.navMenuButton} onClick={() => setSideBarExpanded(true)} $dark={darkButton}>
+      <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
+    </IconButton>
+  )
+}
+
+export type SideBarProps = {
+  renderContent: () => JSX.Element
+  closeButtonLabel?: string
+}
+
+export function SideMenu({ renderContent, closeButtonLabel = 'close' }: SideBarProps) {
+  const { isSideBarExpanded, setSideBarExpanded } = useAppContext()
+  const drawerRef = useRef<HTMLDivElement>(null)
+
+  useClickAway(isSideBarExpanded, setSideBarExpanded, drawerRef)
 
   return (
     <>
-      <IconButton onClick={() => setExpanded(true)} $dark={darkButton}>
-        <HamburgerIcon color={darkButton ? 'var(--black)' : 'var(--white)'} />
-      </IconButton>
-      <Overlay $active={isExpanded} />
-      <Drawer $isExpanded={isExpanded} ref={drawerRef}>
-        <CloseButton onClick={() => setExpanded(false)} />
+      <Overlay $active={isSideBarExpanded} />
+      <Drawer $isExpanded={isSideBarExpanded} ref={drawerRef}>
+        <CloseButton aria-label={closeButtonLabel} onClick={() => setSideBarExpanded(false)} />
         {renderContent()}
       </Drawer>
     </>

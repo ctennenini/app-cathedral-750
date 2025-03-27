@@ -4,7 +4,7 @@ import { PropsWithChildren, Suspense } from 'react'
 import { getFontClasses } from '@/assets/fonts'
 import './globals.css'
 
-import StyledComponentsRegistry from '@/StyledComponentsRegistry'
+import StyledComponentsRegistry from '@/components/styledComponentsRegistry'
 
 export const metadata: Metadata = {
   title: 'Cathedral of Notre Dame of Lausanne',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
     <html>
-      <body className={`${getFontClasses()}`}>
+      <body className={getFontClasses()}>
         <Suspense fallback={null}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </Suspense>

@@ -1,11 +1,11 @@
 'use client'
 
-import { useAppContext } from '@/context'
+import { useAppContext } from '@/components/AppContext'
 import { useState } from 'react'
 import styled from 'styled-components'
 
 import picture from './oldest-stone-game-pic.png'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 import {
   ExtraContent,
   Main,
@@ -20,13 +20,13 @@ import {
 
 const SmallTitle = styled(BaseTitle)({
   '& *': {
-    fontSize: '3.8rem',
+    fontSize: '60em',
   },
 })
 
 const BigTitle = styled(BaseTitle)({
   '& *': {
-    fontSize: '5.4rem',
+    fontSize: '90em',
   },
 })
 

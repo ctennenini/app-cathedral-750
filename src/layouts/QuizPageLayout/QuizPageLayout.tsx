@@ -1,6 +1,6 @@
 import { ImageProps } from 'next/image'
 import { Container, LanguageSwitcher, Left, Header, CloseButton, Right } from './QuizPageLayout.styled'
-import { HREF } from '@/utils'
+import { HREF } from '@/utils/utils'
 
 export type QuizPageLayoutProps = {
   left: React.ReactNode

@@ -1,7 +1,7 @@
 'use client'
 import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
 import { MouseEventHandler, useState } from 'react'
-import { NavMenuItem } from '@/types'
+import { NavMenuItem } from '@/components/NavMenu/types'
 import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 import { NavContainer } from './NavContainer'

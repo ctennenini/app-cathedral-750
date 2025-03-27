@@ -7,30 +7,30 @@ import { useClickAway } from './useClickAway'
 const Container = styled.div(() => ({
   display: 'inline-block',
   position: 'relative',
-  height: '50px',
+  height: '50em',
   userSelect: 'none',
 }))
 
 const Menu = styled.ul<{ $isOpen: boolean; $dark?: boolean }>(({ $isOpen, $dark, children }) => ({
-  lineHeight: '50px',
+  lineHeight: '50em',
 
   maxHeight: `calc(100% * ${$isOpen ? Children.count(children) : 1})`,
 
   overflow: 'hidden',
   transition: 'max-height 0.3s',
 
-  fontSize: '18px',
   fontFamily: 'var(--font-buttons)',
-  padding: '0 3rem',
+  padding: '0 48em',
 
   color: '#020202',
   backgroundColor: $dark ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.4)',
-  borderRadius: '25px',
+  borderRadius: '25em',
 
   listStyle: 'none',
 }))
 
 const Option = styled.li(() => ({
+  fontSize: '18em',
   cursor: 'pointer',
 
   '&:hover': {
@@ -45,7 +45,7 @@ type TriangleProps = HTMLProps<HTMLSpanElement> & { $up?: boolean }
 const Triangle = styled((props: TriangleProps) => <span {...props}>&#9662;</span>)(({ $up }) => ({
   transition: 'transform 0.3s',
   transform: `rotate(${$up ? 180 : 0}deg)`,
-  marginLeft: '1rem',
+  marginLeft: '1em',
 }))
 
 const Hoverer = styled.span({})
@@ -63,30 +63,18 @@ export function Select({ value, onChange, options, $dark, ...otherProps }: Selec
 
   useClickAway(isOpen, setOpen, containerRef)
 
-  const currentOption = options.find(option => option.value === value)
-  const otherOptions = options.filter(option => option.value !== value)
+  const currentOption = options.find((option) => option.value === value)
+  const otherOptions = options.filter((option) => option.value !== value)
 
   return (
-    <Container
-      onClick={() => setOpen(o => !o)}
-      ref={containerRef}
-      {...otherProps}
-    >
-      <Menu
-        role="menu"
-        $isOpen={isOpen}
-        $dark={!!$dark}
-      >
-        <Option>
+    <Container onClick={() => setOpen((o) => !o)} ref={containerRef} {...otherProps}>
+      <Menu role="menu" $isOpen={isOpen} $dark={!!$dark}>
+        <Option role="menuitem">
           {currentOption?.label}
           {<Triangle $up={isOpen} />}
         </Option>
         {otherOptions.map(({ label, value }) => (
-          <Option
-            role="option"
-            key={value}
-            onClick={onChange.bind(null, value)}
-          >
+          <Option role="menuitem" key={value} onClick={onChange.bind(null, value)}>
             <Hoverer>{label}</Hoverer>
           </Option>
         ))}

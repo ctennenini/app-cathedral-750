@@ -7,6 +7,7 @@ const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
   position: 'relative',
   width: '100%',
   height: '100%',
+  zIndex: 0,
 
   color: $dark ? 'var(--black)' : 'var(--white)',
   backgroundColor: $dark ? 'var(--white)' : 'var(--black)',

@@ -18,24 +18,24 @@ export default async function WeatheringMechanisms({ params: { locale } }: Globa
         type: 'links',
         links: [
           {
-            href: '/freeze-thaw-action',
+            target: '/freeze-thaw-action',
             label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
-            href: '/swelling-clays',
+            target: '/swelling-clays',
             label: pages.weatheringMechanisms.actions.swellingClays,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.weatheringMechanisms.actions.saltCrystallization,
             disabled: true,
           },
           {
-            href: '/atmospheric-pollution',
+            target: '/atmospheric-pollution',
             label: pages.weatheringMechanisms.actions.atmosphericPollution,
           },
           {
-            href: '#',
+            target: '#',
             label: pages.weatheringMechanisms.actions.biologicalAttack,
             disabled: true,
           },
