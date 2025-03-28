@@ -8,7 +8,8 @@ import sanding from './sanding.png'
 import biodeterioation from './biodeterioation.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function DegradationTypes({ params: { locale } }: GlobalStaticPageProps) {
+export default async function DegradationTypes(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

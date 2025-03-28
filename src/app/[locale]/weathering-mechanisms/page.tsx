@@ -4,7 +4,8 @@ import { getDictionary } from '@/i18n'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function WeatheringMechanisms({ params: { locale } }: GlobalStaticPageProps) {
+export default async function WeatheringMechanisms(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

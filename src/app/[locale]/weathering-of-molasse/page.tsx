@@ -3,7 +3,8 @@ import bgImg from '@/assets/bg-images/side-of-house-top-tower-illuminated.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function Weathering({ params: { locale } }: GlobalStaticPageProps) {
+export default async function Weathering(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

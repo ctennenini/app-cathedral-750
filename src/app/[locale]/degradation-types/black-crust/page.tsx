@@ -4,7 +4,8 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import blackCrustExample from './black-crust-example.png'
 
-export default async function BlackCrust({ params: { locale } }: GlobalStaticPageProps) {
+export default async function BlackCrust(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

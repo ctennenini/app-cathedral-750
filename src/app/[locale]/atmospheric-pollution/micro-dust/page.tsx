@@ -6,7 +6,8 @@ import microDustImg from './micro-dust.png'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function MicroDust({ params: { locale } }: GlobalStaticPageProps) {
+export default async function MicroDust(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

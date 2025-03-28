@@ -3,7 +3,8 @@ import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
 import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function TheMolasseSandstone({ params: { locale } }: GlobalStaticPageProps) {
+export default async function TheMolasseSandstone(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

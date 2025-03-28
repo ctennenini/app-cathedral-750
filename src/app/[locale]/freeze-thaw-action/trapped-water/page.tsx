@@ -6,7 +6,8 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import imgSrc from './trapped-water.png'
 
-export default async function TrappedWater({ params: { locale } }: GlobalStaticPageProps) {
+export default async function TrappedWater(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

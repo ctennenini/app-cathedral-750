@@ -6,7 +6,8 @@ import { NavMenu } from '@/components/NavMenu'
 
 export { generateStaticParams } from '@/globals'
 
-export default async function Layout({ children, params: { locale } }: GlobalStaticLayoutProps) {
+export default async function Layout({ params, children }: GlobalStaticLayoutProps) {
+  const { locale } = await params
   const dictionary = await getDictionary(locale)
 
   return (

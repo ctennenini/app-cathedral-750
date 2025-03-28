@@ -6,7 +6,8 @@ import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 import img1 from './swelling-clays-01.png'
 import img2 from './swelling-clays-02.png'
 
-export default async function SwellingClays({ params: { locale } }: GlobalStaticPageProps) {
+export default async function SwellingClays(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

@@ -4,7 +4,8 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import sandingExample from './sanding-example.jpeg'
 
-export default async function Sanding({ params: { locale } }: GlobalStaticPageProps) {
+export default async function Sanding(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

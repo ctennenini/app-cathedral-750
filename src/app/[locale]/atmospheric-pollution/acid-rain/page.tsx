@@ -6,7 +6,8 @@ import quizImg from './acid-rain-quiz.png'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function AcidRain({ params: { locale } }: GlobalStaticPageProps) {
+export default async function AcidRain(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

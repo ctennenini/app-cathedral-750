@@ -7,7 +7,9 @@ import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
 import { GlobalStaticPageProps } from '@/globals'
 import { languages, defaultLanguage } from '@/config'
 
-export default async function Home({ params: { locale } }: GlobalStaticPageProps) {
+export default async function Home(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
+
   if (!languages.includes(locale)) {
     return redirect(`/${defaultLanguage}`)
   }

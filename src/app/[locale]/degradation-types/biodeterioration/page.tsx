@@ -4,7 +4,8 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import biodeteriorationExample from './biodeterioration-example.png'
 
-export default async function Biodeterioration({ params: { locale } }: GlobalStaticPageProps) {
+export default async function Biodeterioration(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

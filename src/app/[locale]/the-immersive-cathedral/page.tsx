@@ -5,7 +5,8 @@ import { getDictionary } from '@/i18n'
 
 import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
 
-export default async function TheImmersiveCathedral({ params: { locale } }: GlobalStaticPageProps) {
+export default async function TheImmersiveCathedral(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   const links: TitlePageLayoutProps['links'] = [

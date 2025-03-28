@@ -6,7 +6,8 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import imgSrc from './temperature-gradient.png'
 
-export default async function TemperatureGradient({ params: { locale } }: GlobalStaticPageProps) {
+export default async function TemperatureGradient(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (

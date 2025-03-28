@@ -7,7 +7,8 @@ import mapWithOverlay from './map-of-switzerland-with-overlay.png'
 import molasseFacies from './molasse-facies.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function GeologicalInformation({ params: { locale } }: GlobalStaticPageProps) {
+export default async function GeologicalInformation(props: GlobalStaticPageProps) {
+  const { locale } = await props.params
   const { pages } = await getDictionary(locale)
 
   return (
