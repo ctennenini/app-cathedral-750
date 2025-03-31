@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { TextPageLayout as TextPageLayoutComponent } from './TextPageLayout'
-import { NONAME } from 'dns'
 
 const bgImages = process.env.BG_IMAGES?.split(';') ?? []
 
