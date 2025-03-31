@@ -1516,15 +1516,6 @@
     dequal "^2.0.2"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-controls@^8.6.7":
-  version "8.6.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-controls/-/addon-controls-8.6.7.tgz#a2c1c0bb96ece8701f220e3c09749ff408a49b0d"
-  integrity sha512-6ReB1Sc1qlqvAM7NUmtw2K1cKCgGBs8zYRgL44Q2ti+r55a2ownhm6WUm/kZs2ixSkV9ehm1osiqbGBfAn0Isw==
-  dependencies:
-    "@storybook/global" "^5.0.0"
-    dequal "^2.0.2"
-    ts-dedent "^2.0.0"
-
 "@storybook/addon-docs@8.6.6":
   version "8.6.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-8.6.6.tgz#1927d9648a97488db0629996336b3a0c1aae6bfb"

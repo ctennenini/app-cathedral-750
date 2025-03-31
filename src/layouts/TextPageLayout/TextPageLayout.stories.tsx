@@ -1,30 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { TextPageLayout } from './TextPageLayout'
+import { TextPageLayout as TextPageLayoutComponent } from './TextPageLayout'
+import { NONAME } from 'dns'
 
-import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
-
-const textOptions = {
-  onePage: [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.',
-    'Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
-  ],
-  multiplePages: [
-    [
-      'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.',
-      'Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.',
-      'Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.',
-    ],
-    [
-      'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-      'Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem.',
-    ],
-    [
-      'Curabitur tortor. Pellentesque nibh. Aenean quam.',
-      'In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.',
-    ],
-  ],
-}
+const bgImages = process.env.BG_IMAGES?.split(';') ?? []
 
 const textActions = {
   back: [
@@ -43,89 +22,29 @@ const textActions = {
   ],
 }
 
-const meta: Meta<typeof TextPageLayout> = {
-  title: 'Layouts/TextPageLayout/Basic',
-  component: TextPageLayout,
-  tags: ['autodocs'],
+const meta = {
+  title: 'Layouts/TextPageLayout',
+  component: TextPageLayoutComponent,
+  render: (args, { loaded }) => {
+    return <TextPageLayoutComponent {...args} bgImg={loaded.bgImg} />
+  },
   args: {
     title: 'The Title',
     subtitle: 'The Subtitle',
-    bgImgAlt: 'Dawn over roof tops',
-    bgImg: bgImg,
-    withHomeButton: true,
-    backButtonTarget: '',
-    nextButtonTarget: '',
+    bgImg: bgImages[0],
   },
   argTypes: {
-    title: { description: 'The title of the page' },
-    subtitle: { description: 'The subtitle of the page' },
+    title: {
+      description: 'The title of the page',
+    },
+    subtitle: {
+      description: 'The subtitle of the page',
+    },
     bgImg: {
-      description: [
-        'The background image of the page. This needs to be imported into the component like',
-        '```',
-        "import bgImg from 'path/to/image.png'",
-        '```',
-      ].join('\n'),
-      control: false,
-      // options: [{ label: 'Sunset against tower in middle distance', value: bgImg,  }],
+      control: 'select',
+      options: bgImages,
     },
-    bgImgAlt: {
-      description: 'The alt text for the background image',
-    },
-    withHomeButton: {
-      description: 'Whether to show a home button',
-      control: 'boolean',
-      required: true,
-    },
-    backButtonTarget: {
-      description: 'The target of the back button',
-      control: 'text',
-    },
-    nextButtonTarget: {
-      description: 'The target of the next button',
-      control: 'text',
-    },
-    text: {
-      description: [
-        'The main text content of the page. This can be',
-        '- a list of strings, where each string corresponds to a paragraph, or',
-        '- a list of lists of strings, where each inner list corresponds to a page of paragraphs. In this case the layout will implement navigation between the pages by overwriting the `nextButtonTarget` and `backButtonTarget` props.',
-      ].join('<br />'),
-      options: Object.keys(textOptions),
-      mapping: textOptions,
-      control: {
-        type: 'select',
-        labels: {
-          onePage: 'One page',
-          multiplePages: 'Multiple pages',
-        },
-      },
-    },
-  },
-} satisfies Meta<typeof TextPageLayout>
-
-export default meta
-
-type Story = StoryObj<typeof meta>
-
-export const SimpleTextPage: Story = {
-  args: {
-    text: textOptions.onePage,
-  },
-}
-
-export const MultiplePagesOfText: Story = {
-  args: {
-    text: textOptions.multiplePages,
-  },
-}
-
-export const EndOfTextActions: Story = {
-  name: 'End-of-Text Actions',
-  argTypes: {
     actions: {
-      description:
-        'The actions to display at the end of the text. If there are multiple pages, the actions will be displayed on the last page.',
       options: Object.keys(textActions),
       mapping: textActions,
       control: {
@@ -137,8 +56,66 @@ export const EndOfTextActions: Story = {
       },
     },
   },
+  parameters: {
+    controls: {
+      include: ['title', 'subtitle', 'text', 'bgImg', 'actions'],
+    },
+  },
+} satisfies Meta<typeof TextPageLayoutComponent>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const SingleParagraph: Story = {
   args: {
-    text: textOptions.onePage,
-    actions: textActions.back,
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.',
+  },
+  argTypes: {
+    text: {
+      description: 'The text of the page',
+      control: 'text',
+    },
+  },
+}
+
+export const MultipleParagraphs: Story = {
+  args: {
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+    text: [
+      'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.',
+      'Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+      'Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Curabitur tortor. Pellentesque nibh. Aenean quam.',
+    ],
+  },
+  argTypes: {
+    text: {
+      control: 'object',
+    },
+  },
+}
+
+export const MultiplePages: Story = {
+  args: {
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+    text: [
+      [
+        'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.',
+        'Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+      ],
+      [
+        'Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+        'Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Curabitur tortor. Pellentesque nibh. Aenean quam.',
+        'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.',
+      ],
+      [
+        'Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Curabitur tortor. Pellentesque nibh. Aenean quam.',
+        'In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.',
+      ],
+    ],
   },
 }

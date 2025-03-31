@@ -12,7 +12,7 @@ const preview: Preview = {
   decorators: [
     (Story, { loaded }) => {
       return (
-        <AppContextProvider locale="en" dictionary={loaded as Dictionary}>
+        <AppContextProvider locale="en" dictionary={loaded.dictionary as Dictionary}>
           <div style={{ width: '100%', padding: '1rem' }} className={`${getFontClasses()}`}>
             <PageWrapper>
               <Story />
@@ -22,7 +22,17 @@ const preview: Preview = {
       )
     },
   ],
-  loaders: [() => getDictionary('en')],
+  loaders: [
+    async ({ allArgs }) => {
+      const dictionary = await getDictionary('en')
+      const bgImg = await import(`../src/assets/bg-images/${allArgs.bgImg ?? 'dawn-over-roof-tops.png'}`)
+
+      return {
+        dictionary,
+        bgImg: bgImg.default,
+      }
+    },
+  ],
   parameters: {
     nextjs: {
       appDirectory: true,
