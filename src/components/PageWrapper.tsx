@@ -1,9 +1,12 @@
 'use client'
 import { TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
-import { ComponentProps, useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import { ComponentProps, useEffect, useRef, useState } from 'react'
 
-export const PageWrapper = styled((props: ComponentProps<'div'>) => {
+import styled from 'styled-components'
+import { Loader } from '@/components/Loader'
+
+export const PageWrapper = styled(({ children, ...otherProps }: ComponentProps<'div'>) => {
+  const [loaded, setLoaded] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -20,6 +23,7 @@ export const PageWrapper = styled((props: ComponentProps<'div'>) => {
 
       const style = (target as typeof element).style
       style.fontSize = `calc(${width}px / ${TARGET_VIEW_WIDTH})`
+      setLoaded(true)
     })
 
     resizeObserver.observe(element)
@@ -29,7 +33,12 @@ export const PageWrapper = styled((props: ComponentProps<'div'>) => {
     }
   }, [ref])
 
-  return <div {...props} ref={ref} />
+  return (
+    <div {...otherProps} ref={ref}>
+      {children}
+      <Loader $show={!loaded} />
+    </div>
+  )
 })({
   position: 'relative',
   aspectRatio: `${TARGET_VIEW_WIDTH} / ${TARGET_VIEW_HEIGHT}`,

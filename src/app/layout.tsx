@@ -5,6 +5,7 @@ import { getFontClasses } from '@/assets/fonts'
 import './globals.css'
 
 import StyledComponentsRegistry from '@/components/styledComponentsRegistry'
+import { Loader } from '@/components/Loader'
 
 export const metadata: Metadata = {
   title: 'Cathedral of Notre Dame of Lausanne',
@@ -15,9 +16,9 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
     <html>
       <body className={getFontClasses()}>
-        <Suspense fallback={null}>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </Suspense>
+        <StyledComponentsRegistry>
+          <Suspense fallback={<Loader $show />}>{children}</Suspense>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
