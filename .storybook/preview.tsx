@@ -7,13 +7,17 @@ import { getFontClasses } from '../src/assets/fonts'
 import { Dictionary, getDictionary } from '../src/i18n'
 
 import '../src/app/globals.css'
+import styled from 'styled-components'
 
 const preview: Preview = {
   decorators: [
-    (Story, { loaded }) => {
+    (Story, { loaded, parameters, globals, ...rest }) => {
+      const bg = parameters.backgrounds.values.find((bg) => bg.value === globals.backgrounds?.value)?.name ?? 'light'
+
       return (
         <AppContextProvider locale="en" dictionary={loaded.dictionary as Dictionary}>
           <div style={{ width: '100%', padding: '1rem' }} className={`${getFontClasses()}`}>
+            {renderDescription(parameters.description, bg)}
             <PageWrapper>
               <Story />
             </PageWrapper>
@@ -41,3 +45,29 @@ const preview: Preview = {
 }
 
 export default preview
+
+const P = styled.p({
+  paddingBottom: '0.5rem',
+})
+
+function renderDescription(description: string | string[], bg: string) {
+  let content
+  if (Array.isArray(description)) {
+    content = description.map((desc, index) => <P key={index}>{desc}</P>)
+  } else if (typeof description === 'string') {
+    content = <P>{description}</P>
+  } else {
+    return null
+  }
+
+  return (
+    <div
+      style={{
+        color: bg === 'dark' ? '#fff' : '#000',
+        paddingBottom: '1rem',
+      }}
+    >
+      {content}
+    </div>
+  )
+}

@@ -145,6 +145,16 @@ When contributing to the project, please follow these guidelines:
 Thank you for contributing to the ETHZ - Cathedral Slideshow project!
 \*/
 
-```
+## TODOs:
 
-```
+- [x] close nav-menu on navigation
+- [x] prevent size twitching on load
+- [x] change storybook to just be a test page to measure the text
+
+  - [x] title page layout - title and subtitle
+  - [x] text page layout - title, subtitle, text(s)
+
+- [ ] finalise documentation
+- [ ] setup PWA caching
+- [ ] make centered quiz layout and change Oldest Stone Game to use it
+- [ ] make dynamic titles

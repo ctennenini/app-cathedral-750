@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { TextPageLayout as TextPageLayoutComponent } from './TextPageLayout'
+import exampleImg1 from './example1.png'
+import exampleImg2 from './example2.png'
+import exampleImg3 from './example3.png'
 
 const bgImages = process.env.BG_IMAGES?.split(';') ?? []
 
@@ -30,6 +33,10 @@ const meta = {
   args: {
     title: 'The Title',
     subtitle: 'The Subtitle',
+    text: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+      'Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.',
+    ],
     bgImg: bgImages[0],
   },
   argTypes: {
@@ -57,7 +64,7 @@ const meta = {
   },
   parameters: {
     controls: {
-      include: ['title', 'subtitle', 'text', 'bgImg', 'actions'],
+      include: ['title', 'subtitle', 'text', 'bgImg', 'actions', 'pullOutContent'],
     },
   },
 } satisfies Meta<typeof TextPageLayoutComponent>
@@ -77,6 +84,9 @@ export const SingleParagraph: Story = {
       description: 'The text of the page',
       control: 'text',
     },
+  },
+  parameters: {
+    description: ['This is a story with a single paragraph of text.', 'The text is passed as a string.'],
   },
 }
 
@@ -116,5 +126,124 @@ export const MultiplePages: Story = {
         'In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.',
       ],
     ],
+  },
+}
+
+export const Links: Story = {
+  args: {
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+    pullOutContent: {
+      type: 'links',
+      links: [
+        {
+          label: 'A Link',
+          target: '#',
+        },
+        {
+          label: 'A primary Link',
+          target: '#',
+          $primary: true,
+        },
+        {
+          label: 'A link with a longer label',
+          target: '#',
+        },
+        {
+          label: 'A disabled Link',
+          target: '#',
+          disabled: true,
+        },
+      ],
+    },
+  },
+}
+
+export const Image: Story = {
+  args: {
+    pullOutContent: {
+      type: 'image',
+      src: exampleImg1,
+    },
+  },
+}
+
+export const ImageWithLegend: Story = {
+  args: {
+    pullOutContent: {
+      type: 'image',
+      src: exampleImg1,
+      legendItems: [
+        {
+          color: 'green',
+          label: 'Item 1',
+        },
+        {
+          color: 'rgba(255, 0, 127, 0.5)',
+          label: 'Item 2',
+        },
+        {
+          color: '#B0AEAB',
+          label: 'Item 3',
+        },
+      ],
+    },
+  },
+}
+
+export const ImageWithLabels: Story = {
+  args: {
+    pullOutContent: {
+      type: 'image',
+      src: exampleImg1,
+      labels: [
+        {
+          text: 'Label 1',
+          style: {
+            left: '0%',
+            top: '5%',
+          },
+        },
+        {
+          text: 'Label 2',
+          style: {
+            left: '35%',
+            top: '90%',
+            color: 'green',
+            fontSize: '40em',
+          },
+        },
+        {
+          text: 'Label 3. This one is very long and will break over multiple lines.',
+          style: {
+            left: '40%',
+            top: '10%',
+            width: '15%',
+          },
+        },
+      ],
+    },
+  },
+}
+
+export const Gallery: Story = {
+  args: {
+    pullOutContent: {
+      type: 'gallery',
+      items: [
+        {
+          src: exampleImg1,
+          label: 'Label 1',
+        },
+        {
+          src: exampleImg2,
+          label: 'Label 2',
+        },
+        {
+          src: exampleImg3,
+          label: 'Label 3',
+        },
+      ],
+    },
   },
 }
