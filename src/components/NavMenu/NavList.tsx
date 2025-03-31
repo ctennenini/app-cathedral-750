@@ -1,10 +1,11 @@
 'use client'
 import { NavMenuTriangleClosed, NavMenuTriangleOpen } from '@/components/Icons'
-import { MouseEventHandler, useState } from 'react'
+import { MouseEventHandler, useEffect, useState } from 'react'
 import { NavMenuItem } from '@/components/NavMenu/types'
 import { NavListContextProvider, useNavItemInfo } from './Context'
 import { List, NavLink, Li, ListItemHeader, ToggleButton, Expander } from './NavList.styled'
 import { NavContainer } from './NavContainer'
+import { useAppContext } from '../AppContext'
 
 type ListItemProps = {
   navItem: NavMenuItem
@@ -14,12 +15,19 @@ type ListItemProps = {
 }
 
 function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemProps) {
+  const { setSideBarExpanded } = useAppContext()
   const subItems = navItem.subItems
   const hasSubItems = !!subItems?.length
 
   const { isActive, isOnPath } = useNavItemInfo(navItem)
 
   const [isExpanded, setIsExpanded] = useState(isFirst || isOnPath || isActive)
+
+  useEffect(() => {
+    if (isFirst || isOnPath || isActive) {
+      setIsExpanded(true)
+    }
+  }, [isFirst, isOnPath, isActive])
 
   const Triangle = isExpanded ? NavMenuTriangleOpen : NavMenuTriangleClosed
 
@@ -28,6 +36,10 @@ function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemPro
   const toggleExpanded: MouseEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault()
     setIsExpanded((prev) => !prev)
+  }
+
+  const onClick = () => {
+    setSideBarExpanded(false)
   }
 
   return (
@@ -45,6 +57,7 @@ function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemPro
           $isActive={isActive}
           $indented={!hasSubItems && !!neighborHasSubItems}
           dangerouslySetInnerHTML={{ __html: label }}
+          onClick={onClick}
         />
       </ListItemHeader>
       {hasSubItems && (
