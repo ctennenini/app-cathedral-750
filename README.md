@@ -14,25 +14,23 @@ The specific technologies used in this project are:
 
 ### .. get set up for development
 
-The most convenient way to get started without having to install anything is to use github codespaces, which will set up a development environment in the cloud and give you a professional code-editor right in the browser.
+The easiest way to get started without having to install anything is to use github codespaces, which will set up a development environment in the cloud and give you a professional code-editor right in the browser.
 
-To start, expand the green "<> Code" button and select "Create codespace on main"
+To start, create a new branch to work on. This lets you test your changes and then commit them all at once to the main branch where they are compiled and deployed. This is good practice to avoid breaking the main branch with unfinished code.
 
-![creating a codespace](docs/creating-a-codespace.png)
-
-"main" refers to the main _branch_ of the repository. Changes committed here will automatically get deployed.
-
-You can also create a new branch to work on and test your changes and then commit them all at once to the main branch. This is good practice to avoid breaking the main branch with unfinished code.
-
-To create a new branch, click on the branch selector in the top left corner and type the name of your new branch. If that branch doesn't exist yet, it will give you the option to create it:
+Click on the branch selector in the top left corner and type the name of your new branch. If that branch doesn't exist yet, it will give you the option to create it:
 
 ![creating a branch](docs/creating-a-branch.png)
 
-The codespace creation button will now show the name of your new branch. Click on it to create the codespace. You will then be redirected to the codespace editor, a fully functional IDE (integrated development environment) running in the browser:
+Once you have the desired branch created and selected, expand the green "<> Code" button and select "Create codespace on <your branch's name>":
+
+![creating a codespace](docs/creating-a-codespace.png)
+
+You will then be redirected to the codespace editor, a fully functional IDE (integrated development environment) running in the browser:
 
 ![the editor](docs/the-codespace-ide.png)
 
-After the startup stuff in the `Terminal` panel is done, type
+The highlighted area is the `Terminal` panel where you can run commands. After the startup stuff is done, enter
 
 `yarn`
 
@@ -40,7 +38,7 @@ which will install all the dependencies needed to run the application, and then
 
 `yarn dev`
 
-This will start the development server:
+which will start the development server:
 
 ![running the development server](docs/yarn-dev.png)
 
