@@ -4,49 +4,97 @@
 
 This project is a slideshow application for ETHZ, showcasing various aspects of cathedral architecture and related topics.
 
-The application is built using web-development technologies, which are mature and well documented and allow leveraging the web browser already available on virtually any platform as a base.
-
 The specific technologies used in this project are:
 
 - [TypeScript](https://www.typescriptlang.org/): A popular programming language that compiles to plain JavaScript which can be understood by browsers.
 - [React.js](https://react.dev/): A JavaScript library for building user interfaces.
 - [Next.js](https://nextjs.org/): A React.js framework that takes care of a lot of ground-work like routing, image-optimisation and compiling the application into static files.
 
-## How To's:
+## How to ..
 
-### Development Setup
+### .. get set up for development
 
-There are three ways to get set up to make changes and additions to the application:
+The most convenient way to get started without having to install anything is to use github codespaces, which will set up a development environment in the cloud and give you a professional code-editor right in the browser.
 
-#### Locally:
+To start, expand the green "<> Code" button and select "Create codespace on main"
 
-To run the application locally, you will need to have two programs installed on your machine:
+![creating a codespace](docs/creating-a-codespace.png)
 
-- [Git](https://git-scm.com/), a version control system that keeps track of changes in the code so they can be shared and rolled back if necessary.
-- [Node.js](https://nodejs.org/), a runtime that allows you to run JavaScript code outside of a web browser. This is necessary to run the development server and build the application.
+"main" refers to the main _branch_ of the repository. Changes committed here will automatically get deployed.
 
-After installing these requirements
+You can also create a new branch to work on and test your changes and then commit them all at once to the main branch. This is good practice to avoid breaking the main branch with unfinished code.
 
-1. Clone the repository (make a local copy) to your computer by copying and pasting this command to your terminal:
-   `git clone git@github.com:humancatfood/ethz-cathedral-slideshow.git`
+To create a new branch, click on the branch selector in the top left corner and type the name of your new branch. If that branch doesn't exist yet, it will give you the option to create it:
 
-2. Inside the newly created folder ("ethz-cathedral-slideshow") run `npm install` to install the dependencies
+![creating a branch](docs/creating-a-branch.png)
 
-3. Run `npm run dev` to start the development server
+The codespace creation button will now show the name of your new branch. Click on it to create the codespace. You will then be redirected to the codespace editor, a fully functional IDE (integrated development environment) running in the browser:
 
-4. Open `http://localhost:3000` in your browser to view the locally running application
+![the editor](docs/the-codespace-ide.png)
 
-If you now make changes to the code and save the files, the application will automatically reload in the browser to reflect the changes.
+After the startup stuff in the `Terminal` panel is done, type
 
-To save the changes back to the repository you need to
+`yarn`
 
-1. Add the changed files to the staging area by running `git add -A` (A stands for "add ALL changes" - you can also add individual files by specifying their names, e.g. `git add src/app/[locale]/page.tsx src/i18n/en.json ...`)
-2. Commit the changes to the repository by running `git commit -m "A short description of the changes"`
-3. Push the changes to the remote repository by running `git push`
+which will install all the dependencies needed to run the application, and then
 
-When pushing changes to the repository, it will automatically attempt to build and deploy of the application.
+`yarn dev`
 
-### Adding a page
+This will start the development server:
+
+![running the development server](docs/yarn-dev.png)
+
+Finally, hold down the `cmd` or `ctrl` key and click on the line reading
+
+`http://localhost:3000`
+
+which will open a new tab with the application running in it.
+
+You can now start editing the code in the `src` directory. The application will automatically reload as you save your changes.
+
+To commit your changes, open the `Source Control` panel on the left:
+
+![the source control tab](docs/the-source-control-tab.png)
+
+Here are all the changes you made to the code. _Stage_ the changes you want to commit by clicking the `+` icon next to the file name:
+
+<img style="vertical-align: center; float: left;" src="docs/listing-changes.png" alt="listing changes" width="260">
+
+<img style="margin-left: 1rem;" src="docs/staging-changes.png" alt="staging changes" width="260">
+
+Finally, write a quick message describing the changes you made and click "Commit" to save them to your branch.
+
+---
+
+‼️ Watch out for the "Discard Changes" button. This will delete all uncommited the changes and cannot be undone ‼️
+
+<img style="text-align: center;" src="docs/the-discard-button.png" alt="the Discard Button" style="width: 50%; left: 25%; position: relative;">
+
+---
+
+Once you're happy with your branch, click "Publish Branch" to make it available in Github. This will create a new branch in the repository with the same name as your local branch:
+
+<img src="docs/publish-branch.png" alt="publishing a branch" style="width: 50%; left: 25%; position: relative;">
+
+(If you've already published it, the button will say "Sync Changes")
+
+Now you can create a pull request to merge your changes into the main branch so they get published.
+
+Back in Github, click on the "Pull Requests" tab. There you should see your recently changed branch with an option to "Compare & pull request". You can also click on "New Pull Request", which will take you to a page where you can select the branch you want to merge into the main branch.
+
+![creating a pull request](docs/pull-requests.png)
+
+Follow the instructions to create a pull request. You can add a title and description to explain what changes you made and why they should be merged into the main branch.
+
+Once you're done, click "Create pull request". This will run some automated checks, for example that the translation files have matching structures and are referenced correctly, and give collaborators the chance to review and discuss your changes before merging them into the main branch.
+
+Finally, you can click "Merge pull request" to merge your changes into the main branch. This will automatically deploy the changes to the live application.
+
+![merging a pull request](docs/pr-passed.png)
+
+---
+
+### .. add a page
 
 To add a new page to the application:
 
@@ -132,18 +180,6 @@ The text content of the application can be found in the `*.json` files under `./
 2. Open the file corresponding to the language you want to edit.
 3. Make the necessary changes to the text within the JSON file.
 4. Save the file and restart the application to see the changes.
-
-## Contributing
-
-When contributing to the project, please follow these guidelines:
-
-1. Create a new branch for your feature or bug fix.
-2. Make your changes and ensure that the code is properly formatted.
-3. Run the tests to ensure that everything is working correctly.
-4. Submit a pull request with a clear description of your changes.
-
-Thank you for contributing to the ETHZ - Cathedral Slideshow project!
-\*/
 
 ## TODOs:
 
