@@ -8,21 +8,21 @@ The specific technologies used in this project are:
 
 - [TypeScript](https://www.typescriptlang.org/): A popular programming language that compiles to plain JavaScript which can be understood by browsers.
 - [React.js](https://react.dev/): A JavaScript library for building user interfaces.
-- [Next.js](https://nextjs.org/): A React.js framework that takes care of a lot of ground-work like routing, image-optimisation and compiling the application into static files.
+- [Next.js](https://nextjs.org/): A React.js framework that implements common necessities like routing, image-optimisation and compiling the application into static files.
 
 ## How to ..
 
 ### .. get set up for development
 
-The easiest way to get started without having to install anything is to use github codespaces, which will set up a development environment in the cloud and give you a professional code-editor right in the browser.
+The easiest way to get started without having to install anything is to use [Github Codespaces](https://docs.github.com/en/codespaces), which will set up a development environment online and give you a professional code-editor right in the browser.
 
-To start, create a new branch to work on. This lets you test your changes and then commit them all at once to the main branch where they are compiled and deployed. This is good practice to avoid breaking the main branch with unfinished code.
+To start, create a new [branch](TODO: add link) to work on. This lets you test and validate your changes before mergin them into the `main` branch where they are compiled and deployed. This is good practice to avoid breaking the main branch with unfinished code.
 
 Click on the branch selector in the top left corner and type the name of your new branch. If that branch doesn't exist yet, it will give you the option to create it:
 
 ![creating a branch](docs/creating-a-branch.png)
 
-Once you have the desired branch created and selected, expand the green "<> Code" button and select "Create codespace on <your branch's name>":
+Once you have the desired branch created and selected, expand the green "<> Code" button and select "Create codespace on <your branch's name>" (if you have a codespace already, you will be available in a list):
 
 ![creating a codespace](docs/creating-a-codespace.png)
 
@@ -62,31 +62,31 @@ Here are all the changes you made to the code. _Stage_ the changes you want to c
 
 Finally, write a quick message describing the changes you made and click "Commit" to save them to your branch.
 
----
-
 ‼️ Watch out for the "Discard Changes" button. This will delete all uncommited the changes and cannot be undone ‼️
 
 <img style="text-align: center;" src="docs/the-discard-button.png" alt="the Discard Button" style="width: 50%; left: 25%; position: relative;">
 
----
-
-Once you're happy with your branch, click "Publish Branch" to make it available in Github. This will create a new branch in the repository with the same name as your local branch:
+Once you're happy with your branch, click "Publish Branch" to make it available in Github. This will create a new branch _in the repository_, that tracks the local branch you are using in the workspace:
 
 <img src="docs/publish-branch.png" alt="publishing a branch" style="width: 50%; left: 25%; position: relative;">
 
 (If you've already published it, the button will say "Sync Changes")
 
-Now you can create a pull request to merge your changes into the main branch so they get published.
+‼️ Codespaces get deleted after a couple of weeks of inactivity, so make sure to commit and push/sync changes ‼️
 
-Back in Github, click on the "Pull Requests" tab. There you should see your recently changed branch with an option to "Compare & pull request". You can also click on "New Pull Request", which will take you to a page where you can select the branch you want to merge into the main branch.
+---
 
-![creating a pull request](docs/pull-requests.png)
+Now you can create what's called a Pull Request to merge your changes into the `main` branch so they get published.
 
-Follow the instructions to create a pull request. You can add a title and description to explain what changes you made and why they should be merged into the main branch.
+Back in Github, click on the "Pull Requests" tab. There you should see your recently changed branch with an option to "Compare & pull request". You can also click on "New Pull Request", which will take you to a page where you can select the branch you want to merge.
 
-Once you're done, click "Create pull request". This will run some automated checks, for example that the translation files have matching structures and are referenced correctly, and give collaborators the chance to review and discuss your changes before merging them into the main branch.
+![creating a pull request](docs/creating-a-pr.png)
 
-Finally, you can click "Merge pull request" to merge your changes into the main branch. This will automatically deploy the changes to the live application.
+Follow the instructions to create a pull request. You can add a title and description to explain what changes you made and why.
+
+Once you're done, click "Create pull request". This will run some automated checks, (for example that the translation files have matching structures and are referenced correctly), and give collaborators the chance to review and discuss your changes through comments.
+
+Finally, you can click "Merge pull request". This will merge your changes into the `main` branch which will automatically build and deploy the application.
 
 ![merging a pull request](docs/pr-passed.png)
 
