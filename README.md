@@ -216,14 +216,6 @@ export default makePage((dictionary) => {
 
 ## TODOs:
 
-- [x] close nav-menu on navigation
-- [x] prevent size twitching on load
-- [x] change storybook to just be a test page to measure the text
-
-  - [x] title page layout - title and subtitle
-  - [x] text page layout - title, subtitle, text(s)
-
-- [ ] finalise documentation
 - [ ] setup PWA caching
 - [ ] make centered quiz layout and change Oldest Stone Game to use it
 - [ ] make dynamic titles
