@@ -50,24 +50,23 @@ const P = styled.p({
   paddingBottom: '0.5rem',
 })
 
+const Description = styled.div({
+  backgroundColor: 'rgb(20, 20, 20)',
+  color: '#fff',
+  paddingBottom: '1rem',
+  fontFamily: 'var(--font-body)',
+  WebkitFontSmoothing: 'subpixel-antialiased',
+})
+
 function renderDescription(description: string | string[], bg: string) {
   let content
   if (Array.isArray(description)) {
-    content = description.map((desc, index) => <P key={index}>{desc}</P>)
+    content = description.map((desc, index) => <P key={index} dangerouslySetInnerHTML={{ __html: desc }} />)
   } else if (typeof description === 'string') {
-    content = <P>{description}</P>
+    content = <P dangerouslySetInnerHTML={{ __html: description }} />
   } else {
     return null
   }
 
-  return (
-    <div
-      style={{
-        color: bg === 'dark' ? '#fff' : '#000',
-        paddingBottom: '1rem',
-      }}
-    >
-      {content}
-    </div>
-  )
+  return <Description>{content}</Description>
 }

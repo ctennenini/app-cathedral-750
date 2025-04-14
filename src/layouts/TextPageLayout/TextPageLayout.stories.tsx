@@ -8,6 +8,7 @@ import exampleImg3 from './example3.png'
 const bgImages = process.env.BG_IMAGES?.split(';') ?? []
 
 const textActions = {
+  none: undefined,
   back: [
     {
       type: 'back',
@@ -50,17 +51,6 @@ const meta = {
       control: 'select',
       options: bgImages,
     },
-    actions: {
-      options: Object.keys(textActions),
-      mapping: textActions,
-      control: {
-        type: 'select',
-        labels: {
-          back: 'Back',
-          quiz: 'Quiz',
-        },
-      },
-    },
   },
   parameters: {
     controls: {
@@ -86,7 +76,10 @@ export const SingleParagraph: Story = {
     },
   },
   parameters: {
-    description: ['This is a story with a single paragraph of text.', 'The text is passed as a string.'],
+    description: [
+      'This is a `TextPageLayout` with a single paragraph of text, passed in as a <i>single string</i>.',
+      'You can edit the text in the controls panel on the right to make sure it fits on the page before copying it to the translation file.',
+    ],
   },
 }
 
@@ -104,6 +97,12 @@ export const MultipleParagraphs: Story = {
     text: {
       control: 'object',
     },
+  },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with multiple paragraphs of text.',
+      'To achieve this, the text entry in the translation file needs to be an <i>array</> of strings.',
+    ],
   },
 }
 
@@ -125,6 +124,12 @@ export const MultiplePages: Story = {
         'Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Curabitur tortor. Pellentesque nibh. Aenean quam.',
         'In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.',
       ],
+    ],
+  },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with multiple pages of text. Note how the text is automatically split into multiple pages with forward and back buttons.',
+      'To achieve this, the text entry in the translation file needs to be an <i>array of arrays</i> of strings.',
     ],
   },
 }
@@ -157,6 +162,12 @@ export const Links: Story = {
       ],
     },
   },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with a pull-out content area containing links.',
+      'To achieve this pass in as an object with type="links" links={an array of objects with `label` and `target` properties}',
+    ],
+  },
 }
 
 export const Image: Story = {
@@ -165,6 +176,12 @@ export const Image: Story = {
       type: 'image',
       src: exampleImg1,
     },
+  },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with a pull-out content area containing an image.',
+      'The image is passed in as an object with a `src` property.',
+    ],
   },
 }
 
@@ -188,6 +205,12 @@ export const ImageWithLegend: Story = {
         },
       ],
     },
+  },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with a pull-out content area containing an image with a legend.',
+      'The legend items are passed in as an array of objects with `color` and `label` properties.',
+    ],
   },
 }
 
@@ -224,9 +247,16 @@ export const ImageWithLabels: Story = {
       ],
     },
   },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with a pull-out content area containing an image with labels.',
+      'The labels are passed in as an array of objects with `text` and `style` properties.',
+      'The style property is an object with CSS properties that lets you decide the position, color, font size, etc. of the label.',
+    ],
+  },
 }
 
-export const Gallery: Story = {
+export const ImageGallery: Story = {
   args: {
     pullOutContent: {
       type: 'gallery',
@@ -245,5 +275,91 @@ export const Gallery: Story = {
         },
       ],
     },
+  },
+  parameters: {
+    description: [
+      'This is a `TextPageLayout` with a pull-out content area containing a gallery.',
+      'The gallery items are passed in as an array of objects with `src` and `label` properties.',
+    ],
+  },
+}
+
+export const MultiplePagesAndPullOutContents: Story = {
+  args: {
+    text: [
+      ['Page 1, paragraph 1', 'Page 1, paragraph 2'],
+      ['Page 2, paragraph 1', 'Page 2, paragraph 2'],
+      ['Page 3, paragraph 1', 'Page 3, paragraph 2', 'Page 3, paragraph 3'],
+    ],
+    pullOutContent: [
+      {
+        type: 'image',
+        src: exampleImg1,
+      },
+      {
+        type: 'gallery',
+        items: [
+          {
+            src: exampleImg1,
+            label: 'Label 1',
+          },
+          {
+            src: exampleImg2,
+            label: 'Label 2',
+          },
+          {
+            src: exampleImg3,
+            label: 'Label 3',
+          },
+        ],
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'A Link',
+            target: '#',
+            $primary: true,
+          },
+          {
+            label: 'Another Link',
+            target: '#',
+          },
+        ],
+      },
+    ],
+  },
+  parameters: {
+    description: [
+      'A `TextPageLayout` can render multiple sets of pull-out content as well as multiple pages.',
+      'Pass in the different pull-out contents as an <i>array of objects</i> and they will line up with the text pages automatically',
+    ],
+  },
+}
+
+export const Actions: Story = {
+  args: {
+    title: 'The Title',
+    subtitle: 'The Subtitle',
+  },
+  argTypes: {
+    actions: {
+      options: Object.keys(textActions),
+      mapping: textActions,
+      control: {
+        type: 'select',
+        labels: {
+          none: 'None',
+          back: 'Back',
+          quiz: 'Quiz',
+        },
+      },
+    },
+  },
+  parameters: {
+    description: [
+      'Actions are additional buttons displayed at the end of a TextPageLayout (or at the end of the <i>last</i> page if there are multiple)',
+      'An action can be of type `back` or `quiz` (a red button with an arrow, or a outlined button respectively) and receives a `label` and a `target`.',
+    ],
   },
 }

@@ -16,23 +16,6 @@ const meta = {
     textColor: 'light',
     buttonColor: 'light',
     bgImg: bgImages[0],
-    links: [
-      {
-        label: 'Home',
-        target: '#',
-        $primary: true,
-      },
-      {
-        label: 'About',
-        target: '#',
-        external: true,
-      },
-      {
-        label: 'Contact',
-        target: '#',
-        disabled: true,
-      },
-    ],
     withHomeButton: true,
     backButtonTarget: '#',
   },
@@ -70,4 +53,33 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const ExampleTitlePage: Story = {}
+export const BasicTitlePage: Story = {
+  parameters: {
+    description: 'A basic TitlePageLayout page, with a title, subtitle, and background image.',
+  },
+}
+
+export const TitlePageWithLinks: Story = {
+  args: {
+    links: [
+      {
+        label: 'Home',
+        target: '#',
+        $primary: true,
+      },
+      {
+        label: 'About',
+        target: '#',
+        external: true,
+      },
+      {
+        label: 'Contact',
+        target: '#',
+        disabled: true,
+      },
+    ],
+  },
+  parameters: {
+    description: 'A TitlePageLayout page with links to other pages of the app.',
+  },
+}
