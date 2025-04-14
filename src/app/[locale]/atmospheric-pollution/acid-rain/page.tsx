@@ -1,14 +1,12 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
 
 import quizImg from './acid-rain-quiz.png'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import { makePage } from '@/components/makePage'
 
-export default async function AcidRain(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -40,4 +38,4 @@ export default async function AcidRain(props: GlobalStaticPageProps) {
       }}
     />
   )
-}
+})

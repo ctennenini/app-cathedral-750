@@ -1,8 +1,9 @@
+import { makePage } from '@/components/makePage'
 import { DegradationTypesGame } from './DegradationTypesGame'
 
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 
-export default function DegradationTypesPage() {
+export default makePage(() => {
   return (
     <DegradationTypesGame
       bgImg={bgImg}
@@ -10,4 +11,4 @@ export default function DegradationTypesPage() {
       closeTarget="/degradation-types?page=2"
     />
   )
-}
+})

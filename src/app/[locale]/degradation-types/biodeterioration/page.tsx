@@ -1,12 +1,11 @@
-import { GlobalStaticPageProps } from '@/globals'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import biodeteriorationExample from './biodeterioration-example.png'
 
-export default async function Biodeterioration(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+import { makePage } from '@/components/makePage'
+
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -34,4 +33,4 @@ export default async function Biodeterioration(props: GlobalStaticPageProps) {
       ]}
     />
   )
-}
+})

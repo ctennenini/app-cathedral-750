@@ -1,6 +1,4 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import { getDictionary } from '@/i18n'
 
 import blackCrustSrc from './black-crust.png'
 import scalingSrc from './scaling.png'
@@ -8,9 +6,10 @@ import sanding from './sanding.png'
 import biodeterioation from './biodeterioation.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function DegradationTypes(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+import { makePage } from '@/components/makePage'
+
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -54,4 +53,4 @@ export default async function DegradationTypes(props: GlobalStaticPageProps) {
       backButtonTarget="/weathering-of-molasse"
     />
   )
-}
+})

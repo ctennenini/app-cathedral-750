@@ -1,8 +1,9 @@
+import { makePage } from '@/components/makePage'
 import OldestStoneGame from './OldestStoneGame'
 
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 
-export default function OldestStonePage() {
+export default makePage(() => {
   return (
     <OldestStoneGame
       bgImg={bgImg}
@@ -10,4 +11,4 @@ export default function OldestStonePage() {
       closeTarget="/molasse-sandstone/stones-of-the-cathedral?page=2"
     />
   )
-}
+})

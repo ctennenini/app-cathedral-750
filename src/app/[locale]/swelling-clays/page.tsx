@@ -1,14 +1,12 @@
-import { GlobalStaticPageProps } from '@/globals'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 
 import img1 from './swelling-clays-01.png'
 import img2 from './swelling-clays-02.png'
+import { makePage } from '@/components/makePage'
 
-export default async function SwellingClays(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -150,4 +148,4 @@ export default async function SwellingClays(props: GlobalStaticPageProps) {
       ]}
     />
   )
-}
+})

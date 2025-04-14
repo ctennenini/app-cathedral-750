@@ -1,23 +1,21 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import { makePage } from '@/components/makePage'
 
-export default async function StonesOfTheCathedral(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.molasseSandstone
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.molasseSandstone.stonesOfTheCathedral.title}
-      subtitle={pages.molasseSandstone.title}
-      text={pages.molasseSandstone.stonesOfTheCathedral.description}
+      title={page.stonesOfTheCathedral.title}
+      subtitle={page.title}
+      text={page.stonesOfTheCathedral.description}
       actions={[
         {
           type: 'quiz',
-          label: pages.molasseSandstone.stonesOfTheCathedral.testYourKnowledge,
+          label: page.stonesOfTheCathedral.testYourKnowledge,
           target: '/games/oldest-stone',
         },
       ]}
@@ -25,4 +23,4 @@ export default async function StonesOfTheCathedral(props: GlobalStaticPageProps)
       nextButtonTarget="/molasse-sandstone/molasse-gris"
     />
   )
-}
+})

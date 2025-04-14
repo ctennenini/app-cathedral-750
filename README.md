@@ -106,27 +106,19 @@ https://humancatfood.github.io/ethz-cathedral-slideshow/
 
 ### Adding a new page
 
-Create a new directory for the page inside the `src/app/[locale]` directory and add a file named `page.tsx` (The easiest way to get started is to copy an existing `page.tsx` file and modify it to your liking).
+Create a new directory inside `src/app/[locale]` and add a file named `page.tsx` (The easiest way to get started is to copy an existing `page.tsx` file and modify it to your liking).
 
-The file's location will determine the `URL`, or address of the page. For example, if you create the page as `src/app/[locale]/new-page/page.tsx`, the page will be accessible at `/en/new-page` and you would link to it from another page for example like so:
+The file's location will determine the `URL`, or address of the page. For example, if you create the page as `src/app/[locale]/new-page/page.tsx`, the page will be accessible at `/en/new-page`. You need this later to link to it from another page or the navigation menu.
 
-```tsx
-return <Layout nextButtonTarget="/new-page" />
-```
-
-ℹ️ The `[locale]` part of the url is a so-called _dynamic segment_ which will be replaced by the actual locale (e.g. `en`, `fr`, etc.). This allows you to create pages that are available in multiple languages without having to duplicate the code for each language. ℹ️
+ℹ️ The `[locale]` part of the url is a placeholer (a so-called _dynamic segment_)which will be replaced by the actual locale (e.g. `en`, `fr`, etc.) when the app is running. This allows you to create pages that are available in multiple languages without having to duplicate the code for each language. ℹ️
 
 Here is an example `page.tsx` file with a breakdown of what the code does:
 
 ![Example Page](docs/example-page.png)
 
-- The `layouts` are reusable components that define the structure and style of the page
+The `layouts` are reusable components that define the structure and style of the page. Demos of the available layouts and their capabilities can be found here:
 
-- Demos of the available layouts and their capabilities can be found here:
-
-  https://humancatfood.github.io/ethz-cathedral-slideshow/components
-
-  This is an instance of a tool called [Storybook](https://storybook.js.org/) where you can see components in isolation and test them without having to run the entire application.
+https://humancatfood.github.io/ethz-cathedral-slideshow/components
 
 ---
 
@@ -175,14 +167,11 @@ export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
 
 ### How to change or add text
 
-The text content of the application can be found in the `*.json` files under `./src/i18n`, with the name reflecting the language (e.g. `en.json` for English).
+The text content of the application can be found in the `*.json` files under `./src/i18n` (e.g. `en.json` for English).
 
-1. Find the dictionary files in the `src/i18n` directory.
-2. Open the file corresponding to the language you want to edit.
-3. Make the necessary changes to the text within the JSON file.
-4. Save the file and restart the application to see the changes.
+ℹ️ [JSON](https://www.json.org/json-en.html) is a popular file format for expressing structured data in key/value pairs. ℹ️
 
-The nesting of the file determines the path at which the text is available in the code. Consider for example this file
+The nesting of the file determines the `path` at which the text is available in the `dictionary` that gets passed into the `makePage` and `getNavMenu` functions. Consider for example this `en.json` file:
 
 ```json
 {
@@ -200,32 +189,30 @@ The nesting of the file determines the path at which the text is available in th
 }
 ```
 
-Passing the title and subtitle to a layout component would look like this:
+The label "Cathedral Web Site" can be accessed in the `page.tsx` file like so:
 
 ```tsx
-import { TitlePageLayout } from '@/layouts/TitlePageLayout'
-
-import { getDictionary } from '@/i18n'
-
-import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
-import { GlobalStaticPageProps } from '@/globals'
-
-export default async function Example(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
-
+export default makePage((dictionary) => {
   return (
     <TitlePageLayout
-      title={pages.start.title}
-      subtitle={pages.start.subtitle}
-      {...}
+      title={dictionary.pages.start.title}
+      subtitle={dictionary.pages.start.subtitle}
+      links={[
+        {
+          label: dictionary.pages.start.actions.immersive,
+          target: '/the-immersive-cathedral',
+        },
+      ]}
     />
   )
-}
-
+})
 ```
 
-‼️ Make sure each language file has the same structure. You should see a warning in the code editor, as well as when making a Pull Request if there are discrepancies. ‼️
+‼️ Make sure that all language files have the same key-structure. If a key is missing or spelled inconsistently, you will see an error in the code:
+
+<img src="docs/language-file-inconsistency.png" alt="Inconsistent language file structure" width="auto" style="width: 50%;">
+
+‼️
 
 ## TODOs:
 

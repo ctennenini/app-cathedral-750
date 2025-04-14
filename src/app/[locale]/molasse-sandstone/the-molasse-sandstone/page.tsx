@@ -1,40 +1,38 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import { makePage } from '@/components/makePage'
 
-export default async function TheMolasseSandstone(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.molasseSandstone
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.molasseSandstone.molasseSandstone.title}
-      subtitle={pages.molasseSandstone.title}
-      text={pages.molasseSandstone.molasseSandstone.description}
+      title={page.molasseSandstone.title}
+      subtitle={page.title}
+      text={page.molasseSandstone.description}
       backButtonTarget="/molasse-sandstone/molasse-gris"
       pullOutContent={{
         type: 'links',
         links: [
           {
             target: '/molasse-sandstone/geological-information',
-            label: pages.molasseSandstone.molasseSandstone.actions.geologicalInformation,
+            label: page.molasseSandstone.actions.geologicalInformation,
           },
           {
             target: '#',
-            label: pages.molasseSandstone.molasseSandstone.actions.properties,
+            label: page.molasseSandstone.actions.properties,
             disabled: true,
           },
           {
             target: '#',
-            label: pages.molasseSandstone.molasseSandstone.actions.typesOfStones,
+            label: page.molasseSandstone.actions.typesOfStones,
             disabled: true,
           },
           {
             target: '#',
-            label: pages.molasseSandstone.molasseSandstone.actions.interactive,
+            label: page.molasseSandstone.actions.interactive,
             disabled: true,
             arrow: true,
             $primary: true,
@@ -43,4 +41,4 @@ export default async function TheMolasseSandstone(props: GlobalStaticPageProps) 
       }}
     />
   )
-}
+})

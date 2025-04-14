@@ -1,29 +1,27 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import imgSrc from './temperature-gradient.png'
+import { makePage } from '@/components/makePage'
 
-export default async function TemperatureGradient(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.weatheringMechanisms
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.weatheringMechanisms.freezeThaw.temperatureGradient.title}
-      subtitle={pages.weatheringMechanisms.freezeThaw.title}
-      text={pages.weatheringMechanisms.freezeThaw.temperatureGradient.description}
+      title={page.freezeThaw.temperatureGradient.title}
+      subtitle={page.freezeThaw.title}
+      text={page.freezeThaw.temperatureGradient.description}
       pullOutContent={{
         type: 'image',
         src: imgSrc,
-        alt: pages.weatheringMechanisms.freezeThaw.temperatureGradient.title,
+        alt: page.freezeThaw.temperatureGradient.title,
         labels: [
           {
-            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            text: page.freezeThaw.misc.qrCodePrompt,
             style: {
               left: '72%',
               top: '75%',
@@ -36,10 +34,10 @@ export default async function TemperatureGradient(props: GlobalStaticPageProps) 
       actions={[
         {
           type: 'back',
-          label: pages.weatheringMechanisms.title,
+          label: page.title,
           target: '/weathering-mechanisms',
         },
       ]}
     />
   )
-}
+})

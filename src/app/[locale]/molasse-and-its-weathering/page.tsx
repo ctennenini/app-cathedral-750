@@ -1,33 +1,31 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import { makePage } from '@/components/makePage'
 
-export default async function MolassesAndItsWeathering(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.molassesAndItsWeathering
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.molassesAndItsWeathering.title}
-      text={pages.molassesAndItsWeathering.description}
+      title={page.title}
+      text={page.description}
       backButtonTarget="/the-immersive-cathedral"
       pullOutContent={{
         type: 'links',
         links: [
           {
             target: '/molasse-sandstone',
-            label: pages.molassesAndItsWeathering.actions.sandstone,
+            label: page.actions.sandstone,
           },
           {
             target: '/weathering-of-molasse',
-            label: pages.molassesAndItsWeathering.actions.weathering,
+            label: page.actions.weathering,
           },
           {
             target: '#',
-            label: pages.molassesAndItsWeathering.actions.interactive,
+            label: page.actions.interactive,
             arrow: true,
             $primary: true,
             disabled: true,
@@ -36,4 +34,4 @@ export default async function MolassesAndItsWeathering(props: GlobalStaticPagePr
       }}
     />
   )
-}
+})

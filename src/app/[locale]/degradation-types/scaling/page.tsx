@@ -1,20 +1,19 @@
-import { GlobalStaticPageProps } from '@/globals'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import scalingExample from './scaling-example.png'
 
-export default async function Scaling(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+import { makePage } from '@/components/makePage'
+
+export default makePage((dictionary) => {
+  const page = dictionary.pages.degradationTypes
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.degradationTypes.scaling.title}
-      subtitle={pages.degradationTypes.title}
-      text={pages.degradationTypes.scaling.description}
+      title={page.scaling.title}
+      subtitle={page.title}
+      text={page.scaling.description}
       nextButtonTarget="/degradation-types/sanding"
       backButtonTarget="/degradation-types/black-crust"
       pullOutContent={[
@@ -25,4 +24,4 @@ export default async function Scaling(props: GlobalStaticPageProps) {
       ]}
     />
   )
-}
+})

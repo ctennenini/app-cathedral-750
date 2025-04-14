@@ -1,29 +1,27 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import imgSrc from './hydraulic-pressure.png'
+import { makePage } from '@/components/makePage'
 
-export default async function HydraulicPressure(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.weatheringMechanisms
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.weatheringMechanisms.freezeThaw.hydraulicPressure.title}
-      subtitle={pages.weatheringMechanisms.freezeThaw.title}
-      text={pages.weatheringMechanisms.freezeThaw.hydraulicPressure.description}
+      title={page.freezeThaw.hydraulicPressure.title}
+      subtitle={page.freezeThaw.title}
+      text={page.freezeThaw.hydraulicPressure.description}
       pullOutContent={{
         type: 'image',
         src: imgSrc,
-        alt: pages.weatheringMechanisms.freezeThaw.hydraulicPressure.title,
+        alt: page.freezeThaw.hydraulicPressure.title,
         labels: [
           {
-            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            text: page.freezeThaw.misc.qrCodePrompt,
             style: {
               left: '72%',
               top: '75%',
@@ -36,4 +34,4 @@ export default async function HydraulicPressure(props: GlobalStaticPageProps) {
       nextButtonTarget="/freeze-thaw-action/crystallization-pressure"
     />
   )
-}
+})

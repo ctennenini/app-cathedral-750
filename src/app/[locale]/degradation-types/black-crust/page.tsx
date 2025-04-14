@@ -1,20 +1,19 @@
-import { GlobalStaticPageProps } from '@/globals'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 import blackCrustExample from './black-crust-example.png'
 
-export default async function BlackCrust(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+import { makePage } from '@/components/makePage'
+
+export default makePage((dictionary) => {
+  const page = dictionary.pages.degradationTypes
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.degradationTypes.blackCrust.title}
-      subtitle={pages.degradationTypes.title}
-      text={pages.degradationTypes.blackCrust.description}
+      title={page.blackCrust.title}
+      subtitle={page.title}
+      text={page.blackCrust.description}
       nextButtonTarget="/degradation-types/scaling"
       backButtonTarget="/degradation-types"
       pullOutContent={[
@@ -25,4 +24,4 @@ export default async function BlackCrust(props: GlobalStaticPageProps) {
       ]}
     />
   )
-}
+})

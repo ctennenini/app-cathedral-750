@@ -1,28 +1,24 @@
+import { makePage } from '@/components/makePage'
 import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
-
-import { GlobalStaticPageProps } from '@/globals'
-import { getDictionary } from '@/i18n'
-
 import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
 
-export default async function TheImmersiveCathedral(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.immersiveCathedral
 
   const links: TitlePageLayoutProps['links'] = [
     {
       target: '/molasse-and-its-weathering',
-      label: pages.immersiveCathedral.actions.molasses,
+      label: page.actions.molasses,
     },
     {
       target: `#`,
       disabled: true,
-      label: pages.immersiveCathedral.actions.conservation,
+      label: page.actions.conservation,
     },
     {
       target: `#`,
       disabled: true,
-      label: pages.immersiveCathedral.actions.vaults,
+      label: page.actions.vaults,
     },
   ]
 
@@ -31,10 +27,10 @@ export default async function TheImmersiveCathedral(props: GlobalStaticPageProps
       withHomeButton
       backButtonTarget="/"
       bgImg={bgImg}
-      title={pages.immersiveCathedral.title}
+      title={page.title}
       links={links}
       textColor="light"
       buttonColor="dark"
     />
   )
-}
+})

@@ -1,29 +1,27 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import imgSrc from './trapped-water.png'
+import { makePage } from '@/components/makePage'
 
-export default async function TrappedWater(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const page = dictionary.pages.weatheringMechanisms
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.weatheringMechanisms.freezeThaw.trappedWater.title}
-      subtitle={pages.weatheringMechanisms.freezeThaw.title}
-      text={pages.weatheringMechanisms.freezeThaw.trappedWater.description}
+      title={page.freezeThaw.trappedWater.title}
+      subtitle={page.freezeThaw.title}
+      text={page.freezeThaw.trappedWater.description}
       pullOutContent={{
         type: 'image',
         src: imgSrc,
-        alt: pages.weatheringMechanisms.freezeThaw.trappedWater.title,
+        alt: page.freezeThaw.trappedWater.title,
         labels: [
           {
-            text: pages.weatheringMechanisms.freezeThaw.misc.qrCodePrompt,
+            text: page.freezeThaw.misc.qrCodePrompt,
             style: {
               left: '72%',
               top: '75%',
@@ -36,4 +34,4 @@ export default async function TrappedWater(props: GlobalStaticPageProps) {
       nextButtonTarget="/freeze-thaw-action/hydraulic-pressure"
     />
   )
-}
+})

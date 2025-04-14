@@ -1,12 +1,9 @@
-import { GlobalStaticPageProps } from '@/globals'
+import { makePage } from '@/components/makePage'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
-
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
-export default async function WeatheringMechanisms(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const { pages } = dictionary
 
   return (
     <TextPageLayout
@@ -45,4 +42,4 @@ export default async function WeatheringMechanisms(props: GlobalStaticPageProps)
       backButtonTarget="/weathering-of-molasse"
     />
   )
-}
+})

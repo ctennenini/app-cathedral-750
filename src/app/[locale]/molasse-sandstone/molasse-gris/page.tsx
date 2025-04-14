@@ -1,11 +1,9 @@
-import { GlobalStaticPageProps } from '@/globals'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-import { getDictionary } from '@/i18n'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import { makePage } from '@/components/makePage'
 
-export default async function GreyMolasse(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -18,4 +16,4 @@ export default async function GreyMolasse(props: GlobalStaticPageProps) {
       nextButtonTarget="/molasse-sandstone/the-molasse-sandstone"
     />
   )
-}
+})

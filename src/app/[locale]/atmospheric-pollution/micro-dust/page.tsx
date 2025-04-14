@@ -1,14 +1,12 @@
-import { GlobalStaticPageProps } from '@/globals'
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.png'
-import { getDictionary } from '@/i18n'
 
 import microDustImg from './micro-dust.png'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import { makePage } from '@/components/makePage'
 
-export default async function MicroDust(props: GlobalStaticPageProps) {
-  const { locale } = await props.params
-  const { pages } = await getDictionary(locale)
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
@@ -32,4 +30,4 @@ export default async function MicroDust(props: GlobalStaticPageProps) {
       }}
     />
   )
-}
+})

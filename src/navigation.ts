@@ -2,7 +2,9 @@ import { Dictionary } from '@/i18n'
 
 import { NavMenuItem } from '@/components/NavMenu'
 
-export function getNavMenu({ pages }: Dictionary): NavMenuItem[] {
+export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
+  const pages = dictionary.pages
+
   return [
     {
       label: pages.molassesAndItsWeathering.title,
