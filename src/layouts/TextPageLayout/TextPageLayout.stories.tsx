@@ -214,47 +214,47 @@ export const ImageWithLegend: Story = {
   },
 }
 
-export const ImageWithLabels: Story = {
-  args: {
-    pullOutContent: {
-      type: 'image',
-      src: exampleImg1,
-      labels: [
-        {
-          text: 'Label 1',
-          style: {
-            left: '0%',
-            top: '5%',
-          },
-        },
-        {
-          text: 'Label 2',
-          style: {
-            left: '35%',
-            top: '90%',
-            color: 'green',
-            fontSize: '40em',
-          },
-        },
-        {
-          text: 'Label 3. This one is very long and will break over multiple lines.',
-          style: {
-            left: '40%',
-            top: '10%',
-            width: '15%',
-          },
-        },
-      ],
-    },
-  },
-  parameters: {
-    description: [
-      'This is a `TextPageLayout` with a pull-out content area containing an image with labels.',
-      'The labels are passed in as an array of objects with `text` and `style` properties.',
-      'The style property is an object with CSS properties that lets you decide the position, color, font size, etc. of the label.',
-    ],
-  },
-}
+// export const ImageWithLabels: Story = {
+//   args: {
+//     pullOutContent: {
+//       type: 'image',
+//       src: exampleImg1,
+//       labels: [
+//         {
+//           text: 'Label 1',
+//           style: {
+//             left: '0%',
+//             top: '5%',
+//           },
+//         },
+//         {
+//           text: 'Label 2',
+//           style: {
+//             left: '35%',
+//             top: '90%',
+//             color: 'green',
+//             fontSize: '40em',
+//           },
+//         },
+//         {
+//           text: 'Label 3. This one is very long and will break over multiple lines.',
+//           style: {
+//             left: '40%',
+//             top: '10%',
+//             width: '15%',
+//           },
+//         },
+//       ],
+//     },
+//   },
+//   parameters: {
+//     description: [
+//       'This is a `TextPageLayout` with a pull-out content area containing an image with labels.',
+//       'The labels are passed in as an array of objects with `text` and `style` properties.',
+//       'The style property is an object with CSS properties that lets you decide the position, color, font size, etc. of the label.',
+//     ],
+//   },
+// }
 
 export const ImageGallery: Story = {
   args: {
