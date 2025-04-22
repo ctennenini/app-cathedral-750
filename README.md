@@ -2,7 +2,7 @@
 
 ## The Project
 
-This project is a slideshow application for ETHZ, showcasing various aspects of cathedral architecture and related topics.
+This project is a slideshow application for ETHZ, showcasing various aspects of cathedral architecture, material and related topics.
 
 The specific technologies used in this project are:
 
