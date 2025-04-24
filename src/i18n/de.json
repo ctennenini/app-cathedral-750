@@ -38,7 +38,23 @@
       }
     },
     "molasseSandstone": {
-      "title": "Molasse-Sandstein",
+      "title": "Der Molasse-Sandstein",
+      "description": [
+        [
+          "Die Schweizer Molasse-Gesteinsformation erstreckt sich nördlich der Alpen von der Region des Genfersees im Westen der Schweiz bis zum Bodensee im Osten.",
+          "Sie umfasst eine Vielzahl von kalkgebundenen Sandsteinen, die quellende Tone enthalten können."
+        ],
+        [
+          "Im Rahmen dieser Formation wurde die „Molasse grise de Lausanne“ direkt vor dem mittelalterlichen Stadtzentrum abgebaut und zur Errichtung der Kathedrale von Lausanne verwendet.",
+          "Im Laufe der Jahrhunderte wurden Sandsteine derselben Typologie aus verschiedenen lokalen Steinbrüchen, die um das mittelalterliche Zentrum herum verteilt waren, herangebracht und für Umbau- und Instandhaltungsarbeiten an der Kathedrale verwendet."
+        ]
+      ],
+      "actions": {
+        "geologicalInformation": "Geologische Informationen",
+        "properties": "Eigenschaften der Molasse",
+        "typesOfStones": "Steintypen",
+        "interactive": "Interaktive Tour"
+      },
       "stonesOfTheCathedral": {
         "title": "Steine der Kathedrale",
         "description": [
@@ -60,25 +76,6 @@
           "Es ist ein Sedimentgestein, das vor allem am Südturm des Querschiffs vorherrscht. Dieser Sandstein stammt höchstwahrscheinlich aus den nahegelegenen Steinbrüchen.",
           "Dieser Stein ist besonders empfindlich auf Wasser aufgrund des Vorhandenseins von quellenden Tonen."
         ]
-      },
-      "molasseSandstone": {
-        "title": "Der Molasse-Sandstein",
-        "description": [
-          [
-            "Die Schweizer Molasse-Gesteinsformation erstreckt sich nördlich der Alpen von der Region des Genfersees im Westen der Schweiz bis zum Bodensee im Osten.",
-            "Sie umfasst eine Vielzahl von kalkgebundenen Sandsteinen, die quellende Tone enthalten können."
-          ],
-          [
-            "Im Rahmen dieser Formation wurde die „Molasse grise de Lausanne“ direkt vor dem mittelalterlichen Stadtzentrum abgebaut und zur Errichtung der Kathedrale von Lausanne verwendet.",
-            "Im Laufe der Jahrhunderte wurden Sandsteine derselben Typologie aus verschiedenen lokalen Steinbrüchen, die um das mittelalterliche Zentrum herum verteilt waren, herangebracht und für Umbau- und Instandhaltungsarbeiten an der Kathedrale verwendet."
-          ]
-        ],
-        "actions": {
-          "geologicalInformation": "Geologische Informationen",
-          "properties": "Eigenschaften der Molasse",
-          "typesOfStones": "Steintypen",
-          "interactive": "Interaktive Tour"
-        }
       },
       "geologicalInformation": {
         "title": "Geologische Informationen",

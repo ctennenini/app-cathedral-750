@@ -38,7 +38,23 @@
       }
     },
     "molasseSandstone": {
-      "title": "Molasse Sandstone",
+      "title": "The Molasse Sandstone",
+      "description": [
+        [
+          "The Swiss Molasse rock formation stretches north of the Alps from the Lake Léman region in the west of Switzerland to the Constance Lake in the east.",
+          "It comprises a variety of calcite- bound sandstones, which can contain swelling clays."
+        ],
+        [
+          "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
+          "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
+        ]
+      ],
+      "actions": {
+        "geologicalInformation": "Geological Information",
+        "properties": "Properties of Molasse",
+        "typesOfStones": "Types of Stones",
+        "interactive": "Interactive Tour"
+      },
       "stonesOfTheCathedral": {
         "title": "Stones of the Cathedral",
         "description": [
@@ -60,25 +76,6 @@
           "It is a type of sedimentary stone which is predominant on the south tower of the Transept. This sandstone most likely came from the nearby quarries.",
           "This stone is particularly sensitive to water due to the presence of swelling clays."
         ]
-      },
-      "molasseSandstone": {
-        "title": "The Molasse Sandstone",
-        "description": [
-          [
-            "The Swiss Molasse rock formation stretches north of the Alps from the Lake Léman region in the west of Switzerland to the Constance Lake in the east.",
-            "It comprises a variety of calcite- bound sandstones, which can contain swelling clays."
-          ],
-          [
-            "As part of this formation, the “Molasse grise de Lausanne” was extracted right outside the medieval city center and employed to erect the Lausanne Cathedral.",
-            "Over the centuries, sandstones of the same typology were brought in from different local quarries distributed around the medieval centre and employed for modification and maintenance works at the Cathedral."
-          ]
-        ],
-        "actions": {
-          "geologicalInformation": "Geological Information",
-          "properties": "Properties of Molasse",
-          "typesOfStones": "Types of Stones",
-          "interactive": "Interactive Tour"
-        }
       },
       "geologicalInformation": {
         "title": "Geological Information",

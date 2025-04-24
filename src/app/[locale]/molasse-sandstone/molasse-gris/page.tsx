@@ -13,7 +13,13 @@ export default makePage((dictionary) => {
       subtitle={pages.molasseSandstone.title}
       text={pages.molasseSandstone.molasseGris.description}
       backButtonTarget="/molasse-sandstone/stones-of-the-cathedral"
-      nextButtonTarget="/molasse-sandstone/the-molasse-sandstone"
+      actions={[
+        {
+          type: 'back',
+          label: pages.molasseSandstone.title,
+          target: '/molasse-sandstone',
+        },
+      ]}
     />
   )
 })

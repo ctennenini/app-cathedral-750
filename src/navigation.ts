@@ -23,10 +23,6 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
               path: '/molasse-sandstone/molasse-gris',
             },
             {
-              label: pages.molasseSandstone.molasseSandstone.title,
-              path: '/molasse-sandstone/the-molasse-sandstone',
-            },
-            {
               label: pages.molasseSandstone.geologicalInformation.title,
               path: '/molasse-sandstone/geological-information',
             },

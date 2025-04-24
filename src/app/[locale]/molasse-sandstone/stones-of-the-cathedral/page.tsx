@@ -19,7 +19,7 @@ export default makePage((dictionary) => {
           target: '/games/oldest-stone',
         },
       ]}
-      backButtonTarget="/molasse-and-its-weathering"
+      backButtonTarget="/molasse-sandstone"
       nextButtonTarget="/molasse-sandstone/molasse-gris"
     />
   )

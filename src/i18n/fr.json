@@ -38,7 +38,23 @@
       }
     },
     "molasseSandstone": {
-      "title": "Pierre de molasse",
+      "title": "Le grès de molasse",
+      "description": [
+        [
+          "La formation rocheuse de molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse au lac de Constance à l'est.",
+          "Elle comprend une variété de grès liés au calcite, qui peuvent contenir des argiles gonflantes."
+        ],
+        [
+          "Dans le cadre de cette formation rocheuse, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la cathédrale de Lausanne.",
+          "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et employés pour des travaux de modification et d'entretien à la cathédrale."
+        ]
+      ],
+      "actions": {
+        "geologicalInformation": "Informations géologiques",
+        "properties": "Propriétés de la molasse",
+        "typesOfStones": "Types de pierres",
+        "interactive": "Visite interactive"
+      },
       "stonesOfTheCathedral": {
         "title": "Pierres de la cathédrale",
         "description": [
@@ -60,25 +76,6 @@
           "C'est un type de pierre sédimentaire qui est prédominant sur la tour sud du transept. Ce grès provient très probablement des carrières voisines.",
           "Cette pierre est particulièrement sensible à l'eau en raison de la présence d'argiles gonflantes."
         ]
-      },
-      "molasseSandstone": {
-        "title": "Le grès de molasse",
-        "description": [
-          [
-            "La formation rocheuse de molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse au lac de Constance à l'est.",
-            "Elle comprend une variété de grès liés au calcite, qui peuvent contenir des argiles gonflantes."
-          ],
-          [
-            "Dans le cadre de cette formation rocheuse, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la cathédrale de Lausanne.",
-            "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et employés pour des travaux de modification et d'entretien à la cathédrale."
-          ]
-        ],
-        "actions": {
-          "geologicalInformation": "Informations géologiques",
-          "properties": "Propriétés de la molasse",
-          "typesOfStones": "Types de pierres",
-          "interactive": "Visite interactive"
-        }
       },
       "geologicalInformation": {
         "title": "Informations géologiques",

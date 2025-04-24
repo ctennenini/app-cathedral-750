@@ -16,7 +16,7 @@ export default makePage((dictionary) => {
       title={page.geologicalInformation.title}
       subtitle={page.title}
       text={page.geologicalInformation.description}
-      backButtonTarget="/molasse-sandstone/the-molasse-sandstone"
+      backButtonTarget="/molasse-sandstone"
       actions={[
         {
           type: 'back',
