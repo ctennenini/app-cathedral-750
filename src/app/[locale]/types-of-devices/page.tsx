@@ -1,37 +1,56 @@
-import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.png'
+
+import blackCrustSrc from './black-crust.png'
+import scalingSrc from './scaling.png'
+import sanding from './sanding.png'
+import biodeterioation from './biodeterioation.png'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
-  const page = dictionary.pages.molassesAndItsWeathering
+  const pages = dictionary.pages
 
   return (
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={page.title}
-      text={page.description}
-      backButtonTarget="/the-immersive-cathedral"
+      title={pages.degradationTypes.title}
+      subtitle={pages.weatheringOfMolasse.title}
+      text={pages.degradationTypes.description}
+      actions={[
+        {
+          type: 'quiz',
+          label: pages.degradationTypes.testYourKnowledge,
+          target: '/games/degradation-types',
+        },
+      ]}
       pullOutContent={{
-        type: 'links',
-        links: [
+        type: 'gallery',
+        items: [
           {
-            target: '/molasse-sandstone',
-            label: page.actions.sandstone,
+            src: blackCrustSrc,
+            label: pages.degradationTypes.blackCrust.title,
+            href: '/degradation-types/black-crust',
           },
           {
-            target: '/weathering-of-molasse',
-            label: page.actions.weathering,
+            src: scalingSrc,
+            label: pages.degradationTypes.scaling.title,
+            href: '/degradation-types/scaling',
           },
           {
-            target: '#',
-            label: page.actions.interactive,
-            arrow: true,
-            $primary: true,
-            disabled: true,
+            src: sanding,
+            label: pages.degradationTypes.sanding.title,
+            href: '/degradation-types/sanding',
+          },
+          {
+            src: biodeterioation,
+            label: pages.degradationTypes.biodeterioration.title,
+            href: '/degradation-types/biodeterioration',
           },
         ],
       }}
+      backButtonTarget="/weathering-of-molasse"
     />
   )
 })
