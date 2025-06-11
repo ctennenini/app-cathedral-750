@@ -180,6 +180,63 @@
         ]
       }
     },
+    "typesOfFeatures": {
+      "title": "Types of Rainwater Features",
+      "description": [
+        [
+          "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
+          "Click on the device to learn more about it"
+        ],
+        [
+          "blah blah blah",
+          "blablahh"
+        ]
+      ],
+      "testYourKnowledge": "Test your knowledge!",
+      "cornices": {
+        "title": "Cornices",
+        "description": [
+          "These are single-sloped elements, either horizontal or sloped, located at the eaves."
+        ]
+      },
+      "copings": {
+        "title": "Copings",
+        "description": [
+          "These are double-sloped elements, horizontal or sloped, found at the apex of flying buttresses, abutments, arches, or gables."
+        ]
+      },
+      "chamferedDripEdges": {
+        "title": "Chamfered Drip Edges",
+        "description": [
+          "These are string courses (indicating the internal floors) found on elevations or in archivolts of bays."
+        ]
+      },
+      "slopedRetreats": {
+        "title": "Sloped Retreats",
+        "description": [
+          "These are located at each setback of a buttress, abutment, or massif. These elements consistently show a high degree of dysfunction due to exposure and erosion."
+        ]
+      },
+      "rotatingDripEdges": {
+        "title": "Rotating Drip Edges",
+        "description": [
+          "TThese are located on polylobed (trefoil or quatrefoil) openings, and the rose window."
+        ]
+      },
+      "slopedSupports": {
+        "title": "Sloped Supports",
+        "description": [
+          "These are found at the sill levels of the arched windows in the bays."
+        ]
+      },
+      "dripGlazes": {
+        "title": "Drip Glazes",
+        "description": [
+          "These are found on certain lean-to parts of the cathedral."
+        ]
+      }
+    },
+
     "weatheringMechanisms": {
       "title": [
         "Verwitterungs&shy;mechanismen"
