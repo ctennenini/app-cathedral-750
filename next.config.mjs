@@ -16,6 +16,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  trailingSlash: true,
+
   basePath: process.env.PREFIX ?? undefined,
   assetPrefix: process.env.PREFIX ?? undefined,
 }
