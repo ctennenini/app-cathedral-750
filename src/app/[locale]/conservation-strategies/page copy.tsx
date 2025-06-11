@@ -25,7 +25,7 @@ export default makePage((dictionary) => {
           },
           {
             target: '/stone-conservation',
-            label: page.actions.Stone,
+            label: page.actions.stone,
             arrow: true,
             $primary: true,
             disabled: true,
