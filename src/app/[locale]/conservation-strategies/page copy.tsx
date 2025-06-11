@@ -3,7 +3,7 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
-  const page = <dictionary className="pages ConservationStrategie"></dictionary>
+  const page = dictionary.pages.conservationStrategies
 
   return (
     <TextPageLayout
@@ -16,16 +16,16 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '/molasse-sandstone',
-            label: page.actions.sandstone,
+            target: '/past-restoration',
+            label: page.actions.past,
           },
           {
-            target: '/weathering-of-molasse',
-            label: page.actions.weathering,
+            target: '/water-managment',
+            label: page.actions.water,
           },
           {
-            target: '#',
-            label: page.actions.interactive,
+            target: '/stone-conservation',
+            label: page.actions.Stone,
             arrow: true,
             $primary: true,
             disabled: true,
