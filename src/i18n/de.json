@@ -12,6 +12,18 @@
         "immersive": "Die Immersive Kathedrale"
       }
     },
+    "immersiveCathedral": {
+      "title": [
+        "Die Immersive",
+        "Kathedrale"
+      ],
+      "subtitle": "Hauptmenü",
+      "actions": {
+        "molasses": "Molasse und seine Verwitterung",
+        "conservation": "Erhaltungsstrategien",
+        "vaults": "Die Gewölbe der Kathedrale"
+      }
+    },
     "conservationStrategies": {
       "title": [
         "Conservation Strategies"
@@ -26,18 +38,21 @@
         "stone": "Stone conservation:interventions nowadays"
       }
    },
-    "immersiveCathedral": {
+   "waterManagement": {
       "title": [
-        "Die Immersive",
-        "Kathedrale"
+        "Rainwater Management Features"
       ],
-      "subtitle": "Hauptmenü",
+      "description": [
+        "The management of rainwater at the Lausanne Cathedral has been a critical aspect of its conservation throughout the centuries, primarily due to the use of molasse stone, which is particularly susceptible to decomposition when exposed to rain.",
+        "This necessity was emphasised by Viollet-le-Duc in his 1872 restoration plan, where he stressed the importance of preserving the materials in an absolute manner and directing the water to the ground, using numerous conduits arranged with the greatest attention."
+      ],
       "actions": {
-        "molasses": "Molasse und seine Verwitterung",
-        "conservation": "Erhaltungsstrategien",
-        "vaults": "Die Gewölbe der Kathedrale"
+        "evolution": "Evolution of Rainwater Features",
+        "types": "Types of Rainwater Features",
+        "contemporary": "Challenges and Contemporary Solutions"
       }
     },
+    
     "molassesAndItsWeathering": {
       "title": "Molasse und seine Verwitterung",
       "description": [
