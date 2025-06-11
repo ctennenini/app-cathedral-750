@@ -12,6 +12,20 @@
         "immersive": "The Immersive Cathedral"
       }
     },
+    "ConservationStrategies": {
+      "title": [
+        "Conservation Strategies",
+      ],
+      "description": [
+        "blablabla.",
+        "BlabLabla."
+      ],
+      "actions": {
+        "past": "Past restoration works",
+        "water": "Water managment systems",
+        "Stone": "Stone conservation:interventions nowadays"
+      }
+    },
     "immersiveCathedral": {
       "title": [
         "The Immersive",

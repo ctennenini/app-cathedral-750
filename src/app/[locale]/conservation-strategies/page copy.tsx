@@ -3,7 +3,7 @@ import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
-  const page = dictionary.pages.molassesAndItsWeathering
+  const page = <dictionary className="pages ConservationStrategie"></dictionary>
 
   return (
     <TextPageLayout
