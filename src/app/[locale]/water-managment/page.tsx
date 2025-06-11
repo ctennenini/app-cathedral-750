@@ -17,29 +17,19 @@ export default makePage((dictionary) => {
         links: [
           {
             target: '/freeze-thaw-action',
-            label: pages.weatheringMechanisms.actions.freezeThaw,
+            label: pages.waterManagement.actions.evolution,
           },
           {
-            target: '/swelling-clays',
-            label: pages.weatheringMechanisms.actions.swellingClays,
+            target: '/types-of-devices',
+            label: pages.waterManagement.actions.types,
           },
           {
-            target: '#',
-            label: pages.weatheringMechanisms.actions.saltCrystallization,
-            disabled: true,
-          },
-          {
-            target: '/atmospheric-pollution',
-            label: pages.weatheringMechanisms.actions.atmosphericPollution,
-          },
-          {
-            target: '#',
-            label: pages.weatheringMechanisms.actions.biologicalAttack,
-            disabled: true,
+            target: '/types-of-devices',
+            label: pages.waterManagement.actions.contemporary,
           },
         ],
       }}
-      backButtonTarget="/weathering-of-molasse"
+      backButtonTarget="/conservation-strategies"
     />
   )
 })
