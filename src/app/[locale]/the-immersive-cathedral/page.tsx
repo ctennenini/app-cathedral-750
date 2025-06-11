@@ -11,7 +11,7 @@ export default makePage((dictionary) => {
       label: page.actions.molasses,
     },
     {
-      target: `#`,
+      target: `/conservation-strategies`,
       disabled: true,
       label: page.actions.conservation,
     },
