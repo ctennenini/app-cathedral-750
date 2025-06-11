@@ -24,6 +24,20 @@
         "vaults": "Die Gewölbe der Kathedrale"
       }
     },
+        "stoneConservation": {
+      "title": "Stones Conservation",
+      "description": [
+        [
+          "Conservation efforts often go unnoticed as they focus on preserving historical authenticity without altering a monument's appearance. ",
+          "This discretion means the public, interested in maintaining built heritage, is often unaware of the work and challenges involved. ",
+          "The type of intervention depends on the gravity and the kind of degradation that the stone experienced."
+        ]
+      ],
+      "labels": {
+        "wetting": "Wetting",
+        "drying": "Drying"
+      }
+    },
     "conservationStrategies": {
       "title": [
         "Conservation Strategies"
