@@ -1,5 +1,7 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
+import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 
+import cons5 from './cons5.png'
 
 import { makePage } from '@/components/makePage'
 
@@ -10,24 +12,24 @@ export default makePage((dictionary) => {
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.degradationTypes.biodeterioration.title}
+      title={pages.consolidation.title}
       titleProps={{
         style: { fontSize: '56em' },
       }}
-      subtitle={pages.degradationTypes.title}
-      text={pages.degradationTypes.biodeterioration.description}
-      backButtonTarget="/degradation-types/sanding"
+      subtitle={pages.conservationStrategies.title}
+      text={pages.consolidation.description}
+      backButtonTarget="/conservation-strategies"
       actions={[
         {
           type: 'back',
-          label: pages.weatheringOfMolasse.title,
-          target: '/molasse-and-its-weathering',
+          label: pages.conservationStrategies.title,
+          target: '/conservation-strategies',
         },
       ]}
       pullOutContent={[
         {
           type: 'image',
-          src: biodeteriorationExample,
+          src: cons5,
         },
       ]}
     />
