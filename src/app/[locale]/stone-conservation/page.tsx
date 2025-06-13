@@ -1,0 +1,62 @@
+import { TextPageLayout } from '@/layouts/TextPageLayout'
+import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+
+import img1 from './risk.gif'
+import consolidation from './cons.jpg'
+import pin from './pin.png'
+import mortarfill from './mortarfill.png'
+import substitution from './substitution.jpg'
+import { makePage } from '@/components/makePage'
+
+export default makePage((dictionary) => {
+  const pages = dictionary.pages
+
+  return (
+    <TextPageLayout
+      withHomeButton
+      bgImg={bgImg}
+      title={pages.stoneConservation.title}
+      subtitle={pages.conservationStrategies.title}
+      text={pages.stoneConservation.description}
+      backButtonTarget="/conservation-strategies"
+      actions={[
+        {
+          type: 'back',
+          label: pages.conservationStrategies.title,
+          target: '/conservation-strategies',
+        },
+      ]}
+      pullOutContent={[
+        {
+          type: 'image',
+          src: img1,
+        },
+        {
+        type: 'gallery',
+        items: [
+          {
+            src: consolidation,
+            label: pages.consolidation.title,
+            href: '/stone-conservation/consolidation',
+          },
+          {
+            src: pin,
+            label: pages.scalingFixing.title,
+            href: '/stone-conservation/consolidation',
+          },
+          {
+            src: mortarfill,
+            label: pages.mortar.title,
+            href: '/stone-conservation/consolidation',
+          },
+          {
+            src: substitution,
+            label: pages.substitution.title,
+            href: '/stone-conservation/consolidation',
+          },          
+         ]
+         },    
+      ]}
+    />
+  )
+})

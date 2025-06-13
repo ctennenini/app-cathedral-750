@@ -31,13 +31,40 @@
           "Conservation efforts often go unnoticed as they focus on preserving historical authenticity without altering a monument's appearance. ",
           "This discretion means the public, interested in maintaining built heritage, is often unaware of the work and challenges involved. ",
           "The type of intervention depends on the gravity and the kind of degradation that the stone experienced."
+        ],
+        [
+          "The experts analyse the stone conditions and pick the right procedures"
         ]
-      ],
-      "labels": {
-        "wetting": "Wetting",
-        "drying": "Drying"
-      }
+      ]
     },
+    "consolidation": {
+      "title": "Consolidation",
+        "description": [
+          "When the only  surface is scaling, the degradation is not considered severe and usually minimum intervention are needed",
+          "Application of consolidant products to increase the strength of the stone and mortar patches to close the gaps are used"
+        ]
+      },
+    "scalingFixing": {
+      "title": "Scaling fixing",
+        "description": [
+          "When the surface appears healthy but there is scaling a few cm in depth, fixing intervention is needed to prevent the scale from detaching completely.",
+          "A special system of combination of pins and consolidants is used and interventions are invidibles at the end"
+        ]
+      },
+    "mortar": {
+      "title": "Mortar replacement",
+        "description": [
+          "When the first centimetres of the surface is degraded and not preservable, the damaged part is replaced with special mortars.",
+          "To improve adherence and resistance, a special grid is constructed to “reinforce” the mortar."
+        ]
+      },
+    "substitution": {
+      "title": "Stone replacement",
+        "description": [
+          "When the stone is highly damaged and/or has a great artistic and historic value, it is substituted entirely.",
+          "If historical relevants the substituted pieces is preserved in the lapidarium. "
+        ]
+      },                    
     "conservationStrategies": {
       "title": [
         "Conservation Strategies"
@@ -49,7 +76,7 @@
       "actions": {
         "past": "Past restoration works",
         "water": "Water managment systems",
-        "stone": "Stone conservation:interventions nowadays"
+        "stone": "Stone conservation procedures"
       }
     },
     "waterManagement": {
