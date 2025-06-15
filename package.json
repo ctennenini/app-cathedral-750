@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "yarn update-precache",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "knip": "knip",
     "qa": "yarn typecheck && yarn lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "update-precache": "node generate-precache.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",

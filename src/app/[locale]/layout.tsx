@@ -3,6 +3,7 @@ import { getDictionary } from '@/i18n'
 import { GlobalStaticLayoutProps } from '@/globals'
 import { PageWrapper } from '@/components/PageWrapper'
 import { NavMenu } from '@/components/NavMenu'
+import ServiceWorkerRegistrar from '@/components/ServiceWorkerRegistrar'
 
 export { generateStaticParams } from '@/globals'
 
@@ -11,11 +12,14 @@ export default async function Layout({ params, children }: GlobalStaticLayoutPro
   const dictionary = await getDictionary(locale)
 
   return (
-    <PageWrapper lang={locale}>
-      <AppContextProvider locale={locale} dictionary={dictionary}>
-        {children}
-        <NavMenu />
-      </AppContextProvider>
-    </PageWrapper>
+    <>
+      <ServiceWorkerRegistrar />
+      <PageWrapper lang={locale}>
+        <AppContextProvider locale={locale} dictionary={dictionary}>
+          {children}
+          <NavMenu />
+        </AppContextProvider>
+      </PageWrapper>
+    </>
   )
 }
