@@ -20,11 +20,13 @@ export type HREF = ComponentProps<typeof NextLink>['href']
 export function useHref(href: HREF) {
   const locale = useLocale()
   const pathname = usePathname()
+  console.log('useHref', href, locale, pathname)
 
-  if (href.toString() === '#') return href
-  if (href.toString().startsWith('http')) return href
-  if (href.toString().startsWith('/')) return `/${locale}${href}`
-
+  href = href.toString()
+  if (href === '#') return href
+  if (href === '') return `/${locale}`
+  if (href.startsWith('http')) return href
+  if (href.startsWith('/')) return `/${locale}${href}`
   return pathname + '/' + href
 }
 
