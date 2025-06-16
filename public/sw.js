@@ -5,7 +5,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox
 // Import the precache manifest
 importScripts('/precache-manifest.js')
 
-const OFFLINE_FALLBACK_PAGE = '/404'
+const OFFLINE_FALLBACK_PAGE = '/offline.html'
 const PAGE_CACHE_NAME = 'pages-cache-v1'
 const ASSET_CACHE_NAME = 'assets-cache-v1'
 const IMAGE_CACHE_NAME = 'images-cache-v1'
@@ -17,18 +17,18 @@ if (workbox) {
   workbox.core.clientsClaim()
   self.skipWaiting()
 
-  console.log('[SW] Raw precacheManifest from self:', self.precacheManifest)
-
-  if (self.precacheManifest && self.precacheManifest.length > 0) {
-    workbox.precaching.precacheAndRoute(self.precacheManifest)
-    console.log('[SW] Precaching routes from manifest:', self.precacheManifest)
-  } else {
-    console.warn('[SW] Precache manifest is empty or not loaded. Defaulting to offline page & webmanifest only.')
-    workbox.precaching.precacheAndRoute([
-      { url: OFFLINE_FALLBACK_PAGE, revision: null },
-      { url: '/manifest.webmanifest', revision: null },
-    ])
+  const precacheManifest = self.precacheManifest || []
+  if (!precacheManifest.length) {
+    console.error('[SW] Precache manifest is empty or not loaded. Defaulting to offline page & webmanifest only.')
   }
+  const toPrecache = [
+    ...precacheManifest,
+    { url: OFFLINE_FALLBACK_PAGE, revision: null },
+    { url: '/manifest.webmanifest', revision: null },
+  ]
+
+  console.log('[SW] Precaching routes from manifest:', toPrecache)
+  workbox.precaching.precacheAndRoute(toPrecache)
 
   // Custom handler for page navigation
   const handlePageRequest = async ({ request, event }) => {
