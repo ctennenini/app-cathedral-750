@@ -24,6 +24,11 @@ export default makePage((dictionary) => {
           label: pages.degradationTypes.testYourKnowledge,
           target: '/games/degradation-types',
         },
+        {
+          type: 'quiz',
+          label: pages.videoTest.subtitle,
+          target: '/video-test',
+        },        
       ]}
       pullOutContent={{
         type: 'gallery',

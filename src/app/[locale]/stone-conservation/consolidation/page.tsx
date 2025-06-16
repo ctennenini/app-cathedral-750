@@ -18,14 +18,8 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.conservationStrategies.title}
       text={pages.consolidation.description}
-      backButtonTarget="/conservation-strategies"
-      actions={[
-        {
-          type: 'back',
-          label: pages.conservationStrategies.title,
-          target: '/conservation-strategies',
-        },
-      ]}
+      backButtonTarget="/stone-conservation?page=2"
+      
       pullOutContent={[
         {
           type: 'image',

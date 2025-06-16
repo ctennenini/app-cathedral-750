@@ -42,17 +42,17 @@ export default makePage((dictionary) => {
           {
             src: pin,
             label: pages.scalingFixing.title,
-            href: '/stone-conservation/consolidation',
+            href: '/stone-conservation/scaling-fixing',
           },
           {
             src: mortarfill,
             label: pages.mortar.title,
-            href: '/stone-conservation/consolidation',
+            href: '/stone-conservation/mortar-fixing',
           },
           {
             src: substitution,
             label: pages.substitution.title,
-            href: '/stone-conservation/consolidation',
+            href: '/stone-conservation/substitution',
           },          
          ]
          },    

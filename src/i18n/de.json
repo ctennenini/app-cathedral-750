@@ -24,6 +24,21 @@
         "vaults": "Die Gewölbe der Kathedrale"
       }
     },
+    "videoTest": {
+      "title": "The degradation of the Facades",
+        "description": [
+          "In this video <b>Mr.Girardet</b> - conservator of Lausanne Cathedral - will describe and show us the degradations they have monitor, undestand and take care of"
+        ]
+      },    
+    "interactiveMenu": {
+      "title": "Interactive Tour",
+        "description": [
+          
+          "Now it is your time to go out and explore the immersive experience and interact with the cathedral",
+          
+          "Scan the QR code and get te 3D map of the spots you need to reach"
+        ]
+      },     
         "stoneConservation": {
       "title": "Stones Conservation",
       "description": [

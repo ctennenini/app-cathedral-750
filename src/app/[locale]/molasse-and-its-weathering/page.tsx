@@ -24,11 +24,10 @@ export default makePage((dictionary) => {
             label: page.actions.weathering,
           },
           {
-            target: '#',
+            target: '/interactive-menu',
             label: page.actions.interactive,
             arrow: true,
             $primary: true,
-            disabled: true,
           },
         ],
       }}

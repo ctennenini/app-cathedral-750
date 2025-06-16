@@ -104,5 +104,37 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
         },
       ],
     },
+    {
+      label: pages.conservationStrategies.title,
+      path: '/conservation-strategies',
+      subItems: [
+        {
+          label: pages.stoneConservation.title,
+          path: '/stone-conservation',
+          subItems: [
+            {
+              label: pages.consolidation.title,
+              path: '/consolidation',
+            },
+            {
+              label: pages.scalingFixing.title,
+              path: '/scaling-fixing',
+            },
+            {
+              label: pages.mortar.title,
+              path: '/mortar',
+            },
+            {
+              label: pages.substitution.title,
+              path: '/substitution',
+            },
+          ],                             
+        },
+        {
+          label: pages.waterManagement.title,
+          path: '/water-managment',
+        },
+      ],
+    },
   ]
 }
