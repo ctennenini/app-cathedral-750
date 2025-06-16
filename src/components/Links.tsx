@@ -36,7 +36,8 @@ export type BigLinkProps = Omit<LinkProps, 'href'> & {
 
 export const BigLink = styled(({ label, arrow, disabled, target, ...otherProps }: BigLinkProps) => (
   <Link onClick={disabled ? (e) => e.preventDefault() : undefined} disabled={disabled} href={target} {...otherProps}>
-    <span dangerouslySetInnerHTML={{ __html: label }} />
+    {/* TODO: deduplicate this  */}
+    <span dangerouslySetInnerHTML={{ __html: Array.isArray(label) ? label.join(' ') : label }} />
     {arrow && <InternalLinkIcon style={{ marginLeft: '16em' }} />}
   </Link>
 ))<BigLinkProps>(({ $primary }) => ({
