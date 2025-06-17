@@ -83,7 +83,7 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: 'maskable',
       },
     ],
-    orientation: 'portrait',
+    orientation: 'landscape',
     lang: 'en',
     dir: 'ltr',
   }
