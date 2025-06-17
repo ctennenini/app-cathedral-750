@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    id: 'com.ethz.cathedralslideshow',
+    id: process.env.PREFIX + '/v1',
     name: META_DATA.name,
     short_name: META_DATA.name_short,
     description: META_DATA.description,
