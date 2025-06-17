@@ -11,6 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: META_DATA.description,
     categories: META_DATA.categories,
     start_url: process.env.PREFIX ?? '/',
+    scope: process.env.PREFIX ?? '/',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
