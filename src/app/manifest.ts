@@ -12,6 +12,7 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: META_DATA.categories,
     start_url: process.env.PREFIX ?? '/',
     scope: process.env.PREFIX ?? '/',
+    display_override: ['fullscreen', 'standalone', 'minimal-ui'],
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
