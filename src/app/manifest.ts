@@ -10,7 +10,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: META_DATA.name_short,
     description: META_DATA.description,
     categories: META_DATA.categories,
-    start_url: '/',
+    start_url: process.env.PREFIX ?? '/',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
