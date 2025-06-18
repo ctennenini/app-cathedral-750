@@ -25,7 +25,7 @@ export default makePage((dictionary) => {
         {
           type: 'quiz',
           label: pages.typesOfFeatures.testYourKnowledge,
-          target: '/games/degradation-types',
+          target: '/conservation-strategies',
         },
       ]}
       pullOutContent={{
@@ -68,7 +68,7 @@ export default makePage((dictionary) => {
           },
         ],
       }}
-      backButtonTarget="/weathering-of-molasse"
+      backButtonTarget="/conservation-strategies"
     />
   )
 })
