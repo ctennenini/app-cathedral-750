@@ -356,127 +356,127 @@
         "wet": "Wet",
         "swelling": "Swelling 1.0 mm/m"
       }
-    }
-  },
-  "games": {
-    "oldestStone": {
-      "start": {
-        "title": "Can you identify the oldest stone in the facade?",
-        "body": "Tap on one of the highlighted stones"
+    },
+    "typesOfFeatures": {
+      "title": "Types of Rainwater Features",
+      "description": [
+        "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
+        "Click on the device to learn more about it"
+      ],
+      "testYourKnowledge": "Test your knowledge!",
+      "cornices": {
+        "title": "Cornices",
+        "description": [
+          "These are single-sloped elements, either horizontal or sloped, located at the eaves."
+        ]
       },
-      "incorrect": {
-        "title": "Try again!",
-        "body": "Tap on one of the highlighted stones"
+      "copings": {
+        "title": "Copings",
+        "description": [
+          "These are double-sloped elements, horizontal or sloped, found at the apex of flying buttresses, abutments, arches, or gables."
+        ]
       },
-      "finish": {
-        "title": "Correct!",
-        "body": [
-          "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
-          "Let's learn more about it..."
+      "chamferedDripEdges": {
+        "title": "Chamfered Drip Edges",
+        "description": [
+          "These are string courses (indicating the internal floors) found on elevations or in archivolts of bays."
+        ]
+      },
+      "slopedRetreats": {
+        "title": "Sloped Retreats",
+        "description": [
+          "These are located at each setback of a buttress, abutment, or massif. These elements consistently show a high degree of dysfunction due to exposure and erosion."
+        ]
+      },
+      "rotatingDripEdges": {
+        "title": "Rotating Drip Edges",
+        "description": [
+          "These are located on polylobed (trefoil or quatrefoil) openings, and the rose window."
+        ]
+      },
+      "slopedSupports": {
+        "title": "Sloped Supports",
+        "description": [
+          "These are found at the sill levels of the arched windows in the bays."
+        ]
+      },
+      "dripGlazes": {
+        "title": "Drip Glazes",
+        "description": [
+          "These are found on certain lean-to parts of the cathedral."
         ]
       }
     },
-    "degradationTypes": {
-      "start": {
-        "title": "Test your knowledge!",
-        "body": [
-          "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
-          "In the red circle we can find a good example, click on it to discover more!"
-        ]
+    "games": {
+      "oldestStone": {
+        "start": {
+          "title": "Can you identify the oldest stone in the facade?",
+          "body": "Tap on one of the highlighted stones"
+        },
+        "incorrect": {
+          "title": "Try again!",
+          "body": "Tap on one of the highlighted stones"
+        },
+        "finish": {
+          "title": "Correct!",
+          "body": [
+            "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
+            "Let's learn more about it..."
+          ]
+        }
       },
-      "main": {
-        "title": "How many types of degradation can you find in the area?",
-        "hint": "Tap on the correct answer"
-      },
-      "finish": {
-        "title": "Correct!",
-        "body": [
-          "Let's discover them together..."
-        ]
-      },
-      "incorrect": {
-        "title": "Try again!"
+      "degradationTypes": {
+        "start": {
+          "title": "Test your knowledge!",
+          "body": [
+            "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
+            "In the red circle we can find a good example, click on it to discover more!"
+          ]
+        },
+        "main": {
+          "title": "How many types of degradation can you find in the area?",
+          "hint": "Tap on the correct answer"
+        },
+        "finish": {
+          "title": "Correct!",
+          "body": [
+            "Let's discover them together..."
+          ]
+        },
+        "incorrect": {
+          "title": "Try again!"
+        }
       }
+    },
+    "quarries": {
+      "start": {
+        "title": "The red dots show you the quarries.",
+        "body": "Tap on one to know more"
+      },
+      "quarry1": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
+          "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
+        ]
+      },
+      "quarry2": {
+        "title": "Molasse of Ursy",
+        "body": [
+          "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
+          "This facies is found only in the basal part of the south-east buttress of the east façade."
+        ]
+      },
+      "quarry3": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
+        ]
+      }
+    },
+    "ui": {
+      "navMenuButton": "Navigation Menu",
+      "closeNavMenu": "Close navigation menu"
     }
-  },
-  "typesOfFeatures": {
-    "title": "Types of Rainwater Features",
-    "description": [
-      "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
-      "Click on the device to learn more about it"
-    ],
-    "testYourKnowledge": "Test your knowledge!",
-    "cornices": {
-      "title": "Cornices",
-      "description": [
-        "These are single-sloped elements, either horizontal or sloped, located at the eaves."
-      ]
-    },
-    "copings": {
-      "title": "Copings",
-      "description": [
-        "These are double-sloped elements, horizontal or sloped, found at the apex of flying buttresses, abutments, arches, or gables."
-      ]
-    },
-    "chamferedDripEdges": {
-      "title": "Chamfered Drip Edges",
-      "description": [
-        "These are string courses (indicating the internal floors) found on elevations or in archivolts of bays."
-      ]
-    },
-    "slopedRetreats": {
-      "title": "Sloped Retreats",
-      "description": [
-        "These are located at each setback of a buttress, abutment, or massif. These elements consistently show a high degree of dysfunction due to exposure and erosion."
-      ]
-    },
-    "rotatingDripEdges": {
-      "title": "Rotating Drip Edges",
-      "description": [
-        "These are located on polylobed (trefoil or quatrefoil) openings, and the rose window."
-      ]
-    },
-    "slopedSupports": {
-      "title": "Sloped Supports",
-      "description": [
-        "These are found at the sill levels of the arched windows in the bays."
-      ]
-    },
-    "dripGlazes": {
-      "title": "Drip Glazes",
-      "description": [
-        "These are found on certain lean-to parts of the cathedral."
-      ]
-    }
-  },
-  "quarries": {
-    "start": {
-      "title": "The red dots show you the quarries.",
-      "body": "Tap on one to know more"
-    },
-    "quarry1": {
-      "title": "Molasse Grise de Lausanne",
-      "body": [
-        "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
-        "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
-      ]
-    },
-    "quarry2": {
-      "title": "Molasse of Ursy",
-      "body": [
-        "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
-        "This facies is found only in the basal part of the south-east buttress of the east façade."
-      ]
-    },
-    "quarry3": {
-      "title": "Molasse Grise de Lausanne",
-      "body": [
-        "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
-      ]
-    }
-  },
-  "ui": {
-    "navMenuButton": "Navigation Menu",
-    "closeNavMenu": "Close navigation menu"
   }
 }
