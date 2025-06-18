@@ -23,7 +23,6 @@ export default makePage((dictionary) => {
           {
             target: '#',
             label: page.actions.properties,
-            disabled: true,
           },
           {
             target: '/molasse-sandstone/stones-of-the-cathedral',
