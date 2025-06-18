@@ -108,7 +108,6 @@
         "contemporary": "Challenges and Contemporary Solutions"
       }
     },
-    
     "molassesAndItsWeathering": {
       "title": "Molasse et sa météorisation",
       "description": [
@@ -239,14 +238,8 @@
     "typesOfFeatures": {
       "title": "Types of Rainwater Features",
       "description": [
-        [
-          "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
-          "Click on the device to learn more about it"
-        ],
-        [
-          "blah blah blah",
-          "blablahh"
-        ]
+        "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
+        "Click on the device to learn more about it"
       ],
       "testYourKnowledge": "Test your knowledge!",
       "cornices": {
@@ -292,7 +285,6 @@
         ]
       }
     },
-
     "weatheringMechanisms": {
       "title": [
         "Météorisation",
