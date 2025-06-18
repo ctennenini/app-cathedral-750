@@ -406,73 +406,73 @@
           "These are found on certain lean-to parts of the cathedral."
         ]
       }
-    },
-    "games": {
-      "oldestStone": {
-        "start": {
-          "title": "Can you identify the oldest stone in the facade?",
-          "body": "Tap on one of the highlighted stones"
-        },
-        "incorrect": {
-          "title": "Try again!",
-          "body": "Tap on one of the highlighted stones"
-        },
-        "finish": {
-          "title": "Correct!",
-          "body": [
-            "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
-            "Let's learn more about it..."
-          ]
-        }
-      },
-      "degradationTypes": {
-        "start": {
-          "title": "Test your knowledge!",
-          "body": [
-            "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
-            "In the red circle we can find a good example, click on it to discover more!"
-          ]
-        },
-        "main": {
-          "title": "How many types of degradation can you find in the area?",
-          "hint": "Tap on the correct answer"
-        },
-        "finish": {
-          "title": "Correct!",
-          "body": [
-            "Let's discover them together..."
-          ]
-        },
-        "incorrect": {
-          "title": "Try again!"
-        }
-      }
-    },
-    "quarries": {
+    }
+  },
+  "games": {
+    "oldestStone": {
       "start": {
-        "title": "The red dots show you the quarries.",
-        "body": "Tap on one to know more"
+        "title": "Can you identify the oldest stone in the facade?",
+        "body": "Tap on one of the highlighted stones"
       },
-      "quarry1": {
-        "title": "Molasse Grise de Lausanne",
-        "body": [
-          "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
-          "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
-        ]
+      "incorrect": {
+        "title": "Try again!",
+        "body": "Tap on one of the highlighted stones"
       },
-      "quarry2": {
-        "title": "Molasse of Ursy",
+      "finish": {
+        "title": "Correct!",
         "body": [
-          "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
-          "This facies is found only in the basal part of the south-east buttress of the east façade."
-        ]
-      },
-      "quarry3": {
-        "title": "Molasse Grise de Lausanne",
-        "body": [
-          "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
+          "The oldest stone type of the cathedral is Molasse Grise de Lausanne which was placed in the 12th Century CE.",
+          "Let's learn more about it..."
         ]
       }
+    },
+    "degradationTypes": {
+      "start": {
+        "title": "Test your knowledge!",
+        "body": [
+          "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
+          "In the red circle we can find a good example, click on it to discover more!"
+        ]
+      },
+      "main": {
+        "title": "How many types of degradation can you find in the area?",
+        "hint": "Tap on the correct answer"
+      },
+      "finish": {
+        "title": "Correct!",
+        "body": [
+          "Let's discover them together..."
+        ]
+      },
+      "incorrect": {
+        "title": "Try again!"
+      }
+    }
+  },
+  "quarries": {
+    "start": {
+      "title": "The red dots show you the quarries.",
+      "body": "Tap on one to know more"
+    },
+    "quarry1": {
+      "title": "Molasse Grise de Lausanne",
+      "body": [
+        "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
+        "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
+      ]
+    },
+    "quarry2": {
+      "title": "Molasse of Ursy",
+      "body": [
+        "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
+        "This facies is found only in the basal part of the south-east buttress of the east façade."
+      ]
+    },
+    "quarry3": {
+      "title": "Molasse Grise de Lausanne",
+      "body": [
+        "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
+      ]
     }
   },
   "ui": {
