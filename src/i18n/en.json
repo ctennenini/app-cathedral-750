@@ -473,10 +473,10 @@
           "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
         ]
       }
-    },
-    "ui": {
-      "navMenuButton": "Navigation Menu",
-      "closeNavMenu": "Close navigation menu"
     }
+  },
+  "ui": {
+    "navMenuButton": "Navigation Menu",
+    "closeNavMenu": "Close navigation menu"
   }
 }
