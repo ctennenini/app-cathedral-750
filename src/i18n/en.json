@@ -406,6 +406,32 @@
           "These are found on certain lean-to parts of the cathedral."
         ]
       }
+    },
+    "quarries": {
+      "start": {
+        "title": "The red dots show you the quarries.",
+        "body": "Tap on one to know more"
+      },
+      "quarry1": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
+          "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
+        ]
+      },
+      "quarry2": {
+        "title": "Molasse of Ursy",
+        "body": [
+          "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
+          "This facies is found only in the basal part of the south-east buttress of the east façade."
+        ]
+      },
+      "quarry3": {
+        "title": "Molasse Grise de Lausanne",
+        "body": [
+          "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
+        ]
+      }
     }
   },
   "games": {
@@ -447,32 +473,6 @@
       "incorrect": {
         "title": "Try again!"
       }
-    }
-  },
-  "quarries": {
-    "start": {
-      "title": "The red dots show you the quarries.",
-      "body": "Tap on one to know more"
-    },
-    "quarry1": {
-      "title": "Molasse Grise de Lausanne",
-      "body": [
-        "This rock type varies in color from grey to blue, with some yellow variegation. It has a medium to coarse grain size and consists of quartz, potassium feldspars, plagioclases, calcite, and occasionally dolomite, pyrite, and goethite.",
-        "This is the main facies used on Lausanne Cathedral, including the south tower of the transept."
-      ]
-    },
-    "quarry2": {
-      "title": "Molasse of Ursy",
-      "body": [
-        "This facies, to which the name of Ursy molasse is attributed according to the archives, is a facies with flat stratifications alternating levels with fine grain size and coarse levels. This grey-green facies has a purplish-pink patina.",
-        "This facies is found only in the basal part of the south-east buttress of the east façade."
-      ]
-    },
-    "quarry3": {
-      "title": "Molasse Grise de Lausanne",
-      "body": [
-        "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
-      ]
     }
   },
   "ui": {
