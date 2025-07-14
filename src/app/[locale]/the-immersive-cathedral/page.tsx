@@ -15,8 +15,7 @@ export default makePage((dictionary) => {
       label: page.actions.conservation,
     },
     {
-      target: `#`,
-      disabled: true,
+      target: '/video-gallery',
       label: page.actions.vaults,
     },
   ]

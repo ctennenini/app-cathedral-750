@@ -1,30 +1,21 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-
-import videoT1 from './videoT1.png'
-
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
-  const pages = dictionary.pages
+  const page = dictionary.pages.videoTest // ← assicurati che questa chiave esista
 
   return (
     <TextPageLayout
-      withHomeButton
+      title={page.title}
       bgImg={bgImg}
-      title={pages.videoTest.title}
-      titleProps={{
-        style: { fontSize: '54em' },
+      pullOutContent={{
+        type: 'youtube',
+        videoId: 'wl83OUrdCPs', // ← inserisci l’ID del tuo video YouTube qui
       }}
-      text={pages.videoTest.description}
-      backButtonTarget="/molasse-and-its-weathering"
-      
-      pullOutContent={[
-        {
-          type: 'image',
-          src: videoT1,
-        },
-      ]}
+      withHomeButton={true}
+      backButtonTarget="/"
+      text={[]}
     />
   )
 })
