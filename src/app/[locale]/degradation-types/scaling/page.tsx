@@ -14,7 +14,7 @@ export default makePage((dictionary) => {
       title={page.scaling.title}
       subtitle={page.title}
       text={page.scaling.description}
-      nextButtonTarget="/degradation-types/sanding"
+      nextButtonTarget="/degradation-types/biodeterioration"
       backButtonTarget="/degradation-types/black-crust"
       pullOutContent={[
         {

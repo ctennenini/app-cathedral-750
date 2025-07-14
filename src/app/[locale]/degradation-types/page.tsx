@@ -2,7 +2,7 @@ import bgImg from '@/assets/bg-images/frog-perspective-1.png'
 
 import blackCrustSrc from './blackc.jpg'
 import scalingSrc from './scaling2.png'
-import sanding from './sandling.JPG'
+import sanding from './sandling.jpg'
 import biodeterioation from './biodet.jpg'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
@@ -36,7 +36,7 @@ export default makePage((dictionary) => {
           {
             src: blackCrustSrc,
             label: pages.degradationTypes.blackCrust.title,
-            href: '/degradation-types/black-crust',
+            href: '/degradation-types/black-crust-menu',
           },
           {
             src: scalingSrc,
@@ -46,12 +46,12 @@ export default makePage((dictionary) => {
           {
             src: sanding,
             label: pages.degradationTypes.sanding.title,
-            href: '/degradation-types/sanding',
+            href: '/degradation-types/sanding-menu',
           },
           {
             src: biodeterioation,
             label: pages.degradationTypes.biodeterioration.title,
-            href: '/degradation-types/biodeterioration',
+            href: '/degradation-types/biodeterioration-menu',
           },
         ],
       }}

@@ -25,6 +25,7 @@ export default makePage((dictionary) => {
           },
           {
             target: '#',
+            disabled: true,
             label: pages.weatheringMechanisms.actions.saltCrystallization,
           },
           {
@@ -33,6 +34,7 @@ export default makePage((dictionary) => {
           },
           {
             target: '#',
+            disabled: true,
             label: pages.weatheringMechanisms.actions.biologicalAttack,
           },
         ],

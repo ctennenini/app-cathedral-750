@@ -23,15 +23,15 @@ export default makePage((dictionary) => {
           {
             target: '#',
             label: page.actions.properties,
+            disabled: true,
           },
           {
             target: '/molasse-sandstone/stones-of-the-cathedral',
             label: page.actions.typesOfStones,
           },
           {
-            target: '#',
             label: page.actions.interactive,
-            disabled: true,
+            target: '/interactive-menu',
             arrow: true,
             $primary: true,
           },
