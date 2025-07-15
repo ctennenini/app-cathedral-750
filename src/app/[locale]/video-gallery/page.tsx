@@ -40,7 +40,7 @@ export default makePage((dictionary) => {
       videos={videos}
       withHomeButton
       backButtonTarget="/the-immersive-cathedral"
-      bgImg={bgImg} // IMPORTATO DAL FILE
+      bgImg={bgImg.src}
       bgImgAlt="Daylight drone towers"
     />
   )
