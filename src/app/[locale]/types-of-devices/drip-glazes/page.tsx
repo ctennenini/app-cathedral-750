@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import biodeteriorationExample from './biodeterioration-example.png'
+import dripGlazes from './drip-glazes.jpg'
 
 import { makePage } from '@/components/makePage'
 
@@ -11,24 +11,24 @@ export default makePage((dictionary) => {
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.degradationTypes.biodeterioration.title}
+      title={pages.typesOfFeatures.dripGlazes.title}
       titleProps={{
         style: { fontSize: '56em' },
       }}
-      subtitle={pages.degradationTypes.title}
-      text={pages.degradationTypes.biodeterioration.description}
-      backButtonTarget="/degradation-types/sanding"
+      subtitle={pages.typesOfFeatures.title}
+      text={pages.typesOfFeatures.dripGlazes.description}
+      backButtonTarget="/types-of-devices/sloped-support"
       actions={[
         {
           type: 'back',
-          label: pages.weatheringOfMolasse.title,
-          target: '/molasse-and-its-weathering',
+          label: pages.typesOfFeatures.title,
+          target: '/types-of-devices',
         },
       ]}
       pullOutContent={[
         {
           type: 'image',
-          src: biodeteriorationExample,
+          src: dripGlazes,
         },
       ]}
     />

@@ -16,15 +16,17 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '/freeze-thaw-action',
+            target: '#',
             label: pages.waterManagement.actions.evolution,
+            disabled: true
           },
           {
             target: '/types-of-devices',
             label: pages.waterManagement.actions.types,
           },
           {
-            target: '/types-of-devices',
+            target: '#',
+            disabled: true,
             label: pages.waterManagement.actions.contemporary,
           },
         ],
