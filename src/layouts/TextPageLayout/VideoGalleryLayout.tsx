@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { StaticImageData } from 'next/image'
 
 import { Container, LanguageSwitcher } from './TextPageLayout.styled'
 import { HomeButton } from '@/components/HomeButton'
@@ -20,7 +21,7 @@ export type VideoGalleryLayoutProps = {
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
-  bgImg?: string
+  bgImg?: StaticImageData
   bgImgAlt?: string
   buttonColor?: 'light' | 'dark'
 }
@@ -38,7 +39,7 @@ export function VideoGalleryLayout({
   const [openVideoId, setOpenVideoId] = useState<string | null>(null)
 
   return (
-    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurredBackground>
+    <Container bgImg={bgImg?.src} bgImgAlt={bgImgAlt} blurredBackground>
       {(withHomeButton || backButtonTarget) && (
         <div
           style={{
