@@ -5,18 +5,19 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "yarn update-precache",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "knip": "knip",
     "qa": "yarn typecheck && yarn lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "update-precache": "node generate-precache.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.2.12",
     "@types/mdx": "^2.0.13",
     "lodash": "^4.17.21",
     "next": "15.2.2",

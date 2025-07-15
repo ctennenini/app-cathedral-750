@@ -1,5 +1,3 @@
-import createMDX from '@next/mdx'
-
 const isProd = process.env.NODE_ENV === 'production'
 
 /** @type {import('next').NextConfig} */
@@ -16,10 +14,10 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  trailingSlash: true,
+
   basePath: process.env.PREFIX ?? undefined,
   assetPrefix: process.env.PREFIX ?? undefined,
 }
 
-const withMDX = createMDX({})
-
-export default withMDX(nextConfig)
+export default nextConfig

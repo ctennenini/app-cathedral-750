@@ -8,6 +8,12 @@ export default makePage((dictionary) => {
 
   const links: TitlePageLayoutProps['links'] = [
     {
+      target: `/the-immersive-cathedral`,
+      label: page.actions.immersive,
+      $primary: true,
+      arrow: true,
+    },
+    {
       target:
         'https://www.cathedrale-lausanne.ch/accueil/',
       label: page.actions.website,
@@ -17,12 +23,6 @@ export default makePage((dictionary) => {
       target: '#',
       label: page.actions.birthday,
       disabled: true,
-    },
-    {
-      target: `/the-immersive-cathedral`,
-      label: page.actions.immersive,
-      $primary: true,
-      arrow: true,
     },
   ]
 

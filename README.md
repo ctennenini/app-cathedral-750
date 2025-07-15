@@ -214,6 +214,22 @@ export default makePage((dictionary) => {
 
 ‼️
 
+### How to change the app's metadata
+
+The app's metadata is defined, and can be edited, in the `src/config.ts` file.
+
+It decides what shows up in search-engine results, social media previews, and when installing the app on a device.
+
+Here you can change the app's name, description, keywords, authors, creator, publisher, and the open graph image.
+
+### How to change the app's icons
+
+The app's icons are defined in the `public/icons` folder and the open graph image is defined in the `public/open-graph-image.png` file (The open graph image is used when sharing the app on social media, linkedin, twitter, etc.)
+
+Override them as necessary, but ensure that the names stay the same.
+
+A publicly available icon-generator like https://pwa-icon-generator.vercel.app/ can be used to generate the icons.
+
 ## TODOs:
 
 - [ ] setup PWA caching

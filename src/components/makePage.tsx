@@ -5,9 +5,9 @@ import { Dictionary, getDictionary } from '@/i18n'
 import { GlobalStaticPageProps } from '@/globals'
 import { languages, defaultLanguage } from '@/config'
 
-export type PageFunction = (_: Dictionary) => JSX.Element
+export type PageFunction = (_: Dictionary) => JSX.Element | null
 
-export function makePage(fn: PageFunction) {
+export function makePage(fn?: PageFunction) {
   return async function Page(props: GlobalStaticPageProps) {
     const parameters = await props.params
 
@@ -17,6 +17,6 @@ export function makePage(fn: PageFunction) {
 
     const dictionary = await getDictionary(parameters.locale)
 
-    return fn(dictionary)
+    return fn?.(dictionary) ?? null
   }
 }
