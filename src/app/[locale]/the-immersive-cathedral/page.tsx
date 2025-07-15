@@ -11,14 +11,12 @@ export default makePage((dictionary) => {
       label: page.actions.molasses,
     },
     {
-      target: `#`,
-      disabled: true,
+      target: '/conservation-strategies',
       label: page.actions.conservation,
     },
     {
-      target: `#`,
-      disabled: true,
-      label: page.actions.vaults,
+      target: '/video-gallery',
+      label: page.actions.videoGallery,
     },
   ]
 

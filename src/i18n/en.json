@@ -71,7 +71,98 @@
       "actions": {
         "molasses": "Molasse and its weathering",
         "conservation": "Conservation strategies",
-        "vaults": "The vaults of the cathedral"
+        "vaults": "The vaults of the cathedral",
+        "videoGallery": "Meet the experts"
+      }
+    },
+    "videoGallery": {
+      "title": "Meet the experts",
+      "subtitle": "Explanatory video",
+      "description": [
+        "..."
+      ]
+    },
+    "videoTest": {
+      "title": "The degradation of the Facades",
+      "subtitle": "Explanatory video",
+      "description": [
+        "In this video <b>Mr.Girardet</b> - conservator of Lausanne Cathedral - will describe and show us the degradations they have monitor, undestand and take care of"
+      ]
+    },
+    "interactiveMenu": {
+      "title": "Interactive Tour",
+      "description": [
+        "Now it is your time to go out and explore the immersive experience and interact with the cathedral",
+        "Scan the <b>QR code and get te 3D map</b> of the spots you need to reach"
+      ]
+    },
+    "stoneConservation": {
+      "title": "Stones Conservation",
+      "description": [
+        [
+          "Conservation efforts often go unnoticed as they focus on preserving historical authenticity without altering a monument's appearance. ",
+          "This discretion means the public, interested in maintaining built heritage, is often unaware of the work and challenges involved. ",
+          "The type of intervention depends on the gravity and the kind of degradation that the stone experienced."
+        ],
+        [
+          "The experts analyse the stone conditions and pick the right procedures"
+        ]
+      ]
+    },
+    "consolidation": {
+      "title": "Consolidation",
+      "description": [
+        "When the only  surface is scaling, the degradation is not considered severe and usually minimum intervention are needed",
+        "Application of consolidant products to increase the strength of the stone and mortar patches to close the gaps are used"
+      ]
+    },
+    "scalingFixing": {
+      "title": "Scaling fixing",
+      "description": [
+        "When the surface appears healthy but there is scaling a few cm in depth, fixing intervention is needed to prevent the scale from detaching completely.",
+        "A special system of combination of pins and consolidants is used and interventions are invidibles at the end"
+      ]
+    },
+    "mortar": {
+      "title": "Mortar replacement",
+      "description": [
+        "When the first centimetres of the surface is degraded and not preservable, the damaged part is replaced with special mortars.",
+        "To improve adherence and resistance, a special grid is constructed to “reinforce” the mortar."
+      ]
+    },
+    "substitution": {
+      "title": "Stone replacement",
+      "description": [
+        "When the stone is highly damaged and/or has a great artistic and historic value, it is substituted entirely.",
+        "If historical relevants the substituted pieces is preserved in the lapidarium. "
+      ]
+    },
+    "conservationStrategies": {
+      "title": [
+        "Conservation Strategies"
+      ],
+      "description": [
+        "The Lausanne Cathedral, as we see it today, is the result of centuries of ongoing conservation efforts.",
+        "This section will explore the evolution of preservation practices and the fascinating journey of conserving this architectural heritage, from the more invasive, stylistic restorations of the past to today's philosophy of minimal intervention."
+      ],
+      "actions": {
+        "past": "Past restoration works",
+        "water": "Water managment systems",
+        "stone": "Stone conservation procedures"
+      }
+    },
+    "waterManagement": {
+      "title": [
+        "Rainwater Management Features"
+      ],
+      "description": [
+        "The management of rainwater at the Lausanne Cathedral has been a critical aspect of its conservation throughout the centuries, primarily due to the use of molasse stone, which is particularly susceptible to decomposition when exposed to rain.",
+        "This necessity was emphasised by Viollet-le-Duc in his 1872 restoration plan, where he stressed the importance of preserving the materials in an absolute manner and directing the water to the ground, using numerous conduits arranged with the greatest attention."
+      ],
+      "actions": {
+        "evolution": "Evolution of Rainwater Features",
+        "types": "Types of Rainwater Features",
+        "contemporary": "Challenges and Contemporary Solutions"
       }
     },
     "molassesAndItsWeathering": {
@@ -190,7 +281,8 @@
       "sanding": {
         "title": "Sanding",
         "description": [
-          "Lorem Ipsum Sandy Sit Amet."
+          "In some areas of the Cathedral the material suffer to phenomena of decohesion of the grain of the stone.",
+          "The stone looks less compact and looses external surface layers"   
         ]
       },
       "biodeterioration": {
@@ -323,8 +415,58 @@
         "wet": "Wet",
         "swelling": "Swelling 1.0 mm/m"
       }
-    }
-  },
+    },
+    "typesOfFeatures": {
+      "title": "Types of Rainwater Features",
+      "description": [
+        "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
+        "Click on the device to learn more about it"
+      ],
+      "testYourKnowledge": "Test your knowledge!",
+      "cornices": {
+        "title": "Cornices",
+        "description": [
+          "These are single-sloped elements, either horizontal or sloped, located at the eaves."
+        ]
+      },
+      "copings": {
+        "title": "Copings",
+        "description": [
+          "These are double-sloped elements, horizontal or sloped, found at the apex of flying buttresses, abutments, arches, or gables."
+        ]
+      },
+      "chamferedDripEdges": {
+        "title": "Chamfer Drip Edges",
+        "description": [
+          "These are string courses (indicating the internal floors) found on elevations or in archivolts of bays."
+        ]
+      },
+      "slopedRetreats": {
+        "title": "Sloped Retreats",
+        "description": [
+          "These are located at each setback of a buttress, abutment, or massif. These elements consistently show a high degree of dysfunction due to exposure and erosion."
+        ]
+      },
+      "rotatingDripEdges": {
+        "title": "Rotating Drip Edges",
+        "description": [
+          "These are located on polylobed (trefoil or quatrefoil) openings, and the rose window."
+        ]
+      },
+      "slopedSupports": {
+        "title": "Sloped Supports",
+        "description": [
+          "These are found at the sill levels of the arched windows in the bays."
+        ]
+      },
+      "dripGlazes": {
+        "title": "Drip Glazes",
+        "description": [
+          "These are found on certain lean-to parts of the cathedral."
+        ]
+      }
+      }
+    },
   "games": {
     "oldestStone": {
       "start": {
@@ -385,9 +527,11 @@
         ]
       },
       "quarry3": {
-        "title": "Molasse Grise de Lausanne",
+        "title": "Molasse of Zug",
         "body": [
-          "This facies of the Aquitanian age is deposited in the southern part of the Swiss plateau in the USM geological unit (Lower Freshwater Molasse). The depositional environment is continental, in a low-relief floodplain environment, associated with forests, swamps and mean-shaped rivers."
+          "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
+          "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
+
         ]
       }
     }

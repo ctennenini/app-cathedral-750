@@ -254,6 +254,11 @@ export type ExtraContentProps =
         href?: string
       })[]
     }
+  | {
+      type: 'youtube'
+      videoId: string
+      title?: string
+    }
 
 export function ExtraContent(props: ExtraContentProps) {
   switch (props.type) {
@@ -295,7 +300,9 @@ export function ExtraContent(props: ExtraContentProps) {
             <Spacer>
               <ExtraImage {...otherProps} />
               {legendItems && <Legend items={legendItems} />}
-              {clickAreas?.map((props, index) => <ClickArea key={index} {...props} />)}
+              {clickAreas?.map((props, index) => (
+                <ClickArea key={index} {...props} />
+              ))}
               {labels?.map(({ text, type, ...props }, index) => (
                 <Label text={text} type={type} key={index} {...props} />
               ))}
@@ -303,32 +310,40 @@ export function ExtraContent(props: ExtraContentProps) {
           </Container>
         )
       }
-      {
-        /* case 'image-with-legend': {
-      return (
-        <Container>
-          <ExtraImage {...otherProps} />
-          <Legend items={legendItems} />
-        </Container>
-      )
-    } */
-      }
-    // case 'image-with-click-map': {
-    //   const { clickAreas, ...otherProps } = props
-    //   return (
-    //     <Container>
-    //       <ClickMap>
-    //         <ExtraImage {...otherProps} />
-    //         {clickAreas.map((props, index) => (
-    //           <Trigger
-    //             key={index}
-    //             {...props}
-    //           />
-    //         ))}
-    //       </ClickMap>
-    //     </Container>
-    //   )
-    // }
+    case 'youtube': {
+  const { videoId, title } = props
+
+  return (
+    <Container>
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          paddingBottom: '56.25%', // 16:9 aspect ratio
+          height: 0,
+          overflow: 'hidden',
+          borderRadius: '12px',
+        }}
+      >
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title={title || 'YouTube video'}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            border: 0,
+          }}
+        />
+      </div>
+    </Container>
+  )
+}
     default:
       throw new Error('Invalid type', props)
   }

@@ -30,9 +30,8 @@ export default makePage((dictionary) => {
             label: page.actions.typesOfStones,
           },
           {
-            target: '#',
             label: page.actions.interactive,
-            disabled: true,
+            target: '/interactive-menu',
             arrow: true,
             $primary: true,
           },

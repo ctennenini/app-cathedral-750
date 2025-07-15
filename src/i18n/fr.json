@@ -52,14 +52,14 @@
     },
     "start": {
       "title": [
-        "Cathédrale",
+        "La Cathédrale",
         "de Lausanne"
       ],
-      "subtitle": "Centre d'information numérique",
+      "subtitle": "Centre d'Information Digital",
       "actions": {
         "website": "Site Web de la Cathédrale",
-        "birthday": "750e anniversaire",
-        "immersive": "La Cathédrale immersive"
+        "birthday": "750e Anniversaire",
+        "immersive": "La Cathédrale Immersive"
       }
     },
     "immersiveCathedral": {
@@ -67,54 +67,145 @@
         "La Cathédrale",
         "Immersive"
       ],
-      "subtitle": "Menu principal",
+      "subtitle": "Menu Principal",
       "actions": {
-        "molasses": "Molasse et sa météorisation",
+        "molasses": "La molasse et son altération",
         "conservation": "Stratégies de conservation",
-        "vaults": "Les voûtes de la cathédrale"
+        "vaults": "Les voûtes de la cathédrale",
+         "videoGallery": "Meet the experts"
+      }
+    },
+    "videoGallery": {
+      "title": "The degradation of the Facades",
+      "subtitle": "Explanatory video",
+      "description": [
+        "In this video <b>Mr.Girardet</b> - conservator of Lausanne Cathedral - will describe and show us the degradations they have monitor, undestand and take care of"
+      ]
+    },
+    "videoTest": {
+      "title": "La dégradation des Façades",
+      "subtitle": "Vidéo explicative",
+      "description": [
+        "Dans cette vidéo <b>M. Girardet</b> - conservateur de la Cathédrale de Lausanne - va décrire et nous montrer les dégradations qu'ils ont surveillées, comprises et dont ils ont pris soin"
+      ]
+    },
+    "interactiveMenu": {
+      "title": "Visite Interactive",
+      "description": [
+        "Maintenant c'est à votre tour de sortir et d'explorer l'expérience immersive et d'interagir avec la cathédrale",
+        "Scannez le <b>code QR et obtenez la carte 3D</b> des endroits que vous devez atteindre"
+      ]
+    },
+    "stoneConservation": {
+      "title": "Conservation des Pierres",
+      "description": [
+        [
+          "Les efforts de conservation passent souvent inaperçus car ils se concentrent sur la préservation de l'authenticité historique sans altérer l'apparence d'un monument. ",
+          "Cette discrétion signifie que le public, intéressé par le maintien du patrimoine bâti, est souvent inconscient du travail et des défis impliqués. ",
+          "Le type d'intervention dépend de la gravité et du type de dégradation que la pierre a subi."
+        ],
+        [
+          "Les experts analysent les conditions de la pierre et choisissent les procédures appropriées"
+        ]
+      ]
+    },
+    "consolidation": {
+      "title": "Consolidation",
+      "description": [
+        "Quand seule la surface s'écaille, la dégradation n'est pas considérée comme sévère et généralement des interventions minimales sont nécessaires",
+        "L'application de produits consolidants pour augmenter la résistance de la pierre et des patchs de mortier pour fermer les fissures sont utilisés"
+      ]
+    },
+    "scalingFixing": {
+      "title": "Fixation des écailles",
+      "description": [
+        "Quand la surface semble saine mais qu'il y a des écailles de quelques cm de profondeur, une intervention de fixation est nécessaire pour empêcher l'écaille de se détacher complètement.",
+        "Un système spécial de combinaison de broches et de consolidants est utilisé et les interventions sont invisibles à la fin"
+      ]
+    },
+    "mortar": {
+      "title": "Remplacement du mortier",
+      "description": [
+        "Quand les premiers centimètres de la surface sont dégradés et non préservables, la partie endommagée est remplacée par des mortiers spéciaux.",
+        "Pour améliorer l'adhérence et la résistance, une grille spéciale est construite pour « renforcer » le mortier."
+      ]
+    },
+    "substitution": {
+      "title": "Remplacement de la pierre",
+      "description": [
+        "Quand la pierre est fortement endommagée et/ou a une grande valeur artistique et historique, elle est entièrement substituée.",
+        "Si elle est historiquement pertinente, la pièce substituée est préservée dans le lapidaire."
+      ]
+    },
+    "conservationStrategies": {
+      "title": [
+        "Stratégies de Conservation"
+      ],
+      "description": [
+        "La Cathédrale de Lausanne, telle que nous la voyons aujourd'hui, est le résultat de siècles d'efforts de conservation continus.",
+        "Cette section explorera l'évolution des pratiques de préservation et le voyage fascinant de la conservation de ce patrimoine architectural, depuis les restaurations plus invasives et stylistiques du passé jusqu'à la philosophie actuelle d'intervention minimale."
+      ],
+      "actions": {
+        "past": "Travaux de restauration passés",
+        "water": "Systèmes de gestion de l'eau",
+        "stone": "Procédures de conservation de la pierre"
+      }
+    },
+    "waterManagement": {
+      "title": [
+        "Dispositifs de Gestion des Eaux Pluviales"
+      ],
+      "description": [
+        "La gestion des eaux pluviales à la Cathédrale de Lausanne a été un aspect critique de sa conservation à travers les siècles, principalement en raison de l'utilisation de la pierre de molasse, qui est particulièrement susceptible de se décomposer lorsqu'elle est exposée à la pluie.",
+        "Cette nécessité fut soulignée par Viollet-le-Duc dans son plan de restauration de 1872, où il insistait sur l'importance de préserver les matériaux de manière absolue et de diriger l'eau vers le sol, en utilisant de nombreux conduits disposés avec la plus grande attention."
+      ],
+      "actions": {
+        "evolution": "Évolution des Dispositifs d'Évacuation des Eaux Pluviales",
+        "types": "Types de Dispositifs d'Évacuation des Eaux Pluviales",
+        "contemporary": "Défis et Solutions Contemporaines"
       }
     },
     "molassesAndItsWeathering": {
-      "title": "Molasse et sa météorisation",
+      "title": "La molasse et son altération",
       "description": [
-        "La cathédrale de Lausanne a été construite avec une pierre de molasse locale, particulièrement sensible à l'eau.",
-        "Vous pouvez obtenir directement ici des informations sur cette pierre ainsi que sur sa météorisation en cliquant sur les boutons correspondants.",
-        "Vous pouvez également accéder directement à une application de découverte interactive à utiliser lors de votre promenade autour de la cathédrale."
+        "La cathédrale de Lausanne fut construite avec un grès molassique local, particulièrement sensible à l'eau.",
+        "Vous pouvez obtenir directement ici des informations sur cette pierre ainsi que sur son altération en cliquant sur les boutons correspondants",
+        "Vous pouvez aussi aller directement à une application de découverte interactive à utiliser en vous promenant autour de la cathédrale."
       ],
       "actions": {
-        "sandstone": "Pierre de molasse",
-        "weathering": "Météorisation de la molasse",
-        "interactive": "Visite interactive"
+        "sandstone": "Grès Molassique",
+        "weathering": "Altération de la Molasse",
+        "interactive": "Visite Interactive"
       }
     },
     "molasseSandstone": {
-      "title": "Le grès de molasse",
+      "title": "Le Grès Molassique",
       "description": [
         [
-          "La formation rocheuse de molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse au lac de Constance à l'est.",
-          "Elle comprend une variété de grès liés au calcite, qui peuvent contenir des argiles gonflantes."
+          "La formation rocheuse de la Molasse suisse s'étend au nord des Alpes depuis la région du Lac Léman à l'ouest de la Suisse jusqu'au Lac de Constance à l'est.",
+          "Elle comprend une variété de grès liés par la calcite, qui peuvent contenir des argiles gonflantes."
         ],
         [
-          "Dans le cadre de cette formation rocheuse, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la cathédrale de Lausanne.",
-          "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et employés pour des travaux de modification et d'entretien à la cathédrale."
+          "Faisant partie de cette formation, la « Molasse grise de Lausanne » fut extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la Cathédrale de Lausanne.",
+          "Au fil des siècles, des grès de la même typologie furent apportés de différentes carrières locales distribuées autour du centre médiéval et employés pour les travaux de modification et d'entretien de la Cathédrale."
         ]
       ],
       "actions": {
-        "geologicalInformation": "Informations géologiques",
-        "properties": "Propriétés de la molasse",
-        "typesOfStones": "Types de pierres",
-        "interactive": "Visite interactive"
+        "geologicalInformation": "Informations Géologiques",
+        "properties": "Propriétés de la Molasse",
+        "typesOfStones": "Types de Pierres",
+        "interactive": "Visite Interactive"
       },
       "stonesOfTheCathedral": {
-        "title": "Pierres de la cathédrale",
+        "title": "Pierres de la Cathédrale",
         "description": [
           [
-            "La cathédrale de Lausanne est construite à partir d'une variété de pierres provenant de différentes carrières de Suisse et de certaines parties d'Allemagne.",
-            "Au XIXe siècle, la molasse régionale de pierres de construction exposées de la cathédrale a été remplacée par des calcaires et des grès « plus durs » de la région élargie du canton de Vaud."
+            "La Cathédrale de Lausanne est construite avec une variété de pierres provenant de différentes carrières partout en Suisse et dans certaines parties de l'Allemagne.",
+            "Pendant le 19e siècle, le grès molassique régional des éléments architecturaux exposés de la Cathédrale fut remplacé par des calcaires et des grès « plus durs » de la région élargie du canton de Vaud."
           ],
           [
-            "Au XXe siècle, en raison de la rareté des carrières régionales, la substitution générale de la molasse locale par des travaux d'entretien et de restauration est devenue une pratique courante.",
-            "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) ont été utilisés à sa place."
+            "Au 20e siècle, en raison de la rareté des carrières régionales, la substitution générale du grès molassique local pour l'entretien et la restauration devint une pratique courante.",
+            "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) furent utilisés à sa place."
           ]
         ],
         "testYourKnowledge": "Testez vos connaissances !"
@@ -122,147 +213,148 @@
       "molasseGris": {
         "title": "Molasse Grise",
         "description": [
-          "C'est une pierre de molasse de Lausanne et a été placée dans la cathédrale au XIIe siècle de notre ère (période gothique).",
-          "C'est un type de pierre sédimentaire qui est prédominant sur la tour sud du transept. Ce grès provient très probablement des carrières voisines.",
+          "C'est un grès molassique de Lausanne qui fut placé dans la Cathédrale au 12e siècle après J.-C. (période gothique).",
+          "C'est un type de pierre sédimentaire qui prédomine sur la tour sud du Transept. Ce grès provenait très probablement des carrières voisines.",
           "Cette pierre est particulièrement sensible à l'eau en raison de la présence d'argiles gonflantes."
         ]
       },
       "geologicalInformation": {
-        "title": "Informations géologiques",
+        "title": "Informations Géologiques",
         "description": [
           [
             "La géologie de la Suisse couvre les Alpes centrales, un segment de la chaîne alpine situé entre les Alpes occidentales de France et d'Italie et les Alpes orientales d'Italie, d'Autriche et d'Allemagne.",
-            "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les principales unités tectoniques et présente des paysages et des formes de relief emblématiques pour lesquels les Alpes sont connues."
+            "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les unités tectoniques majeures et présente des paysages et des formes de relief emblématiques pour lesquels les Alpes sont connues."
           ],
           [
-            "Au nord, le plateau suisse s'étend du lac Léman à Berne, Zurich et le lac de Constance, s'effilant d'environ 600 à 400 m d'altitude. Ce plateau correspond à ce qu'on appelle le bassin molassique.",
+            "Au nord, le Plateau suisse s'étend du Lac Léman à Berne, Zürich et au Lac de Constance, s'effilant d'environ 600 à 400 m d'altitude. Ce plateau correspond à ce qu'on appelle le Bassin molassique.",
             "<b>Cliquez sur la carte</b> pour en savoir plus sur les différentes molasses, les carrières et leurs caractéristiques."
           ],
           [
-            "Les faciès Molasse résultent de l'altération et de l'érosion des Alpes au cours de l'orogenèse alpine et sont constitués de sables de granulométrie variable (de fine à grossière), et de minéralogie également variable (quartz, feldspaths, avec plus ou moins de micas) cimentés par de la calcite."
+            "Les faciès molassiques résultent de l'altération et de l'érosion des Alpes pendant l'orogenèse alpine et sont composés de sables de granulométrie variable (de fine à grossière), et de minéralogie également variable (quartz, feldspaths, avec plus ou moins de micas) cimentés avec de la calcite."
           ],
           [
-            "Les processus géologiques impliqués dans la formation du Bassin Molassique remontent aux époques Oligocène et Miocène.",
-            "<b>Quatre groupes principaux</b> peuvent être identifiés selon les conditions de sédimentation impliquées (condition marine ou d'eau douce)."
+            "Les processus géologiques impliqués dans la formation du Bassin molassique remontent aux ères oligocène et miocène.",
+            "<b>Quatre groupes principaux</b> peuvent être identifiés selon les conditions de sédimentation impliquées (conditions marines ou d'eau douce)."
           ]
         ]
       }
     },
     "weatheringOfMolasse": {
-      "title": "Météorisation de la Molasse",
+      "title": "Altération de la Molasse",
       "description": [
         "Le processus de dégradation est un <b>système complexe qui implique</b> différents facteurs.",
-        "Les mécanismes de météorisation sont les processus physiques/chimiques impliqués dans la dégradation.",
-        "Le type de dégradation (ou de motifs) fait référence à la manière dont les dommages se manifestent à une plus grande échelle."
+        "Les mécanismes d'altération sont les processus physiques/chimiques impliqués dans la dégradation.",
+        "Le type de dégradation (ou motifs) se réfère à la façon dont les dommages se manifestent à plus grande échelle."
       ],
       "actions": {
-        "mechanisms": "Mécanismes de météorisation",
-        "types": "Types de dégradation"
+        "mechanisms": "Mécanismes d'Altération",
+        "types": "Types de Dégradation"
       }
     },
     "degradationTypes": {
-      "title": "Types de dégradation",
+      "title": "Types de Dégradation",
       "description": [
         [
-          "Les différents mécanismes de météorisation n'ont pas toujours une corrélation univoque avec le <b>motif de dégradation observé</b>.",
-          "Ils sont fortement liés au microclimat auquel la pierre est soumise et, par conséquent, à sa position dans le bâtiment."
+          "Les différents mécanismes d'altération n'ont pas toujours une corrélation univoque avec le <b>motif de dégradation observé</b>.",
+          "Ceux-ci sont fortement liés au micro-climat auquel la pierre est soumise et en conséquence à leur position dans le bâtiment."
         ],
         [
-          "La coexistence dans le même point de différents motifs de dégradation peut rendre leur identification difficile.",
-          "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés en fonction de ces quatre classes."
+          "La coprésence au même endroit de différents motifs de dégradation peut rendre leur identification difficile.",
+          "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés selon ces quatre classes."
         ]
       ],
       "testYourKnowledge": "Testez vos connaissances !",
       "blackCrust": {
-        "title": "Croûte noire",
+        "title": "Croûte Noire",
         "description": [
-          "Les croûtes noires sont généralement classées comme des croûtes qui se développent principalement dans des zones protégées de la pluie ou du ruissellement d'eau en milieu urbain.",
-          "Les croûtes noires adhèrent généralement fermement au substrat. Elles sont principalement composées de particules atmosphériques piégées dans une matrice de gypse (CaSO4.2H2O)."
+          "Les croûtes noires sont classées comme un type de croûte se développant généralement sur les zones protégées contre la pluie directe ou le ruissellement d'eau en environnement urbain.",
+          "Les croûtes noires adhèrent généralement fermement au substrat. Elles sont composées principalement de particules de l'atmosphère, piégées dans une matrice de gypse (CaSO4.2H2O)."
         ]
       },
       "scaling": {
         "title": "Écaillage",
         "description": [
-          "Détachement de la pierre sous forme d'une échelle ou d'une pile d'échelles, ne suivant aucune structure de pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une échelle est généralement de l'ordre du millimètre à l'échelle centimétrique.",
-          "Il peut être observé dans des zones exposées à la fois à la pluie et au soleil. Il représente le motif de dégradation le plus difficile à évaluer, à comprendre et à restaurer."
+          "Détachement de la pierre sous forme d'écaille ou d'un empilement d'écailles, ne suivant aucune structure de la pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une écaille est généralement de l'ordre millimétrique à centimétrique.",
+          "Elle peut être observée dans les zones exposées à la fois à la pluie et au soleil. Elle représente le motif de dégradation le plus difficile à évaluer, comprendre et restaurer."
         ]
       },
       "sanding": {
-        "title": "Le sanding",
+        "title": "Sablage",
         "description": [
-          "Lorem Ipsum Sandy Sit Amet."
+          "Dans certaines zones de la Cathédrale, le matériau souffre de phénomènes de décohésion des grains de la pierre.",
+          "La pierre semble moins compacte et perd les couches superficielles externes"
         ]
       },
       "biodeterioration": {
-        "title": "Biodégradation",
+        "title": "Biodétérioration",
         "description": [
-          "Les microorganismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer dans les zones les plus touchées par la pluie ou là où l'eau percole.",
-          "Les dommages résultants ne sont pas extrêmement dangereux pour la préservation de la pierre, mais peuvent créer des inconvénients esthétiques désagréables."
+          "Dans les zones les plus touchées par la pluie ou où l'eau percole, les micro-organismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer.",
+          "Les dommages résultants ne sont pas extrêmement dangereux pour la préservation de la pierre mais peuvent créer des inconvénients esthétiques désagréables."
         ]
       }
     },
     "weatheringMechanisms": {
       "title": [
-        "Météorisation",
-        "Mécanismes"
+        "Mécanismes",
+        "d'Altération"
       ],
       "description": [
-        "L'eau est impliquée dans tous les types de mécanismes de météorisation de la pierre.",
-        "Vous pouvez obtenir des informations supplémentaires sur chacun d'eux en cliquant sur les <b>boutons correspondants</b>."
+        "L'eau est impliquée dans tous les types de mécanismes d'altération de la pierre.",
+        "Vous pouvez obtenir plus d'informations sur chacun d'eux en cliquant sur les <b>boutons correspondants</b>."
       ],
       "actions": {
-        "freezeThaw": "Action gel - dégel",
-        "swellingClays": "Argiles gonflantes",
-        "saltCrystallization": "Cristallisation de sels",
-        "atmosphericPollution": "Pollution atmosphérique",
-        "biologicalAttack": "Attaque biologique"
+        "freezeThaw": "Action Gel - Dégel",
+        "swellingClays": "Argiles Gonflantes",
+        "saltCrystallization": "Cristallisation de Sel",
+        "atmosphericPollution": "Pollution Atmosphérique",
+        "biologicalAttack": "Attaque Biologique"
       },
       "freezeThaw": {
-        "title": "Action gel - dégel",
+        "title": "Action Gel - Dégel",
         "trappedWater": {
-          "title": "Eau piégée",
+          "title": "Eau Piégée",
           "description": [
             [
-              "L'eau piégée dans les matériaux poreux peut causer des dommages par divers mécanismes.",
-              "Le premier et le plus dramatique est appelé « piégeage de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
+              "L'eau qui gèle dans les matériaux poreux peut causer des dommages par divers mécanismes.",
+              "Le premier et le plus dramatique est appelé « piégeage d'eau ». Il se réfère à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans un réfrigérateur."
             ],
             [
-              "En d'autres termes, la congélation se produit de tous les côtés, le liquide est emprisonné et l'augmentation du volume molaire de l'eau liquide à la glace provoque la rupture de la bouteille.",
-              "De telles situations sont rares sur les monuments, à l'exception peut-être des éléments décoratifs fins préalablement saturés d'eau, comme les fleurons et les fontaines.",
+              "En d'autres termes, le gel se produit de tous les côtés, le liquide est piégé, et l'augmentation du volume molaire de l'eau liquide à la glace fait casser la bouteille.",
+              "De telles situations sont rares sur les monuments, à l'exception possible d'éléments décoratifs fins préalablement saturés d'eau, comme les flèches et les fontaines.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
         },
         "hydraulicPressure": {
-          "title": "Pression hydraulique",
+          "title": "Pression Hydraulique",
           "description": [
             [
               "Une autre situation également liée au changement de volume molaire est appelée « pression hydraulique ».",
-              "Elle se produit lorsque la glace en croissance pousse l'eau liquide encore présente à travers le réseau poreux. La résistance à l'écoulement entraîne une pression qui dépend de la taille des pores et de la distance sur laquelle l'eau est poussée."
+              "Elle se produit quand la glace qui croît pousse l'eau liquide encore présente à travers le réseau poreux. La résistance à l'écoulement mène à une pression qui dépend de la taille des pores et de la distance sur laquelle l'eau est poussée."
             ],
             [
               "Pour la molasse, la taille des pores est grande, ce qui réduit cette pression.",
-              "Cependant, si ces mêmes pierres sont saturées d'eau, alors la longueur équivalente des pores saturés peut être très grande, ce qui peut entraîner des pressions hydrauliques élevées si le taux de refroidissement est suffisamment rapide.",
+              "Cependant, si ces mêmes pierres sont saturées d'eau, alors la longueur équivalente des pores saturés peut être très grande, ce qui peut mener à de hautes pressions hydrauliques si le taux de refroidissement est assez rapide.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
         },
         "crystallizationPressure": {
-          "title": "Pression de cristallisation",
+          "title": "Pression de Cristallisation",
           "description": [
-            "Une autre situation dans laquelle le gel peut être dommageable est la pression de cristallisation. Dans de telles conditions, les basses températures développées sur de longues périodes de temps seraient les plus dommageables. De telles situations sont à attendre dans des climats plus froids que Lausanne.",
+            "Une autre situation dans laquelle le gel peut être dommageable est la pression de cristallisation. Dans de telles conditions, les basses températures développées sur de longues périodes seraient les plus dommageables. De telles situations sont à attendre dans des climats plus froids qu'à Lausanne.",
             "Regardez la vidéo pour en savoir plus."
           ]
         },
         "temperatureGradient": {
-          "title": "Gradient de température",
+          "title": "Gradient de Température",
           "description": [
             [
-              "Les matériaux poreux grossiers, tels que la molasse, peuvent être endommagés lorsqu'ils sont gelés si un gradient de température est maintenu.",
-              "L'eau peut alors se déplacer d'une région non gelée pour alimenter la croissance de la glace piégée dans les pores d'une région gelée. C'est analogue à la poussée de gel mais peut également causer des dommages dans les pierres de construction sédimentaires et dans les contextes géologiques."
+              "Les matériaux poreux grossiers, comme la molasse, peuvent être endommagés pendant le gel si un gradient de température est maintenu.",
+              "L'eau peut alors se déplacer d'une région non gelée pour alimenter la croissance de glace piégée dans les pores d'une région gelée. Ceci est analogue au soulèvement par le gel mais peut aussi causer des dommages dans les pierres de construction sédimentaires et dans les contextes géologiques."
             ],
             [
-              "Des situations connexes peuvent conduire à la formation de lentilles de glace entre un substrat humide (cœurs de pierre) et une surface soumise à des variations de température (façade). La croissance de telles lentilles peut accélérer le détachement d'écailles préexistantes sans que les températures aient besoin d'être très basses.",
+              "Des situations liées peuvent mener à la formation de lentilles de glace entre un substrat humide (noyaux de pierre) et une surface sujette aux variations de température (façade). La croissance de telles lentilles peut accélérer le détachement d'écailles préexistantes sans que les températures aient besoin d'être très basses.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
@@ -273,55 +365,105 @@
       }
     },
     "atmosphericPollution": {
-      "title": "Pollution atmosphérique",
+      "title": "Pollution Atmosphérique",
       "acidRain": {
-        "title": "Pluie acide",
+        "title": "Pluie Acide",
         "description": [
-          "La pollution atmosphérique, en particulier les pluies acides, a été un problème sérieux pour la durabilité des bâtiments historiques dans le passé.",
-          "Les pierres contenant de la calcite ont été attaquées en raison de la dissolution de ces minéraux au contact de solutions acides.",
-          "Dans le cas du grès de molasse, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
+          "La pollution atmosphérique, particulièrement les pluies acides, a été un problème sérieux pour la durabilité des Bâtiments Historiques dans le passé.",
+          "Les pierres contenant de la calcite étaient attaquées en raison de la dissolution de ces minéraux au contact des solutions acides.",
+          "Dans le cas du grès molassique, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
         ],
         "legendItems": {
-          "swellingClays": "Argiles gonflantes",
-          "calcite": "Ciment calcitique",
-          "silica": "Grains de silice"
+          "swellingClays": "Argiles Gonflantes",
+          "calcite": "Ciment Calcitique",
+          "silica": "Grains de Silice"
         }
       },
       "microDust": {
-        "title": "Microparticules et poussières",
+        "title": "Microparticules et Poussière",
         "description": [
-          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation des sels à la surface des bâtiments.",
-          "Cela a conduit à la formation des « croûtes noires »."
+          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué ces 30 dernières années, est la présence de microparticules de poussière des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation de sels à la surface des bâtiments.",
+          "Ceci a mené à la formation des soi-disant « croûtes noires »."
         ]
       }
     },
     "swellingClays": {
-      "title": "Argiles gonflantes",
+      "title": "Argiles Gonflantes",
       "description": [
         [
-          "La pierre utilisée dans la cathédrale de Lausanne pendant le Moyen Âge est le grès de molasse. Sa microstructure est composée de différents matériaux siliceux liés ensemble par un liant calcite-argile.",
-          "La présence d'argiles gonflantes détermine la formation de contraintes dans le matériau lors de l'humidification et du séchage dus à la pluie. Ces contraintes, dans le cas de fissures préexistantes, peuvent les propager et provoquer l'écaillage."
+          "La pierre utilisée dans la Cathédrale de Lausanne pendant le Moyen Âge est le grès molassique. Sa microstructure consiste en différents matériaux siliceux liés ensemble par un liant calcite-argile.",
+          "La présence d'argile gonflante détermine la formation de contraintes dans le matériau pendant l'humidification et le séchage dus à la pluie. Cette contrainte, dans le cas de fissures préexistantes, peut les propager et causer l'écaillage."
         ],
         [
-          "Les argiles gonflantes, comme la smectite, sont un type particulier d'argile qui peut absorber l'eau et se dilater. Elles font partie de la famille des Phyllosilicates (ou « silicates en feuillets »), un groupe de minéraux qui ont une structure en couches unique.",
+          "Les argiles gonflantes, comme la smectite, sont un type particulier d'argile qui peut absorber l'eau et se dilater. Elles font partie de la famille des Phyllosilicates (ou « silicates en feuilles »), un groupe de minéraux qui ont une structure en couches unique.",
           "Imaginez-les comme de minuscules feuilles plates empilées les unes sur les autres comme un jeu de cartes."
         ],
         [
-          "Dans le cas des argiles gonflantes, en raison de certaines propriétés particulières des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuilles, provoquant le gonflement de l'ensemble de la pierre.",
+          "Dans le cas des argiles gonflantes, en raison de certaines caractéristiques particulières des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuilles, causant l'expansion de toute la pile.",
           "La conséquence est le gonflement de toute la pierre."
         ]
       ],
       "labels": {
         "wetting": "Humidification",
         "drying": "Séchage",
-        "dryBlock": "Bloc sec",
-        "wetBlock": "Bloc humide",
-        "buckling": "Flambage",
-        "peeling": "Écaillage",
-        "mudCracking": "Fissuration de boue",
+        "dryBlock": "Bloc Sec",
+        "wetBlock": "Bloc Humide",
+        "buckling": "Voilement",
+        "peeling": "Pelage",
+        "mudCracking": "Fissuration de Boue",
         "dry": "Sec",
         "wet": "Humide",
-        "swelling": "Gonflement 1.0 mm/m"
+        "swelling": "Gonflement 1,0 mm/m"
+      }
+    },
+    "typesOfFeatures": {
+      "title": "Types de Dispositifs d'Évacuation des Eaux Pluviales",
+      "description": [
+        "Il y a sept types de dispositifs de gestion des eaux pluviales qui sont conçus pour éloigner l'eau des murs.",
+        "Cliquez sur le dispositif pour en savoir plus à son sujet"
+      ],
+      "testYourKnowledge": "Testez vos connaissances !",
+      "cornices": {
+        "title": "Corniches",
+        "description": [
+          "Ce sont des éléments à pente simple, soit horizontaux soit inclinés, situés aux avant-toits."
+        ]
+      },
+      "copings": {
+        "title": "Chaperons",
+        "description": [
+          "Ce sont des éléments à double pente, horizontaux ou inclinés, trouvés au sommet des arcs-boutants, culées, arcs ou pignons."
+        ]
+      },
+      "chamferedDripEdges": {
+        "title": "Bords Gouttières Chanfreinés",
+        "description": [
+          "Ce sont des cordons (indiquant les étages internes) trouvés sur les élévations ou dans les archivoltes des baies."
+        ]
+      },
+      "slopedRetreats": {
+        "title": "Retraits Inclinés",
+        "description": [
+          "Ceux-ci sont situés à chaque retrait d'un contrefort, culée ou massif. Ces éléments montrent constamment un haut degré de dysfonctionnement dû à l'exposition et à l'érosion."
+        ]
+      },
+      "rotatingDripEdges": {
+        "title": "Bords Gouttières Tournants",
+        "description": [
+          "Ceux-ci sont situés sur les ouvertures polylobées (trèfle ou quatrefeuille), et la rosace."
+        ]
+      },
+      "slopedSupports": {
+        "title": "Supports Inclinés",
+        "description": [
+          "Ceux-ci se trouvent aux niveaux de seuil des fenêtres cintrées dans les baies."
+        ]
+      },
+      "dripGlazes": {
+        "title": "Glaçures Gouttières",
+        "description": [
+          "Celles-ci se trouvent sur certaines parties en appentis de la cathédrale."
+        ]
       }
     }
   },
@@ -329,17 +471,17 @@
     "oldestStone": {
       "start": {
         "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
-        "body": "Appuyez sur l'une des pierres en surbrillance"
+        "body": "Tapez sur une des pierres surlignées"
       },
       "incorrect": {
         "title": "Essayez encore !",
-        "body": "Appuyez sur l'une des pierres en surbrillance"
+        "body": "Tapez sur une des pierres surlignées"
       },
       "finish": {
         "title": "Correct !",
         "body": [
-          "Le type de pierre la plus ancienne de la cathédrale est la Molas Grise de Lausanne qui a été placée au XIIe siècle de notre ère.",
-          "Apprenons-en plus à ce sujet..."
+          "Le type de pierre le plus ancien de la cathédrale est la Molasse Grise de Lausanne qui fut placée au 12e siècle après J.-C.",
+          "Apprenons-en plus à son sujet..."
         ]
       }
     },
@@ -347,13 +489,13 @@
       "start": {
         "title": "Testez vos connaissances !",
         "body": [
-          "Il y a des zones de la cathédrale plus affectées par un certain type de dégradation, mais aussi de petites différences dans la géométrie du bâtiment peuvent faire une différence.",
-          "Dans le cercle rouge, nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus !"
+          "Il y a des zones de la Cathédrale plus affectées par un certain type de dégradation, mais aussi de petites différences dans la géométrie du bâtiment peuvent faire une différence.",
+          "Dans le cercle rouge nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus !"
         ]
       },
       "main": {
         "title": "Combien de types de dégradation pouvez-vous trouver dans la zone ?",
-        "hint": "Appuyez sur la bonne réponse"
+        "hint": "Tapez sur la bonne réponse"
       },
       "finish": {
         "title": "Correct !",
@@ -368,32 +510,33 @@
     "quarries": {
       "start": {
         "title": "Les points rouges vous montrent les carrières.",
-        "body": "Appuyez sur l'un d'eux pour en savoir plus"
+        "body": "Tapez sur une pour en savoir plus"
       },
       "quarry1": {
         "title": "Molasse Grise de Lausanne",
         "body": [
-          "Ce type de roche varie en couleur du gris au bleu, avec une certaine variabilité jaune. Il a une taille de grain moyenne à grossière et est composé de quartz, de feldspaths potassiques, de plagioclases, de calcite et parfois de dolomite, de pyrite et de goethite.",
-          "C'est le faciès principal utilisé sur la cathédrale de Lausanne, y compris la tour sud du transept."
+          "Ce type de roche varie en couleur du gris au bleu, avec quelques variégations jaunes. Elle a une granulométrie moyenne à grossière et consiste en quartz, feldspaths potassiques, plagioclases, calcite, et occasionnellement dolomite, pyrite et goethite.",
+          "C'est le faciès principal utilisé sur la Cathédrale de Lausanne, incluant la tour sud du transept."
         ]
       },
       "quarry2": {
         "title": "Molasse d'Ursy",
         "body": [
-          "Ce faciès, auquel le nom de molasse d'Ursy est attribué selon les archives, est un faciès à stratifications plates alternant des niveaux de finesse et de grossièreté. Ce faciès gris-vert a une patine rose violacée.",
-          "Il est utilisé dans la partie inférieure du contrefort sud-est de la façade est."
+          "Ce faciès, auquel le nom de molasse d'Ursy est attribué selon les archives, est un faciès avec des stratifications plates alternant des niveaux à granulométrie fine et des niveaux grossiers. Ce faciès gris-vert a une patine violacée-rose.",
+          "Ce faciès ne se trouve que dans la partie basale du contrefort sud-est de la façade est."
         ]
       },
       "quarry3": {
-        "title": "Molasse Grise de Lausanne",
+        "title": "Molasse de Zoug",
         "body": [
-          "Ce faciès d'âge aquitain se dépose dans la partie sud du plateau suisse dans l'unité géologique USM (molasse d'eau douce inférieure). Le milieu de dépôt est continental, dans un environnement de plaine alluviale de bas relief, associé à des forêts, des marais et des rivières de forme moyenne."
+          "Aussi appelée Molasse Granitique, ces faciès de grès sont les vestiges de l'altération et de l'érosion intenses des Alpes pendant l'orogenèse alpine — l'événement géologique qui a façonné la chaîne de montagnes alpine. Composés de sables aux granulométries diverses, ils présentent également une large gamme de compositions minérales, incluant quartz, feldspaths, et des quantités variables de micas, tous cimentés par la calcite.",
+          "Les structures sédimentaires sont également variées, avec certaines formations présentant des strates qui s'entrecroisent, tandis que d'autres sont plates ou complètement absentes. Avec le temps, la pierre développe une patine rosâtre distinctive, ajoutant à son attrait visuel et historique."
         ]
       }
     }
   },
   "ui": {
-    "navMenuButton": "Menu de navigation",
+    "navMenuButton": "Menu de Navigation",
     "closeNavMenu": "Fermer le menu de navigation"
   }
 }

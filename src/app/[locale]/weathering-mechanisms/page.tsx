@@ -25,8 +25,8 @@ export default makePage((dictionary) => {
           },
           {
             target: '#',
-            label: pages.weatheringMechanisms.actions.saltCrystallization,
             disabled: true,
+            label: pages.weatheringMechanisms.actions.saltCrystallization,
           },
           {
             target: '/atmospheric-pollution',
@@ -34,8 +34,8 @@ export default makePage((dictionary) => {
           },
           {
             target: '#',
-            label: pages.weatheringMechanisms.actions.biologicalAttack,
             disabled: true,
+            label: pages.weatheringMechanisms.actions.biologicalAttack,
           },
         ],
       }}

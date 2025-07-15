@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.degradationTypes.title}
       text={pages.degradationTypes.biodeterioration.description}
-      backButtonTarget="/degradation-types/sanding"
+      backButtonTarget="/degradation-types/scaling"
       actions={[
         {
           type: 'back',
