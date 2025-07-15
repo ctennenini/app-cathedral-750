@@ -9,7 +9,7 @@ export default makePage((dictionary) => {
   const links: TitlePageLayoutProps['links'] = [
     {
       target:
-        'https://www.lake-geneva-switzerland.com/lausanne/visit-lausanne-cathedral-the-largest-gothic-church-in-switzerland/',
+        'https://www.cathedrale-lausanne.ch/accueil/',
       label: page.actions.website,
       external: true,
     },
