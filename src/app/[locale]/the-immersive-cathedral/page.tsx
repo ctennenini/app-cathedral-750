@@ -16,7 +16,7 @@ export default makePage((dictionary) => {
     },
     {
       target: '/video-gallery',
-      label: page.actions.vaults,
+      label: page.actions.videoGallery,
     },
   ]
 

@@ -21,8 +21,16 @@
       "actions": {
         "molasses": "Molasse and its weathering",
         "conservation": "Conservation strategies",
-        "vaults": "The vaults of the cathedral"
+        "vaults": "The vaults of the cathedral",
+        "videoGallery": "Meet the experts"
       }
+    },
+    "videoGallery": {
+      "title": "Meet the experts",
+      "subtitle": "Explanatory video",
+      "description": [
+        "..."
+      ]
     },
     "videoTest": {
       "title": "The degradation of the Facades",

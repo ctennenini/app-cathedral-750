@@ -2,484 +2,492 @@
   "pages": {
     "start": {
       "title": [
-        "The Cathedral",
-        "of Lausanne"
+        "Die Kathedrale",
+        "von Lausanne"
       ],
-      "subtitle": "Center for Digital Information",
+      "subtitle": "Zentrum für Digitale Information",
       "actions": {
-        "website": "Cathedral Web Site",
-        "birthday": "750th Birthday",
-        "immersive": "The Immersive Cathedral"
+        "website": "Kathedrale Webseite",
+        "birthday": "750. Geburtstag",
+        "immersive": "Die Immersive Kathedrale"
       }
     },
     "immersiveCathedral": {
       "title": [
-        "The Immersive",
-        "Cathedral"
+        "Die Immersive",
+        "Kathedrale"
       ],
-      "subtitle": "Main Menu",
+      "subtitle": "Hauptmenü",
       "actions": {
-        "molasses": "Molasse and its weathering",
-        "conservation": "Conservation strategies",
-        "vaults": "The vaults of the cathedral"
+        "molasses": "Molasse und ihre Verwitterung",
+        "conservation": "Erhaltungsstrategien",
+        "vaults": "Die Gewölbe der Kathedrale",
+        "videoGallery": "Meet the experts"
       }
     },
-    "videoTest": {
+    "videoGallery": {
       "title": "The degradation of the Facades",
       "subtitle": "Explanatory video",
       "description": [
         "In this video <b>Mr.Girardet</b> - conservator of Lausanne Cathedral - will describe and show us the degradations they have monitor, undestand and take care of"
       ]
     },
-    "interactiveMenu": {
-      "title": "Interactive Tour",
+    "videoTest": {
+      "title": "Die Degradation der Fassaden",
+      "subtitle": "Erklärvideo",
       "description": [
-        "Now it is your time to go out and explore the immersive experience and interact with the cathedral",
-        "Scan the <b>QR code and get te 3D map</b> of the spots you need to reach"
+        "In diesem Video wird <b>Herr Girardet</b> - Konservator der Kathedrale Lausanne - die Degradationen beschreiben und zeigen, die sie überwacht, verstanden und behandelt haben"
+      ]
+    },
+    "interactiveMenu": {
+      "title": "Interaktive Tour",
+      "description": [
+        "Jetzt ist es an der Zeit, hinaus zu gehen und die immersive Erfahrung zu erkunden und mit der Kathedrale zu interagieren",
+        "Scannen Sie den <b>QR-Code und erhalten Sie die 3D-Karte</b> der Orte, die Sie erreichen müssen"
       ]
     },
     "stoneConservation": {
-      "title": "Stones Conservation",
+      "title": "Steinkonservierung",
       "description": [
         [
-          "Conservation efforts often go unnoticed as they focus on preserving historical authenticity without altering a monument's appearance. ",
-          "This discretion means the public, interested in maintaining built heritage, is often unaware of the work and challenges involved. ",
-          "The type of intervention depends on the gravity and the kind of degradation that the stone experienced."
+          "Konservierungsbemühungen bleiben oft unbemerkt, da sie sich darauf konzentrieren, die historische Authentizität zu bewahren, ohne das Aussehen eines Denkmals zu verändern. ",
+          "Diese Diskretion bedeutet, dass die Öffentlichkeit, die am Erhalt des gebauten Erbes interessiert ist, oft nicht über die damit verbundene Arbeit und die Herausforderungen informiert ist. ",
+          "Die Art der Intervention hängt von der Schwere und Art der Degradation ab, die der Stein erfahren hat."
         ],
         [
-          "The experts analyse the stone conditions and pick the right procedures"
+          "Die Experten analysieren die Steinzustände und wählen die richtigen Verfahren aus"
         ]
       ]
     },
     "consolidation": {
-      "title": "Consolidation",
+      "title": "Konsolidierung",
       "description": [
-        "When the only  surface is scaling, the degradation is not considered severe and usually minimum intervention are needed",
-        "Application of consolidant products to increase the strength of the stone and mortar patches to close the gaps are used"
+        "Wenn nur die Oberfläche abblättert, wird die Degradation nicht als schwerwiegend angesehen und normalerweise sind minimale Eingriffe erforderlich",
+        "Die Anwendung von Konsolidierungsmitteln zur Erhöhung der Steinfestigkeit und Mörtelflicken zum Schließen der Lücken werden verwendet"
       ]
     },
     "scalingFixing": {
-      "title": "Scaling fixing",
+      "title": "Abblätterungsbehebung",
       "description": [
-        "When the surface appears healthy but there is scaling a few cm in depth, fixing intervention is needed to prevent the scale from detaching completely.",
-        "A special system of combination of pins and consolidants is used and interventions are invidibles at the end"
+        "Wenn die Oberfläche gesund erscheint, aber einige cm tiefe Abblätterungen aufweisen, ist eine Fixierungsintervention erforderlich, um zu verhindern, dass sich die Schuppe vollständig ablöst.",
+        "Ein spezielles System aus einer Kombination von Stiften und Konsolidierungsmitteln wird verwendet und die Eingriffe sind am Ende unsichtbar"
       ]
     },
     "mortar": {
-      "title": "Mortar replacement",
+      "title": "Mörtelersatz",
       "description": [
-        "When the first centimetres of the surface is degraded and not preservable, the damaged part is replaced with special mortars.",
-        "To improve adherence and resistance, a special grid is constructed to “reinforce” the mortar."
+        "Wenn die ersten Zentimeter der Oberfläche degradiert und nicht erhaltbar sind, wird der beschädigte Teil durch spezielle Mörtel ersetzt.",
+        "Um die Haftung und Widerstandsfähigkeit zu verbessern, wird ein spezielles Gitter konstruiert, um den Mörtel zu „verstärken."
       ]
     },
     "substitution": {
-      "title": "Stone replacement",
+      "title": "Steinersatz",
       "description": [
-        "When the stone is highly damaged and/or has a great artistic and historic value, it is substituted entirely.",
-        "If historical relevants the substituted pieces is preserved in the lapidarium. "
+        "Wenn der Stein stark beschädigt ist und/oder einen großen künstlerischen und historischen Wert hat, wird er vollständig ersetzt.",
+        "Wenn historisch relevant, wird das ersetzte Stück im Lapidarium aufbewahrt."
       ]
     },
     "conservationStrategies": {
       "title": [
-        "Conservation Strategies"
+        "Erhaltungsstrategien"
       ],
       "description": [
-        "The Lausanne Cathedral, as we see it today, is the result of centuries of ongoing conservation efforts.",
-        "This section will explore the evolution of preservation practices and the fascinating journey of conserving this architectural heritage, from the more invasive, stylistic restorations of the past to today's philosophy of minimal intervention."
+        "Die Kathedrale von Lausanne, wie wir sie heute sehen, ist das Ergebnis jahrhundertelanger kontinuierlicher Erhaltungsbemühungen.",
+        "Dieser Abschnitt wird die Evolution der Konservierungspraktiken und die faszinierende Reise der Erhaltung dieses architektonischen Erbes erforschen, von den invasiveren, stilistischen Restaurierungen der Vergangenheit bis zur heutigen Philosophie der minimalen Intervention."
       ],
       "actions": {
-        "past": "Past restoration works",
-        "water": "Water managment systems",
-        "stone": "Stone conservation procedures"
+        "past": "Vergangene Restaurierungsarbeiten",
+        "water": "Wassermanagementsysteme",
+        "stone": "Steinkonservierungsverfahren"
       }
     },
     "waterManagement": {
       "title": [
-        "Rainwater Management Features"
+        "Regenwasser-Management-Einrichtungen"
       ],
       "description": [
-        "The management of rainwater at the Lausanne Cathedral has been a critical aspect of its conservation throughout the centuries, primarily due to the use of molasse stone, which is particularly susceptible to decomposition when exposed to rain.",
-        "This necessity was emphasised by Viollet-le-Duc in his 1872 restoration plan, where he stressed the importance of preserving the materials in an absolute manner and directing the water to the ground, using numerous conduits arranged with the greatest attention."
+        "Das Management von Regenwasser in der Kathedrale von Lausanne war über die Jahrhunderte ein kritischer Aspekt ihrer Erhaltung, hauptsächlich aufgrund der Verwendung von Molassestein, der besonders anfällig für Zersetzung ist, wenn er Regen ausgesetzt wird.",
+        "Diese Notwendigkeit wurde von Viollet-le-Duc in seinem Restaurierungsplan von 1872 betont, wo er die Wichtigkeit betonte, die Materialien auf absolute Weise zu bewahren und das Wasser zum Boden zu leiten, unter Verwendung zahlreicher Leitungen, die mit größter Aufmerksamkeit angeordnet wurden."
       ],
       "actions": {
-        "evolution": "Evolution of Rainwater Features",
-        "types": "Types of Rainwater Features",
-        "contemporary": "Challenges and Contemporary Solutions"
+        "evolution": "Evolution der Regenwasser-Einrichtungen",
+        "types": "Arten von Regenwasser-Einrichtungen",
+        "contemporary": "Herausforderungen und Zeitgenössische Lösungen"
       }
     },
     "molassesAndItsWeathering": {
-      "title": "Molasse and its weathering",
+      "title": "Molasse und ihre Verwitterung",
       "description": [
-        "The cathedral of Lausanne was built with a local molasse sandstone, that is particularly sensitive to water.",
-        "You may obtain directly here information on that stone as well as on its weathering by clicking on the corresponding buttons",
-        "You may also go directly to an interactive discovery App to use as you walk around the cathedral."
+        "Die Kathedrale von Lausanne wurde mit einem lokalen Molasse-Sandstein gebaut, der besonders wasserempfindlich ist.",
+        "Sie können hier direkt Informationen über diesen Stein sowie über seine Verwitterung erhalten, indem Sie auf die entsprechenden Schaltflächen klicken",
+        "Sie können auch direkt zu einer interaktiven Entdeckungs-App gehen, die Sie beim Spaziergang um die Kathedrale verwenden können."
       ],
       "actions": {
-        "sandstone": "Molasse Sandstone",
-        "weathering": "Weathering of Molasse",
-        "interactive": "Interactive Tour"
+        "sandstone": "Molasse-Sandstein",
+        "weathering": "Verwitterung der Molasse",
+        "interactive": "Interaktive Tour"
       }
     },
     "molasseSandstone": {
-      "title": "Le Grès de Molasse",
+      "title": "Der Molasse-Sandstein",
       "description": [
         [
-          "La formation rocheuse de molasse en Suisse s’étend au nord des Alpes, de la région du Lac Léman à l’ouest jusqu’au Lac de Constance à l’est.",
-          "Elle comprend une variété de grès liés à la calcite, qui peuvent contenir des argiles gonflantes."
+          "Die Schweizer Molasse-Gesteinsformation erstreckt sich nördlich der Alpen von der Genfersee-Region im Westen der Schweiz bis zum Bodensee im Osten.",
+          "Sie umfasst eine Vielfalt von kalzit-gebundenen Sandsteinen, die quellende Tone enthalten können."
         ],
         [
-          "Dans le cadre de cette formation, la « Molasse grise de Lausanne » a été extraite juste à l’extérieur du centre-ville médiéval et utilisée pour ériger la Cathédrale de Lausanne.",
-          "Au fil des siècles, des grès de la même typologie ont été extraits de différentes carrières locales autour du centre médiéval et utilisés pour des travaux de modification et d’entretien de la Cathédrale."
+          "Als Teil dieser Formation wurde die „Molasse grise de Lausanne direkt außerhalb des mittelalterlichen Stadtzentrums abgebaut und zum Bau der Kathedrale Lausanne verwendet.",
+          "Über die Jahrhunderte wurden Sandsteine derselben Typologie aus verschiedenen lokalen Steinbrüchen um das mittelalterliche Zentrum herum gebracht und für Modifikations- und Wartungsarbeiten an der Kathedrale verwendet."
         ]
       ],
       "actions": {
-        "geologicalInformation": "Informations géologiques",
-        "properties": "Propriétés de la molasse",
-        "typesOfStones": "Types de pierres",
-        "interactive": "Visite interactive"
+        "geologicalInformation": "Geologische Informationen",
+        "properties": "Eigenschaften der Molasse",
+        "typesOfStones": "Steinarten",
+        "interactive": "Interaktive Tour"
       },
       "stonesOfTheCathedral": {
-        "title": "Les Pierres de la Cathédrale",
+        "title": "Steine der Kathedrale",
         "description": [
           [
-            "La Cathédrale de Lausanne est construite à partir de différentes pierres provenant de carrières situées dans toute la Suisse et dans certaines régions d’Allemagne.",
-            "Au 19e siècle, le grès de molasse régional des éléments architecturaux exposés de la Cathédrale a été remplacé par des calcaires et des grès « plus durs » de la région du canton de Vaud."
+            "Die Kathedrale von Lausanne ist aus einer Vielzahl von Steinen gebaut, die aus verschiedenen Steinbrüchen in der ganzen Schweiz und einigen Teilen Deutschlands stammen.",
+            "Während des 19. Jahrhunderts wurde der regionale Molasse-Sandstein der exponierten architektonischen Elemente der Kathedrale durch Kalksteine und härtere Sandsteine aus der weiteren Region des Kantons Waadt ersetzt."
           ],
           [
-            "Au 20e siècle, en raison de la rareté des carrières régionales, le remplacement général du grès de molasse local pour les travaux d’entretien et de restauration est devenu une pratique courante.",
-            "Une variété de grès de substitution provenant de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) a été utilisée."
+            "Im 20. Jahrhundert wurde aufgrund der Knappheit regionaler Steinbrüche die allgemeine Substitution des lokalen Molasse-Sandsteins für Wartung und Restaurierung zur gängigen Praxis.",
+            "Eine Vielfalt von Ersatz-Sandsteinen aus Freiburg, Bern, Zug und Hannover (Oberkirchen, Deutschland) wurde stattdessen verwendet."
           ]
         ],
-        "testYourKnowledge": "Testez vos connaissances !"
+        "testYourKnowledge": "Testen Sie Ihr Wissen!"
       },
       "molasseGris": {
-        "title": "Molasse Grise",
+        "title": "Graue Molasse",
         "description": [
-          "C’est un grès molassique de Lausanne qui a été utilisé dans la Cathédrale au 12e siècle (période gothique).",
-          "C’est une pierre sédimentaire prédominante sur la tour sud du transept. Ce grès provient très probablement des carrières voisines.",
-          "Cette pierre est particulièrement sensible à l’eau en raison de la présence d’argiles gonflantes."
+          "Es ist ein molassischer Sandstein aus Lausanne und wurde im 12. Jahrhundert n. Chr. (Gotik) in die Kathedrale eingebaut.",
+          "Es ist eine Art Sedimentgestein, das hauptsächlich am Südturm des Querschiffs vorherrscht. Dieser Sandstein stammte höchstwahrscheinlich aus den nahegelegenen Steinbrüchen.",
+          "Dieser Stein ist aufgrund der Anwesenheit von quellenden Tonen besonders wasserempfindlich."
         ]
       },
       "geologicalInformation": {
-        "title": "Informations Géologiques",
+        "title": "Geologische Informationen",
         "description": [
           [
-            "La géologie de la Suisse couvre les Alpes centrales, un segment de la chaîne alpine situé entre les Alpes occidentales de France et d’Italie et les Alpes orientales d’Italie, d’Autriche et d’Allemagne.",
-            "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les principales unités tectoniques et présente des paysages emblématiques pour lesquels les Alpes sont connues."
+            "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette zwischen den Westalpen Frankreichs und Italiens und den Ostalpen Italiens, Österreichs und Deutschlands.",
+            "In diesem Segment ist die Alpenkette besonders schmal, enthält aber alle wichtigen tektonischen Einheiten und zeigt markante Landschaften und Landformen, für die die Alpen bekannt sind."
           ],
           [
-            "Au nord, le Plateau suisse s’étend du Lac Léman à Berne, Zurich et au Lac de Constance, descendant de 600 à 400 m d’altitude.",
-            "Ce plateau correspond à ce qu’on appelle le Bassin de la Molasse.",
-            "<b>Cliquez sur la carte</b> pour en savoir plus sur les différentes molasses, les carrières et leurs caractéristiques."
+            "Im Norden erstreckt sich das Schweizer Plateau vom Genfersee bis Bern, Zürich und den Bodensee und verjüngt sich von etwa 600 auf 400 m ü. M. Dieses Plateau entspricht dem sogenannten Molassebecken.",
+            "<b>Klicken Sie auf die Karte</b>, um mehr über die verschiedenen Molassen, die Steinbrüche und ihre Eigenschaften zu erfahren."
           ],
           [
-            "Les faciès de la molasse résultent de l’altération et de l’érosion des Alpes lors de l’orogenèse alpine, et sont constitués de sables de granulométrie variable (de fine à grossière) et de minéralogie également variable (quartz, feldspaths, avec plus ou moins de micas), cimentés avec de la calcite."
+            "Die Molasse-Fazies resultieren aus der Veränderung und Erosion der Alpen während der alpinen Orogenese und bestehen aus Sanden mit variabler Partikelgröße (von fein bis grob) und auch variabler Mineralogie (Quarz, Feldspäte, mit mehr oder weniger Glimmer), die mit Kalzit zementiert sind."
           ],
           [
-            "Les processus géologiques impliqués dans la formation du Bassin de la Molasse remontent aux époques de l’Oligocène et du Miocène.",
-            "<b>Quatre grands groupes</b> peuvent être identifiés en fonction des conditions de sédimentation (en milieu marin ou en eau douce)."
+            "Die geologischen Prozesse, die an der Bildung des Molassebeckens beteiligt waren, reichen zurück bis in die Oligozän- und Miozän-Zeitalter.",
+            "<b>Vier Hauptgruppen</b> können entsprechend den beteiligten Sedimentationsbedingungen (marine oder Süßwasserbedingungen) identifiziert werden."
           ]
         ]
       }
-    }
-  },
+    },
     "weatheringOfMolasse": {
-        "title": "Weathering of Molasse",
-        "description": [
-            "The process of degradation is a <b>complex system that involves</b> different factors.",
-            "The weathering mechanisms are the physical/chemical processes involved in the degradation.",
-            "The degradation type (or patterns) refers to how damage manifest in a larger scale."
-        ],
-        "actions": {
-            "mechanisms": "Weathering Mechanisms",
-            "types": "Degradation Types"
-        }
+      "title": "Verwitterung der Molasse",
+      "description": [
+        "Der Degradationsprozess ist ein <b>komplexes System, das</b> verschiedene Faktoren beinhaltet.",
+        "Die Verwitterungsmechanismen sind die physikalischen/chemischen Prozesse, die an der Degradation beteiligt sind.",
+        "Der Degradationstyp (oder Muster) bezieht sich darauf, wie sich Schäden in größerem Maßstab manifestieren."
+      ],
+      "actions": {
+        "mechanisms": "Verwitterungsmechanismen",
+        "types": "Degradationstypen"
+      }
     },
     "degradationTypes": {
-        "title": "Degradation Types",
-        "description": [
-            [
-                "The different weathering mechanisms do not always have an univocal correlation with the <b>degradation pattern observed</b>.",
-                "These are strongly related to the micro-climate the stone is subjected to and in consequence their position in the building."
-            ],
-            [
-                "The compresence in the same point of different degradation pattern can lead their identification difficult.",
-                "The major degradation patterns observed on the cathedral can be classified according these four classes."
-            ]
+      "title": "Degradationstypen",
+      "description": [
+        [
+          "Die verschiedenen Verwitterungsmechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Degradationsmuster</b>.",
+          "Diese sind stark mit dem Mikroklima verbunden, dem der Stein ausgesetzt ist, und folglich mit ihrer Position im Gebäude."
         ],
-        "testYourKnowledge": "Test your knowledge!",
-        "blackCrust": {
-            "title": "Black Crust",
-            "description": [
-                "Black crusts are classified as kind of crust developing generally on areas protected against direct rainfall or water runoff in urban environment.",
-                "Black crusts usually adhere firmly to the substrate. They are composed mainly of particles from the atmosphere, trapped into a gypsum (CaSO4.2H2O) matrix."
-            ]
-        },
-        "scaling": {
-            "title": "Scaling",
-            "description": [
-                "Detachment of stone as a scale or a stack of scales, not following any stone structure and detaching like fish scales or parallel to the stone surface. The thickness of a scale is generally of millimetric to centimetric scale.",
-                "It can be observed in areas exposed both to rain and sun. It represents the most challenging degradation pattern to evaluate, understand and restore."
-            ]
-        },
-        "sanding": {
-            "title": "Sanding",
-            "description": [
-                "In some areas of the Cathedral the material suffer to phenomena of decohesion of the grain of the stone.",
-                "The stone looks less compact and looses external surface layers"
-            ]
-        },
-        "biodeterioration": {
-            "title": "Biodeterioration",
-            "description": [
-                "In the areas more hit by the rain or where water percolates, he microorganisms such as fungi and musses find their natural humid environment to proliferate.",
-                "The resultant damage is not extremely dangerous for stone preservation but can create unpleasant aesthetic drawbacks."
-            ]
-        }
+        [
+          "Das Vorhandensein verschiedener Degradationsmuster am selben Punkt kann ihre Identifizierung erschweren.",
+          "Die hauptsächlichen Degradationsmuster, die an der Kathedrale beobachtet werden, können entsprechend diesen vier Klassen klassifiziert werden."
+        ]
+      ],
+      "testYourKnowledge": "Testen Sie Ihr Wissen!",
+      "blackCrust": {
+        "title": "Schwarze Kruste",
+        "description": [
+          "Schwarze Krusten werden als eine Art Kruste klassifiziert, die sich normalerweise in Bereichen entwickelt, die vor direktem Regenfall oder Wasserabfluss in städtischer Umgebung geschützt sind.",
+          "Schwarze Krusten haften normalerweise fest am Substrat. Sie bestehen hauptsächlich aus Partikeln aus der Atmosphäre, die in einer Gips-Matrix (CaSO4.2H2O) eingeschlossen sind."
+        ]
+      },
+      "scaling": {
+        "title": "Abblätterung",
+        "description": [
+          "Ablösung von Stein als Schuppe oder Stapel von Schuppen, die keiner Steinstruktur folgt und sich wie Fischschuppen oder parallel zur Steinoberfläche ablöst. Die Dicke einer Schuppe ist normalerweise im Millimeter- bis Zentimeterbereich.",
+          "Sie kann in Bereichen beobachtet werden, die sowohl Regen als auch Sonne ausgesetzt sind. Sie stellt das herausforderndste Degradationsmuster dar, das zu bewerten, verstehen und restaurieren ist."
+        ]
+      },
+      "sanding": {
+        "title": "Sandung",
+        "description": [
+          "In einigen Bereichen der Kathedrale leidet das Material unter Phänomenen der Dekohäsion der Steinkörner.",
+          "Der Stein erscheint weniger kompakt und verliert äußere Oberflächenschichten"
+        ]
+      },
+      "biodeterioration": {
+        "title": "Biodeterioration",
+        "description": [
+          "In den Bereichen, die mehr vom Regen getroffen werden oder wo Wasser durchsickert, finden Mikroorganismen wie Pilze und Moose ihre natürliche feuchte Umgebung zur Vermehrung.",
+          "Der resultierende Schaden ist nicht extrem gefährlich für die Steinerhaltung, kann aber unangenehme ästhetische Nachteile schaffen."
+        ]
+      }
     },
     "weatheringMechanisms": {
-        "title": [
-            "Weathering",
-            "Mechanisms"
-        ],
-        "description": [
-            "Water is involved in all types of mechanisms of stone weathering.",
-            "You can get further information on each of them by clicking on the <b>corresponding buttons</b>."
-        ],
-        "actions": {
-            "freezeThaw": "Freeze - Thaw Action",
-            "swellingClays": "Swelling Clays",
-            "saltCrystallization": "Salt Crystallization",
-            "atmosphericPollution": "Atmospheric Pollution",
-            "biologicalAttack": "Biological Attack"
+      "title": [
+        "Verwitterungs-",
+        "mechanismen"
+      ],
+      "description": [
+        "Wasser ist an allen Arten von Steinverwitterungsmechanismen beteiligt.",
+        "Sie können weitere Informationen zu jedem von ihnen erhalten, indem Sie auf die <b>entsprechenden Schaltflächen</b> klicken."
+      ],
+      "actions": {
+        "freezeThaw": "Frost-Tau-Wirkung",
+        "swellingClays": "Quellende Tone",
+        "saltCrystallization": "Salzkristallisation",
+        "atmosphericPollution": "Atmosphärische Verschmutzung",
+        "biologicalAttack": "Biologischer Angriff"
+      },
+      "freezeThaw": {
+        "title": "Frost-Tau-Wirkung",
+        "trappedWater": {
+          "title": "Eingeschlossenes Wasser",
+          "description": [
+            [
+              "Gefrierendes Wasser in porösen Materialien kann durch verschiedene Mechanismen Schäden verursachen.",
+              "Der erste und dramatischste wird „Wassereinschluss genannt. Er bezieht sich auf eine Situation ähnlich der einer Glasflasche, die mit Wasser gefüllt und in einen Kühlschrank gestellt wird."
+            ],
+            [
+              "Mit anderen Worten, das Gefrieren erfolgt von allen Seiten, die Flüssigkeit ist eingeschlossen, und die Zunahme des Molvolumens von flüssigem Wasser zu Eis lässt die Flasche zerbrechen.",
+              "Solche Situationen sind bei Denkmälern selten, mit der möglichen Ausnahme feiner dekorativer Elemente, die zuvor mit Wasser gesättigt waren, wie Fialen und Springbrunnen.",
+              "Schauen Sie sich das Video an, um mehr zu erfahren."
+            ]
+          ]
         },
-        "freezeThaw": {
-            "title": "Freeze - Thaw Action",
-            "trappedWater": {
-                "title": "Trapped Water",
-                "description": [
-                    [
-                        "Freezing water in porous materials can cause damage by various mechanisms.",
-                        "The first and most dramatic is called “water entrapment.” It refers to a situation similar to that of a glass bottle filled with water and placed in a cooler."
-                    ],
-                    [
-                        "In other words, freezing occurs from all sides, the liquid is trapped, and the increase in molar volume from liquid water to ice causes the bottle to break.",
-                        "Such situations are rare on monuments, with the possible exception of fine decorative elements previously saturated with water, as finials and fountains.",
-                        "Watch the video to know more."
-                    ]
-                ]
-            },
-            "hydraulicPressure": {
-                "title": "Hydraulic Pressure",
-                "description": [
-                    [
-                        "Another situation also related to the change in molar volume is called hydraulic pressure.",
-                        "It occurs when growing ice pushes the liquid water still present through the porous network. The flow resistance leads to a pressure that depends on the size of the pores and the distance over which the water is pushed."
-                    ],
-                    [
-                        "For molasse, the pore size is large, which reduces this pressure.",
-                        "However, if these same stones are saturated with water, then the equivalent length of the saturated pores can be very large, which can lead to high hydraulic pressures if the cooling rate is fast enough.",
-                        "Watch the video to know more."
-                    ]
-                ]
-            },
-            "crystallizationPressure": {
-                "title": "Crystallization Pressure",
-                "description": [
-                    "Another situation in which frost can be damaging is the crystallization pressure. Under such conditions, low temperatures developed over long periods of time would be most damaging. Such situations are to be expected in colder climates than in Lausanne.",
-                    "Watch the video to know more."
-                ]
-            },
-            "temperatureGradient": {
-                "title": "Temperature Gradient",
-                "description": [
-                    [
-                        "Coarse porous materials, such as molasse, can be damaged during freezing if a temperature gradient is sustained.",
-                        "Water can then move from an unfrozen region to feed the growth of ice trapped in the pores of a frozen region. This is analogous to frost heave but also can cause damage in sedimentary building stones and in geological settings."
-                    ],
-                    [
-                        "Related situations can lead to forming ice lenses between a moist substrate (stone cores) and a surface subject to temperature variations (façade). The growth of such lenses can accelerate the detachment of pre-existing scales without the temperatures having to be very low.",
-                        "Watch the video to know more."
-                    ]
-                ]
-            },
-            "misc": {
-                "qrCodePrompt": "Scan the QR code to watch the video!"
-            }
+        "hydraulicPressure": {
+          "title": "Hydraulischer Druck",
+          "description": [
+            [
+              "Eine andere Situation, die auch mit der Änderung des Molvolumens zusammenhängt, wird hydraulischer Druck genannt.",
+              "Sie tritt auf, wenn wachsendes Eis das noch vorhandene flüssige Wasser durch das poröse Netzwerk drückt. Der Fließwiderstand führt zu einem Druck, der von der Porengröße und der Entfernung abhängt, über die das Wasser geschoben wird."
+            ],
+            [
+              "Für Molasse ist die Porengröße groß, was diesen Druck reduziert.",
+              "Wenn jedoch dieselben Steine mit Wasser gesättigt sind, kann die äquivalente Länge der gesättigten Poren sehr groß sein, was zu hohen hydraulischen Drücken führen kann, wenn die Abkühlungsrate schnell genug ist.",
+              "Schauen Sie sich das Video an, um mehr zu erfahren."
+            ]
+          ]
+        },
+        "crystallizationPressure": {
+          "title": "Kristallisationsdruck",
+          "description": [
+            "Eine andere Situation, in der Frost schädlich sein kann, ist der Kristallisationsdruck. Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt werden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
+            "Schauen Sie sich das Video an, um mehr zu erfahren."
+          ]
+        },
+        "temperatureGradient": {
+          "title": "Temperaturgradient",
+          "description": [
+            [
+              "Grobe poröse Materialien wie Molasse können beim Gefrieren beschädigt werden, wenn ein Temperaturgradient aufrechterhalten wird.",
+              "Wasser kann dann von einem nicht gefrorenen Bereich wandern, um das Wachstum von Eis zu nähren, das in den Poren eines gefrorenen Bereichs eingeschlossen ist. Dies ist analog zur Frosthebung, kann aber auch Schäden in sedimentären Bausteinen und in geologischen Umgebungen verursachen."
+            ],
+            [
+              "Verwandte Situationen können zur Bildung von Eislinsen zwischen einem feuchten Substrat (Steinkernen) und einer Oberfläche führen, die Temperaturschwankungen unterworfen ist (Fassade). Das Wachstum solcher Linsen kann die Ablösung bereits vorhandener Schuppen beschleunigen, ohne dass die Temperaturen sehr niedrig sein müssen.",
+              "Schauen Sie sich das Video an, um mehr zu erfahren."
+            ]
+          ]
+        },
+        "misc": {
+          "qrCodePrompt": "Scannen Sie den QR-Code, um das Video anzuschauen!"
         }
+      }
     },
     "atmosphericPollution": {
-        "title": "Atmospheric Pollution",
-        "acidRain": {
-            "title": "Acid Rain",
-            "description": [
-                "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
-                "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
-                "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
-            ],
-            "legendItems": {
-                "swellingClays": "Swelling Clays",
-                "calcite": "Calcitic Cement",
-                "silica": "Silica Grains"
-            }
-        },
-        "microDust": {
-            "title": "Microparticles and Dust",
-            "description": [
-                "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
-                "This led to the formation of the so called “black crusts”."
-            ]
+      "title": "Atmosphärische Verschmutzung",
+      "acidRain": {
+        "title": "Saurer Regen",
+        "description": [
+          "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
+          "Steine, die Kalzit enthalten, wurden aufgrund der Auflösung dieser Mineralien in Kontakt mit sauren Lösungen angegriffen.",
+          "Im Fall des Molasse-Sandsteins könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins verstärkte."
+        ],
+        "legendItems": {
+          "swellingClays": "Quellende Tone",
+          "calcite": "Kalzitischer Zement",
+          "silica": "Silikatkörnchen"
         }
+      },
+      "microDust": {
+        "title": "Mikropartikel und Staub",
+        "description": [
+          "Ein weiteres Problem im Zusammenhang mit der Luftverschmutzung, dessen Auswirkung in den letzten 30 Jahren abgenommen hat, ist das Vorhandensein von Mikropartikeln aus Staubverbrennungsprozessen, die sich auf den Steinen ablagern und/oder in die Ausblühungen eingeschlossen werden, die aufgrund der Kristallisation von Salzen an der Oberfläche der Gebäude entstehen.",
+          "Dies führte zur Bildung der sogenannten „schwarzen Krusten."
+        ]
+      }
     },
     "swellingClays": {
-        "title": "Swelling Clays",
-        "description": [
-            [
-                "The stone used in Lausanne Cathedral during the Middle Ages is Molasse sandstone. Its microstructure consists of different siliceous materials bound together by a calcite-clay binder.",
-                "The presence of swelling clay determines the formation of stress in the material during wetting and drying due to rain. This stress, in the case of pre-existing cracks, can propagate them and cause scaling."
-            ],
-            [
-                "Swelling clays, like smectite, are a particular type of clay that can absorb water and expand. They are part of the family of Phyllosilicates (or sheet silicates), a group of minerals that have a unique layered structure.",
-                "Imagine them as tiny, flat sheets stacked on top of each other like a deck of cards."
-            ],
-            [
-                "In the case of swelling clays, due to some particular asset of the layers, in contact with water, they have the ability to pull the water molecules in between their sheets, causing the entire stack to puff up or swell.",
-                " The consequence is the swelling of the entire stone."
-            ]
+      "title": "Quellende Tone",
+      "description": [
+        [
+          "Der Stein, der in der Kathedrale von Lausanne während des Mittelalters verwendet wurde, ist Molasse-Sandstein. Seine Mikrostruktur besteht aus verschiedenen kieselhaltigen Materialien, die durch ein Kalzit-Ton-Bindemittel zusammengehalten werden.",
+          "Das Vorhandensein von quellendem Ton bestimmt die Bildung von Spannungen im Material während der Benetzung und Trocknung aufgrund von Regen. Diese Spannung kann im Fall von bereits vorhandenen Rissen diese ausbreiten und Abblätterung verursachen."
         ],
-        "labels": {
-            "wetting": "Wetting",
-            "drying": "Drying",
-            "dryBlock": "Dry Block",
-            "wetBlock": "Wet Block",
-            "buckling": "Buckling",
-            "peeling": "Peeling",
-            "mudCracking": "Mud Cracking",
-            "dry": "Dry",
-            "wet": "Wet",
-            "swelling": "Swelling 1.0 mm/m"
-        }
+        [
+          "Quellende Tone, wie Smektit, sind ein besonderer Tontyp, der Wasser absorbieren und sich ausdehnen kann. Sie gehören zur Familie der Phyllosilikate (oder Schichtsilikate), einer Gruppe von Mineralien mit einer einzigartigen Schichtstruktur.",
+          "Stellen Sie sich sie als winzige, flache Blätter vor, die übereinander gestapelt sind wie ein Kartenspiel."
+        ],
+        [
+          "Im Fall von quellenden Tonen haben sie aufgrund einiger besonderer Eigenschaften der Schichten in Kontakt mit Wasser die Fähigkeit, Wassermoleküle zwischen ihre Blätter zu ziehen, was das gesamte Stapel zum Aufquellen oder Schwellen bringt.",
+          "Die Konsequenz ist das Schwellen des gesamten Steins."
+        ]
+      ],
+      "labels": {
+        "wetting": "Benetzung",
+        "drying": "Trocknung",
+        "dryBlock": "Trockener Block",
+        "wetBlock": "Nasser Block",
+        "buckling": "Beulbildung",
+        "peeling": "Abblättern",
+        "mudCracking": "Schlammrissbildung",
+        "dry": "Trocken",
+        "wet": "Nass",
+        "swelling": "Schwellung 1,0 mm/m"
+      }
     },
-  "typesOfFeatures": {
-    "title": "Types de dispositifs de gestion des eaux de pluie",
-    "description": [
-      "Il existe sept types de dispositifs de gestion des eaux de pluie conçus pour éloigner l'eau des murs.",
-      "Cliquez sur le dispositif pour en savoir plus."
-    ],
-    "testYourKnowledge": "Testez vos connaissances !",
-    "cornices": {
-      "title": "Corniches",
+    "typesOfFeatures": {
+      "title": "Arten von Regenwasser-Einrichtungen",
       "description": [
-        "Ce sont des éléments à pente unique, horizontaux ou inclinés, situés à l'égout du toit."
-      ]
-    },
-    "copings": {
-      "title": "Couvertines",
-      "description": [
-        "Ce sont des éléments à double pente, horizontaux ou inclinés, situés au sommet des arcs-boutants, contreforts, arcs ou pignons."
-      ]
-    },
-    "chamferedDripEdges": {
-      "title": "Gouttières chanfreinées",
-      "description": [
-        "Ce sont des cordons (indiquant les étages intérieurs) que l'on trouve sur les élévations ou dans les archivoltes des baies."
-      ]
-    },
-    "slopedRetreats": {
-      "title": "Reculs inclinés",
-      "description": [
-        "Ils sont situés à chaque retrait d’un contrefort, massif ou appui. Ces éléments présentent souvent un haut degré de dysfonctionnement en raison de l'exposition et de l’érosion."
-      ]
-    },
-    "rotatingDripEdges": {
-      "title": "Gouttières tournantes",
-      "description": [
-        "Elles sont situées sur les ouvertures polylobées (trèfles ou quadrilobes) et sur la rosace."
-      ]
-    },
-    "slopedSupports": {
-      "title": "Supports inclinés",
-      "description": [
-        "Ils se trouvent au niveau des appuis des fenêtres cintrées dans les travées."
-      ]
-    },
-    "dripGlazes": {
-      "title": "Glacis d’égouttement",
-      "description": [
-        "Ils sont présents sur certaines parties adossées de la cathédrale."
-      ]
+        "Es gibt sieben Arten von Regenwasser-Management-Einrichtungen, die darauf ausgelegt sind, Wasser von den Wänden wegzuleiten.",
+        "Klicken Sie auf die Vorrichtung, um mehr darüber zu erfahren"
+      ],
+      "testYourKnowledge": "Testen Sie Ihr Wissen!",
+      "cornices": {
+        "title": "Gesimse",
+        "description": [
+          "Dies sind einfach geneigte Elemente, entweder horizontal oder geneigt, die sich an den Traufen befinden."
+        ]
+      },
+      "copings": {
+        "title": "Abdeckungen",
+        "description": [
+          "Dies sind doppelt geneigte Elemente, horizontal oder geneigt, die sich an der Spitze von Strebepfeilern, Widerlagern, Bögen oder Giebeln befinden."
+        ]
+      },
+      "chamferedDripEdges": {
+        "title": "Abgeschrägte Tropfkanten",
+        "description": [
+          "Dies sind Gurtgesimse (die die inneren Stockwerke anzeigen), die an Aufgängen oder in Archivolten von Buchten zu finden sind."
+        ]
+      },
+      "slopedRetreats": {
+        "title": "Geneigte Rücksprünge",
+        "description": [
+          "Diese befinden sich an jedem Rücksprung eines Strebepfeilers, Widerlagers oder Massivs. Diese Elemente zeigen durchgängig einen hohen Grad an Dysfunktion aufgrund von Exposition und Erosion."
+        ]
+      },
+      "rotatingDripEdges": {
+        "title": "Rotierende Tropfkanten",
+        "description": [
+          "Diese befinden sich an polylobaten (Kleeblatt oder Vierpass) Öffnungen und der Rosette."
+        ]
+      },
+      "slopedSupports": {
+        "title": "Geneigte Stützen",
+        "description": [
+          "Diese befinden sich auf den Schwellenhöhen der Bogenfenster in den Buchten."
+        ]
+      },
+      "dripGlazes": {
+        "title": "Tropfglasuren",
+        "description": [
+          "Diese befinden sich an bestimmten Pultdachteilen der Kathedrale."
+        ]
+      }
     }
   },
   "games": {
     "oldestStone": {
       "start": {
-        "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
-        "body": "Touchez l'une des pierres mises en évidence."
+        "title": "Können Sie den ältesten Stein in der Fassade identifizieren?",
+        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
       },
       "incorrect": {
-        "title": "Essayez encore !",
-        "body": "Touchez l'une des pierres mises en évidence."
+        "title": "Versuchen Sie es noch einmal!",
+        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
       },
       "finish": {
-        "title": "Correct !",
+        "title": "Richtig!",
         "body": [
-          "Le type de pierre le plus ancien de la cathédrale est la Molasse grise de Lausanne, posée au XIIe siècle.",
-          "Découvrons-en plus à ce sujet..."
+          "Der älteste Steintyp der Kathedrale ist Molasse Grise de Lausanne, die im 12. Jahrhundert n. Chr. eingebaut wurde.",
+          "Lassen Sie uns mehr darüber erfahren..."
         ]
       }
     },
     "degradationTypes": {
       "start": {
-        "title": "Testez vos connaissances !",
+        "title": "Testen Sie Ihr Wissen!",
         "body": [
-          "Certaines zones de la cathédrale sont plus affectées par un type particulier de dégradation, mais de petites différences dans la géométrie du bâtiment peuvent également jouer un rôle.",
-          "Dans le cercle rouge, nous trouvons un bon exemple, cliquez pour en savoir plus !"
+          "Es gibt Bereiche der Kathedrale, die mehr von einer bestimmten Art der Degradation betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
+          "Im roten Kreis können wir ein gutes Beispiel finden, klicken Sie darauf, um mehr zu entdecken!"
         ]
       },
       "main": {
-        "title": "Combien de types de dégradation pouvez-vous identifier dans cette zone ?",
-        "hint": "Appuyez sur la bonne réponse"
+        "title": "Wie viele Arten von Degradation können Sie in dem Bereich finden?",
+        "hint": "Tippen Sie auf die richtige Antwort"
       },
       "finish": {
-        "title": "Correct !",
+        "title": "Richtig!",
         "body": [
-          "Découvrons-les ensemble..."
+          "Lassen Sie uns sie gemeinsam entdecken..."
         ]
       },
       "incorrect": {
-        "title": "Essayez encore !"
+        "title": "Versuchen Sie es noch einmal!"
       }
     },
     "quarries": {
       "start": {
-        "title": "Les points rouges indiquent les carrières.",
-        "body": "Appuyez sur l'une d'elles pour en savoir plus"
+        "title": "Die roten Punkte zeigen Ihnen die Steinbrüche.",
+        "body": "Tippen Sie auf einen, um mehr zu erfahren"
       },
       "quarry1": {
-        "title": "Molasse grise de Lausanne",
+        "title": "Molasse Grise de Lausanne",
         "body": [
-          "Cette roche varie du gris au bleu, avec quelques teintes jaunes. Elle présente un grain moyen à grossier et est composée de quartz, feldspaths potassiques, plagioclases, calcite et parfois dolomite, pyrite et goethite.",
-          "C’est le faciès principal utilisé pour la cathédrale de Lausanne, notamment dans la tour sud du transept."
+          "Dieser Gesteinstyp variiert in der Farbe von grau bis blau, mit einigen gelben Variationen. Er hat eine mittlere bis grobe Korngröße und besteht aus Quarz, Kaliumfeldspäten, Plagioklasen, Kalzit und gelegentlich Dolomit, Pyrit und Goethit.",
+          "Dies ist das Hauptfazies, das in der Kathedrale Lausanne verwendet wird, einschließlich des Südturms des Querschiffs."
         ]
       },
       "quarry2": {
-        "title": "Molasse d’Ursy",
+        "title": "Molasse von Ursy",
         "body": [
-          "Ce faciès, connu sous le nom de molasse d’Ursy selon les archives, présente des stratifications plates alternant des niveaux fins et grossiers. Ce faciès gris-vert présente une patine rose violacée.",
-          "On le retrouve uniquement à la base du contrefort sud-est de la façade est."
+          "Dieses Fazies, dem nach den Archiven der Name Ursy-Molasse zugeschrieben wird, ist ein Fazies mit flachen Schichtungen, die Ebenen mit feiner Korngröße und grobe Ebenen abwechseln. Dieses grau-grüne Fazies hat eine violett-rosa Patina.",
+          "Dieses Fazies findet sich nur im basalen Teil des südöstlichen Strebepfeilers der Ostfassade."
         ]
       },
       "quarry3": {
-        "title": "Molasse de Zoug",
+        "title": "Molasse of Zug",
         "body": [
-          "Aussi appelée molasse granitique, ces faciès gréseux résultent de l’altération et de l’érosion intense des Alpes pendant l’orogenèse alpine — l’événement géologique qui a formé les Alpes. Composés de sables de tailles variées, ils présentent aussi une grande diversité minéralogique : quartz, feldspaths et micas, tous cimentés par de la calcite.",
-          "Les structures sédimentaires sont également variées, avec certaines formations présentant des strates croisées, d'autres étant planes ou absentes. Avec le temps, la pierre développe une patine rosée distinctive, ajoutant à son attrait visuel et historique."
+          "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
+          "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
+
         ]
       }
     }
   },
   "ui": {
-    "navMenuButton": "Menu de navigation",
-    "closeNavMenu": "Fermer le menu"
+    "navMenuButton": "Navigation Menu",
+    "closeNavMenu": "Close navigation menu"
   }
 }
