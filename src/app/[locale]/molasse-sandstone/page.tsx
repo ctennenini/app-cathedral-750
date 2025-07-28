@@ -21,11 +21,6 @@ export default makePage((dictionary) => {
             label: page.actions.geologicalInformation,
           },
           {
-            target: '#',
-            label: page.actions.properties,
-            disabled: true,
-          },
-          {
             target: '/molasse-sandstone/stones-of-the-cathedral',
             label: page.actions.typesOfStones,
           },
