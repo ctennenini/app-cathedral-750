@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 
@@ -21,7 +21,7 @@ export type VideoGalleryLayoutProps = {
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
-  bgImg?: StaticImageData | string // <-- ✅ aggiornato
+  bgImg?: StaticImageData | string
   bgImgAlt?: string
   buttonColor?: 'light' | 'dark'
 }
@@ -38,8 +38,13 @@ export function VideoGalleryLayout({
 }: VideoGalleryLayoutProps) {
   const [openVideoId, setOpenVideoId] = useState<string | null>(null)
 
+  // Debug: log videos labels on client
+  useEffect(() => {
+    console.log('Video labels:', videos.map(v => v.label))
+  }, [videos])
+
   return (
-    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurredBackground> {/* ✅ usa direttamente bgImg */}
+    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurredBackground>
       {(withHomeButton || backButtonTarget) && (
         <div
           style={{
@@ -101,11 +106,17 @@ export function VideoGalleryLayout({
                 onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.03)')}
                 onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
               />
-              {label && (
-                <div style={{ marginTop: 8, color: buttonColor === 'dark' ? 'white' : 'black', fontWeight: 500 }}>
-                  {label}
-                </div>
-              )}
+              <div
+                style={{
+                  marginTop: 8,
+                  color: buttonColor === 'dark' ? 'white' : 'black',
+                  fontWeight: 500,
+                  fontSize: '1.2rem',  // aumentato per vedere meglio
+                  userSelect: 'text',
+                }}
+              >
+                {label || 'prova'}
+              </div>
             </div>
           ))}
         </div>
