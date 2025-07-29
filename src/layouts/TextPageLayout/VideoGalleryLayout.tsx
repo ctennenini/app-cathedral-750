@@ -168,7 +168,7 @@ export function VideoGalleryLayout({
               &times;
             </button>
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${openVideoId}?autoplay=1`}
+              src={`https://www.youtube-nocookie.com/embed/${openVideoId}?autoplay=1&cc_load_policy=1&cc_lang_pref=en`}
               title="Video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

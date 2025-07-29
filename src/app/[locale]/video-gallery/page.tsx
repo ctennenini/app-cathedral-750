@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
     {
       thumbnailSrc: video2.src,
       thumbnailAlt: 'Thumbnail video 2',
-      videoId: 'YevMz9QLAjLY',
+      videoId: 'evMz9QLAjLY',
       label: 'Design ++ - Y. Patankar',
     },
         {
