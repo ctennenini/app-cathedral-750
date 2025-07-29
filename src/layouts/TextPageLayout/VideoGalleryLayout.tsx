@@ -21,7 +21,7 @@ export type VideoGalleryLayoutProps = {
   withHomeButton?: boolean
   backButtonTarget?: string
   nextButtonTarget?: string
-  bgImg?: StaticImageData
+  bgImg?: StaticImageData | string // <-- ✅ aggiornato
   bgImgAlt?: string
   buttonColor?: 'light' | 'dark'
 }
@@ -39,7 +39,7 @@ export function VideoGalleryLayout({
   const [openVideoId, setOpenVideoId] = useState<string | null>(null)
 
   return (
-    <Container bgImg={bgImg?.src} bgImgAlt={bgImgAlt} blurredBackground>
+    <Container bgImg={bgImg} bgImgAlt={bgImgAlt} blurredBackground> {/* ✅ usa direttamente bgImg */}
       {(withHomeButton || backButtonTarget) && (
         <div
           style={{
