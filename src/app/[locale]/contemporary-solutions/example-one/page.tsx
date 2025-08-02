@@ -19,7 +19,7 @@ export default makePage((dictionary) => {
         {
           type: 'quiz',
           label: pages.exampleOne.Examples,
-          target: '/example-two',
+          target: '/contemporary-solutions/example-two',
         },
       ]}
       pullOutContent={{
