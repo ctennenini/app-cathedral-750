@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.dripGlazes.description}
-      backButtonTarget="/types-of-devices/sloped-support"
+      backButtonTarget="/types-of-devices"
       actions={[
         {
           type: 'back',

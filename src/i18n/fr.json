@@ -465,7 +465,45 @@
           "Celles-ci se trouvent sur certaines parties en appentis de la cathédrale."
         ]
       }
-    }
+    },
+    "failureSituations": {
+      "title": "Scénarios de défaillance",
+      "description": [
+        "L’érosion et les profils mal conçus réduisent considérablement l’efficacité des larmiers à détourner l’eau. En l’absence de coupes-gouttes nettes, l’eau n’est pas expulsée proprement et s’écoule le long de la surface, provoquant un mouillage et une détérioration de la maçonnerie sous-jacente. Dans certains cas, l’eau suit un angle tangent au profil — connu sous le nom d’angle d’expulsion — ce qui entraîne un écoulement indésirable vers les zones inférieures.",
+        "Les profils de larmiers tournés ou inversés, sans modifications appropriées, peuvent retenir l’eau dans leurs courbures inférieures, contribuant ainsi à la stagnation de l’eau et aux dommages liés à l’humidité."
+      ],
+      "contemporarySolutions": "Solutions contemporaines !",
+      "ineffectiveDripstones": {
+        "title": "Larmiers inefficaces en raison d'une érosion importante",
+        "description": [
+          "L’érosion nuit à la capacité du larmier à évacuer l’eau, ce qui empêche son écoulement correct et provoque des accumulations."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Larmiers qui redirigent l’eau vers le bâtiment",
+        "description": [
+          "L’eau commence sa chute à un « angle d’expulsion » tangent au profil, mouillant ainsi les surfaces situées en dessous."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Larmiers sans coupes-gouttes",
+        "description": [
+          "Sans coupes-gouttes, l’eau continue de s’écouler le long de la surface, causant un mouillage et des dégradations supplémentaires des parties inférieures du bâtiment."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Larmiers tournés qui retiennent l’eau à l’envers",
+        "description": [
+          "En raison de leur profil et de l’absence de coupe-goutte nette, l’eau s’accumule dans la partie inférieure du tore, comme si elle était à l’envers."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Larmiers sans adaptation de profil",
+        "description": [
+          "Il s’agit de larmiers dont le profil tourne ou s’inverse sans les adaptations nécessaires pour assurer une bonne évacuation de l’eau."
+        ]
+      }
+  }
   },
   "games": {
     "oldestStone": {

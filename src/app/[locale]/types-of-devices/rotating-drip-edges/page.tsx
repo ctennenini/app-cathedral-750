@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.rotatingDripEdges.description}
-      backButtonTarget="/sloped-retreats"
+      backButtonTarget="/types-of-devices"
       nextButtonTarget="/types-of-devices/sloped-supports"
       pullOutContent={[
         {

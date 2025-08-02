@@ -465,6 +465,44 @@
           "These are found on certain lean-to parts of the cathedral."
         ]
       }
+      },
+      "failureSituations": {
+      "title": "Failure Scenarios",
+      "description": [
+        "Dripstone erosion and poorly designed profiles significantly reduce their effectiveness in redirecting water. Without sharp drip-cuts, water is not expelled cleanly and instead flows along the surface, causing wetting and deterioration of the underlying masonry. In some cases, water follows a tangent path—known as the expulsion angle—that leads to unwanted runoff below.",
+        "Rotating or inverted dripstone profiles without appropriate modifications can trap water in their lower curves, further contributing to pooling and moisture-related damage."
+      ],
+      "contemporarySolutions": "Contemporary Solutions!",
+      "ineffectiveDripstones": {
+        "title": "Ineffective dripstones due to severe erosion",
+        "description": [
+          "Erosion inhibits the dripstone's ability to shed water, causing water to be intercepted and not properly redirected."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Dripstones which direct water back onto the building",
+        "description": [
+          "The flowing water begins its fall at an ‘expulsion angle’ that is tangent to the profile, leading to the water wetting the surfaces below."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Dripstones without drip-cuts",
+        "description": [
+          "Without drip-cuts, water continues to run down the surface, causing further wetting and damage to the lower parts of the building."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Rotating dripstones that retain water upside down",
+        "description": [
+          "Due to its profile and the absence of a sharp drip-cut, water pools in the lower part of the toroid as if upside-down."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Dripstones without any profile adaptation",
+        "description": [
+          "These are the dripstones whose profile rotates or inverts without the necessary adaptation to ensure proper water shedding."
+        ]
+      }
       }
     },
   "games": {

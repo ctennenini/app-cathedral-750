@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.slopedRetreats.description}
-      backButtonTarget="/chamfered-drip-edge"
+      backButtonTarget="/types-of-devices"
       nextButtonTarget="/types-of-devices/rotating-drip-edges"
       pullOutContent={[
         {

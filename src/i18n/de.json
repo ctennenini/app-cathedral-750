@@ -11,44 +11,45 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-       "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
-        "actions": {
+      "actions": {
         "action1": "Button 1",
         "action2": "Button 2",
         "action3": "Button 3"
       },
-       "gallery": {
+      "gallery": {
         "galleryitem1": {
           "title": "img 1"
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-      "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -465,6 +466,44 @@
           "Diese befinden sich an bestimmten Pultdachteilen der Kathedrale."
         ]
       }
+    },
+    "failureSituations": {
+      "title": "Versagensszenarien",
+      "description": [
+        "Erosion und schlecht gestaltete Profile beeinträchtigen die Fähigkeit von Wasserspeiern erheblich, Wasser effektiv abzuleiten. Ohne scharfe Tropfkanten wird das Wasser nicht sauber abgestoßen, sondern fließt an der Oberfläche entlang, was zur Durchfeuchtung und zum Verfall des darunterliegenden Mauerwerks führt. In einigen Fällen folgt das Wasser einem tangentialen Verlauf – dem sogenannten Austrittswinkel – der zu unerwünschtem Wasserablauf auf darunterliegende Flächen führt.",
+        "Rotierende oder umgekehrte Tropfsteinprofile ohne entsprechende Anpassungen können Wasser in ihren unteren Krümmungen stauen und so zusätzlich zur Pfützenbildung und feuchtigkeitsbedingten Schäden beitragen."
+      ],
+      "contemporarySolutions": "Zeitgenössische Lösungen!",
+      "ineffectiveDripstones": {
+        "title": "Unwirksame Tropfsteine aufgrund starker Erosion",
+        "description": [
+          "Erosion beeinträchtigt die Fähigkeit des Tropfsteins, Wasser abzuleiten, wodurch Wasser aufgehalten und nicht richtig umgeleitet wird."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Tropfsteine, die Wasser zurück auf das Gebäude leiten",
+        "description": [
+          "Das fließende Wasser beginnt seinen Fall in einem 'Austrittswinkel', der tangential zum Profil verläuft, was dazu führt, dass die darunterliegenden Flächen benässt werden."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Tropfsteine ohne Tropfkante",
+        "description": [
+          "Ohne Tropfkante läuft das Wasser weiterhin an der Oberfläche herab, was zu weiterer Durchfeuchtung und Schäden an den unteren Bauteilen führt."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Rotierende Tropfsteine, die Wasser kopfüber halten",
+        "description": [
+          "Aufgrund ihres Profils und des Fehlens einer scharfen Tropfkante sammelt sich Wasser in der unteren Zone des torusförmigen Elements – wie kopfüber."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Tropfsteine ohne Profilanpassung",
+        "description": [
+          "Dies sind Tropfsteine, deren Profil sich dreht oder umkehrt, ohne die notwendige Anpassung zur sicheren Wasserabweisung."
+        ]
+      }
     }
   },
   "games": {
@@ -531,7 +570,6 @@
         "body": [
           "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
           "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
-
         ]
       }
     }
