@@ -11,44 +11,45 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-       "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
-        "actions": {
+      "actions": {
         "action1": "Button 1",
         "action2": "Button 2",
         "action3": "Button 3"
       },
-       "gallery": {
+      "gallery": {
         "galleryitem1": {
           "title": "img 1"
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-      "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -72,7 +73,7 @@
         "molasses": "La molasse et son altération",
         "conservation": "Stratégies de conservation",
         "vaults": "Les voûtes de la cathédrale",
-         "videoGallery": "Meet the experts"
+        "videoGallery": "Meet the experts"
       }
     },
     "videoGallery": {
@@ -472,7 +473,7 @@
         "L’érosion et les profils mal conçus réduisent considérablement l’efficacité des larmiers à détourner l’eau. En l’absence de coupes-gouttes nettes, l’eau n’est pas expulsée proprement et s’écoule le long de la surface, provoquant un mouillage et une détérioration de la maçonnerie sous-jacente. Dans certains cas, l’eau suit un angle tangent au profil — connu sous le nom d’angle d’expulsion — ce qui entraîne un écoulement indésirable vers les zones inférieures.",
         "Les profils de larmiers tournés ou inversés, sans modifications appropriées, peuvent retenir l’eau dans leurs courbures inférieures, contribuant ainsi à la stagnation de l’eau et aux dommages liés à l’humidité."
       ],
-      "contemporarySolutions": "Solutions contemporaines !",
+      "contemporarySolutions": "Solutions contemporaines",
       "ineffectiveDripstones": {
         "title": "Larmiers inefficaces en raison d'une érosion importante",
         "description": [
@@ -503,7 +504,7 @@
           "Il s’agit de larmiers dont le profil tourne ou s’inverse sans les adaptations nécessaires pour assurer une bonne évacuation de l’eau."
         ]
       }
-  }
+    }
   },
   "games": {
     "oldestStone": {
