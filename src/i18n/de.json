@@ -533,6 +533,46 @@
         "Dazu gehören die diskrete Anbringung von Metall-Tropfkanten an den oberen und unteren Halbrundbögen der Rosette, um eine effektive Wasserableitung zu gewährleisten. Zusätzlich wurden Mikrorinnen an der Unterseite und den Seiten des Fensterrahmens eingearbeitet, um das abfließende Wasser von empfindlichen Bereichen des Mauerwerks fernzuhalten."
       ],
       "Examples": "Strebebogen"
+    },
+    "thirteenCE": {
+      "title": "13. Jahrhundert n. Chr.",
+      "description": [
+        "Die ersten Strukturen, einschließlich der Dächer und Traufen auf den Nord- und Südquerhaustürmen, dienten als wichtige schützende Elemente. Bestimmte Steinelemente wie Wasserschläge oder Gesimse in den Archivolten der hohen Joche des Langhauses und deren Bänder könnten aus dem 13. Jahrhundert stammen.",
+        "Es gilt als wahrscheinlich, dass diese Elemente im Laufe der Jahrhunderte mehrfach überarbeitet oder neu behauen wurden."
+      ],
+      "Next": "Weiter"
+    },
+    "eighteenCE": {
+      "title": "18. Jahrhundert n. Chr.",
+      "description": [
+        "Der lokale Molassesandstein, ein weicher Sandstein mit karbonatischer Matrix und quellfähigen Tonmineralien, war das Hauptbaumaterial, dessen Empfindlichkeit gegenüber Wasser schon früh bekannt war.",
+        "Der Ersatz beschädigter Teile erfolgte stets analog: Die neuen Wasserschläge wurden so nachgearbeitet, dass sie den alten entsprachen oder ihnen zumindest ähnelten."
+      ],
+      "Next": "Weiter"
+    },
+    "nineteenCE": {
+      "title": "19. Jahrhundert n. Chr.",
+      "description": [
+        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die Restaurierungen unter Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877), war ein bedeutender Abschnitt in der Entwicklung des Regenwassermanagements. Große Traufgesimse und Abflüsse wurden an den Dachvorsprüngen von Langhaus und Seitenschiffen installiert und über Fallrohre auf die Straße geleitet.",
+        "Um die Wetterbeständigkeit zu verbessern, wurde der Molassesandstein für kritische Elemente wie spitze Wasserschläge an den geneigten Rücksprüngen der Strebepfeiler durch widerstandsfähigeren Kalkstein ersetzt."
+      ],
+      "Next": "Weiter"
+    },
+    "twentyCE": {
+      "title": "20. Jahrhundert n. Chr.",
+      "description": [
+        "Die Strategien zur Regenwasserableitung im 20. Jahrhundert setzten weitgehend die Methoden von Viollet-le-Duc und Assinare fort und konzentrierten sich darauf, Wasser durch architektonische Steinelemente wie Wasserschläge und Gesimse von der Fassade fernzuhalten.",
+        "Trotz dieser Bemühungen zeigen Quellen, dass selbst restaurierte Wasserschläge und Rücksprünge oft nicht optimal funktionierten, was weiterhin zu Problemen wie Wasseransammlungen an den Rändern und seitlichem Überlauf mit Schäden an der darunterliegenden Mauer führte. In dieser Zeit wurde das Spenglerhandwerk eingeführt, etwa durch Metallrinnen auf bestimmten Dächern."
+      ],
+      "Next": "Weiter"
+    },
+    "twentyoneCE": {
+      "title": "21. Jahrhundert n. Chr.",
+      "description": [
+        "Gemischte Materiallösungen, die Stein mit Metall kombinieren, werden derzeit erprobt oder bereits umgesetzt – zum Beispiel bei Tropfkanten oder Gesimsen, um schärfere Kanten zu erzielen und biologische Verstopfungen zu verhindern.",
+        "Diese hybriden Lösungen gelten nicht als völlig neu, sondern als Weiterentwicklung der historischen Materialanwendung im Regenwassermanagement."
+      ],
+      "Back": "Zuruck"
     }
   },
   "games": {

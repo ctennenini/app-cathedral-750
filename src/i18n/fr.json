@@ -533,6 +533,46 @@
         "Celles-ci incluent l’ajout discret de coupes-gouttes métalliques le long des parties supérieure et inférieure de l’arc semi-circulaire, pour assurer une évacuation efficace de l’eau. Des micro-gouttières ont également été taillées en bas et sur les côtés du cadre de la fenêtre pour guider l’écoulement loin des zones sensibles de la maçonnerie."
       ],
       "Examples": "Arc-boutant"
+    },
+    "thirteenCE": {
+      "title": "XIIIe siècle",
+      "description": [
+        "Les premières structures, y compris les toitures et les avant-toits des tours du transept nord et sud, constituaient des éléments de protection majeurs. Certains éléments en pierre, tels que les larmiers ou bandeaux dans les archivoltes des hautes travées de la nef et leurs cordons, pourraient remonter au XIIIe siècle.",
+        "Il est considéré comme probable que ces éléments aient été retravaillés ou retaillés plusieurs fois au fil des siècles."
+      ],
+      "Next": "Suivant"
+    },
+    "eighteenCE": {
+      "title": "XVIIIe siècle",
+      "description": [
+        "La molasse locale, un grès tendre à matrice calcaire et argiles gonflantes, était le principal matériau de construction, et sa vulnérabilité aux dégâts des eaux était connue dès le départ.",
+        "Le remplacement des parties altérées s’est toujours fait par analogie : les nouveaux profils de larmiers étaient retaillés pour correspondre aux anciens ou au moins leur ressembler."
+      ],
+      "Next": "Suivant"
+    },
+    "nineteenCE": {
+      "title": "XIXe siècle",
+      "description": [
+        "La seconde moitié du XIXe siècle, notamment les restaurations dirigées par Viollet-le-Duc (à partir de 1873) puis son successeur Assinare (à partir de 1877), a marqué une étape importante dans la gestion des eaux pluviales. De grandes corniches-gouttières et des canalisations ont été installées au niveau des avant-toits des nefs et des bas-côtés, raccordées à des tuyaux évacuant l’eau vers la rue.",
+        "Pour améliorer la résistance aux intempéries, la molasse a été remplacée par du calcaire plus durable pour les éléments critiques, tels que les larmiers en bec situés sur les retraits inclinés des contreforts."
+      ],
+      "Next": "Suivant"
+    },
+    "twentyCE": {
+      "title": "XXe siècle",
+      "description": [
+        "La stratégie de gestion des eaux pluviales au XXe siècle s’est largement inscrite dans la continuité des méthodes initiées par Viollet-le-Duc et Assinare, en concentrant les efforts sur la déviation de l’eau à l’aide d’éléments architecturaux en pierre comme les larmiers et les corniches.",
+        "Malgré ces efforts, les sources indiquent que même les larmiers et retraits restaurés ne fonctionnaient pas toujours parfaitement, entraînant des problèmes persistants comme l’accumulation d’eau sur les bords et les débordements latéraux endommageant la maçonnerie. C’est également à cette époque qu’on introduit la ferblanterie, avec notamment des gouttières en tôle sur certains toits."
+      ],
+      "Next": "Suivant"
+    },
+    "twentyoneCE": {
+      "title": "XXIe siècle",
+      "description": [
+        "Des solutions mixtes, combinant la pierre et le métal, sont en cours d’expérimentation ou déjà mises en œuvre pour des éléments comme les coupes-gouttes ou les cordons, afin d’assurer des arêtes plus nettes et prévenir les obstructions biologiques.",
+        "Ces solutions hybrides ne sont pas considérées comme entièrement nouvelles, mais plutôt comme une continuation de l’évolution historique des matériaux utilisés pour la gestion des eaux."
+      ],
+      "Back": "Retour"
     }
   },
   "games": {

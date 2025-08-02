@@ -533,6 +533,46 @@
         "These include the installation of discreet metal drip-cuts along the upper and lower semi-circular edges of the window to ensure effective water diversion. In addition, micro-gutters have been carved at the bottom and sides of the window frame to guide runoff away from sensitive areas of the masonry."
       ],
       "Examples": "Flying Buttress"
+    },
+    "thirteenCE": {
+      "title": "13th Century CE",
+      "description": [
+        "The initial structures, including roofs and eaves on the north and south transept towers, served as major protective elements.  Certain stone elements, such as the dripstones or stringcourses in the archivolts of the high bays of the nave and their cordons, might date back to the 13th century.",
+        "It is considered probable that these elements have been reworked or recut several times over the centuries."
+      ],
+      "Next": "Next"
+    },
+    "eighteenCE": {
+      "title": "18th Century CE",
+      "description": [
+        "The local molasse stone, being a soft sandstone with a carbonate matrix and swelling clays, was the primary building material, and its vulnerability to water damage was a known issue from early on.",
+        "The replacement of altered parts was always carried out by analogy: the new drip mouldings were recut to match the old ones or at least to resemble them."
+      ],
+      "Next": "Next"
+    },
+    "nineteenCE": {
+      "title": "19th Century CE",
+      "description": [
+        "The latter half of the 19th century, particularly the restorations led by Viollet-le-Duc (from 1873) and his successor Assinare (from 1877), marked a significant period for rainwater management. Large cornice-gutters and drains were installed on the eaves of the naves and aisles, connected to pipes bringing the water down on the streets.",
+        "To enhance resistance to weathering, molasse was replaced with more durable limestone for critical elements, such as the beaked dripstones on the sloping retreats of the buttresses."
+      ],
+      "Next": "Next"
+    },
+    "twentyCE": {
+      "title": "20th Century CE",
+      "description": [
+        "The 20th-century rainwater management strategy was largely a continuation of the methods pioneered by Viollet-le-Duc and Assinare, focusing on directing water away from the facade using architectural stone elements like dripstones and cornices.",
+        "Despite these efforts, the sources indicate that even these restored larmiers and retreats often did not function perfectly, leading to continued problems like water accumulation at the edges and lateral overflows that damaged the masonry below. Introduction of tinsmithing during this time through the addition of metal sheet gutters to some roofs."
+      ],
+      "Next": "Next"
+    },
+    "twentyoneCE": {
+      "title": "21st Century CE",
+      "description": [
+        "Mixed material solutions, combining stone with metal, are being explored or implemented for elements like drip-cuts or cordons to provide sharper edges and prevent biological obstruction.",
+        "These mixed solutions are seen not as entirely new, but as a continuation of a historical evolution in materials for water management."
+      ],
+      "Back": "Back"
     }
   },
   "games": {
