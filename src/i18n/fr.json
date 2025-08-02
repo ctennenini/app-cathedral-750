@@ -518,6 +518,21 @@
       "Tinsmithing": {
         "title": "Ferblanterie"
       }
+    },
+    "exampleOne": {
+      "title": "Interventions sur les arcs-boutants",
+      "description": [
+        "Les interventions sur les arcs-boutants combinent des techniques traditionnelles de stéréotomie avec des solutions contemporaines de travail du métal afin d’améliorer la gestion des eaux et de protéger la maçonnerie. Cela comprend l’installation de micro-gouttières et de coupes-gouttes métalliques pour renforcer l’efficacité des dispositifs existants d’évacuation des eaux pluviales."
+      ],
+      "Examples": "Rosace"
+    },
+    "exampleTwo": {
+      "title": "Interventions sur la rosace",
+      "description": [
+        "La rosace présente un profil torique en pierre existant qui joue un rôle essentiel dans la gestion des eaux. Toutefois, afin d’en améliorer les performances et de limiter les détériorations liées à l’humidité, des interventions contemporaines ont été mises en œuvre.",
+        "Celles-ci incluent l’ajout discret de coupes-gouttes métalliques le long des parties supérieure et inférieure de l’arc semi-circulaire, pour assurer une évacuation efficace de l’eau. Des micro-gouttières ont également été taillées en bas et sur les côtés du cadre de la fenêtre pour guider l’écoulement loin des zones sensibles de la maçonnerie."
+      ],
+      "Examples": "Arc-boutant"
     }
   },
   "games": {

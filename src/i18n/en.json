@@ -1,5 +1,5 @@
 {
- "pages": {
+  "pages": {
     "sample": {
       "title": "titlehere",
       "subtitle": "subtitlehere",
@@ -11,22 +11,22 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-        "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
       "actions": {
@@ -40,15 +40,16 @@
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-       "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -282,7 +283,7 @@
         "title": "Sanding",
         "description": [
           "In some areas of the Cathedral the material suffer to phenomena of decohesion of the grain of the stone.",
-          "The stone looks less compact and looses external surface layers"   
+          "The stone looks less compact and looses external surface layers"
         ]
       },
       "biodeterioration": {
@@ -465,8 +466,8 @@
           "These are found on certain lean-to parts of the cathedral."
         ]
       }
-      },
-      "failureSituations": {
+    },
+    "failureSituations": {
       "title": "Failure Scenarios",
       "description": [
         "Dripstone erosion and poorly designed profiles significantly reduce their effectiveness in redirecting water. Without sharp drip-cuts, water is not expelled cleanly and instead flows along the surface, causing wetting and deterioration of the underlying masonry. In some cases, water follows a tangent path—known as the expulsion angle—that leads to unwanted runoff below.",
@@ -503,8 +504,8 @@
           "These are the dripstones whose profile rotates or inverts without the necessary adaptation to ensure proper water shedding."
         ]
       }
-      },
-      "contemporarySolutions": {
+    },
+    "contemporarySolutions": {
       "title": "Contemporary Solutions",
       "description": [
         "Stereotomy (stone-cutting): This involves re-cutting existing stone elements, such as accentuating the overhang of a torus or cutting grooves in a chamfer to better direct water.",
@@ -517,8 +518,23 @@
       "Tinsmithing": {
         "title": "Tinsmithing"
       }
-      }
     },
+    "exampleOne": {
+      "title": "Interventions on the Flying Buttresses",
+      "description": [
+        "Interventions on the Flying Buttresses combine traditional stereotomy techniques with contemporary metalworking solutions to improve water management and protect the masonry.These include installation of metal microgutters and drip-cuts to enhance the efficiency of the existing rainwater management devices."
+      ],
+      "Examples": "Rose Window"
+    },
+    "exampleTwo": {
+      "title": "Interventions on the Rose Window",
+      "description": [
+        "The Rose Window features an existing toroidal stone profile that plays a key role in water management. However, to enhance its performance and mitigate moisture-related deterioration, contemporary interventions have been introduced.",
+        "These include the installation of discreet metal drip-cuts along the upper and lower semi-circular edges of the window to ensure effective water diversion. In addition, micro-gutters have been carved at the bottom and sides of the window frame to guide runoff away from sensitive areas of the masonry."
+      ],
+      "Examples": "Flying Buttress"
+    }
+  },
   "games": {
     "oldestStone": {
       "start": {
@@ -583,7 +599,6 @@
         "body": [
           "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
           "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
-
         ]
       }
     }

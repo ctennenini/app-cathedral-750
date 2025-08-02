@@ -1,6 +1,5 @@
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import stereotomy from './stereotomy.jpg'
-import tinsmithing from './tinsmithing.jpg'
+import exampletwo from './example-two.jpg'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
@@ -13,13 +12,13 @@ export default makePage((dictionary) => {
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.waterManagement.title}
-      subtitle={pages.contemporarySolutions.title}
-      text={pages.contemporarySolutions.description}
+      title={pages.contemporarySolutions.title}
+      subtitle={pages.exampleTwo.title}
+      text={pages.exampleTwo.description}
       actions={[
         {
           type: 'quiz',
-          label: pages.contemporarySolutions.Examples,
+          label: pages.exampleTwo.Examples,
           target: '/example-one',
         },
       ]}
@@ -27,16 +26,12 @@ export default makePage((dictionary) => {
         type: 'gallery',
         items: [
           {
-            src: stereotomy,
-            label: pages.contemporarySolutions.Stereotomy.title,
+            src: exampletwo,
+            label: pages.exampleTwo.title,
           },
-          {
-            src: tinsmithing,
-            label: pages.contemporarySolutions.Tinsmithing.title,
-          }
         ],
       }}
-      backButtonTarget="/water-management"
+      backButtonTarget="/contemporary-solutions"
     />
   )
 })

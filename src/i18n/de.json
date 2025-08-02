@@ -518,6 +518,21 @@
       "Tinsmithing": {
         "title": "Spenglerarbeit"
       }
+    },
+    "exampleOne": {
+      "title": "Eingriffe an den Strebebögen",
+      "description": [
+        "Die Eingriffe an den Strebebögen kombinieren traditionelle stereotomische Techniken mit modernen Metallverarbeitungslösungen, um das Regenwassermanagement zu verbessern und das Mauerwerk zu schützen. Dazu gehören die Installation von Metall-Mikrorinnen und Tropfkanten, um die Effizienz der bestehenden Regenwasserableitung zu erhöhen."
+      ],
+      "Examples": "Rosette"
+    },
+    "exampleTwo": {
+      "title": "Eingriffe an der Rosette",
+      "description": [
+        "Die Rosette weist ein vorhandenes toroidales Steinprofil auf, das eine zentrale Rolle im Regenwassermanagement spielt. Um ihre Leistungsfähigkeit zu verbessern und feuchtigkeitsbedingte Schäden zu minimieren, wurden zeitgenössische Eingriffe vorgenommen.",
+        "Dazu gehören die diskrete Anbringung von Metall-Tropfkanten an den oberen und unteren Halbrundbögen der Rosette, um eine effektive Wasserableitung zu gewährleisten. Zusätzlich wurden Mikrorinnen an der Unterseite und den Seiten des Fensterrahmens eingearbeitet, um das abfließende Wasser von empfindlichen Bereichen des Mauerwerks fernzuhalten."
+      ],
+      "Examples": "Strebebogen"
     }
   },
   "games": {
