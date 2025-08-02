@@ -24,7 +24,7 @@ export default makePage((dictionary) => {
       actions={[
         {
           type: 'quiz',
-          label: pages.typesOfFeatures.testYourKnowledge,
+          label: pages.typesOfFeatures.back,
           target: '/conservation-strategies',
         },
       ]}
