@@ -25,8 +25,7 @@ export default makePage((dictionary) => {
             label: pages.waterManagement.actions.types,
           },
           {
-            target: '#',
-            disabled: true,
+            target: '/failure-and-solution',
             label: pages.waterManagement.actions.contemporary,
           },
         ],
