@@ -13,8 +13,8 @@ export default makePage((dictionary) => {
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.waterManagement.title}
-      subtitle={pages.contemporarySolutions.title}
+      title={pages.contemporarySolutions.title}
+      subtitle={pages.waterManagement.title}
       text={pages.contemporarySolutions.description}
       actions={[
         {
@@ -36,7 +36,7 @@ export default makePage((dictionary) => {
           }
         ],
       }}
-      backButtonTarget="/water-management"
+      backButtonTarget="/failure-and-solution"
     />
   )
 })

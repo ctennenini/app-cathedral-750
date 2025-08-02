@@ -12,8 +12,8 @@ export default makePage((dictionary) => {
     <TextPageLayout
       withHomeButton
       bgImg={bgImg}
-      title={pages.contemporarySolutions.title}
-      subtitle={pages.exampleOne.title}
+      title={pages.exampleOne.title}
+      subtitle={pages.contemporarySolutions.title}
       text={pages.exampleOne.description}
       actions={[
         {
