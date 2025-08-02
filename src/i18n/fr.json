@@ -504,6 +504,20 @@
           "Il s’agit de larmiers dont le profil tourne ou s’inverse sans les adaptations nécessaires pour assurer une bonne évacuation de l’eau."
         ]
       }
+    },
+    "contemporarySolutions": {
+      "title": "Solutions contemporaines",
+      "description": [
+        "Stéréotomie (taille de pierre) : Cela consiste à retailler des éléments en pierre existants, par exemple en accentuant le débord d’un tore ou en taillant des rainures dans un chanfrein pour mieux diriger l’eau.",
+        "Ferblanterie (travail du métal) : Cela consiste à insérer des éléments métalliques comme des bandes d’égouttage ou des guides dans les joints de lit ou sous les couvertines pour garantir que l’eau soit évacuée loin du bâtiment. Les solutions en ferblanterie sont souvent privilégiées lorsque la stéréotomie est insuffisante ou trop coûteuse."
+      ],
+      "Examples": "Exemples sur la cathédrale",
+      "Stereotomy": {
+        "title": "Stéréotomie"
+      },
+      "Tinsmithing": {
+        "title": "Ferblanterie"
+      }
     }
   },
   "games": {

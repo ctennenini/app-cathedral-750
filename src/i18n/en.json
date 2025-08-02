@@ -503,6 +503,20 @@
           "These are the dripstones whose profile rotates or inverts without the necessary adaptation to ensure proper water shedding."
         ]
       }
+      },
+      "contemporarySolutions": {
+      "title": "Contemporary Solutions",
+      "description": [
+        "Stereotomy (stone-cutting): This involves re-cutting existing stone elements, such as accentuating the overhang of a torus or cutting grooves in a chamfer to better direct water.",
+        "Tinsmithing (metalwork): This involves inserting metal elements like weatherstrips or guides in bed joints or under copings to ensure water is channelled away from the building. Tinsmithing solutions are often preferred where stereotomy is insufficient or too costly."
+      ],
+      "Examples": "Examples on the Cathedral",
+      "Stereotomy": {
+        "title": "Stereotomy"
+      },
+      "Tinsmithing": {
+        "title": "Tinsmithing"
+      }
       }
     },
   "games": {

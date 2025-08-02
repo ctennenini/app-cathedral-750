@@ -504,6 +504,20 @@
           "Dies sind Tropfsteine, deren Profil sich dreht oder umkehrt, ohne die notwendige Anpassung zur sicheren Wasserabweisung."
         ]
       }
+    },
+    "contemporarySolutions": {
+      "title": "Zeitgenössische Lösungen",
+      "description": [
+        "Steinbearbeitung (Stereotomie): Dies beinhaltet das Nachschneiden bestehender Steinelemente, zum Beispiel durch das Hervorheben eines Überhangs eines Torus oder das Einbringen von Rillen in eine Fase, um das Wasser besser abzuleiten.",
+        "Spenglerarbeit (Metallverarbeitung): Dabei werden Metallelemente wie Wetterschutzbleche oder Führungen in Lagerfugen oder unter Abdeckungen eingesetzt, um sicherzustellen, dass das Wasser vom Gebäude weggeleitet wird. Spenglerlösungen werden oft bevorzugt, wenn Stereotomie unzureichend oder zu kostspielig ist."
+      ],
+      "Examples": "Beispiele an der Kathedrale",
+      "Stereotomy": {
+        "title": "Stereotomie"
+      },
+      "Tinsmithing": {
+        "title": "Spenglerarbeit"
+      }
     }
   },
   "games": {
