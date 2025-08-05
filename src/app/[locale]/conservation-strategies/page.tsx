@@ -16,7 +16,7 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '/past-restoration',
+            target: '/timeline/timeline2',
             label: page.actions.past,
           },
           {

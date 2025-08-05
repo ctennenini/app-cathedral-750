@@ -365,6 +365,24 @@
         }
       }
     },
+         "saltCrystallization": {
+      "title": "Salt Crystallization",
+      "crystallizationPressure": {
+        "title": "Crystallization Pressure",
+        "description": [
+          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+          "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
+          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+        ]
+      },
+      "gypsum": {
+        "title": "Gypsum formation",
+        "description": [
+          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+          "This led to the formation of the so called “black crusts”."
+        ]
+      }
+    },
     "atmosphericPollution": {
       "title": "Atmosphärische Verschmutzung",
       "acidRain": {

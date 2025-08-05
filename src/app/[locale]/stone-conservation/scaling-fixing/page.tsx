@@ -1,7 +1,7 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 
-import pin5 from './pin5.png'
+import pin5 from './pin6.png'
 
 import { makePage } from '@/components/makePage'
 
