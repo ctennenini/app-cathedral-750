@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import rotating from './rotating-drip-edges.jpg'
+import rotating from './rotatingdrip.png'
 
 import { makePage } from '@/components/makePage'
 

@@ -23,7 +23,7 @@ export default makePage((dictionary) => {
       text={pages.typesOfFeatures.description}
       actions={[
         {
-          type: 'quiz',
+          type: 'back',
           label: pages.typesOfFeatures.back,
           target: '/conservation-strategies',
         },

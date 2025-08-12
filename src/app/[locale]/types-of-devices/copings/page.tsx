@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import copings from './copings.jpg'
+import copings from './copings.png'
 
 import { makePage } from '@/components/makePage'
 

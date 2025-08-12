@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import sloped from './sloped-retreats.jpg'
+import sloped from './slopedretreat.png'
 
 import { makePage } from '@/components/makePage'
 
