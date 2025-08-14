@@ -16,7 +16,7 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '/timeline/timeline2',
+            target: '/timeline',
             label: page.actions.past,
           },
           {

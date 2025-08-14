@@ -76,6 +76,99 @@
         "videoGallery": "Meet the experts"
       }
     },
+    "timeline": {
+  "title": "Past restoration work",
+  "subtitle": "A timeline of the most significant events",
+  "description": [
+    "Explore the key moments that have marked the history of the cathedral over the centuries.",
+    "Click on each event to discover more details."
+  ],
+  "bgImgAlt": "Aerial view of the cathedral",
+  "backButtonTarget": "/previous-page",
+  "nextButtonTarget": "/next-page",
+  
+  "event1170": {
+    "year": "1170",
+    "title": "Start of construction of the cathedral",
+    "description": [
+      "The construction of Lausanne Cathedral began in 1170 and saw several master builders succeed one another until the first half of the 13th century."
+    ],
+    "fullDescription": [
+      "Beginning with the Romanesque apse, the continuation of the monument's construction quickly affirmed the Gothic style of its architecture and was completed around 1235 with the addition of the painted portal on the south façade.",
+      "On 20 October 1275, the cathedral was consecrated by Pope Gregory X in the presence of Emperor Rudolf of Habsburg.",
+      "The first stage of construction of the cathedral began in 1173, with a first master builder creating the ambulatory of the apse. Twenty years later, the second master builder corrected the layout of the building, modified its architectural composition, and, by 1215, had built the church we know today."
+    ],
+    "imageAlt": "Historical view of the cathedral construction"
+  },
+  
+  "event1523": {
+    "year": "1523",
+    "title": "Tower Lantern Fire",
+    "description": [
+      "A devastating fire damaged the original tower lantern, requiring extensive reconstruction work."
+    ],
+    "fullDescription": [
+      "The medieval tower lantern suffered significant damage from a major fire that swept through the upper sections of the cathedral.",
+      "This event marked a turning point in the cathedral's history, as it necessitated not only repairs but also architectural modifications to prevent future fire damage."
+    ],
+    "imageAlt1": "Old tower lantern before the fire",
+    "imageAlt2": "Tower lantern damaged by fire"
+  },
+  
+  "event1833": {
+    "year": "1833",
+    "title": "First Major Restoration Project",
+    "description": [
+      "The first comprehensive restoration project was undertaken to address centuries of weathering and structural issues."
+    ],
+    "fullDescription": [
+      "This restoration marked the beginning of modern conservation approaches to historic architecture.",
+      "The project involved extensive documentation of the existing structure and the development of new restoration techniques."
+    ],
+    "imageAlt": "Restoration project plans and drawings"
+  },
+  
+  "event1950": {
+    "year": "1950",
+    "title": "Post-War Restoration",
+    "description": [
+      "Major restoration and modernization work was undertaken after World War II to preserve the cathedral's architectural integrity."
+    ],
+    "fullDescription": [
+      "The post-war restoration involved comprehensive structural consolidation and the introduction of modern conservation technologies.",
+      "Work included foundation strengthening, cleaning of the sandstone facades, restoration of interior frescoes, and installation of modern lighting and heating systems."
+    ],
+    "imageAlt1": "New tower lantern installation",
+    "imageAlt2": "Restoration work documentation"
+  },
+  
+  "event2009": {
+    "year": "2009",
+    "title": "Modern Stained Glass Installation",
+    "description": [
+      "New stained glass windows by contemporary artists were installed, creating a unique dialogue between modern art and historic architecture."
+    ],
+    "fullDescription": [
+      "The installation of contemporary stained glass windows represents one of the most significant modern artistic contributions to the cathedral.",
+      "These artworks, characterized by vibrant colors and geometric forms, filter light to create a mystical and contemplative atmosphere within the sacred space."
+    ],
+    "imageAlt": "Contemporary stained glass installation"
+  },
+  
+  "event2020": {
+    "year": "2020",
+    "title": "Digital Heritage Initiative",
+    "description": [
+      "Launch of a comprehensive digitization project for the cathedral's historical and artistic heritage."
+    ],
+    "fullDescription": [
+      "This ambitious project includes the creation of virtual tours, digital cataloging of all artifacts, manuscripts, and historical documents.",
+      "The initiative also involves the development of interactive applications for visitors, enhancing their understanding and appreciation of the cathedral's rich history."
+    ],
+    "imageAlt1": "Digital heritage scanning equipment",
+    "imageAlt2": "Virtual tour development process"
+  }
+},
     "videoGallery": {
       "title": "The degradation of the Facades",
       "subtitle": "Explanatory video",
@@ -665,4 +758,4 @@
     "navMenuButton": "Navigation Menu",
     "closeNavMenu": "Close navigation menu"
   }
-}
+    }
