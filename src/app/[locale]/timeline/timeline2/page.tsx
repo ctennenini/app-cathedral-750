@@ -46,17 +46,6 @@ const timelineEvents: HorizontalTimelineEvent[] = [
       height: 300
     }
   },
-  {
-    year: '2009',
-    title: 'Installazione delle vetrate di Giacometti',
-    description: 'Le nuove vetrate dell\'artista Augusto Giacometti vengono installate nella cattedrale, creando un dialogo unico tra arte contemporanea e architettura storica. Queste opere d\'arte rappresentano uno dei più significativi contributi artistici moderni alla cattedrale.',
-    image: {
-      src: '/images/giacometti-windows.jpg',
-      alt: 'Le vetrate di Giacometti nella Grossmünster',
-      width: 400,
-      height: 300
-    }
-  }
 ]
 
 export default function HorizontalTimelinePage() {

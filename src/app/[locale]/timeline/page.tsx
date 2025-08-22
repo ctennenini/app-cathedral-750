@@ -109,40 +109,40 @@ export default makePage((dictionary) => {
         }
       ]
     },
-    {
-      year: timelineData.event2009.year,
-      title: timelineData.event2009.title,
-      description: timelineData.event2009.description[0],
-      fullDescription: formatDescription(timelineData.event2009.fullDescription),
-      images: [
-        {
-          src: towerold.src,
-          alt: timelineData.event2009.imageAlt,
-          width: 300,
-          height: 450
-        }
-      ]
-    },
-    {
-      year: timelineData.event2020.year,
-      title: timelineData.event2020.title,
-      description: timelineData.event2020.description[0],
-      fullDescription: formatDescription(timelineData.event2020.fullDescription),
-      images: [
-        {
-          src: towerfire.src,
-          alt: timelineData.event2020.imageAlt1,
-          width: 300,
-          height: 450
-        },
-        {
-          src: towerproj.src,
-          alt: timelineData.event2020.imageAlt2,
-          width: 300,
-          height: 400
-        }
-      ]
-    }
+    // {
+    //   year: timelineData.event2009.year,
+    //   title: timelineData.event2009.title,
+    //   description: timelineData.event2009.description[0],
+    //   fullDescription: formatDescription(timelineData.event2009.fullDescription),
+    //   images: [
+    //     {
+    //       src: towerold.src,
+    //       alt: timelineData.event2009.imageAlt,
+    //       width: 300,
+    //       height: 450
+    //     }
+    //   ]
+    // },
+    // {
+    //   year: timelineData.event2020.year,
+    //   title: timelineData.event2020.title,
+    //   description: timelineData.event2020.description[0],
+    //   fullDescription: formatDescription(timelineData.event2020.fullDescription),
+    //   images: [
+    //     {
+    //       src: towerfire.src,
+    //       alt: timelineData.event2020.imageAlt1,
+    //       width: 300,
+    //       height: 450
+    //     },
+    //     {
+    //       src: towerproj.src,
+    //       alt: timelineData.event2020.imageAlt2,
+    //       width: 300,
+    //       height: 400
+    //     }
+    //   ]
+    // }
   ]
 
   return (
