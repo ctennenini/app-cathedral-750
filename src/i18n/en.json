@@ -1,5 +1,5 @@
 {
- "pages": {
+  "pages": {
     "sample": {
       "title": "titlehere",
       "subtitle": "subtitlehere",
@@ -11,22 +11,22 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-        "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
       "actions": {
@@ -40,15 +40,16 @@
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-       "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -75,6 +76,99 @@
         "videoGallery": "Meet the experts"
       }
     },
+    "timeline": {
+  "title": "Past restoration work",
+  "subtitle": "A timeline of the most significant events",
+  "description": [
+    "Explore the key moments that have marked the history of the cathedral restoration over the centuries.",
+    "Click on each event to discover more details."
+  ],
+  "bgImgAlt": "Aerial view of the cathedral",
+  "backButtonTarget": "/previous-page",
+  "nextButtonTarget": "/next-page",
+  
+  "event1170": {
+    "year": "1170",
+    "title": "Start of construction of the cathedral",
+    "description": [
+      "The construction of Lausanne Cathedral began in 1170 and saw several master builders succeed one another until the first half of the 13th century."
+    ],
+    "fullDescription": [
+      "Beginning with the Romanesque apse, the continuation of the monument's construction quickly affirmed the Gothic style of its architecture and was completed around 1235 with the addition of the painted portal on the south façade.",
+      "On 20 October 1275, the cathedral was consecrated by Pope Gregory X in the presence of Emperor Rudolf of Habsburg.",
+      "The first stage of construction of the cathedral began in 1173, with a first master builder creating the ambulatory of the apse. Twenty years later, the second master builder corrected the layout of the building, modified its architectural composition, and, by 1215, had built the church we know today."
+    ],
+    "imageAlt": "Historical view of the cathedral construction"
+  },
+  
+  "event1523": {
+    "year": "1873",
+    "title": "Tower Lantern recontruction",
+    "description": [
+      "A devastating fire damaged the original tower lantern, requiring extensive reconstruction work. Viollet-le-Duc is incharged of the project"
+    ],
+    "fullDescription": [
+      "The fire that ravaged the spire of the lantern tower of Lausanne Cathedral on the night of 23 to 24 May 1825 marked the beginning of a long period of expert assessments and discussions and triggered a flurry of projects, proposals and controversies. If the debate, initially supported by local figures, involved international experts,  it was because the issues at stake were typical of those raised at various times by buildings such as Notre-Dame de Paris, the Milan Cathedral and Saint Pierre de Genève. .",
+      "Following his report, the Council of State commissioned Viollet-le-Duc to carry out a complete restoration of the lantern tower.."
+    ],
+    "imageAlt1": "Old tower lantern before the fire",
+    "imageAlt2": "Tower lantern damaged by fire"
+  },
+  
+  "event1833": {
+    "year": "1873",
+    "title": "First Major Restoration Project",
+    "description": [
+      "The architect Viollet-le-Duc is in charge of restoring the cathedral."
+    ],
+    "fullDescription": [
+      "This restoration marked the beginning of modern conservation approaches to historic architecture.",
+      "The project involved extensive documentation of the existing structure and the development of new restoration techniques as well as water managment systems development."
+    ],
+    "imageAlt": "Restoration project plans and drawings"
+  },
+  
+  "event1950": {
+    "year": "19..",
+    "title": "...Restoration",
+    "description": [
+      "...."
+    ],
+    "fullDescription": [
+      "The post-war restoration involved comprehensive structural consolidation and the introduction of modern conservation technologies.",
+      "Work included foundation strengthening, cleaning of the sandstone facades, restoration of interior frescoes, and installation of modern lighting and heating systems."
+    ],
+    "imageAlt1": "New tower lantern installation",
+    "imageAlt2": "Restoration work documentation"
+  },
+  
+  "event2009": {
+    "year": "2009",
+    "title": "Modern Stained Glass Installation",
+    "description": [
+      "New stained glass windows by contemporary artists were installed, creating a unique dialogue between modern art and historic architecture."
+    ],
+    "fullDescription": [
+      "The installation of contemporary stained glass windows represents one of the most significant modern artistic contributions to the cathedral.",
+      "These artworks, characterized by vibrant colors and geometric forms, filter light to create a mystical and contemplative atmosphere within the sacred space."
+    ],
+    "imageAlt": "Contemporary stained glass installation"
+  },
+  
+  "event2020": {
+    "year": "2020",
+    "title": "Digital Heritage Initiative",
+    "description": [
+      "Launch of a comprehensive digitization project for the cathedral's historical and artistic heritage."
+    ],
+    "fullDescription": [
+      "This ambitious project includes the creation of virtual tours, digital cataloging of all artifacts, manuscripts, and historical documents.",
+      "The initiative also involves the development of interactive applications for visitors, enhancing their understanding and appreciation of the cathedral's rich history."
+    ],
+    "imageAlt1": "Digital heritage scanning equipment",
+    "imageAlt2": "Virtual tour development process"
+  }
+},
     "videoGallery": {
       "title": "Meet the experts",
       "subtitle": "Explanatory video",
@@ -124,7 +218,7 @@
       ]
     },
     "mortar": {
-      "title": "Mortar replacement",
+      "title": "Mortar patching",
       "description": [
         "When the first centimetres of the surface is degraded and not preservable, the damaged part is replaced with special mortars.",
         "To improve adherence and resistance, a special grid is constructed to “reinforce” the mortar."
@@ -282,7 +376,7 @@
         "title": "Sanding",
         "description": [
           "In some areas of the Cathedral the material suffer to phenomena of decohesion of the grain of the stone.",
-          "The stone looks less compact and looses external surface layers"   
+          "The stone looks less compact and looses external surface layers"
         ]
       },
       "biodeterioration": {
@@ -364,6 +458,23 @@
         }
       }
     },
+     "saltCrystallization": {
+      "title": "Salt Crystallization",
+      "crystallizationPressure": {
+        "title": "Crystallization Pressure",
+        "description": [
+          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+        ]
+      },
+      "gypsum": {
+        "title": "Gypsum formation",
+        "description": [
+          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+          "This led to the formation of the so called “black crusts”."
+        ]
+      }
+    },
     "atmosphericPollution": {
       "title": "Atmospheric Pollution",
       "acidRain": {
@@ -422,7 +533,7 @@
         "There are seven types of Rainwater management features that are designed to drive water away from the walls.",
         "Click on the device to learn more about it"
       ],
-      "testYourKnowledge": "Test your knowledge!",
+      "back": "Back",
       "cornices": {
         "title": "Cornices",
         "description": [
@@ -465,8 +576,115 @@
           "These are found on certain lean-to parts of the cathedral."
         ]
       }
+    },
+    "failureSituations": {
+      "title": "Failure Scenarios",
+      "description": [
+        "Dripstone erosion and poorly designed profiles significantly reduce their effectiveness in redirecting water. Without sharp drip-cuts, water is not expelled cleanly and instead flows along the surface, causing wetting and deterioration of the underlying masonry. In some cases, water follows a tangent path—known as the expulsion angle—that leads to unwanted runoff below.",
+        "Rotating or inverted dripstone profiles without appropriate modifications can trap water in their lower curves, further contributing to pooling and moisture-related damage."
+      ],
+      "contemporarySolutions": "Contemporary Solutions",
+      "ineffectiveDripstones": {
+        "title": "Ineffective dripstones due to severe erosion",
+        "description": [
+          "Erosion inhibits the dripstone's ability to shed water, causing water to be intercepted and not properly redirected."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Dripstones which direct water back onto the building",
+        "description": [
+          "The flowing water begins its fall at an ‘expulsion angle’ that is tangent to the profile, leading to the water wetting the surfaces below."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Dripstones without drip-cuts",
+        "description": [
+          "Without drip-cuts, water continues to run down the surface, causing further wetting and damage to the lower parts of the building."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Rotating dripstones that retain water upside down",
+        "description": [
+          "Due to its profile and the absence of a sharp drip-cut, water pools in the lower part of the toroid as if upside-down."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Dripstones without any profile adaptation",
+        "description": [
+          "These are the dripstones whose profile rotates or inverts without the necessary adaptation to ensure proper water shedding."
+        ]
       }
     },
+    "contemporarySolutions": {
+      "title": "Contemporary Solutions",
+      "description": [
+        "Stereotomy (stone-cutting): This involves re-cutting existing stone elements, such as accentuating the overhang of a torus or cutting grooves in a chamfer to better direct water.",
+        "Tinsmithing (metalwork): This involves inserting metal elements like weatherstrips or guides in bed joints or under copings to ensure water is channelled away from the building. Tinsmithing solutions are often preferred where stereotomy is insufficient or too costly."
+      ],
+      "Examples": "Examples on the Cathedral",
+      "Stereotomy": {
+        "title": "Stereotomy"
+      },
+      "Tinsmithing": {
+        "title": "Tinsmithing"
+      }
+    },
+    "exampleOne": {
+      "title": "Interventions on the Flying Buttresses",
+      "description": [
+        "Interventions on the Flying Buttresses combine traditional stereotomy techniques with contemporary metalworking solutions to improve water management and protect the masonry.These include installation of metal microgutters and drip-cuts to enhance the efficiency of the existing rainwater management devices."
+      ],
+      "Examples": "Rose Window"
+    },
+    "exampleTwo": {
+      "title": "Interventions on the Rose Window",
+      "description": [
+        "The Rose Window features an existing toroidal stone profile that plays a key role in water management. However, to enhance its performance and mitigate moisture-related deterioration, contemporary interventions have been introduced.",
+        "These include the installation of discreet metal drip-cuts along the upper and lower semi-circular edges of the window to ensure effective water diversion. In addition, micro-gutters have been carved at the bottom and sides of the window frame to guide runoff away from sensitive areas of the masonry."
+      ],
+      "Examples": "Flying Buttress"
+    },
+    "thirteenCE": {
+      "title": "13th Century CE",
+      "description": [
+        "The initial structures, including roofs and eaves on the north and south transept towers, served as major protective elements.  Certain stone elements, such as the dripstones or stringcourses in the archivolts of the high bays of the nave and their cordons, might date back to the 13th century.",
+        "It is considered probable that these elements have been reworked or recut several times over the centuries."
+      ],
+      "Next": "Next"
+    },
+    "eighteenCE": {
+      "title": "18th Century CE",
+      "description": [
+        "The local molasse stone, being a soft sandstone with a carbonate matrix and swelling clays, was the primary building material, and its vulnerability to water damage was a known issue from early on.",
+        "The replacement of altered parts was always carried out by analogy: the new drip mouldings were recut to match the old ones or at least to resemble them."
+      ],
+      "Next": "Next"
+    },
+    "nineteenCE": {
+      "title": "19th Century CE",
+      "description": [
+        "The latter half of the 19th century, particularly the restorations led by Viollet-le-Duc (from 1873) and his successor Assinare (from 1877), marked a significant period for rainwater management. Large cornice-gutters and drains were installed on the eaves of the naves and aisles, connected to pipes bringing the water down on the streets.",
+        "To enhance resistance to weathering, molasse was replaced with more durable limestone for critical elements, such as the beaked dripstones on the sloping retreats of the buttresses."
+      ],
+      "Next": "Next"
+    },
+    "twentyCE": {
+      "title": "20th Century CE",
+      "description": [
+        "The 20th-century rainwater management strategy was largely a continuation of the methods pioneered by Viollet-le-Duc and Assinare, focusing on directing water away from the facade using architectural stone elements like dripstones and cornices.",
+        "Despite these efforts, the sources indicate that even these restored larmiers and retreats often did not function perfectly, leading to continued problems like water accumulation at the edges and lateral overflows that damaged the masonry below. Introduction of tinsmithing during this time through the addition of metal sheet gutters to some roofs."
+      ],
+      "Next": "Next"
+    },
+    "twentyoneCE": {
+      "title": "21st Century CE",
+      "description": [
+        "Mixed material solutions, combining stone with metal, are being explored or implemented for elements like drip-cuts or cordons to provide sharper edges and prevent biological obstruction.",
+        "These mixed solutions are seen not as entirely new, but as a continuation of a historical evolution in materials for water management."
+      ],
+      "Back": "Back"
+    }
+  },
   "games": {
     "oldestStone": {
       "start": {
@@ -531,7 +749,6 @@
         "body": [
           "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
           "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
-
         ]
       }
     }
@@ -540,4 +757,4 @@
     "navMenuButton": "Navigation Menu",
     "closeNavMenu": "Close navigation menu"
   }
-}
+    }

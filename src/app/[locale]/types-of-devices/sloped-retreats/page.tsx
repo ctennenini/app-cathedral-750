@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import sloped from './sloped-retreats.jpg'
+import sloped from './slopedretreat.png'
 
 import { makePage } from '@/components/makePage'
 
@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.slopedRetreats.description}
-      backButtonTarget="/chamfered-drip-edge"
+      backButtonTarget="/types-of-devices"
       nextButtonTarget="/types-of-devices/rotating-drip-edges"
       pullOutContent={[
         {

@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import cornices from './cornices.jpg'
+import cornices from './cornices.png'
 
 import { makePage } from '@/components/makePage'
 

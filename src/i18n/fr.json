@@ -11,44 +11,45 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-       "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
-        "actions": {
+      "actions": {
         "action1": "Button 1",
         "action2": "Button 2",
         "action3": "Button 3"
       },
-       "gallery": {
+      "gallery": {
         "galleryitem1": {
           "title": "img 1"
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-      "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -72,9 +73,102 @@
         "molasses": "La molasse et son altération",
         "conservation": "Stratégies de conservation",
         "vaults": "Les voûtes de la cathédrale",
-         "videoGallery": "Meet the experts"
+        "videoGallery": "Meet the experts"
       }
     },
+    "timeline": {
+  "title": "Past restoration work",
+  "subtitle": "A timeline of the most significant events",
+  "description": [
+    "Explore the key moments that have marked the history of the cathedral over the centuries.",
+    "Click on each event to discover more details."
+  ],
+  "bgImgAlt": "Aerial view of the cathedral",
+  "backButtonTarget": "/previous-page",
+  "nextButtonTarget": "/next-page",
+  
+  "event1170": {
+    "year": "1170",
+    "title": "Start of construction of the cathedral",
+    "description": [
+      "The construction of Lausanne Cathedral began in 1170 and saw several master builders succeed one another until the first half of the 13th century."
+    ],
+    "fullDescription": [
+      "Beginning with the Romanesque apse, the continuation of the monument's construction quickly affirmed the Gothic style of its architecture and was completed around 1235 with the addition of the painted portal on the south façade.",
+      "On 20 October 1275, the cathedral was consecrated by Pope Gregory X in the presence of Emperor Rudolf of Habsburg.",
+      "The first stage of construction of the cathedral began in 1173, with a first master builder creating the ambulatory of the apse. Twenty years later, the second master builder corrected the layout of the building, modified its architectural composition, and, by 1215, had built the church we know today."
+    ],
+    "imageAlt": "Historical view of the cathedral construction"
+  },
+  
+  "event1523": {
+    "year": "1523",
+    "title": "Tower Lantern Fire",
+    "description": [
+      "A devastating fire damaged the original tower lantern, requiring extensive reconstruction work."
+    ],
+    "fullDescription": [
+      "The medieval tower lantern suffered significant damage from a major fire that swept through the upper sections of the cathedral.",
+      "This event marked a turning point in the cathedral's history, as it necessitated not only repairs but also architectural modifications to prevent future fire damage."
+    ],
+    "imageAlt1": "Old tower lantern before the fire",
+    "imageAlt2": "Tower lantern damaged by fire"
+  },
+  
+  "event1833": {
+    "year": "1833",
+    "title": "First Major Restoration Project",
+    "description": [
+      "The first comprehensive restoration project was undertaken to address centuries of weathering and structural issues."
+    ],
+    "fullDescription": [
+      "This restoration marked the beginning of modern conservation approaches to historic architecture.",
+      "The project involved extensive documentation of the existing structure and the development of new restoration techniques."
+    ],
+    "imageAlt": "Restoration project plans and drawings"
+  },
+  
+  "event1950": {
+    "year": "1950",
+    "title": "Post-War Restoration",
+    "description": [
+      "Major restoration and modernization work was undertaken after World War II to preserve the cathedral's architectural integrity."
+    ],
+    "fullDescription": [
+      "The post-war restoration involved comprehensive structural consolidation and the introduction of modern conservation technologies.",
+      "Work included foundation strengthening, cleaning of the sandstone facades, restoration of interior frescoes, and installation of modern lighting and heating systems."
+    ],
+    "imageAlt1": "New tower lantern installation",
+    "imageAlt2": "Restoration work documentation"
+  },
+  
+  "event2009": {
+    "year": "2009",
+    "title": "Modern Stained Glass Installation",
+    "description": [
+      "New stained glass windows by contemporary artists were installed, creating a unique dialogue between modern art and historic architecture."
+    ],
+    "fullDescription": [
+      "The installation of contemporary stained glass windows represents one of the most significant modern artistic contributions to the cathedral.",
+      "These artworks, characterized by vibrant colors and geometric forms, filter light to create a mystical and contemplative atmosphere within the sacred space."
+    ],
+    "imageAlt": "Contemporary stained glass installation"
+  },
+  
+  "event2020": {
+    "year": "2020",
+    "title": "Digital Heritage Initiative",
+    "description": [
+      "Launch of a comprehensive digitization project for the cathedral's historical and artistic heritage."
+    ],
+    "fullDescription": [
+      "This ambitious project includes the creation of virtual tours, digital cataloging of all artifacts, manuscripts, and historical documents.",
+      "The initiative also involves the development of interactive applications for visitors, enhancing their understanding and appreciation of the cathedral's rich history."
+    ],
+    "imageAlt1": "Digital heritage scanning equipment",
+    "imageAlt2": "Virtual tour development process"
+  }
+},
     "videoGallery": {
       "title": "The degradation of the Facades",
       "subtitle": "Explanatory video",
@@ -364,6 +458,24 @@
         }
       }
     },
+         "saltCrystallization": {
+      "title": "Salt Crystallization",
+      "crystallizationPressure": {
+        "title": "Crystallization Pressure",
+        "description": [
+          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+          "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
+          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+        ]
+      },
+      "gypsum": {
+        "title": "Gypsum formation",
+        "description": [
+          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+          "This led to the formation of the so called “black crusts”."
+        ]
+      }
+    },
     "atmosphericPollution": {
       "title": "Pollution Atmosphérique",
       "acidRain": {
@@ -422,7 +534,7 @@
         "Il y a sept types de dispositifs de gestion des eaux pluviales qui sont conçus pour éloigner l'eau des murs.",
         "Cliquez sur le dispositif pour en savoir plus à son sujet"
       ],
-      "testYourKnowledge": "Testez vos connaissances !",
+      "back": "Retour",
       "cornices": {
         "title": "Corniches",
         "description": [
@@ -465,6 +577,113 @@
           "Celles-ci se trouvent sur certaines parties en appentis de la cathédrale."
         ]
       }
+    },
+    "failureSituations": {
+      "title": "Scénarios de défaillance",
+      "description": [
+        "L’érosion et les profils mal conçus réduisent considérablement l’efficacité des larmiers à détourner l’eau. En l’absence de coupes-gouttes nettes, l’eau n’est pas expulsée proprement et s’écoule le long de la surface, provoquant un mouillage et une détérioration de la maçonnerie sous-jacente. Dans certains cas, l’eau suit un angle tangent au profil — connu sous le nom d’angle d’expulsion — ce qui entraîne un écoulement indésirable vers les zones inférieures.",
+        "Les profils de larmiers tournés ou inversés, sans modifications appropriées, peuvent retenir l’eau dans leurs courbures inférieures, contribuant ainsi à la stagnation de l’eau et aux dommages liés à l’humidité."
+      ],
+      "contemporarySolutions": "Solutions contemporaines",
+      "ineffectiveDripstones": {
+        "title": "Larmiers inefficaces en raison d'une érosion importante",
+        "description": [
+          "L’érosion nuit à la capacité du larmier à évacuer l’eau, ce qui empêche son écoulement correct et provoque des accumulations."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Larmiers qui redirigent l’eau vers le bâtiment",
+        "description": [
+          "L’eau commence sa chute à un « angle d’expulsion » tangent au profil, mouillant ainsi les surfaces situées en dessous."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Larmiers sans coupes-gouttes",
+        "description": [
+          "Sans coupes-gouttes, l’eau continue de s’écouler le long de la surface, causant un mouillage et des dégradations supplémentaires des parties inférieures du bâtiment."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Larmiers tournés qui retiennent l’eau à l’envers",
+        "description": [
+          "En raison de leur profil et de l’absence de coupe-goutte nette, l’eau s’accumule dans la partie inférieure du tore, comme si elle était à l’envers."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Larmiers sans adaptation de profil",
+        "description": [
+          "Il s’agit de larmiers dont le profil tourne ou s’inverse sans les adaptations nécessaires pour assurer une bonne évacuation de l’eau."
+        ]
+      }
+    },
+    "contemporarySolutions": {
+      "title": "Solutions contemporaines",
+      "description": [
+        "Stéréotomie (taille de pierre) : Cela consiste à retailler des éléments en pierre existants, par exemple en accentuant le débord d’un tore ou en taillant des rainures dans un chanfrein pour mieux diriger l’eau.",
+        "Ferblanterie (travail du métal) : Cela consiste à insérer des éléments métalliques comme des bandes d’égouttage ou des guides dans les joints de lit ou sous les couvertines pour garantir que l’eau soit évacuée loin du bâtiment. Les solutions en ferblanterie sont souvent privilégiées lorsque la stéréotomie est insuffisante ou trop coûteuse."
+      ],
+      "Examples": "Exemples sur la cathédrale",
+      "Stereotomy": {
+        "title": "Stéréotomie"
+      },
+      "Tinsmithing": {
+        "title": "Ferblanterie"
+      }
+    },
+    "exampleOne": {
+      "title": "Interventions sur les arcs-boutants",
+      "description": [
+        "Les interventions sur les arcs-boutants combinent des techniques traditionnelles de stéréotomie avec des solutions contemporaines de travail du métal afin d’améliorer la gestion des eaux et de protéger la maçonnerie. Cela comprend l’installation de micro-gouttières et de coupes-gouttes métalliques pour renforcer l’efficacité des dispositifs existants d’évacuation des eaux pluviales."
+      ],
+      "Examples": "Rosace"
+    },
+    "exampleTwo": {
+      "title": "Interventions sur la rosace",
+      "description": [
+        "La rosace présente un profil torique en pierre existant qui joue un rôle essentiel dans la gestion des eaux. Toutefois, afin d’en améliorer les performances et de limiter les détériorations liées à l’humidité, des interventions contemporaines ont été mises en œuvre.",
+        "Celles-ci incluent l’ajout discret de coupes-gouttes métalliques le long des parties supérieure et inférieure de l’arc semi-circulaire, pour assurer une évacuation efficace de l’eau. Des micro-gouttières ont également été taillées en bas et sur les côtés du cadre de la fenêtre pour guider l’écoulement loin des zones sensibles de la maçonnerie."
+      ],
+      "Examples": "Arc-boutant"
+    },
+    "thirteenCE": {
+      "title": "XIIIe siècle",
+      "description": [
+        "Les premières structures, y compris les toitures et les avant-toits des tours du transept nord et sud, constituaient des éléments de protection majeurs. Certains éléments en pierre, tels que les larmiers ou bandeaux dans les archivoltes des hautes travées de la nef et leurs cordons, pourraient remonter au XIIIe siècle.",
+        "Il est considéré comme probable que ces éléments aient été retravaillés ou retaillés plusieurs fois au fil des siècles."
+      ],
+      "Next": "Suivant"
+    },
+    "eighteenCE": {
+      "title": "XVIIIe siècle",
+      "description": [
+        "La molasse locale, un grès tendre à matrice calcaire et argiles gonflantes, était le principal matériau de construction, et sa vulnérabilité aux dégâts des eaux était connue dès le départ.",
+        "Le remplacement des parties altérées s’est toujours fait par analogie : les nouveaux profils de larmiers étaient retaillés pour correspondre aux anciens ou au moins leur ressembler."
+      ],
+      "Next": "Suivant"
+    },
+    "nineteenCE": {
+      "title": "XIXe siècle",
+      "description": [
+        "La seconde moitié du XIXe siècle, notamment les restaurations dirigées par Viollet-le-Duc (à partir de 1873) puis son successeur Assinare (à partir de 1877), a marqué une étape importante dans la gestion des eaux pluviales. De grandes corniches-gouttières et des canalisations ont été installées au niveau des avant-toits des nefs et des bas-côtés, raccordées à des tuyaux évacuant l’eau vers la rue.",
+        "Pour améliorer la résistance aux intempéries, la molasse a été remplacée par du calcaire plus durable pour les éléments critiques, tels que les larmiers en bec situés sur les retraits inclinés des contreforts."
+      ],
+      "Next": "Suivant"
+    },
+    "twentyCE": {
+      "title": "XXe siècle",
+      "description": [
+        "La stratégie de gestion des eaux pluviales au XXe siècle s’est largement inscrite dans la continuité des méthodes initiées par Viollet-le-Duc et Assinare, en concentrant les efforts sur la déviation de l’eau à l’aide d’éléments architecturaux en pierre comme les larmiers et les corniches.",
+        "Malgré ces efforts, les sources indiquent que même les larmiers et retraits restaurés ne fonctionnaient pas toujours parfaitement, entraînant des problèmes persistants comme l’accumulation d’eau sur les bords et les débordements latéraux endommageant la maçonnerie. C’est également à cette époque qu’on introduit la ferblanterie, avec notamment des gouttières en tôle sur certains toits."
+      ],
+      "Next": "Suivant"
+    },
+    "twentyoneCE": {
+      "title": "XXIe siècle",
+      "description": [
+        "Des solutions mixtes, combinant la pierre et le métal, sont en cours d’expérimentation ou déjà mises en œuvre pour des éléments comme les coupes-gouttes ou les cordons, afin d’assurer des arêtes plus nettes et prévenir les obstructions biologiques.",
+        "Ces solutions hybrides ne sont pas considérées comme entièrement nouvelles, mais plutôt comme une continuation de l’évolution historique des matériaux utilisés pour la gestion des eaux."
+      ],
+      "Back": "Retour"
     }
   },
   "games": {
@@ -539,4 +758,4 @@
     "navMenuButton": "Menu de Navigation",
     "closeNavMenu": "Fermer le menu de navigation"
   }
-}
+    }

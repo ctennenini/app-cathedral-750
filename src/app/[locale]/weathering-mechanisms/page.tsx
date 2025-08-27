@@ -24,8 +24,7 @@ export default makePage((dictionary) => {
             label: pages.weatheringMechanisms.actions.swellingClays,
           },
           {
-            target: '#',
-            disabled: true,
+            target: '/salt-crystallization',
             label: pages.weatheringMechanisms.actions.saltCrystallization,
           },
           {

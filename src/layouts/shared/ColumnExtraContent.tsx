@@ -4,31 +4,33 @@ import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
 import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
-
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
 
+// ⬇️ Importa se TimelineLayout è un componente separato
+import { TimelineLayout, TimelineEvent } from '@/layouts/TextPageLayout/TimelineLayout'
+
+/**
+ * Image props
+ */
 type ImageProps = Omit<NextImageProps, 'alt'> & Partial<Pick<NextImageProps, 'alt'>>
 
 /**
- * constants
+ * Styled container
  */
-
 const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $transparent?: boolean }>) => (
   <div {...otherProps}>
     <div>{children}</div>
   </div>
 ))(({ $transparent }) => ({
   position: 'relative',
-
   ...($transparent
     ? null
     : {
         backgroundColor: 'var(--white)',
         boxShadow: '16em 0 0 rgba(88, 88, 88, 0.2) inset',
       }),
-
   '& > div': {
     maxWidth: `calc(${TARGET_VIEW_WIDTH}em - ${LEFT_COLUMN_OFFSET})`,
     paddingTop: '32em',
@@ -40,9 +42,8 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
 }))
 
 /**
- * Image
+ * Extra image
  */
-
 const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt={props.alt || ''} />)({
   width: 'auto',
   height: 'auto',
@@ -52,7 +53,137 @@ const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt=
 })
 
 /**
- * Gallery
+ * Timeline type (aggiunto!)
+ */
+export type ExtraContentProps =
+  | {
+      type: 'links'
+      links: BigLinkProps[]
+    }
+  | ({
+      type: 'image'
+      legendItems?: { color: string; label: string }[]
+      clickAreas?: Omit<ComponentProps<typeof Link>, 'href'> & { target?: HREF; $circled?: boolean }[]
+      labels?: { text: TextContent; type?: 'primary' | 'secondary' }[]
+    } & ImageProps)
+  | {
+      type: 'gallery'
+      items: (ImageProps & {
+        label?: string
+        href?: string
+      })[]
+    }
+  | {
+      type: 'youtube'
+      videoId: string
+      title?: string
+    }
+  | {
+      type: 'timeline'
+      events: TimelineEvent[]
+    }
+
+/**
+ * Main render logic
+ */
+export function ExtraContent(props: ExtraContentProps) {
+  switch (props.type) {
+    case 'links':
+      return (
+        <Container $transparent>
+          <Links links={props.links} />
+        </Container>
+      )
+
+    case 'gallery':
+      return (
+        <Container>
+          <Gallery>
+            {props.items.map(({ label, href, ...other }, index) => {
+              let content = (
+                <figure>
+                  <ExtraImage {...other} />
+                  {label && (
+                    <figcaption>
+                      <span dangerouslySetInnerHTML={{ __html: label }} />
+                    </figcaption>
+                  )}
+                </figure>
+              )
+              content = href ? <Link href={href}>{content}</Link> : content
+              return <GalleryItem key={index}>{content}</GalleryItem>
+            })}
+          </Gallery>
+        </Container>
+      )
+
+    case 'image': {
+      const { legendItems, clickAreas, labels, ...otherProps } = props
+      return (
+        <Container>
+          <Spacer>
+            <ExtraImage {...otherProps} />
+            {legendItems && <Legend items={legendItems} />}
+            {clickAreas?.map((areaProps, index) => (
+              <ClickArea key={index} {...areaProps} />
+            ))}
+            {labels?.map(({ text, type, ...labelProps }, index) => (
+              <Label key={index} text={text} type={type} {...labelProps} />
+            ))}
+          </Spacer>
+        </Container>
+      )
+    }
+
+    case 'youtube': {
+      const { videoId, title } = props
+      return (
+        <Container>
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              paddingBottom: '56.25%',
+              height: 0,
+              overflow: 'hidden',
+              borderRadius: '12px',
+            }}
+          >
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+              title={title || 'YouTube video'}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 0,
+              }}
+            />
+          </div>
+        </Container>
+      )
+    }
+
+    case 'timeline': {
+      return (
+        <Container>
+          <TimelineLayout events={props.events} />
+        </Container>
+      )
+    }
+
+    default:
+      throw new Error('Invalid ExtraContent type')
+  }
+}
+
+/**
+ * Styled components usati
  */
 
 const Gallery = styled.ul({
@@ -65,7 +196,6 @@ const Gallery = styled.ul({
 const GalleryItem = styled.li({
   figcaption: {
     textAlign: 'center',
-
     fontWeight: 700,
     color: 'var(--highlight)',
     marginTop: '16em',
@@ -74,12 +204,6 @@ const GalleryItem = styled.li({
     },
   },
 })
-
-/**
- * Image with Legend
- */
-
-type LegendItemParams = { color: string; label: string }
 
 const LegendList = styled.ul({
   display: 'flex',
@@ -93,7 +217,6 @@ const LegendList = styled.ul({
 const Block = styled.div<{ $color: string }>(({ $color }) => ({
   width: '16em',
   height: '16em',
-  display: 'inline-block',
   backgroundColor: $color,
 }))
 
@@ -107,7 +230,7 @@ const Li = styled.li({
   },
 })
 
-function LegendItem({ color, label }: LegendItemParams) {
+function LegendItem({ color, label }: { color: string; label: string }) {
   return (
     <Li>
       <Block $color={color} />
@@ -116,70 +239,24 @@ function LegendItem({ color, label }: LegendItemParams) {
   )
 }
 
-const Legend = ({ items }: { items: LegendItemParams[] }) => (
+const Legend = ({ items }: { items: { color: string; label: string }[] }) => (
   <LegendList>
-    {items.map(({ color, label }, index) => (
-      <LegendItem key={index} color={color} label={label} />
+    {items.map((item, index) => (
+      <LegendItem key={index} {...item} />
     ))}
   </LegendList>
 )
 
-/**
- * Links
- */
-
-const LinksContainer = styled.nav({
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-
-  '& ul': {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '40em',
-    justifyContent: 'center',
-    listStyle: 'none',
-    [BigLink]: {
-      width: '100%',
-    },
-  },
+const Spacer = styled.div({
+  position: 'relative',
+  width: 'fit-content',
+  height: 'fit-content',
+  margin: 'auto',
 })
 
-type LinksProps = PropsWithChildren<{
-  links?: BigLinkProps[]
-}>
-
-function Links({ links }: LinksProps) {
-  return (
-    <>
-      {links && (
-        <LinksContainer>
-          <ul>
-            {links.map((props, i) => (
-              <li key={i}>
-                <BigLink {...props} />
-              </li>
-            ))}
-          </ul>
-        </LinksContainer>
-      )}
-    </>
-  )
-}
-
-/**
- * Image with Click Map
- */
-
-type ClickAreaProps = Omit<ComponentProps<typeof Link>, 'href'> & {
-  target?: HREF
-}
-
-const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link href={target ?? '#'} {...otherProps} />)<{
-  $circled?: boolean
-}>(({ $circled }) => ({
+const ClickArea = styled(({ target, ...props }: { target?: HREF } & any) => (
+  <Link href={target ?? '#'} {...props} />
+))<{ $circled?: boolean }>(({ $circled }) => ({
   border: '5em solid transparent',
   position: 'absolute',
   backgroundColor: 'transparent',
@@ -201,26 +278,8 @@ const ClickArea = styled(({ target, ...otherProps }: ClickAreaProps) => <Link hr
   }),
 }))
 
-type ClickAreaParams = ComponentProps<typeof ClickArea>
-
-const Spacer = styled.div({
-  position: 'relative',
-  width: 'fit-content',
-  height: 'fit-content',
-  margin: 'auto',
-})
-
-/**
- * Image with Labels
- */
-
-type LabelProps = Omit<ComponentProps<'label'>, 'text' | 'type'> & {
-  text: TextContent
-  type?: 'primary' | 'secondary'
-}
-
-const Label = styled(({ type = 'primary', text, ...otherProps }: LabelProps) => (
-  <label {...otherProps} data-label-type={type}>
+const Label = styled(({ type = 'primary', text, ...props }: { text: TextContent; type?: 'primary' | 'secondary' } & any) => (
+  <label {...props} data-label-type={type}>
     {Array.isArray(text) ? text.join(' ') : text}
   </label>
 ))({
@@ -230,121 +289,34 @@ const Label = styled(({ type = 'primary', text, ...otherProps }: LabelProps) => 
   color: 'var(--highlight)',
 })
 
-type LabelParams = ComponentProps<typeof Label>
+const LinksContainer = styled.nav({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '& ul': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '40em',
+    listStyle: 'none',
+    [BigLink]: {
+      width: '100%',
+    },
+  },
+})
 
-/**
- * Extra Content
- */
-
-export type ExtraContentProps =
-  | {
-      type: 'links'
-      links: LinksProps['links']
-    }
-  | ({
-      type: 'image'
-      legendItems?: LegendItemParams[]
-      clickAreas?: ClickAreaParams[]
-      labels?: LabelParams[]
-    } & ImageProps)
-  | {
-      type: 'gallery'
-      items: (ImageProps & {
-        label?: string
-        href?: string
-      })[]
-    }
-  | {
-      type: 'youtube'
-      videoId: string
-      title?: string
-    }
-
-export function ExtraContent(props: ExtraContentProps) {
-  switch (props.type) {
-    case 'links': {
-      return (
-        <Container $transparent>
-          <Links links={props.links} />
-        </Container>
-      )
-    }
-    case 'gallery': {
-      return (
-        <Container>
-          <Gallery>
-            {props.items.map(({ label, href, ...other }, index) => {
-              let content = (
-                <figure>
-                  <ExtraImage {...other} />
-                  {label && (
-                    <figcaption>
-                      <span dangerouslySetInnerHTML={{ __html: label }} />
-                    </figcaption>
-                  )}
-                </figure>
-              )
-              content = href ? <Link href={href}>{content}</Link> : content
-
-              return <GalleryItem key={index}>{content}</GalleryItem>
-            })}
-          </Gallery>
-        </Container>
-      )
-    }
-    case 'image':
-      {
-        const { legendItems, clickAreas, labels, ...otherProps } = props
-        return (
-          <Container>
-            <Spacer>
-              <ExtraImage {...otherProps} />
-              {legendItems && <Legend items={legendItems} />}
-              {clickAreas?.map((props, index) => (
-                <ClickArea key={index} {...props} />
-              ))}
-              {labels?.map(({ text, type, ...props }, index) => (
-                <Label text={text} type={type} key={index} {...props} />
-              ))}
-            </Spacer>
-          </Container>
-        )
-      }
-    case 'youtube': {
-  const { videoId, title } = props
-
+function Links({ links }: { links?: BigLinkProps[] }) {
+  if (!links) return null
   return (
-    <Container>
-      <div
-        style={{
-          position: 'relative',
-          width: '100%',
-          paddingBottom: '56.25%', // 16:9 aspect ratio
-          height: 0,
-          overflow: 'hidden',
-          borderRadius: '12px',
-        }}
-      >
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-          title={title || 'YouTube video'}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            border: 0,
-          }}
-        />
-      </div>
-    </Container>
+    <LinksContainer>
+      <ul>
+        {links.map((props, i) => (
+          <li key={i}>
+            <BigLink {...props} />
+          </li>
+        ))}
+      </ul>
+    </LinksContainer>
   )
-}
-    default:
-      throw new Error('Invalid type', props)
-  }
 }

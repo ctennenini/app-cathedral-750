@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import copings from './copings.jpg'
+import copings from './copings.png'
 
 import { makePage } from '@/components/makePage'
 
@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.copings.description}
-      backButtonTarget="/cornices"
+      backButtonTarget="/types-of-devices"
       nextButtonTarget="/types-of-devices/chamfered-drip-edges"
       pullOutContent={[
         {

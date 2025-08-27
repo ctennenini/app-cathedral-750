@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import chamfered from './chamfered-drip-edges.jpg'
+import chamfered from './chamfered.png'
 
 import { makePage } from '@/components/makePage'
 
@@ -17,7 +17,7 @@ export default makePage((dictionary) => {
       }}
       subtitle={pages.typesOfFeatures.title}
       text={pages.typesOfFeatures.chamferedDripEdges.description}
-      backButtonTarget="/copings"
+      backButtonTarget="/types-of-devices"
       nextButtonTarget="/types-of-devices/sloped-retreats"
 
       pullOutContent={[

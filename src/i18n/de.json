@@ -11,44 +11,45 @@
         "This is the second paragraph.",
         "This is the third paragraph."
       ],
-       "descriptionpages": [
-          [
-        "This is the first paragraph, page 1",
-        "This is the second paragraph, page 1"
+      "descriptionpages": [
+        [
+          "This is the first paragraph, page 1",
+          "This is the second paragraph, page 1"
         ],
-           [
-        "This is the first paragraph, page 2",
-        "This is the second paragraph, page 2"
+        [
+          "This is the first paragraph, page 2",
+          "This is the second paragraph, page 2"
         ],
-           [
-      "This is the first paragraph, page 3",
-        "This is the second paragraph, page 3"
+        [
+          "This is the first paragraph, page 3",
+          "This is the second paragraph, page 3"
         ],
-           [
-      "This is the first paragraph, page 4",
-        "This is the second paragraph, page 4"
+        [
+          "This is the first paragraph, page 4",
+          "This is the second paragraph, page 4"
         ]
       ],
-        "actions": {
+      "actions": {
         "action1": "Button 1",
         "action2": "Button 2",
         "action3": "Button 3"
       },
-       "gallery": {
+      "gallery": {
         "galleryitem1": {
           "title": "img 1"
         },
         "galleryitem2": {
           "title": "img 2"
-      },
+        },
         "galleryitem3": {
           "title": "img 3"
-      }},
-      "legendItems": {
-          "legenditem1": "name 1",
-          "legenditem2": "name 2",
-          "legenditem3": "name 3"
         }
+      },
+      "legendItems": {
+        "legenditem1": "name 1",
+        "legenditem2": "name 2",
+        "legenditem3": "name 3"
+      }
     },
     "start": {
       "title": [
@@ -75,6 +76,99 @@
         "videoGallery": "Meet the experts"
       }
     },
+    "timeline": {
+  "title": "Past restoration work",
+  "subtitle": "A timeline of the most significant events",
+  "description": [
+    "Explore the key moments that have marked the history of the cathedral over the centuries.",
+    "Click on each event to discover more details."
+  ],
+  "bgImgAlt": "Aerial view of the cathedral",
+  "backButtonTarget": "/previous-page",
+  "nextButtonTarget": "/next-page",
+  
+  "event1170": {
+    "year": "1170",
+    "title": "Start of construction of the cathedral",
+    "description": [
+      "The construction of Lausanne Cathedral began in 1170 and saw several master builders succeed one another until the first half of the 13th century."
+    ],
+    "fullDescription": [
+      "Beginning with the Romanesque apse, the continuation of the monument's construction quickly affirmed the Gothic style of its architecture and was completed around 1235 with the addition of the painted portal on the south façade.",
+      "On 20 October 1275, the cathedral was consecrated by Pope Gregory X in the presence of Emperor Rudolf of Habsburg.",
+      "The first stage of construction of the cathedral began in 1173, with a first master builder creating the ambulatory of the apse. Twenty years later, the second master builder corrected the layout of the building, modified its architectural composition, and, by 1215, had built the church we know today."
+    ],
+    "imageAlt": "Historical view of the cathedral construction"
+  },
+  
+  "event1523": {
+    "year": "1523",
+    "title": "Tower Lantern Fire",
+    "description": [
+      "A devastating fire damaged the original tower lantern, requiring extensive reconstruction work."
+    ],
+    "fullDescription": [
+      "The medieval tower lantern suffered significant damage from a major fire that swept through the upper sections of the cathedral.",
+      "This event marked a turning point in the cathedral's history, as it necessitated not only repairs but also architectural modifications to prevent future fire damage."
+    ],
+    "imageAlt1": "Old tower lantern before the fire",
+    "imageAlt2": "Tower lantern damaged by fire"
+  },
+  
+  "event1833": {
+    "year": "1833",
+    "title": "First Major Restoration Project",
+    "description": [
+      "The first comprehensive restoration project was undertaken to address centuries of weathering and structural issues."
+    ],
+    "fullDescription": [
+      "This restoration marked the beginning of modern conservation approaches to historic architecture.",
+      "The project involved extensive documentation of the existing structure and the development of new restoration techniques."
+    ],
+    "imageAlt": "Restoration project plans and drawings"
+  },
+  
+  "event1950": {
+    "year": "1950",
+    "title": "Post-War Restoration",
+    "description": [
+      "Major restoration and modernization work was undertaken after World War II to preserve the cathedral's architectural integrity."
+    ],
+    "fullDescription": [
+      "The post-war restoration involved comprehensive structural consolidation and the introduction of modern conservation technologies.",
+      "Work included foundation strengthening, cleaning of the sandstone facades, restoration of interior frescoes, and installation of modern lighting and heating systems."
+    ],
+    "imageAlt1": "New tower lantern installation",
+    "imageAlt2": "Restoration work documentation"
+  },
+  
+  "event2009": {
+    "year": "2009",
+    "title": "Modern Stained Glass Installation",
+    "description": [
+      "New stained glass windows by contemporary artists were installed, creating a unique dialogue between modern art and historic architecture."
+    ],
+    "fullDescription": [
+      "The installation of contemporary stained glass windows represents one of the most significant modern artistic contributions to the cathedral.",
+      "These artworks, characterized by vibrant colors and geometric forms, filter light to create a mystical and contemplative atmosphere within the sacred space."
+    ],
+    "imageAlt": "Contemporary stained glass installation"
+  },
+  
+  "event2020": {
+    "year": "2020",
+    "title": "Digital Heritage Initiative",
+    "description": [
+      "Launch of a comprehensive digitization project for the cathedral's historical and artistic heritage."
+    ],
+    "fullDescription": [
+      "This ambitious project includes the creation of virtual tours, digital cataloging of all artifacts, manuscripts, and historical documents.",
+      "The initiative also involves the development of interactive applications for visitors, enhancing their understanding and appreciation of the cathedral's rich history."
+    ],
+    "imageAlt1": "Digital heritage scanning equipment",
+    "imageAlt2": "Virtual tour development process"
+  }
+},
     "videoGallery": {
       "title": "The degradation of the Facades",
       "subtitle": "Explanatory video",
@@ -364,6 +458,24 @@
         }
       }
     },
+         "saltCrystallization": {
+      "title": "Salt Crystallization",
+      "crystallizationPressure": {
+        "title": "Crystallization Pressure",
+        "description": [
+          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
+          "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
+          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+        ]
+      },
+      "gypsum": {
+        "title": "Gypsum formation",
+        "description": [
+          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
+          "This led to the formation of the so called “black crusts”."
+        ]
+      }
+    },
     "atmosphericPollution": {
       "title": "Atmosphärische Verschmutzung",
       "acidRain": {
@@ -422,7 +534,7 @@
         "Es gibt sieben Arten von Regenwasser-Management-Einrichtungen, die darauf ausgelegt sind, Wasser von den Wänden wegzuleiten.",
         "Klicken Sie auf die Vorrichtung, um mehr darüber zu erfahren"
       ],
-      "testYourKnowledge": "Testen Sie Ihr Wissen!",
+      "back": "Zuruck",
       "cornices": {
         "title": "Gesimse",
         "description": [
@@ -465,6 +577,113 @@
           "Diese befinden sich an bestimmten Pultdachteilen der Kathedrale."
         ]
       }
+    },
+    "failureSituations": {
+      "title": "Versagensszenarien",
+      "description": [
+        "Erosion und schlecht gestaltete Profile beeinträchtigen die Fähigkeit von Wasserspeiern erheblich, Wasser effektiv abzuleiten. Ohne scharfe Tropfkanten wird das Wasser nicht sauber abgestoßen, sondern fließt an der Oberfläche entlang, was zur Durchfeuchtung und zum Verfall des darunterliegenden Mauerwerks führt. In einigen Fällen folgt das Wasser einem tangentialen Verlauf – dem sogenannten Austrittswinkel – der zu unerwünschtem Wasserablauf auf darunterliegende Flächen führt.",
+        "Rotierende oder umgekehrte Tropfsteinprofile ohne entsprechende Anpassungen können Wasser in ihren unteren Krümmungen stauen und so zusätzlich zur Pfützenbildung und feuchtigkeitsbedingten Schäden beitragen."
+      ],
+      "contemporarySolutions": "Zeitgenössische Lösungen",
+      "ineffectiveDripstones": {
+        "title": "Unwirksame Tropfsteine aufgrund starker Erosion",
+        "description": [
+          "Erosion beeinträchtigt die Fähigkeit des Tropfsteins, Wasser abzuleiten, wodurch Wasser aufgehalten und nicht richtig umgeleitet wird."
+        ]
+      },
+      "dripstonesBack": {
+        "title": "Tropfsteine, die Wasser zurück auf das Gebäude leiten",
+        "description": [
+          "Das fließende Wasser beginnt seinen Fall in einem 'Austrittswinkel', der tangential zum Profil verläuft, was dazu führt, dass die darunterliegenden Flächen benässt werden."
+        ]
+      },
+      "withoutDripcuts": {
+        "title": "Tropfsteine ohne Tropfkante",
+        "description": [
+          "Ohne Tropfkante läuft das Wasser weiterhin an der Oberfläche herab, was zu weiterer Durchfeuchtung und Schäden an den unteren Bauteilen führt."
+        ]
+      },
+      "rotatingRetain": {
+        "title": "Rotierende Tropfsteine, die Wasser kopfüber halten",
+        "description": [
+          "Aufgrund ihres Profils und des Fehlens einer scharfen Tropfkante sammelt sich Wasser in der unteren Zone des torusförmigen Elements – wie kopfüber."
+        ]
+      },
+      "profileAdapt": {
+        "title": "Tropfsteine ohne Profilanpassung",
+        "description": [
+          "Dies sind Tropfsteine, deren Profil sich dreht oder umkehrt, ohne die notwendige Anpassung zur sicheren Wasserabweisung."
+        ]
+      }
+    },
+    "contemporarySolutions": {
+      "title": "Zeitgenössische Lösungen",
+      "description": [
+        "Steinbearbeitung (Stereotomie): Dies beinhaltet das Nachschneiden bestehender Steinelemente, zum Beispiel durch das Hervorheben eines Überhangs eines Torus oder das Einbringen von Rillen in eine Fase, um das Wasser besser abzuleiten.",
+        "Spenglerarbeit (Metallverarbeitung): Dabei werden Metallelemente wie Wetterschutzbleche oder Führungen in Lagerfugen oder unter Abdeckungen eingesetzt, um sicherzustellen, dass das Wasser vom Gebäude weggeleitet wird. Spenglerlösungen werden oft bevorzugt, wenn Stereotomie unzureichend oder zu kostspielig ist."
+      ],
+      "Examples": "Beispiele an der Kathedrale",
+      "Stereotomy": {
+        "title": "Stereotomie"
+      },
+      "Tinsmithing": {
+        "title": "Spenglerarbeit"
+      }
+    },
+    "exampleOne": {
+      "title": "Eingriffe an den Strebebögen",
+      "description": [
+        "Die Eingriffe an den Strebebögen kombinieren traditionelle stereotomische Techniken mit modernen Metallverarbeitungslösungen, um das Regenwassermanagement zu verbessern und das Mauerwerk zu schützen. Dazu gehören die Installation von Metall-Mikrorinnen und Tropfkanten, um die Effizienz der bestehenden Regenwasserableitung zu erhöhen."
+      ],
+      "Examples": "Rosette"
+    },
+    "exampleTwo": {
+      "title": "Eingriffe an der Rosette",
+      "description": [
+        "Die Rosette weist ein vorhandenes toroidales Steinprofil auf, das eine zentrale Rolle im Regenwassermanagement spielt. Um ihre Leistungsfähigkeit zu verbessern und feuchtigkeitsbedingte Schäden zu minimieren, wurden zeitgenössische Eingriffe vorgenommen.",
+        "Dazu gehören die diskrete Anbringung von Metall-Tropfkanten an den oberen und unteren Halbrundbögen der Rosette, um eine effektive Wasserableitung zu gewährleisten. Zusätzlich wurden Mikrorinnen an der Unterseite und den Seiten des Fensterrahmens eingearbeitet, um das abfließende Wasser von empfindlichen Bereichen des Mauerwerks fernzuhalten."
+      ],
+      "Examples": "Strebebogen"
+    },
+    "thirteenCE": {
+      "title": "13. Jahrhundert n. Chr.",
+      "description": [
+        "Die ersten Strukturen, einschließlich der Dächer und Traufen auf den Nord- und Südquerhaustürmen, dienten als wichtige schützende Elemente. Bestimmte Steinelemente wie Wasserschläge oder Gesimse in den Archivolten der hohen Joche des Langhauses und deren Bänder könnten aus dem 13. Jahrhundert stammen.",
+        "Es gilt als wahrscheinlich, dass diese Elemente im Laufe der Jahrhunderte mehrfach überarbeitet oder neu behauen wurden."
+      ],
+      "Next": "Weiter"
+    },
+    "eighteenCE": {
+      "title": "18. Jahrhundert n. Chr.",
+      "description": [
+        "Der lokale Molassesandstein, ein weicher Sandstein mit karbonatischer Matrix und quellfähigen Tonmineralien, war das Hauptbaumaterial, dessen Empfindlichkeit gegenüber Wasser schon früh bekannt war.",
+        "Der Ersatz beschädigter Teile erfolgte stets analog: Die neuen Wasserschläge wurden so nachgearbeitet, dass sie den alten entsprachen oder ihnen zumindest ähnelten."
+      ],
+      "Next": "Weiter"
+    },
+    "nineteenCE": {
+      "title": "19. Jahrhundert n. Chr.",
+      "description": [
+        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die Restaurierungen unter Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877), war ein bedeutender Abschnitt in der Entwicklung des Regenwassermanagements. Große Traufgesimse und Abflüsse wurden an den Dachvorsprüngen von Langhaus und Seitenschiffen installiert und über Fallrohre auf die Straße geleitet.",
+        "Um die Wetterbeständigkeit zu verbessern, wurde der Molassesandstein für kritische Elemente wie spitze Wasserschläge an den geneigten Rücksprüngen der Strebepfeiler durch widerstandsfähigeren Kalkstein ersetzt."
+      ],
+      "Next": "Weiter"
+    },
+    "twentyCE": {
+      "title": "20. Jahrhundert n. Chr.",
+      "description": [
+        "Die Strategien zur Regenwasserableitung im 20. Jahrhundert setzten weitgehend die Methoden von Viollet-le-Duc und Assinare fort und konzentrierten sich darauf, Wasser durch architektonische Steinelemente wie Wasserschläge und Gesimse von der Fassade fernzuhalten.",
+        "Trotz dieser Bemühungen zeigen Quellen, dass selbst restaurierte Wasserschläge und Rücksprünge oft nicht optimal funktionierten, was weiterhin zu Problemen wie Wasseransammlungen an den Rändern und seitlichem Überlauf mit Schäden an der darunterliegenden Mauer führte. In dieser Zeit wurde das Spenglerhandwerk eingeführt, etwa durch Metallrinnen auf bestimmten Dächern."
+      ],
+      "Next": "Weiter"
+    },
+    "twentyoneCE": {
+      "title": "21. Jahrhundert n. Chr.",
+      "description": [
+        "Gemischte Materiallösungen, die Stein mit Metall kombinieren, werden derzeit erprobt oder bereits umgesetzt – zum Beispiel bei Tropfkanten oder Gesimsen, um schärfere Kanten zu erzielen und biologische Verstopfungen zu verhindern.",
+        "Diese hybriden Lösungen gelten nicht als völlig neu, sondern als Weiterentwicklung der historischen Materialanwendung im Regenwassermanagement."
+      ],
+      "Back": "Zuruck"
     }
   },
   "games": {
@@ -531,7 +750,6 @@
         "body": [
           "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
           "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
-
         ]
       }
     }
@@ -540,4 +758,4 @@
     "navMenuButton": "Navigation Menu",
     "closeNavMenu": "Close navigation menu"
   }
-}
+    }

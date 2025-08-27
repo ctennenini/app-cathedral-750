@@ -1,7 +1,7 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
 
-import mort5 from './mort5.png'
+import mort5 from './mortarpatching.jpg'
 
 import { makePage } from '@/components/makePage'
 

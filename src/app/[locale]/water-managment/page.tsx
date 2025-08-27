@@ -16,17 +16,15 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '#',
+            target: '/water-managment/thirteen-ce',
             label: pages.waterManagement.actions.evolution,
-            disabled: true
           },
           {
             target: '/types-of-devices',
             label: pages.waterManagement.actions.types,
           },
           {
-            target: '#',
-            disabled: true,
+            target: '/failure-and-solution',
             label: pages.waterManagement.actions.contemporary,
           },
         ],

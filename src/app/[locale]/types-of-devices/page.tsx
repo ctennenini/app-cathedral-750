@@ -23,8 +23,8 @@ export default makePage((dictionary) => {
       text={pages.typesOfFeatures.description}
       actions={[
         {
-          type: 'quiz',
-          label: pages.typesOfFeatures.testYourKnowledge,
+          type: 'back',
+          label: pages.typesOfFeatures.back,
           target: '/conservation-strategies',
         },
       ]}
@@ -68,7 +68,7 @@ export default makePage((dictionary) => {
           },
         ],
       }}
-      backButtonTarget="/conservation-strategies"
+      backButtonTarget="/water-managment"
     />
   )
 })
