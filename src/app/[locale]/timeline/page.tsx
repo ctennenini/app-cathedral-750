@@ -154,7 +154,6 @@ export default makePage((dictionary) => {
       bgImgAlt={timelineData.bgImgAlt}
       withHomeButton
       backButtonTarget='/conservation-strategies'
-      nextButtonTarget={timelineData.nextButtonTarget} // se necessario
       pullOutContent={{
         type: 'timeline',
         events: timelineEvents,
