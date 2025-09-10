@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "yarn update-precache",
+    "postbuild": "yarn update-precache && yarn update-sw-paths",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
@@ -13,7 +13,9 @@
     "qa": "yarn typecheck && yarn lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "update-precache": "node generate-precache.mjs"
+    "update-precache": "node generate-precache.mjs",
+    "update-sw-paths": "node update-sw-paths.mjs",
+    "clean": "rm -rf {out,node_modules,.next}"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",

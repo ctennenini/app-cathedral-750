@@ -30,16 +30,17 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles
 }
 
-function generatePrecacheManifest() {
+async function generatePrecacheManifest() {
   console.log(`Generating ${MANIFEST_FILE} from contents of ${OUT_DIR}...`)
 
   const allFilePaths = getAllFiles(OUT_DIR)
 
-  const manifestEntries = allFilePaths.map(
-    (filePath) =>
-      // Replace backslashes with forward slashes for URL consistency, especially on Windows
-      `  { url: '${filePath.replace(/\\/g, '/')}', revision: null }`,
-  )
+  const manifestEntries = []
+  for (const filePath of allFilePaths) {
+    console.log(`Processing ${filePath}`)
+    const url = encodeURI(filePath)
+    manifestEntries.push(`  { url: '${url}', revision: null }`)
+  }
 
   const manifestContent = `self.precacheManifest = [\n${manifestEntries.join(',\n')}\n];\n`
 
@@ -62,4 +63,4 @@ function generatePrecacheManifest() {
   }
 }
 
-generatePrecacheManifest()
+await generatePrecacheManifest()
