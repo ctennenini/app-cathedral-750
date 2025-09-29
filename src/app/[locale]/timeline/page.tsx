@@ -13,7 +13,7 @@ import hystory from './history.jpg'
 
 export default makePage((dictionary) => {
   const pages = dictionary.pages
-  const timelineData = (pages as any).timeline // Accesso sicuro con type assertion
+  const timelineData = pages.timeline
 
   // Funzione helper per convertire array di stringhe in testo semplice
   const formatDescription = (descArray: string[]) => {
@@ -32,9 +32,9 @@ export default makePage((dictionary) => {
           src: hystory.src,
           alt: timelineData.event1170.imageAlt,
           width: 300,
-          height: 450
-        }
-      ]
+          height: 450,
+        },
+      ],
     },
     {
       year: timelineData.event1523.year,
@@ -46,15 +46,15 @@ export default makePage((dictionary) => {
           src: towerold.src,
           alt: timelineData.event1523.imageAlt1,
           width: 300,
-          height: 450
+          height: 450,
         },
         {
           src: towerfire.src,
           alt: timelineData.event1523.imageAlt2,
           width: 300,
-          height: 450
-        }
-      ]
+          height: 450,
+        },
+      ],
     },
     {
       year: timelineData.event1833.year,
@@ -66,9 +66,9 @@ export default makePage((dictionary) => {
           src: towerproj.src,
           alt: timelineData.event1833.imageAlt,
           width: 300,
-          height: 450
-        }
-      ]
+          height: 450,
+        },
+      ],
     },
     {
       year: timelineData.event1950.year,
@@ -80,34 +80,34 @@ export default makePage((dictionary) => {
           src: towernew.src,
           alt: timelineData.event1950.imageAlt1,
           width: 300,
-          height: 450
+          height: 450,
         },
         {
           src: hystory.src,
           alt: timelineData.event1950.imageAlt2,
           width: 300,
-          height: 400
+          height: 400,
         },
         // Aggiungiamo più immagini per testare lo scroll
         {
           src: towerold.src,
-          alt: "Additional image 1",
+          alt: 'Additional image 1',
           width: 300,
-          height: 450
+          height: 450,
         },
         {
           src: towerfire.src,
-          alt: "Additional image 2",
+          alt: 'Additional image 2',
           width: 300,
-          height: 450
+          height: 450,
         },
         {
           src: towerproj.src,
-          alt: "Additional image 3",
+          alt: 'Additional image 3',
           width: 300,
-          height: 450
-        }
-      ]
+          height: 450,
+        },
+      ],
     },
     // {
     //   year: timelineData.event2009.year,
@@ -153,7 +153,7 @@ export default makePage((dictionary) => {
       bgImg={heroImg}
       bgImgAlt={timelineData.bgImgAlt}
       withHomeButton
-      backButtonTarget='/conservation-strategies'
+      backButtonTarget="/conservation-strategies"
       pullOutContent={{
         type: 'timeline',
         events: timelineEvents,

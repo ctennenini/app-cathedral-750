@@ -63,8 +63,8 @@ export type ExtraContentProps =
   | ({
       type: 'image'
       legendItems?: { color: string; label: string }[]
-      clickAreas?: Omit<ComponentProps<typeof Link>, 'href'> & { target?: HREF; $circled?: boolean }[]
-      labels?: { text: TextContent; type?: 'primary' | 'secondary' }[]
+      clickAreas?: ClickAreaProps[]
+      labels?: LabelProps[]
     } & ImageProps)
   | {
       type: 'gallery'
@@ -124,9 +124,7 @@ export function ExtraContent(props: ExtraContentProps) {
           <Spacer>
             <ExtraImage {...otherProps} />
             {legendItems && <Legend items={legendItems} />}
-            {clickAreas?.map((areaProps, index) => (
-              <ClickArea key={index} {...areaProps} />
-            ))}
+            {clickAreas?.map((areaProps, index) => <ClickArea key={index} {...areaProps} />)}
             {labels?.map(({ text, type, ...labelProps }, index) => (
               <Label key={index} text={text} type={type} {...labelProps} />
             ))}
@@ -254,9 +252,9 @@ const Spacer = styled.div({
   margin: 'auto',
 })
 
-const ClickArea = styled(({ target, ...props }: { target?: HREF } & any) => (
-  <Link href={target ?? '#'} {...props} />
-))<{ $circled?: boolean }>(({ $circled }) => ({
+const ClickArea = styled(({ target, ...props }: { target?: HREF }) => <Link href={target ?? '#'} {...props} />)<{
+  $circled?: boolean
+}>(({ $circled }) => ({
   border: '5em solid transparent',
   position: 'absolute',
   backgroundColor: 'transparent',
@@ -278,7 +276,9 @@ const ClickArea = styled(({ target, ...props }: { target?: HREF } & any) => (
   }),
 }))
 
-const Label = styled(({ type = 'primary', text, ...props }: { text: TextContent; type?: 'primary' | 'secondary' } & any) => (
+type ClickAreaProps = Omit<ComponentProps<typeof Link>, 'href'> & { target?: HREF; $circled?: boolean }
+
+const Label = styled(({ type = 'primary', text, ...props }: { text: TextContent; type?: 'primary' | 'secondary' }) => (
   <label {...props} data-label-type={type}>
     {Array.isArray(text) ? text.join(' ') : text}
   </label>
@@ -288,6 +288,8 @@ const Label = styled(({ type = 'primary', text, ...props }: { text: TextContent;
   fontWeight: 'bold',
   color: 'var(--highlight)',
 })
+
+type LabelProps = ComponentProps<'label'> & { text: TextContent; type?: 'primary' | 'secondary' }
 
 const LinksContainer = styled.nav({
   height: '100%',
