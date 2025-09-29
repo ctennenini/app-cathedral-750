@@ -18,6 +18,10 @@ const nextConfig = {
 
   basePath: process.env.PREFIX ?? undefined,
   assetPrefix: process.env.PREFIX ?? undefined,
+
+  env: {
+    PREFIX: process.env.PREFIX ?? '',
+  },
 }
 
 export default nextConfig

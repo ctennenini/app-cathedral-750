@@ -6,8 +6,8 @@ import { useEffect } from 'react'
 export default function ServiceWorkerRegistrar() {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
-      const prefix = process.env.PREFIX || '/'
-      const swPath = join(prefix, 'sw.js')
+      const scope = process.env.PREFIX || '/'
+      const swPath = join(scope, 'sw.js')
 
       const removeExistingRegistrations = (newRegistration: ServiceWorkerRegistration) => {
         navigator.serviceWorker.getRegistrations().then((registrations) => {
@@ -25,7 +25,7 @@ export default function ServiceWorkerRegistrar() {
 
       navigator.serviceWorker
         .register(swPath, {
-          scope: prefix,
+          scope,
         })
         .then((newRegistration) => {
           removeExistingRegistrations(newRegistration)
