@@ -4,14 +4,17 @@ import type { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
+  const prefix = process.env.PREFIX ?? '/'
+  const normalizedPrefix = prefix.endsWith('/') ? prefix : `${prefix}/`
+
   return {
-    id: process.env.PREFIX + '/v1',
+    id: prefix + '/v1',
     name: META_DATA.name,
     short_name: META_DATA.name_short,
     description: META_DATA.description,
     categories: META_DATA.categories,
-    start_url: process.env.PREFIX ?? '/',
-    scope: process.env.PREFIX ?? '/',
+    start_url: prefix,
+    scope: normalizedPrefix,
     display_override: ['fullscreen', 'standalone', 'minimal-ui'],
     display: 'standalone',
     background_color: '#ffffff',

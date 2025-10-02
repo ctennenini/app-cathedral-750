@@ -7,6 +7,7 @@ export default function ServiceWorkerRegistrar() {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       const scope = process.env.PREFIX || '/'
+      const normalizedScope = scope.endsWith('/') ? scope : `${scope}/`
       const swPath = join(scope, 'sw.js')
 
       const removeExistingRegistrations = (newRegistration: ServiceWorkerRegistration) => {
@@ -25,7 +26,7 @@ export default function ServiceWorkerRegistrar() {
 
       navigator.serviceWorker
         .register(swPath, {
-          scope,
+          scope: normalizedScope,
         })
         .then((newRegistration) => {
           removeExistingRegistrations(newRegistration)
