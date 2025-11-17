@@ -23,6 +23,12 @@ export default makePage((dictionary) => {
             target: `/degradation-types`,
             label: pages.weatheringOfMolasse.actions.types,
           },
+          {
+            label: page.actions.interactive,
+            target: '/interactive-menu',
+            arrow: true,
+            $primary: true,
+          },
         ],
       }}
     />

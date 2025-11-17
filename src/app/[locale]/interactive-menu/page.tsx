@@ -18,17 +18,9 @@ export default makePage((dictionary) => {
       
       pullOutContent={[
         {
-          type: 'custom',
-          content: (
-            <video 
-              controls 
-              style={{ width: '100%', maxWidth: '800px' }}
-              poster="/videos/thumbnail.jpg" // opzionale: immagine di preview
-            >
-              <source src="/videos/TEST.mp4" type="video/mp4" />
-              Il tuo browser non supporta il tag video.
-            </video>
-          )
+          type: 'video',  // ✨ Usa il nuovo tipo
+          src: '/videos/TEST.mp4',
+          title: 'Interactive Menu Video'
         },
       ]}
     />

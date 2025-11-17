@@ -53,7 +53,7 @@ const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt=
 })
 
 /**
- * Timeline type (aggiunto!)
+ * Extra content types (con nuovo tipo 'video' aggiunto!)
  */
 export type ExtraContentProps =
   | {
@@ -76,6 +76,12 @@ export type ExtraContentProps =
   | {
       type: 'youtube'
       videoId: string
+      title?: string
+    }
+  | {
+      type: 'video'
+      src: string
+      poster?: string
       title?: string
     }
   | {
@@ -162,6 +168,37 @@ export function ExtraContent(props: ExtraContentProps) {
                 border: 0,
               }}
             />
+          </div>
+        </Container>
+      )
+    }
+
+    case 'video': {
+      const { src, poster, title } = props
+      return (
+        <Container>
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              borderRadius: '12px',
+              overflow: 'hidden',
+            }}
+          >
+            <video
+              controls
+              poster={poster}
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxHeight: `calc(${TARGET_VIEW_HEIGHT}em * 0.7)`,
+                display: 'block',
+              }}
+            >
+              <source src={src} type="video/mp4" />
+              {title && <track kind="captions" label={title} />}
+              Il tuo browser non supporta il tag video.
+            </video>
           </div>
         </Container>
       )
