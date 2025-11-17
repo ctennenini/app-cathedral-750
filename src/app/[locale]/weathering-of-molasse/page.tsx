@@ -24,7 +24,7 @@ export default makePage((dictionary) => {
             label: pages.weatheringOfMolasse.actions.types,
           },
           {
-            label: pages.weatheringOfMolasse.actions.interactive,  // ✅ Corretto
+            label: "Interactive Tour (DEMO)",  
             target: '/interactive-menu2',
             arrow: true,
             $primary: true,

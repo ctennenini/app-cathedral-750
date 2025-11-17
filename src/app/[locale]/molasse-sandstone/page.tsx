@@ -25,7 +25,7 @@ export default makePage((dictionary) => {
             label: page.actions.typesOfStones,
           },
           {
-            label: page.actions.interactive,
+            label: "Interactive Tour (DEMO)",
             target: '/interactive-menu',
             arrow: true,
             $primary: true,

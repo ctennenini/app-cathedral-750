@@ -46,7 +46,7 @@ export default makePage((dictionary) => {
           {
             src: sanding,
             label: pages.degradationTypes.sanding.title,
-            href: '/degradation-types/sanding-menu',
+            href: '/degradation-types/sanding',
           },
           {
             src: biodeterioation,
