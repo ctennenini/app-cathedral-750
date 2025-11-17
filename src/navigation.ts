@@ -136,5 +136,13 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
         },
       ],
     },
+    {   label: pages.credits.title,
+        path: '/credits',
+        subItems: [
+        {
+          label: "Acknowledgements",
+          path: '/acknowledgments',
+        }],
+    },
   ]
 }

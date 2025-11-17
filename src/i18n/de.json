@@ -1,54 +1,54 @@
 {
   "pages": {
     "sample": {
-      "title": "titlehere",
-      "subtitle": "subtitlehere",
+      "title": "Titel hier",
+      "subtitle": "Untertitel hier",
       "description": [
-        "This is a paragraph."
+        "Dies ist ein Absatz."
       ],
       "descriptionparagraph": [
-        "This is the first paragraph.",
-        "This is the second paragraph.",
-        "This is the third paragraph."
+        "Dies ist der erste Absatz.",
+        "Dies ist der zweite Absatz.",
+        "Dies ist der dritte Absatz."
       ],
       "descriptionpages": [
         [
-          "This is the first paragraph, page 1",
-          "This is the second paragraph, page 1"
+          "Dies ist der erste Absatz, Seite 1",
+          "Dies ist der zweite Absatz, Seite 1"
         ],
         [
-          "This is the first paragraph, page 2",
-          "This is the second paragraph, page 2"
+          "Dies ist der erste Absatz, Seite 2",
+          "Dies ist der zweite Absatz, Seite 2"
         ],
         [
-          "This is the first paragraph, page 3",
-          "This is the second paragraph, page 3"
+          "Dies ist der erste Absatz, Seite 3",
+          "Dies ist der zweite Absatz, Seite 3"
         ],
         [
-          "This is the first paragraph, page 4",
-          "This is the second paragraph, page 4"
+          "Dies ist der erste Absatz, Seite 4",
+          "Dies ist der zweite Absatz, Seite 4"
         ]
       ],
       "actions": {
-        "action1": "Button 1",
-        "action2": "Button 2",
-        "action3": "Button 3"
+        "action1": "Schaltfläche 1",
+        "action2": "Schaltfläche 2",
+        "action3": "Schaltfläche 3"
       },
       "gallery": {
         "galleryitem1": {
-          "title": "img 1"
+          "title": "Bild 1"
         },
         "galleryitem2": {
-          "title": "img 2"
+          "title": "Bild 2"
         },
         "galleryitem3": {
-          "title": "img 3"
+          "title": "Bild 3"
         }
       },
       "legendItems": {
-        "legenditem1": "name 1",
-        "legenditem2": "name 2",
-        "legenditem3": "name 3"
+        "legenditem1": "Name 1",
+        "legenditem2": "Name 2",
+        "legenditem3": "Name 3"
       }
     },
     "start": {
@@ -73,133 +73,135 @@
         "molasses": "Molasse und ihre Verwitterung",
         "conservation": "Erhaltungsstrategien",
         "vaults": "Die Gewölbe der Kathedrale",
-        "videoGallery": "Meet the experts"
+        "videoGallery": "Treffen Sie die Experten"
       }
     },
+        "credits": {
+    "title": "Credits"
+    },
     "timeline": {
-  "title": "Past restoration work",
-  "subtitle": "A timeline of the most significant events",
-  "description": [
-    "Explore the key moments that have marked the history of the cathedral over the centuries.",
-    "Click on each event to discover more details."
-  ],
-  "bgImgAlt": "Aerial view of the cathedral",
-  "backButtonTarget": "/previous-page",
-  "nextButtonTarget": "/next-page",
-  
-  "event1170": {
-    "year": "1170",
-    "title": "Start of construction of the cathedral",
-    "description": [
-      "The construction of Lausanne Cathedral began in 1170 and saw several master builders succeed one another until the first half of the 13th century."
-    ],
-    "fullDescription": [
-      "Beginning with the Romanesque apse, the continuation of the monument's construction quickly affirmed the Gothic style of its architecture and was completed around 1235 with the addition of the painted portal on the south façade.",
-      "On 20 October 1275, the cathedral was consecrated by Pope Gregory X in the presence of Emperor Rudolf of Habsburg.",
-      "The first stage of construction of the cathedral began in 1173, with a first master builder creating the ambulatory of the apse. Twenty years later, the second master builder corrected the layout of the building, modified its architectural composition, and, by 1215, had built the church we know today."
-    ],
-    "imageAlt": "Historical view of the cathedral construction"
-  },
-  
-  "event1523": {
-    "year": "1523",
-    "title": "Tower Lantern Fire",
-    "description": [
-      "A devastating fire damaged the original tower lantern, requiring extensive reconstruction work."
-    ],
-    "fullDescription": [
-      "The medieval tower lantern suffered significant damage from a major fire that swept through the upper sections of the cathedral.",
-      "This event marked a turning point in the cathedral's history, as it necessitated not only repairs but also architectural modifications to prevent future fire damage."
-    ],
-    "imageAlt1": "Old tower lantern before the fire",
-    "imageAlt2": "Tower lantern damaged by fire"
-  },
-  
-  "event1833": {
-    "year": "1833",
-    "title": "First Major Restoration Project",
-    "description": [
-      "The first comprehensive restoration project was undertaken to address centuries of weathering and structural issues."
-    ],
-    "fullDescription": [
-      "This restoration marked the beginning of modern conservation approaches to historic architecture.",
-      "The project involved extensive documentation of the existing structure and the development of new restoration techniques."
-    ],
-    "imageAlt": "Restoration project plans and drawings"
-  },
-  
-  "event1950": {
-    "year": "1950",
-    "title": "Post-War Restoration",
-    "description": [
-      "Major restoration and modernization work was undertaken after World War II to preserve the cathedral's architectural integrity."
-    ],
-    "fullDescription": [
-      "The post-war restoration involved comprehensive structural consolidation and the introduction of modern conservation technologies.",
-      "Work included foundation strengthening, cleaning of the sandstone facades, restoration of interior frescoes, and installation of modern lighting and heating systems."
-    ],
-    "imageAlt1": "New tower lantern installation",
-    "imageAlt2": "Restoration work documentation"
-  },
-  
-  "event2009": {
-    "year": "2009",
-    "title": "Modern Stained Glass Installation",
-    "description": [
-      "New stained glass windows by contemporary artists were installed, creating a unique dialogue between modern art and historic architecture."
-    ],
-    "fullDescription": [
-      "The installation of contemporary stained glass windows represents one of the most significant modern artistic contributions to the cathedral.",
-      "These artworks, characterized by vibrant colors and geometric forms, filter light to create a mystical and contemplative atmosphere within the sacred space."
-    ],
-    "imageAlt": "Contemporary stained glass installation"
-  },
-  
-  "event2020": {
-    "year": "2020",
-    "title": "Digital Heritage Initiative",
-    "description": [
-      "Launch of a comprehensive digitization project for the cathedral's historical and artistic heritage."
-    ],
-    "fullDescription": [
-      "This ambitious project includes the creation of virtual tours, digital cataloging of all artifacts, manuscripts, and historical documents.",
-      "The initiative also involves the development of interactive applications for visitors, enhancing their understanding and appreciation of the cathedral's rich history."
-    ],
-    "imageAlt1": "Digital heritage scanning equipment",
-    "imageAlt2": "Virtual tour development process"
-  }
-},
-    "videoGallery": {
-      "title": "The degradation of the Facades",
-      "subtitle": "Explanatory video",
+      "title": "Frühere Restaurierungsarbeiten",
+      "subtitle": "Eine Zeitleiste der bedeutendsten Ereignisse",
       "description": [
-        "In this video <b>Mr.Girardet</b> - conservator of Lausanne Cathedral - will describe and show us the degradations they have monitor, undestand and take care of"
+        "Erkunden Sie die wichtigsten Momente, die die Geschichte der Kathedralenrestaurierung über die Jahrhunderte geprägt haben.",
+        "Klicken Sie auf jedes Ereignis, um weitere Details zu entdecken."
+      ],
+      "bgImgAlt": "Luftaufnahme der Kathedrale",
+      "backButtonTarget": "/previous-page",
+      "nextButtonTarget": "/next-page",
+      
+      "event1170": {
+        "year": "1170",
+        "title": "Baubeginn der Kathedrale",
+        "description": [
+          "Der Bau der Kathedrale von Lausanne begann 1170 und erlebte mehrere Baumeister, die einander bis zur ersten Hälfte des 13. Jahrhunderts folgten."
+        ],
+        "fullDescription": [
+          "Beginnend mit der romanischen Apsis, bestätigte die Fortsetzung des Baus des Monuments schnell den gotischen Stil seiner Architektur und wurde um 1235 mit der Hinzufügung des bemalten Portals an der Südfassade abgeschlossen.",
+          "Am 20. Oktober 1275 wurde die Kathedrale von Papst Gregor X. in Anwesenheit von Kaiser Rudolf von Habsburg geweiht.",
+          "Die erste Bauphase der Kathedrale begann 1173 mit einem ersten Baumeister, der den Chorumgang der Apsis schuf. Zwanzig Jahre später korrigierte der zweite Baumeister den Grundriss des Gebäudes, änderte seine architektonische Komposition und hatte bis 1215 die Kirche gebaut, die wir heute kennen."
+        ],
+        "imageAlt": "Historische Ansicht des Kathedralenbaus"
+      },
+      
+      "event1523": {
+        "year": "1873",
+        "title": "Wiederaufbau der Turmlaterne",
+        "description": [
+          "Ein verheerendes Feuer beschädigte die ursprüngliche Turmlaterne und erforderte umfangreiche Wiederaufbauarbeiten. Viollet-le-Duc wurde mit dem Projekt beauftragt"
+        ],
+        "fullDescription": [
+          "Das Feuer, das in der Nacht vom 23. auf den 24. Mai 1825 die Spitze der Turmlaterne der Kathedrale von Lausanne verwüstete, markierte den Beginn einer langen Periode von Expertengutachten und Diskussionen und löste eine Flut von Projekten, Vorschlägen und Kontroversen aus. Wenn die Debatte, zunächst von lokalen Persönlichkeiten unterstützt, internationale Experten einbezog, lag dies daran, dass die Probleme typisch für solche waren, die zu verschiedenen Zeiten von Gebäuden wie Notre-Dame de Paris, dem Mailänder Dom und Saint Pierre de Genève aufgeworfen wurden.",
+          "Nach seinem Bericht beauftragte der Staatsrat Viollet-le-Duc mit einer vollständigen Restaurierung der Turmlaterne."
+        ],
+        "imageAlt1": "Alte Turmlaterne vor dem Brand",
+        "imageAlt2": "Durch Feuer beschädigte Turmlaterne"
+      },
+      
+      "event1833": {
+        "year": "1873",
+        "title": "Erstes großes Restaurierungsprojekt",
+        "description": [
+          "Der Architekt Viollet-le-Duc ist für die Restaurierung der Kathedrale verantwortlich."
+        ],
+        "fullDescription": [
+          "Diese Restaurierung markierte den Beginn moderner Erhaltungsansätze für historische Architektur.",
+          "Das Projekt umfasste eine umfangreiche Dokumentation der bestehenden Struktur und die Entwicklung neuer Restaurierungstechniken sowie die Entwicklung von Wassermanagementsystemen."
+        ],
+        "imageAlt": "Restaurierungsprojektpläne und Zeichnungen"
+      },
+      
+      "event1950": {
+        "year": "19..",
+        "title": "...Restaurierung",
+        "description": [
+          "...."
+        ],
+        "fullDescription": [
+          "Die Nachkriegsrestaurierung umfasste eine umfassende strukturelle Konsolidierung und die Einführung moderner Konservierungstechnologien.",
+          "Die Arbeiten umfassten die Verstärkung der Fundamente, die Reinigung der Sandsteinfassaden, die Restaurierung von Innenfresken und die Installation moderner Beleuchtungs- und Heizungssysteme."
+        ],
+        "imageAlt1": "Installation der neuen Turmlaterne",
+        "imageAlt2": "Dokumentation der Restaurierungsarbeiten"
+      },
+      
+      "event2009": {
+        "year": "2009",
+        "title": "Installation moderner Glasfenster",
+        "description": [
+          "Neue Glasfenster von zeitgenössischen Künstlern wurden installiert und schufen einen einzigartigen Dialog zwischen moderner Kunst und historischer Architektur."
+        ],
+        "fullDescription": [
+          "Die Installation zeitgenössischer Glasfenster stellt einen der bedeutendsten modernen künstlerischen Beiträge zur Kathedrale dar.",
+          "Diese Kunstwerke, gekennzeichnet durch lebendige Farben und geometrische Formen, filtern Licht, um eine mystische und kontemplative Atmosphäre im sakralen Raum zu schaffen."
+        ],
+        "imageAlt": "Installation zeitgenössischer Glasfenster"
+      },
+      
+      "event2020": {
+        "year": "2020",
+        "title": "Initiative für digitales Erbe",
+        "description": [
+          "Start eines umfassenden Digitalisierungsprojekts für das historische und künstlerische Erbe der Kathedrale."
+        ],
+        "fullDescription": [
+          "Dieses ehrgeizige Projekt umfasst die Erstellung virtueller Touren, die digitale Katalogisierung aller Artefakte, Manuskripte und historischen Dokumente.",
+          "Die Initiative umfasst auch die Entwicklung interaktiver Anwendungen für Besucher, die ihr Verständnis und ihre Wertschätzung der reichen Geschichte der Kathedrale verbessern."
+        ],
+        "imageAlt1": "Ausrüstung zum Scannen des digitalen Erbes",
+        "imageAlt2": "Entwicklungsprozess der virtuellen Tour"
+      }
+    },
+    "videoGallery": {
+      "title": "Treffen Sie die Experten",
+      "subtitle": "Erklärvideo",
+      "description": [
+        "..."
       ]
     },
     "videoTest": {
       "title": "Die Degradation der Fassaden",
       "subtitle": "Erklärvideo",
       "description": [
-        "In diesem Video wird <b>Herr Girardet</b> - Konservator der Kathedrale Lausanne - die Degradationen beschreiben und zeigen, die sie überwacht, verstanden und behandelt haben"
+        "In diesem Video wird <b>Herr Girardet</b> - Konservator der Kathedrale von Lausanne - die Degradationen beschreiben und uns zeigen, die sie überwacht, verstanden und gepflegt haben"
       ]
     },
     "interactiveMenu": {
       "title": "Interaktive Tour",
       "description": [
-        "Jetzt ist es an der Zeit, hinaus zu gehen und die immersive Erfahrung zu erkunden und mit der Kathedrale zu interagieren",
-        "Scannen Sie den <b>QR-Code und erhalten Sie die 3D-Karte</b> der Orte, die Sie erreichen müssen"
+        "Das werden Sie vor Ort tun und sehen. Lassen Sie uns mit dem Monument interagieren!"
       ]
     },
     "stoneConservation": {
       "title": "Steinkonservierung",
       "description": [
         [
-          "Konservierungsbemühungen bleiben oft unbemerkt, da sie sich darauf konzentrieren, die historische Authentizität zu bewahren, ohne das Aussehen eines Denkmals zu verändern. ",
-          "Diese Diskretion bedeutet, dass die Öffentlichkeit, die am Erhalt des gebauten Erbes interessiert ist, oft nicht über die damit verbundene Arbeit und die Herausforderungen informiert ist. ",
+          "Erhaltungsbemühungen bleiben oft unbemerkt, da sie sich auf die Bewahrung der historischen Authentizität konzentrieren, ohne das Erscheinungsbild eines Monuments zu verändern.",
+          "Diese Diskretion bedeutet, dass die Öffentlichkeit, die am Erhalt des baulichen Erbes interessiert ist, oft nicht über die damit verbundene Arbeit und Herausforderungen informiert ist.",
           "Die Art der Intervention hängt von der Schwere und Art der Degradation ab, die der Stein erfahren hat."
         ],
         [
-          "Die Experten analysieren die Steinzustände und wählen die richtigen Verfahren aus"
+          "Die Experten analysieren den Zustand des Steins und wählen die richtigen Verfahren aus"
         ]
       ]
     },
@@ -207,28 +209,28 @@
       "title": "Konsolidierung",
       "description": [
         "Wenn nur die Oberfläche abblättert, wird die Degradation nicht als schwerwiegend angesehen und normalerweise sind minimale Eingriffe erforderlich",
-        "Die Anwendung von Konsolidierungsmitteln zur Erhöhung der Steinfestigkeit und Mörtelflicken zum Schließen der Lücken werden verwendet"
+        "Die Anwendung von Konsolidierungsprodukten zur Erhöhung der Festigkeit des Steins und Mörtelflicken zum Schließen der Lücken werden verwendet"
       ]
     },
     "scalingFixing": {
-      "title": "Abblätterungsbehebung",
+      "title": "Schuppenreparatur",
       "description": [
-        "Wenn die Oberfläche gesund erscheint, aber einige cm tiefe Abblätterungen aufweisen, ist eine Fixierungsintervention erforderlich, um zu verhindern, dass sich die Schuppe vollständig ablöst.",
-        "Ein spezielles System aus einer Kombination von Stiften und Konsolidierungsmitteln wird verwendet und die Eingriffe sind am Ende unsichtbar"
+        "Wenn die Oberfläche gesund erscheint, aber einige Zentimeter tief abblättert, ist eine Fixierungsintervention erforderlich, um zu verhindern, dass sich die Schuppe vollständig ablöst.",
+        "Es wird ein spezielles System aus Stiften und Konsolidierungsmitteln verwendet und die Interventionen sind am Ende unsichtbar"
       ]
     },
     "mortar": {
-      "title": "Mörtelersatz",
+      "title": "Mörtelflicken",
       "description": [
-        "Wenn die ersten Zentimeter der Oberfläche degradiert und nicht erhaltbar sind, wird der beschädigte Teil durch spezielle Mörtel ersetzt.",
-        "Um die Haftung und Widerstandsfähigkeit zu verbessern, wird ein spezielles Gitter konstruiert, um den Mörtel zu „verstärken."
+        "Wenn die ersten Zentimeter der Oberfläche beschädigt und nicht erhaltbar sind, wird der beschädigte Teil durch spezielle Mörtel ersetzt.",
+        "Um die Haftung und Widerstandsfähigkeit zu verbessern, wird ein spezielles Gitter konstruiert, um den Mörtel zu \"verstärken\"."
       ]
     },
     "substitution": {
       "title": "Steinersatz",
       "description": [
         "Wenn der Stein stark beschädigt ist und/oder einen großen künstlerischen und historischen Wert hat, wird er vollständig ersetzt.",
-        "Wenn historisch relevant, wird das ersetzte Stück im Lapidarium aufbewahrt."
+        "Wenn historisch relevant, werden die ersetzten Stücke im Lapidarium aufbewahrt."
       ]
     },
     "conservationStrategies": {
@@ -236,70 +238,71 @@
         "Erhaltungsstrategien"
       ],
       "description": [
-        "Die Kathedrale von Lausanne, wie wir sie heute sehen, ist das Ergebnis jahrhundertelanger kontinuierlicher Erhaltungsbemühungen.",
-        "Dieser Abschnitt wird die Evolution der Konservierungspraktiken und die faszinierende Reise der Erhaltung dieses architektonischen Erbes erforschen, von den invasiveren, stilistischen Restaurierungen der Vergangenheit bis zur heutigen Philosophie der minimalen Intervention."
+        "Die Kathedrale von Lausanne, wie wir sie heute sehen, ist das Ergebnis von Jahrhunderten fortlaufender Erhaltungsbemühungen.",
+        "Dieser Abschnitt wird die Entwicklung der Konservierungspraktiken und die faszinierende Reise der Erhaltung dieses architektonischen Erbes erkunden, von den invasiveren, stilistischen Restaurierungen der Vergangenheit bis zur heutigen Philosophie der minimalen Intervention."
       ],
       "actions": {
-        "past": "Vergangene Restaurierungsarbeiten",
+        "past": "Frühere Restaurierungsarbeiten",
         "water": "Wassermanagementsysteme",
         "stone": "Steinkonservierungsverfahren"
       }
     },
     "waterManagement": {
       "title": [
-        "Regenwasser-Management-Einrichtungen"
+        "Regenwassermanagement"
       ],
       "description": [
-        "Das Management von Regenwasser in der Kathedrale von Lausanne war über die Jahrhunderte ein kritischer Aspekt ihrer Erhaltung, hauptsächlich aufgrund der Verwendung von Molassestein, der besonders anfällig für Zersetzung ist, wenn er Regen ausgesetzt wird.",
-        "Diese Notwendigkeit wurde von Viollet-le-Duc in seinem Restaurierungsplan von 1872 betont, wo er die Wichtigkeit betonte, die Materialien auf absolute Weise zu bewahren und das Wasser zum Boden zu leiten, unter Verwendung zahlreicher Leitungen, die mit größter Aufmerksamkeit angeordnet wurden."
+        "Das Management von Regenwasser an der Kathedrale von Lausanne war im Laufe der Jahrhunderte ein kritischer Aspekt ihrer Erhaltung, hauptsächlich aufgrund der Verwendung von Molassestein, der besonders anfällig für Zersetzung ist, wenn er Regen ausgesetzt ist.",
+        "Diese Notwendigkeit wurde von Viollet-le-Duc in seinem Restaurierungsplan von 1872 betont, wo er die Bedeutung der Erhaltung des Materials und der Leitung des Wassers zum Boden unter Verwendung zahlreicher Leitungen betonte."
       ],
       "actions": {
-        "evolution": "Evolution der Regenwasser-Einrichtungen",
-        "types": "Arten von Regenwasser-Einrichtungen",
-        "contemporary": "Herausforderungen und Zeitgenössische Lösungen"
+        "evolution": "Entwicklung der Regenwassermerkmale",
+        "types": "Arten von Regenwassermerkmalen",
+        "contemporary": "Herausforderungen und zeitgenössische Lösungen"
       }
     },
     "molassesAndItsWeathering": {
       "title": "Molasse und ihre Verwitterung",
       "description": [
-        "Die Kathedrale von Lausanne wurde mit einem lokalen Molasse-Sandstein gebaut, der besonders wasserempfindlich ist.",
+        "Die Kathedrale von Lausanne wurde mit einem lokalen Molassesandstein gebaut, der besonders wasserempfindlich ist.",
         "Sie können hier direkt Informationen über diesen Stein sowie über seine Verwitterung erhalten, indem Sie auf die entsprechenden Schaltflächen klicken",
         "Sie können auch direkt zu einer interaktiven Entdeckungs-App gehen, die Sie beim Spaziergang um die Kathedrale verwenden können."
       ],
       "actions": {
-        "sandstone": "Molasse-Sandstein",
+        "sandstone": "Molassesandstein",
         "weathering": "Verwitterung der Molasse",
-        "interactive": "Interaktive Tour"
+        "interactive": ["Interaktive Tour",
+                       "Nicht verfügbar"]
       }
     },
-    "molasseSandstone": {
-      "title": "Der Molasse-Sandstein",
+    "molasseSandstein": {
+      "title": "Der Molassesandstein",
       "description": [
         [
-          "Die Schweizer Molasse-Gesteinsformation erstreckt sich nördlich der Alpen von der Genfersee-Region im Westen der Schweiz bis zum Bodensee im Osten.",
-          "Sie umfasst eine Vielfalt von kalzit-gebundenen Sandsteinen, die quellende Tone enthalten können."
+          "Die Schweizer Molassegesteinsformation erstreckt sich nördlich der Alpen von der Region Genfersee im Westen der Schweiz bis zum Bodensee im Osten.",
+          "Sie umfasst eine Vielzahl von kalzitgebundenen Sandsteinen, die quellfähige Tone enthalten können."
         ],
         [
-          "Als Teil dieser Formation wurde die „Molasse grise de Lausanne direkt außerhalb des mittelalterlichen Stadtzentrums abgebaut und zum Bau der Kathedrale Lausanne verwendet.",
-          "Über die Jahrhunderte wurden Sandsteine derselben Typologie aus verschiedenen lokalen Steinbrüchen um das mittelalterliche Zentrum herum gebracht und für Modifikations- und Wartungsarbeiten an der Kathedrale verwendet."
+          "Als Teil dieser Formation wurde die \"Molasse grise de Lausanne\" direkt außerhalb des mittelalterlichen Stadtzentrums abgebaut und zum Bau der Kathedrale von Lausanne verwendet.",
+          "Im Laufe der Jahrhunderte wurden Sandsteine der gleichen Typologie aus verschiedenen lokalen Steinbrüchen rund um das mittelalterliche Zentrum gebracht und für Änderungs- und Wartungsarbeiten an der Kathedrale verwendet."
         ]
       ],
       "actions": {
         "geologicalInformation": "Geologische Informationen",
         "properties": "Eigenschaften der Molasse",
         "typesOfStones": "Steinarten",
-        "interactive": "Interaktive Tour"
+        "interactive": "Interaktive Tour \n(NICHT VERFÜGBAR)"
       },
       "stonesOfTheCathedral": {
         "title": "Steine der Kathedrale",
         "description": [
           [
             "Die Kathedrale von Lausanne ist aus einer Vielzahl von Steinen gebaut, die aus verschiedenen Steinbrüchen in der ganzen Schweiz und einigen Teilen Deutschlands stammen.",
-            "Während des 19. Jahrhunderts wurde der regionale Molasse-Sandstein der exponierten architektonischen Elemente der Kathedrale durch Kalksteine und härtere Sandsteine aus der weiteren Region des Kantons Waadt ersetzt."
+            "Während des 19. Jahrhunderts wurde der regionale Molassesandstein von exponierten architektonischen Elementen der Kathedrale durch Kalksteine und \"härtere\" Sandsteine aus der weiteren Region des Kantons Waadt ersetzt."
           ],
           [
-            "Im 20. Jahrhundert wurde aufgrund der Knappheit regionaler Steinbrüche die allgemeine Substitution des lokalen Molasse-Sandsteins für Wartung und Restaurierung zur gängigen Praxis.",
-            "Eine Vielfalt von Ersatz-Sandsteinen aus Freiburg, Bern, Zug und Hannover (Oberkirchen, Deutschland) wurde stattdessen verwendet."
+            "Im 20. Jahrhundert wurde aufgrund der Knappheit regionaler Steinbrüche die allgemeine Substitution von lokalem Molassesandstein für Wartung und Restaurierung zur gängigen Praxis.",
+            "Eine Vielzahl von Ersatzsandsteinen aus Freiburg, Bern, Zug und Hannover (Oberkirchen, Deutschland) wurden an seiner Stelle verwendet."
           ]
         ],
         "testYourKnowledge": "Testen Sie Ihr Wissen!"
@@ -307,28 +310,28 @@
       "molasseGris": {
         "title": "Graue Molasse",
         "description": [
-          "Es ist ein molassischer Sandstein aus Lausanne und wurde im 12. Jahrhundert n. Chr. (Gotik) in die Kathedrale eingebaut.",
-          "Es ist eine Art Sedimentgestein, das hauptsächlich am Südturm des Querschiffs vorherrscht. Dieser Sandstein stammte höchstwahrscheinlich aus den nahegelegenen Steinbrüchen.",
-          "Dieser Stein ist aufgrund der Anwesenheit von quellenden Tonen besonders wasserempfindlich."
+          "Es ist ein molassischer Sandstein aus Lausanne und wurde im 12. Jahrhundert n. Chr. (Gotische Periode) in der Kathedrale platziert.",
+          "Es ist eine Art Sedimentgestein, das am Südturm des Querschiffs vorherrscht. Dieser Sandstein stammte höchstwahrscheinlich aus den nahe gelegenen Steinbrüchen.",
+          "Dieser Stein ist aufgrund des Vorhandenseins von quellfähigen Tonen besonders wasserempfindlich."
         ]
       },
       "geologicalInformation": {
         "title": "Geologische Informationen",
         "description": [
           [
-            "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette zwischen den Westalpen Frankreichs und Italiens und den Ostalpen Italiens, Österreichs und Deutschlands.",
-            "In diesem Segment ist die Alpenkette besonders schmal, enthält aber alle wichtigen tektonischen Einheiten und zeigt markante Landschaften und Landformen, für die die Alpen bekannt sind."
+            "Die Geologie der Schweiz umfasst die Zentralalpen, ein Segment der Alpenkette, das zwischen den Westalpen von Frankreich und Italien und den Ostalpen von Italien, Österreich und Deutschland liegt.",
+            "In diesem Segment ist die Alpenkette besonders schmal, enthält jedoch alle wichtigen tektonischen Einheiten und zeigt markante Landschaften und Landformen, für die die Alpen bekannt sind."
           ],
           [
-            "Im Norden erstreckt sich das Schweizer Plateau vom Genfersee bis Bern, Zürich und den Bodensee und verjüngt sich von etwa 600 auf 400 m ü. M. Dieses Plateau entspricht dem sogenannten Molassebecken.",
+            "Im Norden erstreckt sich das Schweizer Mittelland vom Genfersee über Bern, Zürich und den Bodensee und verjüngt sich von etwa 600 auf 400 m ü.M. Dieses Plateau entspricht dem sogenannten Molassebecken.",
             "<b>Klicken Sie auf die Karte</b>, um mehr über die verschiedenen Molassen, die Steinbrüche und ihre Eigenschaften zu erfahren."
           ],
           [
-            "Die Molasse-Fazies resultieren aus der Veränderung und Erosion der Alpen während der alpinen Orogenese und bestehen aus Sanden mit variabler Partikelgröße (von fein bis grob) und auch variabler Mineralogie (Quarz, Feldspäte, mit mehr oder weniger Glimmer), die mit Kalzit zementiert sind."
+            "Die Molassefazies resultieren aus der Veränderung und Erosion der Alpen während der alpinen Orogenese und bestehen aus Sanden mit variabler Partikelgröße (von fein bis grob) und ebenfalls variabler Mineralogie (Quarz, Feldspäte, mit mehr oder weniger Glimmern), die mit Kalzit zementiert sind."
           ],
           [
-            "Die geologischen Prozesse, die an der Bildung des Molassebeckens beteiligt waren, reichen zurück bis in die Oligozän- und Miozän-Zeitalter.",
-            "<b>Vier Hauptgruppen</b> können entsprechend den beteiligten Sedimentationsbedingungen (marine oder Süßwasserbedingungen) identifiziert werden."
+            "Die geologischen Prozesse, die an der Bildung des Molassebeckens beteiligt sind, gehen auf das Oligozän und Miozän zurück.",
+            "<b>Vier Hauptgruppen</b> können nach den beteiligten Sedimentationsbedingungen (marine oder Süßwasserbedingungen) identifiziert werden."
           ]
         ]
       }
@@ -343,7 +346,7 @@
       "actions": {
         "mechanisms": "Verwitterungsmechanismen",
         "types": "Degradationstypen",
-        "interactive":"Interactive Tour \n(NOT AVALABLE)"
+        "interactive":"Interaktive Tour \n(NICHT VERFÜGBAR)"
       }
     },
     "degradationTypes": {
@@ -351,40 +354,40 @@
       "description": [
         [
           "Die verschiedenen Verwitterungsmechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Degradationsmuster</b>.",
-          "Diese sind stark mit dem Mikroklima verbunden, dem der Stein ausgesetzt ist, und folglich mit ihrer Position im Gebäude."
+          "Diese sind stark mit dem Mikroklima verbunden, dem der Stein ausgesetzt ist, und folglich mit seiner Position im Gebäude."
         ],
         [
           "Das Vorhandensein verschiedener Degradationsmuster am selben Punkt kann ihre Identifizierung erschweren.",
-          "Die hauptsächlichen Degradationsmuster, die an der Kathedrale beobachtet werden, können entsprechend diesen vier Klassen klassifiziert werden."
+          "Die wichtigsten Degradationsmuster, die an der Kathedrale beobachtet werden, können nach diesen vier Klassen klassifiziert werden."
         ]
       ],
       "testYourKnowledge": "Testen Sie Ihr Wissen!",
       "blackCrust": {
         "title": "Schwarze Kruste",
         "description": [
-          "Schwarze Krusten werden als eine Art Kruste klassifiziert, die sich normalerweise in Bereichen entwickelt, die vor direktem Regenfall oder Wasserabfluss in städtischer Umgebung geschützt sind.",
-          "Schwarze Krusten haften normalerweise fest am Substrat. Sie bestehen hauptsächlich aus Partikeln aus der Atmosphäre, die in einer Gips-Matrix (CaSO4.2H2O) eingeschlossen sind."
+          "Schwarze Krusten werden als eine Art Kruste klassifiziert, die sich im Allgemeinen in Bereichen entwickelt, die vor direktem Niederschlag oder Wasserabfluss in städtischen Umgebungen geschützt sind.",
+          "Schwarze Krusten haften normalerweise fest am Substrat. Sie bestehen hauptsächlich aus Partikeln aus der Atmosphäre, die in einer Gipsmatrix (CaSO4.2H2O) gefangen sind."
         ]
       },
       "scaling": {
-        "title": "Abblätterung",
+        "title": "Abschuppung",
         "description": [
-          "Ablösung von Stein als Schuppe oder Stapel von Schuppen, die keiner Steinstruktur folgt und sich wie Fischschuppen oder parallel zur Steinoberfläche ablöst. Die Dicke einer Schuppe ist normalerweise im Millimeter- bis Zentimeterbereich.",
-          "Sie kann in Bereichen beobachtet werden, die sowohl Regen als auch Sonne ausgesetzt sind. Sie stellt das herausforderndste Degradationsmuster dar, das zu bewerten, verstehen und restaurieren ist."
+          "Ablösung von Stein als Schuppe oder Schuppenstapel, die keiner Steinstruktur folgt und sich wie Fischschuppen oder parallel zur Steinoberfläche ablöst. Die Dicke einer Schuppe liegt im Allgemeinen im Millimeter- bis Zentimeterbereich.",
+          "Es kann in Bereichen beobachtet werden, die sowohl Regen als auch Sonne ausgesetzt sind. Es stellt das herausforderndste Degradationsmuster dar, das zu bewerten, zu verstehen und zu restaurieren ist."
         ]
       },
       "sanding": {
-        "title": "Sandung",
+        "title": "Versandung",
         "description": [
           "In einigen Bereichen der Kathedrale leidet das Material unter Phänomenen der Dekohäsion der Steinkörner.",
-          "Der Stein erscheint weniger kompakt und verliert äußere Oberflächenschichten"
+          "Der Stein sieht weniger kompakt aus und verliert äußere Oberflächenschichten"
         ]
       },
       "biodeterioration": {
         "title": "Biodeterioration",
         "description": [
-          "In den Bereichen, die mehr vom Regen getroffen werden oder wo Wasser durchsickert, finden Mikroorganismen wie Pilze und Moose ihre natürliche feuchte Umgebung zur Vermehrung.",
-          "Der resultierende Schaden ist nicht extrem gefährlich für die Steinerhaltung, kann aber unangenehme ästhetische Nachteile schaffen."
+          "In den vom Regen am stärksten betroffenen Bereichen oder wo Wasser durchsickert, finden Mikroorganismen wie Pilze und Moose ihre natürliche feuchte Umgebung zur Vermehrung.",
+          "Der daraus resultierende Schaden ist nicht extrem gefährlich für die Steinerhaltung, kann aber unangenehme ästhetische Nachteile schaffen."
         ]
       }
     },
@@ -399,7 +402,7 @@
       ],
       "actions": {
         "freezeThaw": "Frost-Tau-Wirkung",
-        "swellingClays": "Quellende Tone",
+        "swellingClays": "Quellfähige Tone",
         "saltCrystallization": "Salzkristallisation",
         "atmosphericPollution": "Atmosphärische Verschmutzung",
         "biologicalAttack": "Biologischer Angriff"
@@ -411,12 +414,12 @@
           "description": [
             [
               "Gefrierendes Wasser in porösen Materialien kann durch verschiedene Mechanismen Schäden verursachen.",
-              "Der erste und dramatischste wird „Wassereinschluss genannt. Er bezieht sich auf eine Situation ähnlich der einer Glasflasche, die mit Wasser gefüllt und in einen Kühlschrank gestellt wird."
+              "Der erste und dramatischste wird \"Wassereinschluss\" genannt. Es bezieht sich auf eine Situation ähnlich der einer mit Wasser gefüllten Glasflasche, die in eine Kühlbox gestellt wird."
             ],
             [
-              "Mit anderen Worten, das Gefrieren erfolgt von allen Seiten, die Flüssigkeit ist eingeschlossen, und die Zunahme des Molvolumens von flüssigem Wasser zu Eis lässt die Flasche zerbrechen.",
-              "Solche Situationen sind bei Denkmälern selten, mit der möglichen Ausnahme feiner dekorativer Elemente, die zuvor mit Wasser gesättigt waren, wie Fialen und Springbrunnen.",
-              "Schauen Sie sich das Video an, um mehr zu erfahren."
+              "Mit anderen Worten, das Gefrieren erfolgt von allen Seiten, die Flüssigkeit ist eingeschlossen, und die Zunahme des Molvolumens von flüssigem Wasser zu Eis führt dazu, dass die Flasche zerbricht.",
+              "Solche Situationen sind an Denkmälern selten, mit der möglichen Ausnahme feiner dekorativer Elemente, die zuvor mit Wasser gesättigt wurden, wie Fialen und Brunnen.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
             ]
           ]
         },
@@ -424,56 +427,55 @@
           "title": "Hydraulischer Druck",
           "description": [
             [
-              "Eine andere Situation, die auch mit der Änderung des Molvolumens zusammenhängt, wird hydraulischer Druck genannt.",
-              "Sie tritt auf, wenn wachsendes Eis das noch vorhandene flüssige Wasser durch das poröse Netzwerk drückt. Der Fließwiderstand führt zu einem Druck, der von der Porengröße und der Entfernung abhängt, über die das Wasser geschoben wird."
+              "Eine andere Situation, die auch mit der Änderung des Molvolumens zusammenhängt, wird \"hydraulischer Druck\" genannt.",
+              "Es tritt auf, wenn wachsendes Eis das noch vorhandene flüssige Wasser durch das poröse Netzwerk drückt. Der Fließwiderstand führt zu einem Druck, der von der Porengröße und der Entfernung abhängt, über die das Wasser gedrückt wird."
             ],
             [
-              "Für Molasse ist die Porengröße groß, was diesen Druck reduziert.",
-              "Wenn jedoch dieselben Steine mit Wasser gesättigt sind, kann die äquivalente Länge der gesättigten Poren sehr groß sein, was zu hohen hydraulischen Drücken führen kann, wenn die Abkühlungsrate schnell genug ist.",
-              "Schauen Sie sich das Video an, um mehr zu erfahren."
+              "Bei Molasse ist die Porengröße groß, was diesen Druck reduziert.",
+              "Wenn diese Steine jedoch mit Wasser gesättigt sind, kann die äquivalente Länge der gesättigten Poren sehr groß sein, was zu hohen hydraulischen Drücken führen kann, wenn die Abkühlungsrate schnell genug ist.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
             ]
           ]
         },
         "crystallizationPressure": {
           "title": "Kristallisationsdruck",
           "description": [
-            "Eine andere Situation, in der Frost schädlich sein kann, ist der Kristallisationsdruck. Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt werden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
-            "Schauen Sie sich das Video an, um mehr zu erfahren."
+            "Eine weitere Situation, in der Frost schädlich sein kann, ist der Kristallisationsdruck. Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt werden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
+            "Sehen Sie sich das Video an, um mehr zu erfahren."
           ]
         },
         "temperatureGradient": {
           "title": "Temperaturgradient",
           "description": [
             [
-              "Grobe poröse Materialien wie Molasse können beim Gefrieren beschädigt werden, wenn ein Temperaturgradient aufrechterhalten wird.",
-              "Wasser kann dann von einem nicht gefrorenen Bereich wandern, um das Wachstum von Eis zu nähren, das in den Poren eines gefrorenen Bereichs eingeschlossen ist. Dies ist analog zur Frosthebung, kann aber auch Schäden in sedimentären Bausteinen und in geologischen Umgebungen verursachen."
+              "Grobe poröse Materialien wie Molasse können während des Gefrierens beschädigt werden, wenn ein Temperaturgradient aufrechterhalten wird.",
+              "Wasser kann sich dann von einer nicht gefrorenen Region bewegen, um das Wachstum von Eis zu speisen, das in den Poren einer gefrorenen Region eingeschlossen ist. Dies ist analog zum Frostheben, kann aber auch Schäden in sedimentären Bausteinen und in geologischen Umgebungen verursachen."
             ],
             [
-              "Verwandte Situationen können zur Bildung von Eislinsen zwischen einem feuchten Substrat (Steinkernen) und einer Oberfläche führen, die Temperaturschwankungen unterworfen ist (Fassade). Das Wachstum solcher Linsen kann die Ablösung bereits vorhandener Schuppen beschleunigen, ohne dass die Temperaturen sehr niedrig sein müssen.",
-              "Schauen Sie sich das Video an, um mehr zu erfahren."
+              "Verwandte Situationen können zur Bildung von Eislinsen zwischen einem feuchten Substrat (Steinkerne) und einer Oberfläche, die Temperaturschwankungen ausgesetzt ist (Fassade), führen. Das Wachstum solcher Linsen kann die Ablösung bereits bestehender Schuppen beschleunigen, ohne dass die Temperaturen sehr niedrig sein müssen.",
+              "Sehen Sie sich das Video an, um mehr zu erfahren."
             ]
           ]
         },
         "misc": {
-          "qrCodePrompt": "Scannen Sie den QR-Code, um das Video anzuschauen!"
+          "qrCodePrompt": "Scannen Sie den QR-Code, um das Video anzusehen!"
         }
       }
     },
-         "saltCrystallization": {
-      "title": "Salt Crystallization",
+    "saltCrystallization": {
+      "title": "Salzkristallisation",
       "crystallizationPressure": {
-        "title": "Crystallization Pressure",
+        "title": "Kristallisationsdruck",
         "description": [
-          "Atmospheric pollution, particularly acid rains, has been a serious problem for the durability of Historic Buildings in the past.",
-          "Stones containing calcite were attacked due to the dissolutions of these minerals in contact with the acid solutions.",
-          "In the case of Molasse sandstone, the binder component (made of calcite) could have been affected, increasing the detachment of the grains in the stone’s microstructure."
+          "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
+          "Im Fall von Molassesandstein könnte die Binderkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
         ]
       },
       "gypsum": {
-        "title": "Gypsum formation",
+        "title": "Gipsbildung",
         "description": [
-          "Another problem related to the pollution of the air, to whom effect was decreased in the last 30 years, is the presence of microparticles of dust from the combustion processes that deposit on the stones and/or are englobed in the efflorescence that are formed due to the crystallization of salts on the surface of the buildings.",
-          "This led to the formation of the so called “black crusts”."
+          "Ein weiteres Problem im Zusammenhang mit der Luftverschmutzung, dessen Wirkung in den letzten 30 Jahren abgenommen hat, ist das Vorhandensein von Mikropartikeln von Staub aus Verbrennungsprozessen, die sich auf den Steinen ablagern und/oder in die Ausblühungen eingeschlossen werden, die aufgrund der Kristallisation von Salzen auf der Oberfläche von Gebäuden gebildet werden.",
+          "Dies führte zur Bildung der sogenannten \"schwarzen Krusten\"."
         ]
       }
     },
@@ -483,37 +485,37 @@
         "title": "Saurer Regen",
         "description": [
           "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
-          "Steine, die Kalzit enthalten, wurden aufgrund der Auflösung dieser Mineralien in Kontakt mit sauren Lösungen angegriffen.",
-          "Im Fall des Molasse-Sandsteins könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins verstärkte."
+          "Steine, die Kalzit enthalten, wurden aufgrund der Auflösung dieser Mineralien im Kontakt mit sauren Lösungen angegriffen.",
+          "Im Fall von Molassesandstein könnte die Binderkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
         ],
         "legendItems": {
-          "swellingClays": "Quellende Tone",
-          "calcite": "Kalzitischer Zement",
-          "silica": "Silikatkörnchen"
+          "swellingClays": "Quellfähige Tone",
+          "calcite": "Kalzitozement",
+          "silica": "Silikatkörner"
         }
       },
       "microDust": {
         "title": "Mikropartikel und Staub",
         "description": [
-          "Ein weiteres Problem im Zusammenhang mit der Luftverschmutzung, dessen Auswirkung in den letzten 30 Jahren abgenommen hat, ist das Vorhandensein von Mikropartikeln aus Staubverbrennungsprozessen, die sich auf den Steinen ablagern und/oder in die Ausblühungen eingeschlossen werden, die aufgrund der Kristallisation von Salzen an der Oberfläche der Gebäude entstehen.",
-          "Dies führte zur Bildung der sogenannten „schwarzen Krusten."
+          "Ein weiteres Problem im Zusammenhang mit der Luftverschmutzung, dessen Wirkung in den letzten 30 Jahren abgenommen hat, ist das Vorhandensein von Mikropartikeln von Staub aus Verbrennungsprozessen, die sich auf den Steinen ablagern und/oder in die Ausblühungen eingeschlossen werden, die aufgrund der Kristallisation von Salzen auf der Oberfläche von Gebäuden gebildet werden.",
+          "Dies führte zur Bildung der sogenannten \"schwarzen Krusten\"."
         ]
       }
     },
     "swellingClays": {
-      "title": "Quellende Tone",
+      "title": "Quellfähige Tone",
       "description": [
         [
-          "Der Stein, der in der Kathedrale von Lausanne während des Mittelalters verwendet wurde, ist Molasse-Sandstein. Seine Mikrostruktur besteht aus verschiedenen kieselhaltigen Materialien, die durch ein Kalzit-Ton-Bindemittel zusammengehalten werden.",
-          "Das Vorhandensein von quellendem Ton bestimmt die Bildung von Spannungen im Material während der Benetzung und Trocknung aufgrund von Regen. Diese Spannung kann im Fall von bereits vorhandenen Rissen diese ausbreiten und Abblätterung verursachen."
+          "Der in der Kathedrale von Lausanne im Mittelalter verwendete Stein ist Molassesandstein. Seine Mikrostruktur besteht aus verschiedenen silikatischen Materialien, die durch ein Kalzit-Ton-Bindemittel zusammengehalten werden.",
+          "Das Vorhandensein von quellfähigem Ton bestimmt die Bildung von Spannungen im Material während des Benetzens und Trocknens aufgrund von Regen. Diese Spannung kann im Fall von bereits vorhandenen Rissen diese ausbreiten und zu Abschuppung führen."
         ],
         [
-          "Quellende Tone, wie Smektit, sind ein besonderer Tontyp, der Wasser absorbieren und sich ausdehnen kann. Sie gehören zur Familie der Phyllosilikate (oder Schichtsilikate), einer Gruppe von Mineralien mit einer einzigartigen Schichtstruktur.",
-          "Stellen Sie sich sie als winzige, flache Blätter vor, die übereinander gestapelt sind wie ein Kartenspiel."
+          "Quellfähige Tone, wie Smektit, sind eine besondere Art von Ton, der Wasser aufnehmen und expandieren kann. Sie gehören zur Familie der Phyllosilikate (oder \"Schichtsilikate\"), einer Gruppe von Mineralien, die eine einzigartige Schichtstruktur haben.",
+          "Stellen Sie sich diese als winzige, flache Blätter vor, die wie ein Kartenspiel übereinander gestapelt sind."
         ],
         [
-          "Im Fall von quellenden Tonen haben sie aufgrund einiger besonderer Eigenschaften der Schichten in Kontakt mit Wasser die Fähigkeit, Wassermoleküle zwischen ihre Blätter zu ziehen, was das gesamte Stapel zum Aufquellen oder Schwellen bringt.",
-          "Die Konsequenz ist das Schwellen des gesamten Steins."
+          "Im Fall von quellfähigen Tonen haben sie aufgrund einiger besonderer Eigenschaften der Schichten die Fähigkeit, Wassermoleküle zwischen ihre Blätter zu ziehen, wenn sie mit Wasser in Kontakt kommen, was dazu führt, dass der gesamte Stapel aufquillt oder sich ausdehnt.",
+          "Die Folge ist das Quellen des gesamten Steins."
         ]
       ],
       "labels": {
@@ -521,25 +523,25 @@
         "drying": "Trocknung",
         "dryBlock": "Trockener Block",
         "wetBlock": "Nasser Block",
-        "buckling": "Beulbildung",
+        "buckling": "Ausknicken",
         "peeling": "Abblättern",
-        "mudCracking": "Schlammrissbildung",
+        "mudCracking": "Schlammrisse",
         "dry": "Trocken",
         "wet": "Nass",
-        "swelling": "Schwellung 1,0 mm/m"
+        "swelling": "Quellung 1,0 mm/m"
       }
     },
     "typesOfFeatures": {
-      "title": "Arten von Regenwasser-Einrichtungen",
+      "title": "Arten von Regenwassermerkmalen",
       "description": [
-        "Es gibt sieben Arten von Regenwasser-Management-Einrichtungen, die darauf ausgelegt sind, Wasser von den Wänden wegzuleiten.",
-        "Klicken Sie auf die Vorrichtung, um mehr darüber zu erfahren"
+        "Es gibt sieben Arten von Regenwassermanagement-Merkmalen, die entwickelt wurden, um Wasser von den Wänden wegzuleiten.",
+        "Klicken Sie auf das Gerät, um mehr darüber zu erfahren"
       ],
-      "back": "Zuruck",
+      "back": "Zurück",
       "cornices": {
         "title": "Gesimse",
         "description": [
-          "Dies sind einfach geneigte Elemente, entweder horizontal oder geneigt, die sich an den Traufen befinden."
+          "Dies sind einfach geneigte Elemente, horizontal oder geneigt, die sich an den Traufen befinden."
         ]
       },
       "copings": {
@@ -551,25 +553,25 @@
       "chamferedDripEdges": {
         "title": "Abgeschrägte Tropfkanten",
         "description": [
-          "Dies sind Gurtgesimse (die die inneren Stockwerke anzeigen), die an Aufgängen oder in Archivolten von Buchten zu finden sind."
+          "Dies sind Schnüre (die die inneren Stockwerke anzeigen), die sich an Aufbauten oder in Archivolten von Öffnungen befinden."
         ]
       },
       "slopedRetreats": {
         "title": "Geneigte Rücksprünge",
         "description": [
-          "Diese befinden sich an jedem Rücksprung eines Strebepfeilers, Widerlagers oder Massivs. Diese Elemente zeigen durchgängig einen hohen Grad an Dysfunktion aufgrund von Exposition und Erosion."
+          "Diese befinden sich an jedem Rücksprung eines Strebepfeilers, Widerlagers oder Massivs. Diese Elemente zeigen konstant einen hohen Grad an Dysfunktion aufgrund von Exposition und Erosion."
         ]
       },
       "rotatingDripEdges": {
         "title": "Rotierende Tropfkanten",
         "description": [
-          "Diese befinden sich an polylobaten (Kleeblatt oder Vierpass) Öffnungen und der Rosette."
+          "Diese befinden sich an mehrblättrigen (dreiblättrigen oder vierblättrigen) Öffnungen und der Rosette."
         ]
       },
       "slopedSupports": {
         "title": "Geneigte Stützen",
         "description": [
-          "Diese befinden sich auf den Schwellenhöhen der Bogenfenster in den Buchten."
+          "Diese befinden sich auf Höhe der Brüstungen der Bogenfenster in den Öffnungen."
         ]
       },
       "dripGlazes": {
@@ -582,115 +584,115 @@
     "failureSituations": {
       "title": "Versagensszenarien",
       "description": [
-        "Erosion und schlecht gestaltete Profile beeinträchtigen die Fähigkeit von Wasserspeiern erheblich, Wasser effektiv abzuleiten. Ohne scharfe Tropfkanten wird das Wasser nicht sauber abgestoßen, sondern fließt an der Oberfläche entlang, was zur Durchfeuchtung und zum Verfall des darunterliegenden Mauerwerks führt. In einigen Fällen folgt das Wasser einem tangentialen Verlauf – dem sogenannten Austrittswinkel – der zu unerwünschtem Wasserablauf auf darunterliegende Flächen führt.",
-        "Rotierende oder umgekehrte Tropfsteinprofile ohne entsprechende Anpassungen können Wasser in ihren unteren Krümmungen stauen und so zusätzlich zur Pfützenbildung und feuchtigkeitsbedingten Schäden beitragen."
+        "Tropfsteinerosion und schlecht gestaltete Profile reduzieren ihre Wirksamkeit bei der Umleitung von Wasser erheblich. Ohne scharfe Tropfschnitte wird Wasser nicht sauber ausgestoßen und fließt stattdessen entlang der Oberfläche, was zu Benetzung und Verschlechterung des darunter liegenden Mauerwerks führt. In einigen Fällen folgt das Wasser einem Tangentialpfad - bekannt als Ausstoßwinkel - der zu unerwünschtem Abfluss unterhalb führt.",
+        "Rotierende oder invertierte Tropfsteinprofile ohne geeignete Modifikationen können Wasser in ihren unteren Kurven einfangen und weiter zu Ansammlungen und feuchtigkeitsbedingten Schäden beitragen."
       ],
       "contemporarySolutions": "Zeitgenössische Lösungen",
       "ineffectiveDripstones": {
-        "title": "Unwirksame Tropfsteine aufgrund starker Erosion",
+        "title": "Unwirksame Tropfsteine aufgrund schwerer Erosion",
         "description": [
-          "Erosion beeinträchtigt die Fähigkeit des Tropfsteins, Wasser abzuleiten, wodurch Wasser aufgehalten und nicht richtig umgeleitet wird."
+          "Erosion hemmt die Fähigkeit des Tropfsteins, Wasser abzuleiten, was dazu führt, dass Wasser abgefangen und nicht richtig umgeleitet wird."
         ]
       },
       "dripstonesBack": {
         "title": "Tropfsteine, die Wasser zurück auf das Gebäude leiten",
         "description": [
-          "Das fließende Wasser beginnt seinen Fall in einem 'Austrittswinkel', der tangential zum Profil verläuft, was dazu führt, dass die darunterliegenden Flächen benässt werden."
+          "Das fließende Wasser beginnt seinen Fall in einem 'Ausstoßwinkel', der tangential zum Profil ist, was dazu führt, dass das Wasser die Oberflächen darunter benetzt."
         ]
       },
       "withoutDripcuts": {
-        "title": "Tropfsteine ohne Tropfkante",
+        "title": "Tropfsteine ohne Tropfschnitte",
         "description": [
-          "Ohne Tropfkante läuft das Wasser weiterhin an der Oberfläche herab, was zu weiterer Durchfeuchtung und Schäden an den unteren Bauteilen führt."
+          "Ohne Tropfschnitte läuft Wasser weiter die Oberfläche hinunter, was zu weiterer Benetzung und Beschädigung der unteren Teile des Gebäudes führt."
         ]
       },
       "rotatingRetain": {
-        "title": "Rotierende Tropfsteine, die Wasser kopfüber halten",
+        "title": "Rotierende Tropfsteine, die Wasser verkehrt herum zurückhalten",
         "description": [
-          "Aufgrund ihres Profils und des Fehlens einer scharfen Tropfkante sammelt sich Wasser in der unteren Zone des torusförmigen Elements – wie kopfüber."
+          "Aufgrund seines Profils und des Fehlens eines scharfen Tropfschnitts sammelt sich Wasser im unteren Teil des Torus, als ob es verkehrt herum wäre."
         ]
       },
       "profileAdapt": {
         "title": "Tropfsteine ohne Profilanpassung",
         "description": [
-          "Dies sind Tropfsteine, deren Profil sich dreht oder umkehrt, ohne die notwendige Anpassung zur sicheren Wasserabweisung."
+          "Dies sind die Tropfsteine, deren Profil sich dreht oder umkehrt, ohne die notwendige Anpassung, um eine ordnungsgemäße Wasserableitung zu gewährleisten."
         ]
       }
     },
     "contemporarySolutions": {
       "title": "Zeitgenössische Lösungen",
       "description": [
-        "Steinbearbeitung (Stereotomie): Dies beinhaltet das Nachschneiden bestehender Steinelemente, zum Beispiel durch das Hervorheben eines Überhangs eines Torus oder das Einbringen von Rillen in eine Fase, um das Wasser besser abzuleiten.",
-        "Spenglerarbeit (Metallverarbeitung): Dabei werden Metallelemente wie Wetterschutzbleche oder Führungen in Lagerfugen oder unter Abdeckungen eingesetzt, um sicherzustellen, dass das Wasser vom Gebäude weggeleitet wird. Spenglerlösungen werden oft bevorzugt, wenn Stereotomie unzureichend oder zu kostspielig ist."
+        "Stereotomie (Steinschnitt): Dies beinhaltet das Nachschneiden vorhandener Steinelemente, wie das Betonen des Überstands eines Torus oder das Schneiden von Rillen in eine Fase, um Wasser besser zu leiten.",
+        "Klempnerei (Metallarbeit): Dies beinhaltet das Einfügen von Metallelementen wie Wetterschutzstreifen oder Führungen in Lagerfugen oder unter Abdeckungen, um sicherzustellen, dass Wasser vom Gebäude weggeleitet wird. Klempnerlösungen werden oft bevorzugt, wenn Stereotomie unzureichend oder zu kostspielig ist."
       ],
       "Examples": "Beispiele an der Kathedrale",
       "Stereotomy": {
         "title": "Stereotomie"
       },
       "Tinsmithing": {
-        "title": "Spenglerarbeit"
+        "title": "Klempnerei"
       }
     },
     "exampleOne": {
-      "title": "Eingriffe an den Strebebögen",
+      "title": "Eingriffe an den Strebepfeilern",
       "description": [
-        "Die Eingriffe an den Strebebögen kombinieren traditionelle stereotomische Techniken mit modernen Metallverarbeitungslösungen, um das Regenwassermanagement zu verbessern und das Mauerwerk zu schützen. Dazu gehören die Installation von Metall-Mikrorinnen und Tropfkanten, um die Effizienz der bestehenden Regenwasserableitung zu erhöhen."
+        "Eingriffe an den Strebepfeilern kombinieren traditionelle Stereotomietechniken mit zeitgenössischen Metallverarbeitungslösungen, um das Wassermanagement zu verbessern und das Mauerwerk zu schützen. Dazu gehören die Installation von Metall-Mikrorinnen und Tropfschnitten, um die Effizienz der vorhandenen Regenwassermanagementvorrichtungen zu verbessern."
       ],
       "Examples": "Rosette"
     },
     "exampleTwo": {
       "title": "Eingriffe an der Rosette",
       "description": [
-        "Die Rosette weist ein vorhandenes toroidales Steinprofil auf, das eine zentrale Rolle im Regenwassermanagement spielt. Um ihre Leistungsfähigkeit zu verbessern und feuchtigkeitsbedingte Schäden zu minimieren, wurden zeitgenössische Eingriffe vorgenommen.",
-        "Dazu gehören die diskrete Anbringung von Metall-Tropfkanten an den oberen und unteren Halbrundbögen der Rosette, um eine effektive Wasserableitung zu gewährleisten. Zusätzlich wurden Mikrorinnen an der Unterseite und den Seiten des Fensterrahmens eingearbeitet, um das abfließende Wasser von empfindlichen Bereichen des Mauerwerks fernzuhalten."
+        "Die Rosette weist ein vorhandenes toroidales Steinprofil auf, das eine Schlüsselrolle im Wassermanagement spielt. Um jedoch seine Leistung zu verbessern und feuchtigkeitsbedingte Verschlechterung zu mildern, wurden zeitgenössische Eingriffe eingeführt.",
+        "Dazu gehören die Installation diskreter Metall-Tropfschnitte entlang der oberen und unteren halbkreisförmigen Kanten des Fensters, um eine effektive Wasserumleitung zu gewährleisten. Darüber hinaus wurden Mikrorinnen am unteren und an den Seiten des Fensterrahmens geschnitzt, um Abfluss von empfindlichen Bereichen des Mauerwerks wegzuleiten."
       ],
-      "Examples": "Strebebogen"
+      "Examples": "Strebepfeiler"
     },
     "thirteenCE": {
       "title": "13. Jahrhundert n. Chr.",
       "description": [
-        "Die ersten Strukturen, einschließlich der Dächer und Traufen auf den Nord- und Südquerhaustürmen, dienten als wichtige schützende Elemente. Bestimmte Steinelemente wie Wasserschläge oder Gesimse in den Archivolten der hohen Joche des Langhauses und deren Bänder könnten aus dem 13. Jahrhundert stammen.",
-        "Es gilt als wahrscheinlich, dass diese Elemente im Laufe der Jahrhunderte mehrfach überarbeitet oder neu behauen wurden."
+        "Die ursprünglichen Strukturen, einschließlich Dächer und Traufen an den Nord- und Südtürmen des Querschiffs, dienten als wichtige Schutzelemente. Bestimmte Steinelemente, wie die Tropfsteine oder Schnüre in den Archivolten der hohen Öffnungen des Kirchenschiffs und ihre Schnüre, könnten aus dem 13. Jahrhundert stammen.",
+        "Es wird als wahrscheinlich angesehen, dass diese Elemente im Laufe der Jahrhunderte mehrmals überarbeitet oder nachgeschnitten wurden."
       ],
       "Next": "Weiter"
     },
     "eighteenCE": {
       "title": "18. Jahrhundert n. Chr.",
       "description": [
-        "Der lokale Molassesandstein, ein weicher Sandstein mit karbonatischer Matrix und quellfähigen Tonmineralien, war das Hauptbaumaterial, dessen Empfindlichkeit gegenüber Wasser schon früh bekannt war.",
-        "Der Ersatz beschädigter Teile erfolgte stets analog: Die neuen Wasserschläge wurden so nachgearbeitet, dass sie den alten entsprachen oder ihnen zumindest ähnelten."
+        "Der lokale Molassestein, ein weicher Sandstein mit einer Karbonatmatrix und quellfähigen Tonen, war das primäre Baumaterial, und seine Anfälligkeit für Wasserschäden war von Anfang an ein bekanntes Problem.",
+        "Der Austausch veränderter Teile erfolgte immer durch Analogie: Die neuen Tropfleisten wurden nachgeschnitten, um den alten zu entsprechen oder ihnen zumindest zu ähneln."
       ],
       "Next": "Weiter"
     },
     "nineteenCE": {
       "title": "19. Jahrhundert n. Chr.",
       "description": [
-        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die Restaurierungen unter Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877), war ein bedeutender Abschnitt in der Entwicklung des Regenwassermanagements. Große Traufgesimse und Abflüsse wurden an den Dachvorsprüngen von Langhaus und Seitenschiffen installiert und über Fallrohre auf die Straße geleitet.",
-        "Um die Wetterbeständigkeit zu verbessern, wurde der Molassesandstein für kritische Elemente wie spitze Wasserschläge an den geneigten Rücksprüngen der Strebepfeiler durch widerstandsfähigeren Kalkstein ersetzt."
+        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die von Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877) geleiteten Restaurierungen, markierte eine bedeutende Periode für das Regenwassermanagement. Große Gesims-Rinnen und Abflüsse wurden an den Traufen der Kirchenschiffe und Seitenschiffe installiert, die mit Rohren verbunden waren, die das Wasser auf die Straßen brachten.",
+        "Um die Widerstandsfähigkeit gegen Witterungseinflüsse zu verbessern, wurde Molasse durch haltbareren Kalkstein für kritische Elemente wie die geschnäbelten Tropfsteine an den geneigten Rücksprüngen der Strebepfeiler ersetzt."
       ],
       "Next": "Weiter"
     },
     "twentyCE": {
       "title": "20. Jahrhundert n. Chr.",
       "description": [
-        "Die Strategien zur Regenwasserableitung im 20. Jahrhundert setzten weitgehend die Methoden von Viollet-le-Duc und Assinare fort und konzentrierten sich darauf, Wasser durch architektonische Steinelemente wie Wasserschläge und Gesimse von der Fassade fernzuhalten.",
-        "Trotz dieser Bemühungen zeigen Quellen, dass selbst restaurierte Wasserschläge und Rücksprünge oft nicht optimal funktionierten, was weiterhin zu Problemen wie Wasseransammlungen an den Rändern und seitlichem Überlauf mit Schäden an der darunterliegenden Mauer führte. In dieser Zeit wurde das Spenglerhandwerk eingeführt, etwa durch Metallrinnen auf bestimmten Dächern."
+        "Die Regenwassermanagementstrategie des 20. Jahrhunderts war weitgehend eine Fortsetzung der von Viollet-le-Duc und Assinare entwickelten Methoden und konzentrierte sich darauf, Wasser von der Fassade wegzuleiten, indem architektonische Steinelemente wie Tropfsteine und Gesimse verwendet wurden.",
+        "Trotz dieser Bemühungen deuten die Quellen darauf hin, dass selbst diese restaurierten Tropfleisten und Rücksprünge oft nicht perfekt funktionierten, was zu anhaltenden Problemen wie Wasseransammlungen an den Rändern und seitlichen Überläufen führte, die das Mauerwerk darunter beschädigten. Einführung der Klempnerei während dieser Zeit durch Hinzufügen von Metallblechrinnen zu einigen Dächern."
       ],
       "Next": "Weiter"
     },
     "twentyoneCE": {
       "title": "21. Jahrhundert n. Chr.",
       "description": [
-        "Gemischte Materiallösungen, die Stein mit Metall kombinieren, werden derzeit erprobt oder bereits umgesetzt – zum Beispiel bei Tropfkanten oder Gesimsen, um schärfere Kanten zu erzielen und biologische Verstopfungen zu verhindern.",
-        "Diese hybriden Lösungen gelten nicht als völlig neu, sondern als Weiterentwicklung der historischen Materialanwendung im Regenwassermanagement."
+        "Gemischte Materiallösungen, die Stein mit Metall kombinieren, werden für Elemente wie Tropfschnitte oder Schnüre erforscht oder implementiert, um schärfere Kanten zu bieten und biologische Verstopfung zu verhindern.",
+        "Diese gemischten Lösungen werden nicht als völlig neu angesehen, sondern als Fortsetzung einer historischen Entwicklung bei Materialien für das Wassermanagement."
       ],
-      "Back": "Zuruck"
+      "Back": "Zurück"
     }
   },
   "games": {
     "oldestStone": {
       "start": {
-        "title": "Können Sie den ältesten Stein in der Fassade identifizieren?",
+        "title": "Können Sie den ältesten Stein an der Fassade identifizieren?",
         "body": "Tippen Sie auf einen der hervorgehobenen Steine"
       },
       "incorrect": {
@@ -700,7 +702,7 @@
       "finish": {
         "title": "Richtig!",
         "body": [
-          "Der älteste Steintyp der Kathedrale ist Molasse Grise de Lausanne, die im 12. Jahrhundert n. Chr. eingebaut wurde.",
+          "Der älteste Steintyp der Kathedrale ist die graue Molasse von Lausanne, die im 12. Jahrhundert n. Chr. platziert wurde.",
           "Lassen Sie uns mehr darüber erfahren..."
         ]
       }
@@ -709,7 +711,7 @@
       "start": {
         "title": "Testen Sie Ihr Wissen!",
         "body": [
-          "Es gibt Bereiche der Kathedrale, die mehr von einer bestimmten Art der Degradation betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
+          "Es gibt Bereiche der Kathedrale, die stärker von einer bestimmten Art von Degradation betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
           "Im roten Kreis können wir ein gutes Beispiel finden, klicken Sie darauf, um mehr zu entdecken!"
         ]
       },
@@ -733,30 +735,30 @@
         "body": "Tippen Sie auf einen, um mehr zu erfahren"
       },
       "quarry1": {
-        "title": "Molasse Grise de Lausanne",
+        "title": "Graue Molasse von Lausanne",
         "body": [
-          "Dieser Gesteinstyp variiert in der Farbe von grau bis blau, mit einigen gelben Variationen. Er hat eine mittlere bis grobe Korngröße und besteht aus Quarz, Kaliumfeldspäten, Plagioklasen, Kalzit und gelegentlich Dolomit, Pyrit und Goethit.",
-          "Dies ist das Hauptfazies, das in der Kathedrale Lausanne verwendet wird, einschließlich des Südturms des Querschiffs."
+          "Dieser Gesteinstyp variiert in der Farbe von grau bis blau mit einigen gelben Variationen. Er hat eine mittlere bis grobe Korngröße und besteht aus Quarz, Kalifeldspäten, Plagioklasen, Kalzit und gelegentlich Dolomit, Pyrit und Goethit.",
+          "Dies ist die Hauptfazies, die an der Kathedrale von Lausanne verwendet wird, einschließlich des Südturms des Querschiffs."
         ]
       },
       "quarry2": {
         "title": "Molasse von Ursy",
         "body": [
-          "Dieses Fazies, dem nach den Archiven der Name Ursy-Molasse zugeschrieben wird, ist ein Fazies mit flachen Schichtungen, die Ebenen mit feiner Korngröße und grobe Ebenen abwechseln. Dieses grau-grüne Fazies hat eine violett-rosa Patina.",
-          "Dieses Fazies findet sich nur im basalen Teil des südöstlichen Strebepfeilers der Ostfassade."
+          "Diese Fazies, der laut Archiven der Name Ursy-Molasse zugeschrieben wird, ist eine Fazies mit flachen Schichtungen, die Ebenen mit feiner Korngröße und grobe Ebenen abwechseln. Diese graugrüne Fazies hat eine purpurrosa Patina.",
+          "Diese Fazies findet sich nur im basalen Teil des südöstlichen Strebepfeilers der Ostfassade."
         ]
       },
       "quarry3": {
-        "title": "Molasse of Zug",
+        "title": "Molasse von Zug",
         "body": [
-          "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
-          "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent."
+          "Auch als Granitmolasse bezeichnet, sind diese Sandsteinfazies die Überreste der intensiven Veränderung und Erosion der Alpen während der alpinen Orogenese - dem geologischen Ereignis, das die Alpenkette formte. Bestehend aus Sanden mit unterschiedlichen Korngrößen, weisen sie auch eine breite Palette von mineralischen Zusammensetzungen auf, einschließlich Quarz, Feldspäte und unterschiedliche Mengen an Glimmern, die alle durch Kalzit zementiert sind.",
+          "Die sedimentären Strukturen sind ebenfalls vielfältig, wobei einige Formationen sich kreuzende Schichten aufweisen, während andere flach oder vollständig abwesend sind."
         ]
       }
     }
   },
   "ui": {
-    "navMenuButton": "Navigation Menu",
-    "closeNavMenu": "Close navigation menu"
+    "navMenuButton": "Navigationsmenü",
+    "closeNavMenu": "Navigationsmenü schließen"
   }
-    }
+}
