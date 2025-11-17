@@ -291,8 +291,7 @@
         "geologicalInformation": "Geologische Informationen",
         "properties": "Eigenschaften der Molasse",
         "typesOfStones": "Steinarten",
-        "interactive": "Interaktive Tour \n(NICHT VERFÜGBAR)"
-      },
+        "interactive": "Interaktive Tour \n(NICHT VERFÜGBAR)"},
       "stonesOfTheCathedral": {
         "title": "Steine der Kathedrale",
         "description": [
@@ -334,8 +333,7 @@
             "<b>Vier Hauptgruppen</b> können nach den beteiligten Sedimentationsbedingungen (marine oder Süßwasserbedingungen) identifiziert werden."
           ]
         ]
-      }
-    },
+      }},
     "weatheringOfMolasse": {
       "title": "Verwitterung der Molasse",
       "description": [

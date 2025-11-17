@@ -291,7 +291,7 @@
         "geologicalInformation": "Geological Information",
         "properties": "Properties of Molasse",
         "typesOfStones": "Types of Stones",
-        "interactive": "Interactive Tour \n(NOT AVALABLE)"
+        "interactive": "Interactive Tour (NOT AVALABLE)"
       },
       "stonesOfTheCathedral": {
         "title": "Stones of the Cathedral",
@@ -334,8 +334,7 @@
             "<b>Four main groups</b> can be identified according to the sedimentation conditions involved (marine or freshwater condition)."
           ]
         ]
-      }
-    },
+      }},
     "weatheringOfMolasse": {
       "title": "Weathering of Molasse",
       "description": [

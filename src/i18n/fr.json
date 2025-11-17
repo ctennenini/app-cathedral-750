@@ -291,8 +291,7 @@
         "geologicalInformation": "Information géologique",
         "properties": "Propriétés de la molasse",
         "typesOfStones": "Types de pierres",
-        "interactive": "Visite interactive \n(NON DISPONIBLE)"
-      },
+        "interactive": "Visite interactive (NON DISPONIBLE)"},
       "stonesOfTheCathedral": {
         "title": "Pierres de la cathédrale",
         "description": [
@@ -334,8 +333,7 @@
             "<b>Quatre groupes principaux</b> peuvent être identifiés selon les conditions de sédimentation impliquées (condition marine ou eau douce)."
           ]
         ]
-      }
-    },
+      }},
     "weatheringOfMolasse": {
       "title": "Altération de la molasse",
       "description": [
