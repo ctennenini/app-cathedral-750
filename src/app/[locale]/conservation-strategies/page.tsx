@@ -16,10 +16,6 @@ export default makePage((dictionary) => {
         type: 'links',
         links: [
           {
-            target: '/timeline',
-            label: page.actions.past,
-          },
-          {
             target: '/water-managment',
             label: page.actions.water,
           },

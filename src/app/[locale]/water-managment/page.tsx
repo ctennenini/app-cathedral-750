@@ -23,10 +23,6 @@ export default makePage((dictionary) => {
             target: '/types-of-devices',
             label: pages.waterManagement.actions.types,
           },
-          {
-            target: '/failure-and-solution',
-            label: pages.waterManagement.actions.contemporary,
-          },
         ],
       }}
       backButtonTarget="/conservation-strategies"

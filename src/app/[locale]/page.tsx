@@ -19,11 +19,6 @@ export default makePage((dictionary) => {
       label: page.actions.website,
       external: true,
     },
-    {
-      target: '#',
-      label: page.actions.birthday,
-      disabled: true,
-    },
   ]
 
   return (

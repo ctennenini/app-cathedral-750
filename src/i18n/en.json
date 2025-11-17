@@ -186,8 +186,7 @@
     "interactiveMenu": {
       "title": "Interactive Tour",
       "description": [
-        "Now it is your time to go out and explore the immersive experience and interact with the cathedral",
-        "Scan the <b>QR code and get te 3D map</b> of the spots you need to reach"
+        "This is what you are going to do and see on site. Let's interact with the monument!"
       ]
     },
     "stoneConservation": {
@@ -247,11 +246,11 @@
     },
     "waterManagement": {
       "title": [
-        "Rainwater Management Features"
+        "Rainwater Management"
       ],
       "description": [
         "The management of rainwater at the Lausanne Cathedral has been a critical aspect of its conservation throughout the centuries, primarily due to the use of molasse stone, which is particularly susceptible to decomposition when exposed to rain.",
-        "This necessity was emphasised by Viollet-le-Duc in his 1872 restoration plan, where he stressed the importance of preserving the materials in an absolute manner and directing the water to the ground, using numerous conduits arranged with the greatest attention."
+        "This necessity was emphasised by Viollet-le-Duc in his 1872 restoration plan, where he stressed the importance of preserving the material and directing the water to the ground, using numerous conduits."
       ],
       "actions": {
         "evolution": "Evolution of Rainwater Features",
@@ -269,7 +268,8 @@
       "actions": {
         "sandstone": "Molasse Sandstone",
         "weathering": "Weathering of Molasse",
-        "interactive": "Interactive Tour"
+        "interactive": [  "Interactive Tour",
+                       "Not Available"]
       }
     },
     "molasseSandstone": {
@@ -288,7 +288,7 @@
         "geologicalInformation": "Geological Information",
         "properties": "Properties of Molasse",
         "typesOfStones": "Types of Stones",
-        "interactive": "Interactive Tour"
+        "interactive": "Interactive Tour \n(NOT AVALABLE)"
       },
       "stonesOfTheCathedral": {
         "title": "Stones of the Cathedral",
@@ -748,7 +748,7 @@
         "title": "Molasse of Zug",
         "body": [
           "Also referred to as Molasse Granitique, these sandstone facies are the remnants of the intense alteration and erosion of the Alps during the Alpine orogeny—the geological event that shaped the Alpine mountain range. Composed of sands with diverse grain sizes, they also exhibit a wide range of mineral compositions, including quartz, feldspars, and varying amounts of micas, all cemented by calcite.",
-          "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent. Over time, the stone develops a distinctive pinkish patina, adding to its visual and historical appeal."
+          "The sedimentary structures are equally varied, with some formations displaying intersecting strata, while others are flat or completely absent."
         ]
       }
     }

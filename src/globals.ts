@@ -26,3 +26,4 @@ export type CustomMetadata = {
   creator: string
   publisher: string
 }
+
