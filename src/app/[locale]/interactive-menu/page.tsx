@@ -1,8 +1,5 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-
-import interactive from './interactive.png'
-
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
@@ -21,8 +18,17 @@ export default makePage((dictionary) => {
       
       pullOutContent={[
         {
-          type: 'image',
-          src: interactive,
+          type: 'custom',
+          content: (
+            <video 
+              controls 
+              style={{ width: '100%', maxWidth: '800px' }}
+              poster="/videos/thumbnail.jpg" // opzionale: immagine di preview
+            >
+              <source src="/videos/TEST.mp4" type="video/mp4" />
+              Il tuo browser non supporta il tag video.
+            </video>
+          )
         },
       ]}
     />
