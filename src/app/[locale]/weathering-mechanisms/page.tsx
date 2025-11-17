@@ -20,8 +20,8 @@ export default makePage((dictionary) => {
             label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
-            target: '/swelling-clays',
-            label: pages.weatheringMechanisms.actions.swellingClays,
+            target: '#',
+            label: "...",
           },
           {
             target: '/salt-crystallization',
@@ -30,11 +30,6 @@ export default makePage((dictionary) => {
           {
             target: '/atmospheric-pollution',
             label: pages.weatheringMechanisms.actions.atmosphericPollution,
-          },
-          {
-            target: '#',
-            disabled: true,
-            label: pages.weatheringMechanisms.actions.biologicalAttack,
           },
         ],
       }}

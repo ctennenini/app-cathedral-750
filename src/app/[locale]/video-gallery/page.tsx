@@ -14,23 +14,17 @@ export default makePage((dictionary) => {
       videoId: 'wl83OUrdCPs',
       label: "Degradation of stones - Mr. Girardet",
     },
-    {
-      thumbnailSrc: video2.src,
-      thumbnailAlt: 'Thumbnail video 2',
-      videoId: 'evMz9QLAjLY',
-      label: 'Design ++ - Y. Patankar',
-    },
         {
       thumbnailSrc: video3.src,
       thumbnailAlt: 'Thumbnail video 2',
       videoId: 'YOUTUBE_VIDEO_ID_2',
-      label: 'Video 3',
+      label: 'Video 2',
     },
-        {
-      thumbnailSrc: '/thumbnails/video2.jpg',
+            {
+      thumbnailSrc: video3.src,
       thumbnailAlt: 'Thumbnail video 2',
       videoId: 'YOUTUBE_VIDEO_ID_2',
-      label: 'Video 2',
+      label: '...',
     },
     // altre thumbnail e videoId
   ]

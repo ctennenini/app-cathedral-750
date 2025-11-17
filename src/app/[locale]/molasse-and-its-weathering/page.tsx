@@ -23,12 +23,6 @@ export default makePage((dictionary) => {
             target: '/weathering-of-molasse',
             label: page.actions.weathering,
           },
-          {
-            target: '/interactive-menu',
-            label: page.actions.interactive,
-            arrow: true,
-            $primary: true,
-          },
         ],
       }}
     />
