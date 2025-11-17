@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 
 import { Container, LanguageSwitcher } from './TextPageLayout.styled'
@@ -11,7 +10,8 @@ import { BackButton } from '@/components/BackButton'
 type VideoItem = {
   thumbnailSrc: string
   thumbnailAlt: string
-  videoId: string
+  videoId?: string  // Per YouTube (opzionale)
+  videoSrc?: string  // Per video locali (opzionale)
   label?: string
 }
 
@@ -36,7 +36,7 @@ export function VideoGalleryLayout({
   bgImgAlt = 'background image',
   buttonColor = 'dark',
 }: VideoGalleryLayoutProps) {
-  const [openVideoId, setOpenVideoId] = useState<string | null>(null)
+  const [openVideo, setOpenVideo] = useState<VideoItem | null>(null)
 
   // Debug: log videos labels on client
   useEffect(() => {
@@ -87,15 +87,15 @@ export function VideoGalleryLayout({
             gap: '2rem',
           }}
         >
-          {videos.map(({ thumbnailSrc, thumbnailAlt, videoId, label }, i) => (
+          {videos.map((video, i) => (
             <div
               key={i}
               style={{ textAlign: 'center', cursor: 'pointer' }}
-              onClick={() => setOpenVideoId(videoId)}
+              onClick={() => setOpenVideo(video)}
             >
               <img
-                src={thumbnailSrc}
-                alt={thumbnailAlt}
+                src={video.thumbnailSrc}
+                alt={video.thumbnailAlt}
                 style={{
                   width: '100%',
                   borderRadius: 12,
@@ -111,20 +111,20 @@ export function VideoGalleryLayout({
                   marginTop: 8,
                   color: buttonColor === 'dark' ? 'white' : 'black',
                   fontWeight: 500,
-                  fontSize: '1.2rem',  // aumentato per vedere meglio
+                  fontSize: '1.2rem',
                   userSelect: 'text',
                 }}
               >
-                {label || 'prova'}
+                {video.label || 'Video'}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {openVideoId && (
+      {openVideo && (
         <div
-          onClick={() => setOpenVideoId(null)}
+          onClick={() => setOpenVideo(null)}
           style={{
             position: 'fixed',
             top: 0,
@@ -151,30 +151,51 @@ export function VideoGalleryLayout({
             }}
           >
             <button
-              onClick={() => setOpenVideoId(null)}
+              onClick={() => setOpenVideo(null)}
               style={{
                 position: 'absolute',
                 top: 8,
                 right: 8,
-                background: 'transparent',
+                background: 'rgba(0,0,0,0.5)',
                 border: 'none',
                 color: 'white',
                 fontSize: '2rem',
                 cursor: 'pointer',
                 zIndex: 10,
+                width: 40,
+                height: 40,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
               aria-label="Close video"
             >
               &times;
             </button>
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${openVideoId}?autoplay=1&cc_load_policy=1&cc_lang_pref=en`}
-              title="Video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ width: '100%', height: '100%' }}
-            />
+
+            {/* Renderizza YouTube o video locale */}
+            {openVideo.videoId ? (
+              // Video YouTube
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${openVideo.videoId}?autoplay=1&cc_load_policy=1&cc_lang_pref=en`}
+                title="Video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ width: '100%', height: '100%' }}
+              />
+            ) : openVideo.videoSrc ? (
+              // Video locale
+              <video
+                controls
+                autoPlay
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              >
+                <source src={openVideo.videoSrc} type="video/mp4" />
+                Il tuo browser non supporta il tag video.
+              </video>
+            ) : null}
           </div>
         </div>
       )}

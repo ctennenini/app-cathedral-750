@@ -24,8 +24,8 @@ export default makePage((dictionary) => {
             label: pages.weatheringOfMolasse.actions.types,
           },
           {
-            label: page.actions.interactive,
-            target: '/interactive-menu',
+            label: pages.weatheringOfMolasse.actions.interactive,  // ✅ Corretto
+            target: '/interactive-menu2',
             arrow: true,
             $primary: true,
           },

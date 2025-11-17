@@ -10,26 +10,26 @@ export default makePage((dictionary) => {
   const videos = [
     {
       thumbnailSrc: video1.src,
-      thumbnailAlt: 'Thumbnail video 1',
-      videoId: 'wl83OUrdCPs',
+      thumbnailAlt: 'Thumbnail video 2',
+      videoSrc: '/videos/Girardet.mp4',  // 
       label: "Degradation of stones - Mr. Girardet",
     },
-        {
-      thumbnailSrc: video3.src,
+    {
+      thumbnailSrc: video2.src,
       thumbnailAlt: 'Thumbnail video 2',
-      videoId: 'YOUTUBE_VIDEO_ID_2',
-      label: 'Video 2',
+      videoSrc: '/videos/Amsler.mp4',  // 
+      label: "The role of water - Mr. AmslerInteractive Tour",
     },
-            {
+    {
       thumbnailSrc: video3.src,
-      thumbnailAlt: 'Thumbnail video 2',
-      videoId: 'YOUTUBE_VIDEO_ID_2',
-      label: '...',
+      thumbnailAlt: 'Thumbnail video 3',
+      videoSrc: '/Chantal.mp4',  // 
+      label: "The conservation of the stones - Ms. Borel",
     },
-    // altre thumbnail e videoId
+    // Puoi mescolare YouTube e video locali!
   ]
 
-console.log('VIDEOS:', videos)
+  console.log('VIDEOS:', videos)
 
   return (
     <VideoGalleryLayout
@@ -42,4 +42,3 @@ console.log('VIDEOS:', videos)
     />
   )
 })
-

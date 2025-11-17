@@ -342,7 +342,8 @@
       ],
       "actions": {
         "mechanisms": "Mécanismes d'Altération",
-        "types": "Types de Dégradation"
+        "types": "Types de Dégradation",
+        "interactive":"Interactive Tour \n(NOT AVALABLE)"
       }
     },
     "degradationTypes": {

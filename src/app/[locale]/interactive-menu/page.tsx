@@ -19,7 +19,7 @@ export default makePage((dictionary) => {
       pullOutContent={[
         {
           type: 'video',  // ✨ Usa il nuovo tipo
-          src: '/videos/TEST.mp4',
+          src: '/videos/LaCathedraleImmersive2.mp4',
           title: 'Interactive Menu Video'
         },
       ]}

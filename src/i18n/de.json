@@ -342,7 +342,8 @@
       ],
       "actions": {
         "mechanisms": "Verwitterungsmechanismen",
-        "types": "Degradationstypen"
+        "types": "Degradationstypen",
+        "interactive":"Interactive Tour \n(NOT AVALABLE)"
       }
     },
     "degradationTypes": {

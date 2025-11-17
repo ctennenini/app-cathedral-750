@@ -342,7 +342,8 @@
       ],
       "actions": {
         "mechanisms": "Weathering Mechanisms",
-        "types": "Degradation Types"
+        "types": "Degradation Types",
+        "interactive":"Interactive Tour \n(NOT AVALABLE)"
       }
     },
     "degradationTypes": {
