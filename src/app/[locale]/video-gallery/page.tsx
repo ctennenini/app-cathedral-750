@@ -23,7 +23,7 @@ export default makePage((dictionary) => {
     {
       thumbnailSrc: video3.src,
       thumbnailAlt: 'Thumbnail video 3',
-      videoSrc: 'videos/Chantal.mp4',  // 
+      videoSrc: '/videos/Chantal.mp4',  // 
       label: "The conservation of the stones - Ms. Borel",
     },
     // Puoi mescolare YouTube e video locali!
