@@ -3,8 +3,8 @@ import { VideoGalleryLayout } from '@/layouts/TextPageLayout/VideoGalleryLayout'
 import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
 
 import video1 from './Mr.Girardet.png'
-import video2 from './Y.Patankar1.png'
-import video3 from './videoT1.png'
+import video2 from './Amsler.png'
+import video3 from './Chantal.png'
 
 export default makePage((dictionary) => {
   const videos = [
