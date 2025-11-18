@@ -59,7 +59,7 @@
       "subtitle": "Centre d'Information Numérique",
       "actions": {
         "website": "Site Web de la Cathédrale",
-        "birthday": "750e Anniversaire",
+        "birthday": "750ème Anniversaire",
         "immersive": "La Cathédrale Immersive"
       }
     },
@@ -76,8 +76,8 @@
         "videoGallery": "Rencontrez les experts"
       }
     },
-        "credits": {
-    "title": "Credits"
+    "credits": {
+      "title": "Crédits"
     },
     "timeline": {
       "title": "Travaux de restauration passés",
@@ -89,21 +89,19 @@
       "bgImgAlt": "Vue aérienne de la cathédrale",
       "backButtonTarget": "/previous-page",
       "nextButtonTarget": "/next-page",
-      
       "event1170": {
         "year": "1170",
         "title": "Début de la construction de la cathédrale",
         "description": [
-          "La construction de la Cathédrale de Lausanne a commencé en 1170 et a vu plusieurs maîtres d'œuvre se succéder jusqu'à la première moitié du XIIIe siècle."
+          "La construction de la cathédrale de Lausanne a débuté en 1170 et a vu plusieurs maîtres d'œuvre se succéder jusqu'à la première moitié du XIIIe siècle."
         ],
         "fullDescription": [
           "Commençant par l'abside romane, la poursuite de la construction du monument a rapidement affirmé le style gothique de son architecture et s'est achevée vers 1235 avec l'ajout du portail peint sur la façade sud.",
-          "Le 20 octobre 1275, la cathédrale fut consacrée par le pape Grégoire X en présence de l'empereur Rodolphe de Habsbourg.",
-          "La première étape de la construction de la cathédrale a commencé en 1173, avec un premier maître d'œuvre créant le déambulatoire de l'abside. Vingt ans plus tard, le deuxième maître d'œuvre a corrigé le tracé de l'édifice, modifié sa composition architecturale et, vers 1215, avait construit l'église que nous connaissons aujourd'hui."
+          "Le 20 octobre 1275, la cathédrale a été consacrée par le pape Grégoire X en présence de l'empereur Rodolphe de Habsbourg.",
+          "La première étape de construction de la cathédrale a commencé en 1173, avec un premier maître d'œuvre créant le déambulatoire de l'abside. Vingt ans plus tard, le deuxième maître d'œuvre a corrigé le tracé du bâtiment, modifié sa composition architecturale et, vers 1215, avait construit l'église que nous connaissons aujourd'hui."
         ],
         "imageAlt": "Vue historique de la construction de la cathédrale"
       },
-      
       "event1523": {
         "year": "1873",
         "title": "Reconstruction de la tour-lanterne",
@@ -111,26 +109,24 @@
           "Un incendie dévastateur a endommagé la tour-lanterne d'origine, nécessitant d'importants travaux de reconstruction. Viollet-le-Duc est chargé du projet"
         ],
         "fullDescription": [
-          "L'incendie qui ravagea la flèche de la tour-lanterne de la Cathédrale de Lausanne dans la nuit du 23 au 24 mai 1825 marqua le début d'une longue période d'expertises et de discussions et déclencha une avalanche de projets, de propositions et de controverses. Si le débat, initialement soutenu par des personnalités locales, a impliqué des experts internationaux, c'est parce que les enjeux étaient typiques de ceux soulevés à diverses époques par des édifices tels que Notre-Dame de Paris, la Cathédrale de Milan et Saint-Pierre de Genève.",
-          "Suite à son rapport, le Conseil d'État a chargé Viollet-le-Duc de procéder à une restauration complète de la tour-lanterne."
+          "L'incendie qui ravagea la flèche de la tour-lanterne de la cathédrale de Lausanne dans la nuit du 23 au 24 mai 1825 marqua le début d'une longue période d'expertises et de discussions et déclencha une succession de projets, de propositions et de controverses. Si le débat, initialement soutenu par des figures locales, impliqua des experts internationaux, c'est parce que les enjeux étaient typiques de ceux soulevés à diverses époques par des bâtiments tels que Notre-Dame de Paris, la cathédrale de Milan et Saint-Pierre de Genève.",
+          "Suite à son rapport, le Conseil d'État confia à Viollet-le-Duc la réalisation d'une restauration complète de la tour-lanterne."
         ],
         "imageAlt1": "Ancienne tour-lanterne avant l'incendie",
         "imageAlt2": "Tour-lanterne endommagée par l'incendie"
       },
-      
       "event1833": {
         "year": "1873",
-        "title": "Premier projet majeur de restauration",
+        "title": "Premier grand projet de restauration",
         "description": [
           "L'architecte Viollet-le-Duc est chargé de restaurer la cathédrale."
         ],
         "fullDescription": [
           "Cette restauration a marqué le début des approches modernes de conservation de l'architecture historique.",
-          "Le projet comprenait une documentation extensive de la structure existante et le développement de nouvelles techniques de restauration ainsi que le développement de systèmes de gestion de l'eau."
+          "Le projet a impliqué une documentation approfondie de la structure existante et le développement de nouvelles techniques de restauration ainsi que le développement de systèmes de gestion de l'eau."
         ],
         "imageAlt": "Plans et dessins du projet de restauration"
       },
-      
       "event1950": {
         "year": "19..",
         "title": "...Restauration",
@@ -138,26 +134,24 @@
           "...."
         ],
         "fullDescription": [
-          "La restauration d'après-guerre a impliqué une consolidation structurelle complète et l'introduction de technologies de conservation modernes.",
-          "Les travaux comprenaient le renforcement des fondations, le nettoyage des façades en grès, la restauration des fresques intérieures et l'installation de systèmes modernes d'éclairage et de chauffage."
+          "La restauration d'après-guerre a impliqué une consolidation structurelle complète et l'introduction de technologies modernes de conservation.",
+          "Les travaux comprenaient le renforcement des fondations, le nettoyage des façades en grès, la restauration des fresques intérieures et l'installation de systèmes d'éclairage et de chauffage modernes."
         ],
         "imageAlt1": "Installation de la nouvelle tour-lanterne",
         "imageAlt2": "Documentation des travaux de restauration"
       },
-      
       "event2009": {
         "year": "2009",
         "title": "Installation de vitraux modernes",
         "description": [
-          "De nouveaux vitraux d'artistes contemporains ont été installés, créant un dialogue unique entre l'art moderne et l'architecture historique."
+          "De nouveaux vitraux réalisés par des artistes contemporains ont été installés, créant un dialogue unique entre l'art moderne et l'architecture historique."
         ],
         "fullDescription": [
           "L'installation de vitraux contemporains représente l'une des contributions artistiques modernes les plus significatives à la cathédrale.",
-          "Ces œuvres d'art, caractérisées par des couleurs vives et des formes géométriques, filtrent la lumière pour créer une atmosphère mystique et contemplative dans l'espace sacré."
+          "Ces œuvres d'art, caractérisées par des couleurs vibrantes et des formes géométriques, filtrent la lumière pour créer une atmosphère mystique et contemplative dans l'espace sacré."
         ],
         "imageAlt": "Installation de vitraux contemporains"
       },
-      
       "event2020": {
         "year": "2020",
         "title": "Initiative du patrimoine numérique",
@@ -169,7 +163,7 @@
           "L'initiative implique également le développement d'applications interactives pour les visiteurs, améliorant leur compréhension et leur appréciation de la riche histoire de la cathédrale."
         ],
         "imageAlt1": "Équipement de numérisation du patrimoine",
-        "imageAlt2": "Processus de développement de la visite virtuelle"
+        "imageAlt2": "Processus de développement de visite virtuelle"
       }
     },
     "videoGallery": {
@@ -183,54 +177,54 @@
       "title": "La dégradation des façades",
       "subtitle": "Vidéo explicative",
       "description": [
-        "Dans cette vidéo <b>M. Girardet</b> - conservateur de la Cathédrale de Lausanne - décrira et nous montrera les dégradations qu'ils ont surveillées, comprises et dont ils prennent soin"
+        "Dans cette vidéo, <b>M. Girardet</b> - conservateur de la cathédrale de Lausanne - décrira et nous montrera les dégradations qu'ils ont surveillées, comprises et traitées"
       ]
     },
     "interactiveMenu": {
       "title": "Visite interactive",
       "description": [
-        "C'est ce que vous allez faire et voir sur place. Interagissons avec le monument!"
+        "Voici ce que vous allez faire et voir sur place. Interagissons avec le monument !"
       ]
     },
     "stoneConservation": {
-      "title": "Conservation de la pierre",
+      "title": "Conservation des pierres",
       "description": [
         [
           "Les efforts de conservation passent souvent inaperçus car ils se concentrent sur la préservation de l'authenticité historique sans altérer l'apparence d'un monument.",
-          "Cette discrétion signifie que le public, intéressé par le maintien du patrimoine bâti, n'est souvent pas conscient du travail et des défis impliqués.",
+          "Cette discrétion signifie que le public, intéressé par la préservation du patrimoine bâti, ignore souvent le travail et les défis impliqués.",
           "Le type d'intervention dépend de la gravité et du type de dégradation que la pierre a subi."
         ],
         [
-          "Les experts analysent l'état de la pierre et choisissent les bonnes procédures"
+          "Les experts analysent l'état de la pierre et choisissent les procédures appropriées"
         ]
       ]
     },
     "consolidation": {
       "title": "Consolidation",
       "description": [
-        "Lorsque seule la surface s'écaille, la dégradation n'est pas considérée comme grave et généralement une intervention minimale est nécessaire",
-        "L'application de produits consolidants pour augmenter la résistance de la pierre et des ragréages de mortier pour combler les lacunes sont utilisés"
+        "Lorsque seule la surface s'écaille, la dégradation n'est pas considérée comme grave et généralement des interventions minimales sont nécessaires",
+        "L'application de produits consolidants pour augmenter la résistance de la pierre et des patchs de mortier pour combler les lacunes sont utilisés"
       ]
     },
     "scalingFixing": {
-      "title": "Fixation des écailles",
+      "title": "Fixation de l'écaillage",
       "description": [
-        "Lorsque la surface semble saine mais qu'il y a un écaillage de quelques cm en profondeur, une intervention de fixation est nécessaire pour empêcher l'écaille de se détacher complètement.",
+        "Lorsque la surface semble saine mais qu'il y a un écaillage à quelques cm de profondeur, une intervention de fixation est nécessaire pour empêcher l'écaille de se détacher complètement.",
         "Un système spécial de combinaison de broches et de consolidants est utilisé et les interventions sont invisibles à la fin"
       ]
     },
     "mortar": {
-      "title": "Ragréage au mortier",
+      "title": "Patchs de mortier",
       "description": [
         "Lorsque les premiers centimètres de la surface sont dégradés et non préservables, la partie endommagée est remplacée par des mortiers spéciaux.",
-        "Pour améliorer l'adhérence et la résistance, une grille spéciale est construite pour \"renforcer\" le mortier."
+        "Pour améliorer l'adhérence et la résistance, une grille spéciale est construite pour « renforcer » le mortier."
       ]
     },
     "substitution": {
-      "title": "Remplacement de la pierre",
+      "title": "Remplacement de pierre",
       "description": [
         "Lorsque la pierre est très endommagée et/ou a une grande valeur artistique et historique, elle est entièrement substituée.",
-        "Si historiquement pertinentes, les pièces substituées sont conservées dans le lapidaire."
+        "Si elle est historiquement pertinente, les pièces substituées sont préservées dans le lapidarium."
       ]
     },
     "conservationStrategies": {
@@ -238,8 +232,8 @@
         "Stratégies de conservation"
       ],
       "description": [
-        "La Cathédrale de Lausanne, telle que nous la voyons aujourd'hui, est le résultat de siècles d'efforts de conservation continus.",
-        "Cette section explorera l'évolution des pratiques de préservation et le fascinant voyage de la conservation de ce patrimoine architectural, des restaurations stylistiques plus invasives du passé à la philosophie actuelle d'intervention minimale."
+        "La cathédrale de Lausanne, telle que nous la voyons aujourd'hui, est le résultat de siècles d'efforts de conservation continus.",
+        "Cette section explorera l'évolution des pratiques de préservation et le fascinant parcours de conservation de ce patrimoine architectural, des restaurations plus invasives et stylistiques du passé à la philosophie actuelle d'intervention minimale."
       ],
       "actions": {
         "past": "Travaux de restauration passés",
@@ -252,7 +246,7 @@
         "Gestion des eaux pluviales"
       ],
       "description": [
-        "La gestion des eaux pluviales à la Cathédrale de Lausanne a été un aspect critique de sa conservation au fil des siècles, principalement en raison de l'utilisation de la pierre de molasse, qui est particulièrement sensible à la décomposition lorsqu'elle est exposée à la pluie.",
+        "La gestion des eaux pluviales à la cathédrale de Lausanne a été un aspect critique de sa conservation au fil des siècles, principalement en raison de l'utilisation de pierre de molasse, particulièrement susceptible de se décomposer lorsqu'elle est exposée à la pluie.",
         "Cette nécessité a été soulignée par Viollet-le-Duc dans son plan de restauration de 1872, où il a insisté sur l'importance de préserver le matériau et de diriger l'eau vers le sol, en utilisant de nombreux conduits."
       ],
       "actions": {
@@ -264,76 +258,77 @@
     "molassesAndItsWeathering": {
       "title": "La molasse et son altération",
       "description": [
-        "La cathédrale de Lausanne a été construite avec un grès de molasse locale, particulièrement sensible à l'eau.",
+        "La cathédrale de Lausanne a été construite avec un grès molassique local, particulièrement sensible à l'eau.",
         "Vous pouvez obtenir directement ici des informations sur cette pierre ainsi que sur son altération en cliquant sur les boutons correspondants",
         "Vous pouvez également accéder directement à une application de découverte interactive à utiliser en vous promenant autour de la cathédrale."
       ],
       "actions": {
-        "sandstone": "Grès de molasse",
+        "sandstone": "Grès molassique",
         "weathering": "Altération de la molasse",
-        "interactive": ["Visite interactive",
-                       "Non disponible"]
+        "interactive": ["Visite interactive", "Non disponible"]
       }
     },
     "molasseSandstone": {
-      "title": "Le grès de molasse",
+      "title": "Le grès molassique",
       "description": [
         [
-          "La formation rocheuse de la molasse suisse s'étend au nord des Alpes, de la région du Lac Léman à l'ouest de la Suisse jusqu'au Lac de Constance à l'est.",
+          "La formation rocheuse de la molasse suisse s'étend au nord des Alpes, de la région du lac Léman à l'ouest de la Suisse jusqu'au lac de Constance à l'est.",
           "Elle comprend une variété de grès liés à la calcite, qui peuvent contenir des argiles gonflantes."
         ],
         [
-          "Dans le cadre de cette formation, la \"Molasse grise de Lausanne\" a été extraite juste à l'extérieur du centre-ville médiéval et employée pour ériger la Cathédrale de Lausanne.",
-          "Au fil des siècles, des grès de la même typologie ont été amenés de différentes carrières locales distribuées autour du centre médiéval et employés pour les travaux de modification et d'entretien de la Cathédrale."
+          "Dans le cadre de cette formation, la « Molasse grise de Lausanne » a été extraite juste à l'extérieur du centre-ville médiéval et utilisée pour ériger la cathédrale de Lausanne.",
+          "Au fil des siècles, des grès de la même typologie ont été apportés de différentes carrières locales réparties autour du centre médiéval et utilisés pour les travaux de modification et d'entretien de la cathédrale."
         ]
       ],
       "actions": {
-        "geologicalInformation": "Information géologique",
+        "geologicalInformation": "Informations géologiques",
         "properties": "Propriétés de la molasse",
         "typesOfStones": "Types de pierres",
-        "interactive": "Visite interactive (NON DISPONIBLE)"},
+        "interactive": "Visite interactive (NON DISPONIBLE)"
+      },
       "stonesOfTheCathedral": {
         "title": "Pierres de la cathédrale",
         "description": [
           [
-            "La Cathédrale de Lausanne est construite à partir d'une variété de pierres provenant de différentes carrières de toute la Suisse et de certaines parties de l'Allemagne.",
-            "Au cours du XIXe siècle, le grès de molasse régional des éléments architecturaux exposés de la Cathédrale a été remplacé par des calcaires et des grès \"plus durs\" de la région élargie du canton de Vaud."
+            "La cathédrale de Lausanne est construite à partir d'une variété de pierres provenant de différentes carrières de toute la Suisse et de certaines parties de l'Allemagne.",
+            "Au cours du XIXe siècle, le grès molassique régional des éléments architecturaux exposés de la cathédrale a été remplacé par des calcaires et des grès « plus durs » de la région plus large du canton de Vaud."
           ],
           [
-            "Au XXe siècle, en raison de la rareté des carrières régionales, la substitution générale du grès de molasse local pour l'entretien et la restauration est devenue une pratique courante.",
+            "Au XXe siècle, en raison de la rareté des carrières régionales, la substitution générale du grès molassique local pour l'entretien et la restauration est devenue une pratique courante.",
             "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) ont été utilisés à sa place."
           ]
         ],
-        "testYourKnowledge": "Testez vos connaissances!"
+        "testYourKnowledge": "Testez vos connaissances !"
       },
       "molasseGris": {
         "title": "Molasse grise",
         "description": [
-          "C'est un grès molassique de Lausanne qui a été placé dans la Cathédrale au XIIe siècle de notre ère (période gothique).",
+          "C'est un grès molassique de Lausanne qui a été placé dans la cathédrale au XIIe siècle de notre ère (période gothique).",
           "C'est un type de pierre sédimentaire qui prédomine sur la tour sud du transept. Ce grès provenait très probablement des carrières voisines.",
           "Cette pierre est particulièrement sensible à l'eau en raison de la présence d'argiles gonflantes."
         ]
       },
       "geologicalInformation": {
-        "title": "Information géologique",
+        "title": "Informations géologiques",
         "description": [
           [
             "La géologie de la Suisse couvre les Alpes centrales, un segment de la chaîne alpine situé entre les Alpes occidentales de France et d'Italie et les Alpes orientales d'Italie, d'Autriche et d'Allemagne.",
             "Dans ce segment, la chaîne alpine est particulièrement étroite, mais elle contient toutes les principales unités tectoniques et présente des paysages et des reliefs emblématiques pour lesquels les Alpes sont connues."
           ],
           [
-            "Au nord, le Plateau suisse s'étend du Lac Léman à Berne, Zurich et le Lac de Constance, s'effilant d'environ 600 à 400 m d.s.m. Ce plateau correspond à ce qu'on appelle le Bassin molassique.",
+            "Au nord, le plateau suisse s'étend du lac Léman à Berne, Zurich et le lac de Constance, diminuant d'environ 600 à 400 m d.a.s.l. Ce plateau correspond à ce qu'on appelle le bassin de la molasse.",
             "<b>Cliquez sur la carte</b> pour en savoir plus sur les différentes molasses, les carrières et leurs caractéristiques."
           ],
           [
-            "Les faciès molassiques résultent de l'altération et de l'érosion des Alpes pendant l'orogenèse alpine et sont constitués de sables de granulométrie variable (de fine à grossière), et de minéralogie également variable (quartz, feldspaths, avec plus ou moins de micas) cimentés avec de la calcite."
+            "Les faciès de molasse résultent de l'altération et de l'érosion des Alpes pendant l'orogenèse alpine et sont constitués de sables de granulométrie variable (de fine à grossière), et de minéralogie également variable (quartz, feldspaths, avec plus ou moins de micas) cimentés à la calcite."
           ],
           [
-            "Les processus géologiques impliqués dans la formation du Bassin molassique remontent aux ères oligocène et miocène.",
-            "<b>Quatre groupes principaux</b> peuvent être identifiés selon les conditions de sédimentation impliquées (condition marine ou eau douce)."
+            "Les processus géologiques impliqués dans la formation du bassin de la molasse remontent aux ères oligocène et miocène.",
+            "<b>Quatre groupes principaux</b> peuvent être identifiés selon les conditions de sédimentation impliquées (condition marine ou d'eau douce)."
           ]
         ]
-      }},
+      }
+    },
     "weatheringOfMolasse": {
       "title": "Altération de la molasse",
       "description": [
@@ -344,7 +339,7 @@
       "actions": {
         "mechanisms": "Mécanismes d'altération",
         "types": "Types de dégradation",
-        "interactive":"Visite interactive \n(NON DISPONIBLE)"
+        "interactive": "Visite interactive \n(NON DISPONIBLE)"
       }
     },
     "degradationTypes": {
@@ -352,14 +347,14 @@
       "description": [
         [
           "Les différents mécanismes d'altération n'ont pas toujours une corrélation univoque avec le <b>motif de dégradation observé</b>.",
-          "Ceux-ci sont fortement liés au micro-climat auquel la pierre est soumise et en conséquence à leur position dans le bâtiment."
+          "Ceux-ci sont fortement liés au microclimat auquel la pierre est soumise et en conséquence à leur position dans le bâtiment."
         ],
         [
           "La coprésence au même endroit de différents motifs de dégradation peut rendre leur identification difficile.",
           "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés selon ces quatre classes."
         ]
       ],
-      "testYourKnowledge": "Testez vos connaissances!",
+      "testYourKnowledge": "Testez vos connaissances !",
       "blackCrust": {
         "title": "Croûte noire",
         "description": [
@@ -370,21 +365,21 @@
       "scaling": {
         "title": "Écaillage",
         "description": [
-          "Détachement de la pierre sous forme d'écaille ou d'un empilement d'écailles, ne suivant aucune structure de la pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une écaille est généralement d'échelle millimétrique à centimétrique.",
+          "Détachement de la pierre sous forme d'écaille ou d'empilement d'écailles, ne suivant aucune structure de pierre et se détachant comme des écailles de poisson ou parallèlement à la surface de la pierre. L'épaisseur d'une écaille est généralement de l'ordre du millimètre au centimètre.",
           "Il peut être observé dans les zones exposées à la fois à la pluie et au soleil. Il représente le motif de dégradation le plus difficile à évaluer, comprendre et restaurer."
         ]
       },
       "sanding": {
         "title": "Sablage",
         "description": [
-          "Dans certaines zones de la Cathédrale, le matériau subit des phénomènes de décohésion du grain de la pierre.",
+          "Dans certaines zones de la cathédrale, le matériau subit des phénomènes de décohésion des grains de la pierre.",
           "La pierre semble moins compacte et perd les couches de surface externes"
         ]
       },
       "biodeterioration": {
         "title": "Biodétérioration",
         "description": [
-          "Dans les zones les plus touchées par la pluie ou où l'eau percole, les micro-organismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer.",
+          "Dans les zones les plus touchées par la pluie ou où l'eau s'infiltre, les micro-organismes tels que les champignons et les mousses trouvent leur environnement humide naturel pour proliférer.",
           "Les dommages qui en résultent ne sont pas extrêmement dangereux pour la préservation de la pierre mais peuvent créer des inconvénients esthétiques désagréables."
         ]
       }
@@ -412,11 +407,11 @@
           "description": [
             [
               "Le gel de l'eau dans les matériaux poreux peut causer des dommages par divers mécanismes.",
-              "Le premier et le plus dramatique est appelé \"piégeage de l'eau\". Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
+              "Le premier et le plus dramatique est appelé « piégeage de l'eau ». Il fait référence à une situation similaire à celle d'une bouteille en verre remplie d'eau et placée dans une glacière."
             ],
             [
               "En d'autres termes, le gel se produit de tous les côtés, le liquide est piégé, et l'augmentation du volume molaire de l'eau liquide à la glace provoque la rupture de la bouteille.",
-              "De telles situations sont rares sur les monuments, à l'exception possible d'éléments décoratifs fins préalablement saturés d'eau, comme les pinacles et les fontaines.",
+              "De telles situations sont rares sur les monuments, à l'exception possible d'éléments décoratifs fins préalablement saturés d'eau, comme les fleurons et les fontaines.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
@@ -425,12 +420,12 @@
           "title": "Pression hydraulique",
           "description": [
             [
-              "Une autre situation également liée au changement de volume molaire est appelée \"pression hydraulique\".",
-              "Elle se produit lorsque la glace croissante pousse l'eau liquide encore présente à travers le réseau poreux. La résistance à l'écoulement conduit à une pression qui dépend de la taille des pores et de la distance sur laquelle l'eau est poussée."
+              "Une autre situation également liée au changement de volume molaire est appelée « pression hydraulique ».",
+              "Elle se produit lorsque la glace en croissance pousse l'eau liquide encore présente à travers le réseau poreux. La résistance à l'écoulement conduit à une pression qui dépend de la taille des pores et de la distance sur laquelle l'eau est poussée."
             ],
             [
               "Pour la molasse, la taille des pores est grande, ce qui réduit cette pression.",
-              "Cependant, si ces mêmes pierres sont saturées d'eau, alors la longueur équivalente des pores saturés peut être très grande, ce qui peut conduire à des pressions hydrauliques élevées si la vitesse de refroidissement est assez rapide.",
+              "Cependant, si ces mêmes pierres sont saturées d'eau, alors la longueur équivalente des pores saturés peut être très grande, ce qui peut conduire à des pressions hydrauliques élevées si le taux de refroidissement est suffisamment rapide.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
@@ -447,16 +442,16 @@
           "description": [
             [
               "Les matériaux poreux grossiers, tels que la molasse, peuvent être endommagés pendant le gel si un gradient de température est maintenu.",
-              "L'eau peut alors se déplacer d'une région non gelée pour alimenter la croissance de glace piégée dans les pores d'une région gelée. Cela est analogue au soulèvement par le gel mais peut également causer des dommages dans les pierres de construction sédimentaires et dans des contextes géologiques."
+              "L'eau peut alors se déplacer d'une région non gelée pour alimenter la croissance de glace piégée dans les pores d'une région gelée. Cela est analogue au soulèvement dû au gel mais peut également causer des dommages dans les pierres de construction sédimentaires et dans des contextes géologiques."
             ],
             [
-              "Des situations connexes peuvent conduire à la formation de lentilles de glace entre un substrat humide (noyaux de pierre) et une surface soumise à des variations de température (façade). La croissance de telles lentilles peut accélérer le détachement d'écailles préexistantes sans que les températures n'aient à être très basses.",
+              "Des situations connexes peuvent conduire à la formation de lentilles de glace entre un substrat humide (noyaux de pierre) et une surface soumise à des variations de température (façade). La croissance de telles lentilles peut accélérer le détachement d'écailles préexistantes sans que les températures doivent être très basses.",
               "Regardez la vidéo pour en savoir plus."
             ]
           ]
         },
         "misc": {
-          "qrCodePrompt": "Scannez le code QR pour regarder la vidéo!"
+          "qrCodePrompt": "Scannez le code QR pour regarder la vidéo !"
         }
       }
     },
@@ -465,15 +460,15 @@
       "crystallizationPressure": {
         "title": "Pression de cristallisation",
         "description": [
-          "La pollution atmosphérique, en particulier les pluies acides, a été un problème sérieux pour la durabilité des bâtiments historiques dans le passé.",
-          "Dans le cas du grès de molasse, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
+          "La pollution atmosphérique, en particulier les pluies acides, a été un problème grave pour la durabilité des bâtiments historiques dans le passé.",
+          "Dans le cas du grès molassique, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
         ]
       },
       "gypsum": {
         "title": "Formation de gypse",
         "description": [
-          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation des sels à la surface des bâtiments.",
-          "Cela a conduit à la formation de ce qu'on appelle les \"croûtes noires\"."
+          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences formées par la cristallisation de sels à la surface des bâtiments.",
+          "Cela a conduit à la formation de ce qu'on appelle les « croûtes noires »."
         ]
       }
     },
@@ -482,9 +477,9 @@
       "acidRain": {
         "title": "Pluies acides",
         "description": [
-          "La pollution atmosphérique, en particulier les pluies acides, a été un problème sérieux pour la durabilité des bâtiments historiques dans le passé.",
+          "La pollution atmosphérique, en particulier les pluies acides, a été un problème grave pour la durabilité des bâtiments historiques dans le passé.",
           "Les pierres contenant de la calcite ont été attaquées en raison de la dissolution de ces minéraux au contact des solutions acides.",
-          "Dans le cas du grès de molasse, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
+          "Dans le cas du grès molassique, le composant liant (fait de calcite) aurait pu être affecté, augmentant le détachement des grains dans la microstructure de la pierre."
         ],
         "legendItems": {
           "swellingClays": "Argiles gonflantes",
@@ -495,8 +490,8 @@
       "microDust": {
         "title": "Microparticules et poussière",
         "description": [
-          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences qui se forment en raison de la cristallisation des sels à la surface des bâtiments.",
-          "Cela a conduit à la formation de ce qu'on appelle les \"croûtes noires\"."
+          "Un autre problème lié à la pollution de l'air, dont l'effet a diminué au cours des 30 dernières années, est la présence de microparticules de poussière provenant des processus de combustion qui se déposent sur les pierres et/ou sont englobées dans les efflorescences formées par la cristallisation de sels à la surface des bâtiments.",
+          "Cela a conduit à la formation de ce qu'on appelle les « croûtes noires »."
         ]
       }
     },
@@ -504,15 +499,15 @@
       "title": "Argiles gonflantes",
       "description": [
         [
-          "La pierre utilisée dans la Cathédrale de Lausanne au Moyen Âge est le grès de molasse. Sa microstructure consiste en différents matériaux siliceux liés ensemble par un liant calcite-argile.",
-          "La présence d'argile gonflante détermine la formation de contraintes dans le matériau pendant le mouillage et le séchage dus à la pluie. Cette contrainte, dans le cas de fissures préexistantes, peut les propager et provoquer un écaillage."
+          "La pierre utilisée dans la cathédrale de Lausanne au Moyen Âge est le grès molassique. Sa microstructure est constituée de différents matériaux siliceux liés ensemble par un liant calcite-argile.",
+          "La présence d'argile gonflante détermine la formation de contraintes dans le matériau lors du mouillage et du séchage dus à la pluie. Cette contrainte, en cas de fissures préexistantes, peut les propager et provoquer un écaillage."
         ],
         [
-          "Les argiles gonflantes, comme la smectite, sont un type particulier d'argile qui peut absorber l'eau et se dilater. Elles font partie de la famille des phyllosilicates (ou \"silicates en feuillets\"), un groupe de minéraux qui ont une structure en couches unique.",
+          "Les argiles gonflantes, comme la smectite, sont un type particulier d'argile qui peut absorber l'eau et se dilater. Elles font partie de la famille des phyllosilicates (ou « silicates en feuilles »), un groupe de minéraux qui ont une structure en couches unique.",
           "Imaginez-les comme de minuscules feuilles plates empilées les unes sur les autres comme un jeu de cartes."
         ],
         [
-          "Dans le cas des argiles gonflantes, en raison de certaines particularités des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuillets, ce qui fait que toute la pile gonfle ou se dilate.",
+          "Dans le cas des argiles gonflantes, en raison d'une configuration particulière des couches, au contact de l'eau, elles ont la capacité d'attirer les molécules d'eau entre leurs feuilles, provoquant le gonflement de toute la pile.",
           "La conséquence est le gonflement de toute la pierre."
         ]
       ],
@@ -526,44 +521,44 @@
         "mudCracking": "Fissuration de boue",
         "dry": "Sec",
         "wet": "Humide",
-        "swelling": "Gonflement 1.0 mm/m"
+        "swelling": "Gonflement 1,0 mm/m"
       }
     },
     "typesOfFeatures": {
       "title": "Types de dispositifs d'évacuation des eaux pluviales",
       "description": [
-        "Il existe sept types de dispositifs de gestion des eaux pluviales qui sont conçus pour éloigner l'eau des murs.",
+        "Il existe sept types de dispositifs de gestion des eaux pluviales conçus pour éloigner l'eau des murs.",
         "Cliquez sur le dispositif pour en savoir plus"
       ],
       "back": "Retour",
       "cornices": {
         "title": "Corniches",
         "description": [
-          "Ce sont des éléments à simple pente, horizontaux ou inclinés, situés au niveau des avant-toits."
+          "Ce sont des éléments à simple pente, horizontaux ou inclinés, situés aux avant-toits."
         ]
       },
       "copings": {
         "title": "Chaperons",
         "description": [
-          "Ce sont des éléments à double pente, horizontaux ou inclinés, que l'on trouve au sommet des arcs-boutants, des contreforts, des arcs ou des pignons."
+          "Ce sont des éléments à double pente, horizontaux ou inclinés, situés au sommet des arcs-boutants, contreforts, arcs ou pignons."
         ]
       },
       "chamferedDripEdges": {
-        "title": "Larmiers chanfreinés",
+        "title": "Bords d'égouttement chanfreinés",
         "description": [
-          "Ce sont des cordons (indiquant les étages intérieurs) que l'on trouve sur les élévations ou dans les archivoltes des baies."
+          "Ce sont des bandeaux (indiquant les planchers internes) situés sur les élévations ou dans les archivoltes des baies."
         ]
       },
       "slopedRetreats": {
         "title": "Retraits inclinés",
         "description": [
-          "Ceux-ci sont situés à chaque ressaut d'un contrefort, d'un culée ou d'un massif. Ces éléments montrent constamment un degré élevé de dysfonctionnement en raison de l'exposition et de l'érosion."
+          "Ceux-ci sont situés à chaque retrait d'un contrefort, d'un butée ou d'un massif. Ces éléments montrent systématiquement un degré élevé de dysfonctionnement en raison de l'exposition et de l'érosion."
         ]
       },
       "rotatingDripEdges": {
-        "title": "Larmiers rotatifs",
+        "title": "Bords d'égouttement rotatifs",
         "description": [
-          "Ceux-ci sont situés sur les ouvertures polylobées (trilobées ou quadrilobées) et la rosace."
+          "Ceux-ci sont situés sur les ouvertures polylobées (trèfle ou quatrefeuille), et la rosace."
         ]
       },
       "slopedSupports": {
@@ -573,55 +568,55 @@
         ]
       },
       "dripGlazes": {
-        "title": "Glacis goutte-à-goutte",
+        "title": "Glacis d'égouttement",
         "description": [
-          "Ceux-ci se trouvent sur certaines parties appentis de la cathédrale."
+          "Ceux-ci se trouvent sur certaines parties en appentis de la cathédrale."
         ]
       }
     },
     "failureSituations": {
       "title": "Scénarios de défaillance",
       "description": [
-        "L'érosion des larmiers et les profils mal conçus réduisent considérablement leur efficacité à rediriger l'eau. Sans coupes-gouttes aiguës, l'eau n'est pas expulsée proprement et s'écoule plutôt le long de la surface, causant le mouillage et la détérioration de la maçonnerie sous-jacente. Dans certains cas, l'eau suit un chemin tangentiel - connu sous le nom d'angle d'expulsion - qui conduit à un ruissellement indésirable en dessous.",
-        "Les profils de larmiers rotatifs ou inversés sans modifications appropriées peuvent piéger l'eau dans leurs courbes inférieures, contribuant davantage à l'accumulation et aux dommages liés à l'humidité."
+        "L'érosion des larmiers et les profils mal conçus réduisent considérablement leur efficacité à rediriger l'eau. Sans coupes d'égouttement nettes, l'eau n'est pas expulsée proprement et s'écoule plutôt le long de la surface, provoquant l'humidification et la détérioration de la maçonnerie sous-jacente. Dans certains cas, l'eau suit un chemin tangent - appelé angle d'expulsion - qui conduit à un ruissellement indésirable en dessous.",
+        "Les profils de larmiers rotatifs ou inversés sans modifications appropriées peuvent piéger l'eau dans leurs courbes inférieures, contribuant davantage à l'accumulation d'eau et aux dommages liés à l'humidité."
       ],
       "contemporarySolutions": "Solutions contemporaines",
       "ineffectiveDripstones": {
         "title": "Larmiers inefficaces en raison d'une érosion sévère",
         "description": [
-          "L'érosion inhibe la capacité du larmier à évacuer l'eau, ce qui fait que l'eau est interceptée et non correctement redirigée."
+          "L'érosion inhibe la capacité du larmier à évacuer l'eau, provoquant l'interception de l'eau et sa mauvaise redirection."
         ]
       },
       "dripstonesBack": {
         "title": "Larmiers qui dirigent l'eau vers le bâtiment",
         "description": [
-          "L'eau qui coule commence sa chute à un 'angle d'expulsion' qui est tangent au profil, ce qui conduit l'eau à mouiller les surfaces en dessous."
+          "L'eau qui coule commence sa chute à un « angle d'expulsion » qui est tangent au profil, conduisant à l'humidification des surfaces en dessous."
         ]
       },
       "withoutDripcuts": {
-        "title": "Larmiers sans coupes-gouttes",
+        "title": "Larmiers sans coupes d'égouttement",
         "description": [
-          "Sans coupes-gouttes, l'eau continue de couler le long de la surface, causant un mouillage et des dommages supplémentaires aux parties inférieures du bâtiment."
+          "Sans coupes d'égouttement, l'eau continue de s'écouler le long de la surface, provoquant une humidification et des dommages supplémentaires aux parties inférieures du bâtiment."
         ]
       },
       "rotatingRetain": {
         "title": "Larmiers rotatifs qui retiennent l'eau à l'envers",
         "description": [
-          "En raison de son profil et de l'absence d'une coupe-goutte aiguë, l'eau s'accumule dans la partie inférieure du tore comme si elle était à l'envers."
+          "En raison de son profil et de l'absence d'une coupe d'égouttement nette, l'eau s'accumule dans la partie inférieure du toroïde comme si elle était à l'envers."
         ]
       },
       "profileAdapt": {
         "title": "Larmiers sans adaptation de profil",
         "description": [
-          "Ce sont les larmiers dont le profil tourne ou s'inverse sans l'adaptation nécessaire pour assurer une bonne évacuation de l'eau."
+          "Ce sont les larmiers dont le profil tourne ou s'inverse sans l'adaptation nécessaire pour assurer une évacuation d'eau appropriée."
         ]
       }
     },
     "contemporarySolutions": {
       "title": "Solutions contemporaines",
       "description": [
-        "Stéréotomie (taille de pierre): Cela implique de retailler les éléments de pierre existants, comme accentuer le surplomb d'un tore ou couper des rainures dans un chanfrein pour mieux diriger l'eau.",
-        "Ferblanterie (travail du métal): Cela implique l'insertion d'éléments métalliques comme des coupe-vent ou des guides dans les joints de lit ou sous les chaperons pour s'assurer que l'eau est canalisée loin du bâtiment. Les solutions de ferblanterie sont souvent préférées lorsque la stéréotomie est insuffisante ou trop coûteuse."
+        "Stéréotomie (taille de pierre) : Cela implique la retaille d'éléments de pierre existants, comme l'accentuation du surplomb d'un tore ou la taille de rainures dans un chanfrein pour mieux diriger l'eau.",
+        "Ferblanterie (travail du métal) : Cela implique l'insertion d'éléments métalliques comme des bandes d'étanchéité ou des guides dans les joints de lit ou sous les chaperons pour s'assurer que l'eau est canalisée loin du bâtiment. Les solutions de ferblanterie sont souvent préférées lorsque la stéréotomie est insuffisante ou trop coûteuse."
       ],
       "Examples": "Exemples sur la cathédrale",
       "Stereotomy": {
@@ -634,23 +629,23 @@
     "exampleOne": {
       "title": "Interventions sur les arcs-boutants",
       "description": [
-        "Les interventions sur les arcs-boutants combinent des techniques de stéréotomie traditionnelles avec des solutions de travail du métal contemporaines pour améliorer la gestion de l'eau et protéger la maçonnerie. Celles-ci incluent l'installation de micro-gouttières métalliques et de coupes-gouttes pour améliorer l'efficacité des dispositifs de gestion des eaux pluviales existants."
+        "Les interventions sur les arcs-boutants combinent des techniques de stéréotomie traditionnelles avec des solutions de travail du métal contemporaines pour améliorer la gestion de l'eau et protéger la maçonnerie. Celles-ci incluent l'installation de micro-gouttières métalliques et de coupes d'égouttement pour améliorer l'efficacité des dispositifs de gestion des eaux pluviales existants."
       ],
       "Examples": "Rosace"
     },
     "exampleTwo": {
       "title": "Interventions sur la rosace",
       "description": [
-        "La rosace présente un profil de pierre toroïdale existant qui joue un rôle clé dans la gestion de l'eau. Cependant, pour améliorer ses performances et atténuer la détérioration liée à l'humidité, des interventions contemporaines ont été introduites.",
-        "Celles-ci incluent l'installation de coupes-gouttes métalliques discrètes le long des bords semi-circulaires supérieurs et inférieurs de la fenêtre pour assurer une diversion efficace de l'eau. De plus, des micro-gouttières ont été sculptées au bas et sur les côtés du cadre de la fenêtre pour guider le ruissellement loin des zones sensibles de la maçonnerie."
+        "La rosace présente un profil de pierre toroïdal existant qui joue un rôle clé dans la gestion de l'eau. Cependant, pour améliorer ses performances et atténuer la détérioration liée à l'humidité, des interventions contemporaines ont été introduites.",
+        "Celles-ci incluent l'installation de coupes d'égouttement métalliques discrètes le long des bords semi-circulaires supérieurs et inférieurs de la fenêtre pour assurer une diversion efficace de l'eau. De plus, des micro-gouttières ont été taillées au bas et sur les côtés du cadre de la fenêtre pour guider le ruissellement loin des zones sensibles de la maçonnerie."
       ],
       "Examples": "Arc-boutant"
     },
     "thirteenCE": {
       "title": "XIIIe siècle",
       "description": [
-        "Les structures initiales, y compris les toits et les avant-toits sur les tours nord et sud du transept, servaient de principaux éléments de protection. Certains éléments de pierre, tels que les larmiers ou les cordons dans les archivoltes des hautes baies de la nef et leurs cordons, pourraient remonter au XIIIe siècle.",
-        "Il est considéré comme probable que ces éléments ont été retravaillés ou retaillés plusieurs fois au cours des siècles."
+        "Les structures initiales, y compris les toits et les avant-toits sur les tours nord et sud du transept, servaient d'éléments de protection majeurs. Certains éléments de pierre, tels que les larmiers ou les cordons dans les archivoltes des hautes baies de la nef et leurs cordons, pourraient remonter au XIIIe siècle.",
+        "Il est considéré comme probable que ces éléments ont été retravaillés ou retaillés plusieurs fois au fil des siècles."
       ],
       "Next": "Suivant"
     },
@@ -658,14 +653,14 @@
       "title": "XVIIIe siècle",
       "description": [
         "La pierre de molasse locale, étant un grès tendre avec une matrice carbonatée et des argiles gonflantes, était le principal matériau de construction, et sa vulnérabilité aux dommages causés par l'eau était un problème connu dès le début.",
-        "Le remplacement des parties altérées se faisait toujours par analogie: les nouvelles moulures goutte-à-goutte étaient retaillées pour correspondre aux anciennes ou au moins pour leur ressembler."
+        "Le remplacement des parties altérées a toujours été effectué par analogie : les nouveaux larmiers étaient retaillés pour correspondre aux anciens ou du moins pour leur ressembler."
       ],
       "Next": "Suivant"
     },
     "nineteenCE": {
       "title": "XIXe siècle",
       "description": [
-        "La seconde moitié du XIXe siècle, en particulier les restaurations menées par Viollet-le-Duc (à partir de 1873) et son successeur Assinare (à partir de 1877), a marqué une période importante pour la gestion des eaux pluviales. De grandes corniches-gouttières et des drains ont été installés sur les avant-toits des nefs et des bas-côtés, reliés à des tuyaux amenant l'eau dans les rues.",
+        "La seconde moitié du XIXe siècle, en particulier les restaurations menées par Viollet-le-Duc (à partir de 1873) et son successeur Assinare (à partir de 1877), a marqué une période significative pour la gestion des eaux pluviales. De grandes gouttières-corniches et des drains ont été installés sur les avant-toits des nefs et des bas-côtés, reliés à des tuyaux amenant l'eau dans les rues.",
         "Pour améliorer la résistance aux intempéries, la molasse a été remplacée par du calcaire plus durable pour les éléments critiques, tels que les larmiers à bec sur les retraits inclinés des contreforts."
       ],
       "Next": "Suivant"
@@ -673,16 +668,16 @@
     "twentyCE": {
       "title": "XXe siècle",
       "description": [
-        "La stratégie de gestion des eaux pluviales du XXe siècle était largement une continuation des méthodes pionnières de Viollet-le-Duc et Assinare, se concentrant sur l'éloignement de l'eau de la façade en utilisant des éléments de pierre architecturaux comme les larmiers et les corniches.",
-        "Malgré ces efforts, les sources indiquent que même ces larmiers et retraits restaurés ne fonctionnaient souvent pas parfaitement, entraînant des problèmes continus comme l'accumulation d'eau sur les bords et les débordements latéraux qui endommageaient la maçonnerie en dessous. Introduction de la ferblanterie pendant cette période par l'ajout de gouttières en tôle métallique à certains toits."
+        "La stratégie de gestion des eaux pluviales du XXe siècle était en grande partie une continuation des méthodes pionnières de Viollet-le-Duc et Assinare, se concentrant sur l'éloignement de l'eau de la façade en utilisant des éléments architecturaux en pierre comme les larmiers et les corniches.",
+        "Malgré ces efforts, les sources indiquent que même ces larmiers et retraits restaurés ne fonctionnaient souvent pas parfaitement, conduisant à des problèmes continus comme l'accumulation d'eau sur les bords et des débordements latéraux qui endommageaient la maçonnerie en dessous. Introduction de la ferblanterie pendant cette période grâce à l'ajout de gouttières en tôle sur certains toits."
       ],
       "Next": "Suivant"
     },
     "twentyoneCE": {
       "title": "XXIe siècle",
       "description": [
-        "Des solutions mixtes de matériaux, combinant pierre et métal, sont explorées ou mises en œuvre pour des éléments comme les coupes-gouttes ou les cordons pour fournir des bords plus tranchants et prévenir l'obstruction biologique.",
-        "Ces solutions mixtes ne sont pas considérées comme entièrement nouvelles, mais comme une continuation d'une évolution historique dans les matériaux pour la gestion de l'eau."
+        "Des solutions à matériaux mixtes, combinant la pierre avec le métal, sont explorées ou mises en œuvre pour des éléments comme les coupes d'égouttement ou les cordons pour fournir des bords plus nets et empêcher l'obstruction biologique.",
+        "Ces solutions mixtes sont considérées non pas comme entièrement nouvelles, mais comme une continuation d'une évolution historique dans les matériaux pour la gestion de l'eau."
       ],
       "Back": "Retour"
     }
@@ -690,15 +685,15 @@
   "games": {
     "oldestStone": {
       "start": {
-        "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade?",
+        "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
         "body": "Appuyez sur l'une des pierres mises en évidence"
       },
       "incorrect": {
-        "title": "Essayez encore!",
+        "title": "Réessayez !",
         "body": "Appuyez sur l'une des pierres mises en évidence"
       },
       "finish": {
-        "title": "Correct!",
+        "title": "Correct !",
         "body": [
           "Le type de pierre le plus ancien de la cathédrale est la Molasse grise de Lausanne qui a été placée au XIIe siècle de notre ère.",
           "Apprenons-en plus à ce sujet..."
@@ -707,49 +702,49 @@
     },
     "degradationTypes": {
       "start": {
-        "title": "Testez vos connaissances!",
+        "title": "Testez vos connaissances !",
         "body": [
-          "Il y a des zones de la Cathédrale plus affectées par un certain type de dégradation, mais aussi de petites différences dans la géométrie du bâtiment peuvent faire une différence.",
-          "Dans le cercle rouge, nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus!"
+          "Il y a des zones de la cathédrale plus affectées par un certain type de dégradation, mais aussi de petites différences dans la géométrie du bâtiment peuvent faire la différence.",
+          "Dans le cercle rouge, nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus !"
         ]
       },
       "main": {
-        "title": "Combien de types de dégradation pouvez-vous trouver dans la zone?",
+        "title": "Combien de types de dégradation pouvez-vous trouver dans la zone ?",
         "hint": "Appuyez sur la bonne réponse"
       },
       "finish": {
-        "title": "Correct!",
+        "title": "Correct !",
         "body": [
           "Découvrons-les ensemble..."
         ]
       },
       "incorrect": {
-        "title": "Essayez encore!"
+        "title": "Réessayez !"
       }
     },
     "quarries": {
       "start": {
         "title": "Les points rouges vous montrent les carrières.",
-        "body": "Appuyez sur l'une d'elles pour en savoir plus"
+        "body": "Appuyez sur l'une pour en savoir plus"
       },
       "quarry1": {
         "title": "Molasse grise de Lausanne",
         "body": [
-          "Ce type de roche varie en couleur du gris au bleu, avec quelques variations jaunes. Il a une taille de grain moyenne à grossière et se compose de quartz, de feldspaths potassiques, de plagioclases, de calcite et parfois de dolomite, de pyrite et de goethite.",
-          "C'est le faciès principal utilisé sur la Cathédrale de Lausanne, y compris la tour sud du transept."
+          "Ce type de roche varie en couleur du gris au bleu, avec quelques variations jaunes. Il a une granulométrie moyenne à grossière et se compose de quartz, de feldspaths potassiques, de plagioclases, de calcite et parfois de dolomite, de pyrite et de goethite.",
+          "C'est le principal faciès utilisé sur la cathédrale de Lausanne, y compris la tour sud du transept."
         ]
       },
       "quarry2": {
         "title": "Molasse d'Ursy",
         "body": [
-          "Ce faciès, auquel le nom de molasse d'Ursy est attribué selon les archives, est un faciès à stratifications plates alternant des niveaux à grain fin et des niveaux grossiers. Ce faciès gris-vert a une patine rose-pourpre.",
-          "Ce faciès ne se trouve que dans la partie basale du contrefort sud-est de la façade est."
+          "Ce faciès, auquel le nom de molasse d'Ursy est attribué selon les archives, est un faciès avec des stratifications plates alternant des niveaux à grain fin et des niveaux grossiers. Ce faciès gris-vert a une patine rose-pourpre.",
+          "Ce faciès se trouve uniquement dans la partie basale du contrefort sud-est de la façade est."
         ]
       },
       "quarry3": {
         "title": "Molasse de Zoug",
         "body": [
-          "Également appelée Molasse granitique, ces faciès de grès sont les vestiges de l'altération intense et de l'érosion des Alpes pendant l'orogenèse alpine - l'événement géologique qui a façonné la chaîne de montagnes alpines. Composés de sables de tailles de grains diverses, ils présentent également une large gamme de compositions minérales, y compris le quartz, les feldspaths et des quantités variables de micas, tous cimentés par de la calcite.",
+          "Également appelé Molasse granitique, ces faciès de grès sont les vestiges de l'altération intense et de l'érosion des Alpes pendant l'orogenèse alpine - l'événement géologique qui a façonné la chaîne alpine. Composés de sables de granulométries diverses, ils présentent également une large gamme de compositions minérales, y compris du quartz, des feldspaths et des quantités variables de micas, tous cimentés par de la calcite.",
           "Les structures sédimentaires sont également variées, certaines formations présentant des strates entrecroisées, tandis que d'autres sont plates ou complètement absentes."
         ]
       }
