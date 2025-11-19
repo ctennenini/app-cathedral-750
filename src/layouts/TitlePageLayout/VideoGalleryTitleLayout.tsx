@@ -35,59 +35,115 @@ export type VideoGalleryTitleLayoutProps = {
   titleStyle?: React.CSSProperties
 }
 
+// ✅ SOLUZIONE: Wrapper che forza responsive
+const ResponsiveWrapper = styled.div({
+  width: '100%',
+  maxWidth: '100vw',
+  overflowX: 'hidden',
+  boxSizing: 'border-box',
+})
+
 const CenteredContent = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'flex-start', // ✅ Cambiato da 'center' a 'flex-start'
+  justifyContent: 'flex-start',
   minHeight: '100vh',
-  padding: 'clamp(6rem, 12vh, 10rem) clamp(1rem, 4vw, 3rem) clamp(2rem, 4vh, 3rem)', // ✅ Padding top maggiore per spazio dai bottoni
+  width: '100%',
   boxSizing: 'border-box',
+  padding: '6rem 2rem 2rem',
+  
+  '@media (max-width: 768px)': {
+    padding: '5rem 1rem 2rem',
+  },
 })
 
 const Title = styled.h1<{ $dark?: boolean }>(({ $dark }) => ({
-  fontSize: 'clamp(2.5rem, 7vw, 4rem)',
+  fontSize: 'clamp(1.8rem, 6vw, 4rem)',
   fontWeight: 'bold',
   textAlign: 'center',
   color: $dark ? 'var(--black)' : 'var(--white)',
-  marginBottom: 'clamp(2rem, 5vh, 4rem)', // ✅ Spazio tra titolo e video
+  marginBottom: '2rem',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '0 1rem',
+  boxSizing: 'border-box',
+  
+  '@media (max-width: 768px)': {
+    fontSize: 'clamp(1.5rem, 8vw, 2.5rem)',
+    marginBottom: '1.5rem',
+    padding: '0 0.5rem',
+  },
 }))
-
 
 const VideoGrid = styled.div({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(min(380px, 100%), 1fr))',
-  gap: 'clamp(2rem, 5vw, 3.5rem)',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 400px))',
+  gap: '2rem',
   width: '100%',
   maxWidth: '1400px',
   margin: '0 auto',
-  justifyItems: 'center',
+  justifyContent: 'center',
+  boxSizing: 'border-box',
+  
+  '@media (max-width: 1024px)': {
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '1.5rem',
+  },
+  
+  '@media (max-width: 768px)': {
+    gridTemplateColumns: '1fr',
+    gap: '1.5rem',
+    width: '100%',
+    maxWidth: '100%',
+  },
 })
 
 const VideoCard = styled.div({
   cursor: 'pointer',
   transition: 'transform 0.2s ease',
   width: '100%',
-  maxWidth: '450px',
+  boxSizing: 'border-box',
+  
   '&:hover': {
-    transform: 'scale(1.03)',
+    '@media (min-width: 769px)': {
+      transform: 'scale(1.03)',
+    },
+  },
+  
+  '&:active': {
+    transform: 'scale(0.98)',
   },
 })
 
 const Thumbnail = styled.img({
   width: '100%',
+  height: 'auto',
   aspectRatio: '16/9',
   objectFit: 'cover',
   borderRadius: '12px',
   boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+  display: 'block',
+  maxWidth: '100%',
+  
+  '@media (max-width: 768px)': {
+    borderRadius: '8px',
+  },
 })
 
 const VideoLabel = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
-  marginTop: '1rem',
+  marginTop: '0.75rem',
   fontWeight: 500,
-  fontSize: 'clamp(1.1rem, 2.5vw, 1.3rem)',
+  fontSize: 'clamp(1rem, 3vw, 1.3rem)',
   textAlign: 'center',
   color: $dark ? 'var(--black)' : 'var(--white)',
+  padding: '0 0.5rem',
+  wordWrap: 'break-word',
+  boxSizing: 'border-box',
+  
+  '@media (max-width: 768px)': {
+    fontSize: 'clamp(0.95rem, 4vw, 1.15rem)',
+  },
 }))
 
 const ModalOverlay = styled.div({
@@ -121,12 +177,13 @@ const CloseButton = styled.button({
   fontSize: '2rem',
   cursor: 'pointer',
   zIndex: 10,
-  width: '40px',
-  height: '40px',
+  width: '44px',
+  height: '44px',
   borderRadius: '50%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  
   '&:hover': {
     background: 'rgba(0,0,0,0.9)',
   },
@@ -159,20 +216,22 @@ export function VideoGalleryTitleLayout({
         right={<LanguageSwitcher $dark={buttonColor === 'dark'} />}
       />
       
-      <CenteredContent>
-        <Title $dark={textColor === 'dark'} style={titleStyle}>
-          {title}
-        </Title>
+      <ResponsiveWrapper>
+        <CenteredContent>
+          <Title $dark={textColor === 'dark'} style={titleStyle}>
+            {title}
+          </Title>
 
-        <VideoGrid>
-          {videos.map((video, i) => (
-            <VideoCard key={i} onClick={() => setOpenVideo(video)}>
-              <Thumbnail src={video.thumbnailSrc} alt={video.thumbnailAlt} />
-              <VideoLabel $dark={textColor === 'dark'}>{video.label}</VideoLabel>
-            </VideoCard>
-          ))}
-        </VideoGrid>
-      </CenteredContent>
+          <VideoGrid>
+            {videos.map((video, i) => (
+              <VideoCard key={i} onClick={() => setOpenVideo(video)}>
+                <Thumbnail src={video.thumbnailSrc} alt={video.thumbnailAlt} />
+                <VideoLabel $dark={textColor === 'dark'}>{video.label}</VideoLabel>
+              </VideoCard>
+            ))}
+          </VideoGrid>
+        </CenteredContent>
+      </ResponsiveWrapper>
 
       {openVideo && (
         <ModalOverlay onClick={() => setOpenVideo(null)}>
