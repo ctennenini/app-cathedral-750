@@ -63,6 +63,20 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
                   path: '/swelling-clays',
                 },
                 {
+                  label: pages.saltCrystallization.title,
+                  path: '/salt-crystallization',
+                  subItems: [
+                    {
+                      label: pages.saltCrystallization.crystallizationPressure.title,
+                      path: '/salt-crystallization/crystallization-pressure',
+                    },
+                    {
+                      label: pages.saltCrystallization.gypsum.title,
+                      path: '/salt-crystallization/gypsum',
+                    },
+                  ],
+                },
+                {
                   label: pages.atmosphericPollution.title,
                   path: '/atmospheric-pollution',
                   subItems: [

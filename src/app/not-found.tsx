@@ -67,13 +67,15 @@ export default function Custom404() {
   return (
     <Container bgImg={bgImg} bgImgAlt="interior of the cathedral">
       <Main>
-        <Title>Unknown Route / Unbekannte Route / Route inconnue / Rotta sconosciuta</Title>
+        <Title lang="fr">Cette page n’est pas disponible</Title>
+        <Title lang="de">Diese Seite ist nicht verfügbar</Title>
+        <Title lang="en">This page is not available</Title>
         <Separator />
         <Actions>
-          <IconButton onClick={() => window.history.back()} title="Back">
+          <IconButton onClick={() => window.history.back()} title="Retour / Zurück / Back" aria-label="Retour / Zurück / Back">
             <BackArrowIcon width="3em" height="3em" />
           </IconButton>
-          <IconLink href="/" title="Home" scroll={false}>
+          <IconLink href="/" title="Accueil / Startseite / Home" aria-label="Accueil / Startseite / Home" scroll={false}>
             <HomeIcon width="3em" height="3em" />
           </IconLink>
         </Actions>

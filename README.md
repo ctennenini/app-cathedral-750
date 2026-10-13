@@ -235,3 +235,11 @@ A publicly available icon-generator like https://pwa-icon-generator.vercel.app/ 
 - [✓] setup PWA caching
 - [ ] make centered quiz layout and change Oldest Stone Game to use it
 - [ ] make dynamic titles
+
+### Missing pages
+
+The buttons for these pages have been removed so visitors don't hit a dead end. Add the button back when the page exists.
+
+- [ ] **Biological Attack**: fourth weathering mechanism. Button goes on `src/app/[locale]/weathering-mechanisms/page.tsx`; the label already exists in the translations (`pages.weatheringMechanisms.actions.biologicalAttack`)
+- [ ] **Third Water Management topic**: was shown as a "..." placeholder on `src/app/[locale]/water-managment/page.tsx`
+- [ ] **Video test quiz** (`/video-test`): button goes on `src/app/[locale]/degradation-types/page.tsx`; the label already exists in the translations (`pages.videoTest.subtitle`)

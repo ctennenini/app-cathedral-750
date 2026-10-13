@@ -20,16 +20,16 @@ export default makePage((dictionary) => {
             label: pages.weatheringMechanisms.actions.freezeThaw,
           },
           {
+            target: '/swelling-clays',
+            label: pages.weatheringMechanisms.actions.swellingClays,
+          },
+          {
             target: '/salt-crystallization',
             label: pages.weatheringMechanisms.actions.saltCrystallization,
           },
           {
             target: '/atmospheric-pollution',
             label: pages.weatheringMechanisms.actions.atmosphericPollution,
-          },
-                    {
-            target: '#',
-            label: "...",
           },
         ],
       }}
