@@ -99,6 +99,14 @@ img {
   }
 }
 
+/* long words (common in German and French) break with a hyphen instead of running out of their box */
+h1,
+h2,
+h3 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
 a {
   color: inherit;
   text-decoration: none;

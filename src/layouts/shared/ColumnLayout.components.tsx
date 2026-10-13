@@ -137,7 +137,7 @@ export const Text = styled(P)({
   marginTop: '1.25em',
 })
 
-export const Main = styled.main({
+const MainWrapper = styled.div({
   flex: 'auto',
   minHeight: 0,
   position: 'relative',
@@ -153,7 +153,88 @@ const StyledMain = styled.main<{ $hasMore: boolean }>(({ $hasMore }) => ({
 
   display: 'flex',
   flexDirection: 'column',
+
+  // the browser's own scrollbar would squeeze the text; ScrollRail below shows the position instead
+  scrollbarWidth: 'none',
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
+
+  // fade out the last lines while there is more text below, so visitors know they can scroll
+  maskImage: $hasMore ? 'linear-gradient(to bottom, black calc(100% - 120em), transparent)' : 'none',
+}))
+
+// a slim track in the column's margin showing how far through the text the visitor is
+const ScrollRail = styled.div({
+  position: 'absolute',
+  top: '8em',
+  bottom: '8em',
+  right: '12em',
+  width: '5em',
+  borderRadius: '3em',
+  backgroundColor: 'rgba(0, 0, 0, 0.06)',
+  pointerEvents: 'none',
 })
+
+const ScrollThumb = styled.div({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  borderRadius: '3em',
+  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  transition: 'top 0.1s linear',
+})
+
+type ScrollState = { hasMore: boolean; thumb: { top: number; height: number } | null }
+
+export function Main(props: ComponentProps<'main'>) {
+  const ref = useRef<HTMLElement>(null)
+  const [{ hasMore, thumb }, setScrollState] = useState<ScrollState>({ hasMore: false, thumb: null })
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) {
+      return
+    }
+
+    const update = () => {
+      const { scrollTop, clientHeight, scrollHeight } = element
+      const scrollable = scrollHeight > clientHeight + 4
+      setScrollState({
+        hasMore: scrollTop + clientHeight < scrollHeight - 4,
+        // thumb position and size as fractions of the track
+        thumb: scrollable
+          ? {
+              height: clientHeight / scrollHeight,
+              top: (scrollTop / (scrollHeight - clientHeight)) * (1 - clientHeight / scrollHeight),
+            }
+          : null,
+      })
+    }
+    update()
+
+    const observer = new ResizeObserver(update)
+    observer.observe(element)
+    Array.from(element.children).forEach((child) => observer.observe(child))
+    element.addEventListener('scroll', update, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      element.removeEventListener('scroll', update)
+    }
+  }, [props.children])
+
+  return (
+    <MainWrapper>
+      <StyledMain ref={ref} $hasMore={hasMore} {...props} />
+      {thumb && (
+        <ScrollRail aria-hidden>
+          <ScrollThumb style={{ top: `${thumb.top * 100}%`, height: `${thumb.height * 100}%` }} />
+        </ScrollRail>
+      )}
+    </MainWrapper>
+  )
+}
 
 export const Footer = styled.footer({
   display: 'flex',

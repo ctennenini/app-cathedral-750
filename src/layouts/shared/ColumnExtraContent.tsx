@@ -117,7 +117,7 @@ export function ExtraContent(props: ExtraContentProps) {
     case 'gallery':
       return (
         <Container>
-          <Gallery>
+          <Gallery $columns={props.items.length > 5 ? Math.ceil(props.items.length / 2) : props.items.length}>
             {props.items.map(({ label, href, ...other }, index) => {
               let content = (
                 <figure>
@@ -235,9 +235,12 @@ export function ExtraContent(props: ExtraContentProps) {
  * Styled components usati
  */
 
-const Gallery = styled.ul({
-  display: 'flex',
-  gap: '48em',
+// every item gets the same width and a same-sized square picture, whatever the length of its label
+// (labels are much longer in French and German than in English); more than 5 items go on two rows
+const Gallery = styled.ul<{ $columns: number }>(({ $columns }) => ({
+  display: 'grid',
+  gridTemplateColumns: `repeat(${$columns}, minmax(0, 1fr))`,
+  gap: '40em 32em',
   listStyle: 'none',
   alignItems: 'start',
 }))
@@ -255,6 +258,8 @@ const GalleryItem = styled.li({
     fontWeight: 700,
     color: 'var(--highlight)',
     marginTop: '16em',
+    hyphens: 'auto',
+    overflowWrap: 'break-word',
     '& > span': {
       fontSize: '24em',
     },
