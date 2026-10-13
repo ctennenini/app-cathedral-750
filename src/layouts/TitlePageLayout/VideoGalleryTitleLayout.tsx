@@ -192,7 +192,6 @@ const CloseButton = styled.button({
 
 export function VideoGalleryTitleLayout({
   title,
-  subtitle,
   bgImg,
   bgImgAlt = 'background image',
   videos,

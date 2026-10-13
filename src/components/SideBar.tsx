@@ -81,7 +81,7 @@ export function SideMenuButton({ darkButton }: SideBarButtonProps) {
 }
 
 export type SideBarProps = {
-  renderContent: () => JSX.Element
+  renderContent: () => React.JSX.Element
   closeButtonLabel?: string
 }
 

@@ -3,8 +3,8 @@ import fs from 'fs'
 import path from 'path'
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-controls', '@chromatic-com/storybook'],
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: ['@storybook/addon-essentials', '@chromatic-com/storybook'],
   framework: {
     name: '@storybook/nextjs',
     options: {},
@@ -17,7 +17,7 @@ const config: StorybookConfig = {
     const bgImagesPath = path.resolve(__dirname, '../src/assets/bg-images')
     const BG_IMAGES = fs
       .readdirSync(bgImagesPath)
-      .filter((file) => /\.(png|jpg|jpeg|svg|gif)$/.test(file))
+      .filter((file) => /\.(png|jpg|jpeg|webp|svg|gif)$/.test(file))
       .join(';')
 
     return {

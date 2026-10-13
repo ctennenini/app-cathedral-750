@@ -1,56 +1,5 @@
 {
   "pages": {
-    "sample": {
-      "title": "Titel hier",
-      "subtitle": "Untertitel hier",
-      "description": [
-        "Dies ist ein Absatz."
-      ],
-      "descriptionparagraph": [
-        "Dies ist der erste Absatz.",
-        "Dies ist der zweite Absatz.",
-        "Dies ist der dritte Absatz."
-      ],
-      "descriptionpages": [
-        [
-          "Dies ist der erste Absatz, Seite 1",
-          "Dies ist der zweite Absatz, Seite 1"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 2",
-          "Dies ist der zweite Absatz, Seite 2"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 3",
-          "Dies ist der zweite Absatz, Seite 3"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 4",
-          "Dies ist der zweite Absatz, Seite 4"
-        ]
-      ],
-      "actions": {
-        "action1": "Schaltfläche 1",
-        "action2": "Schaltfläche 2",
-        "action3": "Schaltfläche 3"
-      },
-      "gallery": {
-        "galleryitem1": {
-          "title": "Bild 1"
-        },
-        "galleryitem2": {
-          "title": "Bild 2"
-        },
-        "galleryitem3": {
-          "title": "Bild 3"
-        }
-      },
-      "legendItems": {
-        "legenditem1": "Name 1",
-        "legenditem2": "Name 2",
-        "legenditem3": "Name 3"
-      }
-    },
     "start": {
       "title": [
         "Die Kathedrale",
@@ -268,7 +217,10 @@
       "actions": {
         "sandstone": "Molassesandstein",
         "weathering": "Verwitterung der Molasse",
-        "interactive": ["Interaktive Tour", "Nicht verfügbar"]
+        "interactive": [
+          "Interaktive Tour",
+          "Nicht verfügbar"
+        ]
       }
     },
     "molasseSandstone": {

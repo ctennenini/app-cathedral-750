@@ -66,7 +66,7 @@ const ExtraImage = styled((props: ImageProps) => (
 })
 
 /**
- * Extra content types (con nuovo tipo 'video' aggiunto!)
+ * Extra content types
  */
 export type ExtraContentProps =
   | {
@@ -188,7 +188,7 @@ export function ExtraContent(props: ExtraContentProps) {
     }
 
     case 'video': {
-      const { src, poster, title } = props
+      const { src, poster } = props
       return (
         <Container>
           <div
@@ -212,8 +212,6 @@ export function ExtraContent(props: ExtraContentProps) {
               }}
             >
               <source src={src} type="video/mp4" />
-              {title && <track kind="captions" label={title} />}
-              Il tuo browser non supporta il tag video.
             </video>
           </div>
         </Container>
@@ -241,10 +239,17 @@ const Gallery = styled.ul({
   display: 'flex',
   gap: '48em',
   listStyle: 'none',
-  alignItems: 'baseline',
-})
+  alignItems: 'start',
+}))
 
 const GalleryItem = styled.li({
+  img: {
+    width: '100%',
+    height: 'auto',
+    aspectRatio: '1 / 1',
+    objectFit: 'cover',
+  },
+
   figcaption: {
     textAlign: 'center',
     fontWeight: 700,

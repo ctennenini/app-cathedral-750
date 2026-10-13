@@ -32,4 +32,8 @@ export const IconButton = styled.button<{ $dark?: boolean }>(({ $dark }) => ({
   '&:focus': {
     outline: 'none',
   },
+  '&:focus-visible': {
+    outline: '4em solid var(--highlight)',
+    outlineOffset: '4em',
+  },
 }))

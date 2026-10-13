@@ -2,8 +2,17 @@
   --white: #fff;
   --black: #000;
   --dark-gray: #191919;
+  /* brand */
   --highlight: #ce3d3a;
+  --highlight-dark: #a52f2c; /* pressed / hover state of highlighted elements */
+  --success: #2e7d32; /* white text on it has 5:1 contrast */
 
+  /* text */
+  --text-secondary: #595858;
+
+  /* surfaces and lines */
+  --surface-muted: #f1f1f1;
+  --surface-muted-dark: #e1e1e1;
   --separator-light: var(--white);
   --separator-dark: #595858;
   --ui-line-color: #a5a5a2;

@@ -1,56 +1,5 @@
 {
   "pages": {
-    "sample": {
-      "title": "titre ici",
-      "subtitle": "sous-titre ici",
-      "description": [
-        "Ceci est un paragraphe."
-      ],
-      "descriptionparagraph": [
-        "Ceci est le premier paragraphe.",
-        "Ceci est le deuxième paragraphe.",
-        "Ceci est le troisième paragraphe."
-      ],
-      "descriptionpages": [
-        [
-          "Ceci est le premier paragraphe, page 1",
-          "Ceci est le deuxième paragraphe, page 1"
-        ],
-        [
-          "Ceci est le premier paragraphe, page 2",
-          "Ceci est le deuxième paragraphe, page 2"
-        ],
-        [
-          "Ceci est le premier paragraphe, page 3",
-          "Ceci est le deuxième paragraphe, page 3"
-        ],
-        [
-          "Ceci est le premier paragraphe, page 4",
-          "Ceci est le deuxième paragraphe, page 4"
-        ]
-      ],
-      "actions": {
-        "action1": "Bouton 1",
-        "action2": "Bouton 2",
-        "action3": "Bouton 3"
-      },
-      "gallery": {
-        "galleryitem1": {
-          "title": "img 1"
-        },
-        "galleryitem2": {
-          "title": "img 2"
-        },
-        "galleryitem3": {
-          "title": "img 3"
-        }
-      },
-      "legendItems": {
-        "legenditem1": "nom 1",
-        "legenditem2": "nom 2",
-        "legenditem3": "nom 3"
-      }
-    },
     "start": {
       "title": [
         "La Cathédrale",
@@ -268,7 +217,10 @@
       "actions": {
         "sandstone": "Grès molassique",
         "weathering": "Altération de la molasse",
-        "interactive": ["Visite interactive", "Non disponible"]
+        "interactive": [
+          "Visite interactive",
+          "Non disponible"
+        ]
       }
     },
     "molasseSandstone": {
