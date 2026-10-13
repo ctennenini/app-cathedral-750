@@ -201,6 +201,8 @@ export function ExtraContent(props: ExtraContentProps) {
           >
             <video
               controls
+              controlsList="nodownload"
+              disablePictureInPicture
               poster={poster}
               style={{
                 width: '100%',
@@ -310,6 +312,19 @@ const ClickArea = styled(({ target, ...props }: { target?: HREF }) => <Link href
   position: 'absolute',
   backgroundColor: 'transparent',
   cursor: 'pointer',
+  borderRadius: '8em',
+  animation: 'kiosk-hotspot 2s ease-out infinite', // defined in globals.css, shows visitors where to touch
+
+  // a bigger, invisible touch area around thin hotspots
+  '&::after': {
+    content: "''",
+    position: 'absolute',
+    inset: '-24em -12em',
+  },
+
+  '@media (prefers-reduced-motion: reduce)': {
+    animation: 'none',
+  },
   ...($circled && {
     '&&::before': {
       content: "''",

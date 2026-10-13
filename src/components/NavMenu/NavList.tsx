@@ -33,7 +33,7 @@ function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemPro
 
   const label = Array.isArray(navItem.label) ? navItem.label.join(' ') : navItem.label
 
-  const toggleExpanded: MouseEventHandler<HTMLDivElement> = (e) => {
+  const toggleExpanded: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault()
     setIsExpanded((prev) => !prev)
   }
@@ -46,7 +46,7 @@ function ListItem({ navItem, isFirst, isLast, neighborHasSubItems }: ListItemPro
     <Li $showLine={!isFirst} $isLast={isLast}>
       <ListItemHeader>
         {hasSubItems && (
-          <ToggleButton onClick={toggleExpanded}>
+          <ToggleButton onClick={toggleExpanded} aria-expanded={isExpanded}>
             <Triangle $highlight={isOnPath || isActive} />
           </ToggleButton>
         )}

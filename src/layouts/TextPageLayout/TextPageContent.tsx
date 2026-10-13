@@ -19,9 +19,6 @@ import { TextLayoutState, useTextLayoutState } from './useTextLayoutState'
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',
   backgroundColor: 'var(--highlight)',
-  width: '87em',
-  height: '87em',
-  flexShrink: 0,
   marginLeft: 'auto',
 })
 
@@ -88,8 +85,13 @@ type NextButtonProps = ComponentProps<typeof StyledNextButton> & {
 function NextButton({ href, ...otherProps }: NextButtonProps) {
   const normalisedHref = useHref(href)
   const { push } = useRouter()
+  const { dictionary } = useAppContext()
   return (
-    <StyledNextButton onClick={() => push(normalisedHref.toString(), { scroll: false })} {...otherProps}>
+    <StyledNextButton
+      aria-label={dictionary.ui.next}
+      onClick={() => push(normalisedHref.toString(), { scroll: false })}
+      {...otherProps}
+    >
       <NextArrowIcon />
     </StyledNextButton>
   )
@@ -142,6 +144,13 @@ export function TextPageContent({
             <>
               <NavMenuButton $dark />
               {withHomeButton && <HomeButton $dark />}
+              {goBack ? (
+                <IconButton $dark aria-label={dictionary.ui.back} onClick={goBack}>
+                  <BackArrowIcon />
+                </IconButton>
+              ) : (
+                backButtonTarget && <BackButton $dark href={backButtonTarget} />
+              )}
             </>
           }
           right={

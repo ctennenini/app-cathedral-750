@@ -258,6 +258,8 @@ export function VideoGalleryTitleLayout({
             ) : openVideo.videoSrc ? (
               <video
                 controls
+                controlsList="nodownload"
+                disablePictureInPicture
                 autoPlay
                 playsInline
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}

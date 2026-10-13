@@ -3,6 +3,7 @@
 import { BackArrowIcon } from './Icons'
 import { IconButton, IconButtonProps } from './IconButton'
 import { useHref } from '@/utils/utils'
+import { useAppContext } from '@/components/AppContext'
 
 import { useRouter } from 'next/navigation'
 
@@ -13,9 +14,13 @@ export type BackButtonProps = IconButtonProps & {
 export function BackButton({ $dark, href: hrefFromProps, ...props }: BackButtonProps) {
   const href = useHref(hrefFromProps)
   const { push } = useRouter()
+  const { dictionary } = useAppContext()
 
   return (
-    <IconButton onClick={() => push(href.toString(), { scroll: false })} $dark={$dark} {...props}>
+    <IconButton
+      aria-label={dictionary.ui.back}
+      onClick={() => push(href.toString(), { scroll: false })} $dark={$dark}       {...props}
+    >
       <BackArrowIcon />
     </IconButton>
   )
