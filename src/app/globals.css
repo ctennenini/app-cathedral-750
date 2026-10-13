@@ -54,6 +54,29 @@ img {
   }
 }
 
+/* short shake for a wrong answer in the games */
+@keyframes kiosk-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-12em);
+  }
+  40%,
+  80% {
+    transform: translateX(12em);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
 /* gentle pulse on the start screen's language buttons, to invite a touch */
 @keyframes kiosk-breathe {
   0%,

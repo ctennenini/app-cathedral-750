@@ -61,10 +61,11 @@ export const NextButton = styled(({ target, ...otherProps }: ButtonProps) => (
   flexGrow: 0,
 })
 
-export const Left = styled(BaseLeft)({
-  backgroundColor: 'var(--highlight)',
+export const Left = styled(BaseLeft)<{ $success?: boolean }>(({ $success }) => ({
+  backgroundColor: $success ? 'var(--success)' : 'var(--highlight)',
+  transition: 'background-color 0.4s',
   color: 'var(--white)',
-})
+}))
 
 export const Title = styled(BaseTitle)({
   '& *': {

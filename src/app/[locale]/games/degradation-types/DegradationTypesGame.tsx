@@ -23,7 +23,7 @@ import { Footer } from '@/layouts/shared/ColumnLayout.components'
 
 const BigTitle = styled(Title)({
   '& *': {
-    fontSize: '80em',
+    fontSize: '68em', // fits the longest word ("CONNAISSANCES") inside the panel
     color: 'var(--white)',
   },
 })
@@ -36,10 +36,11 @@ const SmallTitle = styled(Title)({
 })
 
 const Hint = styled(P)({
-  fontSize: '1.6em',
-  lineHeight: '2em',
+  fontSize: '30em',
+  lineHeight: '1.4',
+  marginBottom: '24em',
   fontStyle: 'italic',
-  marginTop: 'auto',
+  marginTop: '32em',
 })
 
 const Buttons = styled.div({
@@ -57,29 +58,78 @@ const Button = styled.button({
   width: '130em',
   height: '130em',
   borderRadius: '100em',
+  transition: 'transform 0.1s, opacity 0.2s',
   span: {
     fontSize: '50em',
   },
+
+  '&:active': {
+    transform: 'scale(0.94)',
+  },
+
+  // an answer that was already tried and is wrong
+  '&:disabled': {
+    opacity: 0.35,
+    cursor: 'default',
+  },
 })
 
+const StartButton = styled.button({
+  alignSelf: 'flex-start',
+  minHeight: '100em',
+  padding: '0 64em',
+  border: 'none',
+  borderRadius: '12em',
+  backgroundColor: 'var(--white)',
+  color: 'var(--black)',
+  fontFamily: 'var(--font-buttons)',
+  cursor: 'pointer',
+  transition: 'transform 0.1s',
+
+  span: {
+    fontSize: '32em',
+  },
+
+  '&:active': {
+    transform: 'scale(0.96)',
+  },
+})
+
+// re-mounted (via key) on every wrong answer, so it shakes each time
+const Feedback = styled.div<{ $shake?: boolean }>(({ $shake }) => ({
+  animation: $shake ? 'kiosk-shake 0.4s ease-in-out' : 'none', // defined in globals.css
+}))
+
 type State = 'START' | 'IN_PROGRESS' | 'WRONG_ANSWER' | 'FINISH'
+
+const ANSWERS = [1, 2, 3]
+const CORRECT_ANSWER = 3
 
 type StateComponentProps = Omit<QuizPageLayoutProps, 'left' | 'right'> & {
   setState: (state: State) => void
   successTarget: HREF
+  wrongAnswers: number[]
+  onAnswer: (answer: number) => void
 }
 
 function Start({ setState, ...otherProps }: StateComponentProps) {
-  const { title, body } = useAppContext().dictionary.games.degradationTypes.start
+  const { title, body, startButton } = useAppContext().dictionary.games.degradationTypes.start
 
   return (
     <QuizPageLayout
       left={
-        <Main>
-          <BigTitle title={title} />
-          <Separator />
-          <Text>{body}</Text>
-        </Main>
+        <>
+          <Main>
+            <BigTitle title={title} />
+            <Separator />
+            <Text>{body}</Text>
+          </Main>
+          <Footer>
+            <StartButton onClick={() => setState('IN_PROGRESS')}>
+              <span>{startButton}</span>
+            </StartButton>
+          </Footer>
+        </>
       }
       right={
         <ExtraContent
@@ -105,23 +155,30 @@ function Start({ setState, ...otherProps }: StateComponentProps) {
   )
 }
 
-function MidGame({ setState, title, hint, ...otherProps }: StateComponentProps & { title: ReactNode; hint?: string }) {
+function MidGame({
+  setState,
+  title,
+  explanation,
+  hint,
+  wrongAnswers,
+  onAnswer,
+  ...otherProps
+}: StateComponentProps & { title: ReactNode; explanation?: string; hint?: string }) {
   return (
     <QuizPageLayout
       left={
         <Main>
-          {title}
+          <Feedback key={wrongAnswers.length} $shake={wrongAnswers.length > 0} aria-live="polite">
+            {title}
+            {explanation && <Text>{explanation}</Text>}
+          </Feedback>
           <Separator />
           <Buttons>
-            <Button onClick={() => setState('WRONG_ANSWER')}>
-              <span>1</span>
-            </Button>
-            <Button onClick={() => setState('WRONG_ANSWER')}>
-              <span>2</span>
-            </Button>
-            <Button onClick={() => setState('FINISH')}>
-              <span>3</span>
-            </Button>
+            {ANSWERS.map((answer) => (
+              <Button key={answer} onClick={() => onAnswer(answer)} disabled={wrongAnswers.includes(answer)}>
+                <span>{answer}</span>
+              </Button>
+            ))}
           </Buttons>
           {hint && <Hint>{hint}</Hint>}
         </Main>
@@ -146,7 +203,9 @@ function InProgress(props: StateComponentProps) {
 
 function WrongAnswer(props: StateComponentProps) {
   const { incorrect, main } = useAppContext().dictionary.games.degradationTypes
-  return <MidGame {...props} title={<BigTitle title={incorrect.title} />} hint={main.hint} />
+  return (
+    <MidGame {...props} title={<BigTitle title={incorrect.title} />} explanation={incorrect.body} hint={main.hint} />
+  )
 }
 
 function Finish({ successTarget, ...otherProps }: StateComponentProps) {
@@ -154,6 +213,7 @@ function Finish({ successTarget, ...otherProps }: StateComponentProps) {
 
   return (
     <QuizPageLayout
+      success
       left={
         <>
           <Main>
@@ -191,8 +251,18 @@ export type DegradationTypesGameProps = Pick<StateComponentProps, 'bgImg' | 'suc
 
 export function DegradationTypesGame(props: DegradationTypesGameProps) {
   const [state, setState] = useState<State>('START')
+  const [wrongAnswers, setWrongAnswers] = useState<number[]>([])
+
+  const onAnswer = (answer: number) => {
+    if (answer === CORRECT_ANSWER) {
+      setState('FINISH')
+    } else {
+      setWrongAnswers((previous) => [...previous, answer])
+      setState('WRONG_ANSWER')
+    }
+  }
 
   const Component = getComponent(state)
 
-  return <Component setState={setState} {...props} />
+  return <Component setState={setState} wrongAnswers={wrongAnswers} onAnswer={onAnswer} {...props} />
 }

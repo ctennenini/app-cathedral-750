@@ -690,7 +690,7 @@
       },
       "incorrect": {
         "title": "Versuchen Sie es erneut!",
-        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
+        "body": "Nicht dieser: Dieser Stein ist jünger. Versuchen Sie einen anderen hervorgehobenen Stein!"
       },
       "finish": {
         "title": "Richtig!",
@@ -702,6 +702,7 @@
     },
     "degradationTypes": {
       "start": {
+        "startButton": "Starten",
         "title": "Testen Sie Ihr Wissen!",
         "body": [
           "Es gibt Bereiche der Kathedrale, die stärker von einem bestimmten Degradationstyp betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
@@ -719,7 +720,8 @@
         ]
       },
       "incorrect": {
-        "title": "Versuchen Sie es erneut!"
+        "title": "Versuchen Sie es erneut!",
+        "body": "Schauen Sie genauer hin: In diesem Bereich gibt es mehr Arten von Degradation."
       }
     },
     "quarries": {

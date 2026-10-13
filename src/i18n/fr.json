@@ -183,7 +183,7 @@
     "interactiveMenu": {
       "title": "Visite interactive",
       "description": [
-        "Voici ce que vous allez faire et voir sur place. Interagissons avec le monument !"
+        "Voici ce que vous allez faire et voir sur place. Interagissons avec le monument !"
       ]
     },
     "stoneConservation": {
@@ -298,7 +298,7 @@
             "Une variété de grès de remplacement de Fribourg, Berne, Zoug et Hanovre (Oberkirchen, Allemagne) ont été utilisés à sa place."
           ]
         ],
-        "testYourKnowledge": "Testez vos connaissances !"
+        "testYourKnowledge": "Testez vos connaissances !"
       },
       "molasseGris": {
         "title": "Molasse grise",
@@ -354,7 +354,7 @@
           "Les principaux motifs de dégradation observés sur la cathédrale peuvent être classés selon ces quatre classes."
         ]
       ],
-      "testYourKnowledge": "Testez vos connaissances !",
+      "testYourKnowledge": "Testez vos connaissances !",
       "blackCrust": {
         "title": "Croûte noire",
         "description": [
@@ -451,7 +451,7 @@
           ]
         },
         "misc": {
-          "qrCodePrompt": "Scannez le code QR pour regarder la vidéo !"
+          "qrCodePrompt": "Scannez le code QR pour regarder la vidéo !"
         }
       }
     },
@@ -615,8 +615,8 @@
     "contemporarySolutions": {
       "title": "Solutions contemporaines",
       "description": [
-        "Stéréotomie (taille de pierre) : Cela implique la retaille d'éléments de pierre existants, comme l'accentuation du surplomb d'un tore ou la taille de rainures dans un chanfrein pour mieux diriger l'eau.",
-        "Ferblanterie (travail du métal) : Cela implique l'insertion d'éléments métalliques comme des bandes d'étanchéité ou des guides dans les joints de lit ou sous les chaperons pour s'assurer que l'eau est canalisée loin du bâtiment. Les solutions de ferblanterie sont souvent préférées lorsque la stéréotomie est insuffisante ou trop coûteuse."
+        "Stéréotomie (taille de pierre) : Cela implique la retaille d'éléments de pierre existants, comme l'accentuation du surplomb d'un tore ou la taille de rainures dans un chanfrein pour mieux diriger l'eau.",
+        "Ferblanterie (travail du métal) : Cela implique l'insertion d'éléments métalliques comme des bandes d'étanchéité ou des guides dans les joints de lit ou sous les chaperons pour s'assurer que l'eau est canalisée loin du bâtiment. Les solutions de ferblanterie sont souvent préférées lorsque la stéréotomie est insuffisante ou trop coûteuse."
       ],
       "Examples": "Exemples sur la cathédrale",
       "Stereotomy": {
@@ -653,7 +653,7 @@
       "title": "XVIIIe siècle",
       "description": [
         "La pierre de molasse locale, étant un grès tendre avec une matrice carbonatée et des argiles gonflantes, était le principal matériau de construction, et sa vulnérabilité aux dommages causés par l'eau était un problème connu dès le début.",
-        "Le remplacement des parties altérées a toujours été effectué par analogie : les nouveaux larmiers étaient retaillés pour correspondre aux anciens ou du moins pour leur ressembler."
+        "Le remplacement des parties altérées a toujours été effectué par analogie : les nouveaux larmiers étaient retaillés pour correspondre aux anciens ou du moins pour leur ressembler."
       ],
       "Next": "Suivant"
     },
@@ -685,15 +685,15 @@
   "games": {
     "oldestStone": {
       "start": {
-        "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
+        "title": "Pouvez-vous identifier la pierre la plus ancienne de la façade ?",
         "body": "Appuyez sur l'une des pierres mises en évidence"
       },
       "incorrect": {
-        "title": "Réessayez !",
-        "body": "Appuyez sur l'une des pierres mises en évidence"
+        "title": "Réessayez !",
+        "body": "Pas celle-ci : cette pierre est plus récente. Essayez une autre pierre mise en évidence !"
       },
       "finish": {
-        "title": "Correct !",
+        "title": "Correct !",
         "body": [
           "Le type de pierre le plus ancien de la cathédrale est la Molasse grise de Lausanne qui a été placée au XIIe siècle de notre ère.",
           "Apprenons-en plus à ce sujet..."
@@ -702,24 +702,26 @@
     },
     "degradationTypes": {
       "start": {
-        "title": "Testez vos connaissances !",
+        "startButton": "Commencer",
+        "title": "Testez vos connaissances !",
         "body": [
           "Il y a des zones de la cathédrale plus affectées par un certain type de dégradation, mais aussi de petites différences dans la géométrie du bâtiment peuvent faire la différence.",
-          "Dans le cercle rouge, nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus !"
+          "Dans le cercle rouge, nous pouvons trouver un bon exemple, cliquez dessus pour en découvrir plus !"
         ]
       },
       "main": {
-        "title": "Combien de types de dégradation pouvez-vous trouver dans la zone ?",
+        "title": "Combien de types de dégradation pouvez-vous trouver dans la zone ?",
         "hint": "Appuyez sur la bonne réponse"
       },
       "finish": {
-        "title": "Correct !",
+        "title": "Correct !",
         "body": [
           "Découvrons-les ensemble..."
         ]
       },
       "incorrect": {
-        "title": "Réessayez !"
+        "title": "Réessayez !",
+        "body": "Regardez de plus près : il y a plus de types de dégradation dans cette zone."
       }
     },
     "quarries": {

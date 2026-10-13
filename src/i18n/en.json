@@ -696,7 +696,7 @@
       },
       "incorrect": {
         "title": "Try again!",
-        "body": "Tap on one of the highlighted stones"
+        "body": "Not this one: this stone is more recent. Try another highlighted stone!"
       },
       "finish": {
         "title": "Correct!",
@@ -708,6 +708,7 @@
     },
     "degradationTypes": {
       "start": {
+        "startButton": "Start",
         "title": "Test your knowledge!",
         "body": [
           "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
@@ -725,7 +726,8 @@
         ]
       },
       "incorrect": {
-        "title": "Try again!"
+        "title": "Try again!",
+        "body": "Look closer: there are more types of degradation in this area."
       }
     },
     "quarries": {
