@@ -10,6 +10,9 @@ import { Header, Left, Right, Footer, Title, Main, Separator, Text } from './Tex
 import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
+import { useAppContext } from '@/components/AppContext'
+import { SectionLabel } from '@/components/NavMenu/SectionLabel'
+import { ProgressDots } from '@/components/ProgressDots'
 import { ExtraContent, ExtraContentProps } from '../shared/ColumnExtraContent'
 import { TitleProps } from '../shared/ColumnLayout.components'
 import { Link } from '@/components/Links'
@@ -117,16 +120,24 @@ export function TextPageContent({
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
-  state: { text, goForward, goBack, extra },
+  state: { text, goForward, goBack, extra, step, stepCount },
 }: TextPageContentProps) {
+  const { dictionary } = useAppContext()
+  // dots for pages with several steps, shown on every step
+  const stepDots = stepCount !== undefined && step !== undefined && stepCount > 1 && (
+    <ProgressDots index={step} count={stepCount} label={`${step + 1} / ${stepCount}`} />
+  )
+
   const footer = goForward ? (
     <Footer>
-      <StyledNextButton onClick={goForward}>
+      {stepDots}
+      <StyledNextButton aria-label={dictionary.ui.next} onClick={goForward}>
         <NextArrowIcon />
       </StyledNextButton>
     </Footer>
   ) : (
     <Footer>
+      {stepDots}
       {actions?.map((action, index) => <ActionButton key={index} {...action} />)}
       {nextButtonTarget && (
         <NextButton href={nextButtonTarget}>
@@ -153,15 +164,7 @@ export function TextPageContent({
               )}
             </>
           }
-          right={
-            goBack ? (
-              <IconButton $dark onClick={goBack}>
-                <BackArrowIcon />
-              </IconButton>
-            ) : (
-              backButtonTarget && <BackButton $dark href={backButtonTarget} />
-            )
-          }
+          right={<SectionLabel />}
         />
 
         <Main>

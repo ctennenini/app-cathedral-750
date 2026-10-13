@@ -148,13 +148,22 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
           label: pages.waterManagement.title,
           path: '/water-managment',
         },
+        {
+          label: pages.timeline.title,
+          path: '/timeline',
+        },
       ],
     },
-    {   label: pages.credits.title,
-        path: '/credits',
-        subItems: [
+    {
+      label: pages.videoGallery.title,
+      path: '/video-gallery',
+    },
+    {
+      label: pages.credits.title,
+      path: '/credits',
+      subItems: [
         {
-          label: "Acknowledgements",
+          label: pages.acknowledgments.title,
           path: '/acknowledgments',
         },
       ],

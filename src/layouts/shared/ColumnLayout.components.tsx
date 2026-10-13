@@ -5,7 +5,7 @@ import { BaseContainer } from './BaseLayout.components'
 
 import { LanguageSwitcher as BaseLanguageSwitcher } from '@/components/LanguageSwitcher'
 import { H1, H2, P } from '@/components/Typography'
-import { ComponentProps } from 'react'
+import { ComponentProps, useEffect, useRef, useState } from 'react'
 import {
   LEFT_COLUMN_OFFSET,
   LEFT_COLUMN_PADDING_HORIZONTAL,
@@ -139,6 +139,15 @@ export const Text = styled(P)({
 
 export const Main = styled.main({
   flex: 'auto',
+  minHeight: 0,
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+})
+
+const StyledMain = styled.main<{ $hasMore: boolean }>(({ $hasMore }) => ({
+  flex: 'auto',
+  minHeight: 0,
   padding: '0 40em',
   overflowY: 'auto',
 
