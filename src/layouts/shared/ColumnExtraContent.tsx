@@ -44,7 +44,14 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
 /**
  * Extra image
  */
-const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt={props.alt || ''} />)({
+const ExtraImage = styled((props: ImageProps) => (
+  <Image
+    priority
+    {...props}
+    alt={props.alt || ''}
+    placeholder={props.placeholder ?? (typeof props.src === 'string' ? 'empty' : 'blur')}
+  />
+))({
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',

@@ -61,7 +61,16 @@ export function BaseContainer({
 }: BaseContainerProps) {
   return (
     <Container $dark={darkText}>
-      {bgImg && <Image priority loading="eager" sizes="100vw" src={bgImg} alt={bgImgAlt} />}
+      {bgImg && (
+        <Image
+          priority
+          loading="eager"
+          sizes="100vw"
+          src={bgImg}
+          alt={bgImgAlt}
+          placeholder={typeof bgImg === 'string' ? 'empty' : 'blur'}
+        />
+      )}
       <Overlay $blur={!!blurredBackground} $darken={!!darkenedBackground} />
       <Content {...otherProps}>{children}</Content>
     </Container>

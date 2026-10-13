@@ -39,7 +39,7 @@ export type VideoGalleryTitleLayoutProps = {
 const ResponsiveWrapper = styled.div({
   width: '100%',
   maxWidth: '100vw',
-  overflowX: 'hidden',
+  overflow: 'hidden',
   boxSizing: 'border-box',
 })
 
@@ -205,6 +205,10 @@ export function VideoGalleryTitleLayout({
 
   return (
     <Container darkText={textColor === 'dark'} bgImg={bgImg} bgImgAlt={bgImgAlt}>
+      {videos.map((video) => (
+        <link key={video.thumbnailSrc} rel="preload" as="image" href={video.thumbnailSrc} />
+      ))}
+
       <Header
         left={
           <>
@@ -225,7 +229,7 @@ export function VideoGalleryTitleLayout({
           <VideoGrid>
             {videos.map((video, i) => (
               <VideoCard key={i} onClick={() => setOpenVideo(video)}>
-                <Thumbnail src={video.thumbnailSrc} alt={video.thumbnailAlt} />
+                <Thumbnail loading="eager" src={video.thumbnailSrc} alt={video.thumbnailAlt} />
                 <VideoLabel $dark={textColor === 'dark'}>{video.label}</VideoLabel>
               </VideoCard>
             ))}

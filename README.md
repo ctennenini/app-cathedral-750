@@ -232,6 +232,6 @@ A publicly available icon-generator like https://pwa-icon-generator.vercel.app/ 
 
 ## TODOs:
 
-- [ ] setup PWA caching
+- [✓] setup PWA caching
 - [ ] make centered quiz layout and change Oldest Stone Game to use it
 - [ ] make dynamic titles

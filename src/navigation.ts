@@ -114,21 +114,21 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
           subItems: [
             {
               label: pages.consolidation.title,
-              path: '/consolidation',
+              path: '/stone-conservation/consolidation',
             },
             {
               label: pages.scalingFixing.title,
-              path: '/scaling-fixing',
+              path: '/stone-conservation/scaling-fixing',
             },
             {
               label: pages.mortar.title,
-              path: '/mortar',
+              path: '/stone-conservation/mortar-fixing',
             },
             {
               label: pages.substitution.title,
-              path: '/substitution',
+              path: '/stone-conservation/substitution',
             },
-          ],                             
+          ],
         },
         {
           label: pages.waterManagement.title,
@@ -142,7 +142,8 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
         {
           label: "Acknowledgements",
           path: '/acknowledgments',
-        }],
+        },
+      ],
     },
   ]
 }

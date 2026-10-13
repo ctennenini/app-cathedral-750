@@ -30,6 +30,19 @@ if (workbox) {
     ignoreURLParametersMatching: [/^_rsc$/, /^page$/],
     maximumFileSizeToCacheInBytes: 30 * 1024 * 1024,
   })
+
+  workbox.routing.registerRoute(
+    ({ request, url }) => request.destination === 'image' && url.origin === self.location.origin,
+    new workbox.strategies.CacheFirst({
+      cacheName: 'images',
+      plugins: [
+        new workbox.expiration.ExpirationPlugin({
+          maxEntries: 100,
+          maxAgeSeconds: 30 * 24 * 60 * 60,
+        }),
+      ],
+    }),
+  )
 } else {
   console.error(`[SW] Workbox failed to load`)
 }

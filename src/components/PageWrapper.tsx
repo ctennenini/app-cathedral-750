@@ -1,12 +1,15 @@
 'use client'
 import { TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
 import { ComponentProps, useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 import styled from 'styled-components'
 import { Loader } from '@/components/Loader'
 
 export const PageWrapper = styled(({ children, ...otherProps }: ComponentProps<'div'>) => {
   const [loaded, setLoaded] = useState(false)
+  const [visible, setVisible] = useState(false)
+  const pathname = usePathname()
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -33,8 +36,15 @@ export const PageWrapper = styled(({ children, ...otherProps }: ComponentProps<'
     }
   }, [ref])
 
+  useEffect(() => {
+    setVisible(false)
+    const frame = requestAnimationFrame(() => setVisible(true))
+
+    return () => cancelAnimationFrame(frame)
+  }, [pathname])
+
   return (
-    <div {...otherProps} ref={ref}>
+    <div {...otherProps} ref={ref} style={{ opacity: visible ? 1 : 0, transition: 'opacity 220ms ease-in-out' }}>
       {children}
       <Loader $show={!loaded} />
     </div>
