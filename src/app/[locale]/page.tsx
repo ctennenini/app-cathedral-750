@@ -14,10 +14,9 @@ export default makePage((dictionary) => {
       arrow: true,
     },
     {
-      target:
-        'https://www.cathedrale-lausanne.ch/accueil/',
+      // opens inside the app, so visitors can't leave the kiosk
+      target: '/website',
       label: page.actions.website,
-      external: true,
     },
   ]
 

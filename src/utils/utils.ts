@@ -3,6 +3,7 @@ import { useParams, usePathname, redirect, RedirectType } from 'next/navigation'
 import { ComponentProps } from 'react'
 
 import NextLink from 'next/link'
+import { defaultLanguage } from '@/config'
 
 export function useLocale() {
   let { locale } = useParams()
@@ -10,7 +11,7 @@ export function useLocale() {
     locale = locale[0]
   }
   if (!locale) {
-    return 'en'
+    return defaultLanguage
   }
   return locale
 }

@@ -230,6 +230,19 @@ Override them as necessary, but ensure that the names stay the same.
 
 A publicly available icon-generator like https://pwa-icon-generator.vercel.app/ can be used to generate the icons.
 
+### Kiosk mode
+
+The app is made for the touch screen in the cathedral. The settings are at the top of `src/config.ts`:
+
+- **Start screen:** every visitor starts at `/`, a screen with big Français / Deutsch / English buttons (`START_SCREEN_LANGUAGES` sets their order).
+- **Idle reset:** if nobody touches the screen for `KIOSK_IDLE_TIMEOUT_SECONDS` (90 s), an "Are you still there?" countdown appears. After `KIOSK_IDLE_WARNING_SECONDS` more (15 s), the app goes back to the start screen. A playing video counts as activity.
+- **No way out:** with `KIOSK_MODE = true`, the long-press menu, text selection, image dragging and double-tap zoom are turned off.
+- **Cathedral website:** opens inside the app on the `/website` page (`CATHEDRAL_WEBSITE_URL`). It needs an internet connection. The embedded site (and any YouTube player) is sandboxed with `KIOSK_IFRAME_SANDBOX`, so it can't open new windows or navigate away from the app. Touches inside it can't be seen by the app, so pages with an embedded site or player wait `KIOSK_IFRAME_IDLE_TIMEOUT_SECONDS` (5 min) before the idle reset.
+
+- **Offline and updates:** the whole app is stored on the kiosk for offline use. After a new version is published, the kiosk downloads it quietly in the background (it checks every 30 minutes) and switches to it the next time it returns to the start screen, so visitors are never interrupted.
+
+On the kiosk computer itself, run the browser in kiosk (full-screen) mode, e.g. `chromium --kiosk --noerrdialogs --disable-pinch https://…`, so visitors can't reach the address bar.
+
 ## TODOs:
 
 - [✓] setup PWA caching

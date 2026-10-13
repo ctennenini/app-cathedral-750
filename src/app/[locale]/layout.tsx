@@ -18,6 +18,7 @@ export default async function Layout({ params, children }: GlobalStaticLayoutPro
         <AppContextProvider locale={locale} dictionary={dictionary}>
           {children}
           <NavMenu />
+          {KIOSK_MODE && <IdleReset />}
         </AppContextProvider>
       </PageWrapper>
     </>

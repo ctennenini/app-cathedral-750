@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
-import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
+import {
+  KIOSK_IFRAME_SANDBOX,
+  LEFT_COLUMN_OFFSET,
+  PAGE_PADDING_RIGHT,
+  TARGET_VIEW_HEIGHT,
+  TARGET_VIEW_WIDTH,
+} from '@/config'
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
@@ -161,7 +167,8 @@ export function ExtraContent(props: ExtraContentProps) {
             }}
           >
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+              sandbox={KIOSK_IFRAME_SANDBOX}
               title={title || 'YouTube video'}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

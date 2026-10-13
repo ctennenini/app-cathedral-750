@@ -11,6 +11,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
+import { KIOSK_IFRAME_SANDBOX } from '@/config'
 
 type Color = 'light' | 'dark'
 
@@ -246,7 +247,8 @@ export function VideoGalleryTitleLayout({
             
             {openVideo.videoId ? (
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${openVideo.videoId}?autoplay=1`}
+                src={`https://www.youtube-nocookie.com/embed/${openVideo.videoId}?autoplay=1&rel=0`}
+              sandbox={KIOSK_IFRAME_SANDBOX}
                 title="Video player"
                 frameBorder="0"
                 allow="autoplay; fullscreen"

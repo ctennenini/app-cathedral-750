@@ -752,6 +752,16 @@
   },
   "ui": {
     "navMenuButton": "Navigationsmenü",
-    "closeNavMenu": "Navigationsmenü schließen"
+    "closeNavMenu": "Navigationsmenü schließen",
+    "back": "Zurück",
+    "home": "Startseite",
+    "next": "Weiter"
+  },
+  "kiosk": {
+    "chooseLanguage": "Berühren Sie, um Ihre Sprache zu wählen",
+    "stillThere": "Sind Sie noch da?",
+    "touchToContinue": "Berühren Sie den Bildschirm, um fortzufahren",
+    "restartingIn": "Neustart in {seconds} Sekunden",
+    "websiteOffline": "Die Website der Kathedrale benötigt eine Internetverbindung, die derzeit nicht verfügbar ist."
   }
 }

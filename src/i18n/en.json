@@ -758,6 +758,16 @@
   },
   "ui": {
     "navMenuButton": "Navigation Menu",
-    "closeNavMenu": "Close navigation menu"
+    "closeNavMenu": "Close navigation menu",
+    "back": "Back",
+    "home": "Home",
+    "next": "Next"
+  },
+  "kiosk": {
+    "chooseLanguage": "Touch to choose your language",
+    "stillThere": "Are you still there?",
+    "touchToContinue": "Touch the screen to continue",
+    "restartingIn": "Starting over in {seconds} seconds",
+    "websiteOffline": "The cathedral website needs an internet connection, which is not available right now."
   }
     }
