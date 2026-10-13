@@ -2,13 +2,13 @@
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
-import heroImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
+import heroImg from '@/assets/bg-images/daylight-drone-shot-between-towers.webp'
 
 // Import delle immagini locali
-import towerold from './tower/tour_lantern_old.png'
-import towerfire from './tower/tour_lantern_fire.png'
-import towerproj from './tower/tour_lantern_project.png'
-import towernew from './tower/tour_lantern_new.png'
+import towerold from './tower/tour_lantern_old.webp'
+import towerfire from './tower/tour_lantern_fire.webp'
+import towerproj from './tower/tour_lantern_project.webp'
+import towernew from './tower/tour_lantern_new.webp'
 import hystory from './history.jpg'
 
 export default makePage((dictionary) => {

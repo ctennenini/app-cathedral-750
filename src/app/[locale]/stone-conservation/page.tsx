@@ -1,11 +1,11 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2.webp'
 
 import img1 from './risk.gif'
-import consolidation from './cons.jpg'
-import pin from './pin.png'
-import mortarfill from './mortarfill.png'
-import substitution from './substitution.jpg'
+import consolidation from './cons.webp'
+import pin from './pin.webp'
+import mortarfill from './mortarfill.webp'
+import substitution from './substitution.webp'
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {

@@ -14,9 +14,16 @@ const MANIFEST_FILE = `${PREFIX}/manifest.webmanifest`
 if (workbox) {
   console.log(`[SW] Workbox is loaded`)
 
-  // Ensure the service worker takes control of the page immediately.
+  // Take control of the page on the very first install. A later, updated service worker waits until the app
+  // asks it to take over (with a SKIP_WAITING message), which the kiosk does when it returns to the start
+  // screen, so visitors are never switched to a new version halfway through.
   workbox.core.clientsClaim()
-  self.skipWaiting()
+
+  // remove files from older versions once a new one has taken over
+  workbox.precaching.cleanupOutdatedCaches()
+
+  // videos are requested in parts (to stream and seek), which the cache has to answer with the matching part
+  workbox.precaching.addPlugins([new workbox.rangeRequests.RangeRequestsPlugin()])
 
   const precacheManifest = self.precacheManifest || []
   if (!precacheManifest.length) {
@@ -28,7 +35,6 @@ if (workbox) {
   console.log('[SW] Precaching routes from manifest:', precacheManifest)
   workbox.precaching.precacheAndRoute(precacheManifest, {
     ignoreURLParametersMatching: [/^_rsc$/, /^page$/],
-    maximumFileSizeToCacheInBytes: 30 * 1024 * 1024,
   })
 
   workbox.routing.registerRoute(

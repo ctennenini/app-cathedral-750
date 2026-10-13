@@ -3,7 +3,8 @@ import { getDictionary } from '@/i18n'
 import { GlobalStaticLayoutProps } from '@/globals'
 import { PageWrapper } from '@/components/PageWrapper'
 import { NavMenu } from '@/components/NavMenu'
-import ServiceWorkerRegistrar from '@/components/ServiceWorkerRegistrar'
+import { IdleReset } from '@/components/kiosk/IdleReset'
+import { KIOSK_MODE } from '@/config'
 
 export { generateStaticParams } from '@/globals'
 
@@ -13,7 +14,6 @@ export default async function Layout({ params, children }: GlobalStaticLayoutPro
 
   return (
     <>
-      <ServiceWorkerRegistrar />
       <PageWrapper lang={locale}>
         <AppContextProvider locale={locale} dictionary={dictionary}>
           {children}

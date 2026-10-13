@@ -1,4 +1,4 @@
-import bgImg from '@/assets/bg-images/interior-dark-round-window.png'
+import bgImg from '@/assets/bg-images/interior-dark-round-window.webp'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
 

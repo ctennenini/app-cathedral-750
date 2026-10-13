@@ -5,8 +5,8 @@ import { useAppContext } from '@/components/AppContext'
 import { ReactNode, useState } from 'react'
 import styled from 'styled-components'
 
-import schematicViewPicture from './schematic-view.png'
-import windowPicture from './window-with-deterioration.png'
+import schematicViewPicture from './schematic-view.webp'
+import windowPicture from './window-with-deterioration.webp'
 import { HREF } from '@/utils/utils'
 
 import {

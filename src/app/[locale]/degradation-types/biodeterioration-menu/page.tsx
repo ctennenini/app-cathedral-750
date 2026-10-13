@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import biodeteriorationExample from './biodet.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import biodeteriorationExample from './biodet.webp'
 
 import { makePage } from '@/components/makePage'
 

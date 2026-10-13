@@ -1,10 +1,10 @@
 import { makePage } from '@/components/makePage'
 import { VideoGalleryTitleLayout } from '@/layouts/TitlePageLayout/VideoGalleryTitleLayout'
-import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
+import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.webp'
 
-import video1 from './Mr.Girardet.png'
-import video2 from './Amsler.png'
-import video3 from './Chantal.png'
+import video1 from './Mr.Girardet.webp'
+import video2 from './Amsler.webp'
+import video3 from './Chantal.webp'
 
 export default makePage((dictionary) => {
   const videos = [

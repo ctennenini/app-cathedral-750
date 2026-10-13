@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import dripGlazes from './dripglaze.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import dripGlazes from './dripglaze.webp'
 
 import { makePage } from '@/components/makePage'
 

@@ -1,6 +1,6 @@
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import stereotomy from './stereotomy.jpg'
-import tinsmithing from './tinsmithing.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import stereotomy from './stereotomy.webp'
+import tinsmithing from './tinsmithing.webp'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 

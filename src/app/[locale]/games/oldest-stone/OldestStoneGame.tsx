@@ -4,7 +4,7 @@ import { useAppContext } from '@/components/AppContext'
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import picture from './oldest-stone-game-pic.png'
+import picture from './oldest-stone-game-pic.webp'
 import { HREF } from '@/utils/utils'
 import {
   ExtraContent,

@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { TextPageLayout as TextPageLayoutComponent } from './TextPageLayout'
 import exampleImg1 from './example1.png'
-import exampleImg2 from './example2.png'
-import exampleImg3 from './example3.png'
+import exampleImg2 from './example2.webp'
+import exampleImg3 from './example3.webp'
 
 const bgImages = process.env.BG_IMAGES?.split(';') ?? []
 

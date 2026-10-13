@@ -1,9 +1,9 @@
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
 
-import blackCrustSrc from './blackc.jpg'
-import scalingSrc from './scaling2.png'
-import sanding from './sandling.jpg'
-import biodeterioation from './biodet.jpg'
+import blackCrustSrc from './blackc.webp'
+import scalingSrc from './scaling2.webp'
+import sanding from './sandling.webp'
+import biodeterioation from './biodet.webp'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 import { makePage } from '@/components/makePage'

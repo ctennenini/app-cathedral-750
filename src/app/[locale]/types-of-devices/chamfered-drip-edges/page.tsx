@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import chamfered from './chamfered.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import chamfered from './chamfered.webp'
 
 import { makePage } from '@/components/makePage'
 

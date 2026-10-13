@@ -1,5 +1,5 @@
 import { makePage } from '@/components/makePage'
-import bgImg from '@/assets/bg-images/side-of-house-top-tower-illuminated.png'
+import bgImg from '@/assets/bg-images/side-of-house-top-tower-illuminated.webp'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 
 export default makePage((dictionary) => {

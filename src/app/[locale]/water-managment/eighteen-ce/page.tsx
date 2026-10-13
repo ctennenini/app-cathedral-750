@@ -1,5 +1,5 @@
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import eighteen from './18CE.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import eighteen from './18CE.webp'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 

@@ -214,6 +214,10 @@ export default makePage((dictionary) => {
 
 ‼️
 
+### Adding images
+
+Keep images at most 1920 px wide (the width of the kiosk screen) and save photos as WebP or JPEG, not PNG. A full-screen photo should be well under 1 MB. The build stops with an error if the offline copy of the app gets bigger than 60 MB (`MAX_PRECACHE_MB` in `generate-precache.mjs`).
+
 ### How to change the app's metadata
 
 The app's metadata is defined, and can be edited, in the `src/config.ts` file.
