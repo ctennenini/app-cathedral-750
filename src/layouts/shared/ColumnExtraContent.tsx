@@ -13,6 +13,7 @@ import {
 import { Link } from '@/components/Links'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
+import { imagePlaceholder } from '@/utils/imagePlaceholder'
 
 // ⬇️ Importa se TimelineLayout è un componente separato
 import { TimelineLayout, TimelineEvent } from '@/layouts/TextPageLayout/TimelineLayout'
@@ -55,7 +56,7 @@ const ExtraImage = styled((props: ImageProps) => (
     priority
     {...props}
     alt={props.alt || ''}
-    placeholder={props.placeholder ?? (typeof props.src === 'string' ? 'empty' : 'blur')}
+    placeholder={props.placeholder ?? imagePlaceholder(props.src)}
   />
 ))({
   width: 'auto',

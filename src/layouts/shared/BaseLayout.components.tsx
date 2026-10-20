@@ -2,6 +2,7 @@ import { ComponentProps } from 'react'
 
 import styled from 'styled-components'
 import NextImage, { ImageProps } from 'next/image'
+import { imagePlaceholder } from '@/utils/imagePlaceholder'
 
 const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
   position: 'relative',
@@ -68,7 +69,7 @@ export function BaseContainer({
           sizes="100vw"
           src={bgImg}
           alt={bgImgAlt}
-          placeholder={typeof bgImg === 'string' ? 'empty' : 'blur'}
+          placeholder={imagePlaceholder(bgImg)}
         />
       )}
       <Overlay $blur={!!blurredBackground} $darken={!!darkenedBackground} />
