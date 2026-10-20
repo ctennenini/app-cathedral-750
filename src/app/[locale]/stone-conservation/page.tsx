@@ -16,7 +16,7 @@ export default makePage((dictionary) => {
       withHomeButton
       bgImg={bgImg}
       title={pages.stoneConservation.title}
-      subtitle={pages.conservationStrategies.title}
+      // subtitle={pages.conservationStrategies.title}
       text={pages.stoneConservation.description}
       backButtonTarget="/conservation-strategies"
       actions={[
