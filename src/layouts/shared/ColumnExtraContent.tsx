@@ -11,6 +11,7 @@ import {
   TARGET_VIEW_WIDTH,
 } from '@/config'
 import { Link } from '@/components/Links'
+import { AutoplayVideo } from '@/components/AutoplayVideo'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
 import { imagePlaceholder } from '@/utils/imagePlaceholder'
@@ -97,6 +98,7 @@ export type ExtraContentProps =
       src: string
       poster?: string
       title?: string
+      autoPlay?: boolean // start playing as soon as the page opens
     }
   | {
       type: 'timeline'
@@ -189,7 +191,8 @@ export function ExtraContent(props: ExtraContentProps) {
     }
 
     case 'video': {
-      const { src, poster } = props
+      const { src, poster, autoPlay } = props
+      const VideoElement = autoPlay ? AutoplayVideo : 'video'
       return (
         <Container>
           <div
@@ -200,7 +203,7 @@ export function ExtraContent(props: ExtraContentProps) {
               overflow: 'hidden',
             }}
           >
-            <video
+            <VideoElement
               controls
               controlsList="nodownload"
               disablePictureInPicture
@@ -213,7 +216,7 @@ export function ExtraContent(props: ExtraContentProps) {
               }}
             >
               <source src={src} type="video/mp4" />
-            </video>
+            </VideoElement>
           </div>
         </Container>
       )

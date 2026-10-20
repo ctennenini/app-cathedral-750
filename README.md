@@ -245,7 +245,7 @@ The app is made for the touch screen in the cathedral. The settings are at the t
 
 - **Offline and updates:** the whole app is stored on the kiosk for offline use. After a new version is published, the kiosk downloads it quietly in the background (it checks every 30 minutes) and switches to it the next time it returns to the start screen, so visitors are never interrupted.
 
-On the kiosk computer itself, run the browser in kiosk (full-screen) mode, e.g. `chromium --kiosk --noerrdialogs --disable-pinch https://…`, so visitors can't reach the address bar.
+On the kiosk computer itself, run the browser in kiosk (full-screen) mode, e.g. `chromium --kiosk --noerrdialogs --disable-pinch --autoplay-policy=no-user-gesture-required https://…`, so visitors can't reach the address bar. The autoplay flag lets the Immersive Cathedral videos start with sound in every case; without it they start muted when the page is opened without a touch first (e.g. after a reload).
 
 ## TODOs:
 

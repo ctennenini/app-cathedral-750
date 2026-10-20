@@ -24,6 +24,7 @@ export function makeInteractiveMenuPage(videoSrc: string) {
           {
             type: 'video',
             src: videoSrc,
+            autoPlay: true,
           },
         ]}
       />
