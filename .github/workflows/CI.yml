@@ -9,6 +9,10 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
+    # the deploy step pushes the built site to the gh-pages branch, which needs write access
+    permissions:
+      contents: write
+
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v4
