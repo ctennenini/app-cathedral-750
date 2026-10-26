@@ -1,28 +1,3 @@
-import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
-import { makePage } from '@/components/makePage'
+import { makeInteractiveMenuPage } from '../interactive-menu/makeInteractiveMenuPage'
 
-export default makePage((dictionary) => {
-  const pages = dictionary.pages
-
-  return (
-    <TextPageLayout
-      withHomeButton
-      bgImg={bgImg}
-      title={pages.interactiveMenu.title}
-      titleProps={{
-        style: { fontSize: '54em' },
-      }}
-      text={pages.interactiveMenu.description}
-      backButtonTarget="/molasse-and-its-weathering"
-      
-      pullOutContent={[
-        {
-          type: 'video',  // ✨ Usa il nuovo tipo
-          src: '/videos/LaCathedraleImmersive.mp4',
-          title: 'Interactive Menu Video'
-        },
-      ]}
-    />
-  )
-})
+export default makeInteractiveMenuPage('/videos/LaCathedraleImmersive.mp4')

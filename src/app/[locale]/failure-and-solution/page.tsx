@@ -1,9 +1,9 @@
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import dripstonesBackjpg from './dripstones-back.jpg'
-import ineffectiveDrips from './ineffective-dripstones.jpg'
-import profile from './profile-adapt.jpg'
-import rotating from './rotating-retain.jpg'
-import without from './without-dripcuts.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import dripstonesBackjpg from './dripstones-back.webp'
+import ineffectiveDrips from './ineffective-dripstones.webp'
+import profile from './profile-adapt.webp'
+import rotating from './rotating-retain.webp'
+import without from './without-dripcuts.webp'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 

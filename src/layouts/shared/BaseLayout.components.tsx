@@ -2,6 +2,7 @@ import { ComponentProps } from 'react'
 
 import styled from 'styled-components'
 import NextImage, { ImageProps } from 'next/image'
+import { imagePlaceholder } from '@/utils/imagePlaceholder'
 
 const Container = styled.div<{ $dark?: boolean }>(({ $dark }) => ({
   position: 'relative',
@@ -61,7 +62,16 @@ export function BaseContainer({
 }: BaseContainerProps) {
   return (
     <Container $dark={darkText}>
-      {bgImg && <Image priority loading="eager" sizes="100vw" src={bgImg} alt={bgImgAlt} />}
+      {bgImg && (
+        <Image
+          priority
+          loading="eager"
+          sizes="100vw"
+          src={bgImg}
+          alt={bgImgAlt}
+          placeholder={imagePlaceholder(bgImg)}
+        />
+      )}
       <Overlay $blur={!!blurredBackground} $darken={!!darkenedBackground} />
       <Content {...otherProps}>{children}</Content>
     </Container>

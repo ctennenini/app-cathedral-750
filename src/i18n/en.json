@@ -1,56 +1,5 @@
 {
   "pages": {
-    "sample": {
-      "title": "titlehere",
-      "subtitle": "subtitlehere",
-      "description": [
-        "This is a paragraph."
-      ],
-      "descriptionparagraph": [
-        "This is the first paragraph.",
-        "This is the second paragraph.",
-        "This is the third paragraph."
-      ],
-      "descriptionpages": [
-        [
-          "This is the first paragraph, page 1",
-          "This is the second paragraph, page 1"
-        ],
-        [
-          "This is the first paragraph, page 2",
-          "This is the second paragraph, page 2"
-        ],
-        [
-          "This is the first paragraph, page 3",
-          "This is the second paragraph, page 3"
-        ],
-        [
-          "This is the first paragraph, page 4",
-          "This is the second paragraph, page 4"
-        ]
-      ],
-      "actions": {
-        "action1": "Button 1",
-        "action2": "Button 2",
-        "action3": "Button 3"
-      },
-      "gallery": {
-        "galleryitem1": {
-          "title": "img 1"
-        },
-        "galleryitem2": {
-          "title": "img 2"
-        },
-        "galleryitem3": {
-          "title": "img 3"
-        }
-      },
-      "legendItems": {
-        "legenditem1": "name 1",
-        "legenditem2": "name 2",
-        "legenditem3": "name 3"
-      }
-    },
     "start": {
       "title": [
         "The Cathedral",
@@ -78,6 +27,9 @@
     },
     "credits": {
     "title": "Credits"
+    },
+    "acknowledgments": {
+      "title": "Acknowledgements"
     },
     "timeline": {
   "title": "Past restoration work",
@@ -696,7 +648,7 @@
       },
       "incorrect": {
         "title": "Try again!",
-        "body": "Tap on one of the highlighted stones"
+        "body": "Not this one: this stone is more recent. Try another highlighted stone!"
       },
       "finish": {
         "title": "Correct!",
@@ -708,6 +660,7 @@
     },
     "degradationTypes": {
       "start": {
+        "startButton": "Start",
         "title": "Test your knowledge!",
         "body": [
           "There are areas of the Cathedal more affected by a certain type of degradation, but also small differences in the geometry of the building can make a difference.",
@@ -725,7 +678,8 @@
         ]
       },
       "incorrect": {
-        "title": "Try again!"
+        "title": "Try again!",
+        "body": "Look closer: there are more types of degradation in this area."
       }
     },
     "quarries": {
@@ -758,6 +712,16 @@
   },
   "ui": {
     "navMenuButton": "Navigation Menu",
-    "closeNavMenu": "Close navigation menu"
+    "closeNavMenu": "Close navigation menu",
+    "back": "Back",
+    "home": "Home",
+    "next": "Next"
+  },
+  "kiosk": {
+    "chooseLanguage": "Touch to choose your language",
+    "stillThere": "Are you still there?",
+    "touchToContinue": "Touch the screen to continue",
+    "restartingIn": "Starting over in {seconds} seconds",
+    "websiteOffline": "The cathedral website needs an internet connection, which is not available right now."
   }
     }

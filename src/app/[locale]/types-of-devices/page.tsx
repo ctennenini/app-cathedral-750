@@ -1,11 +1,11 @@
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import cornices from './cornices.jpg'
-import copings from './copings.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import cornices from './cornices.webp'
+import copings from './copings.webp'
 import chamferedDripEdges from './chamfered-drip-edges.jpg'
-import dripGlazes from './drip-glazes.jpg'
-import rotatingDripEdges from './rotating-drip-edges.jpg'
-import slopedRetreats from './sloped-retreats.jpg'
-import slopedSupports from './sloped-supports.jpg'
+import dripGlazes from './drip-glazes.webp'
+import rotatingDripEdges from './rotating-drip-edges.webp'
+import slopedRetreats from './sloped-retreats.webp'
+import slopedSupports from './sloped-supports.webp'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 

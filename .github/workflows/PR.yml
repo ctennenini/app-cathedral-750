@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,3 +28,9 @@ jobs:
 
       - name: Typecheck
         run: yarn typecheck
+
+      # catches build problems (and an offline cache that grows too big) before merging
+      - name: Build
+        env:
+          PREFIX: /${{ github.event.repository.name }}
+        run: yarn build

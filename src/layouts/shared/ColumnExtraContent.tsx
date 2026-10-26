@@ -3,10 +3,18 @@ import styled from 'styled-components'
 import Image, { ImageProps as NextImageProps } from 'next/image'
 
 import { BigLink, BigLinkProps } from '@/components/Links'
-import { LEFT_COLUMN_OFFSET, PAGE_PADDING_RIGHT, TARGET_VIEW_HEIGHT, TARGET_VIEW_WIDTH } from '@/config'
+import {
+  KIOSK_IFRAME_SANDBOX,
+  LEFT_COLUMN_OFFSET,
+  PAGE_PADDING_RIGHT,
+  TARGET_VIEW_HEIGHT,
+  TARGET_VIEW_WIDTH,
+} from '@/config'
 import { Link } from '@/components/Links'
+import { AutoplayVideo } from '@/components/AutoplayVideo'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
+import { imagePlaceholder } from '@/utils/imagePlaceholder'
 
 // ⬇️ Importa se TimelineLayout è un componente separato
 import { TimelineLayout, TimelineEvent } from '@/layouts/TextPageLayout/TimelineLayout'
@@ -44,7 +52,14 @@ const Container = styled(({ children, ...otherProps }: PropsWithChildren<{ $tran
 /**
  * Extra image
  */
-const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt={props.alt || ''} />)({
+const ExtraImage = styled((props: ImageProps) => (
+  <Image
+    priority
+    {...props}
+    alt={props.alt || ''}
+    placeholder={props.placeholder ?? imagePlaceholder(props.src)}
+  />
+))({
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
@@ -53,7 +68,7 @@ const ExtraImage = styled((props: ImageProps) => <Image priority {...props} alt=
 })
 
 /**
- * Extra content types (con nuovo tipo 'video' aggiunto!)
+ * Extra content types
  */
 export type ExtraContentProps =
   | {
@@ -83,6 +98,7 @@ export type ExtraContentProps =
       src: string
       poster?: string
       title?: string
+      autoPlay?: boolean // start playing as soon as the page opens
     }
   | {
       type: 'timeline'
@@ -104,7 +120,7 @@ export function ExtraContent(props: ExtraContentProps) {
     case 'gallery':
       return (
         <Container>
-          <Gallery>
+          <Gallery $columns={props.items.length > 5 ? Math.ceil(props.items.length / 2) : props.items.length}>
             {props.items.map(({ label, href, ...other }, index) => {
               let content = (
                 <figure>
@@ -154,7 +170,8 @@ export function ExtraContent(props: ExtraContentProps) {
             }}
           >
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+              sandbox={KIOSK_IFRAME_SANDBOX}
               title={title || 'YouTube video'}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -174,7 +191,8 @@ export function ExtraContent(props: ExtraContentProps) {
     }
 
     case 'video': {
-      const { src, poster, title } = props
+      const { src, poster, autoPlay } = props
+      const VideoElement = autoPlay ? AutoplayVideo : 'video'
       return (
         <Container>
           <div
@@ -185,8 +203,10 @@ export function ExtraContent(props: ExtraContentProps) {
               overflow: 'hidden',
             }}
           >
-            <video
+            <VideoElement
               controls
+              controlsList="nodownload"
+              disablePictureInPicture
               poster={poster}
               style={{
                 width: '100%',
@@ -196,9 +216,7 @@ export function ExtraContent(props: ExtraContentProps) {
               }}
             >
               <source src={src} type="video/mp4" />
-              {title && <track kind="captions" label={title} />}
-              Il tuo browser non supporta il tag video.
-            </video>
+            </VideoElement>
           </div>
         </Container>
       )
@@ -221,19 +239,31 @@ export function ExtraContent(props: ExtraContentProps) {
  * Styled components usati
  */
 
-const Gallery = styled.ul({
-  display: 'flex',
-  gap: '48em',
+// every item gets the same width and a same-sized square picture, whatever the length of its label
+// (labels are much longer in French and German than in English); more than 5 items go on two rows
+const Gallery = styled.ul<{ $columns: number }>(({ $columns }) => ({
+  display: 'grid',
+  gridTemplateColumns: `repeat(${$columns}, minmax(0, 1fr))`,
+  gap: '40em 32em',
   listStyle: 'none',
-  alignItems: 'baseline',
-})
+  alignItems: 'start',
+}))
 
 const GalleryItem = styled.li({
+  img: {
+    width: '100%',
+    height: 'auto',
+    aspectRatio: '1 / 1',
+    objectFit: 'cover',
+  },
+
   figcaption: {
     textAlign: 'center',
     fontWeight: 700,
     color: 'var(--highlight)',
     marginTop: '16em',
+    hyphens: 'auto',
+    overflowWrap: 'break-word',
     '& > span': {
       fontSize: '24em',
     },
@@ -296,6 +326,19 @@ const ClickArea = styled(({ target, ...props }: { target?: HREF }) => <Link href
   position: 'absolute',
   backgroundColor: 'transparent',
   cursor: 'pointer',
+  borderRadius: '8em',
+  animation: 'kiosk-hotspot 2s ease-out infinite', // defined in globals.css, shows visitors where to touch
+
+  // a bigger, invisible touch area around thin hotspots
+  '&::after': {
+    content: "''",
+    position: 'absolute',
+    inset: '-24em -12em',
+  },
+
+  '@media (prefers-reduced-motion: reduce)': {
+    animation: 'none',
+  },
   ...($circled && {
     '&&::before': {
       content: "''",

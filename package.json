@@ -2,6 +2,9 @@
   "name": "ethz-slideshow-poc",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,9 +21,6 @@
     "clean": "rm -rf {out,node_modules,.next}"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@types/mdx": "^2.0.13",
     "lodash": "^4.17.21",
     "next": "15.2.2",
     "react": "^19",
@@ -36,9 +36,9 @@
     "@storybook/test": "^8.6.6",
     "@types/lodash": "^4.17.15",
     "@types/node": "^22.10.5",
-    "@types/react": "18.3.10",
-    "@types/react-dom": "^18",
-    "eslint-config-next": "14.2.13",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",

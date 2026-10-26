@@ -136,17 +136,17 @@ const TimelineContainer = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--surface-muted);
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--highlight, #007acc);
+    background: var(--highlight);
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--highlight-dark, #005999);
+    background: var(--highlight-dark);
   }
 `
 
@@ -161,7 +161,7 @@ const TimelineTrack = styled.div`
     top: 0;
     bottom: 0;
     width: 3px;
-    background: var(--highlight, #007acc);
+    background: var(--highlight);
     border-radius: 1.5px;
   }
 `
@@ -183,8 +183,8 @@ const EventMarker = styled.div`
   top: 0.5rem;
   width: 1rem;
   height: 1rem;
-  background: var(--highlight, #007acc);
-  border: 3px solid var(--white, #ffffff);
+  background: var(--highlight);
+  border: 3px solid var(--white);
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -192,7 +192,7 @@ const EventMarker = styled.div`
 `
 
 const EventContent = styled.div`
-  background: var(--white, #ffffff);
+  background: var(--white);
   border-radius: 12px;
   padding: 1.5rem 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -206,12 +206,12 @@ const EventContent = styled.div`
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-    border-color: var(--highlight, #007acc);
+    border-color: var(--highlight);
   }
 
   &:hover + ${EventMarker} {
     transform: scale(1.2);
-    box-shadow: 0 4px 16px rgba(0, 122, 204, 0.3);
+    box-shadow: 0 4px 16px rgba(206, 61, 58, 0.3);
   }
 `
 
@@ -220,7 +220,7 @@ const ClickHint = styled.div`
   top: 1rem;
   right: 1rem;
   font-size: 0.75rem;
-  color: var(--highlight, #007acc);
+  color: var(--highlight);
   opacity: 0;
   transition: opacity 0.3s ease;
   font-weight: 500;
@@ -233,7 +233,7 @@ const ClickHint = styled.div`
 const Year = styled.div`
   font-weight: 700;
   font-size: 1.125rem;
-  color: var(--highlight, #007acc);
+  color: var(--highlight);
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
 `
@@ -242,14 +242,14 @@ const Title = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  color: var(--black, #333333);
+  color: var(--dark-gray);
   line-height: 1.3;
 `
 
 const Description = styled.p`
   font-size: 0.9rem;
   margin: 0;
-  color: var(--text-secondary, #666666);
+  color: var(--text-secondary);
   line-height: 1.5;
 `
 
@@ -281,7 +281,7 @@ const PopupContent = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: var(--white, #ffffff);
+  background: var(--white);
   animation: slideInFromLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   display: flex;
@@ -313,7 +313,7 @@ const CloseButton = styled.button`
   cursor: pointer;
   z-index: 1001;
   transition: all 0.3s ease;
-  color: var(--black, #333333);
+  color: var(--dark-gray);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
 
@@ -338,7 +338,7 @@ const PopupBody = styled.div`
 // APPROCCIO SEMPLICE - Container scrollabile diretto
 const PopupLeft = styled.div`
   width: 35%;
-  background: #f8f9fa;
+  background: var(--surface-muted);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 2rem 1rem 8rem 1rem; /* MOLTO padding bottom */
@@ -352,17 +352,17 @@ const PopupLeft = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    background: #e1e1e1;
+    background: var(--surface-muted-dark);
     border-radius: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #007acc;
+    background: var(--highlight);
     border-radius: 8px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #005999;
+    background: var(--highlight-dark);
   }
 
   @media (max-width: 768px) {
@@ -445,17 +445,17 @@ const PopupRight = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--surface-muted);
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--highlight, #007acc);
+    background: var(--highlight);
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--highlight-dark, #005999);
+    background: var(--highlight-dark);
   }
 
   @media (max-width: 768px) {
@@ -466,10 +466,10 @@ const PopupRight = styled.div`
 const PopupYear = styled.div`
   font-weight: 900;
   font-size: 2.5rem;
-  color: var(--highlight, #007acc);
+  color: var(--highlight);
   margin-bottom: 1rem;
   letter-spacing: 2px;
-  text-shadow: 0 2px 4px rgba(0, 122, 204, 0.1);
+  text-shadow: 0 2px 4px rgba(206, 61, 58, 0.1);
 
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -480,7 +480,7 @@ const PopupTitle = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 1.5rem 0;
-  color: var(--black, #333333);
+  color: var(--dark-gray);
   line-height: 1.2;
 
   @media (max-width: 768px) {
@@ -491,7 +491,7 @@ const PopupTitle = styled.h2`
 const PopupDescription = styled.div`
   font-size: 1.1rem;
   margin: 0;
-  color: var(--text-secondary, #555555);
+  color: var(--text-secondary);
   line-height: 1.7;
   text-align: justify;
   
@@ -581,7 +581,7 @@ const ImageZoomClose = styled.button`
   cursor: pointer;
   z-index: 1000001;
   transition: all 0.3s ease;
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
 
   &:hover {

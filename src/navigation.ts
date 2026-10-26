@@ -63,6 +63,20 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
                   path: '/swelling-clays',
                 },
                 {
+                  label: pages.saltCrystallization.title,
+                  path: '/salt-crystallization',
+                  subItems: [
+                    {
+                      label: pages.saltCrystallization.crystallizationPressure.title,
+                      path: '/salt-crystallization/crystallization-pressure',
+                    },
+                    {
+                      label: pages.saltCrystallization.gypsum.title,
+                      path: '/salt-crystallization/gypsum',
+                    },
+                  ],
+                },
+                {
                   label: pages.atmosphericPollution.title,
                   path: '/atmospheric-pollution',
                   subItems: [
@@ -114,35 +128,45 @@ export function getNavMenu(dictionary: Dictionary): NavMenuItem[] {
           subItems: [
             {
               label: pages.consolidation.title,
-              path: '/consolidation',
+              path: '/stone-conservation/consolidation',
             },
             {
               label: pages.scalingFixing.title,
-              path: '/scaling-fixing',
+              path: '/stone-conservation/scaling-fixing',
             },
             {
               label: pages.mortar.title,
-              path: '/mortar',
+              path: '/stone-conservation/mortar-fixing',
             },
             {
               label: pages.substitution.title,
-              path: '/substitution',
+              path: '/stone-conservation/substitution',
             },
-          ],                             
+          ],
         },
         {
           label: pages.waterManagement.title,
           path: '/water-managment',
         },
+        {
+          label: pages.timeline.title,
+          path: '/timeline',
+        },
       ],
     },
-    {   label: pages.credits.title,
-        path: '/credits',
-        subItems: [
+    {
+      label: pages.videoGallery.title,
+      path: '/video-gallery',
+    },
+    {
+      label: pages.credits.title,
+      path: '/credits',
+      subItems: [
         {
-          label: "Acknowledgements",
+          label: pages.acknowledgments.title,
           path: '/acknowledgments',
-        }],
+        },
+      ],
     },
   ]
 }

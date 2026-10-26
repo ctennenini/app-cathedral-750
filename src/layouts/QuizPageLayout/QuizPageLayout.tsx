@@ -8,6 +8,7 @@ export type QuizPageLayoutProps = {
   closeTarget: HREF
   bgImg: ImageProps['src']
   bgImgAlt?: ImageProps['alt']
+  success?: boolean
 }
 
 export function QuizPageLayout({
@@ -16,10 +17,11 @@ export function QuizPageLayout({
   left,
   right,
   closeTarget,
+  success,
 }: QuizPageLayoutProps) {
   return (
     <Container bgImg={bgImg} bgImgAlt={bgImgAlt}>
-      <Left>
+      <Left $success={success}>
         <Header left={<CloseButton target={closeTarget} />} />
         {left}
       </Left>

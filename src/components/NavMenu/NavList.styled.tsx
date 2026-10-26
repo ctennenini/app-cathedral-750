@@ -69,13 +69,23 @@ export const ListItemHeader = styled.div({
   alignItems: 'stretch',
 })
 
-export const ToggleButton = styled.div({
+export const ToggleButton = styled.button({
   width: LINE_SECTION_WIDTH,
+  position: 'relative',
+  border: 'none',
+  backgroundColor: 'transparent',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   cursor: 'pointer',
+
+  // a bigger, invisible touch area than the small triangle
+  '&::after': {
+    content: "''",
+    position: 'absolute',
+    inset: '-12em -16em -12em -24em',
+  },
 })
 
 export const Expander = styled.div<{ $isOpen: boolean }>(({ $isOpen }) => ({

@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import blackCrustExample from './blackc.jpg'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import blackCrustExample from './blackc.webp'
 
 import { makePage } from '@/components/makePage'
 

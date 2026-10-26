@@ -16,6 +16,16 @@ export const META_DATA: CustomMetadata = {
   ],
 }
 
+// kiosk (touch screen in the cathedral) settings:
+export const KIOSK_MODE = true // turns on the idle reset and blocks touch gestures that would leave the app
+export const KIOSK_IDLE_TIMEOUT_SECONDS = 90 // without a touch, ask "are you still there?" after this long
+export const KIOSK_IDLE_WARNING_SECONDS = 15 // then go back to the start screen after this long
+export const KIOSK_IFRAME_IDLE_TIMEOUT_SECONDS = 300 // used instead when a page embeds a website or YouTube player, whose touches the app can't see
+// keeps embedded websites / YouTube players from opening new windows or navigating away from the app
+export const KIOSK_IFRAME_SANDBOX = 'allow-scripts allow-same-origin allow-forms allow-presentation'
+export const CATHEDRAL_WEBSITE_URL = 'https://www.cathedrale-lausanne.ch/accueil/' // shown inside the app on the /website page
+export const START_SCREEN_LANGUAGES = ['fr', 'de', 'en'] // order of the buttons on the start screen
+
 // ⚠️ please don't change the following constants 👇
 
 export const defaultLanguage = 'en'

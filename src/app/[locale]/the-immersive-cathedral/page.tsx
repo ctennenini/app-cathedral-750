@@ -1,6 +1,6 @@
 import { makePage } from '@/components/makePage'
 import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
-import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.png'
+import bgImg from '@/assets/bg-images/daylight-drone-shot-between-towers.webp'
 
 export default makePage((dictionary) => {
   const page = dictionary.pages.immersiveCathedral

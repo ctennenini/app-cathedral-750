@@ -3,7 +3,7 @@
 import { useAppContext } from '@/components/AppContext'
 import { useState } from 'react'
 
-import picture from './map-of-switzerland-with-overlay.png'
+import picture from './map-of-switzerland-with-overlay.webp'
 import { HREF } from '@/utils/utils'
 import {
   ExtraContent,

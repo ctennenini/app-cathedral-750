@@ -10,6 +10,9 @@ import { Header, Left, Right, Footer, Title, Main, Separator, Text } from './Tex
 import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
+import { useAppContext } from '@/components/AppContext'
+import { SectionLabel } from '@/components/NavMenu/SectionLabel'
+import { ProgressDots } from '@/components/ProgressDots'
 import { ExtraContent, ExtraContentProps } from '../shared/ColumnExtraContent'
 import { TitleProps } from '../shared/ColumnLayout.components'
 import { Link } from '@/components/Links'
@@ -19,9 +22,6 @@ import { TextLayoutState, useTextLayoutState } from './useTextLayoutState'
 const StyledNextButton = styled(IconButton)({
   color: 'var(--white)',
   backgroundColor: 'var(--highlight)',
-  width: '87em',
-  height: '87em',
-  flexShrink: 0,
   marginLeft: 'auto',
 })
 
@@ -88,8 +88,13 @@ type NextButtonProps = ComponentProps<typeof StyledNextButton> & {
 function NextButton({ href, ...otherProps }: NextButtonProps) {
   const normalisedHref = useHref(href)
   const { push } = useRouter()
+  const { dictionary } = useAppContext()
   return (
-    <StyledNextButton onClick={() => push(normalisedHref.toString(), { scroll: false })} {...otherProps}>
+    <StyledNextButton
+      aria-label={dictionary.ui.next}
+      onClick={() => push(normalisedHref.toString(), { scroll: false })}
+      {...otherProps}
+    >
       <NextArrowIcon />
     </StyledNextButton>
   )
@@ -115,16 +120,24 @@ export function TextPageContent({
   nextButtonTarget,
   withHomeButton,
   backButtonTarget,
-  state: { text, goForward, goBack, extra },
+  state: { text, goForward, goBack, extra, step, stepCount },
 }: TextPageContentProps) {
+  const { dictionary } = useAppContext()
+  // dots for pages with several steps, shown on every step
+  const stepDots = stepCount !== undefined && step !== undefined && stepCount > 1 && (
+    <ProgressDots index={step} count={stepCount} label={`${step + 1} / ${stepCount}`} />
+  )
+
   const footer = goForward ? (
     <Footer>
-      <StyledNextButton onClick={goForward}>
+      {stepDots}
+      <StyledNextButton aria-label={dictionary.ui.next} onClick={goForward}>
         <NextArrowIcon />
       </StyledNextButton>
     </Footer>
   ) : (
     <Footer>
+      {stepDots}
       {actions?.map((action, index) => <ActionButton key={index} {...action} />)}
       {nextButtonTarget && (
         <NextButton href={nextButtonTarget}>
@@ -142,17 +155,16 @@ export function TextPageContent({
             <>
               <NavMenuButton $dark />
               {withHomeButton && <HomeButton $dark />}
+              {goBack ? (
+                <IconButton $dark aria-label={dictionary.ui.back} onClick={goBack}>
+                  <BackArrowIcon />
+                </IconButton>
+              ) : (
+                backButtonTarget && <BackButton $dark href={backButtonTarget} />
+              )}
             </>
           }
-          right={
-            goBack ? (
-              <IconButton $dark onClick={goBack}>
-                <BackArrowIcon />
-              </IconButton>
-            ) : (
-              backButtonTarget && <BackButton $dark href={backButtonTarget} />
-            )
-          }
+          right={<SectionLabel />}
         />
 
         <Main>

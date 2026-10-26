@@ -11,6 +11,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
+import { KIOSK_IFRAME_SANDBOX } from '@/config'
 
 type Color = 'light' | 'dark'
 
@@ -39,7 +40,7 @@ export type VideoGalleryTitleLayoutProps = {
 const ResponsiveWrapper = styled.div({
   width: '100%',
   maxWidth: '100vw',
-  overflowX: 'hidden',
+  overflow: 'hidden',
   boxSizing: 'border-box',
 })
 
@@ -191,7 +192,6 @@ const CloseButton = styled.button({
 
 export function VideoGalleryTitleLayout({
   title,
-  subtitle,
   bgImg,
   bgImgAlt = 'background image',
   videos,
@@ -205,6 +205,10 @@ export function VideoGalleryTitleLayout({
 
   return (
     <Container darkText={textColor === 'dark'} bgImg={bgImg} bgImgAlt={bgImgAlt}>
+      {videos.map((video) => (
+        <link key={video.thumbnailSrc} rel="preload" as="image" href={video.thumbnailSrc} />
+      ))}
+
       <Header
         left={
           <>
@@ -225,7 +229,7 @@ export function VideoGalleryTitleLayout({
           <VideoGrid>
             {videos.map((video, i) => (
               <VideoCard key={i} onClick={() => setOpenVideo(video)}>
-                <Thumbnail src={video.thumbnailSrc} alt={video.thumbnailAlt} />
+                <Thumbnail loading="eager" src={video.thumbnailSrc} alt={video.thumbnailAlt} />
                 <VideoLabel $dark={textColor === 'dark'}>{video.label}</VideoLabel>
               </VideoCard>
             ))}
@@ -242,7 +246,8 @@ export function VideoGalleryTitleLayout({
             
             {openVideo.videoId ? (
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${openVideo.videoId}?autoplay=1`}
+                src={`https://www.youtube-nocookie.com/embed/${openVideo.videoId}?autoplay=1&rel=0`}
+              sandbox={KIOSK_IFRAME_SANDBOX}
                 title="Video player"
                 frameBorder="0"
                 allow="autoplay; fullscreen"
@@ -252,6 +257,8 @@ export function VideoGalleryTitleLayout({
             ) : openVideo.videoSrc ? (
               <video
                 controls
+                controlsList="nodownload"
+                disablePictureInPicture
                 autoPlay
                 playsInline
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}

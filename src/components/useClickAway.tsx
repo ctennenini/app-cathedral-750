@@ -5,7 +5,7 @@ import { Dispatch, RefObject, SetStateAction, useEffect } from 'react'
 export function useClickAway(
   isExpanded: boolean,
   setExpanded: Dispatch<SetStateAction<boolean>>,
-  drawerRef: RefObject<HTMLDivElement>,
+  drawerRef: RefObject<HTMLDivElement | null>,
 ) {
   useEffect(() => {
     const onClickOutside = (e: Event) => {

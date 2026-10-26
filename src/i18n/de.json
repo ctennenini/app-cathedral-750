@@ -1,56 +1,5 @@
 {
   "pages": {
-    "sample": {
-      "title": "Titel hier",
-      "subtitle": "Untertitel hier",
-      "description": [
-        "Dies ist ein Absatz."
-      ],
-      "descriptionparagraph": [
-        "Dies ist der erste Absatz.",
-        "Dies ist der zweite Absatz.",
-        "Dies ist der dritte Absatz."
-      ],
-      "descriptionpages": [
-        [
-          "Dies ist der erste Absatz, Seite 1",
-          "Dies ist der zweite Absatz, Seite 1"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 2",
-          "Dies ist der zweite Absatz, Seite 2"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 3",
-          "Dies ist der zweite Absatz, Seite 3"
-        ],
-        [
-          "Dies ist der erste Absatz, Seite 4",
-          "Dies ist der zweite Absatz, Seite 4"
-        ]
-      ],
-      "actions": {
-        "action1": "Schaltfläche 1",
-        "action2": "Schaltfläche 2",
-        "action3": "Schaltfläche 3"
-      },
-      "gallery": {
-        "galleryitem1": {
-          "title": "Bild 1"
-        },
-        "galleryitem2": {
-          "title": "Bild 2"
-        },
-        "galleryitem3": {
-          "title": "Bild 3"
-        }
-      },
-      "legendItems": {
-        "legenditem1": "Name 1",
-        "legenditem2": "Name 2",
-        "legenditem3": "Name 3"
-      }
-    },
     "start": {
       "title": [
         "Die Kathedrale",
@@ -71,7 +20,7 @@
       "subtitle": "Hauptmenü",
       "actions": {
         "molasses": "Molasse und ihre Verwitterung",
-        "conservation": "Konservierungsstrategien",
+        "conservation": "Konservierungs\u00adstrategien",
         "vaults": "Die Gewölbe der Kathedrale",
         "videoGallery": "Treffen Sie die Experten"
       }
@@ -79,8 +28,11 @@
     "credits": {
       "title": "Impressum"
     },
+    "acknowledgments": {
+      "title": "Danksagungen"
+    },
     "timeline": {
-      "title": "Vergangene Restaurierungsarbeiten",
+      "title": "Vergangene Restaurierungs\u00adarbeiten",
       "subtitle": "Eine Zeitleiste der bedeutendsten Ereignisse",
       "description": [
         "Erkunden Sie die Schlüsselmomente, die die Geschichte der Restaurierung der Kathedrale über die Jahrhunderte geprägt haben.",
@@ -117,7 +69,7 @@
       },
       "event1833": {
         "year": "1873",
-        "title": "Erstes großes Restaurierungsprojekt",
+        "title": "Erstes großes Restaurierungs\u00adprojekt",
         "description": [
           "Der Architekt Viollet-le-Duc wird mit der Restaurierung der Kathedrale beauftragt."
         ],
@@ -138,7 +90,7 @@
           "Die Arbeiten umfassten die Verstärkung der Fundamente, die Reinigung der Sandsteinfassaden, die Restaurierung von Innenfresken und die Installation moderner Beleuchtungs- und Heizsysteme."
         ],
         "imageAlt1": "Installation der neuen Turmlaterne",
-        "imageAlt2": "Dokumentation der Restaurierungsarbeiten"
+        "imageAlt2": "Dokumentation der Restaurierungs\u00adarbeiten"
       },
       "event2009": {
         "year": "2009",
@@ -187,11 +139,11 @@
       ]
     },
     "stoneConservation": {
-      "title": "Steinkonservierung",
+      "title": "Stein\u00adkonservierung",
       "description": [
         [
           "Konservierungsbemühungen bleiben oft unbemerkt, da sie sich auf die Bewahrung der historischen Authentizität konzentrieren, ohne das Erscheinungsbild eines Denkmals zu verändern.",
-          "Diese Diskretion bedeutet, dass die Öffentlichkeit, die am Erhalt des baulichen Erbes interessiert ist, oft nicht über die Arbeit und die Herausforderungen informiert ist.",
+          "Diese Diskretion bedeutet, dass die Öffentlichkeit, die am Erhalt des baulichen Erbes interessiert ist, oft nicht über die Arbeit und die Heraus\u00adforderungen informiert ist.",
           "Die Art der Intervention hängt von der Schwere und Art der Schädigung ab, die der Stein erfahren hat."
         ],
         [
@@ -207,7 +159,7 @@
       ]
     },
     "scalingFixing": {
-      "title": "Abblätterungsfixierung",
+      "title": "Abblätterungs\u00adfixierung",
       "description": [
         "Wenn die Oberfläche gesund erscheint, aber einige cm tief abblättert, ist eine Fixierungsintervention erforderlich, um zu verhindern, dass sich die Schuppe vollständig ablöst.",
         "Ein spezielles System aus einer Kombination von Stiften und Konsolidierungsmitteln wird verwendet und die Interventionen sind am Ende unsichtbar"
@@ -229,47 +181,50 @@
     },
     "conservationStrategies": {
       "title": [
-        "Konservierungsstrategien"
+        "Konservierungs\u00adstrategien"
       ],
       "description": [
         "Die Kathedrale von Lausanne, wie wir sie heute sehen, ist das Ergebnis jahrhundertelanger fortlaufender Konservierungsbemühungen.",
         "Dieser Abschnitt wird die Entwicklung der Erhaltungspraktiken und die faszinierende Reise der Konservierung dieses architektonischen Erbes erforschen, von den invasiveren, stilistischen Restaurierungen der Vergangenheit bis zur heutigen Philosophie der minimalen Intervention."
       ],
       "actions": {
-        "past": "Vergangene Restaurierungsarbeiten",
-        "water": "Wassermanagementsysteme",
-        "stone": "Steinkonservierungsverfahren"
+        "past": "Vergangene Restaurierungs\u00adarbeiten",
+        "water": "Wasser\u00admanagement\u00adsysteme",
+        "stone": "Stein\u00adkonservierungs\u00adverfahren"
       }
     },
     "waterManagement": {
       "title": [
-        "Regenwassermanagement"
+        "Regenwasser\u00admanagement"
       ],
       "description": [
         "Das Management von Regenwasser an der Kathedrale von Lausanne war über die Jahrhunderte ein kritischer Aspekt ihrer Konservierung, hauptsächlich aufgrund der Verwendung von Molassestein, der besonders anfällig für Zersetzung ist, wenn er Regen ausgesetzt wird.",
         "Diese Notwendigkeit wurde von Viollet-le-Duc in seinem Restaurierungsplan von 1872 betont, wo er die Bedeutung der Erhaltung des Materials und der Leitung des Wassers zum Boden unter Verwendung zahlreicher Leitungen hervorhob."
       ],
       "actions": {
-        "evolution": "Entwicklung der Regenwassermerkmale",
-        "types": "Arten von Regenwassermerkmalen",
-        "contemporary": "Herausforderungen und zeitgenössische Lösungen"
+        "evolution": "Entwicklung der Regenwasser\u00admerkmale",
+        "types": "Arten von Regenwasser\u00admerkmalen",
+        "contemporary": "Heraus\u00adforderungen und zeitgenössische Lösungen"
       }
     },
     "molassesAndItsWeathering": {
       "title": "Molasse und ihre Verwitterung",
       "description": [
-        "Die Kathedrale von Lausanne wurde mit einem lokalen Molassesandstein gebaut, der besonders empfindlich gegenüber Wasser ist.",
+        "Die Kathedrale von Lausanne wurde mit einem lokalen Molasse\u00adsandstein gebaut, der besonders empfindlich gegenüber Wasser ist.",
         "Sie können hier direkt Informationen über diesen Stein sowie über seine Verwitterung erhalten, indem Sie auf die entsprechenden Schaltflächen klicken",
         "Sie können auch direkt zu einer interaktiven Entdeckungs-App gehen, die Sie beim Spaziergang um die Kathedrale herum verwenden können."
       ],
       "actions": {
-        "sandstone": "Molassesandstein",
+        "sandstone": "Molasse\u00adsandstein",
         "weathering": "Verwitterung der Molasse",
-        "interactive": ["Interaktive Tour", "Nicht verfügbar"]
+        "interactive": [
+          "Interaktive Tour",
+          "Nicht verfügbar"
+        ]
       }
     },
     "molasseSandstone": {
-      "title": "Der Molassesandstein",
+      "title": "Der Molasse\u00adsandstein",
       "description": [
         [
           "Die Schweizer Molasse-Felsformation erstreckt sich nördlich der Alpen von der Region Genfersee im Westen der Schweiz bis zum Bodensee im Osten.",
@@ -291,7 +246,7 @@
         "description": [
           [
             "Die Kathedrale von Lausanne ist aus einer Vielzahl von Steinen aus verschiedenen Steinbrüchen in der ganzen Schweiz und einigen Teilen Deutschlands gebaut.",
-            "Im 19. Jahrhundert wurde der regionale Molassesandstein der exponierten architektonischen Elemente der Kathedrale durch Kalksteine und härtere Sandsteine aus der weiteren Region des Kantons Waadt ersetzt."
+            "Im 19. Jahrhundert wurde der regionale Molasse\u00adsandstein der exponierten architektonischen Elemente der Kathedrale durch Kalksteine und härtere Sandsteine aus der weiteren Region des Kantons Waadt ersetzt."
           ],
           [
             "Im 20. Jahrhundert wurde aufgrund der Knappheit regionaler Steinbrüche die allgemeine Substitution des lokalen Molassesandsteins für Wartung und Restaurierung zur gängigen Praxis.",
@@ -303,7 +258,7 @@
       "molasseGris": {
         "title": "Molasse grise",
         "description": [
-          "Es handelt sich um einen Molassesandstein aus Lausanne, der im 12. Jahrhundert n. Chr. (gotische Periode) in die Kathedrale eingebaut wurde.",
+          "Es handelt sich um einen Molasse\u00adsandstein aus Lausanne, der im 12. Jahrhundert n. Chr. (gotische Periode) in die Kathedrale eingebaut wurde.",
           "Es ist eine Art Sedimentgestein, das am Südturm des Querschiffs vorherrscht. Dieser Sandstein stammte höchstwahrscheinlich aus den nahegelegenen Steinbrüchen.",
           "Dieser Stein ist aufgrund des Vorhandenseins quellender Tone besonders empfindlich gegenüber Wasser."
         ]
@@ -333,20 +288,20 @@
       "title": "Verwitterung der Molasse",
       "description": [
         "Der Degradationsprozess ist ein <b>komplexes System, das</b> verschiedene Faktoren beinhaltet.",
-        "Die Verwitterungsmechanismen sind die physikalischen/chemischen Prozesse, die an der Degradation beteiligt sind.",
+        "Die Verwitterungs\u00admechanismen sind die physikalischen/chemischen Prozesse, die an der Degradation beteiligt sind.",
         "Der Degradationstyp (oder Muster) bezieht sich darauf, wie sich Schäden in größerem Maßstab manifestieren."
       ],
       "actions": {
-        "mechanisms": "Verwitterungsmechanismen",
-        "types": "Degradationstypen",
+        "mechanisms": "Verwitterungs\u00admechanismen",
+        "types": "Degradations\u00adtypen",
         "interactive": "Interaktive Tour \n(NICHT VERFÜGBAR)"
       }
     },
     "degradationTypes": {
-      "title": "Degradationstypen",
+      "title": "Degradations\u00adtypen",
       "description": [
         [
-          "Die verschiedenen Verwitterungsmechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Degradationsmuster</b>.",
+          "Die verschiedenen Verwitterungs\u00admechanismen haben nicht immer eine eindeutige Korrelation mit dem <b>beobachteten Degradationsmuster</b>.",
           "Diese sind stark mit dem Mikroklima verbunden, dem der Stein ausgesetzt ist, und folglich mit seiner Position im Gebäude."
         ],
         [
@@ -380,7 +335,7 @@
         "title": "Biodeterioration",
         "description": [
           "In den Bereichen, die stärker vom Regen betroffen sind oder wo Wasser durchsickert, finden Mikroorganismen wie Pilze und Moose ihre natürliche feuchte Umgebung zum Wachsen.",
-          "Der daraus resultierende Schaden ist nicht extrem gefährlich für die Steinkonservierung, kann aber unangenehme ästhetische Nachteile schaffen."
+          "Der daraus resultierende Schaden ist nicht extrem gefährlich für die Stein\u00adkonservierung, kann aber unangenehme ästhetische Nachteile schaffen."
         ]
       }
     },
@@ -396,7 +351,7 @@
       "actions": {
         "freezeThaw": "Frost-Tau-Wirkung",
         "swellingClays": "Quellende Tone",
-        "saltCrystallization": "Salzkristallisation",
+        "saltCrystallization": "Salz\u00adkristallisation",
         "atmosphericPollution": "Atmosphärische Verschmutzung",
         "biologicalAttack": "Biologischer Angriff"
       },
@@ -431,17 +386,17 @@
           ]
         },
         "crystallizationPressure": {
-          "title": "Kristallisationsdruck",
+          "title": "Kristallisations\u00addruck",
           "description": [
-            "Eine weitere Situation, in der Frost schädlich sein kann, ist der Kristallisationsdruck. Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt werden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
+            "Eine weitere Situation, in der Frost schädlich sein kann, ist der Kristallisations\u00addruck. Unter solchen Bedingungen wären niedrige Temperaturen, die über lange Zeiträume entwickelt werden, am schädlichsten. Solche Situationen sind in kälteren Klimazonen als in Lausanne zu erwarten.",
             "Sehen Sie sich das Video an, um mehr zu erfahren."
           ]
         },
         "temperatureGradient": {
-          "title": "Temperaturgradient",
+          "title": "Temperatur\u00adgradient",
           "description": [
             [
-              "Grob poröse Materialien wie Molasse können beim Gefrieren beschädigt werden, wenn ein Temperaturgradient aufrechterhalten wird.",
+              "Grob poröse Materialien wie Molasse können beim Gefrieren beschädigt werden, wenn ein Temperatur\u00adgradient aufrechterhalten wird.",
               "Wasser kann dann aus einer nicht gefrorenen Region wandern, um das Wachstum von Eis zu speisen, das in den Poren einer gefrorenen Region eingeschlossen ist. Dies ist analog zur Frosthebung, kann aber auch Schäden in sedimentären Bausteinen und in geologischen Umgebungen verursachen."
             ],
             [
@@ -456,12 +411,12 @@
       }
     },
     "saltCrystallization": {
-      "title": "Salzkristallisation",
+      "title": "Salz\u00adkristallisation",
       "crystallizationPressure": {
-        "title": "Kristallisationsdruck",
+        "title": "Kristallisations\u00addruck",
         "description": [
           "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
-          "Im Fall von Molassesandstein könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
+          "Im Fall von Molasse\u00adsandstein könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
         ]
       },
       "gypsum": {
@@ -479,7 +434,7 @@
         "description": [
           "Atmosphärische Verschmutzung, insbesondere saurer Regen, war in der Vergangenheit ein ernstes Problem für die Haltbarkeit historischer Gebäude.",
           "Steine, die Kalzit enthalten, wurden aufgrund der Auflösung dieser Mineralien im Kontakt mit sauren Lösungen angegriffen.",
-          "Im Fall von Molassesandstein könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
+          "Im Fall von Molasse\u00adsandstein könnte die Bindemittelkomponente (aus Kalzit) betroffen gewesen sein, was die Ablösung der Körner in der Mikrostruktur des Steins erhöht."
         ],
         "legendItems": {
           "swellingClays": "Quellende Tone",
@@ -499,7 +454,7 @@
       "title": "Quellende Tone",
       "description": [
         [
-          "Der im Mittelalter in der Kathedrale von Lausanne verwendete Stein ist Molassesandstein. Seine Mikrostruktur besteht aus verschiedenen Kieselsäurematerialien, die durch ein Kalzit-Ton-Bindemittel zusammengehalten werden.",
+          "Der im Mittelalter in der Kathedrale von Lausanne verwendete Stein ist Molasse\u00adsandstein. Seine Mikrostruktur besteht aus verschiedenen Kieselsäurematerialien, die durch ein Kalzit-Ton-Bindemittel zusammengehalten werden.",
           "Das Vorhandensein quellender Tone bestimmt die Bildung von Spannungen im Material während des Benetzens und Trocknens durch Regen. Diese Spannung kann bei vorhandenen Rissen diese ausbreiten und Abblätterungen verursachen."
         ],
         [
@@ -525,9 +480,9 @@
       }
     },
     "typesOfFeatures": {
-      "title": "Arten von Regenwassermerkmalen",
+      "title": "Arten von Regenwasser\u00admerkmalen",
       "description": [
-        "Es gibt sieben Arten von Regenwassermanagementmerkmalen, die entwickelt wurden, um Wasser von den Wänden wegzuleiten.",
+        "Es gibt sieben Arten von Regenwasser\u00admanagement\u00admerkmalen, die entwickelt wurden, um Wasser von den Wänden wegzuleiten.",
         "Klicken Sie auf das Gerät, um mehr darüber zu erfahren"
       ],
       "back": "Zurück",
@@ -575,7 +530,7 @@
       }
     },
     "failureSituations": {
-      "title": "Versagensszenarien",
+      "title": "Versagens\u00adszenarien",
       "description": [
         "Erosion von Wasserschlägen und schlecht gestaltete Profile reduzieren ihre Wirksamkeit bei der Umleitung von Wasser erheblich. Ohne scharfe Tropfschnitte wird Wasser nicht sauber ausgestoßen und fließt stattdessen entlang der Oberfläche, was zur Benetzung und Verschlechterung des darunter liegenden Mauerwerks führt. In einigen Fällen folgt das Wasser einem tangentialen Pfad - bekannt als Ausstoßwinkel - der zu unerwünschtem Abfluss darunter führt.",
         "Rotierende oder umgekehrte Wasserschlagprofile ohne entsprechende Modifikationen können Wasser in ihren unteren Kurven einfangen, was weiter zur Ansammlung und feuchtigkeitsbedingten Schäden beiträgt."
@@ -616,14 +571,14 @@
       "title": "Zeitgenössische Lösungen",
       "description": [
         "Stereotomie (Steinschneiden): Dies beinhaltet das Nachschneiden vorhandener Steinelemente, wie das Akzentuieren des Überhangs eines Torus oder das Schneiden von Rillen in eine Fase, um Wasser besser zu leiten.",
-        "Klempnerarbeiten (Metallverarbeitung): Dies beinhaltet das Einfügen von Metallelementen wie Abdichtungsstreifen oder Führungen in Lagerfugen oder unter Abdeckungen, um sicherzustellen, dass Wasser vom Gebäude weggeleitet wird. Klempnerlösungen werden oft bevorzugt, wenn die Stereotomie unzureichend oder zu kostspielig ist."
+        "Klempner\u00adarbeiten (Metallverarbeitung): Dies beinhaltet das Einfügen von Metallelementen wie Abdichtungsstreifen oder Führungen in Lagerfugen oder unter Abdeckungen, um sicherzustellen, dass Wasser vom Gebäude weggeleitet wird. Klempnerlösungen werden oft bevorzugt, wenn die Stereotomie unzureichend oder zu kostspielig ist."
       ],
       "Examples": "Beispiele an der Kathedrale",
       "Stereotomy": {
         "title": "Stereotomie"
       },
       "Tinsmithing": {
-        "title": "Klempnerarbeiten"
+        "title": "Klempner\u00adarbeiten"
       }
     },
     "exampleOne": {
@@ -660,7 +615,7 @@
     "nineteenCE": {
       "title": "19. Jahrhundert n. Chr.",
       "description": [
-        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die von Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877) geleiteten Restaurierungen, markierten eine bedeutende Periode für das Regenwassermanagement. Große Gesims-Rinnen und Abflüsse wurden an den Traufen der Schiffe und Seitenschiffe installiert, die mit Rohren verbunden waren, die das Wasser auf die Straßen brachten.",
+        "Die zweite Hälfte des 19. Jahrhunderts, insbesondere die von Viollet-le-Duc (ab 1873) und seinem Nachfolger Assinare (ab 1877) geleiteten Restaurierungen, markierten eine bedeutende Periode für das Regenwasser\u00admanagement. Große Gesims-Rinnen und Abflüsse wurden an den Traufen der Schiffe und Seitenschiffe installiert, die mit Rohren verbunden waren, die das Wasser auf die Straßen brachten.",
         "Um die Widerstandsfähigkeit gegen Witterungseinflüsse zu verbessern, wurde Molasse durch haltbareren Kalkstein für kritische Elemente ersetzt, wie die geschnäbelten Wasserschläge an den geneigten Rückzügen der Strebepfeiler."
       ],
       "Next": "Weiter"
@@ -669,7 +624,7 @@
       "title": "20. Jahrhundert n. Chr.",
       "description": [
         "Die Regenwassermanagementstrategie des 20. Jahrhunderts war größtenteils eine Fortsetzung der von Viollet-le-Duc und Assinare entwickelten Methoden, wobei der Fokus darauf lag, Wasser von der Fassade wegzuleiten, indem architektonische Steinelemente wie Wasserschläge und Gesimse verwendet wurden.",
-        "Trotz dieser Bemühungen zeigen die Quellen, dass selbst diese restaurierten Wasserschläge und Rückzüge oft nicht perfekt funktionierten, was zu anhaltenden Problemen wie Wasseransammlung an den Kanten und seitlichen Überläufen führte, die das Mauerwerk darunter beschädigten. Einführung von Klempnerarbeiten während dieser Zeit durch die Hinzufügung von Blechrinnen auf einigen Dächern."
+        "Trotz dieser Bemühungen zeigen die Quellen, dass selbst diese restaurierten Wasserschläge und Rückzüge oft nicht perfekt funktionierten, was zu anhaltenden Problemen wie Wasseransammlung an den Kanten und seitlichen Überläufen führte, die das Mauerwerk darunter beschädigten. Einführung von Klempner\u00adarbeiten während dieser Zeit durch die Hinzufügung von Blechrinnen auf einigen Dächern."
       ],
       "Next": "Weiter"
     },
@@ -690,7 +645,7 @@
       },
       "incorrect": {
         "title": "Versuchen Sie es erneut!",
-        "body": "Tippen Sie auf einen der hervorgehobenen Steine"
+        "body": "Nicht dieser: Dieser Stein ist jünger. Versuchen Sie einen anderen hervorgehobenen Stein!"
       },
       "finish": {
         "title": "Richtig!",
@@ -702,6 +657,7 @@
     },
     "degradationTypes": {
       "start": {
+        "startButton": "Starten",
         "title": "Testen Sie Ihr Wissen!",
         "body": [
           "Es gibt Bereiche der Kathedrale, die stärker von einem bestimmten Degradationstyp betroffen sind, aber auch kleine Unterschiede in der Geometrie des Gebäudes können einen Unterschied machen.",
@@ -719,7 +675,8 @@
         ]
       },
       "incorrect": {
-        "title": "Versuchen Sie es erneut!"
+        "title": "Versuchen Sie es erneut!",
+        "body": "Schauen Sie genauer hin: In diesem Bereich gibt es mehr Arten von Degradation."
       }
     },
     "quarries": {
@@ -752,6 +709,16 @@
   },
   "ui": {
     "navMenuButton": "Navigationsmenü",
-    "closeNavMenu": "Navigationsmenü schließen"
+    "closeNavMenu": "Navigationsmenü schließen",
+    "back": "Zurück",
+    "home": "Startseite",
+    "next": "Weiter"
+  },
+  "kiosk": {
+    "chooseLanguage": "Berühren Sie, um Ihre Sprache zu wählen",
+    "stillThere": "Sind Sie noch da?",
+    "touchToContinue": "Berühren Sie den Bildschirm, um fortzufahren",
+    "restartingIn": "Neustart in {seconds} Sekunden",
+    "websiteOffline": "Die Website der Kathedrale benötigt eine Internetverbindung, die derzeit nicht verfügbar ist."
   }
 }

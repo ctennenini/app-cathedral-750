@@ -1,7 +1,7 @@
 import { makePage } from '@/components/makePage'
 import OldestStoneGame from './OldestStoneGame'
 
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2.webp'
 
 export default makePage(() => {
   return (

@@ -1,4 +1,4 @@
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2.webp'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
 

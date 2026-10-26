@@ -1,6 +1,6 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-1.png'
-import scalingExample from './scaling-example.png'
+import bgImg from '@/assets/bg-images/frog-perspective-1.webp'
+import scalingExample from './scaling-example.webp'
 
 import { makePage } from '@/components/makePage'
 

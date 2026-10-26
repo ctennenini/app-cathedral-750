@@ -40,10 +40,10 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   </button>
 ))({
   position: 'absolute',
-  top: '35em',
-  right: '35em',
-  width: '45em',
-  height: '45em',
+  top: '24em',
+  right: '24em',
+  width: '88em',
+  height: '88em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -53,6 +53,14 @@ const CloseButton = styled(({ children, ...otherProps }: ButtonProps) => (
   backgroundColor: 'var(--highlight)',
   color: 'var(--white)',
   cursor: 'pointer',
+
+  '& > svg': {
+    transform: 'scale(1.4)',
+  },
+
+  '&:active': {
+    transform: 'scale(0.92)',
+  },
 })
 
 export type SideBarButtonProps = {
@@ -73,7 +81,7 @@ export function SideMenuButton({ darkButton }: SideBarButtonProps) {
 }
 
 export type SideBarProps = {
-  renderContent: () => JSX.Element
+  renderContent: () => React.JSX.Element
   closeButtonLabel?: string
 }
 

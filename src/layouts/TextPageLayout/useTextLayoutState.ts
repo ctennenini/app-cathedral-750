@@ -23,6 +23,8 @@ export function useTextLayoutState<T extends ExtraContentProps>(
       goForward: hasMore ? () => setPage(page + 1) : undefined,
       goBack: hasPrevious ? () => setPage(page - 1) : undefined,
       extra: extraContent?.[extraContentIndex],
+      step: page,
+      stepCount: text.length,
     }
   } else if (Array.isArray(text)) {
     return { text: text as string[], extra: extraContent?.[0] }

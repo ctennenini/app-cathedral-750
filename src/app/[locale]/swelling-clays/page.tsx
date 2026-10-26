@@ -1,8 +1,8 @@
 import { TextPageLayout } from '@/layouts/TextPageLayout'
-import bgImg from '@/assets/bg-images/frog-perspective-2.png'
+import bgImg from '@/assets/bg-images/frog-perspective-2.webp'
 
-import img1 from './swelling-clays-01.png'
-import img2 from './swelling-clays-02.png'
+import img1 from './swelling-clays-01.webp'
+import img2 from './swelling-clays-02.webp'
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {

@@ -1,4 +1,4 @@
-import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.png'
+import bgImg from '@/assets/bg-images/sunset-against-tower-middle-distance.webp'
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
 

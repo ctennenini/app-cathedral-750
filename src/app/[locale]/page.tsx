@@ -1,6 +1,6 @@
 import { TitlePageLayout, TitlePageLayoutProps } from '@/layouts/TitlePageLayout'
 
-import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.png'
+import bgImg from '@/assets/bg-images/dusk-wide-angel-blur-vignette.webp'
 import { makePage } from '@/components/makePage'
 
 export default makePage((dictionary) => {
@@ -14,10 +14,9 @@ export default makePage((dictionary) => {
       arrow: true,
     },
     {
-      target:
-        'https://www.cathedrale-lausanne.ch/accueil/',
+      // opens inside the app, so visitors can't leave the kiosk
+      target: '/website',
       label: page.actions.website,
-      external: true,
     },
   ]
 
