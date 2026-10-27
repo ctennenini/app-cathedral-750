@@ -16,6 +16,9 @@
 # production
 /build
 
+# videos live in the "videos" GitHub release, not in git (see README)
+/public/videos/*.mp4
+
 # misc
 .DS_Store
 *.pem
