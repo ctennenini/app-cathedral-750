@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+  # "Run workflow" button in the Actions tab, e.g. to publish after uploading a new video
+  workflow_dispatch:
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
@@ -24,6 +27,17 @@ jobs:
 
       - name: Install dependencies
         run: yarn
+
+      # videos are too big for git: they're attached to the "videos" release and downloaded here (see README)
+      - name: Download videos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release download videos --repo "${{ github.repository }}" --pattern '*.mp4' --dir public/videos --clobber; then
+            ls -l public/videos
+          else
+            echo "::warning::No 'videos' release found in ${{ github.repository }}, building without videos"
+          fi
 
       - name: Lint
         run: yarn lint
@@ -50,3 +64,5 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          # keep only the latest deploy, so the videos don't pile up in the branch's history
+          single-commit: true

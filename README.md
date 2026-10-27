@@ -218,6 +218,44 @@ export default makePage((dictionary) => {
 
 Keep images at most 1920 px wide (the width of the kiosk screen) and save photos as WebP or JPEG, not PNG. A full-screen photo should be well under 1 MB. The build stops with an error if the offline copy of the app gets bigger than 60 MB (`MAX_PRECACHE_MB` in `generate-precache.mjs`).
 
+### Adding or replacing videos
+
+Videos are too big to be stored with the code (GitHub refuses files over 100 MB, and every version would stay in the history forever). Instead, they are attached to a **GitHub release called `videos`**: open the repository on GitHub and click **Releases** on the right, then **videos**. Every time the app is published, the "Build and Deploy" workflow downloads all `.mp4` files from that release into `public/videos/`. So they are published together with the app, and the kiosk stores them for offline use like everything else.
+
+These are the videos in use at the moment:
+
+| File                         | Shown on                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| `Girardet.mp4`               | Video gallery ("Meet the experts"), `src/app/[locale]/video-gallery/page.tsx`   |
+| `Amsler.mp4`                 | Video gallery                                                                   |
+| `Chantal.mp4`                | Video gallery                                                                   |
+| `LaCathedraleImmersive2.mp4` | The Immersive Cathedral, `src/app/[locale]/interactive-menu/page.tsx`           |
+| `LaCathedraleImmersive.mp4`  | The Immersive Cathedral (second entry), `src/app/[locale]/interactive-menu2/page.tsx` |
+
+**1. Prepare the file.** Use MP4 with H.264 video and AAC audio, at most 1920 × 1080 (the kiosk screen), with "fast start" so it can begin playing before it has fully downloaded. Use a simple file name without spaces. A camera's 4K file is far bigger than needed; with [ffmpeg](https://ffmpeg.org) it can be converted like this (a 2-minute interview becomes about 50–110 MB):
+
+```
+ffmpeg -i original.mp4 -vf "scale='min(1920,iw)':-2" -c:v libx264 -preset medium -crf 22 -c:a aac -b:a 128k -movflags +faststart MyVideo.mp4
+```
+
+**2. Upload it to the release.** On the **videos** release page, click the pencil icon (**Edit**), drag the file into the area at the bottom ("Attach binaries…") and wait until the upload has finished, then click **Update release**. To _replace_ a video, first delete the old file from the list (the ✕ next to it), then upload the new one **with exactly the same name**.
+
+**3. Use it in a page** (only for a new video). Refer to it as `/videos/MyVideo.mp4`, for example as the extra content of a text page:
+
+```tsx
+pullOutContent={{ type: 'video', src: '/videos/MyVideo.mp4' }}
+```
+
+or as a new entry in the list in `src/app/[locale]/video-gallery/page.tsx`. Then commit the page change as usual.
+
+**4. Publish.** Code changes are published automatically when they reach `main`. If you only uploaded or replaced a video, start the publishing by hand: open the **Actions** tab, choose **Build and Deploy** on the left, click **Run workflow** and confirm. The kiosk switches to the new version the next time it returns to the start screen.
+
+**Trying the videos in a codespace.** The videos are not downloaded with the code. To get them into `public/videos/` (where git ignores them), run this in the terminal:
+
+```
+gh release download videos --pattern '*.mp4' --dir public/videos --clobber
+```
+
 ### How to change the app's metadata
 
 The app's metadata is defined, and can be edited, in the `src/config.ts` file.
