@@ -15,6 +15,7 @@ import { AutoplayVideo } from '@/components/AutoplayVideo'
 import { TextContent } from '@/components/Typography'
 import { HREF } from '@/utils/utils'
 import { imagePlaceholder } from '@/utils/imagePlaceholder'
+import { withBasePath } from '@/utils/withBasePath'
 
 // ⬇️ Importa se TimelineLayout è un componente separato
 import { TimelineLayout, TimelineEvent } from '@/layouts/TextPageLayout/TimelineLayout'
@@ -207,7 +208,7 @@ export function ExtraContent(props: ExtraContentProps) {
               controls
               controlsList="nodownload"
               disablePictureInPicture
-              poster={poster}
+              poster={poster && withBasePath(poster)}
               style={{
                 width: '100%',
                 height: 'auto',
@@ -215,7 +216,7 @@ export function ExtraContent(props: ExtraContentProps) {
                 display: 'block',
               }}
             >
-              <source src={src} type="video/mp4" />
+              <source src={withBasePath(src)} type="video/mp4" />
             </VideoElement>
           </div>
         </Container>
