@@ -8,13 +8,25 @@ on:
   # "Run workflow" button in the Actions tab, e.g. to publish after uploading a new video
   workflow_dispatch:
 
+# only one deploy at a time; a newer one replaces a deploy that hasn't started yet
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
-    # the deploy step pushes the built site to the gh-pages branch, which needs write access
+    # the site is uploaded straight to GitHub Pages (not pushed to a branch, where GitHub refuses files
+    # over 100 MB, like some of the videos)
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Setup Node.js
@@ -54,15 +66,16 @@ jobs:
       - name: Build Storybook
         env:
           PREFIX: /${{ github.event.repository.name }}/storybook
-        run: yarn build-storybook -o out/components
+        # Storybook copies the whole public/ folder, videos included; the app already has them
+        run: |
+          yarn build-storybook -o out/components
+          rm -rf out/components/videos
 
-      - name: Create .nojekyll
-        run: touch ./out/.nojekyll
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.7.2
-        with:
-          branch: gh-pages
-          folder: out
-          # keep only the latest deploy, so the videos don't pile up in the branch's history
-          single-commit: true
+        id: deployment
+        uses: actions/deploy-pages@v4
