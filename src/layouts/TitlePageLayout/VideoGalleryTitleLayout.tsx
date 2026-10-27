@@ -12,6 +12,7 @@ import { NavMenuButton } from '@/components/NavMenu'
 import { HomeButton } from '@/components/HomeButton'
 import { BackButton } from '@/components/BackButton'
 import { KIOSK_IFRAME_SANDBOX } from '@/config'
+import { withBasePath } from '@/utils/withBasePath'
 
 type Color = 'light' | 'dark'
 
@@ -263,7 +264,7 @@ export function VideoGalleryTitleLayout({
                 playsInline
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               >
-                <source src={openVideo.videoSrc} type="video/mp4" />
+                <source src={withBasePath(openVideo.videoSrc)} type="video/mp4" />
               </video>
             ) : null}
           </ModalContent>
