@@ -1,6 +1,6 @@
 import bgImg from '@/assets/bg-images/dawn-over-roof-tops.webp'
 
-import quizImg from './videoT1.png'
+import quizImg from './crystallization-pressure.jpg'
 
 import { TextPageLayout } from '@/layouts/TextPageLayout'
 import { makePage } from '@/components/makePage'
