@@ -118,7 +118,7 @@ Here is an example `page.tsx` file with a breakdown of what the code does:
 
 The `layouts` are reusable components that define the structure and style of the page. Demos of the available layouts and their capabilities can be found here:
 
-https://humancatfood.github.io/ethz-cathedral-slideshow/components
+https://nbbosco.github.io/app-cathedral-750/components
 
 ---
 
